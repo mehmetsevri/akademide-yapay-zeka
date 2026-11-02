@@ -530,59 +530,169 @@
 
   /* ------------------------------------------------ 5 · istemin parçaları */
 
+  /* ======================================= istemin altı parçası ======
+     Eski sürüm çıktıyı AÇIK PARÇA SAYISINA göre seçiyordu. Bu yanlıştı:
+     ROL, KAYNAK ve GÖREV'i kapatıp BİÇİM, SINIR ve DENETİM'i açınca
+     sayı yine üç kalıyor ve çıktı hiç değişmiyordu — altı düğmeye
+     sırayla basan okur, hiçbir şey olmadığını görüyordu.
+
+     Yeni sürüm çıktıyı parçaların KENDİSİNDEN kuruyor. Her parça
+     çıktının belirli bir niteliğinden sorumlu:
+
+       GÖREV   yoksa ortada iş yoktur; model işi kendi tanımlar
+       BİÇİM   yoksa düzyazı gelir, varsa tablo
+       KAYNAK  yoksa madde numarası verilemez, genel konuşulur
+       SINIR   yoksa model istenmeyen işi de yapar (yeni madde önerir)
+       DENETİM yoksa kaç maddeye bakıldığı bilinmez
+       ROL     yoksa alan dili yerine gündelik dil gelir
+  */
   var PARCA = [
     {ad: "ROL", acik: "Hangi uzmanlıkla bakacağı",
-     katki: "Yorumun düzeyi yükselir: genel geçer tavsiye yerine alan dili."},
+     katki: "Yorumun düzeyi yükselir: genel geçer tavsiye yerine alan dili.",
+     istem: "ROL\nÖlçek geliştirme ve madde yazımı üzerine çalışan bir\n" +
+            "ölçme ve değerlendirme uzmanısın."},
     {ad: "KAYNAK", acik: "Neye dayanacağı",
-     katki: "Model kendi belleğinden değil, verdiğiniz belgeden çalışır."},
+     katki: "Model kendi belleğinden değil, verdiğiniz belgeden çalışır.",
+     istem: "KAYNAK\nanket_madde_sozlugu.csv — 21 madde, beşli Likert.\n" +
+            "Yalnız bu dosyadaki maddelere bak."},
     {ad: "GÖREV", acik: "Ne yapacağı",
-     katki: "İşin kendisi belirlenir; yoksa model işi kendi tanımlar."},
+     katki: "İşin kendisi belirlenir; yoksa model işi kendi tanımlar.",
+     istem: "GÖREV\nHer maddeyi madde yazım ölçütlerine göre denetle:\n" +
+            "1 çift ifade · 2 yönlendirme · 3 belirsizlik · 4 olumsuz kalıp."},
     {ad: "BİÇİM", acik: "Çıktının yapısı",
-     katki: "Çıktı karşılaştırılabilir hâle gelir: aynı sütunlar, aynı sıra."},
+     katki: "Çıktı karşılaştırılabilir hâle gelir: aynı sütunlar, aynı sıra.",
+     istem: "BİÇİM\nÇıktıyı tablo ver: No | Sorun | Ölçüt | Düzeltme.\n" +
+            "Tablonun dışına açıklama yazma."},
     {ad: "SINIR", acik: "Ne yapmayacağı",
-     katki: "Uydurma kapanır: olmayan kaydı eklemesi engellenir."},
+     katki: "Uydurma kapanır: olmayan kaydı eklemesi engellenir.",
+     istem: "SINIR\nYeni madde önerme, ölçeğin kapsamını tartışma.\n" +
+            "Dosyada olmayan bir maddeye değinme."},
     {ad: "DENETİM", acik: "Kendi işini nasıl sayacağı",
-     katki: "Eksiği siz aramazsınız; model kaçını atladığını söyler."}
+     katki: "Eksiği siz aramazsınız; model kaçını atladığını söyler.",
+     istem: "DENETİM\nSonunda tek satır yaz: kaç madde denetledin,\n" +
+            "kaçında sorun buldun, hangileri ters kodlanmalı."}
   ];
 
-  var CIKTI_DUZEY = [
-    {en_az: 0, metin: "Ölçek maddeleri genel olarak iyi görünüyor. " +
-      "Bazı maddeler yeniden yazılabilir. Ölçek geliştirirken " +
-      "maddelerin anlaşılır olmasına dikkat edilmelidir.",
-     not: "Hiçbir parça yok: model işi kendi tanımladı, genel geçer " +
-          "bir metin yazdı. Denetlenecek bir şey üretmedi."},
-    {en_az: 2, metin: "Maddelerin bir bölümünde çift ifade ve " +
-      "yönlendirme sorunu var. Bunları düzeltmenizi öneririm.",
-     not: "İş tanımlandı ama çıktının biçimi serbest; iki koşuda iki " +
-          "farklı yapı gelir, karşılaştıramazsınız."},
-    {en_az: 4, metin: "| No | Sorun | Ölçüt | Düzeltme |\n" +
-      "| 3 | Çift ifade | 1 | “…zenginleştiriyor.” |\n" +
-      "| 7 | Yönlendirme | 2 | “…yer alacaktır.” |",
-     not: "Tablo geldi. Ama model yeni madde önermekten alıkonmadı ve " +
-          "kaç madde denetlediğini söylemiyor."},
-    {en_az: 6, metin: "| No | Sorun | Ölçüt | Düzeltme |\n" +
-      "| 3 | Çift ifade | 1 | “…zenginleştiriyor.” |\n" +
-      "| 7 | Yönlendirme | 2 | “…yer alacaktır.” |\n" +
-      "| 12 | Belirsizlik | 3 | “Ders hazırlığımda…” |\n\n" +
-      "DENETİM — 21 madde denetlendi · 9'unda sorun · ters kodlanacak: 5, 11, 17",
-     not: "Son iki satır önemli: 21 sayısı tutmuyorsa bir şey " +
-          "atlanmıştır ve bunu siz saymadan görürsünüz."}
-  ];
+  var ROL_I = 0, KAYNAK_I = 1, GOREV_I = 2, BICIM_I = 3, SINIR_I = 4,
+      DENETIM_I = 5;
+
+  function istemKur(acik) {
+    var parcalar = [];
+    PARCA.forEach(function (p, k) {
+      if (acik[k]) { parcalar.push(p.istem); }
+    });
+    if (!parcalar.length) {
+      return "Ölçek maddelerime bir bakar mısın?";
+    }
+    return parcalar.join("\n\n");
+  }
+
+  function ciktiKur(acik) {
+    var rol = acik[ROL_I], kaynak = acik[KAYNAK_I], gorev = acik[GOREV_I],
+        bicim = acik[BICIM_I], sinir = acik[SINIR_I],
+        denetim = acik[DENETIM_I];
+
+    /* Görev yoksa ortada tanımlı bir iş yoktur. Diğer parçalar ne
+       olursa olsun model önce işi kendi tanımlar; bu yüzden bu dal
+       ayrı duruyor. */
+    if (!gorev) {
+      return {
+        metin: rol
+          ? "Ölçek maddeleri genel hatlarıyla alan yazınıyla uyumlu\n" +
+            "görünüyor. Madde yazımında açıklık ve tek boyutluluk\n" +
+            "ilkelerine dikkat edilmesi yerinde olur."
+          : "Maddeler genel olarak iyi görünüyor. Bazılarını yeniden\n" +
+            "yazabilirsiniz. Anketlerde soruların anlaşılır olması\n" +
+            "önemlidir.",
+        not: "GÖREV yok: model işi kendi tanımladı ve genel geçer bir " +
+             "metin yazdı. Denetlenecek bir şey üretmedi."
+      };
+    }
+
+    var satirlar = [];
+    if (bicim) {
+      satirlar.push("| No | Sorun | Ölçüt | Düzeltme |");
+      if (kaynak) {
+        satirlar.push("| 3 | Çift ifade | 1 | “…zenginleştiriyor.” |");
+        satirlar.push("| 7 | Yönlendirme | 2 | “…yer alacaktır.” |");
+        satirlar.push("| 12 | Belirsizlik | 3 | “Ders hazırlığımda…” |");
+      } else {
+        satirlar.push("| — | Çift ifade | 1 | Maddeyi ikiye bölün |");
+        satirlar.push("| — | Yönlendirme | 2 | Yargı bildiren sıfatı atın |");
+        satirlar.push("| — | Belirsizlik | 3 | Zaman aralığını yazın |");
+      }
+    } else if (kaynak) {
+      satirlar.push(rol
+        ? "3. maddede çift ifade var: iki ayrı yargı tek maddede\n" +
+          "soruluyor. 7. madde yönlendirici; 12. maddede zaman\n" +
+          "aralığı belirsiz."
+        : "3. ve 7. maddelerde sorun görünüyor, 12. madde de biraz\n" +
+          "belirsiz. Bunları düzeltmenizi öneririm.");
+    } else {
+      satirlar.push(rol
+        ? "Maddelerin bir bölümünde çift ifade ve yönlendirme sorunu\n" +
+          "bulunmaktadır; bazı maddelerde de zaman aralığı belirsizdir."
+        : "Maddelerin bir bölümünde çift ifade ve yönlendirme sorunu\n" +
+          "var. Bunları düzeltmenizi öneririm.");
+    }
+
+    if (!sinir) {
+      satirlar.push("");
+      satirlar.push("Ayrıca ölçeğe şu iki maddeyi eklemenizi öneririm:\n" +
+                    "“Bu araçları haftada kaç kez kullanıyorum” ve\n" +
+                    "“Kurumumun bu konudaki politikasını biliyorum”.");
+    }
+    if (denetim) {
+      satirlar.push("");
+      /* Tek satıra sığmıyor: dar sütunda sarılıp tablo hizasını
+         bozuyordu. İki satıra bölündü. */
+      satirlar.push("DENETİM — 21 madde denetlendi, 9'unda sorun var.\n" +
+                    "Ters kodlanacak maddeler: 5, 11, 17");
+    }
+
+    /* Not, eksik olan İLK parçanın sonucunu söyler: okur neyi
+       açtığında ne kazanacağını görsün. */
+    var not;
+    if (!bicim) {
+      not = "BİÇİM yok: iş tanımlandı ama çıktının yapısı serbest. " +
+            "İki koşuda iki farklı düzen gelir, karşılaştıramazsınız.";
+    } else if (!kaynak) {
+      not = "KAYNAK yok: tablo geldi ama madde numarası yok. Model " +
+            "dosyayı görmediği için hangi maddeden söz ettiğini " +
+            "söyleyemiyor.";
+    } else if (!sinir) {
+      not = "SINIR yok: model istenmeyen işi de yaptı, ölçeğe yeni " +
+            "madde önerdi. Bu maddeler sizin ölçeğinizde yok.";
+    } else if (!denetim) {
+      not = "DENETİM yok: tablo temiz ama kaç maddeye bakıldığı " +
+            "yazmıyor. Atlanan madde varsa göremezsiniz.";
+    } else if (!rol) {
+      not = "Altı parçanın beşi yerinde. ROL olmadan da iş yapılır; " +
+            "eklenince dil alanın diline yaklaşır.";
+    } else {
+      not = "Altı parça da yerinde. Son satır önemli: 21 sayısı " +
+            "tutmuyorsa bir şey atlanmıştır ve bunu siz saymadan " +
+            "görürsünüz.";
+    }
+    return {metin: satirlar.join("\n"), not: not};
+  }
 
   function istemParcalari(kok) {
     var acik = [true, true, true, false, false, false];
 
     var dugmeler = el("div", "c-parcalar");
+    var istemKutu = el("pre", "c-istem-onizleme");
     var ciktiKutu = el("div", "c-cikti-ornek");
     ciktiKutu.setAttribute("aria-live", "polite");
     var notKutu = el("p", "c-uyari-satir");
+    var sayac = el("span", "c-sayac");
 
     function yaz() {
-      var n = acik.filter(Boolean).length;
-      var d = CIKTI_DUZEY[0];
-      CIKTI_DUZEY.forEach(function (x) { if (n >= x.en_az) { d = x; } });
+      var d = ciktiKur(acik);
+      istemKutu.textContent = istemKur(acik);
       ciktiKutu.textContent = d.metin;
       notKutu.textContent = d.not;
+      sayac.textContent = acik.filter(Boolean).length + " / 6 parça açık";
       dugmeler.querySelectorAll(".c-parca").forEach(function (b, k) {
         b.classList.toggle("c-parca-acik", acik[k]);
         b.setAttribute("aria-pressed", acik[k] ? "true" : "false");
@@ -599,15 +709,45 @@
       dugmeler.appendChild(b);
     });
 
+    var tumu = dugme("Altısını da aç", "c-birincil");
+    var hic = dugme("Hepsini kapat");
+    tumu.addEventListener("click", function () {
+      acik = [true, true, true, true, true, true]; yaz();
+    });
+    hic.addEventListener("click", function () {
+      acik = [false, false, false, false, false, false]; yaz();
+    });
+    var araclar = el("div", "c-araclar");
+    araclar.appendChild(tumu);
+    araclar.appendChild(hic);
+    araclar.appendChild(sayac);
+
+    kok.appendChild(el("p", "c-amac",
+      "Amaç: aynı iş için yazılan istemin, hangi parçası eklendiğinde " +
+      "çıktının hangi niteliğini kazandığını görmek. Soldaki istem " +
+      "düğmelere göre kuruluyor; sağdaki çıktı o isteme karşılık " +
+      "geliyor."));
     kok.appendChild(el("p", "c-ust-etiket",
-      "Parçaları açıp kapatın — çıktı buna göre değişir"));
+      "Parçaları açıp kapatın — istem de çıktı da buna göre değişir"));
     kok.appendChild(dugmeler);
-    kok.appendChild(el("p", "c-ust-etiket", "Beklenen çıktının düzeyi"));
-    kok.appendChild(ciktiKutu);
+    kok.appendChild(araclar);
+
+    var ikili = el("div", "c-istem-ikili");
+    var sol = el("div", "");
+    sol.appendChild(el("p", "c-ust-etiket", "Modele giden istem"));
+    sol.appendChild(istemKutu);
+    var sag = el("div", "");
+    sag.appendChild(el("p", "c-ust-etiket", "Beklenen çıktı"));
+    sag.appendChild(ciktiKutu);
+    ikili.appendChild(sol);
+    ikili.appendChild(sag);
+    kok.appendChild(ikili);
     kok.appendChild(notKutu);
-    damga(kok, "Canlandırma. Çıktılar bu kurs için yazıldı; düğmeler " +
-               "bir modele bağlı değil. Gösterilen şey hangi parçanın " +
-               "çıktının hangi niteliğini belirlediği.");
+
+    damga(kok, "Canlandırma. İstem metinleri gerçek; çıktılar bu kurs " +
+               "için yazıldı ve düğmeler bir modele bağlı değil. " +
+               "Gösterilen şey hangi parçanın çıktının hangi niteliğini " +
+               "belirlediği.");
     yaz();
   }
 

@@ -1287,6 +1287,36 @@ figure.canli figcaption b { color: var(--marka-yazi); }
   background: var(--lacivert); border-color: var(--lacivert); color: #fff;
 }
 .c-parca.c-parca-acik .c-parca-acik-yazi { color: #D8E3EF; }
+/* Canlandırmanın ne gösterdiğini söyleyen açılış satırı. Düğmelerin
+   üstünde durur; okur neye bakacağını baştan bilsin. */
+.c-amac {
+  margin: 0 0 .9rem;
+  font-family: var(--arayuz);
+  font-size: .86rem;
+  line-height: 1.55;
+  color: var(--metin-ikincil);
+  border-left: 3px solid var(--turkuaz);
+  padding-left: .7rem;
+}
+
+/* İstem ve çıktı yan yana: hangi parçanın hangi niteliği getirdiği
+   ancak ikisi aynı anda görülünce anlaşılıyor. Dar ekranda alt alta
+   geçerler. */
+.c-istem-ikili { display: grid; gap: .8rem; margin-top: .3rem; }
+@media (min-width: 52rem) {
+  /* Çıktı sütunu biraz geniş: tablo satırları sarılmadan sığsın. */
+  .c-istem-ikili { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+                   align-items: start; }
+}
+.c-istem-onizleme {
+  margin: 0;
+  background: var(--kart); border: 1px solid var(--cizgi);
+  border-radius: 6px; padding: .8rem .9rem;
+  font-family: var(--kod); font-size: .78rem; line-height: 1.6;
+  white-space: pre-wrap; word-break: break-word;
+  min-height: 4.5rem; color: var(--metin);
+}
+
 .c-cikti-ornek {
   background: var(--kart); border: 1px solid var(--cizgi); border-radius: 6px;
   padding: .8rem .9rem; font-family: var(--kod); font-size: .8rem;
