@@ -50,27 +50,75 @@
     sigdir(slaytlar[i]);
   }
 
-  /* İstem ve çıktı kutuları sığmıyorsa yazıyı kademeli küçültür.
+  /* İstem ve çıktı kutularını kalan alana sığdırır.
+
      Sunumda kaydırmak kötüdür: dinleyici metnin devamı olduğunu
-     bilmez. Küçültme bir tabana kadar iner; oraya rağmen sığmıyorsa
-     kaydırma kalır (CSS'teki overflow), ama o eşiğe pratikte
-     gelinmiyor. Ölçüm yalnız görünür slaytta yapılır — gizli
-     öğelerin yüksekliği okunamaz. */
+     bilmez. İki aşama var. Önce yazı okunur bir tabana kadar
+     küçültülür. Oraya rağmen sığmıyorsa kutu iki sütuna geçer —
+     uzun istemde yazıyı 9 piksele indirmek yerine yana yaymak
+     perdede çok daha okunur kalıyor.
+
+     Ölçüm yalnız görünür slaytta yapılır; gizli öğelerin yüksekliği
+     okunamaz. */
+  var TABAN_TEK = 14;   // tek sütunda inilecek en küçük boy (px)
+  var TABAN_CIFT = 11;  // iki sütuna geçildikten sonraki taban
+  var TAVAN_CIFT = 19;  // iki sütunda çıkılacak en büyük boy
+  var TABAN_CIKTI = 11; // çıktı kutusu: sütuna geçmez, yalnız küçülür
+
+  function kucult(kutu, taban, tasiyor) {
+    var boy = parseFloat(getComputedStyle(kutu).fontSize);
+    var guvenlik = 0;
+    /* boy - .5 >= taban: eşiğin altına düşmeyi engeller. Önceki
+       sürüm "boy > taban" diye bakıyordu ve tabanın yarım piksel
+       altında durabiliyordu. */
+    while (tasiyor() && boy - 0.5 >= taban && guvenlik < 60) {
+      boy -= 0.5;
+      kutu.style.fontSize = boy + "px";
+      guvenlik++;
+    }
+  }
+
   function sigdir(slayt) {
     var kutu = slayt.querySelector("pre.istem, pre.cikti");
     if (!kutu) { return; }
+    kutu.classList.remove("iki-sutun");
     kutu.style.fontSize = "";
     /* Dar ekranda küçültme yapılmaz: telefonda yazıyı sığdırmak
-       okunmaz hâle getirir ve orada kaydırmak zaten doğal. Küçültme
-       sunum ekranı içindir — dinleyici kaydıramaz. */
+       okunmaz hâle getirir ve orada kaydırmak zaten doğal. */
     if (window.innerWidth < 768) { return; }
-    var taban = 9;           // piksel; altına inilmez
+
+    /* İki sütunda taşma yana doğru olur, bu yüzden iki eksen de
+       ölçülüyor. */
+    function tasiyor() {
+      return kutu.scrollHeight > kutu.clientHeight + 2 ||
+             kutu.scrollWidth > kutu.clientWidth + 2;
+    }
+    if (!tasiyor()) { return; }
+
+    /* İki sütun yalnız istem kutusuna uygulanır. Çıktı kutusu
+       programın kendi çıktısıdır: hizalı sütunlar, ayraç çizgileri,
+       girintiler taşır. Dar sütunda bunlar sarınca tablo kırılıyor.
+       Çıktıda yalnız küçültme yapılır. */
+    var sutunaGecebilir = kutu.classList.contains("istem");
+    kucult(kutu, sutunaGecebilir ? TABAN_TEK : TABAN_CIKTI, tasiyor);
+    if (!tasiyor() || !sutunaGecebilir) { return; }
+
+    kutu.style.fontSize = "";
+    kutu.classList.add("iki-sutun");
+    if (tasiyor()) { kucult(kutu, TABAN_CIFT, tasiyor); return; }
+    /* İki sütuna geçince genelde bol yer kalıyor. Kalan boşluk
+       yazıyı büyütmekte kullanılır — perdede her yarım piksel
+       okunurluğa yarıyor. */
+    buyut(kutu, TAVAN_CIFT, tasiyor);
+  }
+
+  function buyut(kutu, tavan, tasiyor) {
     var boy = parseFloat(getComputedStyle(kutu).fontSize);
     var guvenlik = 0;
-    while (kutu.scrollHeight > kutu.clientHeight + 2 &&
-           boy > taban && guvenlik < 40) {
-      boy -= 0.5;
-      kutu.style.fontSize = boy + "px";
+    while (boy + 0.5 <= tavan && guvenlik < 40) {
+      kutu.style.fontSize = (boy + 0.5) + "px";
+      if (tasiyor()) { kutu.style.fontSize = boy + "px"; return; }
+      boy += 0.5;
       guvenlik++;
     }
   }

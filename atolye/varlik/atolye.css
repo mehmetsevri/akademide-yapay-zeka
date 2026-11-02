@@ -36,9 +36,9 @@
   /* Tipografi ölçeği: slayt genişliğine bağlı. 100vw = slayt eni. */
   --t1: clamp(2rem, 4.6vw, 4.4rem);    /* kapak başlığı */
   --t2: clamp(1.5rem, 2.9vw, 2.9rem);  /* slayt başlığı */
-  --t3: clamp(1rem, 1.55vw, 1.6rem);   /* gövde */
-  --t4: clamp(.82rem, 1.2vw, 1.2rem);  /* ikincil */
-  --t5: clamp(.7rem, .95vw, .95rem);   /* küçük */
+  --t3: clamp(1.05rem, 1.78vw, 1.78rem); /* gövde */
+  --t4: clamp(.88rem, 1.36vw, 1.36rem);  /* ikincil */
+  --t5: clamp(.74rem, 1.02vw, 1.02rem);  /* küçük */
 }
 
 * { box-sizing: border-box; }
@@ -291,6 +291,21 @@ html, body {
 }
 .sekil-slayt figcaption p { font-size: inherit; margin: 0; }
 
+/* Rakam, kıyas ve kart slaytlarında kutular dikey alanı doldurur.
+   Eskiden içerik slaytın üst yarısında kalıyor, alt yarı boş
+   duruyordu; perdede bu, slaytı yarım bırakılmış gösteriyor. */
+.slayt[data-tur="rakam"].etkin,
+.slayt[data-tur="kiyas"].etkin,
+.slayt[data-tur="kart"].etkin { align-items: stretch; }
+.slayt[data-tur="rakam"] .ic,
+.slayt[data-tur="kiyas"] .ic,
+.slayt[data-tur="kart"] .ic {
+  height: 100%; display: flex; flex-direction: column;
+}
+.slayt[data-tur="rakam"] .rakamlar,
+.slayt[data-tur="kiyas"] .kiyas,
+.slayt[data-tur="kart"] .kartlar { flex: 1 1 auto; min-height: 0; }
+
 /* ----------------------------------------------------------- rakamlar */
 .rakamlar {
   display: grid; gap: 1.6vw;
@@ -299,11 +314,12 @@ html, body {
 }
 .rk {
   background: var(--yuzey); border-left: .3rem solid var(--turkuaz);
-  border-radius: 0 .5rem .5rem 0; padding: 1.1em 1.2em;
+  border-radius: 0 .5rem .5rem 0; padding: 1.3em 1.3em;
+  display: flex; flex-direction: column; justify-content: center;
 }
 .rk b {
   display: block; font-family: var(--arayuz);
-  font-size: clamp(1.8rem, 3.4vw, 3.4rem); line-height: 1;
+  font-size: clamp(2.3rem, 4.8vw, 5rem); line-height: 1;
   color: var(--lacivert); font-weight: 700; letter-spacing: -.02em;
 }
 .rk span, .rk span p {
@@ -317,15 +333,43 @@ html, body {
 }
 
 /* -------------------------------------------------------- istem/çıktı */
+/* İstem ve çıktı slaytlarında kutu, başlık ve nottan geriye kalan
+   alanı doldurur. Eskiden yükseklik sınırı 68vh sabitiydi; kutu
+   kendi içinde sığıyor görünüyor, slayt ise taşıyordu. Sınırı artık
+   düzenin kendisi koyuyor, bu yüzden küçültme doğru şeyi ölçüyor. */
+.slayt.istem-slayt.etkin, .slayt.cikti-slayt.etkin { align-items: stretch; }
+.istem-slayt .ic, .cikti-slayt .ic {
+  height: 100%; display: flex; flex-direction: column;
+}
+.istem-slayt .etiket, .cikti-slayt .etiket,
+.istem-slayt h2, .cikti-slayt h2,
+.istem-slayt .not, .cikti-slayt .not { flex: 0 0 auto; }
+/* Bu iki türde başlık ve not daha sıkı: kazanılan yer doğrudan
+   kutunun yazı boyuna gidiyor. */
+.istem-slayt h2, .cikti-slayt h2 { margin-bottom: .42em; }
+.istem-slayt .etiket, .cikti-slayt .etiket { margin-bottom: .45em; }
+.istem-slayt .not, .cikti-slayt .not { margin-top: .7em; }
+
 pre.istem, pre.cikti {
   font-family: var(--kod);
-  font-size: clamp(.62rem, 1.02vw, 1.02rem);
+  /* Taban .84rem: 1024x768 gibi dar ama yüksek bir projektörde
+     ölçü yalnız genişliğe bağlı olduğu için yazı 10 piksele
+     düşüyordu, oysa dikeyde yer vardı. Sığmazsa küçültme ve
+     iki sütun zaten devrede. */
+  font-size: clamp(.84rem, 1.02vw, 1.02rem);
   line-height: 1.45;
   white-space: pre-wrap; word-break: break-word;
   margin: 0; padding: 1.1em 1.3em;
   border-radius: .5rem;
-  max-height: 68vh; overflow: auto;
+  flex: 1 1 auto; min-height: 0; overflow: auto;
 }
+/* Uzun istem iki sütuna geçer: yazı küçülmek yerine yana yayılır.
+   Perdede 9 piksellik bir istem okunmuyor; aynı metin iki sütunda
+   12-14 piksel kalabiliyor. Sınıfı JS, tek sütunda sığmadığında
+   ekliyor — hangi istemin uzun olduğunu elle işaretlemek gerekmesin. */
+pre.iki-sutun { columns: 2; column-gap: 1.9em; column-fill: auto; }
+pre.istem.iki-sutun { column-rule: 1px solid rgba(255,255,255,.17); }
+pre.cikti.iki-sutun { column-rule: 1px solid var(--cizgi); }
 pre.istem {
   background: #152233; color: #DCE6F2;
   border-left: .3rem solid var(--turkuaz);
@@ -344,8 +388,9 @@ pre.cikti {
 /* ------------------------------------------------------------- kıyas */
 .kiyas { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6vw; }
 .kiyas > div {
-  border-radius: .5rem; padding: 1.1em 1.3em;
+  border-radius: .5rem; padding: 1.3em 1.4em;
   font-family: var(--arayuz);
+  display: flex; flex-direction: column; justify-content: center;
 }
 .kiyas .zayif { background: #FBF0F1; border-left: .3rem solid var(--kirmizi); }
 .kiyas .guclu { background: #EFF6F1; border-left: .3rem solid var(--yesil); }
@@ -518,7 +563,8 @@ body.koyu .gezinme button {
   }
   .slayt .ic { overflow-y: auto; max-height: 84vh; }
   .ust .bolum-ad { display: none; }
-  pre.istem, pre.cikti { font-size: .72rem; max-height: 52vh; }
+  pre.istem, pre.cikti { font-size: .72rem; }
+  pre.iki-sutun { columns: 1; }
 }
 
 /* ------------------------------------------------------------ baskı */

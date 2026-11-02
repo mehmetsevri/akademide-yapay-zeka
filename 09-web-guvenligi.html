@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Makine öğrenmesi ve veri sızıntısı — Akademide Üretken Yapay Zekâ</title>
-<meta name="description" content="Gerçek bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı — ve kursun en sert dersi: %99,9 doğruluk aldığınızda sevinmeyin, şüphelenin.">
+<meta name="description" content="Kamuya açık bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı ve olağandışı yüksek doğruluk değerlerinin yorumlanması.">
 <link rel="stylesheet" href="varlik/yazitipi.css">
 <link rel="stylesheet" href="varlik/kurs.css">
 <link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
@@ -38,7 +38,7 @@
 </aside>
 <main class="govde">
 <article class="icerik">
-<div class="ust-etiket">Bölüm 9</div><h1>Makine öğrenmesi ve veri sızıntısı</h1><p class="ozet">Gerçek bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı — ve kursun en sert dersi: %99,9 doğruluk aldığınızda sevinmeyin, şüphelenin.</p><p>Bu bölüm bir makine öğrenmesi hattını baştan sona kuruyor. Model
+<div class="ust-etiket">Bölüm 9</div><h1>Makine öğrenmesi ve veri sızıntısı</h1><p class="ozet">Kamuya açık bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı ve olağandışı yüksek doğruluk değerlerinin yorumlanması.</p><p>Bu bölüm bir makine öğrenmesi hattını baştan sona kuruyor. Model
 olağanüstü bir sonuç veriyor; bölümün geri kalanı bu sonucun nedenini
 arıyor ve dürüst sayıyı yeniden hesaplıyor.</p>
 <p>Anlatının sonucu tek cümleyle şudur: <strong>yüksek doğruluk bir başarı
@@ -61,7 +61,7 @@ URL dizgisinden hesaplananlar ve sayfa içeriğinden çıkarılanlar. Bu
 ayrım bölümün dönüm noktası olacak.</p></div>
 <h2 id="adim-1-modelden-once-veriye-bakmak">Adım 1 — Modelden önce veriye bakmak</h2>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Etki büyüklüğüne göre en ayırt edici altı özellik</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -132,7 +132,7 @@ araştırmacının gerçekte izlediği yolu göstermek. Çoğumuz not alır ve
 devam ederiz. Önemli olan, sonra geri dönmektir.</p></aside>
 <h2 id="adim-2-bir-yan-bulgu-https">Adım 2 — Bir yan bulgu: HTTPS</h2>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">HTTPS × etiket çapraz tablosu</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -178,7 +178,7 @@ seçeneklerden biridir. Bölme katmanlıdır; yani kimlik avı ve meşru
 kayıtların oranı eğitim ile test kümelerinde veri setindeki oranla aynı
 tutulur, böylece test kümesi şans eseri dengesiz düşmez.</p>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Rastgele orman — 40 özellik, 3.500 eğitim / 1.500 test</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <pre>doğruluk    : 0,9993
@@ -309,7 +309,7 @@ istenen niteliği değil doğrudan cevabın kendisini taşıması. Sızıntı va
 model öğrenmez, yalnızca okur. Şüphe doğduğunda tek tek sütun denemek
 yerine bütün sütunlar iki ölçütle taranır.</p>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">(a) Meşru sınıfta tamamen sabit olan özellikler</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -359,7 +359,7 @@ değeri alıyor. Bu bir ölçüm değil; veri setinin kuruluşundan gelen
 bir düzenliliktir.</p></div></div>
 
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">(b) Tek bir &#x27;if&#x27; satırıyla %90 üstü doğruluk veren özellikler</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -547,7 +547,7 @@ kısmı gerçek bir örüntü; ayrımı yapan sizsiniz.</p></aside>
 <p>Sızıntı bulunduğunda ilk tepki o sütunu silmektir. Bu tepkinin yeterli
 olup olmadığı ölçülmelidir.</p>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">URLSimilarityIndex çıkarıldıktan sonra</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <pre>Naif model F1        : 0,9992
@@ -594,7 +594,7 @@ yanıt hazırdır. Denetlenmemiş bir şüphe, hakem raporunda geri döndüğün
 şüpheden daha pahalıya mal olur.</p></aside>
 
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Üç modelin karşılaştırması — aynı veri, üç çerçeve</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -808,7 +808,7 @@ kadar küçük? Bu oran, tek sütun silmenin neden yetmediğini
 gösterecek.</pre></div>
 <h2 id="adim-7-capraz-dogrulama">Adım 7 — Çapraz doğrulama</h2>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Beş katlı çapraz doğrulama</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <pre>F1 (5 kat)      : 0,9813  0,9685  0,9720  0,9646  0,9647
@@ -840,7 +840,7 @@ F1 = 0,970 ± 0,006 ve ROC AUC = 0,996 ± 0,001 başarısı göstermiştir
 (n = 5.000)."</em></p></aside>
 <h2 id="adim-8-hangi-url-nitelikleri-calisiyor">Adım 8 — Hangi URL nitelikleri çalışıyor</h2>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Permütasyon önemi — 20 yineleme</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><div class="tablo-sar"><table>
@@ -937,7 +937,7 @@ türeyen bir olasılık oranı verir. Aşağıdaki tabloda katsayılar
 standartlaştırılmıştır; yani her özellik kendi standart sapması birimine
 çevrilmiştir, böylece farklı ölçeklerdeki özellikler yan yana okunabilir.</p>
 <div class="cikti">
-<header><span class="rozet">Gerçek çıktı</span>
+<header><span class="rozet">Model yanıtı</span>
 <span class="ad">Lojistik regresyon — aynı 11 özellik</span>
 <span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
 <div class="govde-ic"><p>doğruluk 0,8700 · kesinlik 0,9552 · duyarlılık 0,7305 ·
