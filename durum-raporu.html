@@ -363,6 +363,42 @@ kat, <em>kritik</em> üç kat artmış. İngilizce yapay zekâ yazını üzerine
 çalışanların en çok işaret ettiği iki sözcük <em>comprehensive</em> ve
 <em>pivotal</em> ya da <em>critical</em>; Türkçe karşılıkları da aynı yöne
 gidiyor.</p>
+<h3>En bariz itiraz: dergi karışımı değişmiş olabilir mi</h3>
+<p>Buraya kadar anlatılanlara verilecek en güçlü karşılık şudur: korpusun
+içindeki dergiler zaman içinde değişmiş olabilir. Bazı dergiler
+büyümüş, bazıları küçülmüş olabilir; o zaman ölçülen kayma yazımın
+değil, karışımın değişmesidir.</p>
+<p>Bu itiraz sınanabilir. Her göstergenin her derginin <strong>kendi içindeki</strong>
+öncesi–sonrası değişimi ayrı ayrı hesaplanıp dergi büyüklüğüyle
+ağırlıklı ortalaması alınır. Bileşim böylece sabitlenmiş olur. Her iki
+dönemde de en az 25 özü bulunan 31 dergi için sonuç şu:</p>
+<figure class="sekil" id="tumlex-dergi-ici">
+<div class="cerceve"><img src="varlik/sekil/t03_tumlex_dergi_ici.svg"
+ alt="On beş göstergenin havuzlanmış ve dergi içi değişimini yan yana gösteren nokta grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 9</b> Dolu nokta bütün korpus üzerinden hesaplanan değişimi, içi boş nokta
+her derginin kendi içindeki değişimin ortalamasını gösteriyor. İki
+nokta üst üste geliyorsa bileşimin payı yok demektir.
+<span class="indir">Dosya: <a href="varlik/sekil/t03_tumlex_dergi_ici.svg">t03_tumlex_dergi_ici.svg</a>
+ · <a href="varlik/sekil_png/t03_tumlex_dergi_ici.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Üslup göstergelerinde iki nokta neredeyse çakışıyor: havuzlanmış
+değişimin <strong>yüzde 97 ile 106'sı</strong> dergi içinde duruyor. Yani kayma
+dergilerin kendi içinde olmuş — 2016'da ve 2025'te <strong>aynı dergiye</strong>
+yazanlar arasındaki fark bu. Bu, en bariz itirazı doğrudan kapatıyor.</p>
+<p>Ziraat sözcüklerinde durum tam tersi. <em>Tohum</em>un havuzlanmış
+düşüşünün yalnız yüzde 16'sı, <em>çimlenme</em> ve <em>hasat</em>ın ise yüzde 40
+kadarı dergi içinde kalıyor. Bu sözcüklerin azalması gerçekten
+bileşim değişimi: korpusa giren ziraat yayınlarının payı düşmüş.
+Üslup bulgusuyla hiç ilgileri yok.</p>
+<aside class="not "><span class="not-baslik">Aynı testin üçüncü söylediği</span><p><em>Makine</em> ve <em>öğrenme</em> de dergi içinde yüzde yüz duruyor. Bu, onları
+üslup göstergesi yapmaz — hâlâ konu sözcüğüdür. Ama mekanizmayı
+değiştirir: makine öğrenmesi makaleleri, o dergiler büyüdüğü için
+değil, <strong>aynı dergiler daha çok makine öğrenmesi yayımladığı için</strong>
+artıyor.</p>
+<p>Bu ayrımı görebilmek, konu kaymasıyla bileşim kaymasını da
+birbirinden ayırmak demek. Üç farklı olgu var ve üçü aynı tabloda
+görünüyor: üslup değişimi, alanın gündeminin değişmesi, korpusun
+bileşiminin değişmesi.</p></aside>
 <h3>Özler uzadı ama cümle sayısı değişmedi</h3>
 <div class="tablo-sar"><table>
 <thead>
@@ -401,7 +437,8 @@ yapay zekâ izi taşıyan göstergelerdeki değişimden hiçbir nedenle
 değişmemesi gereken göstergelerdeki değişimi çıkarmak. O
 karşılaştırma yapılmadığı için, yukarıdaki değişimin ne kadarının
 yapay zekâdan ne kadarının akademik Türkçenin kendi kaymasından
-geldiği bilinmiyor.</p>
+geldiği bilinmiyor. Dergi içi sınama bileşim açıklamasını eliyor,
+ama dilin kendi kayması olasılığını elemiyor; bunlar ayrı sorular.</p>
 <p>İkincisi, kök çözümleme yapılmadan gövde biçimleri sayıldı. Türkçe
 eklemeli bir dil olduğu için <em>çalışma</em>, <em>çalışmada</em> ve <em>çalışmanın</em>
 ayrı birer tür olarak geçiyor.</p>
@@ -428,7 +465,7 @@ bölümdeki grafik seçimi tablosu bu kararın genel hâlini veriyor.</p></aside
 <div class="veri-kunye">
 <div class="ust"><span class="rozet gercek">Gerçek veri</span>
 <span class="ad">TUMLEX ön bulguları — yıllık seri ve sözcük kayması</span></div>
-<dl><dt>Kaynak</dt><dd>Sevri, M. (sürüyor). Türkçe mühendislik makalelerinde yazım değişimi: ChatGPT öncesi ve sonrası gönderilen makaleler. Ön bulgular konferansta sunulmuştur.</dd><dt>Lisans</dt><dd>Yazarın kendi çalışması; kurs materyaline alındı</dd><dt>Boyut</dt><dd>11 yıllık seri satırı · 21 sözcüklük seçki · öz düzeyi oranlar</dd><dt>Pakette</dt><dd><a href="veri/tumlex/tumlex_yillik_seri.csv">tumlex_yillik_seri.csv</a> · <a href="veri/tumlex/tumlex_sozcuk_secki.csv">tumlex_sozcuk_secki.csv</a> · <a href="kod/29_tumlex_sekiller.py">29_tumlex_sekiller.py</a></dd></dl>
+<dl><dt>Kaynak</dt><dd>Sevri, M. (sürüyor). Türkçe mühendislik makalelerinde yazım değişimi: ChatGPT öncesi ve sonrası gönderilen makaleler. Ön bulgular konferansta sunulmuştur.</dd><dt>Lisans</dt><dd>Yazarın kendi çalışması; kurs materyaline alındı</dd><dt>Boyut</dt><dd>11 yıllık seri satırı · 21 sözcüklük seçki · öz düzeyi oranlar</dd><dt>Pakette</dt><dd><a href="veri/tumlex/tumlex_yillik_seri.csv">tumlex_yillik_seri.csv</a> · <a href="veri/tumlex/tumlex_sozcuk_secki.csv">tumlex_sozcuk_secki.csv</a> · <a href="veri/tumlex/tumlex_dergi_ici.csv">tumlex_dergi_ici.csv</a> · <a href="kod/29_tumlex_sekiller.py">29_tumlex_sekiller.py</a></dd></dl>
 <p>Yıllık seri 21.752 makalenin tamamı üzerinden hesaplandı; örneklem
 alınmadı. Sözcük seçkisi ise 1.974 sözcüklük tam listeden, bu sayfada
 anlatılan ayrımı gösterecek biçimde seçildi ve seçkideki her değerin
