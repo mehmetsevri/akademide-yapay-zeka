@@ -555,6 +555,48 @@ body.koyu .gezinme button {
   font-family: var(--arayuz); font-size: .9rem; cursor: pointer;
 }
 
+/* --------------------------------------------------------- QR kodu */
+/* Materyal adresinin kodu üç slaytta geçiyor: açılış ve kapanıştaki
+   erişim slaytlarında gövdenin yanında, kapanış kapağında başlığın
+   sağında. Kart her durumda beyaz kalır — kod doğrudan lacivert
+   zemine konduğunda kamera uygulamaları modülleri ayırt edemiyor. */
+figure.qr {
+  margin: 0; background: #fff; border-radius: .5rem;
+  padding: clamp(.55rem, .85vw, .95rem);
+  box-shadow: 0 1px 3px rgba(21, 25, 29, .16),
+              0 10px 28px rgba(21, 25, 29, .12);
+  text-align: center; align-self: start;
+}
+figure.qr img {
+  display: block; width: clamp(7rem, 12.5vw, 12.5rem); height: auto;
+}
+figure.qr figcaption {
+  font-family: var(--arayuz);
+  font-size: clamp(.58rem, .76vw, .78rem);
+  letter-spacing: .15em; text-transform: uppercase; font-weight: 700;
+  color: var(--metin-soluk); margin-top: .55em;
+}
+
+/* Gövde solda, kod sağda kendi doğal genişliğinde. */
+.qr-duzen {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.4rem, 3.2vw, 3.2rem); align-items: start;
+}
+
+/* Kapanış kapağı. Metin bir kutuya alınıp esnek yerleşim kuruluyor:
+   ızgarada kodu bütün satırlara yaymak için `grid-row: 1 / -1`
+   gerekir, açık satır tanımı olmadığında bu tek satıra iner ve kod
+   başlık hizasına yapışır. */
+.kapak-qr .ic {
+  display: flex; align-items: center;
+  gap: clamp(1.6rem, 4vw, 4.4rem);
+}
+.kapak-qr .kapak-metin { flex: 1 1 auto; min-width: 0; }
+.kapak-qr figure.qr { flex: 0 0 auto; align-self: center; }
+/* Kapanışta kod salonun arkasından da okutulabilmeli; bu slayt
+   ekranda en uzun duran slayt. */
+.kapak-qr figure.qr img { width: clamp(8rem, 16.5vw, 16.5rem); }
+
 /* -------------------------------------------------------- dar ekran */
 @media (max-width: 48rem) {
   .slayt { padding: 7vh 5vw 9vh; }
@@ -565,6 +607,12 @@ body.koyu .gezinme button {
   .ust .bolum-ad { display: none; }
   pre.istem, pre.cikti { font-size: .72rem; }
   pre.iki-sutun { columns: 1; }
+  .qr-duzen, .kapak-qr .ic { grid-template-columns: 1fr; }
+  .kapak-qr .ic > figure.qr {
+    grid-column: 1; grid-row: auto; margin-top: 1.4em;
+  }
+  figure.qr { justify-self: start; }
+  figure.qr img { width: 8.5rem; }
 }
 
 /* ------------------------------------------------------------ baskı */
