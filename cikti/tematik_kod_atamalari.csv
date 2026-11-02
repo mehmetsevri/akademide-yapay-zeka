@@ -1,0 +1,128 @@
+﻿katilimci_no,soru_no,kod,tema
+K004,1,S1-L1,Literatürle baş etme
+K007,1,S1-D1,Dil engelini aşma
+K011,1,S1-V1,Veriyi işler hâle getirme
+K013,1,S1-M1,Mesafeli duranlar
+K016,1,S1-Z1,Düşünme ortağı
+K019,1,S1-Y1,İdari ve yayın yükü
+K022,1,S1-Y2,İdari ve yayın yükü
+K025,1,S1-Z3,Düşünme ortağı
+K025,1,S1-Y1,İdari ve yayın yükü
+K028,1,S1-V3,Veriyi işler hâle getirme
+K031,1,S1-D4,Dil engelini aşma
+K034,1,S1-L2,Literatürle baş etme
+K034,1,S1-L4,Literatürle baş etme
+K037,1,S1-L3,Literatürle baş etme
+K040,1,S1-V4,Veriyi işler hâle getirme
+K043,1,S1-Z2,Düşünme ortağı
+K046,1,S1-V4,Veriyi işler hâle getirme
+K049,1,S1-Y1,İdari ve yayın yükü
+K052,1,S1-M1,Mesafeli duranlar
+K055,1,S1-L1,Literatürle baş etme
+K055,1,S1-Y3,İdari ve yayın yükü
+K058,1,S1-V4,Veriyi işler hâle getirme
+K061,1,S1-Z3,Düşünme ortağı
+K064,1,S1-V2,Veriyi işler hâle getirme
+K067,1,S1-M1,Mesafeli duranlar
+K070,1,S1-Y2,İdari ve yayın yükü
+K073,1,S1-D2,Dil engelini aşma
+K076,1,S1-Y1,İdari ve yayın yükü
+K079,1,S1-L3,Literatürle baş etme
+K082,1,S1-Y2,İdari ve yayın yükü
+K085,1,S1-Y3,İdari ve yayın yükü
+K088,1,S1-D3,Dil engelini aşma
+K091,1,S1-Z2,Düşünme ortağı
+K094,1,S1-L1,Literatürle baş etme
+K094,1,S1-D1,Dil engelini aşma
+K097,1,S1-V4,Veriyi işler hâle getirme
+K100,1,S1-Y2,İdari ve yayın yükü
+K103,1,S1-L4,Literatürle baş etme
+K106,1,S1-V1,Veriyi işler hâle getirme
+K109,1,S1-Y1,İdari ve yayın yükü
+K112,1,S1-L3,Literatürle baş etme
+K115,1,S1-M1,Mesafeli duranlar
+K118,1,S1-Y3,İdari ve yayın yükü
+K121,1,S1-Z2,Düşünme ortağı
+K124,1,S1-V2,Veriyi işler hâle getirme
+K127,1,S1-M1,Mesafeli duranlar
+K130,1,S1-D4,Dil engelini aşma
+K133,1,S1-L2,Literatürle baş etme
+K004,2,S2-G1,Güvenilirlik
+K007,2,S2-O1,Yazarlık ve özgünlük
+K007,2,S2-K1,Kuralsızlık
+K010,2,S2-V1,Veri ve gizlilik
+K013,2,S2-O1,Yazarlık ve özgünlük
+K016,2,S2-K1,Kuralsızlık
+K016,2,S2-K2,Kuralsızlık
+K019,2,S2-E1,Öğretim ve değerlendirme
+K022,2,S2-B1,Beceri ve erişim
+K025,2,S2-B2,Beceri ve erişim
+K028,2,S2-K4,Kuralsızlık
+K031,2,S2-N1,Kaygı duymayanlar
+K034,2,S2-G2,Güvenilirlik
+K037,2,S2-E3,Öğretim ve değerlendirme
+K040,2,S2-B1,Beceri ve erişim
+K043,2,S2-V2,Veri ve gizlilik
+K043,2,S2-V3,Veri ve gizlilik
+K046,2,S2-O3,Yazarlık ve özgünlük
+K049,2,S2-K3,Kuralsızlık
+K052,2,S2-N1,Kaygı duymayanlar
+K055,2,S2-G2,Güvenilirlik
+K055,2,S2-K1,Kuralsızlık
+K058,2,S2-B3,Beceri ve erişim
+K061,2,S2-G2,Güvenilirlik
+K064,2,S2-G3,Güvenilirlik
+K067,2,S2-O4,Yazarlık ve özgünlük
+K070,2,S2-E2,Öğretim ve değerlendirme
+K073,2,S2-G3,Güvenilirlik
+K076,2,S2-B4,Beceri ve erişim
+K079,2,S2-G4,Güvenilirlik
+K082,2,S2-N1,Kaygı duymayanlar
+K085,2,S2-O1,Yazarlık ve özgünlük
+K088,2,S2-O2,Yazarlık ve özgünlük
+K091,2,S2-O2,Yazarlık ve özgünlük
+K094,2,S2-K2,Kuralsızlık
+K097,2,S2-G3,Güvenilirlik
+K100,2,S2-E1,Öğretim ve değerlendirme
+K103,2,S2-G2,Güvenilirlik
+K106,2,S2-G3,Güvenilirlik
+K112,2,S2-G1,Güvenilirlik
+K118,2,S2-O2,Yazarlık ve özgünlük
+K124,2,S2-G3,Güvenilirlik
+K127,2,S2-N1,Kaygı duymayanlar
+K130,2,S2-G1,Güvenilirlik
+K004,3,S3-R1,Eğitim ve rehberlik
+K007,3,S3-A1,Erişim ve altyapı
+K010,3,S3-A2,Erişim ve altyapı
+K013,3,S3-P1,Yazılı politika
+K016,3,S3-P1,Yazılı politika
+K019,3,S3-Y3,Yönetmelik ve denetim
+K022,3,S3-S1,Beklentisi olmayanlar
+K025,3,S3-P2,Yazılı politika
+K028,3,S3-P3,Yazılı politika
+K031,3,S3-A1,Erişim ve altyapı
+K031,3,S3-R1,Eğitim ve rehberlik
+K034,3,S3-Y5,Yönetmelik ve denetim
+K037,3,S3-P1,Yazılı politika
+K040,3,S3-R4,Eğitim ve rehberlik
+K043,3,S3-Y4,Yönetmelik ve denetim
+K046,3,S3-Y1,Yönetmelik ve denetim
+K049,3,S3-Y1,Yönetmelik ve denetim
+K052,3,S3-R1,Eğitim ve rehberlik
+K055,3,S3-R2,Eğitim ve rehberlik
+K058,3,S3-R2,Eğitim ve rehberlik
+K061,3,S3-R3,Eğitim ve rehberlik
+K064,3,S3-M1,Yöntem desteği
+K070,3,S3-Y2,Yönetmelik ve denetim
+K073,3,S3-A4,Erişim ve altyapı
+K076,3,S3-A1,Erişim ve altyapı
+K079,3,S3-A3,Erişim ve altyapı
+K082,3,S3-R3,Eğitim ve rehberlik
+K085,3,S3-R2,Eğitim ve rehberlik
+K091,3,S3-P4,Yazılı politika
+K097,3,S3-M2,Yöntem desteği
+K106,3,S3-M3,Yöntem desteği
+K112,3,S3-Y5,Yönetmelik ve denetim
+K130,3,S3-A1,Erişim ve altyapı
+K130,3,S3-R1,Eğitim ve rehberlik
+K130,3,S3-P1,Yazılı politika

@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veri, kod, sözlük ve kaynaklar — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Pakette ne var, nasıl çalıştırılır, nasıl yayımlanır. Elli bir terimlik istatistik sözlüğü ve kaynak listesi.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Veri, kod, sözlük ve kaynaklar</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa etkin" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><div class="alt-liste"><a href="#veri-setleri">Veri setleri</a><a href="#kod">Kod</a><a href="#bu-siteyi-kendi-sunucunuzda-yayimlamak">Bu siteyi kendi sunucunuzda yayımlamak</a><a href="#lisans-ve-kullanim">Lisans ve kullanım</a><a href="#terimler-sozlugu">Terimler sözlüğü</a><a href="#kurumsal-rehberler-ve-politika-belgeleri">Kurumsal rehberler ve politika belgeleri</a><a href="#kursta-gecen-kaynaklar">Kursta geçen kaynaklar</a></div><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Ek B</div><h1>Veri, kod, sözlük ve kaynaklar</h1><p class="ozet">Pakette ne var, nasıl çalıştırılır, nasıl yayımlanır. Elli bir terimlik istatistik sözlüğü ve kaynak listesi.</p><p>Bu sayfa pakette ne olduğunu, nasıl çalıştırılacağını ve nasıl
+kullanılabileceğini anlatıyor. Sonunda bir de istatistik terimleri
+sözlüğü var.</p>
+<h2 id="veri-setleri">Veri setleri</h2>
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">Turkiye Student Evaluation</span></div>
+<dl><dt>Künye</dt><dd>Gündüz, N., &amp; Fokoué, E. (2013). Turkiye Student Evaluation [Veri seti]. UCI Machine Learning Repository.</dd><dt>DOI</dt><dd><a href="https://doi.org/10.24432/C5S02S" rel="noopener">10.24432/C5S02S</a></dd><dt>İndirme</dt><dd><a href="https://archive.ics.uci.edu/dataset/262/turkiye+student+evaluation" rel="noopener">https://archive.ics.uci.edu/dataset/262/turkiye+student+evaluation</a></dd><dt>Lisans</dt><dd>CC BY 4.0</dd></dl>
+<p>puanı) · 462 KB" dosya="veri/sosyal/gazi_ders_degerlendirme.csv, veri/sosyal/gazi_madde_sozlugu.csv, veri/sosyal/gazi_degisken_sozlugu.csv"
+Gazi Üniversitesi'nde üç öğretim elemanının on üç dersine ilişkin
+dönem sonu öğrenci değerlendirmeleri. Yirmi sekiz Likert maddesi
+(1–5) ve beş ek değişken. Eksik hücre yoktur. Künye, doi.org
+üzerinden içerik görüşmesiyle doğrulanmıştır.</p>
+<p>Pakette ayrıca iki sözlük dosyası var:
+<code>gazi_madde_sozlugu.csv</code> (her maddenin İngilizce özgün metni ve bu
+kurs için yapılan Türkçe çevirisi) ve <code>gazi_degisken_sozlugu.csv</code>
+(kodlu değişkenlerin anlamı).</p></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">PhiUSIIL Phishing URL Dataset</span></div>
+<dl></dl>
+<p>(Ağustos 2025, 2.430 araştırmacı).
+    https://www.wiley.com/en-us/about-us/ai/study/key-findings</p>
+<p>Prasad, A., &amp; Chandra, S. (2024). PhiUSIIL Phishing URL (Website) [Veri seti]. UCI Machine Learning Repository." doi="10.1016/j.cose.2023.103545" link="https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset" lisans="CC BY 4.0" boyut="Tam set 235.795 kayıt ve 56 sütun · pakette 5.000 satırlık altküme,
+43 sütun · 724 KB" dosya="veri/web_guvenligi/phishing_ornek_5000.csv, kod/01_web_guvenligi_veri_hazirla.py"
+Gerçek internet adreslerinden çıkarılmış 54 özellik ve iki sınıflı
+etiket. Pakette tam veri seti değil, katmanlı rastgele örnekleme ile
+seçilmiş 5.000 satırlık bir altküme var; iki sınıfın oranı tam veri
+setindekiyle aynıdır (kimlik avı %42,8, meşru %57,2). Örnekleme
+tohumu 20261103 olarak sabitlendi; betiği tam veri setiyle
+koşturursanız aynı altkümeyi elde edersiniz.</p>
+<p>DOI, veri setinin dayandığı <em>Computers &amp; Security</em> makalesine aittir
+ve doğrulanmıştır.</p></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Akademisyen anketi — atölye verisi</span></div>
+<dl><dt>Kaynak</dt><dd>Bu kurs için üretildi</dd><dt>Boyut</dt><dd>312 katılımcı · 21 Likert maddesi · 116 açık uçlu yanıt</dd><dt>Pakette</dt><dd><a href="veri/sosyal/anket_ham.csv">anket_ham.csv</a> · <a href="veri/sosyal/anket_temiz.csv">anket_temiz.csv</a> · <a href="veri/sosyal/anket_acik_uclu.csv">anket_acik_uclu.csv</a> · <a href="veri/sosyal/anket_madde_sozlugu.csv">anket_madde_sozlugu.csv</a> · <a href="veri/sosyal/anket_acik_uclu_sorular.csv">anket_acik_uclu_sorular.csv</a> · <a href="kod/02_anket_veri_uret.py">02_anket_veri_uret.py</a> · <a href="kod/07_acik_uclu_veri.py">07_acik_uclu_veri.py</a></dd></dl>
+<p><strong>Bu veri gerçek bir anketten gelmemiştir.</strong> Hiçbir sayısı ve hiçbir
+yanıtı bulgu olarak alıntılanamaz.</p>
+<p>Neden üretildi: üç şeyi öğretmek için. Ham form çıktısını temizlemek,
+kimliksizleştirme yapmak ve Türkçe açık uçlu yanıtları tematik analize
+sokmak. Bu üçü, hazır ve temizlenmiş gerçek veri setleriyle
+gösterilemez; onlarda kir zaten temizlenmiş, açık uçlu metin zaten
+yoktur.</p>
+<p>Üreten iki betik de pakette. Veri, dört örtük boyut varsayan bir
+faktör yapısından türetildi; hangi varsayımlarla üretildiğini satır
+satır okuyabilirsiniz.</p></div>
+<h2 id="kod">Kod</h2>
+<p>Numaralandırılmış on iki Python betiği sırayla çalışır; bunlara ek olarak
+ortak renk ve yazı tipi ayarlarını tutan <code>sekil_stili.py</code> vardır. Her
+betiğin başında ne yaptığı ve nasıl çağrılacağı yazılıdır.</p>
+<p>Betik adlarına tıklayarak kaynak kodu açabilirsiniz; çıktı
+dosyaları da bağlantılıdır.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Betik</th>
+<th>Ne yapar</th>
+<th>Çıktısı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="kod/01_web_guvenligi_veri_hazirla.py"><code>01_web_guvenligi_veri_hazirla.py</code></a></td>
+<td>Tam veri setinden katmanlı altküme çıkarır</td>
+<td><a href="veri/web_guvenligi/phishing_ornek_5000.csv"><code>phishing_ornek_5000.csv</code></a></td>
+</tr>
+<tr>
+<td><a href="kod/02_anket_veri_uret.py"><code>02_anket_veri_uret.py</code></a></td>
+<td>Sentetik anket verisini üretir (kirli hâliyle)</td>
+<td><a href="veri/sosyal/anket_ham.csv"><code>anket_ham.csv</code></a> · <a href="veri/sosyal/anket_madde_sozlugu.csv">madde sözlüğü</a></td>
+</tr>
+<tr>
+<td><a href="kod/03_anket_temizle.py"><code>03_anket_temizle.py</code></a></td>
+<td>Ham veriyi temizler, günlük tutar</td>
+<td><a href="veri/sosyal/anket_temiz.csv"><code>anket_temiz.csv</code></a> · <a href="veri/sosyal/temizleme_gunlugu.json"><code>temizleme_gunlugu.json</code></a></td>
+</tr>
+<tr>
+<td><a href="kod/04_gazi_veri_hazirla.py"><code>04_gazi_veri_hazirla.py</code></a></td>
+<td>Gazi verisine Türkçe sözlük ve ölçek puanı ekler</td>
+<td><a href="veri/sosyal/gazi_ders_degerlendirme.csv"><code>gazi_ders_degerlendirme.csv</code></a> · <a href="veri/sosyal/gazi_madde_sozlugu.csv">madde</a> ve <a href="veri/sosyal/gazi_degisken_sozlugu.csv">değişken</a> sözlüğü</td>
+</tr>
+<tr>
+<td><a href="kod/05_analiz_sosyal.py"><code>05_analiz_sosyal.py</code></a></td>
+<td>On iki adımlık nicel analiz</td>
+<td><a href="cikti/sosyal_analiz.txt"><code>sosyal_analiz.txt</code></a> · <a href="cikti/sosyal_analiz.json"><code>.json</code></a> · <a href="cikti/gazi_turetilmis.csv">türetilmiş veri</a></td>
+</tr>
+<tr>
+<td><a href="kod/06_analiz_web_guvenligi.py"><code>06_analiz_web_guvenligi.py</code></a></td>
+<td>Dokuz adımlık sınıflandırma ve sızıntı denetimi</td>
+<td><a href="cikti/web_guvenligi_analiz.txt"><code>web_guvenligi_analiz.txt</code></a> · <a href="cikti/web_guvenligi_analiz.json"><code>.json</code></a></td>
+</tr>
+<tr>
+<td><a href="kod/07_acik_uclu_veri.py"><code>07_acik_uclu_veri.py</code></a></td>
+<td>Açık uçlu yanıtları yazar</td>
+<td><a href="veri/sosyal/anket_acik_uclu.csv"><code>anket_acik_uclu.csv</code></a> · <a href="veri/sosyal/anket_acik_uclu_sorular.csv">sorular</a></td>
+</tr>
+<tr>
+<td><a href="kod/08_tematik_analiz.py"><code>08_tematik_analiz.py</code></a></td>
+<td>Tematik analiz, altı aşama, Cohen kappa</td>
+<td><a href="cikti/tematik_analiz.txt"><code>tematik_analiz.txt</code></a> · <a href="cikti/tematik_analiz.json"><code>.json</code></a> · <a href="cikti/tematik_kod_kitabi.csv">kod kitabı</a> · <a href="cikti/tematik_kod_atamalari.csv">atamalar</a></td>
+</tr>
+<tr>
+<td><a href="kod/09_sekiller_sosyal.py"><code>09_sekiller_sosyal.py</code></a></td>
+<td>Dokuz şekil üretir</td>
+<td><code>varlik/sekil/s*.svg</code></td>
+</tr>
+<tr>
+<td><a href="kod/10_sekiller_web_nitel.py"><code>10_sekiller_web_nitel.py</code></a></td>
+<td>On şekil üretir</td>
+<td><code>varlik/sekil/w*.svg</code>, <code>n*.svg</code></td>
+</tr>
+<tr>
+<td><a href="kod/11_karar_agaci_sekil.py"><code>11_karar_agaci_sekil.py</code></a></td>
+<td>Analiz seçimi karar ağacı</td>
+<td><a href="varlik/sekil/g01_analiz_karar_agaci.svg"><code>g01_analiz_karar_agaci.svg</code></a></td>
+</tr>
+<tr>
+<td><a href="kod/12_yazim_sirasi_sekil.py"><code>12_yazim_sirasi_sekil.py</code></a></td>
+<td>Makale yazım sırası şeması</td>
+<td><a href="varlik/sekil/g02_yazim_sirasi.svg"><code>g02_yazim_sirasi.svg</code></a></td>
+</tr>
+<tr>
+<td><a href="kod/sekil_stili.py"><code>sekil_stili.py</code></a></td>
+<td>Ortak renk, yazı tipi ve eksen ayarları</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="kod-blok">
+<header><span class="dil">bash</span>
+<span>Kurulum ve tam koşu</span></header>
+<pre><code># Python 3.10 ya da üstü gerekir.
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install pandas numpy scipy statsmodels scikit-learn matplotlib
+
+# Veri hazırlama (tam veri setlerini indirdiyseniz)
+python kod/01_web_guvenligi_veri_hazirla.py PhiUSIIL.csv veri/web_guvenligi
+python kod/04_gazi_veri_hazirla.py turkiye-student-evaluation.csv veri/sosyal
+
+# Sentetik atölye verisi
+python kod/02_anket_veri_uret.py veri/sosyal
+python kod/03_anket_temizle.py veri/sosyal veri/sosyal
+python kod/07_acik_uclu_veri.py veri/sosyal
+
+# Analizler
+python kod/05_analiz_sosyal.py veri/sosyal cikti
+python kod/06_analiz_web_guvenligi.py \
+       veri/web_guvenligi/phishing_ornek_5000.csv cikti
+python kod/08_tematik_analiz.py veri/sosyal cikti
+
+# Şekiller
+python kod/09_sekiller_sosyal.py cikti veri/sosyal varlik/sekil
+python kod/10_sekiller_web_nitel.py cikti \
+       veri/web_guvenligi/phishing_ornek_5000.csv varlik/sekil
+python kod/11_karar_agaci_sekil.py varlik/sekil
+python kod/12_yazim_sirasi_sekil.py varlik/sekil</code></pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Aynı sayıları alacak mısınız</span><p>Evet. Rastgelelik içeren her adımda tohum 20261103 olarak sabit.
+Farklı bir sayı alırsanız nedeni paket sürümü farkıdır; kullanılan
+sürümler 12. bölümdeki Yöntem örneğinde yazılı.</p></aside>
+<h2 id="bu-siteyi-kendi-sunucunuzda-yayimlamak">Bu siteyi kendi sunucunuzda yayımlamak</h2>
+<p>Site tamamen durağandır: sunucu tarafı kod yok, veri tabanı yok,
+derleme adımı yok. Klasörü olduğu gibi kopyalamanız yeter.</p>
+<ol class="adimlar"><li><p><strong>Yerel olarak açmak.</strong> <code>index.html</code> dosyasına çift tıklayın. Her şey
+çalışır; yalnız kopyalama düğmesi bazı tarayıcılarda <code>file://</code>
+kısıtı nedeniyle yedek yola düşer.</p></li><li><p><strong>Yerel sunucuyla açmak.</strong> Klasörün içinde
+<code>python3 -m http.server 8000</code> çalıştırıp tarayıcıda
+<code>localhost:8000</code> adresine gidin.</p></li><li><p><strong>GitHub Pages ile yayımlamak.</strong> Klasörü bir depoya yükleyin.
+Depo ayarlarından <code>Pages</code> bölümüne gidin, kaynak olarak ana dalı ve
+kök dizini seçin. Birkaç dakika içinde
+<code>kullaniciadi.github.io/depo-adi/</code> adresinde yayına girer. Pakette
+<code>.nojekyll</code> dosyası var; bu dosya olmadan bazı dosyalar yayımlanmaz.</p></li><li><p><strong>Kendi sunucunuza koymak.</strong> Klasörü web kök dizinine kopyalayın.
+Bütün bağlar görelidir; alt dizinde de çalışır.</p></li></ol>
+
+<aside class="not ipucu"><span class="not-baslik">Veri dosyalarının kodlaması</span><p>Bütün metin ve CSV dosyaları, başında bayt sırası imi (BOM) bulunan
+UTF-8 ile yazılmıştır. Bunun iki nedeni var.</p>
+<p><strong>Birincisi:</strong> bazı sunucular düz metin dosyalarını karakter kümesi
+bildirmeden gönderir; tarayıcı da eski bir kodlamaya düşer ve Türkçe
+harfler bozulur. BOM, tarayıcıya dosyanın UTF-8 olduğunu doğrudan
+söyler.</p>
+<p><strong>İkincisi:</strong> Excel, BOM'suz bir UTF-8 CSV dosyasını açtığında
+Türkçe karakterleri bozar. BOM ile doğru açar.</p>
+<p>Python ile okurken <code>encoding="utf-8-sig"</code> kullanın; bu, BOM varsa
+atar, yoksa sorun çıkarmaz. Pakettaki bütün betikler böyle okur.
+JSON dosyalarında BOM yoktur — ayrıştırıcıları bozar.</p>
+<p><strong>Ondalık ayracı.</strong> Sayfalardaki sayılar Türkçe yazım kurallarıyla
+verildi (ondalık virgül, binlik nokta); ham çıktı dosyalarında
+Python'un varsayılanı geçerli (ondalık nokta). Sayfada 0,9702 yazan
+değer, dosyada 0.9702 olarak durur — aynı sayıdır.</p></aside>
+
+<aside class="not "><span class="not-baslik">Dışarıdan yüklenen tek şey yazı tipi</span><p>Site yalnız Google Fonts'tan yazı tipi çekiyor; bunun dışında hiçbir
+dış kaynağa bağlanmıyor. Analiz sonuçları sayfaların içine gömülü,
+şekiller yerel SVG dosyaları. İnternet bağlantısı olmadan da
+kullanılabilir — yalnız yazı tipi yedeğe düşer.</p></aside>
+<h2 id="lisans-ve-kullanim">Lisans ve kullanım</h2>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Veri setleri</span></p>
+<p class="kart-baslik">CC BY 4.0</p>
+<p>İki gerçek veri seti de CC BY 4.0 lisanslıdır: kullanabilir,
+değiştirebilir, dağıtabilirsiniz. Koşul üçtür: künyeye atıf vermek,
+lisansı belirtmek ve değişiklik yaptıysanız bunu bildirmek.
+Künyeler yukarıda. Sentetik atölye verisi serbestçe kullanılabilir
+ama <strong>gerçek veri olarak sunulamaz.</strong></p></div><div class="kart"><p><span class="no">Kurs içeriği</span></p>
+<p class="kart-baslik">Eğitim amaçlı serbest</p>
+<p>Metinler, şekiller, kod ve istemler eğitim amacıyla serbestçe
+kullanılabilir ve çoğaltılabilir. Ders malzemesi olarak
+kullanırsanız kaynak göstermeniz yeterlidir. Değiştirerek
+kullanabilirsiniz; değiştirdiğinizi belirtmeniz beklenir.</p></div></div>
+
+<aside class="not etik"><span class="not-baslik">Bu kursun kendi beyanı</span><p>Bu kursun metinleri bir büyük dil modeliyle (Claude Opus 5)
+birlikte yazıldı. Analizler ve şekiller aynı modelin ürettiği kodla
+koşuldu; kodun tamamı pakette. Veri setleri kamuya açık
+kaynaklardan indirildi, künyeleri doi.org üzerinden doğrulandı.
+Sentetik olan tek katman, açık uçlu anket yanıtları ve anket atölyesi
+verisidir; ikisi de kendi künyelerinde işaretlidir.</p>
+<p>Metinlerin dili, birbirinden bağımsız denetim turlarından geçirildi ve
+alan dışından bir okur için anlaşılırlık açısından düzeltildi.</p></aside>
+<h2 id="terimler-sozlugu">Terimler sözlüğü</h2>
+<p>Kursta geçen istatistik ve yöntem terimleri, geçtikleri bölümlerle
+birlikte.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Terim</th>
+<th>Ne demek</th>
+<th>Bölüm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alexander–Govern düzeltmesi</strong></td>
+<td>Varyanslar eşit olmadığında kullanılan tek yönlü ANOVA sürümü.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>AUC</strong></td>
+<td>ROC eğrisinin altındaki alan. 0,5 rastgele tahmin, 1,0 kusursuz ayırt etme.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Basıklık</strong></td>
+<td>Dağılımın tepesinin normalden sivri mi yayvan mı olduğu.</td>
+<td>7, 8</td>
+</tr>
+<tr>
+<td><strong>Bartlett küresellik testi</strong></td>
+<td>Maddeler arasında faktör analizine yetecek ilişki var mı?</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Breusch–Pagan testi</strong></td>
+<td>Regresyon artıklarının yayılımının bütün kayıtlarda aynı olup olmadığını sınar.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Çapraz doğrulama</strong></td>
+<td>Veriyi k parçaya bölüp her parçayı sırayla test kümesi yapmak.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Çarpıklık</strong></td>
+<td>Dağılımın bir yana yatıklığı. Sıfır simetrik.</td>
+<td>7, 8</td>
+</tr>
+<tr>
+<td><strong>Cohen d</strong></td>
+<td>İki grup ortalaması arasındaki farkın standart sapma birimindeki büyüklüğü. 0,2 küçük, 0,5 orta, 0,8 büyük.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Cohen kappa</strong></td>
+<td>İki kodlayıcının uyumunun rastlantı düzeltilmiş ölçüsü.</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Cramér V</strong></td>
+<td>Ki-kare testinin etki büyüklüğü. 0–1 arası.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Cronbach alfa</strong></td>
+<td>Bir ölçekteki maddelerin iç tutarlılığı. 0,70 yeterli, 0,90 üstü madde fazlalığı uyarısı.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Durbin–Watson</strong></td>
+<td>Regresyon artıklarının birbirinden bağımsız olup olmadığının ölçüsü; 2'ye yakın değer bağımsızlığa işaret eder.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Duyarlılık (recall)</strong></td>
+<td>Gerçekte pozitif olanların kaçının yakalandığı.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Düzeltilmiş madde-toplam korelasyonu</strong></td>
+<td>Bir maddenin, kendisi dışarıda bırakılarak hesaplanan ölçek puanıyla uyumu.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Eta kare</strong></td>
+<td>ANOVA'nın etki büyüklüğü; grubun açıkladığı varyans oranı.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Etki büyüklüğü</strong></td>
+<td>Farkın ya da ilişkinin pratik büyüklüğü. Örneklemden bağımsızdır.</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>F1</strong></td>
+<td>Kesinlik ile duyarlılığın ortak özeti.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Faktör analizi (AFA)</strong></td>
+<td>Çok sayıda maddenin arkasındaki ortak boyutları veriden çıkarma.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Faktör yükü</strong></td>
+<td>Bir maddenin bir faktörle ilişkisinin gücü, −1 ile +1 arası.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Güç (istatistiksel)</strong></td>
+<td>Gerçekten var olan bir etkiyi yakalama olasılığı. Hedef genellikle %80.</td>
+<td>7, 8</td>
+</tr>
+<tr>
+<td><strong>Güven aralığı</strong></td>
+<td>Çalışma yinelenseydi gerçek değerin hangi aralıkta beklendiği.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Heteroskedastisite</strong></td>
+<td>Artıkların yayılımının bütün kayıtlarda aynı olmaması.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>k-anonimlik</strong></td>
+<td>Her kaydın, dolaylı tanımlayıcılar bakımından en az k kayıtla aynı görünmesi.</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>Karışıklık matrisi</strong></td>
+<td>Doğru/yanlış, pozitif/negatif dört hücreli tablo.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Kesinlik (precision)</strong></td>
+<td>Pozitif denenlerin kaçının gerçekten pozitif olduğu.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Ki-kare</strong></td>
+<td>İki kategorik değişkenin bağımsız olup olmadığını sınayan test.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>KMO</strong></td>
+<td>Faktör analizinin uygulanabilirliği. 0,90 üstü mükemmel.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Kök budama (truncation)</strong></td>
+<td>Kelimenin kökünü yazıp yıldız koyarak bütün türevlerini aramaya katmak.</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Kruskal–Wallis</strong></td>
+<td>ANOVA'nın sıra temelli karşılığı.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Levene testi</strong></td>
+<td>Grupların varyanslarının eşit olup olmadığını sınar.</td>
+<td>7, 8</td>
+</tr>
+<tr>
+<td><strong>Lojistik regresyon</strong></td>
+<td>Sonuç iki kategorili olduğunda olasılığı modelleme.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Mann–Whitney U</strong></td>
+<td>Bağımsız örneklem t testinin sıra temelli karşılığı.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Olasılık oranı (OR)</strong></td>
+<td>Lojistik regresyonda bir değişkenin etkisi. 1 = etki yok.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Özdeğer</strong></td>
+<td>Bir faktörün üstlendiği toplam değişkenlik. 1'in altı tek bir maddeden az bilgi.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>p değeri</strong></td>
+<td>Gözlenen sonucun rastlantıyla ortaya çıkma olasılığı. Büyüklük hakkında bilgi vermez.</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Parametrik test</strong></td>
+<td>Verinin belirli bir dağılıma yakın olduğunu varsayan test.</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Permütasyon önemi</strong></td>
+<td>Bir özelliğin değerleri karıştırıldığında başarının ne kadar düştüğü.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>PICOC</strong></td>
+<td>Araştırma sorusunu beş parçaya ayıran kontrol listesi.</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>PRISMA</strong></td>
+<td>Sistematik derlemede taramanın hangi aşamada kaç kaydı elediğini gösteren standart şema.</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>p-hacking</strong></td>
+<td>Sonuçlara bakıp anlamlı çıkan testi seçmek.</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>r kare</strong></td>
+<td>Bir değişkendeki değişkenliğin ne kadarının öteki değişkenle paylaşıldığı.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Rastgele orman</strong></td>
+<td>Çok sayıda karar ağacının kararını oylayarak birleştiren model.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>ROC eğrisi</strong></td>
+<td>Karar eşiği değiştikçe yakalama ile yanlış alarm oranının nasıl değiştiği.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Serbestlik derecesi</strong></td>
+<td>Testin kaç bağımsız bilgi üzerinden hesaplandığı. Parantez içinde yazılır.</td>
+<td>7, 8</td>
+</tr>
+<tr>
+<td><strong>Spearman rho</strong></td>
+<td>Sıra temelli korelasyon; doğrusal olmayan ilişkide de çalışır.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Ters kodlu madde</strong></td>
+<td>Olumsuz yazılmış madde; analiz öncesi düz kodlanır.</td>
+<td>6, 8</td>
+</tr>
+<tr>
+<td><strong>Tukey HSD</strong></td>
+<td>ANOVA sonrası ikili karşılaştırmalar; çoklu karşılaştırmayı hesaba katar.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Varimax</strong></td>
+<td>Faktörleri, her madde tek bir faktöre yüklenecek biçimde döndürme.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Veri sızıntısı</strong></td>
+<td>Modele verilen bir özelliğin, ölçülmek istenen şeyi değil cevabın kendisini taşıması.</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>VIF</strong></td>
+<td>Yordayıcıların birbirine benzerliği. 10 üstü sorun sayılır.</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Welch düzeltmesi</strong></td>
+<td>Varyanslar eşit olmadığında kullanılan t testi sürümü.</td>
+<td>8</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="kurumsal-rehberler-ve-politika-belgeleri">Kurumsal rehberler ve politika belgeleri</h2>
+<p>Bu belgeler kursun etik ve beyan bölümlerinin dayanağıdır. Hepsi kamuya
+açıktır ve doğrudan indirilebilir. <strong>Bağlayıcı olan bu belgelerin kendi
+güncel sürümüdür</strong>, burada yazılan özet değil.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Belge</th>
+<th>Kurum</th>
+<th>Tarih</th>
+<th>Bağlantı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destek Süreçlerinde Üretken Yapay Zekânın Sorumlu ve Güvenilir Kullanımı Rehberi (ARDEB)</td>
+<td>TÜBİTAK</td>
+<td>Eylül 2025</td>
+<td><a href="https://tubitak.gov.tr/sites/default/files/2025-09/uyz_rehberi_ardeb.pdf" rel="noopener">uyz_rehberi_ardeb.pdf</a></td>
+</tr>
+<tr>
+<td>1001 Proje Önerisi Bilimsel Değerlendirme Formu (panel)</td>
+<td>TÜBİTAK</td>
+<td>2024</td>
+<td><a href="https://tubitak.gov.tr/sites/default/files/2024-04/1001_degerlendirme_formu_panel.doc" rel="noopener">1001_degerlendirme_formu_panel.doc</a></td>
+</tr>
+<tr>
+<td>1001 Değerlendirme Formu (dış danışman)</td>
+<td>TÜBİTAK</td>
+<td>2024</td>
+<td><a href="https://tubitak.gov.tr/sites/default/files/2024-04/1001_degerlendirme_formu_dis_danisman.doc" rel="noopener">1001_degerlendirme_formu_dis_danisman.doc</a></td>
+</tr>
+<tr>
+<td>Generative AI policies for journals</td>
+<td>Elsevier</td>
+<td>—</td>
+<td><a href="https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals" rel="noopener">elsevier.com</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>TÜBİTAK rehberi iki ayrı rol için iki ayrı kural koyuyor ve bu ayrım
+kursun 2., 13. ve beyan sayfasında işleniyor:</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Başvuru sahibi</span></p>
+<p class="kart-baslik">Koşullu serbest, beyan zorunlu</p>
+<p>İzin verilenler: literatür araştırması ve özetleme, dil ve üslup
+iyileştirme, kodlama yardımı, fikir geliştirme, veri görselleştirme
+önerileri.</p>
+<p>Dikkat gerektirenler: bölüm taslağı yazdırmak, veri analizi ve
+yorumlama, şekil üretimi.</p>
+<p>Yasaklar: intihal, uydurma veri ve sahte kaynak üretimi, gizli ya da
+kişisel verinin araca girilmesi.</p>
+<p>Beyan, "basit dilbilgisi denetiminin ötesine geçen" her kullanım için
+zorunlu ve aracın adı, sürümü ile kullanıldığı aşamayı içermeli.</p></div><div class="kart"><p><span class="no">Değerlendirici</span></p>
+<p class="kart-baslik">Tümüyle yasak</p>
+<p>Hakem, panelist, danışman ve izleyiciler değerlendirme göreviyle ilgili
+<strong>hiçbir amaçla</strong> üretken yapay zekâ kullanamaz.</p>
+<p>Kapsam açıkça sayılmış: metni özetlemek, güçlü ve zayıf yönleri
+belirlemek, rapor taslağı üretmek, panel notu hazırlamak, izleyici
+raporu yazmak, konuyla ilgili e-posta taslağı oluşturmak.</p>
+<p>Gerekçe iki başlıkta toplanıyor: gizlilik yükümlülüğü ve KVKK — proje
+önerisi yayımlanmamış fikir ve kişisel veri taşır; yurt dışı
+sunuculara aktarım ayrıca KVKK madde 9'a tabidir.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Rehberin kendi dayanakları</span><p>TÜBİTAK rehberi, değerlendirici yasağının uluslararası uygulamayla
+uyumlu olduğunu belirtirken şu kaynaklara dayanıyor: Yükseköğretim
+Kurumları Bilimsel Araştırma ve Yayın Faaliyetlerinde Üretken Yapay
+Zekâ Kullanımına Dair Etik Rehber (YÖK), ABD Ulusal Sağlık Enstitüleri
+(NIH), ABD Ulusal Bilim Vakfı (NSF) ve Avrupa Araştırma Konseyi (ERC)
+ile Avrupa Komisyonu politikaları.</p>
+<p>Kendi kurumunuzun da ayrı bir rehberi olabilir. Çakışma durumunda
+kurumunuzun kuralı geçerlidir.</p></aside>
+<h2 id="kursta-gecen-kaynaklar">Kursta geçen kaynaklar</h2>
+<p>Aşağıdaki künyelerin bir bölümü doi.org üzerinden doğrulanmıştır;
+kalanlar yaygın olarak bilinen kaynaklardır. Karşılama sayfasındaki
+iki şeklin veri noktaları Gray (2024), Liang ve ark. (2025),
+Siler (2025) ve Wiley (2025) kaynaklarından alınmıştır.</p>
+<pre class="yalin">Braun, V., &amp; Clarke, V. (2006). Using thematic analysis in
+    psychology. Qualitative Research in Psychology, 3(2), 77–101.
+
+Cohen, J. (1988). Statistical power analysis for the behavioral
+    sciences (2nd ed.). Lawrence Erlbaum.
+
+Gündüz, N., &amp; Fokoué, E. (2013). Turkiye Student Evaluation
+    [Veri seti]. UCI Machine Learning Repository.
+    https://doi.org/10.24432/C5S02S
+
+Gray, A. (2024). ChatGPT &quot;contamination&quot;: Estimating the prevalence
+    of LLMs in the scholarly literature. arXiv:2403.16887.
+
+Gusenbauer, M., &amp; Haddaway, N. R. (2020). Which academic search
+    systems are suitable for systematic reviews or meta-analyses?
+    Research Synthesis Methods, 11(2), 181–217.
+
+Joshi, A., Lloyd, L., Westin, P., &amp; Seethapathy, S. (2019). Using
+    lexical features for malicious URL detection — A machine
+    learning approach. arXiv:1910.06277.
+
+Liang, W., Zhang, Y., Wu, Z., ve ark. (2025). Quantifying large
+    language model usage in scientific papers. Nature Human
+    Behaviour. https://doi.org/10.1038/s41562-025-02273-8
+
+Landis, J. R., &amp; Koch, G. G. (1977). The measurement of observer
+    agreement for categorical data. Biometrics, 33(1), 159–174.
+
+Wiley. (2025). ExplanAItions: An AI study — ikinci dalga
+    (Ağustos 2025, 2.430 araştırmacı).
+    https://www.wiley.com/en-us/about-us/ai/study/key-findings
+
+Prasad, A., &amp; Chandra, S. (2024). PhiUSIIL: A diverse security profile
+empowered phishing URL detection framework based on similarity index and
+incremental learning. Computers &amp; Security, 136, 103545.
+https://doi.org/10.1016/j.cose.2023.103545
+
+Siler, K. (2025). The diffusion of large language models in published
+    academic articles. PNAS.
+    https://doi.org/10.1073/pnas.2605754123
+
+Streiner, D. L. (2003). Starting at the beginning: An introduction
+    to coefficient alpha and internal consistency. Journal of
+    Personality Assessment, 80(1), 99–103.</pre>
+
+<aside class="not uyari"><span class="not-baslik">Bu listeyi de doğrulayın</span><p>Bu kursun en çok tekrarladığı kural kendisi için de geçerlidir:
+<strong>künyeyi kaynağından doğrulayın.</strong> Gazi veri seti ile PhiUSIIL
+makalesinin DOI'leri bu kurs hazırlanırken içerik görüşmesiyle
+denetlendi. Liang ve arkadaşlarının makalesi ile Siler'in makalesi
+yayıncı sayfaları üzerinden saptandı; ikisi de erişim duvarı
+arkasındadır ve tam metinleri bu kurs için okunmamıştır — bildirilen
+sayılar ikincil kaynaklardan derlenmiştir. Kalan künyeler yaygın
+olarak bilinen kaynaklardır. Kendi çalışmanızda kullanacaksanız
+hepsini kendi kaynaklarınızdan doğrulayın.</p></aside>
+
+<nav class="sayfa-alt"><a href="16-istem-kutuphanesi.html"><span class="yon">← Önceki</span><span class="ad">İstem kütüphanesi</span></a><a class="sag" href="beyan.html"><span class="yon">Sonraki →</span><span class="ad">Sorumluluk ve etik beyanı</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

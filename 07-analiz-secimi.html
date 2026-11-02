@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hangi analizi seçmeliyim — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Soru türünden teste, testten etki büyüklüğüne giden karar haritası. Varsayım denetimi, örneklem büyüklüğü, çoklu karşılaştırma ve raporlama disiplini.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Hangi analizi seçmeliyim</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa etkin" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><div class="alt-liste"><a href="#karar-haritasi">Karar haritası</a><a href="#olcek-duzeyi-testi-belirler">Ölçek düzeyi, testi belirler</a><a href="#sekiz-soru-sekiz-test">Sekiz soru, sekiz test</a><a href="#varsayim-denetimi">Varsayım denetimi</a><a href="#orneklem-buyuklugu-ve-guc">Örneklem büyüklüğü ve güç</a><a href="#coklu-karsilastirma">Çoklu karşılaştırma</a><a href="#raporlama-disiplini">Raporlama disiplini</a><a href="#veriyi-baglama-vermek-profil-cikarmak">Veriyi bağlama vermek: profil çıkarmak</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 7</div><h1>Hangi analizi seçmeliyim</h1><p class="ozet">Soru türünden teste, testten etki büyüklüğüne giden karar haritası. Varsayım denetimi, örneklem büyüklüğü, çoklu karşılaştırma ve raporlama disiplini.</p><p>Yanlış test, doğru veriden yanlış sonuç çıkarır. Bu bölüm, hangi
+sorunun hangi testle yanıtlandığını ve her testten önce neyin
+denetlenmesi gerektiğini gösteriyor.</p>
+<h2 id="karar-haritasi">Karar haritası</h2>
+<p>Analiz seçimi üç soruya bakar: <strong>sorunuzun türü</strong>, <strong>değişkenlerinizin
+ölçek düzeyi</strong> ve <strong>varsayımların sağlanıp sağlanmadığı.</strong> Aşağıdaki
+harita üçünü birleştiriyor.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/g01_analiz_karar_agaci.svg"
+ alt="Analiz seçimi karar ağacı" loading="lazy"></div>
+<figcaption><b>Şekil 7.1</b> Soru türünden teste, testten etki büyüklüğüne. Beş dal, on dört karar
+satırı. Haritadaki her test, 8. ve 9. bölümlerde gerçek veri üzerinde
+koşuluyor.
+<span class="indir">Dosya: <a href="varlik/sekil/g01_analiz_karar_agaci.svg">g01_analiz_karar_agaci.svg</a>
+ · <a href="varlik/sekil_png/g01_analiz_karar_agaci.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not uyari"><span class="not-baslik">En sık yapılan dört hata</span><p><strong>(1)</strong> Üç grubu ikişerli t testleriyle karşılaştırmak; her ek test, gerçekte olmayan bir farkı var sanma (I. tip hata) olasılığını yükselttiği için ANOVA kullanılır. <strong>(2)</strong> Likert maddesinin kendisini sürekli değişken sayıp ortalamasını almak; tek madde sıralı bir ölçümdür, birden çok maddenin ortalaması olan ölçek puanı ise sürekli değişken gibi ele alınabilir. <strong>(3)</strong> Varsayım denetlemeden
+parametrik teste girmek. <strong>(4)</strong> Etki büyüklüğü raporlamadan p değeri
+yazmak.</p></aside>
+<h2 id="olcek-duzeyi-testi-belirler">Ölçek düzeyi, testi belirler</h2>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Ölçek düzeyi</th>
+<th>Ne demek</th>
+<th>Örnek</th>
+<th>Yapılabilen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sınıflayıcı</strong> (nominal)</td>
+<td>Sıralanamaz kategoriler</td>
+<td>Fakülte, cinsiyet, etiket</td>
+<td>Frekans, mod, ki-kare</td>
+</tr>
+<tr>
+<td><strong>Sıralayıcı</strong> (ordinal)</td>
+<td>Sıralanır ama aralıklar eşit değil</td>
+<td>Likert maddesi, katılım düzeyi (0–4)</td>
+<td>Ortanca, Spearman, sıra temelli testler</td>
+</tr>
+<tr>
+<td><strong>Aralık/Oran</strong> (sürekli)</td>
+<td>Aralıklar eşit</td>
+<td>Yaş, saat, ölçek puanı</td>
+<td>Ortalama, Pearson, t, ANOVA, regresyon</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not istatistik"><span class="not-baslik">Likert tartışması — kısa yanıt</span><p>Tek bir Likert <strong>maddesi</strong> sıralayıcıdır: "katılıyorum" ile "kesinlikle
+katılıyorum" arasındaki mesafe, "kararsızım" ile "katılıyorum"
+arasındakiyle aynı değildir. Ancak birden çok maddenin <strong>ortalaması</strong>
+(ölçek puanı) pratikte sürekli değişken gibi ele alınır ve bu geniş
+kabul görür. Pratik kural: <strong>madde düzeyinde parametrik olmayan, ölçek
+puanı düzeyinde parametrik</strong> testler. Kuşkudaysanız ikisini birden
+koşturun ve ikisini de raporlayın — 8. bölümde tam olarak bunu
+yapıyoruz.</p></aside>
+<h2 id="sekiz-soru-sekiz-test">Sekiz soru, sekiz test</h2>
+<p>Karar haritası soyut kalabilir. Aşağıda, 4. bölümdeki sekiz alandan
+gelen sorular ve her birinin gerektirdiği test var. Kendi sorunuza en
+çok benzeyen satırı bulun.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Alan ve soru</th>
+<th>Ne karşılaştırılıyor</th>
+<th>Test</th>
+<th>Etki büyüklüğü</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eğitim</strong> — Okuma atölyesine katılanların sınav puanı farklı mı?</td>
+<td>İki bağımsız grubun ortalaması</td>
+<td>Bağımsız örneklem t testi (dönem başı puan denetlenecekse ANCOVA)</td>
+<td>Cohen d / kısmi eta kare</td>
+</tr>
+<tr>
+<td><strong>Fizik</strong> — Üç farklı katman kalınlığında dönüşüm verimi değişiyor mu?</td>
+<td>Üç grubun ortalaması</td>
+<td>Tek yönlü ANOVA + Tukey</td>
+<td>Eta kare</td>
+</tr>
+<tr>
+<td><strong>Kimya</strong> — İki adsorban, üç farklı derişimde farklı mı davranıyor?</td>
+<td>İki faktörün birlikte etkisi</td>
+<td>İki faktörlü ANOVA (etkileşim terimiyle)</td>
+<td>Kısmi eta kare</td>
+</tr>
+<tr>
+<td><strong>Makine</strong> — Isıl işlem yorulma ömrünü artırıyor mu?</td>
+<td>İki grubun dağılımı, örneklem küçük</td>
+<td>Mann–Whitney U (n &lt; 20 ise)</td>
+<td>Sıra-noktasal r</td>
+</tr>
+<tr>
+<td><strong>Tıp</strong> — Hatırlatma, ilaç uyumunu artırıyor mu?</td>
+<td>Aynı hastalarda önce–sonra</td>
+<td>Eşleştirilmiş t testi ya da Wilcoxon işaretli sıralar testi</td>
+<td>Cohen d (eşleştirilmiş) / sıra-noktasal r</td>
+</tr>
+<tr>
+<td><strong>Ekonomi</strong> — Asgari ücret artışı istihdamı etkiliyor mu?</td>
+<td>Zaman içinde, başka etkenler sabitken</td>
+<td>Panel veri regresyonu (sabit etkiler)</td>
+<td>Standartlaştırılmış beta</td>
+</tr>
+<tr>
+<td><strong>Tarih</strong> — Eğitim kurumlarına ayrılan yer dönemle değişti mi?</td>
+<td>İki dönemin oran dağılımı</td>
+<td>Ki-kare ya da oran karşılaştırması</td>
+<td>Cramér V / Cohen h</td>
+</tr>
+<tr>
+<td><strong>İlahiyat</strong> — Niteleme sıklığı mezhebe göre değişiyor mu?</td>
+<td>İki grubun kategorik dağılımı</td>
+<td>Ki-kare bağımsızlık testi</td>
+<td>Cramér V</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not "><span class="not-baslik">Tablodaki dört ayrıma dikkat</span><p><strong>Bağımsız mı eşleştirilmiş mi?</strong> Tıp örneğinde aynı hastalar iki kez
+ölçülüyor; eğitim örneğinde iki ayrı öğrenci grubu var. Birincisi
+eşleştirilmiş, ikincisi bağımsız test ister. Bu ayrımı karıştırmak,
+en sık yapılan analiz hatasıdır.</p>
+<p><strong>Kaç grup?</strong> İki grupta t testi, üç ve daha fazlasında ANOVA.
+Üç grubu ikişer ikişer t testiyle karşılaştırmak yanlıştır.</p>
+<p><strong>Kaç faktör?</strong> Kimya örneğinde iki şey birden değişiyor: adsorban
+türü ve derişim. İki faktörlü ANOVA, her birinin kendi etkisini ve
+ikisinin <strong>birlikte</strong> yarattığı etkiyi ayrı ayrı verir.</p>
+<p><strong>Sonuç sayı mı kategori mi?</strong> Tarih ve ilahiyat örneklerinde
+ölçülen şey bir ortalama değil, bir <strong>sayım</strong>: kaç salnamede, kaç
+şerhte. Sayımlar ki-kare ile karşılaştırılır, t testiyle değil.</p></aside>
+
+<aside class="not ipucu"><span class="not-baslik">Örneklem küçükse ne olur</span><p>Makine örneğinde parantez içinde "n &lt; 20 ise" yazıyor. Yorulma
+deneyleri pahalıdır; grup başına beş on numune olağandır.</p>
+<p>Bu kadar küçük örneklemde normallik varsayımını sınamak anlamsızdır,
+çünkü test bu boyutta hemen hiçbir sapmayı yakalayamaz. O yüzden
+küçük örneklemde <strong>varsayılan tercih parametrik olmayan testtir.</strong>
+Parametrik test kullanacaksanız, dağılımın normal olduğunu veriden
+değil alan bilgisinden gerekçelendirmeniz gerekir.</p>
+<p>Bu bir kusur değil, küçük örneklemin doğasıdır. Ama raporda
+belirtilir.</p></aside>
+<h2 id="varsayim-denetimi">Varsayım denetimi</h2>
+<p>Parametrik testler (t testi, ANOVA, Pearson korelasyonu, regresyon)
+verinin dağılımı hakkında belirli kabullere dayanır. Parametrik olmayan
+testler bu kabulleri yapmaz; sayıların kendisi yerine sıralarını kullanır.
+Her parametrik testin varsayımları vardır ve bunları denetlemek ayrı bir
+analiz değil, analizin parçasıdır.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Varsayım 1</span></p>
+<p class="kart-baslik">Dağılım biçimi</p>
+<p>Kolmogorov–Smirnov ve Shapiro–Wilk testleri normalliği sınar: anlamlı bir
+sonuç "dağılım normal değil" demektir. Büyük örneklemde bu testler,
+uygulamada hiç önemi olmayan küçücük sapmalarda da anlamlı çıkar. Bu
+yüzden karar yalnız p değerine değil, <strong>çarpıklık ve basıklık</strong>
+katsayılarına da dayandırılır. Çarpıklık dağılımın bir yana yatıp
+yatmadığını, basıklık ise tepesinin normalden sivri mi yayvan mı olduğunu
+gösterir; ikisinin de −1 ile +1 arasında kalması çoğu uygulamada kabul
+edilir, ±2'ye kadar tolere edilir.</p></div><div class="kart"><p><span class="no">Varsayım 2</span></p>
+<p class="kart-baslik">Varyans eşitliği</p>
+<p>Levene testi grupların yayılımının benzer olup olmadığına bakar.
+Sağlanmıyorsa t testinde Welch düzeltmesi, ANOVA'da Welch ya da
+Alexander–Govern düzeltmesi kullanılır. Bu düzeltmeler, varsayım sağlandığında da sonucu bozmaz; yöntem yazınında
+t testinin varsayılanı olarak önerilmelerinin nedeni budur.</p></div><div class="kart"><p><span class="no">Varsayım 3</span></p>
+<p class="kart-baslik">Bağımsızlık</p>
+<p>Gözlemler birbirinden bağımsız olmalı. Aynı öğrencinin üç dersi
+değerlendirmesi, aynı hastadan üç ölçüm alınması bağımsız değildir.
+Bu durumda karma etki modelleri (çok düzeyli modeller) gerekir;
+sıradan ANOVA standart hataları küçük tahmin eder.</p></div><div class="kart"><p><span class="no">Varsayım 4</span></p>
+<p class="kart-baslik">Yeterli hücre büyüklüğü</p>
+<p>Ki-kare testinde beklenen frekansı 5'ten küçük hücre oranı %20'yi
+aşmamalı. Aşıyorsa kategoriler birleştirilir ya da Fisher kesin testi
+kullanılır.</p></div></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Analiz planı üretme — analizi yaptırmadan önce</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İstatistik danışmanısın. Görevin analizi yapmak değil, analizin
+PLANINI kurmak ve bu planın gerekçesini yazmak.
+
+ARAŞTIRMA SORULARI
+[sorularınızı numaralandırarak yazın]
+
+VERİ
+— Gözlem sayısı: [n]
+— Değişkenler: her biri için [ad] | [ölçek düzeyi] | [kaç düzey /
+  hangi aralık] | [eksik oranı]
+— Gözlemler bağımsız mı: [evet / hayır — hayırsa neden]
+— Örnekleme yöntemi: [...]
+
+GÖREV
+Her araştırma sorusu için bir analiz planı yaz.
+
+HER SORU İÇİN
+1. Hangi test — adıyla
+2. Neden bu test — soru türü, ölçek düzeyi ve grup sayısına
+   dayanarak, iki cümle
+3. Hangi varsayımlar — her biri nasıl denetlenecek, hangi testle
+4. Varsayım sağlanmazsa — alternatif test adı
+5. Hangi etki büyüklüğü — adı ve yorum eşikleri
+6. Rapor cümlesi şablonu — bulguyu yazarken kullanılacak cümle
+   kalıbı, yerleri boş bırakılmış hâlde
+
+AYRICA
+— Çoklu karşılaştırma düzeltmesi gerekiyor mu? Gerekiyorsa hangisi
+  ve neden.
+— Hangi soru için örneklemim yetersiz olabilir? Kaba bir güç
+  değerlendirmesi yap: beklenen etki büyüklüğü orta düzeydeyse
+  mevcut n bunu yakalar mı?
+
+SINIRLAR
+— Analizi YAPMA. Sayı üretme. Bu bir plandır.
+— Veride olmayan bir değişkene dayanan plan önerme.
+— &quot;Duruma göre değişir&quot; deyip geçme; bir test seç ve gerekçelendir.
+  Gerçekten iki seçenek varsa ikisini de yaz ve hangisini hangi
+  koşulda seçeceğimi söyle.
+
+DENETİM
+Planın sonunda: her araştırma sorusunun bir analiz planı var mı?
+Soru numaralarını ve karşılık gelen testleri tek tabloda listele.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya · deney tasarımı</span>
+<span class="ad">Analiz planı üretme — analizi yaptırmadan önce</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İstatistik danışmanısın. Görevin analizi yapmak değil, analizin
+PLANINI kurmak ve bu planın gerekçesini yazmak.
+
+ARAŞTIRMA SORULARI
+S1. Çay posasından elde edilen aktif karbon ile ticari aktif karbon
+    arasında boyar madde giderim verimi bakımından fark var mı?
+S2. Giderim verimi başlangıç derişimine göre değişiyor mu, bu
+    değişim iki malzemede aynı mı?
+S3. pH, giderim verimini etkiliyor mu?
+S4. Adsorpsiyon verisi hangi izoterm modeline daha iyi uyuyor:
+    Langmuir mi Freundlich mi?
+
+VERİ
+— Gözlem sayısı: 201 (tasarım 216 deney öngörüyordu: 2 malzeme ×
+  3 derişim × 3 pH × 2 sıcaklık × 2 temas süresi × 3 tekrar;
+  temizleme sonrası 201 geçerli ölçüm kaldı). Tasarım tam
+  faktöriyel ama tekrar sayıları bakımından dengesiz.
+— Değişkenler:
+  adsorban          | kategorik, 2 düzey (çay posası / ticari)
+  baslangic_derisim | sürekli, 3 düzey (25, 50, 100 mg/L)
+  pH                | sürekli, 3 düzey (3, 7, 10)
+  sicaklik | sürekli, 2 düzey (25, 45 °C)
+  temas_suresi      | sürekli, 2 düzey (60, 120 dk)
+  tekrar_no         | 1–3
+  giderim_verimi    | sürekli, % — sonuç değişkeni
+  q_kapasite        | sürekli, mg/g — ikinci sonuç değişkeni
+— Gözlemler bağımsız mı: Evet. Her satır ayrı bir deney şişesi.
+  Ancak aynı malzeme partisinden alınan numuneler ortak bir
+  hazırlama sürecini paylaşıyor.
+— Örnekleme yöntemi: deney tasarımı, rastgele sıra ile yürütüldü.
+
+GÖREV
+Her araştırma sorusu için bir analiz planı yaz.
+
+HER SORU İÇİN
+1. Hangi test — adıyla
+2. Neden bu test — soru türü, ölçek düzeyi ve grup sayısına
+   dayanarak, iki cümle
+3. Hangi varsayımlar — her biri nasıl denetlenecek, hangi testle
+4. Varsayım sağlanmazsa — alternatif test adı
+5. Hangi etki büyüklüğü — adı ve yorum eşikleri
+6. Rapor cümlesi şablonu — bulguyu yazarken kullanılacak cümle
+   kalıbı, yerleri boş bırakılmış hâlde
+
+AYRICA
+— Çoklu karşılaştırma düzeltmesi gerekiyor mu? Gerekiyorsa hangisi
+  ve neden.
+— Hangi soru için örneklemim yetersiz olabilir? Kaba bir güç
+  değerlendirmesi yap.
+— S4 bir hipotez testi değil, model uyumu karşılaştırmasıdır.
+  Bunun nasıl raporlanacağını ayrıca yaz: R kare yeterli mi, AIC
+  gerekir mi, artık grafikleri nasıl sunulur?
+
+BU TASARIMA ÖZGÜ DİKKAT
+— Tam faktöriyel tasarımda etkileşim terimleri var. S2 aslında bir
+  etkileşim sorusu (malzeme × derişim). Bunu ayrıca belirt.
+— Aynı partiden gelen numuneler tam bağımsız sayılabilir mi? Parti
+  etkisi varsa ne yapılmalı?
+
+SINIRLAR
+— Analizi YAPMA. Sayı üretme. Bu bir plandır.
+— Veride olmayan bir değişkene dayanan plan önerme.
+— &quot;Duruma göre değişir&quot; deyip geçme; bir test seç ve
+  gerekçelendir.
+— İzoterm modellerini doğrusallaştırarak uydurmayı önerme;
+  doğrusallaştırma hata yapısını bozar. Doğrusal olmayan regresyon
+  öner.
+
+DENETİM
+Planın sonunda: her araştırma sorusunun bir analiz planı var mı?
+Soru numaralarını ve karşılık gelen testleri tek tabloda listele.</pre></div>
+
+<aside class="not "><span class="not-baslik">Plan koşuldu, sonra analiz koşuldu — ikisi de burada</span><p>Yukarıdaki istem bir <strong>plan</strong> istiyor, analiz değil. Plan alındıktan
+sonra analiz ayrı bir betikle yapıldı ve planın söylediği her adım
+sırayla uygulandı. Aşağıdaki çıktılar o betiğin gerçek ekran
+çıktısıdır.</p>
+<p>Bir ayrıntı: planın ilk uygulanışı işe yaramadı. Analiz betiği bunu
+gizlemek yerine <strong>Adım 0</strong> olarak saklıyor, çünkü neden işe
+yaramadığı planın kendisinden daha öğretici.</p></aside>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Adsorpsiyon analizi — veri, kod ve çıktılar</span></div>
+<dl><dt>Boyut</dt><dd>201 gözlem · 12 sütun · 5 analiz adımı</dd><dt>Pakette</dt><dd><a href="veri/kimya/adsorpsiyon_temiz.csv">adsorpsiyon_temiz.csv</a> · <a href="kod/15_analiz_adsorpsiyon.py">15_analiz_adsorpsiyon.py</a> · <a href="kod/16_sekiller_adsorpsiyon.py">16_sekiller_adsorpsiyon.py</a> · <a href="cikti/adsorpsiyon_analiz.txt">adsorpsiyon_analiz.txt</a> · <a href="cikti/adsorpsiyon_analiz.json">adsorpsiyon_analiz.json</a> · <a href="cikti/adsorpsiyon_anova.csv">adsorpsiyon_anova.csv</a> · <a href="cikti/adsorpsiyon_ozet.csv">adsorpsiyon_ozet.csv</a></dd></dl>
+<p>Analizi yapan betik, ürettiği sayılar ve şekilleri çizen betik. Tümü
+indirilebilir; <code>python 15_analiz_adsorpsiyon.py veri/kimya cikti</code>
+komutu bu sayfadaki bütün sayıları yeniden üretir.</p></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Analiz betiğinin gerçek çıktısı — varsayımlar ve ANOVA</span>
+<span class="damga">kod/15_adsorpsiyon_analiz.py · 2 Kasım 2026</span></header>
+<pre>ADSORPSİYON VERİSİ — ANALİZ SONUÇLARI
+==========================================================================
+
+!!! SENTETİK VERİ. Bu sayılar bir bulgu değil, yöntem
+    örneğidir. Hiçbiri alıntılanamaz. !!!
+
+Gözlem sayısı: 201
+Tasarım: 2 adsorban × 3 pH × 2 sıcaklık × 3 derişim × 2 süre
+
+
+ADIM 0 — İLK KURULUM ve NEDEN İŞE YARAMADIĞI
+--------------------------------------------------------------------------
+
+Analizi ilk kurduğumuzda yalnız ilgi konusu üç faktörü
+modele koyduk: adsorban, pH, sıcaklık. Başlangıç derişimi
+ile temas süresini dışarıda bıraktık — &#x27;onlar araştırma
+sorusunun konusu değil&#x27; diye düşündük. Sonuç şöyle çıktı:
+
+Kaynak                               KT   sd           F         p     η²p
+adsorban                            7,5    1        0,04     0,849   0,000
+pH                                278,9    2        0,67     0,511   0,007
+sıcaklık                            0,3    1        0,00     0,968   0,000
+adsorban × pH                       9,1    2        0,02     0,978   0,000
+adsorban × sıcaklık                 6,8    1        0,03     0,857   0,000
+pH × sıcaklık                      19,9    2        0,05     0,953   0,001
+adsorban × pH × sıcaklık            3,1    2        0,01     0,993   0,000
+Hata                           39.147,3  189           —         —       —
+
+Hiçbir etki anlamlı değil, bütün etki büyüklükleri sıfıra
+yakın. Oysa çay posası ile ticari kömürün farklı
+davrandığını betimsel tabloda zaten görüyorduk.
+
+Nedeni şu: q, başlangıç derişimine çok güçlü bağlıdır.
+25 mg/L&#x27;de yaklaşık 11 mg/g, 100 mg/L&#x27;de yaklaşık 45 mg/g
+tutunuyor. Bu farkı modele koymazsanız, o varyans &#x27;hata&#x27;
+sayılır ve F oranının paydasını şişirir. Payda şişince
+bütün F değerleri birin altına düşer.
+
+Çözüm, deney tasarımı dilinde BLOKLAMA: kontrol edilen
+ama ilgi konusu olmayan faktörler modele ana etki olarak
+girer, etkileşimleri sorulmaz. Böylece varyansları hata
+teriminden çıkar. Aşağıdaki bütün adımlar bu kurulumla.
+
+
+ADIM 1 — VARSAYIM DENETİMİ
+--------------------------------------------------------------------------
+
+Neden bu adım: ANOVA, hata teriminin yaklaşık normal
+dağıldığını ve grupların varyanslarının benzer olduğunu
+varsayar. Varsayım tutmazsa F de p de güvenilmez olur.
+
+Shapiro-Wilk (model artıkları): W = 0,8657, p = 0,0000
+  → Artıklar normallikten sapıyor.
+
+Şüpheli dönem dışarıda bırakıldığında aynı sınama:
+  W = 0,9219, p = 0,0000
+  W değeri 0,866 → 0,922
+  yükseliyor. Yani normallikten sapmanın büyük bölümü
+  cihaz arızası dönemindeki kaymış okumalardan geliyor.
+  Sapma hâlâ anlamlı; n = 201 gibi örneklemlerde
+  Shapiro-Wilk küçük sapmaları da yakalar. F sınaması
+  bu ölçekte normallik sapmalarına karşı dayanıklıdır,
+  ama bulgular Adım 5&#x27;te şüpheli dönem olmadan da
+  yineleniyor.
+
+Levene (36 hücre, medyan merkezli): W = 3,343, p = 0,0000
+  → Varyanslar eşit DEĞİL.
+
+Sapmanın nereden geldiğini aramak gerekiyor; &#x27;varsayım
+tutmadı&#x27; demek tek başına bir şey öğretmez. Aynı sınamayı
+her derişim düzeyi İÇİNDE ayrı ayrı yapalım:
+
+  C0 =  25 mg/L: W = 1,331, p = 0,2339 · hücre SS aralığı 0,05-0,28 mg/g
+  C0 =  50 mg/L: W = 2,230, p = 0,0246 · hücre SS aralığı 0,12-0,60 mg/g
+  C0 = 100 mg/L: W = 1,759, p = 0,0850 · hücre SS aralığı 0,33-2,25 mg/g
+
+Hücre standart sapması, hücre ortalamasıyla birlikte
+büyüyor mu: r = 0,343, p = 0,0034 (n = 71 hücre).
+
+Tablo şunu söylüyor: 25 mg/L&#x27;de hücre içi standart sapma 0,05-0,28 mg/g iken,
+100 mg/L&#x27;de 0,33-2,25 mg/g&#x27;a çıkıyor.
+Yani varyans eşitsizliği karşılaştırdığımız gruplar arasında
+değil, derişim düzeyleri arasında. Nedeni ölçüm hatasının
+çarpımsal olması: spektrofotometre okuması yüzde cinsinden
+sapar, mutlak cinsten değil. Yüksek derişimde aynı yüzde
+daha büyük bir mg/g farkı demektir.
+
+Bu, modeli kurma biçimimizi doğruluyor: derişim modelde
+blok olarak duruyor, dolayısıyla her derişim düzeyi kendi
+içinde karşılaştırılıyor. Blok içi Levene sınamaları üç
+düzeyde de ya anlamsız ya sınırda; karşılaştırmaların
+yapıldığı yerde varyanslar yeterince benzer.
+
+
+ADIM 2-3 — BLOKLANMIŞ ANOVA ve ETKİ BÜYÜKLÜĞÜ
+--------------------------------------------------------------------------
+
+Neden bu test: üç faktörün etkisini ayrı ayrı VE birlikte
+sınamak gerekiyor. Üç ayrı t testi etkileşimi göremez;
+oysa &#x27;ticari kömürün üstünlüğü pH&#x27;a bağlı mı&#x27; sorusu tam
+olarak bir etkileşim sorusudur.
+
+Model: q_mgG ~ C(adsorban) * C(pH) * C(sicaklik_C) + C(baslangic_derisim_mgL) + C(temas_suresi_dk)
+Açıklanan varyans: R² = 0,9960
+
+Kaynak                               KT   sd           F         p     η²p
+adsorban                           79,8    1       95,00    &lt;0,001   0,338
+pH                                176,1    2      104,76    &lt;0,001   0,530
+sıcaklık                            9,2    1       10,89     0,001   0,055
+başlangıç derişimi (blok)      38.916,4    2   23.152,69    &lt;0,001   0,996
+temas süresi (blok)                21,0    1       24,94    &lt;0,001   0,118
+adsorban × pH                      10,0    2        5,96     0,003   0,060
+adsorban × sıcaklık                 1,5    1        1,74     0,189   0,009
+pH × sıcaklık                       0,8    2        0,50     0,605   0,005
+adsorban × pH × sıcaklık            0,5    2        0,28     0,757   0,003
+Hata                              156,3  186           —         —       —
+
+Kısmi eta kare eşikleri (Cohen 1988): 0,01 küçük · 0,06 orta · 0,14 büyük
+
+Anlamlı bulunan terimler (bloklar hariç):
+  adsorban: F(1, 186) = 95,00, p &lt; 0,001, η²p = 0,338
+  pH: F(2, 186) = 104,76, p &lt; 0,001, η²p = 0,530
+  sıcaklık: F(1, 186) = 10,89, p = 0,001, η²p = 0,055
+  adsorban × pH: F(2, 186) = 5,96, p = 0,003, η²p = 0,060
+
+Etkileşim terimi anlamlı çıktığında ana etkiler tek başına
+yorumlanmaz. adsorban × pH anlamlı olduğu için &#x27;ticari
+kömür daha iyidir&#x27; demek eksik kalır; doğru ifade &#x27;ticari
+kömürün üstünlüğü pH düzeyine göre değişir&#x27;.
+
+Etkileşimin okunuşu — pH düzeyine göre adsorban farkı:
+
+  pH 3: çay posası 25,05 mg/g · ticari 25,09 mg/g · fark 0,04 mg/g
+  pH 7: çay posası 27,65 mg/g · ticari 27,75 mg/g · fark 0,10 mg/g
+  pH 10: çay posası 27,06 mg/g · ticari 28,00 mg/g · fark 0,94 mg/g
+
+Farkın pH 3&#x27;te 0,04 mg/g&#x27;dan pH 10&#x27;da 0,94 mg/g&#x27;a çıkması
+etkileşimin yönünü gösteriyor: ticari kömürün üstünlüğü
+yalnız yüksek pH&#x27;ta belirginleşiyor. Ortalamalar üç
+derişim ve iki süre üzerinden alındığı için mutlak
+büyüklükler bastırılmış görünür; sınamanın kendisi
+bloklanmış modelde yapıldı.
+
+Post hoc — pH düzeyleri arası Tukey HSD:
+(pH üç düzeyli; ANOVA &#x27;bir fark var&#x27; der, hangi ikilinin
+ farklı olduğunu söylemez. Hata terimi bloklanmış modelden
+ alındı: KO_hata = 0,8404, sd = 186.)
+
+  pH 3.0 - pH 7.0: fark = -2,62 mg/g, q = 23,13, p = &lt;0,001
+  pH 3.0 - pH 10.0: fark = -2,47 mg/g, q = 21,91, p = &lt;0,001
+  pH 7.0 - pH 10.0: fark = 0,16 mg/g, q = 1,41, p = 0,577</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/k02_anova_kiyas.svg"
+ alt="Eksik ve bloklanmış model kurulumlarının F değerlerini logaritmik eksende karşılaştıran nokta-çizgi grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 7.3</b> Aynı veri, iki model kurulumu. Derişim ve süre modele konmadığında
+hiçbir etki anlamlı çıkmıyor; blok olarak konduğunda dördü de anlamlı.
+Şekli üreten betik: <code>kod/16_sekiller_adsorpsiyon.py</code>
+<span class="indir">Dosya: <a href="varlik/sekil/k02_anova_kiyas.svg">k02_anova_kiyas.svg</a>
+ · <a href="varlik/sekil_png/k02_anova_kiyas.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Adım 0 neden kursta duruyor</span><p>Bu analizi ilk kurduğumuzda başlangıç derişimini ve temas süresini
+modele koymadık — "araştırma sorusunun konusu değil" diye. Bütün F
+değerleri birin altına düştü, hiçbir etki anlamlı çıkmadı. Oysa
+betimsel tabloda fark zaten görünüyordu.</p>
+<p>Nedeni şu: <strong>F oranının paydası, modelin açıklayamadığı her şeydir.</strong>
+Açıklanabilir bir kaynağı modele koymazsanız, o kaynak hata sayılır
+ve paydayı şişirir. Payda şişince gerçek etkiler görünmez olur.</p>
+<p>Bu hata, analizi yapan kişi "modeli basit tutayım" diye düşündüğünde
+çok kolay yapılır. Modelden çıkarmak basitleştirmez — varyansı
+görünmez bir yere taşır. Deney tasarımı dilinde çözümü <strong>bloklama</strong>:
+kontrol edilen ama ilgi konusu olmayan faktörler modele ana etki
+olarak girer, etkileşimleri sorulmaz.</p></aside>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/k03_etkilesim.svg"
+ alt="pH düzeylerine göre iki adsorbanın blok düzeltilmiş ortalama kapasitesini güven aralıklarıyla gösteren çizgi grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 7.4</b> pH × adsorban etkileşimi. İki çizgi paralel olmadığı için etkileşim
+var: ticari kömürün üstünlüğü yalnız yüksek pH'ta belirginleşiyor.
+Etkileşim anlamlı olduğunda "ticari kömür daha iyidir" demek eksik
+kalır.
+<span class="indir">Dosya: <a href="varlik/sekil/k03_etkilesim.svg">k03_etkilesim.svg</a>
+ · <a href="varlik/sekil_png/k03_etkilesim.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Analiz betiğinin gerçek çıktısı — izoterm uyumu</span>
+<span class="damga">kod/15_adsorpsiyon_analiz.py · 2 Kasım 2026</span></header>
+<pre>ADIM 4 — İZOTERM MODELLERİ
+--------------------------------------------------------------------------
+
+Neden bu adım: ANOVA &#x27;fark var mı&#x27; sorusunu yanıtlar ama
+mekanizma hakkında bir şey söylemez. İzoterm uyumu,
+tutunmanın tek katmanlı mı (Langmuir) yoksa heterojen
+yüzeyde mi (Freundlich) olduğuna dair kanıt sunar.
+
+Her iki model pH 7, 45 °C, 120 dk koşulunda uyduruldu;
+izoterm tanımı gereği tek sıcaklık ve tek pH gerektirir.
+
+Çay posası (n = 8 nokta):
+  Langmuir  : qmax = 88,0 mg/g · KL = 0,1364 L/mg
+              R² = 0,9575 · AIC = 20,9 · RMSE = 2,87 mg/g
+  Freundlich: KF = 12,30 · n = 1,58
+              R² = 0,9276 · AIC = 25,1 · RMSE = 3,75 mg/g
+  Daha iyi uyan: Langmuir (AIC farkı 4,3)
+
+Ticari kömür (n = 9 nokta):
+  Langmuir  : qmax = 176,4 mg/g · KL = 0,0997 L/mg
+              R² = 0,9980 · AIC = -3,4 · RMSE = 0,66 mg/g
+  Freundlich: KF = 16,15 · n = 1,21
+              R² = 0,9974 · AIC = -0,8 · RMSE = 0,76 mg/g
+  Daha iyi uyan: Langmuir (AIC farkı 2,5)
+
+
+Doğrusallaştırma neden önerilmedi
+
+(a) Dönüştürülmüş ölçekteki R² karşılaştırılamaz.
+
+Doğrusallaştırılmış uyumun R²&#x27;si, dönüştürülmüş değişken
+üzerinde hesaplanır: Langmuir için Ce/q, Freundlich için
+ln q. Bunlar farklı şeyleri ölçer; iki R² aynı tabloda
+yan yana konamaz. Aynı parametrelerle özgün ölçekte
+(mg/g) yeniden hesaplandığında tablo şöyle:
+
+Adsorban      yöntem                  Langmuir R²  Freundlich R²        seçim
+Çay posası    doğrusal olmayan             0,9575         0,9276     Langmuir
+              doğrusallaştırılmış          0,9552         0,9087     Langmuir
+Ticari        doğrusal olmayan             0,9980         0,9974     Langmuir
+              doğrusallaştırılmış          0,9980         0,9970     Langmuir
+
+Özgün ölçeğe getirildiğinde iki yöntem de Langmuir&#x27;i
+seçiyor. Dönüştürülmüş ölçekteki R² ile bakılsaydı
+Freundlich kazanıyordu — yani sonucu değiştiren şey
+modelin kendisi değil, R²&#x27;nin hangi ölçekte
+hesaplandığıydı.
+
+(b) Doğrusallaştırma parametreleri kaydırıyor.
+
+Adsorban      Parametre     doğ. olmayan  doğrusallaş.     fark
+Çay posası    qmax (mg/g)         87,954        91,893     %4,5
+              KL (L/mg)            0,136         0,123   %-10,1
+              KF                  12,299        10,525   %-14,4
+              n                    1,584         1,373   %-13,3
+Ticari        qmax (mg/g)        176,435       174,302    %-1,2
+              KL (L/mg)            0,100         0,101     %1,5
+              KF                  16,153        15,907    %-1,5
+              n                    1,211         1,185    %-2,1
+
+q&#x27;daki eşit dağılmış ölçüm hatası Ce/q&#x27;ya taşındığında
+küçük q değerlerinde büyür. En küçük kareler her noktaya
+eşit ağırlık verdiği için düşük derişimli noktalar hak
+ettiğinden fazla ağırlık kazanır.
+
+(c) Tahminler gerçek değerlere ne kadar yakın?
+
+Bu veri sentetik olduğu için üretim modelinin gerçek
+parametrelerini biliyoruz. Gerçek bir çalışmada bu denetim
+yapılamaz; burada yapılabiliyor ve öğretici bir şey
+gösteriyor.
+
+Adsorban      Parametre       gerçek    tahmin       %95 güven aralığı  kapsıyor mu
+Çay posası    qmax (mg/g)      148,0      88,0          [52,2 – 123,7]        HAYIR
+              KL (L/mg)       0,0671    0,1364       [0,0377 – 0,2352]         evet
+Ticari        qmax (mg/g)      176,0     176,4         [137,8 – 215,0]         evet
+              KL (L/mg)       0,1000    0,0997       [0,0712 – 0,1282]         evet
+
+Ticari kömürde tahminler gerçeğe çok yakın. Çay posasında
+qmax tahmini gerçeğin epey altında ve güven aralığı
+gerçek değeri KAPSAMIYOR. Nedeni yöntem değil, deney
+aralığı: çay posasının denge derişimleri 1,3-9,8 mg/L
+arasında kalıyor. En yüksek derişimde bile kapasitenin
+ancak %57 kadarı doluyor; izoterm doygunluk
+bölgesine girmiyor. qmax doygunluk düzeyidir, ulaşılmamış
+bir düzey veriden güvenilir biçimde çıkarılamaz.
+
+Pratik sonuç: qmax raporlanacaksa, derişim aralığının
+doygunluk bölgesini kapsadığı gösterilmelidir. Geniş
+güven aralığı bu uyarıyı zaten veriyor — çay posasında
+qmax aralığının genişliği, tahminin %81
+kadarı.
+
+Not: n = 8-9 nokta, izoterm uyumu için az. Yayımlanacak
+bir çalışmada derişim basamağı sayısı artırılır.</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/k04_izoterm.svg"
+ alt="İki adsorban için Langmuir ve Freundlich izotermlerinin ölçüm noktalarına uyumunu gösteren iki panelli grafik" loading="lazy"></div>
+<figcaption><b>Şekil 7.5</b> Langmuir ve Freundlich modellerinin doğrusal olmayan en küçük
+karelerle uydurulmuş hâli. Kesiksiz çizgi, AIC'ye göre daha iyi uyan
+model.
+<span class="indir">Dosya: <a href="varlik/sekil/k04_izoterm.svg">k04_izoterm.svg</a>
+ · <a href="varlik/sekil_png/k04_izoterm.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">İstemdeki sınır neyi değiştirdi — sayıyla</span><p>İstem <em>"izoterm modellerini doğrusallaştırarak uydurmayı önerme"</em>
+diyordu. Bu sınır konmasaydı ne olurdu, analiz çıktısı gösteriyor.</p>
+<p><strong>Dönüştürülmüş ölçekte hesaplanan R² ile bakıldığında Freundlich
+kazanıyordu</strong> (çay posası 0,966 — Langmuir 0,881). Aynı parametreler
+özgün ölçeğe getirilip R² yeniden hesaplandığında Langmuir kazanıyor
+(0,955 — 0,909). Sonucu değiştiren şey model değil, R²'nin hangi
+ölçekte hesaplandığıydı.</p>
+<p>Ce/q'nun R²'si ile ln q'nun R²'si farklı şeyleri ölçer; aynı tabloda
+yan yana konamaz. Doğrusallaştırılmış izoterm uyumunun bu kadar
+yaygın raporlanması, bu karşılaştırmanın ne kadar kolay
+yapılıverdiğini gösteriyor.</p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Analiz betiğinin gerçek çıktısı — duyarlılık ve betimsel özet</span>
+<span class="damga">kod/15_adsorpsiyon_analiz.py · 2 Kasım 2026</span></header>
+<pre>ADIM 5 — ŞÜPHELİ DÖNEM DUYARLILIK ANALİZİ
+--------------------------------------------------------------------------
+
+Neden bu adım: 12-18 Mart ölçümleri cihaz bakım kaydı
+nedeniyle kuşkulu. Onları atmak da tutmak da bir karar;
+hangisinin sonucu değiştirdiğini göstermek, kararı okurun
+denetlemesine açar.
+
+Şüpheli dönem dışarıda bırakıldığında (n = 186):
+
+Kaynak                          F (tümü)   F (hariç)  η²p (tümü)  η²p (hariç)
+adsorban                           95,00      117,99       0,338        0,408
+pH                                104,76      123,92       0,530        0,592
+sıcaklık                           10,89       17,76       0,055        0,094
+başlangıç derişimi (blok)      23.152,69   33.182,14       0,996        0,997
+temas süresi (blok)                24,94       22,50       0,118        0,116
+adsorban × pH                       5,96        6,09       0,060        0,067
+adsorban × sıcaklık                 1,74        0,56       0,009        0,003
+pH × sıcaklık                       0,50        1,13       0,005        0,013
+adsorban × pH × sıcaklık            0,28        0,01       0,003        0,000
+
+Anlamlılık kararı değişen terim yok; bulgular şüpheli döneme duyarlı değil.
+
+
+BETİMSEL ÖZET
+--------------------------------------------------------------------------
+
+Adsorban         pH    n    q ort.     q SS   giderim %
+Çay posası        3   31     25,05    13,05        84,8
+Çay posası        7   34     27,64    14,12        92,2
+Çay posası       10   34     27,05    14,34        93,5
+Ticari            3   32     25,09    13,42        91,0
+Ticari            7   34     27,75    14,78        95,8
+Ticari           10   36     28,00    15,04        96,3</pre></div>
+
+<aside class="not "><span class="not-baslik">Sentetik veri burada ne sağladı</span><p>Analizin (c) bölümünde tahminler, <strong>veriyi üreten modelin gerçek
+parametreleriyle</strong> karşılaştırıldı. Gerçek bir çalışmada bu denetim
+yapılamaz; doğru cevap bilinmez.</p>
+<p>Karşılaştırma şunu gösterdi: ticari kömürde qmax tahmini neredeyse
+tam isabet (176,4'e karşı 176,0), çay posasında ise gerçeğin epey
+altında (88,0'a karşı 148,0) ve %95 güven aralığı gerçek değeri
+kapsamıyor. Nedeni yöntem değil, deney aralığı — çay posasının
+derişimleri doygunluk bölgesine girmiyor.</p>
+<p>Bunu bir ders olarak okumak gerekir: <strong>qmax gibi bir doygunluk
+parametresi, doygunluğa ulaşılmamış veriden güvenilir biçimde
+çıkarılamaz.</strong> Geniş güven aralığı bu uyarıyı zaten veriyor; tek
+başına nokta tahmini raporlanırsa uyarı kaybolur.</p></aside>
+
+<aside class="not "><span class="not-baslik">Son sınır neden konuldu</span><p><em>"İzoterm modellerini doğrusallaştırarak uydurmayı önerme."</em></p>
+<p>Adsorpsiyon literatüründe Langmuir ve Freundlich modelleri
+geleneksel olarak doğrusallaştırılıp en küçük kareler ile uydurulur.
+Bu kolaydır ama hata yapısını bozar: dönüştürülmüş değişkende eşit
+dağılan hata, özgün ölçekte eşit dağılmaz ve parametre tahminleri
+yanlı çıkar.</p>
+<p>Model, literatürde yaygın olanı önerme eğilimindedir. Yaygın olan
+her zaman doğru değildir. <strong>Alanınızdaki yerleşik ama tartışmalı
+uygulamaları isteme sınır olarak yazmazsanız, model onları size
+geri verir.</strong></p></aside>
+
+<aside class="not "><span class="not-baslik">Bu istemin neden analizden ÖNCE koşulması gerekir</span><p>Analizi yapıp sonra "hangi test uygundu" diye sormak, sonuca bakarak test
+seçmek anlamına gelir. Sonuçlara bakıp anlamlı çıkan testi seçmeye
+p-hacking denir; bu, onun en yaygın biçimidir ve çoğu zaman kötü niyetle
+değil, sırayı karıştırmaktan doğar. Planı önce yazıp bir kenara koymak bu
+riski ortadan kaldırır. En güçlü biçimi ön kayıttır (preregistration):
+analiz planını, veriyi görmeden önce açık bir arşive tarihli olarak
+yüklemek.</p></aside>
+<h2 id="orneklem-buyuklugu-ve-guc">Örneklem büyüklüğü ve güç</h2>
+<p>Bir testin, gerçekten var olan bir etkiyi yakalama olasılığına
+<strong>istatistiksel güç</strong> denir. Yaygın hedef %80'dir.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s08_guc_analizi.svg"
+ alt="Güç ve örneklem büyüklüğü" loading="lazy"></div>
+<figcaption><b>Şekil 7.2</b> Gerçek veriyle yapılmış bir gösterim. Sol panel: aynı veriden 500 kez
+örnek çekildiğinde Pearson r'nin oynama aralığı. n = 30'da r, −0,33
+ile +0,47 arasında herhangi bir yere düşebiliyor — işareti bile
+güvenilir değil. Sağ panel: aynı gerçek ilişkiyi "anlamlı" bulma
+oranı, yani istatistiksel güç. n = 30'da %7, n = 3.000'de %96.
+Ayrıntısı 8. bölümde.
+<span class="indir">Dosya: <a href="varlik/sekil/s08_guc_analizi.svg">s08_guc_analizi.svg</a>
+ · <a href="varlik/sekil_png/s08_guc_analizi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not istatistik"><span class="not-baslik">Kaba örneklem kuralları</span><p>Bunlar güç analizinin yerine geçmez ama planlama aşamasında yön
+verir. <strong>İki grup karşılaştırması:</strong> orta düzey etki (d = 0,5) için
+grup başına yaklaşık 64 kişi. <strong>Korelasyon:</strong> orta düzey ilişki
+(r = 0,3) için yaklaşık 85 kişi. <strong>Çoklu regresyon:</strong> yordayıcı başına
+en az 10–15 gözlem, toplamda 100'ün altına düşmemek. <strong>Faktör
+analizi:</strong> madde başına 5–10 katılımcı, toplamda 200'ün altına
+düşmemek. Kesin sayı için G*Power ya da <code>statsmodels.stats.power</code>
+kullanılır.</p></aside>
+<h2 id="coklu-karsilastirma">Çoklu karşılaştırma</h2>
+<p>Aynı veri üzerinde çok sayıda test koştururken, yalnız rastlantıyla
+"anlamlı" sonuç bulma olasılığı artar. Yirmi bağımsız test
+koşturursanız, hiçbir gerçek etki olmasa bile ortalama bir tanesi
+p &lt; 0,05 çıkar.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Düzeltme</th>
+<th>Nasıl çalışır</th>
+<th>Ne zaman</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bonferroni</td>
+<td>Eşiği test sayısına böler (0,05 / k)</td>
+<td>Az sayıda test, tutucu davranmak gerektiğinde</td>
+</tr>
+<tr>
+<td>Holm–Bonferroni</td>
+<td>Sıralı, Bonferroni'den güçlü</td>
+<td>Bonferroni'nin varsayılan yerine geçebilir</td>
+</tr>
+<tr>
+<td>Tukey HSD</td>
+<td>ANOVA sonrası tüm ikili karşılaştırmalar</td>
+<td>Grup ortalamaları karşılaştırılırken</td>
+</tr>
+<tr>
+<td>Benjamini–Hochberg (FDR)</td>
+<td>Yanlış keşif oranını denetler</td>
+<td>Çok sayıda test (onlarca, yüzlerce)</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not ipucu"><span class="not-baslik">Düzeltme yapmamanın meşru olduğu durum</span><p>Önceden tanımlanmış tek bir birincil hipoteziniz varsa ve diğer
+testler keşfedici nitelikteyse, birincil teste düzeltme uygulanmaz —
+ama diğerlerinin <strong>keşfedici</strong> olduğu açıkça yazılır. Sorun düzeltme
+yapmamak değil, hangi testin doğrulayıcı hangisinin keşfedici
+olduğunu belirtmemektir.</p></aside>
+<h2 id="raporlama-disiplini">Raporlama disiplini</h2>
+<p>Bir testin sonucu üç parçadan oluşur ve üçü birden yazılır: test
+istatistiği, p değeri ve etki büyüklüğü. Etki büyüklüğü, farkın ya da
+ilişkinin pratikte ne kadar büyük olduğunu örneklem büyüklüğünden bağımsız
+olarak gösteren sayıdır; p değeri bunu söylemez.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Eksik raporlama</div>
+<pre>Gruplar arasında anlamlı fark bulunmuştur (p &lt; 0,001).
+
+Değişkenler arasında anlamlı bir ilişki saptanmıştır
+(p = 0,011).
+
+ANOVA sonucu anlamlı çıkmıştır.</pre></div>
+<div class="guclu"><div class="baslik">Tam raporlama</div>
+<pre>Derse katılımı yüksek olan öğrenciler (n = 2.098,
+ort = 3,540, ss = 1,096), düşük olanlara kıyasla
+(n = 2.930, ort = 3,032, ss = 1,256) öğretim elemanını
+daha yüksek değerlendirmiştir; Welch t(4.834) = 15,232,
+p &lt; 0,001, Cohen d = 0,426 (küçük–orta etki).
+
+Ders puanı ile dersi tekrar sayısı arasında istatistiksel
+olarak anlamlı ancak büyüklüğü ihmal edilebilir bir ilişki
+bulunmuştur; r = −0,033, p = 0,012, r² = 0,001
+(açıklanan varyans %0,1).
+
+Güçlük düzeyine göre ders puanları farklılaşmaktadır;
+F(4, 5.815) = 57,80, p &lt; 0,001, eta kare = 0,038.
+Etki büyüklüğü, güçlük algısının ders puanındaki
+değişkenliğin yalnız %3,8&#x27;ini açıkladığını göstermektedir.</pre></div></div>
+
+<aside class="not uyari"><span class="not-baslik">İkinci örnekteki cümleye dikkat</span><p>Sağ sütunun ortasındaki cümle, <strong>anlamlı ama önemsiz</strong> bir bulguyu
+dürüstçe raporluyor: r = −0,033, p = 0,012. Bu ilişki istatistiksel
+olarak anlamlıdır ama varyansın binde birini açıklar. "Anlamlı bir
+ilişki bulunmuştur" diye yazıp r² yazmamak teknik olarak yanlış
+değildir — ama okuru yanıltır. Bu kursun 8. bölümünde bu sayının
+nereden geldiğini göreceksiniz.</p></aside>
+<h2 id="veriyi-baglama-vermek-profil-cikarmak">Veriyi bağlama vermek: profil çıkarmak</h2>
+<p>Buraya kadarki istemlerde veriyi siz tarif ettiniz: "28 Likert maddesi,
+5.820 gözlem, eksik yok." Bu tarif doğru olduğu sürece iyi çalışır.
+Ama iki sorunu var: tarifi yazarken yanılabilirsiniz, ve modelin
+<strong>dağılımı</strong> görmesi gerekir — ortalama, çarpıklık, eksik oran, düzey
+sayısı.</p>
+<p>Akla gelen ilk çözüm veri dosyasını eke koymaktır. Bu üç nedenle
+kötü bir çözümdür:</p>
+<ol class="adimlar"><li><p><strong>Gizlilik.</strong> Ham satırlar kişisel veri taşıyabilir. Bir anket
+dosyasında yaş, bölüm ve açık uçlu yanıt birlikte durursa, üçü
+birleştiğinde kişi tanınabilir hâle gelir.</p></li><li><p><strong>Jeton.</strong> 5.820 satırlık bir dosya bağlam penceresinin önemli bir
+bölümünü doldurur ve geriye asıl soru için az yer kalır.</p></li><li><p><strong>Doğruluk.</strong> Model 5.820 satırı okuyup ortalama hesaplamaz.
+Hesaplamaya çalışırsa yanılır — ve yanıldığını söylemez. Hesabı
+bilgisayarda yapıp sonucunu vermek hem doğru hem denetlenebilir.</p></li></ol>
+<p>Doğru çözüm, veri yerine <strong>veri profili</strong> vermektir: her değişkenin
+ölçüm düzeyi, eksik oranı, dağılım ölçüleri ve normallik sınaması.
+Profil satır düzeyinde hiçbir bilgi taşımaz.</p>
+<div class="kod-blok">
+<header><span class="dil">bash</span>
+<span>Profili üreten betik — kod/19_veri_profili.py</span></header>
+<pre><code>python 19_veri_profili.py \
+    veri/sosyal/gazi_ders_degerlendirme.csv \
+    cikti/gazi_veri_profili.txt \
+    --likert 1 5 \
+    --baslik &quot;Gazi Üniversitesi ders değerlendirme verisi&quot;</code></pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Üretilen profil — kesit</span>
+<span class="damga">kod/19_veri_profili.py · 2 Kasım 2026</span></header>
+<pre>VERİ PROFİLİ — Gazi Üniversitesi ders değerlendirme verisi
+==============================================================================
+
+Gözlem sayısı : 5.820
+Değişken sayısı: 36
+Tam dolu satır : 5.820
+
+Bu profil, ham veri yerine yapay zekâya bağlam olarak
+verilmek üzere üretildi. Hiçbir satır-düzeyi bilgi içermez.
+
+------------------------------------------------------------------------------
+
+instr
+  ölçüm düzeyi : sıralı ya da nominal  (3 tamsayı düzeyi: [1, 2, 3] — hangisi olduğu veriden anlaşılmaz, siz söylemelisiniz)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 3,00
+  ortalama / SS: 2,486 / 0,718
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,6924, p = 0,0000
+  çarpıklık    : -1,027 · basıklık: -0,351
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q1
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 2,930 / 1,341
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8965, p = 0,0000
+  çarpıklık    : -0,046 · basıklık: -1,143
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+ogretim_puan
+  ölçüm düzeyi : sürekli  (65 farklı değer)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,259 / 1,193
+  medyan / ÇAG : 3,188 / 1,250
+  Shapiro-Wilk : W = 0,9251, p = 0,0000
+  çarpıklık    : -0,416 · basıklık: -0,616
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+(… 36 değişkenin tamamı dosyada …)
+
+üretir; ikisini birden modele koymadan önce düşünün.
+
+  ogretim_puan — genel_puan: r = 0,982
+  ders_puan — genel_puan: r = 0,967
+  Q20 — ogretim_puan: r = 0,951
+  Q22 — ogretim_puan: r = 0,950
+  Q14 — ogretim_puan: r = 0,950
+  Q21 — ogretim_puan: r = 0,950
+  Q10 — ders_puan: r = 0,949
+  Q25 — ogretim_puan: r = 0,948
+  Q19 — ogretim_puan: r = 0,947
+  Q23 — ogretim_puan: r = 0,947
+  Q15 — ogretim_puan: r = 0,947
+  Q21 — Q22: r = 0,941
+  Q18 — ogretim_puan: r = 0,940
+  Q13 — ogretim_puan: r = 0,940
+  Q5 — ders_puan: r = 0,939
+  … ve 281 çift daha</pre></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">Veri profili — tam sürüm</span></div>
+<dl><dt>Boyut</dt><dd>396 satır · 36 değişken · satır düzeyi bilgi içermez</dd><dt>Pakette</dt><dd><a href="cikti/gazi_veri_profili.txt">gazi_veri_profili.txt</a> · <a href="kod/19_veri_profili.py">19_veri_profili.py</a></dd></dl>
+<p>Yukarıdaki kesitin tamamı. Betik herhangi bir CSV için çalışır;
+<code>--likert</code> seçeneği ölçeğin alt ve üst sınırını alır.</p></div>
+
+<aside class="not "><span class="not-baslik">Betiğin bilerek yapmadığı şey</span><p>Profil, ölçüm düzeyini <strong>tahmin eder, karar vermez.</strong> Çıktıda şöyle
+satırlar var:</p>
+<p><code>instr — sıralı ya da nominal (3 tamsayı düzeyi: [1, 2, 3] — hangisi
+olduğu veriden anlaşılmaz, siz söylemelisiniz)</code></p>
+<p>Bu bilinçli bir sınır. 1, 2, 3 değerleri üç basamaklı bir ölçek de
+olabilir, üç öğretim elemanının kimlik numarası da. Veriye bakarak
+ayırt edilemez; ancak verinin nasıl toplandığını bilen söyleyebilir.</p>
+<p>İlk sürümde betik bunu "Likert" diye etiketliyordu, çünkü tespit ölçütü
+"1-5 aralığında tamsayı" kadar gevşekti. Ölçüt sıkılaştırıldı: artık
+ölçeğin <strong>bütün basamaklarının</strong> kullanılmış olması aranıyor. Bu da
+kesin değildir, yalnız daha az yanılır — ve yanıldığında bunu söyler.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Veri profiline dayalı analiz yöntemi seçimi</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İstatistik danışmanısın. Elinde bir veri profili var ve araştırmacının
+sorularına hangi analizin uyduğunu belirleyeceksin.
+
+BAĞLAM — EKTE VERİLEN DOSYA
+Veri profili: [dosya adı]. Her değişken için ölçüm düzeyi, eksik oran,
+dağılım ölçüleri, Shapiro-Wilk sonucu, çarpıklık ve basıklık var.
+Profilin sonunda yüksek ilişkili değişken çiftleri listelenmiş.
+
+DİKKAT
+Profildeki &quot;ölçüm düzeyi&quot; satırları bir TAHMİNDİR. Bazılarında
+&quot;sıralı ya da nominal — siz söylemelisiniz&quot; yazıyor. Bu değişkenleri
+kullanan bir analiz önerecekseni önce bana sor; varsayarak ilerleme.
+
+ARAŞTIRMA SORULARI
+S1. [soru]
+S2. [soru]
+S3. [soru]
+
+GÖREV
+Her soru için bir analiz öner ve seçimini profildeki SAYILARA
+dayandır.
+
+HER SORU İÇİN
+1. Bağımlı ve bağımsız değişkenler — profildeki adlarıyla
+2. Her birinin ölçüm düzeyi — profilden okuyarak, satırı alıntılayarak
+3. Önerilen test ve neden bu test
+4. Varsayımların profildeki durumu:
+   — normallik: Shapiro-Wilk sonucu ne diyor, çarpıklık ve basıklık
+     ne diyor, ikisi çelişiyorsa hangisine bakılmalı
+   — varyans eşitliği: profilde yok, ayrıca sınanmalı mı
+   — bağımsızlık: veri yapısından çıkarılabiliyor mu
+5. Varsayım tutmazsa alternatif test
+6. Etki büyüklüğü ve yorum eşikleri
+
+ÖZEL DENETİMLER
+— Regresyon öneriyorsan, profilin sonundaki yüksek ilişkili çiftlere
+  bak. Önerdiğin modelde çoklu bağlantı var mı?
+— Likert maddelerini toplayıp sürekli değişken gibi kullanmayı
+  önerecekseniz, bunun bir varsayım olduğunu söyle ve gerekçelendir.
+— Örneklem büyükse, Shapiro-Wilk&#x27;in küçük sapmaları da anlamlı
+  bulacağını hesaba kat. p değerine değil etki büyüklüğüne bak.
+
+SINIRLAR
+— Profilde olmayan bir değişkene dayanan analiz önerme.
+— Profilde olmayan bir sayı üretme. Gerekiyorsa &quot;bu profilde yok,
+  ayrıca hesaplanmalı&quot; yaz.
+— &quot;Duruma göre değişir&quot; deyip geçme; bir test seç ve gerekçelendir.
+— Analizi YAPMA. Bu bir plandır.
+
+DENETİM
+Sonunda bir tablo: soru numarası, bağımlı değişken, bağımsız
+değişken(ler), önerilen test, varsayım durumu, alternatif test.
+Ayrıca: hangi değişkenlerin ölçüm düzeyini bana sormam gerektiğini
+listele.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri · ders değerlendirme</span>
+<span class="ad">Veri profiline dayalı analiz yöntemi seçimi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İstatistik danışmanısın. Elinde bir veri profili var ve araştırmacının
+sorularına hangi analizin uyduğunu belirleyeceksin.
+
+BAĞLAM — EKTE VERİLEN DOSYA
+Veri profili: gazi_veri_profili.txt (396 satır, 36 değişken). Her
+değişken için ölçüm düzeyi, eksik oran, dağılım ölçüleri,
+Shapiro-Wilk sonucu, çarpıklık ve basıklık var. Profilin sonunda
+yüksek ilişkili değişken çiftleri listelenmiş.
+
+VERİ HAKKINDA BİLDİKLERİM
+Gazi Üniversitesi&#x27;nde 5.820 ders değerlendirme formu. Q1–Q12 dersle
+ilgili maddeler, Q13–Q28 öğretim elemanıyla ilgili maddeler; hepsi
+1–5 Likert. `instr` üç öğretim elemanının KİMLİK numarası (sıralı
+değil, nominal). `class` on üç farklı dersin kimlik numarası
+(nominal). `nb.repeat` dersi kaçıncı kez aldığı (1, 2, 3 — sıralı).
+`attendance` devam düzeyi (0–4, sıralı). `difficulty` algılanan
+güçlük (1–5, sıralı). `ders_puan` ve `ogretim_puan` ilgili maddelerin
+ortalamasıdır; ben hesapladım.
+
+DİKKAT
+Profildeki &quot;ölçüm düzeyi&quot; satırları bir TAHMİNDİR. Yukarıda
+düzelttiklerimi kullan; profil ile benim söylediğim çelişirse benimkini
+al ve çeliştiğini belirt.
+
+ARAŞTIRMA SORULARI
+S1. Üç öğretim elemanı arasında öğretim puanı bakımından fark var mı?
+S2. Algılanan güçlük ile ders puanı arasında ilişki var mı?
+S3. Devam düzeyi ve algılanan güçlük birlikte ders puanını ne kadar
+    açıklıyor?
+S4. Dersi tekrar alanlar ile ilk kez alanların puanları farklı mı?
+
+GÖREV
+Her soru için bir analiz öner ve seçimini profildeki SAYILARA
+dayandır.
+
+HER SORU İÇİN
+1. Bağımlı ve bağımsız değişkenler — profildeki adlarıyla
+2. Her birinin ölçüm düzeyi — profilden okuyarak, satırı alıntılayarak
+3. Önerilen test ve neden bu test
+4. Varsayımların profildeki durumu:
+   — normallik: Shapiro-Wilk sonucu ne diyor, çarpıklık ve basıklık
+     ne diyor, ikisi çelişiyorsa hangisine bakılmalı
+   — varyans eşitliği: profilde yok, ayrıca sınanmalı mı
+   — bağımsızlık: veri yapısından çıkarılabiliyor mu
+5. Varsayım tutmazsa alternatif test
+6. Etki büyüklüğü ve yorum eşikleri
+
+ÖZEL DENETİMLER
+— S3 için regresyon önereceksen, profilin sonundaki yüksek ilişkili
+  çiftlere bak. `ders_puan` ile Q maddeleri arasında r = 0,94&#x27;e varan
+  ilişkiler var; bu modelimi nasıl etkiler?
+— `ders_puan` on iki Likert maddesinin ortalamasıdır. Bunu sürekli
+  değişken gibi kullanmak bir varsayımdır; bu varsayımın ne zaman
+  savunulabilir olduğunu söyle.
+— Örneklem 5.820. Shapiro-Wilk bu büyüklükte neredeyse her zaman
+  anlamlı çıkar. Normallik kararını neye göre vereceğimi söyle.
+— Aynı öğretim elemanının birden çok dersi var; gözlemler tam
+  bağımsız sayılabilir mi? Sayılamazsa ne yapılmalı?
+
+SINIRLAR
+— Profilde olmayan bir değişkene dayanan analiz önerme.
+— Profilde olmayan bir sayı üretme. Gerekiyorsa &quot;bu profilde yok,
+  ayrıca hesaplanmalı&quot; yaz.
+— &quot;Duruma göre değişir&quot; deyip geçme; bir test seç ve gerekçelendir.
+— Analizi YAPMA. Bu bir plandır. Sonuçları 8. bölümde koşturacağım.
+
+DENETİM
+Sonunda bir tablo: soru numarası, bağımlı değişken, bağımsız
+değişken(ler), önerilen test, varsayım durumu, alternatif test.
+Ayrıca: hangi değişkenlerin ölçüm düzeyini bana sormam gerektiğini
+listele.</pre></div>
+
+<aside class="not "><span class="not-baslik">Doldurulmuş örnekte eklenen dört şey</span><p>İki istem arasındaki farklar, bağlam vermenin ne demek olduğunu
+gösteriyor.</p>
+<p><strong>Profilin yanıldığı yerler düzeltildi.</strong> <code>instr</code> profilde "sıralı ya
+da nominal" görünüyordu; doldurulmuş istemde "üç öğretim elemanının
+kimlik numarası, nominal" diye yazıldı. Bu düzeltme olmadan model
+öğretim elemanı numarasını sıralı sayıp regresyona sokabilirdi.</p>
+<p><strong>Türetilmiş değişkenin nasıl üretildiği söylendi.</strong> <code>ders_puan</code> on
+iki maddenin ortalamasıdır. Model bunu profilden bilemez; bilmezse
+hem çoklu bağlantıyı hem ölçüm düzeyi varsayımını gözden kaçırır.</p>
+<p><strong>Bağımsızlık sorunu açıkça soruldu.</strong> Aynı öğretim elemanının birden
+çok dersi var. Bu, klasik ANOVA'nın bağımsızlık varsayımını
+zorlayan bir yapıdır ve profilden görülmez.</p>
+<p><strong>Örneklem büyüklüğünün sınaması nasıl etkilediği soruldu.</strong> 5.820
+gözlemde Shapiro-Wilk neredeyse her zaman anlamlı çıkar. Soruyu
+sormazsanız model "normallik sağlanmıyor" deyip parametrik olmayan
+teste yönlendirebilir — oysa çarpıklık ve basıklık kabul edilebilir
+sınırlarda.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Analiz seçimi üç şeye bakar: soru türü, ölçek düzeyi, varsayımların
+durumu.</p></li><li><p>Varsayım denetimi analizden önce yapılır ve raporlanır. Büyük
+örneklemde normallik testi değil, çarpıklık/basıklık büyüklüğü
+okunur.</p></li><li><p>Analiz planı, analizden önce yazılır. Sonradan yazılan bir plan, testin
+sonuca bakılarak seçilmediğini gösteremez.</p></li><li><p>Her test sonucu üç parçayla raporlanır: test istatistiği ve yanındaki
+serbestlik derecesi (hesaplamaya giren bağımsız bilgi miktarı; parantez
+içinde yazılır), p değeri ve <strong>etki büyüklüğü.</strong></p></li><li><p>İstatistiksel anlamlılık önem demek değildir. n = 5.820'de r = 0,03
+bile anlamlı çıkar.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="06-veri.html"><span class="yon">← Önceki</span><span class="ad">Veri: kaynaklar, anket tasarımı, temizleme</span></a><a class="sag" href="08-nicel-analiz.html"><span class="yon">Sonraki →</span><span class="ad">Nicel analiz: on iki adım, gerçek veri</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+﻿VERİ SETİ
+------------------------------------------------------------------------------
+Prasad, A., & Chandra, S. (2024). PhiUSIIL Phishing URL (Website).
+UCI Machine Learning Repository.
+Kaynak makale DOI: 10.1016/j.cose.2023.103545
+Bu çalışmada kullanılan altküme: 5,000 satır, 40 sayısal özellik
+Sınıf dağılımı: kimlik avı 2,141 (%42.8), meşru 2,859 (%57.2)
+
+==============================================================================
+ADIM 1 — Betimsel karşılaştırma — iki sınıf arasındaki fark
+==============================================================================
+Nedir : Her özelliğin iki sınıftaki ortalamasının karşılaştırılması.
+Neden : Model kurmadan önce verinin ne söylediğine bakılır. Hangi özellik ayırt edici, hangisi değil — bu, sonradan modelin söylediğini denetlemek için gereken ön bilgidir.
+------------------------------------------------------------------------------
+Etki büyüklüğüne göre en ayırt edici on özellik:
+              özellik  kimlik_avı_ort  meşru_ort       t   p  cohen_d
+   URLSimilarityIndex          49.537    100.000 -104.93 0.0   -3.466
+         HasSocialNet           0.005      0.791 -101.45 0.0   -2.529
+     HasCopyrightInfo           0.061      0.803  -81.99 0.0   -2.190
+       HasDescription           0.051      0.737  -72.10 0.0   -1.890
+              IsHTTPS           0.490      1.000  -47.15 0.0   -1.557
+DomainTitleMatchScore          16.490     76.084  -53.23 0.0   -1.491
+   URLTitleMatchScore          20.633     76.084  -47.35 0.0   -1.343
+         IsResponsive           0.311      0.853  -45.13 0.0   -1.339
+               NoOfJS           0.904     16.887  -52.88 0.0   -1.324
+SpacialCharRatioInURL           0.084      0.048   42.76 0.0    1.321
+
+En ayırt edici özelliğin etki büyüklüğü: d = -3.466  (URLSimilarityIndex)
+NOT — |d| > 3 son derece olağandışıdır. Sosyal bilimlerde d = 0,8
+'büyük etki' sayılır. Bu büyüklükte bir fark, özelliğin etiketle
+neredeyse aynı şey olduğu anlamına gelebilir. Not edip ilerliyoruz.
+
+==============================================================================
+ADIM 2 — Kategorik ilişki — ki-kare
+==============================================================================
+Nedir : İki kategorik değişkenin bağımsızlığının sınanması.
+Neden : HTTPS kullanımı ile kimlik avı arasındaki ilişki, yaygın bir güvenlik varsayımını sınar: 'kilit simgesi varsa güvenlidir'.
+------------------------------------------------------------------------------
+Çapraz tablo — HTTPS × etiket:
+etiket   kimlik_avi  mesru
+IsHTTPS                   
+0              1091      0
+1              1050   2859
+
+χ²(1) = 1860.50, p = 0, Cramér V = 0.6100
+HTTPS kullanan sitelerin %26.9'i kimlik avı.
+Bulgu — HTTPS varlığı tek başına güvenlik göstergesi değildir.
+
+==============================================================================
+ADIM 3 — NAİF MODEL — tüm özelliklerle sınıflandırma
+==============================================================================
+Nedir : Rastgele orman (random forest) ile ikili sınıflandırma.
+Neden : Standart yaklaşım: özellikleri modele ver, eğit, ölç. Bu adımı olduğu gibi yapıp sonucuna bakacağız.
+------------------------------------------------------------------------------
+Eğitim: 3,500 satır   Test: 1,500 satır
+Bölme katmanlı (stratified) — iki sınıfın oranı her iki kümede aynı.
+
+  doğruluk    : 0.9993
+  kesinlik    : 1.0
+  duyarlılık  : 0.9984
+  F1          : 0.9992
+  ROC_AUC     : 1.0
+  PR_AUC      : 1.0
+  Karışıklık matrisi: DN=858  YP=0  YN=1  DP=641
+
+DUR. Bu sayılar fazla iyi.
+Doğruluk %99.93, ROC AUC 1.0.
+Gerçek bir güvenlik probleminde bu düzey bir başarı, modelin
+problemi çözdüğünü değil, problemin yanlışlıkla kolaylaştığını
+gösterir. Yayımlamadan önce nedenini bulmak zorunludur.
+
+==============================================================================
+ADIM 4 — TEŞHİS — nereden geldiği sistematik olarak aranır
+==============================================================================
+Nedir : Her özelliğin sınıf içi değişkenliği ve tek başına ayırt etme gücünün taranması.
+Neden : Şüphe doğduğunda tek tek sütun denemek yerine tüm sütunlar iki ölçütle taranır: (a) bir sınıfta tamamen sabit mi, (b) tek bir eşikle kaç yüzde doğruluk veriyor. Bu tarama, sızıntıyı aramanın standart yoludur.
+------------------------------------------------------------------------------
+Rastgele ormanın özellik önemleri (ilk 8):
+           özellik    önem
+URLSimilarityIndex 0.21957
+   NoOfExternalRef 0.15832
+        LineOfCode 0.13176
+         NoOfImage 0.10622
+            NoOfJS 0.07874
+      HasSocialNet 0.06949
+  HasCopyrightInfo 0.03302
+           IsHTTPS 0.02898
+
+(a) MEŞRU sınıfta tamamen sabit olan özellikler — standart sapma 0:
+           özellik  meşru_ss  kimlik_avı_ss  tek_eşik_doğruluk
+URLSimilarityIndex       0.0        22.2523             0.9896
+           IsHTTPS       0.0         0.5000             0.7900
+    NoOfQMarkInURL       0.0         0.3044             0.5994
+        IsDomainIP       0.0         0.0806             0.5746
+    HasObfuscation       0.0         0.0647             0.5736
+
+>>> 5 özellik, meşru sınıftaki 2.859 kaydın
+>>> TAMAMINDA aynı değeri alıyor. Bu bir ölçüm değil;
+>>> veri setinin kuruluşundan gelen bir düzenliliktir.
+
+(b) Tek bir 'if' satırıyla %90 üstü doğruluk veren özellikler:
+           özellik  tek_eşik_doğruluk
+URLSimilarityIndex             0.9896
+   NoOfExternalRef             0.9600
+        LineOfCode             0.9518
+         NoOfImage             0.9432
+            NoOfJS             0.9258
+           NoOfCSS             0.9004
+
+6 özelliğin her biri, modelsiz, tek eşikle %90'ın
+üstünde doğruluk veriyor. Bunların çoğu sayfa içeriğinden geliyor:
+meşru sayfalar büyük, çok görselli, çok dış bağlantılı; kimlik avı
+sayfaları küçük ve çıplak. Bu gerçek bir örüntü — ama modelin
+öğrendiği şey kimlik avı davranışı değil, SAYFA BOYUTU.
+
+==============================================================================
+ADIM 5 — TEK SÜTUN ÇIKARMAK YETMİYOR
+==============================================================================
+Nedir : En baskın özelliğin çıkarılıp modelin yeniden eğitilmesi.
+Neden : Sızıntı bulunduğunda ilk tepki o sütunu silmektir. Bu tepkinin yeterli olup olmadığı ölçülmelidir — yoksa düzeltilmiş sanılan bir sayı raporlanır.
+------------------------------------------------------------------------------
+Çıkarılan tek özellik: URLSimilarityIndex
+Naif model F1       : 0.9992
+Tek sütun çıkarılmış: 0.9984
+Değişim             : -0.0008
+
+Neredeyse hiç değişmedi. Çünkü diğer özellikler aynı bilgiyi
+taşıyor. Sızıntı tek bir sütunda değil, veri setinin iki sınıfını
+toplama biçiminde. Bir sütun silerek düzeltilemez; çerçeve
+değişmelidir.
+
+==============================================================================
+ADIM 6 — YERLEŞİME UYGUN ÇERÇEVE — yalnız URL metni
+==============================================================================
+Nedir : Kararın, siteye hiç bağlanmadan, yalnız URL dizgisinden hesaplanabilen özelliklerle verilmesi.
+Neden : Bu bir istatistik hilesi değil, problemin doğru tanımıdır. Gerçek bir kimlik avı süzgeci, kullanıcı bağlantıya tıklamadan ÖNCE karar vermek zorundadır; sayfa içeriği o anda elde yoktur. Sayfa özelliklerini kullanmak, geleceği bilerek geçmişi tahmin etmeye benzer.
+------------------------------------------------------------------------------
+Kullanılan özellikler (yalnız URL dizgisinden hesaplanır):
+  URLLength                 DomainLength              TLDLength               
+  NoOfSubDomain             CharContinuationRate      URLCharProb             
+  NoOfLettersInURL          LetterRatioInURL          NoOfDegitsInURL         
+  DegitRatioInURL           SpacialCharRatioInURL   
+
+Dışarıda bırakılanlar ve gerekçeleri:
+  • URLSimilarityIndex   — meşru sınıfta sabit (100,0); sızıntı
+  • IsHTTPS, IsDomainIP, HasObfuscation, NoOfQMarkInURL
+                         — meşru sınıfta sabit; sızıntı
+  • Sayfa içeriği özellikleri (LineOfCode, NoOfImage, NoOfJS,
+    NoOfCSS, NoOfExternalRef, HasSocialNet, …)
+                         — ancak siteye bağlanınca elde edilir;
+                           yerleşim senaryosuna aykırı
+  • TLDLegitimateProb    — şüphelenildi, DENETLENDİ: tek eşikle
+                           yalnız %66,9 doğruluk veriyor ve modele
+                           katkısı yok; sızıntı değil, yine de
+                           türetilmiş olduğu için dışarıda bırakıldı
+
+  doğruluk    : 0.98
+  kesinlik    : 0.9811
+  duyarlılık  : 0.972
+  F1          : 0.9765
+  ROC_AUC     : 0.9955
+  PR_AUC      : 0.9953
+  Karışıklık matrisi: DN=846  YP=12  YN=18  DP=624
+
+Üç modelin karşılaştırması:
+                         model  özellik  doğruluk  kesinlik  duyarlılık     F1  ROC_AUC  PR_AUC
+          1. Naif — 40 özellik       40    0.9993    1.0000      0.9984 0.9992   1.0000  1.0000
+       2. Tek sütun çıkarılmış       39    0.9987    1.0000      0.9969 0.9984   1.0000  1.0000
+3. Yerleşime uygun — URL metni       11    0.9800    0.9811      0.9720 0.9765   0.9955  0.9953
+
+Raporlanacak sayı üçüncü satırdır. Birinci satır bir ölçüm değil,
+veri setinin kuruluşunun yankısıdır.
+
+Sınıflandırma raporu (yerleşime uygun model):
+              precision    recall  f1-score   support
+
+       meşru     0.9792    0.9860    0.9826       858
+  kimlik avı     0.9811    0.9720    0.9765       642
+
+    accuracy                         0.9800      1500
+   macro avg     0.9801    0.9790    0.9796      1500
+weighted avg     0.9800    0.9800    0.9800      1500
+
+
+==============================================================================
+ADIM 7 — Çapraz doğrulama — tek bölünmeye güvenmemek
+==============================================================================
+Nedir : Verinin beş parçaya bölünüp her parçanın sırayla test kümesi olarak kullanılması.
+Neden : Tek bir eğitim/test bölünmesinden çıkan sayı, o bölünmenin şansına bağlıdır. Makalede ortalama ± standart sapma raporlanır; tek bir sayı raporlamak eksik bildirimdir.
+------------------------------------------------------------------------------
+F1 (5 kat)      : 0.9813 0.9685 0.9720 0.9646 0.9647
+  ortalama ± ss : 0.9702 ± 0.0062
+ROC AUC (5 kat) : 0.9970 0.9944 0.9972 0.9954 0.9953
+  ortalama ± ss : 0.9959 ± 0.0011
+
+Makalede yazılacak cümle:
+  "Yalnız URL dizgisinden türetilen 11 sözcüksel özellikle eğitilen"
+  "rastgele orman modeli, beş katlı çapraz doğrulamada F1 = 0.970 ± 0.006"
+  "ve ROC AUC = 0.996 ± 0.001 başarısı göstermiştir (n = 5,000)."
+
+==============================================================================
+ADIM 8 — Hangi URL nitelikleri çalışıyor — permütasyon önemi
+==============================================================================
+Nedir : Bir özelliğin değerleri karıştırıldığında başarının ne kadar düştüğünün ölçülmesi.
+Neden : Ağaç tabanlı önem ölçütü sürekli ve çok değerli özellikleri şişirir. Permütasyon önemi doğrudan 'bu özellik olmasa ne kaybederim' sorusunu yanıtlar; Tartışma bölümü bu listeden yazılır.
+------------------------------------------------------------------------------
+              özellik  ortalama_düşüş      ss
+     LetterRatioInURL         0.30813 0.00491
+SpacialCharRatioInURL         0.24832 0.00743
+            URLLength         0.16765 0.00636
+     NoOfLettersInURL         0.11615 0.00782
+         DomainLength         0.04124 0.00374
+        NoOfSubDomain         0.03803 0.00431
+      DegitRatioInURL         0.00929 0.00146
+          URLCharProb         0.00836 0.00256
+ CharContinuationRate         0.00256 0.00211
+            TLDLength         0.00194 0.00121
+      NoOfDegitsInURL         0.00074 0.00196
+
+En etkili özellik: LetterRatioInURL — karıştırıldığında
+F1 0.3081 düşüyor.
+
+==============================================================================
+ADIM 9 — Yorumlanabilir karşılaştırma — lojistik regresyon
+==============================================================================
+Nedir : Aynı problemin, katsayıları okunabilir bir modelle çözülmesi.
+Neden : Rastgele orman daha başarılı olabilir ama neden öyle karar verdiğini söylemez. Lojistik regresyon her özellik için bir olasılık oranı verir; hakem 'hangi değişken ne yönde etkili' diye sorduğunda gösterilecek tablo budur.
+------------------------------------------------------------------------------
+  doğruluk    : 0.87
+  kesinlik    : 0.9552
+  duyarlılık  : 0.7305
+  F1          : 0.8279
+  ROC_AUC     : 0.9335
+  PR_AUC      : 0.9384
+
+Standartlaştırılmış katsayılar — OR, bir standart sapma artışın etkisi:
+              özellik  B_standart  olasılık_oranı
+     NoOfLettersInURL      5.9406        380.1528
+            URLLength     -4.9929          0.0068
+      NoOfDegitsInURL      3.6864         39.9006
+SpacialCharRatioInURL      2.5975         13.4295
+     LetterRatioInURL      2.3804         10.8090
+      DegitRatioInURL      2.2750          9.7280
+         DomainLength     -2.1842          0.1126
+          URLCharProb     -0.6910          0.5011
+ CharContinuationRate      0.5539          1.7400
+        NoOfSubDomain     -0.3313          0.7180
+            TLDLength      0.2485          1.2821
+
+Rastgele orman F1 = 0.9765, lojistik regresyon F1 = 0.8279.
+Fark, yorumlanabilirlik karşılığında ödenen bedeldir. Hangisinin
+raporlanacağı çalışmanın sorusuna bağlıdır: tahmin başarısı mı,
+mekanizma açıklaması mı?

@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veri: kaynaklar, anket tasarımı, temizleme</title>
+<meta name="description" content="Veriyi nereden bulacağınız, kendi anketinizi nasıl tasarlayacağınız ve ham form çıktısını analiz edilebilir hâle nasıl getireceğiniz. Gerçek bir temiz">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Veri: kaynaklar, anket tasarımı, temizleme</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa etkin" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a><div class="alt-liste"><a href="#veri-nereden-gelir">Veri nereden gelir</a><a href="#uc-ayri-veri-turu-uc-ayri-dikkat">Üç ayrı veri türü, üç ayrı dikkat</a><a href="#anket-tasarimi">Anket tasarımı</a><a href="#ham-veriden-temiz-veriye">Ham veriden temiz veriye</a><a href="#kimliksizlestirme">Kimliksizleştirme</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 6</div><h1>Veri: kaynaklar, anket tasarımı, temizleme</h1><p class="ozet">Veriyi nereden bulacağınız, kendi anketinizi nasıl tasarlayacağınız ve ham form çıktısını analiz edilebilir hâle nasıl getireceğiniz. Gerçek bir temizleme günlüğüyle.</p><p>Analizden önce iki iş vardır ve ikisi de analizden uzun sürer: veriyi
+elde etmek, veriyi kullanılabilir hâle getirmek. Bu bölüm ikisini de
+uçtan uca gösteriyor.</p>
+<h2 id="veri-nereden-gelir">Veri nereden gelir</h2>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Yol 1</span></p>
+<p class="kart-baslik">Açık veri</p>
+<p>En hızlı yol. Araştırma sorunuz hazır bir veri setiyle yanıtlanabiliyorsa, veri
+toplamaya gidecek aylar kazanılır. Lisans ve atıf kurallarına uyulur; veri setinin kendi
+künyesi kaynakçaya girer.</p></div><div class="kart"><p><span class="no">Yol 2</span></p>
+<p class="kart-baslik">Kendi ölçümünüz</p>
+<p>Anket, deney, gözlem, log kaydı. Tam denetim sizdedir ama tasarım
+hatası sonradan düzeltilemez. Bu yüzden tasarım aşaması, veri toplama aşamasından daha çok dikkat ister.</p></div><div class="kart"><p><span class="no">Yol 3</span></p>
+<p class="kart-baslik">Var olan kurumsal veri</p>
+<p>Öğrenci işleri kayıtları, kütüphane logları, hastane verileri.
+Bulunması kolay, izni zordur. Etik kurul ve veri sorumlusu izni
+olmadan tek satırı kullanılmaz.</p></div></div>
+<h3>Açık veri kaynakları</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Kaynak</th>
+<th>Kapsam</th>
+<th>Not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UCI Machine Learning Repository</td>
+<td>Makine öğrenmesi, çok disiplinli</td>
+<td>Bu kursun iki veri seti de buradan</td>
+</tr>
+<tr>
+<td>Kaggle Datasets</td>
+<td>Çok geniş, değişken nitelik</td>
+<td>Lisansı dosya bazında kontrol edin</td>
+</tr>
+<tr>
+<td>OpenML</td>
+<td>Makine öğrenmesi, sürümlü</td>
+<td>Aynı veri setinin farklı sürümleri ayrı izlenir</td>
+</tr>
+<tr>
+<td>TÜİK Mikro Veri</td>
+<td>Türkiye resmî istatistikleri</td>
+<td>Başvuruyla erişim; bazı setler ücretli</td>
+</tr>
+<tr>
+<td>OSF (Open Science Framework)</td>
+<td>Sosyal bilimler, psikoloji</td>
+<td>Makalelerin yanındaki veriler</td>
+</tr>
+<tr>
+<td>ICPSR</td>
+<td>Sosyal bilimler, uzun soluklu anketler</td>
+<td>Kurumsal üyelik gerekebilir</td>
+</tr>
+<tr>
+<td>World Values Survey · ESS</td>
+<td>Uluslararası tutum araştırmaları</td>
+<td>Kayıtla ücretsiz</td>
+</tr>
+<tr>
+<td>Zenodo · Figshare</td>
+<td>Her alan, makale ekleri</td>
+<td>DOI'li, atıf verilebilir</td>
+</tr>
+<tr>
+<td>data.gov.tr</td>
+<td>Türkiye kamu verisi</td>
+<td>Kapsam genişliyor</td>
+</tr>
+<tr>
+<td>PhysioNet · MIMIC</td>
+<td>Klinik ve fizyolojik veri</td>
+<td>Eğitim ve veri kullanım sözleşmesi zorunlu</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not ipucu"><span class="not-baslik">Veri setini seçmeden önce üç soru</span><p><strong>Lisansı ne?</strong> CC BY 4.0 ise atıfla serbestçe kullanılır; "yalnız
+araştırma amaçlı" ise ticari kullanım kapalıdır; lisans belirtilmemişse
+kullanılamaz. <strong>Künyesi var mı?</strong> DOI'si olan veri seti kaynakçaya
+girer, olmayan için en azından URL ve erişim tarihi yazılır.
+<strong>Nasıl toplandı?</strong> Veri setinin kendi belgesi okunmadan kullanılan
+veri, 9. bölümde göreceğiniz türden sürprizler üretir.</p></aside>
+<h2 id="uc-ayri-veri-turu-uc-ayri-dikkat">Üç ayrı veri türü, üç ayrı dikkat</h2>
+<p>"Veri" dendiğinde çoğu kişi anket düşünür. Oysa akademik çalışmada üç
+ayrı tür vardır ve her birinin kendi sorunu olur.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Tür 1</span></p>
+<p class="kart-baslik">Ölçek verisi</p>
+<p>Anket, test, tutum ölçeği. Birden çok madde bir araya gelip tek bir
+puan üretir.</p>
+<p><strong>Asıl sorun:</strong> maddelerin gerçekten aynı şeyi ölçtüğünü göstermek.
+Bunu göstermeden alınan ortalama anlamsızdır. Güvenilirlik ve faktör
+analizi bu yüzden vardır.</p>
+<p><em>Örnek:</em> ders değerlendirme anketi, istatistik kaygısı ölçeği,
+hasta memnuniyeti formu.</p></div><div class="kart"><p><span class="no">Tür 2</span></p>
+<p class="kart-baslik">Ölçüm verisi</p>
+<p>Laboratuvar, saha, cihaz. Bir alet bir büyüklüğü okur.</p>
+<p><strong>Asıl sorun:</strong> ölçümün kendisinin güvenilirliği. Cihaz kalibre mi,
+kaç tekrar yapıldı, ölçüm belirsizliği ne? Tek bir okumadan sayı
+yazmak, tek bir maddeden ölçek puanı çıkarmak kadar sakıncalıdır.</p>
+<p><em>Örnek:</em> adsorpsiyon kapasitesi, yorulma ömrü, dönüşüm verimi,
+kan değerleri.</p></div><div class="kart"><p><span class="no">Tür 3</span></p>
+<p class="kart-baslik">Kayıt verisi</p>
+<p>Arşiv, kurum kaydı, log dosyası, metin derlemi. Veri sizin için
+toplanmadı; başka bir amaçla tutulmuş.</p>
+<p><strong>Asıl sorun:</strong> neyin kaydedilmediğini bilmek. Kayıt verisinde en
+tehlikeli şey, sistematik olarak eksik olan şeydir ve o eksik, veri
+dosyasında görünmez.</p>
+<p><em>Örnek:</em> salnameler, hastane kayıtları, sunucu logları, TÜİK
+tabloları, öğrenci işleri verisi.</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Kayıt verisinde görünmeyen eksik</span><p>Bir örnek. 19. yüzyıl salnamelerinde bir vilayette "medrese sayısı"
+sütunu boş. İki ayrı anlama gelebilir: o vilayette medrese yoktur,
+ya da salnameyi hazırlayan kâtip bu bilgiyi toplayamamıştır. Veri
+dosyası ikisini de aynı biçimde gösterir: boş hücre.</p>
+<p>Aynı sorun her kayıt verisinde var. Hastane kaydında "sigara
+kullanımı" boşsa hasta içmiyor mu, yoksa sorulmamış mı? Sunucu
+logunda bir istek yoksa gerçekleşmedi mi, yoksa kayıt mı düştü?</p>
+<p><strong>Bu ayrımı veriden okuyamazsınız; kaydın nasıl tutulduğunu
+öğrenmeniz gerekir.</strong> Kayıt verisi kullanan her çalışmanın Yöntem
+bölümünde bu sorunun yanıtı olmalıdır.</p></aside>
+
+<aside class="not ipucu"><span class="not-baslik">Ölçüm verisinde tekrar sayısı</span><p>Laboratuvar çalışmalarında en sık yapılan eksik raporlama budur:
+"adsorpsiyon kapasitesi 142 mg/g bulunmuştur" cümlesi kaç ölçümün
+sonucudur? Bir mi, üç mü?</p>
+<p>Tek ölçümden sayı raporlanmaz. En az üç tekrar yapılır ve sonuç
+<strong>ortalama ± standart sapma</strong> olarak verilir. Tekrar sayısı (n = 3)
+tabloda ya da şekil altyazısında yazılır. Bu, anket çalışmasındaki
+örneklem büyüklüğünün karşılığıdır.</p></aside>
+<h2 id="anket-tasarimi">Anket tasarımı</h2>
+<p>Kötü tasarlanmış bir anketten iyi analiz çıkmaz. Sorunun yanlış
+sorulduğu bir maddeyi, hiçbir istatistik kurtarmaz.</p>
+<ol class="adimlar"><li><p><strong>Yapıyı önce tanımlayın.</strong> Neyi ölçüyorsunuz? "Tutum" bir yapıdır,
+"haftada kaç saat kullanıyorsunuz" bir davranış ölçümüdür. İkisi
+karıştırılırsa ölçek tutarsız çıkar.</p></li><li><p><strong>Her yapı için birden çok madde yazın.</strong> Tek maddeyle ölçülen yapının
+güvenilirliği hesaplanamaz. Bir yapı için en az dört, tercihen beş-altı
+madde.</p></li><li><p><strong>Ters kodlu madde koyun.</strong> Her ölçeğe bir ya da iki olumsuz yazılmış madde, dikkatsiz yanıtlayanı
+ortaya çıkarır. Analiz öncesi düz kodlanır; unutulursa Cronbach alfa
+çöker. Cronbach alfa, aynı yapıyı ölçtüğünü varsaydığınız maddelerin
+birbiriyle ne kadar tutarlı yanıt aldığını 0 ile 1 arasında gösteren
+güvenilirlik katsayısıdır.</p></li><li><p><strong>Ölçeği tutarlı tutun.</strong> Bütün Likert maddeleri aynı basamak sayısı
+ve aynı uç etiketleriyle. Bir yerde 5'li bir yerde 7'li ölçek
+kullanmak, puanların birleştirilmesini engeller.</p></li><li><p><strong>Çifte soru yazmayın.</strong> "Araçlar hızlı ve güvenilir mi?" iki soru
+sorar; yanıtlayan hangisine yanıt verdiğini bilmez, siz de bilmezsiniz.</p></li><li><p><strong>Uzman görüşü alın, pilot koşturun.</strong> Maddelerin ölçtüğünüz yapıyı eksiksiz ve yersiz madde eklemeden kapsayıp kapsamadığına kapsam geçerliği denir; bu, alan uzmanlarının maddeleri tek tek değerlendirmesiyle sağlanır. Pilot uygulamada 20–30 kişi yeter; amaç anlaşılmayan
+maddeyi bulmaktır, istatistik üretmek değil.</p></li><li><p><strong>Etik kurul başvurusunu baştan yapın.</strong> Veri toplandıktan sonra
+alınan izin, izin değildir. Dergiler onay numarasını ve tarihini sorar.</p></li></ol>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Ölçek maddesi taslağı üretme</span>
+<span class="arac">Tasarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Ölçme ve değerlendirme alanında çalışan bir uzmansın. Likert tipi
+ölçek maddesi yazımında madde yazım kurallarını biliyorsun.
+
+ÖLÇÜLECEK YAPI
+Ad: [yapının adı]
+Tanım: [yapıyı 2-3 cümleyle tanımlayın — bu tanım maddelerin
+kapsamını belirleyecek]
+Kuramsal dayanak: [varsa dayandığınız model]
+
+HEDEF KİTLE
+[kimler yanıtlayacak: eğitim düzeyi, alan, yaş aralığı]
+
+GÖREV
+Bu yapıyı ölçmek için 8 madde taslağı yaz. Bunlardan 2&#x27;si ters kodlu
+olsun.
+
+MADDE YAZIM KURALLARI
+— Her madde tek bir fikir içersin (çifte soru yok)
+— Olumsuz ve çifte olumsuz yapı kullanma (ters kodlu maddeler
+  dışında; onlarda da tek olumsuzluk)
+— Mutlak ifadelerden kaçın (&quot;her zaman&quot;, &quot;hiçbir zaman&quot;)
+— Yönlendirici dil kullanma (&quot;sizce de ... değil mi&quot;)
+— Hedef kitlenin terminolojisine uygun yaz; teknik terimi ancak
+  kitlenin bildiği kadar kullan
+— Her madde en çok 20 kelime
+
+ÇIKTI BİÇİMİ
+| # | Madde metni | Ters kodlu | Yapının hangi yönünü ölçüyor |
+
+Tablonun altına şunları ekle:
+— Önerilen yanıt ölçeği ve uç etiketleri
+— Bu maddelerle ölçülemeyen, yapının hangi yönü eksik kalıyor
+— Pilot uygulamada özellikle hangi maddelerin anlaşılırlığı
+  sınanmalı, neden
+
+SINIRLAR
+— Var olan bir ölçeğin maddelerini aktarma; telif sorunu doğar.
+  Özgün madde yaz.
+— Yapı tanımının dışına çıkan madde yazma.
+— Bu maddelerin geçerli olduğunu iddia etme. Geçerlik uzman görüşü
+  ve pilot uygulamayla sağlanır; bu bir taslaktır.
+
+DENETİM
+Sekiz maddeyi yeniden oku ve şunu yaz: hangi iki madde birbirine en
+çok benziyor? Benzerlik, madde fazlalığı riskidir.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim · lisansüstü</span>
+<span class="ad">Ölçek maddesi taslağı üretme</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Ölçme ve değerlendirme alanında çalışan bir uzmansın. Likert tipi
+ölçek maddesi yazımında madde yazım kurallarını biliyorsun.
+
+ÖLÇÜLECEK YAPI
+Ad: İstatistik kaygısı
+
+Tanım: Lisansüstü öğrencilerin, istatistiksel analiz içeren bir işle
+karşılaştıklarında yaşadıkları gerilim, kaçınma eğilimi ve
+yetersizlik duygusu. Yapı üç yönü kapsar: analiz yapmadan önce
+duyulan gerilim, analiz sırasında hata yapma korkusu ve sonuçları
+yorumlayamama kaygısı. Matematiğe yönelik genel tutumu DEĞİL,
+özellikle istatistik uygulamasına yönelik kaygıyı ölçer.
+
+Kuramsal dayanak: Durum-sürekli kaygı ayrımı (Spielberger). Burada
+ölçülen durum kaygısıdır; yani kişilik özelliği değil, belirli bir
+işle karşılaşınca ortaya çıkan tepki.
+
+HEDEF KİTLE
+Sosyal bilimler ve eğitim bilimleri alanında yüksek lisans ve
+doktora öğrencileri. Yaş aralığı 23–40. En az bir dönem istatistik
+dersi almış, ancak çoğu düzenli analiz yapmıyor. Teknik terim
+kullanılabilir ama yazılım adı geçmemeli (kimi SPSS, kimi R
+kullanıyor).
+
+GÖREV
+Bu yapıyı ölçmek için 8 madde taslağı yaz. Bunlardan 2&#x27;si ters kodlu
+olsun.
+
+MADDE YAZIM KURALLARI
+— Her madde tek bir fikir içersin (çifte soru yok)
+— Olumsuz ve çifte olumsuz yapı kullanma (ters kodlu maddeler
+  dışında; onlarda da tek olumsuzluk)
+— Mutlak ifadelerden kaçın (&quot;her zaman&quot;, &quot;hiçbir zaman&quot;)
+— Yönlendirici dil kullanma (&quot;sizce de ... değil mi&quot;)
+— Hedef kitlenin terminolojisine uygun yaz; teknik terimi ancak
+  kitlenin bildiği kadar kullan
+— Her madde en çok 20 kelime
+
+ÇIKTI BİÇİMİ
+| # | Madde metni | Ters kodlu | Yapının hangi yönünü ölçüyor |
+
+Tablonun altına şunları ekle:
+— Önerilen yanıt ölçeği ve uç etiketleri
+— Bu maddelerle ölçülemeyen, yapının hangi yönü eksik kalıyor
+— Pilot uygulamada özellikle hangi maddelerin anlaşılırlığı
+  sınanmalı, neden
+
+SINIRLAR
+— Var olan bir ölçeğin maddelerini aktarma; telif sorunu doğar.
+  Özgün madde yaz.
+— Yapı tanımının dışına çıkan madde yazma. Özellikle genel matematik
+  kaygısına ya da akademik özyeterliğe kayma.
+— Bu maddelerin geçerli olduğunu iddia etme. Geçerlik uzman görüşü
+  ve pilot uygulamayla sağlanır; bu bir taslaktır.
+
+DENETİM
+Sekiz maddeyi yeniden oku ve şunu yaz: hangi iki madde birbirine en
+çok benziyor? Benzerlik, madde fazlalığı riskidir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Doldurulmuş örnekte nelere dikkat edildi</span><p><strong>Tanım kutusu üç cümleden fazla.</strong> Çünkü asıl iş orada yapılıyor.
+"Yapı üç yönü kapsar" demek, modele kaç farklı türde madde yazacağını
+söylüyor. "Matematiğe yönelik genel tutumu DEĞİL" demek, en olası
+sapmayı baştan kesiyor.</p>
+<p><strong>Hedef kitle kutusunda yazılım adı yasağı var.</strong> Bu, alan bilgisinin
+isteme girdiği yer. Kitlenin bir kısmı SPSS bir kısmı R kullanıyorsa,
+madde metninde yazılım adı geçtiği anda ölçek bir grup için
+anlamsızlaşır. Model bunu bilemez; siz bilirsiniz.</p>
+<p><strong>Sınırlar kutusuna bir satır eklendi:</strong> "özellikle genel matematik
+kaygısına ya da akademik özyeterliğe kayma". Kalıpta bu satır yok,
+çünkü kalıp her yapı için geçerli. Doldururken kendi yapınızın en
+yakın komşusunu yazarsınız.</p></aside>
+<h2 id="ham-veriden-temiz-veriye">Ham veriden temiz veriye</h2>
+<p>Gerçek bir form çıktısı hiçbir zaman temiz gelmez. Kursun atölye veri
+seti bu kirleri bilerek taşıyor.</p>
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Atölye verisi — ham hâl</span></div>
+<dl><dt>Boyut</dt><dd>314 satır, 31 sütun</dd><dt>Pakette</dt><dd><a href="veri/sosyal/anket_ham.csv">anket_ham.csv</a> · <a href="kod/02_anket_veri_uret.py">02_anket_veri_uret.py</a></dd></dl>
+<p>Bir çevrimiçi formdan indirilmiş gibi: eksik hücreler, serbest metin kabul
+edildiği için tutarsız kategori yazımları, başında-sonunda boşluk, ölçek
+dışı bir Likert değeri, olanaksız bir yaş, olanaksız bir haftalık saat
+değeri, iki mükerrer satır.</p></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Veri temizleme planı ve kodu</span>
+<span class="arac">Veri</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri analizi yapan bir araştırma asistanısın. Yeniden üretilebilirlik
+senin için biçimsel bir tercih değil, zorunluluk.
+
+KAYNAK
+Ekte iki dosya:
+— anket_ham.csv: 314 satır, 31 sütun. Bir çevrimiçi anket formunun
+  ham çıktısı.
+— anket_madde_sozlugu.csv: her Likert maddesinin hangi ölçeğe ait
+  olduğu ve ters kodlu olup olmadığı.
+
+ÖLÇEK BİLGİSİ
+Likert maddeleri 1–5 arasıdır. Dört ölçek var: AF (algılanan fayda),
+KK (kullanım kolaylığı), EK (etik kaygı), KN (kullanım niyeti).
+
+GÖREV
+Temizleme işini yapan, yorumlanmış bir Python betiği yaz.
+
+BETİK ŞU ADIMLARI SIRAYLA YAPSIN
+1. Tamamen aynı olan mükerrer satırları sil
+2. Kategori sütunlarındaki (fakulte, unvan) yazım tutarsızlıklarını
+   tek biçime indir — Türkçe büyük/küçük harf kuralına dikkat et
+   (I→ı, İ→i ayrımı)
+3. Ölçek dışı Likert değerlerini eksik olarak işaretle
+4. Olanaksız demografik değerleri eksik olarak işaretle
+   (yaş 22–75 dışı, haftalık saat 0–60 dışı)
+5. Ters kodlu maddeleri düz kodla
+6. Likert maddelerinin %20&#x27;sinden fazlasını boş bırakan katılımcıyı
+   çıkar
+7. Kalan eksik hücreleri, katılımcının o ölçekteki kendi
+   ortalamasıyla doldur
+8. Dört ölçek puanını hesapla 9. Haftalık kullanım saatinden ortanca
+bölmeyle ikili bir `yogun_kullanici` değişkeni türet; eşiği veriden oku,
+dışarıdan dayatma
+
+BETİĞİN ZORUNLU ÖZELLİKLERİ
+— Her adım bir GÜNLÜK kaydı üretsin: adım adı, verilen karar,
+  etkilenen satır/hücre sayısı, kararın GEREKÇESİ
+— Günlük hem ekrana yazılsın hem JSON olarak kaydedilsin
+— Hiçbir satır sessizce silinmesin; silinen her şey sayılsın
+— Her fonksiyonun ne yaptığı docstring&#x27;de yazılsın
+— Değişken ve fonksiyon adları Türkçe olsun
+
+SINIRLAR
+— Veriyi &quot;iyileştirmek&quot; için uydurma değer üretme.
+— Aykırı değerleri kendiliğinden silme; yalnız olanaksız değerleri
+  işaretle. Aykırı ama mümkün bir değer veridir.
+— Eksik veriyi ortalama ile doldururken MADDE ortalamasını değil
+  KİŞİ ortalamasını kullan; gerekçesini yorum satırında açıkla.
+
+DENETİM
+Betik sonunda şunları bassın: başlangıç satır sayısı, bitiş satır
+sayısı, çıkarılan satır sayısı, kalan eksik hücre sayısı ve dört
+ölçek puanının betimsel istatistiği.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya · laboratuvar ölçümü</span>
+<span class="ad">Veri temizleme planı ve kodu</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri analizi yapan bir araştırma asistanısın. Yeniden üretilebilirlik
+senin için biçimsel bir tercih değil, zorunluluk.
+
+KAYNAK
+Ekte iki dosya:
+— adsorpsiyon_ham.csv: 215 satır, 9 sütun. Üç ay boyunca yürütülen
+  kesikli adsorpsiyon deneylerinin laboratuvar defterinden
+  aktarılmış hâli. Sütunlar: deney_no, tarih, adsorban (çay_posasi /
+  ticari), baslangic_derisim_mgL, pH, sicaklik_C, temas_suresi_dk,
+  denge_derisim_mgL, tekrar_no
+— deney_plani.csv: planlanan deney matrisi — 72 koşul, her koşul için
+  üç tekrar, toplam 216 deney öngörülmüş.
+
+BİLİNEN SORUNLAR
+Veriyi üç farklı öğrenci girdi. Bildiğim kirler şunlar:
+— adsorban sütununda &quot;çay posası&quot;, &quot;cay posasi&quot;, &quot;ÇP&quot;, &quot;tea waste&quot;
+  yazımları var
+— bazı satırlarda sıcaklık Fahrenheit girilmiş (ölçümler yalnız 25 ve
+  45 °C&#x27;de yapıldı; 50&#x27;nin üstündeki her değer Fahrenheit&#x27;tir)
+— denge derişimi başlangıç derişiminden büyük olan satırlar var;
+  bunlar ölçüm hatası, çünkü adsorpsiyon derişimi düşürür
+— bir cihaz arızası döneminde (12–18 Mart) alınan ölçümler şüpheli
+
+GÖREV
+Temizleme işini yapan, yorumlanmış bir Python betiği yaz.
+
+BETİK ŞU ADIMLARI SIRAYLA YAPSIN
+1. Tamamen aynı olan mükerrer satırları sil
+2. adsorban sütunundaki yazımları iki düzeye indir: cay_posasi,
+   ticari
+3. Fahrenheit girilmiş sıcaklıkları Celsius&#x27;a çevir; çevrilen satır
+   sayısını raporla
+4. Olanaksız ölçümleri işaretle: denge derişimi &gt; başlangıç derişimi
+5. 12–18 Mart arası ölçümleri ayrı bir sütunda &quot;şüpheli&quot; olarak
+   etiketle — SİLME, etiketle. Duyarlılık analizinde kullanacağım.
+6. Her koşul için kaç tekrar tamamlanmış, deney planıyla karşılaştır
+7. Adsorpsiyon kapasitesini hesapla: q = (C0 − Ce) × V / m
+   (V = 0,05 L, m = 0,1 g, bütün deneylerde sabit)
+
+BETİĞİN ZORUNLU ÖZELLİKLERİ
+— Her adım bir GÜNLÜK kaydı üretsin: adım adı, verilen karar,
+  etkilenen satır/hücre sayısı, kararın GEREKÇESİ
+— Günlük hem ekrana yazılsın hem JSON olarak kaydedilsin
+— Hiçbir satır sessizce silinmesin; silinen her şey sayılsın
+— Her fonksiyonun ne yaptığı docstring&#x27;de yazılsın
+— Değişken ve fonksiyon adları Türkçe olsun
+
+SINIRLAR
+— Veriyi &quot;iyileştirmek&quot; için uydurma değer üretme.
+— Aykırı değerleri kendiliğinden silme; yalnız olanaksız değerleri
+  işaretle. Aykırı ama mümkün bir değer veridir — düşük verim de
+  bir bulgudur.
+— Eksik tekrarları ortalamayla tamamlama. Üç tekrardan ikisi varsa
+  n = 2 olarak raporla, üçüncüyü uydurma.
+— Şüpheli dönem ölçümlerini silme; etiketle ve ayrı tut.
+
+DENETİM
+Betik sonunda şunları bassın: başlangıç satır sayısı, bitiş satır
+sayısı, çıkarılan satır sayısı, şüpheli etiketli satır sayısı, eksik
+tekrar bulunan koşul sayısı ve iki adsorban için hesaplanan
+kapasitenin betimsel istatistiği.</pre></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Adsorpsiyon deney verisi — ham hâl</span></div>
+<dl><dt>Boyut</dt><dd>215 satır, 9 sütun · 72 koşul × 3 tekrar olarak tasarlandı</dd><dt>Pakette</dt><dd><a href="veri/kimya/adsorpsiyon_ham.csv">adsorpsiyon_ham.csv</a> · <a href="veri/kimya/deney_plani.csv">deney_plani.csv</a> · <a href="kod/13_adsorpsiyon_veri_uret.py">13_adsorpsiyon_veri_uret.py</a></dd></dl>
+<p>Laboratuvar defterinden yeni aktarılmış gibi: üç öğrencinin farklı
+yazımları, Fahrenheit girilmiş sıcaklıklar, olanaksız ölçümler, bir
+cihaz arızası dönemi, eksik tekrarlar, mükerrer satırlar, boş hücreler.</p>
+<p>Bu veri <strong>gerçek bir laboratuvar çalışmasından gelmiyor.</strong> Üretim
+betiği Langmuir izotermini ve kütle dengesini birlikte çözerek fizik
+olarak tutarlı sayılar üretiyor, kirler ayrı bir adımda ekleniyor.
+Neden sentetik: temizlenmemiş ham deney verisi kamuya açık olarak
+bulunmaz — yayımlanan veri setleri zaten temizlenmiştir, oysa
+öğretilecek şey tam olarak temizleme adımıdır.</p></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Üretilen betiğin gerçek çıktısı — adsorpsiyon temizleme günlüğü</span>
+<span class="damga">kod/14_adsorpsiyon_temizle.py · 2 Kasım 2026</span></header>
+<pre>ADSORPSİYON VERİSİ — TEMİZLEME KARAR GÜNLÜĞÜ
+============================================================
+
+Ham satır sayısı   : 215
+Temiz satır sayısı : 201
+Çıkarılan          : 14 (%6.5)
+
+1. Mükerrer kayıt
+   Karar   : İkinci giriş düşürüldü
+   Gerekçe : Bütün sütunları birebir aynı; çifte veri girişi.
+   Etkilenen satır: 2
+
+2. Adsorban adı
+   Karar   : Yedi yazım iki ada indirildi
+   Gerekçe : &#x27;çay posası&#x27;, &#x27;ÇP&#x27;, &#x27;tea waste&#x27; aynı malzeme; üç öğrenci farklı yazmış. Eşleme tablosu betikte açık.
+   Etkilenen satır: 38
+
+3. Sıcaklık birimi
+   Karar   : Fahrenheit → Celsius çevrildi
+   Gerekçe : Tasarımda yalnız 25 ve 45 °C var; 50 °C üstü değerler birim karışıklığı. 77 °F = 25 °C, 113 °F = 45 °C.
+   Etkilenen satır: 13
+
+4. Olanaksız ölçüm
+   Karar   : Satır çıkarıldı
+   Gerekçe : Denge derişimi başlangıçtan büyük ya da eşit. Adsorpsiyon derişimi düşürür; bu fiziksel olarak olanaksız.
+   Etkilenen satır: 5
+
+5. Şüpheli dönem
+   Karar   : Çıkarılmadı, işaretlendi
+   Gerekçe : 12-18 Mart arası cihaz bakım kaydı var. Satırlar &#x27;supheli_donem&#x27; sütunuyla etiketlendi; duyarlılık analizi bunları hariç tutarak yineleniyor.
+   Etkilenen satır: 15
+
+6. Boş hücre
+   Karar   : Satır çıkarıldı
+   Gerekçe : pH ve denge derişimi analizin zorunlu girdileri. Ortalamayla doldurmak ölçülmeyen bir deneyi ölçülmüş göstermek olur.
+   Etkilenen satır: 7
+
+7. Türetilmiş değişken
+   Karar   : q ve giderim verimi eklendi
+   Gerekçe : q = (C0 − Ce)·V/m, V = 0,05 L ve m = 0,1 g. Giderim verimi yüzde olarak. İkisi de ham sütunlardan hesaplanır, elle girilmez.
+   Etkilenen satır: 201
+
+8. Tekrar sayısı
+   Karar   : Eksik koşullar bildirildi
+   Gerekçe : Planda her koşul için 3 tekrar vardı. 14 koşulda daha az tekrar kaldı; bu koşullar analizde daha az ağırlık taşıdığı için ANOVA dengesiz tasarım olarak kurulacak.
+   Etkilenen satır: 27
+
+Eksik tekrarlı koşullar:
+
+   (&#x27;cay_posasi&#x27;, 25.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 25.0, 3.0, 45.0, 120) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 25.0, 7.0, 25.0, 60) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 25.0, 7.0, 45.0, 120) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 25.0, 10.0, 25.0, 60) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 50.0, 3.0, 25.0, 60) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 50.0, 3.0, 45.0, 120) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 100.0, 3.0, 45.0, 60) → 2 tekrar (planda 3)
+   (&#x27;cay_posasi&#x27;, 100.0, 10.0, 25.0, 120) → 2 tekrar (planda 3)
+   (&#x27;ticari&#x27;, 25.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   (&#x27;ticari&#x27;, 25.0, 7.0, 45.0, 60) → 2 tekrar (planda 3)
+   (&#x27;ticari&#x27;, 100.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   (&#x27;ticari&#x27;, 100.0, 3.0, 45.0, 60) → 1 tekrar (planda 3)
+   (&#x27;ticari&#x27;, 100.0, 7.0, 45.0, 60) → 2 tekrar (planda 3)</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/k01_temizleme.svg"
+ alt="Yedi temizleme adımının kaç satırı etkilediğini gösteren yatay çubuk grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 6.2</b> Temizleme adımlarının kaç satırı etkilediği. Renkler üç karar türünü
+ayırıyor: satır çıkarıldı, değer düzeltildi, yalnız işaretlendi.
+Şekli üreten betik: <code>kod/16_sekiller_adsorpsiyon.py</code>
+<span class="indir">Dosya: <a href="varlik/sekil/k01_temizleme.svg">k01_temizleme.svg</a>
+ · <a href="varlik/sekil_png/k01_temizleme.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Adsorpsiyon deney verisi — temiz hâl</span></div>
+<dl><dt>Boyut</dt><dd>201 satır, 12 sütun · q ve giderim verimi eklendi</dd><dt>Pakette</dt><dd><a href="veri/kimya/adsorpsiyon_temiz.csv">adsorpsiyon_temiz.csv</a> · <a href="veri/kimya/adsorpsiyon_karar_gunlugu.csv">adsorpsiyon_karar_gunlugu.csv</a> · <a href="veri/kimya/adsorpsiyon_karar_gunlugu.txt">adsorpsiyon_karar_gunlugu.txt</a> · <a href="kod/14_adsorpsiyon_temizle.py">14_adsorpsiyon_temizle.py</a></dd></dl>
+<p>Temizleme betiğinin çıktısı. İki yeni sütun türetildi: <code>q_mgG</code>
+(birim adsorban kütlesine tutunan miktar) ve <code>giderim_yuzde</code>. Bir
+sütun eklendi: <code>supheli_donem</code> — cihaz arızası dönemindeki satırlar
+silinmedi, etiketlendi.</p></div>
+
+<aside class="not "><span class="not-baslik">Günlükte dikkat edilecek iki satır</span><p><strong>Üçüncü adım 14 değil 13 satır çevirdi.</strong> Üretim betiği 14 satıra
+Fahrenheit yazmıştı; biri mükerrer satırlardan biriyle aynıydı ve ilk
+adımda düştü. Günlük bunu gizlemiyor, çünkü adımlar sırayla işliyor ve
+her adım kendinden önceki adımın çıktısını görüyor. Bu sıra bağımlılığı
+bir kusur değil, temizlemenin doğası — ama raporlanmazsa sayılar
+tutmaz.</p>
+<p><strong>Beşinci adım hiçbir satır çıkarmadı.</strong> Şüpheli dönemdeki 15 ölçüm
+duruyor, yalnızca etiketlendi. Analiz bölümünde bu etiketi kullanarak
+duyarlılık analizi yapılacak: bulgular bu 15 satır olmadan da aynı mı?
+Silinen veriyle bu soru sorulamazdı.</p></aside>
+
+<aside class="not "><span class="not-baslik">İki doldurulmuş örnek arasındaki fark</span><p>Anket örneğinde kirler <strong>biçimseldi</strong>: yazım tutarsızlığı, boşluk,
+aralık dışı değer. Laboratuvar örneğinde kirlerin bir kısmı
+<strong>fiziksel olarak olanaksız</strong> durumlar: denge derişiminin başlangıç
+derişiminden büyük olması.</p>
+<p>Bu ayrım önemli. Olanaksızlığı yalnız alan bilgisi söyler. Modele
+"denge derişimi başlangıçtan büyük olamaz, çünkü adsorpsiyon
+derişimi düşürür" demeseniz, o satırları olağan aykırı değer sanıp
+bırakır.</p>
+<p>Bir de şu var: "cihaz arızası dönemini silme, etiketle" satırı.
+Silinen veri geri gelmez; etiketlenen veri hem analizden
+çıkarılabilir hem duyarlılık analizinde kullanılabilir. <strong>Şüpheli
+veriye yapılacak şey silmek değil, işaretlemektir.</strong></p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Üretilen betiğin gerçek çıktısı — temizleme günlüğü</span>
+<span class="damga">kod/03_anket_temizle.py · 2 Kasım 2026</span></header>
+<pre>Temiz dosya: kurs/veri/sosyal/anket_temiz.csv
+  314 satır → 312 satır (2 satır çıkarıldı)
+  kalan eksik hücre: 14
+
+TEMİZLEME GÜNLÜĞÜ
+------------------------------------------------------------------------
+• Mükerrer kayıt  [etkilenen: 2]
+  karar  : Tamamen aynı satırların ikinci kopyası silindi
+  gerekçe: Aynı katılımcının formu iki kez göndermesi; aynı kişi iki
+           kez sayılırsa standart hata olduğundan küçük tahmin edilir.
+
+• Kategori birleştirme  [etkilenen: 17]
+  karar  : fakülte 16 → 6 düzey, unvan 12 → 5 düzey
+  gerekçe: Form serbest metin kabul ettiği için aynı fakülte farklı
+           yazımlarla girilmiş; birleştirilmezse grup karşılaştırmaları
+           sahte düzeylerle çalışır.
+
+• Ölçek dışı Likert değeri  [etkilenen: 1]
+  karar  : 1–5 aralığı dışındaki hücreler eksik işaretlendi
+  gerekçe: Ölçek 5 basamaklı; 7 gibi bir değer veri girişi hatasıdır,
+           ortalamaya katılırsa ölçek puanını yukarı çeker.
+
+• Aralık dışı: yas  [etkilenen: 1]
+  karar  : 22–75 dışındaki değerler eksik işaretlendi
+  gerekçe: Olanaksız değer (örn. 3 yaş) ölçüm değil giriş hatasıdır.
+
+• Aralık dışı: haftalik_saat  [etkilenen: 1]
+  karar  : 0–60 dışındaki değerler eksik işaretlendi
+  gerekçe: Haftada 168 saat, haftanın tamamıdır; giriş hatasıdır.
+
+• Ters kodlama  [etkilenen: 2]
+  karar  : AF6T, KK4T düz kodlandı (yeni = 6 − eski)
+  gerekçe: Olumsuz yazılmış maddeler çevrilmezse ölçek içi tutarlılık
+           (Cronbach alfa) yapay olarak düşer ve faktör yükü ters çıkar.
+
+• Katılımcı bazında eksik  [etkilenen: 0]
+  karar  : Likert maddelerinin %20&#x27;sinden fazlasını boş bırakan
+           katılımcı çıkarıldı
+  gerekçe: Çok sayıda madde eksikse ölçek puanı güvenilir biçimde
+           hesaplanamaz.
+
+• Madde içi eksik  [etkilenen: 128]
+  karar  : Kalan eksik hücreler katılımcının o ölçekteki kendi
+           ortalamasıyla dolduruldu
+  gerekçe: Madde ortalaması yerine kişi ortalaması kullanılması, yanıt
+           üslubu farklarını (yüksek/düşük puanlama eğilimi) korur.
+
+• Türetilmiş değişken  [etkilenen: 1]
+  karar  : yogun_kullanici = haftalık saat ≥ ortanca (2.4 saat)
+  gerekçe: Ortanca bölme, lojistik regresyon ve ki-kare örnekleri için
+           ikili bir sonuç değişkeni sağlar; eşik veriden okunur,
+           dışarıdan dayatılmaz.
+------------------------------------------------------------------------
+AF_puan  ort=3.290  ss=0.871  min=1.17  maks=5.00
+KK_puan  ort=3.164  ss=0.874  min=1.00  maks=5.00
+EK_puan  ort=3.527  ss=0.810  min=1.33  maks=5.00
+KN_puan  ort=3.289  ss=0.984  min=1.00  maks=5.00</pre></div>
+
+<aside class="not "><span class="not-baslik">Bu günlük neden bu kadar önemli</span><p>Makalenizin Yöntem bölümünde şu cümleyi yazmanız gerekir: <em>"Ham
+veriden iki mükerrer kayıt çıkarılmış, serbest metin olarak girilen
+fakülte ve unvan alanları tek biçime indirgenmiş, ölçek dışı bir Likert değeri ile olanaksız iki demografik değer eksik
+olarak işaretlenmiş, iki ters kodlu madde düz kodlanmış ve
+kalan 128 eksik hücre katılımcının kendi ölçek ortalamasıyla
+doldurulmuştur."</em> Bu cümle, yukarıdaki günlükten doğrudan yazılır.
+Günlük tutulmazsa bu cümle hatırlanarak yazılır — ve genellikle
+eksik yazılır.</p></aside>
+
+<aside class="not istatistik"><span class="not-baslik">Eksik veriyle ne yapılır</span><p><strong>Tamamen rastgele eksik (MCAR)</strong> ise silmek de doldurmak da
+yanlılık yaratmaz. <strong>Rastgele eksik (MAR)</strong> ise, eksikliği açıklayan
+değişkenler kullanılarak doldurulmalıdır. <strong>Rastgele olmayan eksik
+(MNAR)</strong> ise — örneğin düşük gelirliler gelir sorusunu boş
+bırakıyorsa — hiçbir doldurma yöntemi yanlılığı gidermez; bu durum
+raporlanır. Pratikte: eksik oranı %5'in altındaysa yöntem seçimi sonucu az etkiler,
+%20'yi aşıyorsa yöntem seçimi bulgunun kendisi kadar önemlidir. Bu durumda
+duyarlılık analizi yapılır: aynı analiz, eksik veriyi farklı yollarla ele
+alan iki üç sürümde yeniden koşturulur ve bulgunun bu seçimle değişip
+değişmediği raporlanır.</p></aside>
+<h2 id="kimliksizlestirme">Kimliksizleştirme</h2>
+<p>Kişisel veri içeren bir dosyayı hiçbir buluta yüklemeyin. Yükleme
+öncesi yapılacak iş, sütun silmekten ibaret değildir.</p>
+<ol class="adimlar"><li><p><strong>Doğrudan tanımlayıcıları çıkarın.</strong> Ad, soyad, T.C. kimlik numarası,
+e-posta, telefon, öğrenci numarası, IP adresi. Bunlar tek başına
+kişiyi tanımlar.</p></li><li><p><strong>Dolaylı tanımlayıcıları gruplayın.</strong> Doğum tarihi → yaş aralığı.
+Tam unvan + bölüm + kıdem üçlüsü küçük bir kurumda tek bir kişiye
+işaret edebilir. Serbest metin alanları → ad geçen yerleri temizleyin.</p></li><li><p><strong>Eşsizliği ölçün.</strong> Kalan değişkenlerin birleşiminin kaç kişiye denk geldiğini sayın. Bir kombinasyon tek bir kişiye denk geliyorsa o kişi
+kimliksizleştirilmemiştir.</p></li><li><p><strong>Eşleştirme anahtarını ayrı tutun.</strong> Veriyi geri bağlamanız
+gerekiyorsa anahtar dosyasını ayrı, şifreli ve çevrimdışı tutun.
+Modele asla verilmez.</p></li><li><p><strong>Açık uçlu yanıtları elle okuyun.</strong> Serbest metinde kişi adı,
+kurum adı, tanınabilir olay anlatımı geçer. Otomatik temizleme
+bunları kaçırır.</p></li></ol>
+
+<aside class="not istatistik"><span class="not-baslik">k-anonimlik — eşsizliği ölçmenin yolu</span><p>Bir veri setindeki her kayıt, dolaylı tanımlayıcıların birleşimi
+bakımından en az <strong>k</strong> kayıtla aynı görünüyorsa o veri seti
+k-anonimdir. k = 1 olan bir kayıt, o kombinasyonda tektir — yani
+kimliksizleştirilmemiştir. Pratikte k ≥ 5 hedeflenir. Kontrolü
+basittir: dolaylı tanımlayıcıları birlikte gruplayıp grup
+büyüklüklerine bakın.</p></aside>
+
+<div class="kod-blok">
+<header><span class="dil">python</span>
+<span>Eşsizlik denetimi — k-anonimlik kontrolü</span></header>
+<pre><code>import pandas as pd
+
+df = pd.read_csv(&quot;anket_temiz.csv&quot;)
+
+# Dolayli tanimlayicilar: tek baslarina kimlik vermeyen ama birlikte
+# bir kisiyi isaret edebilen sutunlar.
+dolayli = [&quot;fakulte&quot;, &quot;unvan&quot;, &quot;cinsiyet&quot;, &quot;yas&quot;]
+
+gruplar = df.groupby(dolayli).size().reset_index(name=&quot;k&quot;)
+print(f&quot;Farkli kombinasyon sayisi : {len(gruplar)}&quot;)
+print(f&quot;k = 1 olan kombinasyon    : {(gruplar[&#x27;k&#x27;] == 1).sum()}&quot;)
+print(f&quot;k &lt; 5 olan kombinasyon    : {(gruplar[&#x27;k&#x27;] &lt; 5).sum()}&quot;)
+print(f&quot;Bu kombinasyonlardaki kisi: {gruplar.loc[gruplar[&#x27;k&#x27;] &lt; 5, &#x27;k&#x27;].sum()}&quot;)
+
+# k = 1 olanlar tek tek goruntulenir: bu kisiler tanimlanabilir.
+print(gruplar[gruplar[&quot;k&quot;] == 1].head(10).to_string(index=False))</code></pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Yaş sütunu neredeyse her zaman sorundur</span><p>Tam yaş, dolaylı tanımlayıcıların en güçlüsüdür. Yukarıdaki denetimi
+<code>yas</code> sütunuyla koşturduğunuzda k = 1 kombinasyonların çoğu ondan
+gelir. Çözüm: yaşı aralığa çevirin (25–34, 35–44, …). Analiz için
+gerçekten sürekli yaşa ihtiyacınız varsa, o analizi <strong>kendi
+makinenizde</strong> yapın ve buluta yalnız aralıklı sürümü verin.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kimliksizleştirme planı</span>
+<span class="arac">Veri</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri koruma ve araştırma etiği konusunda çalışan bir danışmansın.
+KVKK ve GDPR çerçevelerini biliyorsun.
+
+KAYNAK
+Veri setimin sütun listesini ve her sütunun ilk üç örnek değerini
+veriyorum (gerçek değer değil, biçimi göstermek için):
+
+[sütun adı] | [örnek değerler] | [açıklama]
+...
+
+ANALİZ İHTİYACIM
+[hangi analizleri yapacaksınız, hangi değişkenler gerekli]
+
+GÖREV — üç bölüm
+
+BÖLÜM 1 — SINIFLANDIRMA
+Her sütunu şu dört sınıftan birine koy:
+  DOĞRUDAN TANIMLAYICI — tek başına kişiyi gösterir
+  DOLAYLI TANIMLAYICI — başka sütunlarla birleşince kişiyi gösterebilir
+  HASSAS — özel nitelikli kişisel veri (sağlık, inanç, biyometrik…)
+  ANALİZ DEĞİŞKENİ — tanımlayıcı değil
+Tablo biçiminde, her satırda sınıf ve tek cümlelik gerekçe.
+
+BÖLÜM 2 — İŞLEM PLANI
+Her sütun için ne yapılacak: SİL / GRUPLA (nasıl) / MASKELE /
+OLDUĞU GİBİ BIRAK. Her kararın yanında, analiz ihtiyacımı
+karşılayıp karşılamadığı yazsın.
+
+BÖLÜM 3 — EŞSİZLİK DENETİMİ
+Kalan dolaylı tanımlayıcılarla k-anonimlik kontrolü yapan Python
+kodunu yaz. Kod, k &lt; 5 olan kombinasyonları listelesin.
+
+SINIRLAR
+— Analiz için gerekli bir değişkeni gereksiz yere silme önerme;
+  önce gruplamayı öner.
+— Serbest metin sütunlarını &quot;otomatik temizlenebilir&quot; diye geçme;
+  elle okunması gerektiğini belirt.
+— Yasal görüş verme. &quot;KVKK&#x27;ya uygundur&quot; deme; yapılması gerekenleri
+  say, uygunluk kararını kuruma bırak.
+
+DENETİM
+Planın sonunda: bu plan uygulandıktan sonra hangi analizler
+YAPILAMAZ hâle gelir? Açıkça listele.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tıp · klinik kayıt</span>
+<span class="ad">Kimliksizleştirme planı</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri koruma ve araştırma etiği konusunda çalışan bir danışmansın.
+KVKK ve GDPR çerçevelerini biliyorsun.
+
+KAYNAK
+Veri setimin sütun listesini ve her sütunun ilk üç örnek değerini
+veriyorum (gerçek değer değil, biçimi göstermek için):
+
+hasta_no        | 100234, 100235, 100236      | hastane sistem numarası
+tc_kimlik       | 11 haneli                    | kimlik numarası
+ad_soyad        | metin                        | hasta adı
+dogum_tarihi    | 1962-04-17, 1958-11-02       | gün ay yıl
+cinsiyet        | K, E                         | ikili
+ilce            | Çayeli, Pazar, Ardeşen       | ikamet ilçesi
+meslek          | metin, serbest girişli       | hasta beyanı
+tani_tarihi     | 2019-03-12                   | tip 2 diyabet tanı tarihi
+hba1c_baslangic | 8.4, 9.1, 7.8                | yüzde
+hba1c_6ay       | 7.2, 8.0, 7.5                | yüzde
+ilac_uyum_puan  | 18, 22, 15                   | 8–40 arası ölçek puanı
+grup            | mudahale, kontrol            | çalışma kolu
+hekim_adi       | metin                        | izleyen aile hekimi
+serbest_not     | metin, 1–3 cümle             | hekimin izlem notu
+
+ANALİZ İHTİYACIM
+İki grup arasında HbA1c değişimini ve ilaç uyum puanını
+karşılaştıracağım. Yaşın ve tanı süresinin etkisini denetlemek
+istiyorum. İlçe düzeyinde bir karşılaştırma yapmayacağım ama
+kırsal–kentsel ayrımı ilgimi çekiyor.
+
+GÖREV — üç bölüm
+
+BÖLÜM 1 — SINIFLANDIRMA
+Her sütunu şu dört sınıftan birine koy:
+  DOĞRUDAN TANIMLAYICI — tek başına kişiyi gösterir
+  DOLAYLI TANIMLAYICI — başka sütunlarla birleşince kişiyi gösterebilir
+  HASSAS — özel nitelikli kişisel veri (sağlık, inanç, biyometrik…)
+  ANALİZ DEĞİŞKENİ — tanımlayıcı değil
+Tablo biçiminde, her satırda sınıf ve tek cümlelik gerekçe.
+
+BÖLÜM 2 — İŞLEM PLANI
+Her sütun için ne yapılacak: SİL / GRUPLA (nasıl) / MASKELE /
+OLDUĞU GİBİ BIRAK. Her kararın yanında, analiz ihtiyacımı
+karşılayıp karşılamadığı yazsın.
+
+BÖLÜM 3 — EŞSİZLİK DENETİMİ
+Kalan dolaylı tanımlayıcılarla k-anonimlik kontrolü yapan Python
+kodunu yaz. Kod, k &lt; 5 olan kombinasyonları listelesin.
+
+SINIRLAR
+— Analiz için gerekli bir değişkeni gereksiz yere silme önerme;
+  önce gruplamayı öner. Yaşa ihtiyacım var; doğum tarihini silmek
+  yerine yaş aralığına çevirmeyi düşün.
+— Serbest metin sütununu &quot;otomatik temizlenebilir&quot; diye geçme;
+  hekim notlarında hasta adı, yakın adı ve tanınabilir olay
+  anlatımı geçer. Elle okunması gerektiğini belirt.
+— Hekim adı bir hasta tanımlayıcısı değil ama küçük bir ilçede
+  hekim + ilçe + tanı tarihi üçlüsü hastayı gösterebilir. Bunu
+  hesaba kat.
+— Yasal görüş verme. &quot;KVKK&#x27;ya uygundur&quot; deme; yapılması
+  gerekenleri say, uygunluk kararını kuruma bırak.
+
+DENETİM
+Planın sonunda: bu plan uygulandıktan sonra hangi analizler
+YAPILAMAZ hâle gelir? Açıkça listele. Özellikle kırsal–kentsel
+ayrımının hâlâ mümkün olup olmadığını söyle.</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Doldurulmuş örnekteki en önemli satır</span><p>Sınırlar kutusundaki şu cümle: <em>"Hekim adı bir hasta tanımlayıcısı
+değil ama küçük bir ilçede hekim + ilçe + tanı tarihi üçlüsü hastayı
+gösterebilir."</em></p>
+<p>Bu, kimliksizleştirmenin en zor kısmıdır. Tek tek bakınca hiçbiri
+kimlik vermez; birlikte bakınca verir. Küçük bir ilçede bir aile
+hekiminin 2019 Mart'ında tip 2 diyabet tanısı koyduğu hasta sayısı
+bir ya da iki olabilir.</p>
+<p>Model bu bağlamı bilemez. Hastanenin büyüklüğünü, ilçenin nüfusunu
+ve hekim başına düşen hasta sayısını siz bilirsiniz. <strong>Alan
+bilginizi isteme yazmazsanız, kimliksizleştirme planı kâğıt üstünde
+doğru ama uygulamada yetersiz çıkar.</strong></p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Açık veri, veri toplamaya gidecek ayları kazandırabilir. Lisans,
+künye ve toplama yöntemi üçü birlikte kontrol edilir.</p></li><li><p>Anket tasarımında yapılan hata sonradan düzeltilemez. Her yapı için
+birden çok madde, en az bir ters kodlu madde, pilot uygulama.</p></li><li><p>Temizleme günlüğü, Yöntem bölümünün yarısıdır. Hiçbir satır sessizce
+silinmez.</p></li><li><p>Aykırı değer silinmez; olanaksız değer işaretlenir. İkisi farklı
+şeydir.</p></li><li><p>Kimliksizleştirme sütun silmek değildir. Kalan birleşimin kaç kişiyi
+gösterdiği ölçülür — k-anonimlik.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="05-literatur.html"><span class="yon">← Önceki</span><span class="ad">Literatür taraması: aramadan senteze</span></a><a class="sag" href="07-analiz-secimi.html"><span class="yon">Sonraki →</span><span class="ad">Hangi analizi seçmeliyim</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

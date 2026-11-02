@@ -1,0 +1,9 @@
+﻿adim,karar,gerekce,etkilenen_satir
+Mükerrer kayıt,İkinci giriş düşürüldü,Bütün sütunları birebir aynı; çifte veri girişi.,2
+Adsorban adı,Yedi yazım iki ada indirildi,"'çay posası', 'ÇP', 'tea waste' aynı malzeme; üç öğrenci farklı yazmış. Eşleme tablosu betikte açık.",38
+Sıcaklık birimi,Fahrenheit → Celsius çevrildi,"Tasarımda yalnız 25 ve 45 °C var; 50 °C üstü değerler birim karışıklığı. 77 °F = 25 °C, 113 °F = 45 °C.",13
+Olanaksız ölçüm,Satır çıkarıldı,Denge derişimi başlangıçtan büyük ya da eşit. Adsorpsiyon derişimi düşürür; bu fiziksel olarak olanaksız.,5
+Şüpheli dönem,"Çıkarılmadı, işaretlendi",12-18 Mart arası cihaz bakım kaydı var. Satırlar 'supheli_donem' sütunuyla etiketlendi; duyarlılık analizi bunları hariç tutarak yineleniyor.,15
+Boş hücre,Satır çıkarıldı,pH ve denge derişimi analizin zorunlu girdileri. Ortalamayla doldurmak ölçülmeyen bir deneyi ölçülmüş göstermek olur.,7
+Türetilmiş değişken,q ve giderim verimi eklendi,"q = (C0 − Ce)·V/m, V = 0,05 L ve m = 0,1 g. Giderim verimi yüzde olarak. İkisi de ham sütunlardan hesaplanır, elle girilmez.",201
+Tekrar sayısı,Eksik koşullar bildirildi,Planda her koşul için 3 tekrar vardı. 14 koşulda daha az tekrar kaldı; bu koşullar analizde daha az ağırlık taşıdığı için ANOVA dengesiz tasarım olarak kurulacak.,27

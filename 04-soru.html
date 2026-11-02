@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fikirden araştırma sorusuna — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Konuyu cevaplanabilir bir soruya çevirmenin iki aracı: FINER ve PICOC. Sekiz ayrı alandan örnekle, bir tanesi baştan sona açılmış hâliyle.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Fikirden araştırma sorusuna</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa etkin" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><div class="alt-liste"><a href="#konu-ile-soru-arasindaki-fark">Konu ile soru arasındaki fark</a><a href="#soruyu-sinamak-finer">Soruyu sınamak: FINER</a><a href="#sorunun-yapisini-kurmak-picoc">Sorunun yapısını kurmak: PICOC</a><a href="#kursun-veri-setleri">Kursun veri setleri</a><a href="#fikri-soruya-ceviren-istem">Fikri soruya çeviren istem</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 4</div><h1>Fikirden araştırma sorusuna</h1><p class="ozet">Konuyu cevaplanabilir bir soruya çevirmenin iki aracı: FINER ve PICOC. Sekiz ayrı alandan örnekle, bir tanesi baştan sona açılmış hâliyle.</p><p>Bir araştırma, cevaplanabilir bir soruyla başlar. "Yapay zekâ ve
+eğitim" bir konudur, soru değildir. Konu ilgi alanınızı gösterir;
+soru ise neyi, kimde, neyle karşılaştırarak ölçeceğinizi söyler.</p>
+<p>Bu bölüm konuyu soruya çevirmenin iki aracını tanıtıyor ve her ikisini
+de farklı alanlardan örneklerle gösteriyor.</p>
+<h2 id="konu-ile-soru-arasindaki-fark">Konu ile soru arasındaki fark</h2>
+<p>Aşağıdaki üç çift, aynı ilgi alanının konu hâliyle soru hâlini yan
+yana koyuyor.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Konu — cevaplanamaz</div>
+<pre>Öğrencilerin okuma becerisi
+
+Atık malzemelerden su arıtımı
+
+Asgari ücret ve istihdam</pre></div>
+<div class="guclu"><div class="baslik">Soru — cevaplanabilir</div>
+<pre>Hazırlık sınıfında haftada iki saat ek okuma
+atölyesine katılan öğrencilerin dönem sonu okuma
+sınavı puanları, katılmayanlardan farklı mıdır?
+
+Çay posasından elde edilen aktif karbon, boyar madde
+gideriminde ticari aktif karbona göre ne kadar
+etkilidir?
+
+Asgari ücretin reel olarak arttığı yıllarda, on
+kişiden az çalışanı olan işletmelerde istihdam
+nasıl değişmiştir?</pre></div></div>
+<p>Sağdaki üç soru, soldakilerden dört bakımdan ayrılır. <strong>Ölçülebilir
+bir sonuç</strong> içerirler: sınav puanı, giderim verimi, çalışan sayısı.
+<strong>Karşılaştırılacak bir şey</strong> adlandırırlar: katılmayanlar, ticari
+karbon, artışın düşük kaldığı yıllar. <strong>Sınırları</strong> bellidir: hazırlık
+sınıfı, boyar madde, on kişiden az çalışan. Ve <strong>yanlışlanabilirler</strong> —
+veriye bakıp "hayır" diyebilirsiniz.</p>
+<p>Veriye bakıp hayır diyebilme olanağı olmayan bir soru, araştırma
+sorusu değildir.</p>
+<h2 id="soruyu-sinamak-finer">Soruyu sınamak: FINER</h2>
+<p>FINER, bir araştırma sorusunu beş ölçüte göre sınayan bir kontrol
+listesidir; adı bu ölçütlerin İngilizce baş harflerinden gelir.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Ölçüt</th>
+<th>Soru</th>
+<th>Ne yapmalı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F</strong>easible — yapılabilir</td>
+<td>Veriye erişimim var mı, süre yeter mi, örneklem bulunur mu?</td>
+<td>Veri yoksa soru değişir; soruya veri uydurulmaz</td>
+</tr>
+<tr>
+<td><strong>I</strong>nteresting — ilgi çekici</td>
+<td>Alandaki biri sonucu merak eder mi?</td>
+<td>"Merak etmem" yanıtı dürüstçe verilmeli</td>
+</tr>
+<tr>
+<td><strong>N</strong>ovel — özgün</td>
+<td>Daha önce yanıtlanmış mı?</td>
+<td>5. bölümdeki taramayla sınanır, tahmin edilmez</td>
+</tr>
+<tr>
+<td><strong>E</strong>thical — etik</td>
+<td>Veri toplama ve kullanım izinli mi?</td>
+<td>Etik kurul onayı gerekiyorsa veri toplanmadan önce alınır</td>
+</tr>
+<tr>
+<td><strong>R</strong>elevant — ilgili</td>
+<td>Yanıt bir şeyi değiştirir mi?</td>
+<td>"Evet çıkarsa ne olur, hayır çıkarsa ne olur?"</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not ipucu"><span class="not-baslik">En sert sınama</span><p>Sorunuzu bir cümlede sorun, sonra iki yanıtı da yazın: <strong>"Evet çıkarsa
+şu olur, hayır çıkarsa şu olur."</strong> İki cümle de ilginç değilse soru
+ilginç değildir. İki cümleden biri yazılamıyorsa soru yanlışlanabilir
+değildir.</p>
+<p>Çay posası örneğinde: evet çıkarsa, atık bir malzemeden ucuz bir
+arıtma malzemesi elde edilebildiği gösterilmiş olur. Hayır çıkarsa,
+literatürdeki "tarımsal atıklar ticari ürünlerin yerini tutar"
+iddiası bir malzeme için daha sınırlandırılmış olur. İkisi de
+yayımlanabilir.</p></aside>
+<h2 id="sorunun-yapisini-kurmak-picoc">Sorunun yapısını kurmak: PICOC</h2>
+<p>PICOC, bir araştırma sorusunu beş parçaya ayıran bir kontrol
+listesidir. Adı yine İngilizce baş harflerden gelir:</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">P — Population</span></p>
+<p class="kart-baslik">Kimi ya da neyi inceliyorsunuz</p>
+<p>Araştırmanın öznesi. İnsan olmak zorunda değil: bir malzeme, bir
+metin yığını, bir işletme grubu, bir hücre hattı da olabilir.</p></div><div class="kart"><p><span class="no">I — Intervention</span></p>
+<p class="kart-baslik">Ne uyguluyorsunuz, neyi değiştiriyorsunuz</p>
+<p>İlgilendiğiniz koşul, işlem ya da özellik. Deneysel bir çalışmada
+uyguladığınız şey; gözlemsel bir çalışmada incelediğiniz durum.</p></div><div class="kart"><p><span class="no">C — Comparison</span></p>
+<p class="kart-baslik">Neyle karşılaştırıyorsunuz</p>
+<p>Ölçtüğünüz şeyin "neye göre" farklı olduğu. Kontrol grubu, standart
+yöntem, önceki dönem ya da başka bir koşul.</p></div><div class="kart"><p><span class="no">O — Outcome</span></p>
+<p class="kart-baslik">Ne ölçüyorsunuz</p>
+<p>Sonuç değişkeni. Bir sayıya, orana ya da sınıflandırmaya
+dönüşebilmeli. "Başarı" bir sonuç değildir; "dönem sonu sınav
+puanı" sonuçtur.</p></div><div class="kart"><p><span class="no">C — Context</span></p>
+<p class="kart-baslik">Hangi bağlamda</p>
+<p>Nerede, ne zaman, hangi koşullarda. Bulgunun kimlere ve nereye
+genellenebileceğini bu parça belirler.</p></div><div class="kart"><p><span class="no">Neden işe yarar</span></p>
+<p class="kart-baslik">İki ayrı fayda</p>
+<p>Birincisi, soruyu netleştirir: beş kutudan biri boş kalıyorsa soru
+eksiktir. İkincisi, bir sonraki bölümdeki arama dizgisinin
+iskeletini doğrudan verir — her parça bir kavram kümesine dönüşür.</p></div></div>
+<h3>Tek bir örnek, baştan sona</h3>
+<p>Yukarıdaki beş parçayı en bildik örnek üzerinde açalım.</p>
+<p><strong>Konu:</strong> Öğrencilerin okuma becerisi.</p>
+<p>Bu konu bir soru değil. Kimin okuma becerisi? Neye göre? Nasıl
+ölçülecek? Üç soruyu da yanıtlayarak ilerliyoruz.</p>
+<ol class="adimlar"><li><p><strong>Kimi inceliyoruz?</strong> "Öğrenciler" çok geniş. İlkokul öğrencisiyle
+hazırlık sınıfı öğrencisinin okuma becerisi aynı şey değil. Daralt:
+<em>bir devlet üniversitesinin İngilizce hazırlık programındaki birinci
+sınıf öğrencileri.</em> <strong>Bu, P.</strong></p></li><li><p><strong>Neyi değiştiriyoruz?</strong> Elinizde bir uygulama olmalı. Diyelim ki
+bölümünüz bu yıl isteğe bağlı bir okuma atölyesi açtı: <em>haftada iki
+saat, dönem boyunca, küçük gruplarla yürütülen ek okuma atölyesi.</em>
+<strong>Bu, I.</strong></p></li><li><p><strong>Neyle karşılaştırıyoruz?</strong> Atölyeye katılanları neyle
+kıyaslayacaksınız? En yakın karşılaştırma: <em>aynı programdaki,
+atölyeye katılmayan öğrenciler.</em> <strong>Bu, C.</strong></p></li><li><p><strong>Ne ölçüyoruz?</strong> "Okuma becerisi gelişti mi" ölçülemez. Ölçülebilir
+hâli: <em>dönem sonu okuma sınavı puanı ve dönem başı puana göre
+değişim.</em> <strong>Bu, O.</strong></p></li><li><p><strong>Hangi bağlamda?</strong> <em>Bir devlet üniversitesi hazırlık programı,
+2026–2027 güz dönemi, yüz yüze eğitim.</em> <strong>Bu, ikinci C.</strong></p></li></ol>
+<p>Beş parça birleşince soru kendiliğinden çıkar:</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Konudan soruya — öğrenci örneğinin tamamlanmış hâli</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Araştırma sorusu</strong></p>
+<p>Bir devlet üniversitesinin İngilizce hazırlık programında, haftada
+iki saat yürütülen isteğe bağlı okuma atölyesine katılan birinci
+sınıf öğrencilerinin dönem sonu okuma sınavı puanları, atölyeye
+katılmayan öğrencilerinkinden farklı mıdır?</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>PICOC parçası</th>
+<th>Bu çalışmadaki karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong> — kimi inceliyoruz</td>
+<td>İngilizce hazırlık programı birinci sınıf öğrencileri</td>
+</tr>
+<tr>
+<td><strong>I</strong> — neyi değiştiriyoruz</td>
+<td>Haftada iki saat, dönem boyu okuma atölyesi</td>
+</tr>
+<tr>
+<td><strong>C</strong> — neyle karşılaştırıyoruz</td>
+<td>Atölyeye katılmayan öğrenciler</td>
+</tr>
+<tr>
+<td><strong>O</strong> — ne ölçüyoruz</td>
+<td>Dönem sonu okuma sınavı puanı; dönem başına göre değişim</td>
+</tr>
+<tr>
+<td><strong>C</strong> — hangi bağlamda</td>
+<td>Bir devlet üniversitesi hazırlık programı, 2026–2027 güz</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Bu sorunun gerektirdiği analiz</strong></p>
+<p>İki bağımsız grubun ortalaması karşılaştırılacağı için bağımsız
+örneklem t testi. Dönem başı puanları da elde olduğu için, başlangıç
+farkını denetleyen kovaryans analizi (ANCOVA) daha güçlü bir seçenek
+olur. Etki büyüklüğü Cohen d ile raporlanır.</p>
+<p><strong>Dikkat edilecek nokta</strong></p>
+<p>Atölyeye katılım isteğe bağlı. Yani katılanlar, zaten daha istekli ya
+da daha başarılı öğrenciler olabilir. Bu, atölyenin etkisiyle
+karışabilecek bir seçim yanlılığıdır ve Tartışma bölümünde
+belirtilmesi gerekir. Dönem başı puanın denetlenmesi bu sorunu
+azaltır ama tamamen ortadan kaldırmaz.</p>
+<p><strong>Evet çıkarsa:</strong> Atölyenin sürdürülmesi ve yaygınlaştırılması için
+somut bir dayanak olur.</p>
+<p><strong>Hayır çıkarsa:</strong> Haftada iki saatin yetmediği ya da atölyenin
+biçiminin değişmesi gerektiği anlaşılır. Bu da program tasarımı için
+en az öteki kadar işe yarar bir bilgidir.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Son paragrafa dikkat</span><p>Örnekte bir <strong>seçim yanlılığı</strong> uyarısı var. İyi kurulmuş bir soru,
+kendi zayıf noktasını da görünür kılar: PICOC'un "C" kutusunu
+doldururken "atölyeye katılmayanlar" dediğiniz anda, bu iki grubun
+başka bakımlardan da farklı olabileceği akla gelir.</p>
+<p>Bu, PICOC'un en az bilinen faydasıdır. Beş kutuyu doldurmak, sorunun
+yöntemsel sorunlarını daha veri toplanmadan ortaya çıkarır.</p></aside>
+<h3>Aynı iskelet, sekiz farklı alan</h3>
+<p>PICOC bir alana özgü değildir. Aşağıdaki tablo, aynı beş kutunun çok
+farklı sorularla nasıl doldurulduğunu gösteriyor.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Alan</th>
+<th>P — kimi/neyi</th>
+<th>I — ne uygulanıyor</th>
+<th>C — neyle karşılaştırılıyor</th>
+<th>O — ne ölçülüyor</th>
+<th>C — bağlam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eğitim</strong></td>
+<td>Hazırlık sınıfı öğrencileri</td>
+<td>Haftada iki saat okuma atölyesi</td>
+<td>Atölyeye katılmayanlar</td>
+<td>Dönem sonu okuma sınavı puanı</td>
+<td>Devlet üniversitesi, bir güz dönemi</td>
+</tr>
+<tr>
+<td><strong>Fizik</strong></td>
+<td>İnce film güneş hücreleri</td>
+<td>500 nm soğurucu katman</td>
+<td>300 nm katman (standart)</td>
+<td>Dönüşüm verimi (%), kısa devre akım yoğunluğu</td>
+<td>Laboratuvar, standart aydınlatma koşulları</td>
+</tr>
+<tr>
+<td><strong>Kimya</strong></td>
+<td>Sulu çözeltideki boyar madde</td>
+<td>Çay posasından elde edilen aktif karbon</td>
+<td>Ticari toz aktif karbon</td>
+<td>Adsorpsiyon kapasitesi (mg/g), giderim verimi</td>
+<td>Kesikli sistem, pH 7, 25 °C</td>
+</tr>
+<tr>
+<td><strong>Makine</strong></td>
+<td>Eklemeli imalatla üretilen titanyum parçalar</td>
+<td>800 °C'de iki saat gerilim giderme tavlaması</td>
+<td>İşlem görmemiş numuneler</td>
+<td>Yorulma ömrü (çevrim sayısı), yüzey pürüzlülüğü</td>
+<td>Oda sıcaklığı, eksenel yorulma deneyi</td>
+</tr>
+<tr>
+<td><strong>Tıp</strong></td>
+<td>Tip 2 diyabet tanılı erişkinler</td>
+<td>Haftalık telefonla ilaç hatırlatması, altı ay</td>
+<td>Olağan bakım</td>
+<td>İlaç uyum ölçeği puanı, HbA1c</td>
+<td>Aile sağlığı merkezi, altı aylık izlem</td>
+</tr>
+<tr>
+<td><strong>Ekonomi</strong></td>
+<td>On kişiden az çalışanı olan işletmeler</td>
+<td>Asgari ücretin reel olarak arttığı yıllar</td>
+<td>Artışın enflasyonun altında kaldığı yıllar</td>
+<td>Çalışan sayısındaki yüzde değişim</td>
+<td>Türkiye, 2015–2024, imalat ve hizmet</td>
+</tr>
+<tr>
+<td><strong>Tarih</strong></td>
+<td>Osmanlı salnameleri (devlet ve vilayet)</td>
+<td>1869 Maarif-i Umûmiyye Nizamnâmesi sonrası basılan nüshalar</td>
+<td>Nizamnâme öncesi basılan nüshalar</td>
+<td>Eğitim kurumlarına ayrılan sayfa oranı</td>
+<td>Anadolu vilayetleri ve merkez, basılı nüshalar</td>
+</tr>
+<tr>
+<td><strong>İlahiyat</strong></td>
+<td>Klasik dönem hadis şerhleri</td>
+<td>Hanefî şârihlerin değerlendirmeleri</td>
+<td>Şâfiî şârihlerin değerlendirmeleri</td>
+<td>Bir rivayeti "garîb" niteleme sıklığı</td>
+<td>Hicrî 7.–10. yüzyıl, basılı şerhler</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not "><span class="not-baslik">Tabloyu satır satır değil, sütun sütun okuyun</span><p>İlk sütunu atlayıp yalnız <strong>O sütununa</strong> bakın: sınav puanı, dönüşüm
+verimi, adsorpsiyon kapasitesi, yorulma ömrü, HbA1c, yüzde değişim,
+sayfa oranı, niteleme sıklığı. Sekizi de <strong>sayılabilir</strong>. Hiçbiri
+"başarı", "etkinlik" ya da "kalite" gibi soyut bir söz değil.</p>
+<p>Sonra <strong>C sütununa</strong> bakın (karşılaştırma): katılmayanlar, standart
+kalınlık, ticari ürün, işlem görmemiş numune, olağan bakım, düşük
+artış yılları, önceki dönem, öteki mezhep. Sekizinde de <strong>neye göre</strong>
+sorusunun yanıtı var.</p>
+<p>Bir araştırma sorusu bu iki kutuyu dolduramıyorsa, henüz soru
+değildir.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">PICOC her soruya uymaz</span><p>Son iki satır — tarih ve ilahiyat — PICOC'u esneterek dolduruldu.
+Bu alanlarda "uygulanan bir işlem" yoktur; onun yerine bir <strong>dönem</strong>
+ya da bir <strong>koşul</strong> konur. Tablo bunu gösterebilmek için böyle
+kuruldu.</p>
+<p>Ama her tarih ya da ilahiyat sorusu bu kalıba sokulamaz. Bir metnin
+yorumunu, bir kavramın tarihsel dönüşümünü ya da bir eserin
+kaynaklarını araştırıyorsanız PICOC size yardımcı olmaz. O tür
+sorularda soruyu netleştirmek için başka yollar kullanılır:
+incelenecek <strong>korpusun sınırını</strong> (hangi eserler, hangi tarih
+aralığı, hangi nüshalar), <strong>çözümleme biriminin</strong> ne olduğunu (bölüm,
+paragraf, terim) ve <strong>neyin aranacağını</strong> açıkça yazmak.</p>
+<p>Zorlamayın. Soruyu kalıba uydurmak, kalıbı soruya uydurmaktan
+kötüdür.</p></aside>
+<h2 id="kursun-veri-setleri">Kursun veri setleri</h2>
+<p>Kurs boyunca üç veri seti kullanılıyor. İkisi gerçek ve açık
+erişimli, biri bu kurs için üretildi.</p>
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">Gazi Üniversitesi ders değerlendirme verisi</span></div>
+<dl><dt>Kaynak</dt><dd>UCI Machine Learning Repository</dd><dt>Künye</dt><dd>Gündüz, N., &amp; Fokoué, E. (2013). Turkiye Student Evaluation. UCI Machine Learning Repository.</dd><dt>DOI</dt><dd><a href="https://doi.org/10.24432/C5S02S" rel="noopener">10.24432/C5S02S</a></dd><dt>İndirme</dt><dd><a href="https://archive.ics.uci.edu/dataset/262/turkiye+student+evaluation" rel="noopener">https://archive.ics.uci.edu/dataset/262/turkiye+student+evaluation</a></dd><dt>Lisans</dt><dd>CC BY 4.0</dd><dt>Boyut</dt><dd>5.820 değerlendirme, 28 Likert maddesi (1–5) ve 5 ek değişken</dd><dt>Pakette</dt><dd><a href="veri/sosyal/gazi_ders_degerlendirme.csv">gazi_ders_degerlendirme.csv</a></dd></dl>
+<p>Gazi Üniversitesi'nde üç öğretim elemanının verdiği on üç dersin
+dönem sonu değerlendirmeleri. Maddelerin İngilizce özgün metni UCI
+belgelerinde yer alır; Türkçe karşılıkları bu kurs için
+çevrilmiştir. Eksik hücre yoktur. DOI doğrulanmıştır.</p>
+<p>Kursun 8. bölümündeki on iki analiz adımı bu veri üzerinde yürütüldü.</p></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">PhiUSIIL kimlik avı veri seti</span></div>
+<dl><dt>Kaynak</dt><dd>UCI Machine Learning Repository</dd><dt>Künye</dt><dd>Prasad, A., &amp; Chandra, S. (2024). PhiUSIIL Phishing URL (Website). UCI Machine Learning Repository.</dd><dt>DOI</dt><dd><a href="https://doi.org/10.1016/j.cose.2023.103545" rel="noopener">10.1016/j.cose.2023.103545</a></dd><dt>İndirme</dt><dd><a href="https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset" rel="noopener">https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset</a></dd><dt>Lisans</dt><dd>CC BY 4.0</dd><dt>Boyut</dt><dd>235.795 kayıt, 54 özellik — kursta 5.000 satırlık bir altküme kullanıldı; altkümede iki sınıfın oranı özgün veriyle aynı tutuldu</dd><dt>Pakette</dt><dd><a href="veri/web_guvenligi/phishing_ornek_5000.csv">phishing_ornek_5000.csv</a></dd></dl>
+<p>Gerçek internet adreslerinden çıkarılmış özellikler ve iki değerli
+etiket: kimlik avı ya da meşru. 9. bölümdeki makine öğrenmesi ve veri
+sızıntısı örneği bu veri üzerinde yürütüldü.</p>
+<p>Bu veri seti teknik bir alandan geliyor ama orada anlatılan ders
+alandan bağımsızdır: <strong>bir model beklenenden çok iyi sonuç
+verdiğinde ne yapılmalı?</strong> Aynı durum bir makine mühendisliği
+deneyinde de, bir ekonometri modelinde de karşınıza çıkar.</p></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Atölye verisi — akademisyen anketi</span></div>
+<dl><dt>Kaynak</dt><dd>Bu kurs için üretildi</dd><dt>Boyut</dt><dd>312 katılımcı, 21 Likert maddesi, 116 açık uçlu yanıt</dd><dt>Pakette</dt><dd><a href="veri/sosyal/anket_ham.csv">anket_ham.csv</a> · <a href="veri/sosyal/anket_acik_uclu.csv">anket_acik_uclu.csv</a> · <a href="kod/02_anket_veri_uret.py">02_anket_veri_uret.py</a></dd></dl>
+<p><strong>Bu veri gerçek bir anketten gelmemiştir.</strong> Üç şeyi öğretmek için
+üretildi: ham form çıktısını temizleme, kimliksizleştirme ve Türkçe
+açık uçlu yanıtların tematik analizi. Bu üçü, hazır ve temizlenmiş
+gerçek veri setleriyle gösterilemez; onlarda kir zaten temizlenmiş,
+açık uçlu metin zaten yoktur.</p>
+<p>Veriyi üreten betik de pakette durur. Betik, doğrudan ölçülmeyen dört
+temel boyut varsayarak çalışıyor; yani verinin hangi varsayımlarla
+üretildiğini satır satır okuyabilirsiniz.</p></div>
+
+<aside class="not etik"><span class="not-baslik">Sentetik veri neden açıkça işaretleniyor</span><p>Sentetik veri kullanmak sorun değildir; <strong>sentetik veriyi gerçek gibi
+sunmak</strong> sorundur. Bu kursta sentetik olan her şey künyesinde
+işaretlidir, üreten kodu yanındadır ve hiçbir sayısı bulgu olarak
+sunulmaz. Kendi çalışmanızda sentetik veri kullanırsanız aynı üçünü
+yapın.</p></aside>
+<h2 id="fikri-soruya-ceviren-istem">Fikri soruya çeviren istem</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Konudan araştırma sorusuna</span>
+<span class="arac">Tasarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Araştırma yöntemleri alanında çalışan, soru formülasyonu konusunda
+titiz bir danışmansın.
+
+DURUM
+Elimde şu var:
+— KONU: [konunuzu bir cümleyle yazın]
+— VERİ: [elinizdeki veriyi tanımlayın: kaç gözlem, hangi değişkenler,
+  nasıl toplandı. Veri yoksa &quot;henüz veri yok&quot; yazın ve nasıl
+  toplayabileceğinizi belirtin]
+— ALAN: [disiplininiz]
+— KISIT: [süre, bütçe, erişim kısıtlarınız]
+
+GÖREV
+Bu konudan, elimdeki veriyle yanıtlanabilecek dört farklı araştırma
+sorusu üret. Dördü birbirinden kapsam ve iddia düzeyi bakımından
+ayrışsın: biri betimleyici, biri karşılaştırmalı, biri ilişkisel,
+biri yordayıcı olsun.
+
+HER SORU İÇİN ŞUNLARI VER
+1. Soru — tek cümle, soru işaretiyle biten
+2. PICOC çözümlemesi — beş satırlık tablo
+3. Gerekecek analiz — hangi istatistiksel yöntem ve neden
+4. Yöntemsel risk — bu soruda hangi yanlılık ya da karıştırıcı
+   değişken tehlikesi var
+5. &quot;Evet çıkarsa&quot; — bulgu olumluysa alana katkısı ne olur, tek cümle
+6. &quot;Hayır çıkarsa&quot; — bulgu olumsuzsa yine yayımlanabilir mi, tek cümle
+7. FINER değerlendirmesi — beş ölçüt, her biri için Evet/Hayır/Belirsiz
+   ve tek cümlelik gerekçe
+
+SINIRLAR
+— Elimdeki veriyle yanıtlanamayacak soru üretme. Her soru için
+  kullanılacak değişkenleri verdiğim listeden adlandır.
+— PICOC&#x27;un bir kutusu doldurulamıyorsa boş bırakma; neden
+  doldurulamadığını yaz. Bazı sorular bu kalıba uymaz.
+— Literatürde bu sorunun daha önce yanıtlanıp yanıtlanmadığı
+  konusunda iddiada bulunma; bunu bilmiyorsun. &quot;Özgünlük taramayla
+  sınanmalı&quot; yaz.
+— Kaynak ya da atıf verme.
+
+DENETİM
+Dört sorunun ardından şunu yaz: bu dört sorudan hangisi, verdiğim
+kısıtlar altında en gerçekçi olanıdır ve neden? Tek paragraf.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · İlahiyat · metin incelemesi</span>
+<span class="ad">Konudan araştırma sorusuna</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Araştırma yöntemleri alanında çalışan, soru formülasyonu konusunda
+titiz bir danışmansın.
+
+DURUM
+Elimde şu var:
+— KONU: Klasik dönem hadis şerhlerinde rivayet değerlendirme dilinin
+  mezhebe göre farklılaşıp farklılaşmadığı.
+— VERİ: Kütüb-i Sitte üzerine yazılmış 12 şerhten derlenmiş 340
+  rivayet değerlendirmesi. Her kayıtta: şerh adı, şârih, şârihin
+  mezhebi, hicrî vefat tarihi, rivayetin kaynağı, kullanılan
+  niteleme terimi, değerlendirmenin tam metni (1–4 cümle).
+  Veriyi ben derledim, basılı neşirlerden okuyarak.
+— ALAN: Hadis / İslam hukuku tarihi
+— KISIT: Yalnız basılı neşri bulunan şerhler. Yazma eserlere
+  erişimim yok. Bir yıllık süre, tek araştırmacı.
+
+GÖREV
+Bu konudan, elimdeki veriyle yanıtlanabilecek dört farklı araştırma
+sorusu üret. Dördü birbirinden kapsam ve iddia düzeyi bakımından
+ayrışsın: biri betimleyici, biri karşılaştırmalı, biri ilişkisel,
+biri yordayıcı olsun.
+
+HER SORU İÇİN ŞUNLARI VER
+1. Soru — tek cümle, soru işaretiyle biten
+2. PICOC çözümlemesi — beş satırlık tablo. Bu alanda &quot;müdahale&quot;
+   yerine &quot;incelenen koşul&quot; yazman gerekebilir; gerekiyorsa yaz ve
+   neden olduğunu belirt.
+3. Gerekecek analiz — hangi yöntem ve neden
+4. Yöntemsel risk — bu soruda hangi yanlılık ya da karıştırıcı
+   değişken tehlikesi var
+5. &quot;Evet çıkarsa&quot; — bulgu olumluysa alana katkısı ne olur
+6. &quot;Hayır çıkarsa&quot; — bulgu olumsuzsa yine yayımlanabilir mi
+7. FINER değerlendirmesi — beş ölçüt, her biri için
+   Evet/Hayır/Belirsiz ve tek cümlelik gerekçe
+
+BU ALANA ÖZGÜ DİKKAT
+— Mezhep ile dönem birbirine karışır: belirli bir mezhebin
+  şârihleri belirli bir yüzyılda yoğunlaşmış olabilir. Gözlenen
+  farkın mezhepten mi dönemden mi geldiği ayrıştırılmalı. Bunu
+  yöntemsel risk maddesinde mutlaka ele al.
+— Basılı neşir sınırı bir örneklem kısıtıdır; hangi sorularda
+  belirleyici olduğunu söyle.
+
+SINIRLAR
+— Elimdeki veriyle yanıtlanamayacak soru üretme. Her soru için
+  kullanılacak değişkenleri verdiğim listeden adlandır.
+— PICOC&#x27;un bir kutusu doldurulamıyorsa boş bırakma; neden
+  doldurulamadığını yaz.
+— Literatürde bu sorunun daha önce yanıtlanıp yanıtlanmadığı
+  konusunda iddiada bulunma. &quot;Özgünlük taramayla sınanmalı&quot; yaz.
+— Kaynak ya da atıf verme. Şârih adı, eser adı ya da künye üretme.
+— Hadis terimlerinin anlamı konusunda hüküm verme; ben
+  kodladığım terimleri olduğu gibi kullan.
+
+DENETİM
+Dört sorunun ardından şunu yaz: bu dört sorudan hangisi, verdiğim
+kısıtlar altında en gerçekçi olanıdır ve neden? Tek paragraf.</pre></div>
+
+<aside class="not "><span class="not-baslik">İki satır, bütün çıktıyı değiştiriyor</span><p>Doldurulmuş örnekte kalıba iki satır eklendi.</p>
+<p><strong>"Mezhep ile dönem birbirine karışır."</strong> Bu, çalışmanın en büyük
+yöntemsel riski. Model bunu veriden çıkaramaz çünkü hangi mezhebin
+hangi yüzyılda yoğunlaştığını bilmez. Siz bilirsiniz. Söylemezseniz
+model dört soru üretir ve dördü de bu riski atlar.</p>
+<p><strong>"Hadis terimlerinin anlamı konusunda hüküm verme."</strong> Model,
+"garîb" teriminin ne anlama geldiği konusunda bir şeyler söyleme
+eğilimindedir ve söyledikleri alandaki tartışmayı bilmeden
+yazılmış olur. Sınır, onu kodlayıcı rolünde tutuyor; yorumcu
+rolüne geçirmiyor.</p></aside>
+<p>Aşağıda bu istemin iki farklı alanda verdiği çıktılardan birer soru
+var. Alanlar bilerek birbirinden uzak seçildi.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Çıktı 1 — kimya alanından bir soru</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Soru 2 — karşılaştırmalı</strong></p>
+<p>Çay posasından elde edilen aktif karbon, sulu çözeltiden boyar madde
+gideriminde ticari aktif karbon kadar etkili midir?</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>PICOC parçası</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Sulu çözeltide çözünmüş boyar madde (metilen mavisi)</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Çay posasından kimyasal aktivasyonla elde edilen aktif karbon</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Ticari toz aktif karbon</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Denge adsorpsiyon kapasitesi (mg/g) ve giderim verimi (%)</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Kesikli sistem, pH 7, 25 °C, 120 dakika temas süresi</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Gerekecek analiz</strong></p>
+<p>İki malzeme üç farklı başlangıç derişiminde ve üçer tekrarla
+denenecekse, iki faktörlü varyans analizi (malzeme × derişim)
+uygundur. Tekrar sayısı az olduğu için varyans eşitliği Levene
+testiyle denetlenir; sağlanmazsa parametrik olmayan karşılık
+raporlanır. Etki büyüklüğü eta kare ile verilir.</p>
+<p>Adsorpsiyon izotermleri (Langmuir, Freundlich) ayrıca uydurulur;
+bunlar bir hipotez testi değil, model uyumu karşılaştırmasıdır ve
+R kare ile değerlendirilir.</p>
+<p><strong>Yöntemsel risk</strong></p>
+<p>İki malzemenin yüzey alanı ve gözenek yapısı farklıysa, gözlenen
+fark malzemenin kaynağından değil yüzey alanından geliyor olabilir.
+BET yüzey alanı ölçülüp raporlanmazsa bu karıştırıcı etken
+ayrıştırılamaz.</p>
+<p><strong>Evet çıkarsa:</strong> Atık bir tarımsal malzemeden, ticari ürüne yakın
+başarıda ve düşük maliyetli bir arıtma malzemesi elde edilebildiği
+gösterilmiş olur.</p>
+<p><strong>Hayır çıkarsa:</strong> Literatürdeki "tarımsal atıklar ticari aktif
+karbonun yerini tutar" iddiası bu boyar madde için
+sınırlandırılmış olur. Negatif ama yayımlanabilir bir bulgudur.</p>
+<p><strong>FINER</strong>
+F — Evet. Malzeme ve ölçüm olanakları standart bir kimya
+    laboratuvarında bulunur.
+I — Evet. Atık değerlendirme ve düşük maliyetli arıtma, çalışılan
+    bir konu.
+N — <strong>Belirsiz.</strong> Çay posası daha önce denenmiş olabilir; özgünlük
+    yalnız taramayla sınanır.
+E — Evet. İnsan ya da hayvan deneği yok.
+R — Evet. Sonuç, atık değerlendirme uygulamalarını etkiler.</p></div></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Çıktı 2 — eğitim alanından bir soru</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Soru 3 — ilişkisel</strong></p>
+<p>Bir öğrencinin derse verdiği not, dersin kendisiyle mi ilgili, yoksa
+öğretim elemanıyla mı? Bu ikisi gerçekten ayrı şeyler mi, yoksa
+öğrenci hepsine tek bir izlenimle mi puan veriyor?</p>
+<p><em>Daha teknik söylenişi:</em> Ders değerlendirme ölçeğinin "ders" ve
+"öğretim elemanı" boyutları, birbirinden ayrışan iki yapıyı mı
+ölçmektedir?</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>PICOC parçası</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Dönem sonu değerlendirme yapan lisans öğrencileri</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Dersi algılanan güçlüğü ve derse katılım düzeyi</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Güçlük düzeyleri arası, katılım düzeyleri arası</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Ders puanı ve öğretim elemanı puanı</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Bir devlet üniversitesi, dönem sonu değerlendirme anketi</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Gerekecek analiz</strong></p>
+<p>Önce maddelerin kaç boyut altında kümelendiğini veriden çıkarmak
+(açımlayıcı faktör analizi). Sonra iki boyutun birbirinden ne kadar
+ayrıştığını görmek için aralarındaki korelasyona bakmak. Ardından
+katılım ve güçlük değişkenlerinin iki boyutu farklı etkileyip
+etkilemediğini sınamak.</p>
+<p><strong>Yöntemsel risk</strong></p>
+<p>Öğrencinin genel memnuniyeti her iki boyutu birden yukarı ya da
+aşağı çekebilir. Bu durumda iki faktör istatistiksel olarak ayrışsa
+bile aralarındaki korelasyon yüksek kalır; yorumda bu dikkate
+alınmalıdır.</p>
+<p><strong>Evet çıkarsa:</strong> Ölçek iki ayrı şeyi ölçüyor demektir; kurumlar iki
+puanı ayrı ayrı raporlamalıdır. Düşük ders puanı alan bir öğretim
+elemanı, dersin kendisinden kaynaklanan bir sorundan sorumlu
+tutulmamalıdır.</p>
+<p><strong>Hayır çıkarsa:</strong> Öğrenci tek bir genel izlenimle puan veriyor
+demektir. Bu durumda ölçeğin iki boyutlu sunulması yanıltıcıdır ve
+değerlendirme sisteminin yeniden tasarlanması gerekir. Bu da en az
+öteki kadar önemli bir bulgudur.</p>
+<p><strong>FINER</strong>
+F — Evet. Veri açık erişimli (5.820 değerlendirme), analiz standart.
+I — Evet. Ders değerlendirmeleri akademik atama ve yükseltmelerde
+    kullanıldığı için doğrudan sonuç doğuran bir soru.
+N — <strong>Belirsiz.</strong> Taramayla sınanmalı.
+E — Evet. Veri kimliksizleştirilmiş ve açık lisanslı.
+R — Evet. Sonuç, kurumların değerlendirme politikasını etkiler.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">İki örneğin ortak iskeleti</span><p>Biri laboratuvarda, öteki anket masasında. Ama ikisi de aynı kalıbı
+kullanıyor: <strong>iki şeyi karşılaştır, bir şeyi ölç, bağlamı belirt.</strong>
+Ve ikisi de "hayır çıkarsa" sorusuna anlamlı bir yanıt veriyor.</p>
+<p>Bir araştırma sorusunun sağlamlığı, olumsuz sonucun da işe yarar
+olmasına bağlıdır. Olumsuz sonuç yayımlanamıyorsa soru yanlış
+kurulmuştur.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">Modelin söylemediğine dikkat edin</span><p>İki çıktıda da özgünlük maddesi "<strong>Belirsiz</strong>" olarak işaretlendi.
+Bu, isteme konan "özgünlük konusunda iddiada bulunma" sınırının
+sonucudur. O sınır olmasaydı model büyük olasılıkla "Evet, bu özgün
+bir sorudur" diyecekti — ve bu cümlenin hiçbir dayanağı
+olmayacaktı.</p>
+<p>Özgünlük, taramayla sınanır. Sıradaki bölümün konusu bu.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Konu soru değildir. Soru ölçülebilir, karşılaştırmalı, sınırlı ve
+yanlışlanabilir olmalıdır.</p></li><li><p>"Evet çıkarsa / hayır çıkarsa" sınaması, sorunun değerini otuz
+saniyede gösterir.</p></li><li><p>PICOC'un beş kutusu: kimi/neyi, ne uygulanıyor, neyle
+karşılaştırılıyor, ne ölçülüyor, hangi bağlamda. Bir kutu boş
+kalıyorsa soru eksiktir.</p></li><li><p>Beş kutuyu doldurmak, sorunun yöntemsel risklerini daha veri
+toplanmadan ortaya çıkarır.</p></li><li><p>PICOC her soruya uymaz. Metin yorumu ya da kavram tarihi gibi
+işlerde zorlamayın; korpusun sınırını, çözümleme birimini ve neyin
+aranacağını yazmak daha işe yarar.</p></li><li><p>Özgünlük iddiası tahminle değil taramayla kurulur. Modelden bu
+konuda görüş istemeyin; isteme sınır koyun.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="03-istem.html"><span class="yon">← Önceki</span><span class="ad">İstem yazmanın altı parçası</span></a><a class="sag" href="05-literatur.html"><span class="yon">Sonraki →</span><span class="ad">Literatür taraması: aramadan senteze</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

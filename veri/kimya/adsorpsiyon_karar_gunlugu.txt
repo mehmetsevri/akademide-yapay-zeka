@@ -1,0 +1,63 @@
+﻿ADSORPSİYON VERİSİ — TEMİZLEME KARAR GÜNLÜĞÜ
+============================================================
+
+Ham satır sayısı   : 215
+Temiz satır sayısı : 201
+Çıkarılan          : 14 (%6.5)
+
+1. Mükerrer kayıt
+   Karar   : İkinci giriş düşürüldü
+   Gerekçe : Bütün sütunları birebir aynı; çifte veri girişi.
+   Etkilenen satır: 2
+
+2. Adsorban adı
+   Karar   : Yedi yazım iki ada indirildi
+   Gerekçe : 'çay posası', 'ÇP', 'tea waste' aynı malzeme; üç öğrenci farklı yazmış. Eşleme tablosu betikte açık.
+   Etkilenen satır: 38
+
+3. Sıcaklık birimi
+   Karar   : Fahrenheit → Celsius çevrildi
+   Gerekçe : Tasarımda yalnız 25 ve 45 °C var; 50 °C üstü değerler birim karışıklığı. 77 °F = 25 °C, 113 °F = 45 °C.
+   Etkilenen satır: 13
+
+4. Olanaksız ölçüm
+   Karar   : Satır çıkarıldı
+   Gerekçe : Denge derişimi başlangıçtan büyük ya da eşit. Adsorpsiyon derişimi düşürür; bu fiziksel olarak olanaksız.
+   Etkilenen satır: 5
+
+5. Şüpheli dönem
+   Karar   : Çıkarılmadı, işaretlendi
+   Gerekçe : 12-18 Mart arası cihaz bakım kaydı var. Satırlar 'supheli_donem' sütunuyla etiketlendi; duyarlılık analizi bunları hariç tutarak yineleniyor.
+   Etkilenen satır: 15
+
+6. Boş hücre
+   Karar   : Satır çıkarıldı
+   Gerekçe : pH ve denge derişimi analizin zorunlu girdileri. Ortalamayla doldurmak ölçülmeyen bir deneyi ölçülmüş göstermek olur.
+   Etkilenen satır: 7
+
+7. Türetilmiş değişken
+   Karar   : q ve giderim verimi eklendi
+   Gerekçe : q = (C0 − Ce)·V/m, V = 0,05 L ve m = 0,1 g. Giderim verimi yüzde olarak. İkisi de ham sütunlardan hesaplanır, elle girilmez.
+   Etkilenen satır: 201
+
+8. Tekrar sayısı
+   Karar   : Eksik koşullar bildirildi
+   Gerekçe : Planda her koşul için 3 tekrar vardı. 14 koşulda daha az tekrar kaldı; bu koşullar analizde daha az ağırlık taşıdığı için ANOVA dengesiz tasarım olarak kurulacak.
+   Etkilenen satır: 27
+
+Eksik tekrarlı koşullar:
+
+   ('cay_posasi', 25.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   ('cay_posasi', 25.0, 3.0, 45.0, 120) → 2 tekrar (planda 3)
+   ('cay_posasi', 25.0, 7.0, 25.0, 60) → 2 tekrar (planda 3)
+   ('cay_posasi', 25.0, 7.0, 45.0, 120) → 2 tekrar (planda 3)
+   ('cay_posasi', 25.0, 10.0, 25.0, 60) → 2 tekrar (planda 3)
+   ('cay_posasi', 50.0, 3.0, 25.0, 60) → 2 tekrar (planda 3)
+   ('cay_posasi', 50.0, 3.0, 45.0, 120) → 2 tekrar (planda 3)
+   ('cay_posasi', 100.0, 3.0, 45.0, 60) → 2 tekrar (planda 3)
+   ('cay_posasi', 100.0, 10.0, 25.0, 120) → 2 tekrar (planda 3)
+   ('ticari', 25.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   ('ticari', 25.0, 7.0, 45.0, 60) → 2 tekrar (planda 3)
+   ('ticari', 100.0, 3.0, 25.0, 120) → 2 tekrar (planda 3)
+   ('ticari', 100.0, 3.0, 45.0, 60) → 1 tekrar (planda 3)
+   ('ticari', 100.0, 7.0, 45.0, 60) → 2 tekrar (planda 3)

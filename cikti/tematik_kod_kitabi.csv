@@ -1,0 +1,64 @@
+﻿kod,tema,tanim
+S1-L1,Literatürle baş etme,"Tarama, ön ayıklama, ilgili kaynağı seçme"
+S1-L2,Literatürle baş etme,Makale veya metin özetletme
+S1-L3,Literatürle baş etme,"Anahtar kelime üretme, literatür boşluğu arama"
+S1-L4,Literatürle baş etme,Alan dışı veya yeni bir konuya giriş yapma
+S1-D1,Dil engelini aşma,"İngilizce yazım, dil düzeltme, redaksiyon"
+S1-D2,Dil engelini aşma,Türkçeden İngilizceye çeviri
+S1-D3,Dil engelini aşma,"Son okuma, yazım hatası, cümle düzeltme"
+S1-D4,Dil engelini aşma,"Öz, başlık ve anahtar kelime metinleri"
+S1-V1,Veriyi işler hâle getirme,Analiz kodu yazma veya hata ayıklama
+S1-V2,Veriyi işler hâle getirme,"İstatistiksel yöntem seçimi, hesap doğrulama"
+S1-V3,Veriyi işler hâle getirme,Veri temizleme ve biçim birleştirme
+S1-V4,Veriyi işler hâle getirme,"Grafik ve tablo üretimi, biçimlendirme"
+S1-Z1,Düşünme ortağı,"Metin planı, bölüm iskeleti çıkarma"
+S1-Z2,Düşünme ortağı,"Fikir geliştirme, araştırma sorusunu daraltma"
+S1-Z3,Düşünme ortağı,Kendi metnini zayıf nokta için denetletme
+S1-Y1,İdari ve yayın yükü,"Hakem cevabı, editör yazışması, idari metinler"
+S1-Y2,İdari ve yayın yükü,"Öğretim malzemesi, sunum, öğrenci desteği"
+S1-Y3,İdari ve yayın yükü,"Ölçek maddesi, nitel kodlama gibi yöntem işleri"
+S1-M1,Mesafeli duranlar,"Fayda görmeme, kullanmama veya kararsızlık"
+S2-G1,Güvenilirlik,Var olmayan kaynak veya atıf uydurma
+S2-G2,Güvenilirlik,Yanlışı kendinden emin biçimde söyleme
+S2-G3,Güvenilirlik,"Hesap, analiz veya yöntem hatası"
+S2-G4,Güvenilirlik,Güncel literatürü bilmemesi
+S2-O1,Yazarlık ve özgünlük,Metnin kime ait olduğunun belirsizliği
+S2-O2,Yazarlık ve özgünlük,Katkı ve yazarlık sınırının tanımsızlığı
+S2-O3,Yazarlık ve özgünlük,"Metinlerin benzeşmesi, üslup kaybı"
+S2-O4,Yazarlık ve özgünlük,"Yüzeysellik, derinleşmeme"
+S2-V1,Veri ve gizlilik,Hassas veya kişisel verinin araca yüklenmesi
+S2-V2,Veri ve gizlilik,Yayımlanmamış verinin üçüncü tarafa gitmesi
+S2-V3,Veri ve gizlilik,Kullanım sözleşmelerinin bilinmemesi
+S2-K1,Kuralsızlık,Kurumsal politikanın bulunmaması
+S2-K2,Kuralsızlık,Dergi politikalarının dağınık ve farklı olması
+S2-K3,Kuralsızlık,Etik kurul yaklaşımının belirsizliği
+S2-K4,Kuralsızlık,Geri çekilme veya yaptırım riski
+S2-E1,Öğretim ve değerlendirme,Ödev ve tezlerin değerlendirilemezliği
+S2-E2,Öğretim ve değerlendirme,Öğrencinin kullanımı beyan etmemesi
+S2-E3,Öğretim ve değerlendirme,Hakemlik sürecinde kullanılması
+S2-B1,Beceri ve erişim,Kendi yazma veya düşünme becerisinin körelmesi
+S2-B2,Beceri ve erişim,Ücretli araçlara erişim eşitsizliği
+S2-B3,Beceri ve erişim,Türkçe üretim niteliğinin düşüklüğü
+S2-B4,Beceri ve erişim,"Kurumsal hesap yokluğu, kişisel hesapla kurum işi"
+S2-N1,Kaygı duymayanlar,Kaygı bildirmeme veya önemsememe
+S3-R1,Eğitim ve rehberlik,"Uygulamalı, kendi verisiyle çalışılan eğitim"
+S3-R2,Eğitim ve rehberlik,"Alana özgü rehber (nitel, derleme, Türkçe yazım)"
+S3-R3,Eğitim ve rehberlik,"Akran desteği, deneyimliyle eşleştirme, tartışma ortamı"
+S3-R4,Eğitim ve rehberlik,Öğrenmeye ayrılacak zaman
+S3-A1,Erişim ve altyapı,Kurumsal lisans ve kurumsal hesap
+S3-A2,Erişim ve altyapı,"Kurum içinde çalışan, veriyi dışarı çıkarmayan sürüm"
+S3-A3,Erişim ve altyapı,Veri tabanlarıyla bütünleşme
+S3-A4,Erişim ve altyapı,Kurumsal dil ve redaksiyon hizmeti
+S3-P1,Yazılı politika,Bağlayıcı kurum politikası metni
+S3-P2,Yazılı politika,Beyan cümlesi şablonu
+S3-P3,Yazılı politika,Dergi politikalarını derleyen rehber
+S3-P4,Yazılı politika,Yazarlık ve katkı konusunda kurum görüşü
+S3-Y1,Yönetmelik ve denetim,Etik kurul form ve yönergesinin güncellenmesi
+S3-Y2,Yönetmelik ve denetim,Tez yönetmeliğinde açık hüküm
+S3-Y3,Yönetmelik ve denetim,Öğrenci kullanımına ilişkin düzenleme
+S3-Y4,Yönetmelik ve denetim,Sözleşmelerin hukuki incelenmesi
+S3-Y5,Yönetmelik ve denetim,Kaynak doğrulama zorunluluğu
+S3-M1,Yöntem desteği,İstatistik danışmanlığı
+S3-M2,Yöntem desteği,Şekil ve tablo standartları
+S3-M3,Yöntem desteği,Üretilen kodun gözden geçirilmesi kültürü
+S3-S1,Beklentisi olmayanlar,Kurumdan beklenti bildirmeme

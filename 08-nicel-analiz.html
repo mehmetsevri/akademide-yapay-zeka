@@ -1,0 +1,1402 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicel analiz: on iki adım, gerçek veri — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Gazi Üniversitesi&#x27;nin 5.820 kayıtlık gerçek ders değerlendirme verisi üzerinde betimsel istatistikten lojistik regresyona on iki analiz. Her sayı koşt">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Nicel analiz: on iki adım, gerçek veri</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa etkin" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><div class="alt-liste"><a href="#analizi-yuruten-ana-istem">Analizi yürüten ana istem</a><a href="#adim-1-betimsel-istatistik">Adım 1 — Betimsel istatistik</a><a href="#adim-2-dagilim-varsayiminin-denetimi">Adım 2 — Dağılım varsayımının denetimi</a><a href="#adim-3-guvenilirlik">Adım 3 — Güvenilirlik</a><a href="#adim-4-acimlayici-faktor-analizi">Adım 4 — Açımlayıcı faktör analizi</a><a href="#adim-5-i-ki-grup-karsilastirmasi">Adım 5 — İki grup karşılaştırması</a><a href="#adim-6-uc-ve-daha-fazla-grup">Adım 6 — Üç ve daha fazla grup</a><a href="#adim-7-parametrik-olmayan-karsiliklar">Adım 7 — Parametrik olmayan karşılıklar</a><a href="#adim-8-korelasyon">Adım 8 — Korelasyon</a><a href="#adim-9-coklu-dogrusal-regresyon">Adım 9 — Çoklu doğrusal regresyon</a><a href="#adim-10-lojistik-regresyon">Adım 10 — Lojistik regresyon</a><a href="#adim-11-ki-kare">Adım 11 — Ki-kare</a><a href="#adim-12-anlamlilik-ile-etki-buyuklugunun-ayrimi">Adım 12 — Anlamlılık ile etki büyüklüğünün ayrımı</a><a href="#bulgular-bolumunu-yazmak">Bulgular bölümünü yazmak</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 8</div><h1>Nicel analiz: on iki adım, gerçek veri</h1><p class="ozet">Gazi Üniversitesi'nin 5.820 kayıtlık gerçek ders değerlendirme verisi üzerinde betimsel istatistikten lojistik regresyona on iki analiz. Her sayı koşturuldu, her şekil o çıktıdan üretildi.</p><p>Bu bölümdeki her sayı, yanınızdaki veri dosyası üzerinde
+<code>kod/05_analiz_sosyal.py</code> betiği koşturularak üretildi. Betiği indirip
+kendi makinenizde çalıştırabilir, aynı sayıları alabilirsiniz.</p>
+<aside class="not "><span class="not-baslik">Ondalık ayracı üzerine bir not</span><p>Sayfalardaki sayılar Türkçe yazım kurallarıyla verildi: ondalık
+ayracı virgül, binlik ayracı nokta. Ham çıktı dosyalarında
+(<code>cikti/*.txt</code>) ise Python'un varsayılanı geçerli: ondalık ayracı
+nokta, binlik ayracı yok.</p>
+<p>Yani sayfada <strong>0,9702</strong> yazan değer, dosyada <strong>0.9702</strong> olarak
+durur. İkisi aynı sayıdır; değişen yalnız yazım kuralıdır.</p></aside>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">Gazi Üniversitesi ders değerlendirme verisi</span></div>
+<dl><dt>Künye</dt><dd>Gündüz, N., &amp; Fokoué, E. (2013). Turkiye Student Evaluation. UCI Machine Learning Repository.</dd><dt>DOI</dt><dd><a href="https://doi.org/10.24432/C5S02S" rel="noopener">10.24432/C5S02S</a></dd><dt>Lisans</dt><dd>CC BY 4.0</dd><dt>Boyut</dt><dd>5.820 değerlendirme · 28 Likert maddesi (1–5) · 5 ek değişken · eksik hücre yok</dd><dt>Pakette</dt><dd><a href="veri/sosyal/gazi_ders_degerlendirme.csv">gazi_ders_degerlendirme.csv</a> · <a href="kod/05_analiz_sosyal.py">05_analiz_sosyal.py</a> · <a href="cikti/sosyal_analiz.txt">sosyal_analiz.txt</a></dd></dl>
+<p>Üç öğretim elemanının verdiği on üç dersin dönem sonu
+değerlendirmeleri. Q1–Q12 dersle, Q13–Q28 öğretim elemanıyla ilgili.
+Ek değişkenler: öğretim elemanı kimliği, ders kodu, dersi kaçıncı kez
+aldığı, derse katılım düzeyi (0–4), dersi algılanan güçlüğü (1–5).</p></div>
+<h2 id="analizi-yuruten-ana-istem">Analizi yürüten ana istem</h2>
+<p>Aşağıdaki istem, on iki analiz adımının tamamını tek bir betiğe
+dönüştürdü. Uzun ama bir kez yazılır; sonraki çalışmalarınızda
+değişkenleri değiştirip yeniden kullanırsınız.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tam analiz hattı — betik üretimi</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimlerinde ölçme ve değerlendirme üzerine çalışan bir
+istatistik danışmanısın. Çıktıların bir dergi makalesinin Bulgular
+bölümüne doğrudan girecek.
+
+KAYNAK
+— gazi_ders_degerlendirme.csv — 5.820 satır. Q1–Q28 beşli Likert
+  (1 = kesinlikle katılmıyorum, 5 = kesinlikle katılıyorum).
+  instr (1–3), class (1–13), nb.repeat (1–3), attendance (0–4),
+  difficulty (1–5). Eksik hücre yok.
+— gazi_madde_sozlugu.csv — her maddenin hangi boyuta ait olduğu.
+  Q1–Q12 ders, Q13–Q28 öğretim elemanı.
+
+GÖREV
+Aşağıdaki on iki adımı sırayla yürüten, yorumlanmış bir Python betiği
+yaz. Betik hem okunur metin hem makine okunur JSON çıktı versin.
+
+ADIMLAR
+ 1. Betimsel istatistik — ölçek puanları ve madde bazında
+ 2. Dağılım varsayımının denetimi
+ 3. Güvenilirlik — Cronbach alfa, madde-toplam, madde silinirse alfa
+ 4. Açımlayıcı faktör analizi — KMO, Bartlett, özdeğer, varimax
+ 5. İki grup karşılaştırması — bağımsız örneklem t testi
+ 6. Üç ve daha fazla grup — tek yönlü ANOVA + post-hoc
+ 7. Parametrik olmayan karşılıklar — Mann–Whitney, Kruskal–Wallis
+ 8. Korelasyon matrisi — Pearson ve Spearman
+ 9. Çoklu doğrusal regresyon — VIF, Breusch–Pagan, Durbin–Watson
+10. Lojistik regresyon — olasılık oranı, AUC
+11. Ki-kare bağımsızlık testi — Cramér V
+12. Anlamlılık ile etki büyüklüğünün ayrımını gösteren bir denetim
+
+HER ADIM İÇİN ZORUNLU
+— Adımın başına iki satır yaz: &quot;Nedir&quot; ve &quot;Neden bu adım burada&quot;
+— Testin varsayımını denetle ve sonucu bas; sağlanmıyorsa düzeltilmiş
+  sürümü kullan ve bunu belirt
+— Etki büyüklüğünü hesapla ve yorum eşiğini yaz
+— Çıktıyı hem ekrana hem JSON&#x27;a yaz
+
+BETİĞİN ÖZELLİKLERİ
+— Değişken ve fonksiyon adları Türkçe
+— Her fonksiyon docstring&#x27;inde formülü ve ne zaman kullanıldığı
+— Rastgelelik içeren her yerde sabit tohum: 20261103
+— Dışarıdan tek bir ek kütüphane bile gerekmesin diyemem; gerekenleri
+  başta içe aktar ve her birinin neden gerektiğini yorumla
+
+SINIRLAR
+— Veride olmayan hiçbir sayı üretme.
+— &quot;Ölçek güvenilirdir&quot;, &quot;model iyidir&quot; gibi değerlendirme cümleleri
+  kurma; sayıyı ver, eşiği söyle, yorumu bana bırak.
+— Yüksek alfa ya da yüksek R kare gördüğünde bunu olumlu okuma;
+  ne anlama gelebileceğini her iki yönden yaz.
+— Hiçbir aykırı değeri kendiliğinden silme.
+
+DENETİM
+Betiğin sonunda: kaç analiz bloğu üretildiğini, çıktı dosyalarının
+yollarını ve her ölçek puanının betimsel istatistiğini bas.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Tam analiz hattı — betik üretimi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimlerinde ölçme ve değerlendirme üzerine çalışan bir
+istatistik danışmanısın. Çıktıların bir dergi makalesinin Bulgular
+bölümüne doğrudan girecek.
+
+KAYNAK
+— gazi_ders_degerlendirme.csv — 5.820 satır. Q1–Q28 beşli Likert
+  (1 = kesinlikle katılmıyorum, 5 = kesinlikle katılıyorum).
+  instr (1–3), class (1–13), nb.repeat (1–3), attendance (0–4),
+  difficulty (1–5). Eksik hücre yok.
+— gazi_madde_sozlugu.csv — her maddenin hangi boyuta ait olduğu.
+  Q1–Q12 ders, Q13–Q28 öğretim elemanı.
+
+GÖREV
+Aşağıdaki on iki adımı sırayla yürüten, yorumlanmış bir Python
+betiği yaz. Betik hem okunur metin hem makine okunur JSON çıktı
+versin.
+
+ADIMLAR
+ 1. Betimsel istatistik — ölçek puanları ve madde bazında
+ 2. Dağılım varsayımının denetimi — Kolmogorov–Smirnov, çarpıklık,
+    basıklık
+ 3. Güvenilirlik — Cronbach alfa, düzeltilmiş madde-toplam
+    korelasyonu, madde silinirse alfa
+ 4. Açımlayıcı faktör analizi — KMO, Bartlett, özdeğerler; faktör sayısını
+ Kaiser ölçütü ve yamaç grafiğiyle VERİDEN belirle, sonra o sayıda faktörle
+ varimax döndürme uygula
+ 5. İki grup karşılaştırması — bağımsız örneklem t testi
+    (öğretim puanı, katılım 0–1 ile 3–4 arası)
+ 6. Üç ve daha fazla grup — tek yönlü ANOVA (ders puanı, beş
+    güçlük düzeyi) + Tukey HSD
+ 7. Parametrik olmayan karşılıklar — Mann–Whitney U,
+    Kruskal–Wallis H, etki büyüklükleriyle
+ 8. Korelasyon matrisi — Pearson ve Spearman, p değerleri ve
+    r kare ile
+ 9. Çoklu doğrusal regresyon — ogretim_puan ~ attendance +
+    difficulty + nb.repeat + C(instr); VIF, Breusch–Pagan,
+    Durbin–Watson
+10. Lojistik regresyon — sonuç: genel puan ≥ 4; olasılık oranları,
+    %95 güven aralıkları, AUC
+11. Ki-kare bağımsızlık testi — instr × attendance, Cramér V
+12. Anlamlılık ile etki büyüklüğünün ayrımını gösteren bir denetim:
+    aynı ilişkiyi artan örneklem büyüklüklerinde yeniden ölç
+
+HER ADIM İÇİN ZORUNLU
+— Adımın başına iki satır yaz: &quot;Nedir&quot; ve &quot;Neden bu adım burada&quot;
+— Testin varsayımını denetle ve sonucu bas; sağlanmıyorsa
+  düzeltilmiş sürümü kullan (Welch, Alexander–Govern) ve bunu
+  belirt
+— Etki büyüklüğünü hesapla ve yorum eşiğini yaz
+— Çıktıyı hem ekrana hem JSON&#x27;a yaz
+
+BETİĞİN ÖZELLİKLERİ
+— Değişken ve fonksiyon adları Türkçe
+— Her fonksiyon docstring&#x27;inde formülü ve ne zaman kullanıldığı
+— Rastgelelik içeren her yerde sabit tohum: 20261103
+— Gereken kütüphaneleri başta içe aktar ve her birinin neden
+  gerektiğini yorumla
+— Cronbach alfa ve varimax döndürmeyi dışarıdan paket beklemeden,
+  formülünden hesapla; hesabın ne olduğu kodda görünsün
+
+SINIRLAR
+— Veride olmayan hiçbir sayı üretme.
+— &quot;Ölçek güvenilirdir&quot;, &quot;model iyidir&quot; gibi değerlendirme
+  cümleleri kurma; sayıyı ver, eşiği söyle, yorumu bana bırak.
+— Yüksek alfa ya da yüksek R kare gördüğünde bunu olumlu okuma;
+  ne anlama gelebileceğini her iki yönden yaz.
+— Hiçbir aykırı değeri kendiliğinden silme.
+— 12. adımda iki ayrı olguyu karıştırma: küçük örneklemde
+  katsayının DALGALANMASI ile aynı katsayının büyük örneklemde
+  ANLAMLI ÇIKMASI farklı şeylerdir. İkisini ayrı panel olarak
+  göster.
+
+DENETİM
+Betiğin sonunda: kaç analiz bloğu üretildiğini, çıktı dosyalarının
+yollarını ve her ölçek puanının betimsel istatistiğini bas.</pre></div>
+
+<aside class="not "><span class="not-baslik">Son sınır neden eklendi</span><p><em>"12. adımda iki ayrı olguyu karıştırma."</em></p>
+<p>Bu satır ilk koşuda yoktu. Betik, artan örneklemle tek bir tablo
+üretti ve tablo iki olguyu birbirine karıştırdı: n = 300'de
+r = 0,160 anlamlı, n = 1.000'de r = 0,034 anlamsız çıktı. Yazılan
+yorum cümlesi — "r sabit kalırken p küçülüyor" — çıktının
+söylediğiyle uyuşmuyordu.</p>
+<p>Sınır eklenip yeniden koşuldu ve iki panel üretildi: biri
+dalgalanmayı, öteki p'nin n ile değişimini gösteriyor. 8. bölümdeki
+12. adım bu ikinci hâlidir.</p>
+<p><strong>İstem yazmak tek seferlik bir iş değil.</strong> Çıktı anlatınızı
+doğrulamıyorsa anlatıyı değil istemi düzeltin — ya da anlatının
+yanlış olduğunu kabul edin.</p></aside>
+
+<aside class="not "><span class="not-baslik">Bu istem neden bu kadar uzun</span><p>Çünkü bir kez yazılıyor ve on iki adımı birden üretiyor. Alternatif,
+on iki ayrı kısa istem yazıp her birinin çıktısını birleştirmekti —
+o yolda her adımda bağlam yeniden kuruluyor, varsayım denetimleri
+unutuluyor ve çıktı biçimleri tutmuyor. <strong>Uzun iş için uzun istem.</strong></p></aside>
+<h2 id="adim-1-betimsel-istatistik">Adım 1 — Betimsel istatistik</h2>
+<aside class="not istatistik"><span class="not-baslik">Nedir, neden ilk adım</span><p>Değişkenlerin merkezî eğilimi, yayılımı ve dağılım biçimi. Çarpıklık,
+dağılımın bir yana yatıklığını ölçer: sıfır simetrik dağılım, eksi değer
+soldaki uzun kuyruk, artı değer sağdaki uzun kuyruk demektir. Basıklık,
+dağılımın ne kadar sivri ya da yayvan olduğunu ölçer; eksi değerler
+yayvan, artı değerler sivri bir tepe anlamına gelir. <strong>Neden önce:</strong> bu
+iki değer, bir sonraki adımda parametrik mi parametrik olmayan mı test
+kullanılacağını belirler. Parametrik testler verinin belirli bir dağılıma,
+çoğunlukla normal dağılıma yakın olduğunu varsayar ve ortalamalarla
+çalışır; parametrik olmayan testler böyle bir varsayım yapmaz, değerlerin
+kendisi yerine büyükten küçüğe sıralanmış sıra numaralarını kullanır.
+Betimsel istatistik, hangi testin kullanılacağını belirleyen bir girdidir.</p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Ölçek düzeyinde betimsel istatistik</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Değişken</th>
+<th>n</th>
+<th>Ortalama</th>
+<th>SS</th>
+<th>Ortanca</th>
+<th>Min</th>
+<th>Maks</th>
+<th>Çarpıklık</th>
+<th>Basıklık</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ders puanı</td>
+<td>5.820</td>
+<td>3,089</td>
+<td>1,180</td>
+<td>3,000</td>
+<td>1,0</td>
+<td>5,0</td>
+<td>−0,177</td>
+<td>−0,747</td>
+</tr>
+<tr>
+<td>Öğretim puanı</td>
+<td>5.820</td>
+<td>3,259</td>
+<td>1,193</td>
+<td>3,188</td>
+<td>1,0</td>
+<td>5,0</td>
+<td>−0,416</td>
+<td>−0,616</td>
+</tr>
+<tr>
+<td>Genel puan</td>
+<td>5.820</td>
+<td>3,186</td>
+<td>1,158</td>
+<td>3,071</td>
+<td>1,0</td>
+<td>5,0</td>
+<td>−0,330</td>
+<td>−0,607</td>
+</tr>
+<tr>
+<td>Derse katılım</td>
+<td>5.820</td>
+<td>1,676</td>
+<td>1,475</td>
+<td>1,000</td>
+<td>0</td>
+<td>4</td>
+<td>0,230</td>
+<td>−1,411</td>
+</tr>
+<tr>
+<td>Algılanan güçlük</td>
+<td>5.820</td>
+<td>2,784</td>
+<td>1,349</td>
+<td>3,000</td>
+<td>1</td>
+<td>5</td>
+<td>−0,009</td>
+<td>−1,182</td>
+</tr>
+<tr>
+<td>Dersi tekrar sayısı</td>
+<td>5.820</td>
+<td>1,214</td>
+<td>0,532</td>
+<td>1,000</td>
+<td>1</td>
+<td>3</td>
+<td><strong>2,437</strong></td>
+<td><strong>4,784</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Okuma:</strong> İlk beş değişkenin çarpıklık ve basıklığı ±1,5 bandındadır.
+"Dersi tekrar sayısı" ise belirgin biçimde çarpıktır (2,437) ve
+sivridir (4,784) — beklenen bir sonuçtur, çünkü öğrencilerin çoğu
+dersi ilk kez almaktadır. Bu değişken sürekli bir yordayıcı olarak
+kullanılırken bu özellik akılda tutulmalıdır.</p></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s02_madde_ortalama.svg"
+ alt="Madde ortalamaları ve güven aralıkları" loading="lazy"></div>
+<figcaption><b>Şekil 8.1</b> Yirmi sekiz maddenin ortalaması ve %95 güven aralıkları. Güven aralığı,
+aynı çalışma aynı büyüklükte örneklemlerle yeniden yapıldığında gerçek
+ortalamanın hangi aralıkta beklendiğini gösterir; aralık daraldıkça tahmin
+kesinleşir. Öğretim elemanı maddeleri (lacivert) ders maddelerinden (turkuaz) küme
+olarak yüksektir; iki kümenin sınırında birkaç madde iç içe geçiyor. En
+düşük ortalama Q1'de (2,930 — dönem başında bilgilendirme), en yüksek
+Q17'de (3,398 — derse zamanında gelme).
+<span class="indir">Dosya: <a href="varlik/sekil/s02_madde_ortalama.svg">s02_madde_ortalama.svg</a>
+ · <a href="varlik/sekil_png/s02_madde_ortalama.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s01_likert_dagilim.svg"
+ alt="Yirmi sekiz maddenin yanıt dağılımı" loading="lazy"></div>
+<figcaption><b>Şekil 8.2</b> Ayrışan yığılı çubuk (diverging stacked bar) — anket verisinin standart
+gösterimi. Ortalama tek başına dağılımı gizler: burada her maddede hem
+güçlü katılım hem güçlü katılmama olduğu, yanıtların uçlara yığıldığı
+görülüyor. Ortalamaların 3 civarında olması, "herkes kararsız"
+anlamına gelmiyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s01_likert_dagilim.svg">s01_likert_dagilim.svg</a>
+ · <a href="varlik/sekil_png/s01_likert_dagilim.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not ipucu"><span class="not-baslik">Neden hem ortalama hem dağılım</span><p>Şekil 8.1 ile Şekil 8.2 aynı veriyi gösteriyor ama farklı şey
+söylüyorlar. Birincisi maddelerin sırasını, ikincisi yanıtların
+biçimini veriyor. Anket çalışmalarında <strong>yalnız ortalama tablosu
+vermek eksik raporlamadır</strong>; iki uca yığılmış bir dağılım ile
+ortada toplanmış bir dağılım aynı ortalamayı verebilir.</p></aside>
+<h2 id="adim-2-dagilim-varsayiminin-denetimi">Adım 2 — Dağılım varsayımının denetimi</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Normallik denetimi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>ders_puan    : K–S D = 0,1084  p = 5,22e-60
+               çarpıklık = −0,177   basıklık = −0,747
+ogretim_puan : K–S D = 0,1314  p = 3,95e-88
+               çarpıklık = −0,416   basıklık = −0,616</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Bu p değerlerine bakıp testi değiştirmeyin</span><p>İki p değeri de astronomik biçimde küçük — "veri normal değil"
+diyorlar. Ama n = 5.820. Bu büyüklükte bir örneklemde normallik
+testleri <strong>çok küçük</strong> sapmalarda bile anlamlı çıkar; testin gücü
+o kadar yüksektir ki pratikte önemsiz bir sapmayı yakalar.</p>
+<p>Bakılması gereken şey <strong>sapmanın büyüklüğüdür:</strong> çarpıklık −0,18 ve
+−0,42, basıklık −0,75 ve −0,62. Hepsi ±1 bandının içinde. Örneklem büyüdükçe ortalamanın dağılımı, verinin kendi dağılımı normal
+olmasa bile normale yaklaşır; merkezî limit teoremi denen bu olgu
+nedeniyle bu büyüklükte bir veride parametrik testler uygulanabilir. Yine de bu kursta her parametrik
+testin parametrik olmayan karşılığı da koşuldu ve ikisi birlikte
+raporlandı (Adım 7) — böylece karar varsayıma bağlı kalmıyor.</p></aside>
+<h2 id="adim-3-guvenilirlik">Adım 3 — Güvenilirlik</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Cronbach alfa</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Ölçek</th>
+<th>Madde sayısı</th>
+<th>Cronbach alfa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ders boyutu</td>
+<td>12</td>
+<td><strong>0,983</strong></td>
+</tr>
+<tr>
+<td>Öğretim elemanı boyutu</td>
+<td>16</td>
+<td><strong>0,991</strong></td>
+</tr>
+<tr>
+<td>Tüm ölçek</td>
+<td>28</td>
+<td><strong>0,992</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Düzeltilmiş madde-toplam korelasyonları <strong>0,804</strong> (Q1) ile <strong>0,933</strong>
+(Q23) arasındadır. 0,30 eşiğinin altında kalan madde sayısı: <strong>0</strong>.
+Hiçbir maddenin çıkarılması ölçeğin alfasını yükseltmemektedir.</p></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s09_madde_toplam.svg"
+ alt="Madde-toplam korelasyonları" loading="lazy"></div>
+<figcaption><b>Şekil 8.3</b> Yirmi sekiz maddenin düzeltilmiş madde-toplam korelasyonu: her maddenin, o
+madde dışarıda bırakılarak hesaplanan ölçek puanıyla ne kadar uyuştuğu.
+Düşük değer, maddenin ölçeğin geri kalanından farklı bir şey ölçtüğünü
+gösterir; "düzeltilmiş" sözcüğü, maddenin kendisinin toplam puana
+katılmadığını belirtir. Kesikli çizgi 0,30 alt ölçütünü gösteriyor; hiçbir madde yaklaşmıyor bile.
+En düşük değer Q1'de — dönem başında bilgilendirme maddesi, ölçeğin
+geri kalanından bir miktar ayrışıyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s09_madde_toplam.svg">s09_madde_toplam.svg</a>
+ · <a href="varlik/sekil_png/s09_madde_toplam.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not istatistik"><span class="not-baslik">Yüksek alfa iyi haber değildir</span><p>α = 0,992, "bu ölçek kusursuz" demek değildir. Cronbach alfa, bir ölçekteki maddelerin aynı şeyi ölçüp ölçmediğini, yani
+iç tutarlılığı gösteren 0–1 arası bir katsayıdır; maddelere verilen
+yanıtlar birbiriyle uyumlu olduğunda yükselir. Ne var ki madde sayısıyla
+da <strong>mekanik olarak</strong> yükselir: 28 maddelik bir ölçekte yüksek alfa
+beklenir. Streiner (2003), 0,90 üstü değerleri madde fazlalığı
+uyarısı sayar — maddeler birbirini tekrar ediyor olabilir.</p>
+<p>Bu veri setinde madde-toplam korelasyonlarının 0,80–0,93 gibi dar bir
+bantta toplanması bu yorumu destekler: maddeler neredeyse aynı şeyi
+ölçüyor. Makalede yazılacak cümle şudur: <em>"Ölçeğin iç tutarlılığı
+çok yüksektir (α = 0,992); bu değer aynı zamanda madde fazlalığına
+işaret etmekte olup ölçek kısaltma çalışmasını gündeme
+getirmektedir."</em></p></aside>
+<h2 id="adim-4-acimlayici-faktor-analizi">Adım 4 — Açımlayıcı faktör analizi</h2>
+<p>Açımlayıcı faktör analizi, birbiriyle ilişkili çok sayıda maddenin
+arkasında kaç ortak boyut bulunduğunu veriden çıkarır. Yirmi sekiz
+maddelik bir ankette sorulan soru şudur: bu maddeler gerçekte kaç ayrı
+şeyi ölçüyor ve hangi madde hangi boyuta ait? "Açımlayıcı" sözcüğü, boyut
+yapısının önceden dayatılmadığını, veriden okunduğunu belirtir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Uygulanabilirlik denetimi ve faktör çıkarımı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>KMO (örneklem yeterliği)   : 0,9885      (&gt; 0,90 &quot;mükemmel&quot;)
+Bartlett küresellik testi  : khi-kare = 297.891,4   p &lt; 0,001
+1&#x27;den büyük özdeğer sayısı : 2
+İlk dört özdeğer           : 23,041 · 1,253 · 0,395 · 0,361
+
+İki faktörlü varimax döndürmesi
+  Faktör 1 açıklanan varyans : %47,7
+  Faktör 2 açıklanan varyans : %39,1
+  Toplam açıklanan varyans   : %86,8
+
+Beklenen iki boyutlu yapıya uyan madde : 28/28</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s04_scree.svg"
+ alt="Yamaç grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 8.4</b> Yamaç (scree) grafiği. İlk özdeğer 23,041, ikincisi 1,253; üçüncüsü
+0,395'e düşüyor. Özdeğer, bir faktörün maddelerdeki toplam değişkenliğin ne kadarını
+üstlendiğini gösterir; tek bir maddenin taşıdığı değişkenlik 1 kabul
+edildiğinden, özdeğeri 1'in altında kalan faktör tek bir maddeden daha az
+bilgi taşır. Yalnız özdeğeri 1'den büyük faktörleri tutan Kaiser ölçütüne
+göre burada iki faktör tutulur. Dirsek noktası da ikinci faktörden
+sonradır — iki ölçüt aynı yanıtı veriyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s04_scree.svg">s04_scree.svg</a>
+ · <a href="varlik/sekil_png/s04_scree.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s03_faktor_yukleri.svg"
+ alt="Varimax döndürülmüş faktör yükleri" loading="lazy"></div>
+<figcaption><b>Şekil 8.5</b> Yirmi sekiz maddenin iki faktör üzerindeki yükleri. Yük, bir maddenin o
+faktörle ilişkisinin gücüdür ve −1 ile +1 arasında değer alır. Varimax,
+faktörleri her maddenin olabildiğince tek bir faktöre yüklenmesini
+sağlayacak biçimde döndüren bir işlemdir; yapıyı değiştirmez, okunur hâle
+getirir. Şekilde iki küme net biçimde ayrışmış: ders maddeleri (Q1–Q12) sol üstte, öğretim elemanı
+maddeleri (Q13–Q28) sağ altta. <strong>Beklenen yapıya uymayan tek bir
+madde yok.</strong>
+<span class="indir">Dosya: <a href="varlik/sekil/s03_faktor_yukleri.svg">s03_faktor_yukleri.svg</a>
+ · <a href="varlik/sekil_png/s03_faktor_yukleri.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not istatistik"><span class="not-baslik">AFA&#x27;dan önce iki denetim</span><p><strong>KMO (Kaiser–Meyer–Olkin)</strong> örneklem yeterliğini ölçer: değişkenler
+arası korelasyonların faktör analizine uygun olup olmadığını. 0,60
+alt sınır, 0,80 iyi, 0,90 üstü mükemmel sayılır. <strong>Bartlett küresellik testi</strong> maddeler arasında faktör analizine yetecek kadar ilişki bulunup bulunmadığını sınar; p &lt; 0,05 olmalıdır, yoksa maddeler birbirinden bağımsız demektir ve ortak bir boyuta indirgenecek değişkenlik yoktur. Bu iki
+denetim yapılmadan AFA raporlanamaz.</p></aside>
+
+<aside class="not "><span class="not-baslik">Bu sonucun dürüst okunuşu</span><p>28/28 uyum olağanüstü temiz bir sonuç — ama tek başına okunmamalı.
+Yük matrisinde <strong>çapraz yükler yüksektir</strong>: örneğin Q3 maddesi kendi
+faktörüne 0,696, diğerine 0,572 yüklenmektedir. Yani iki faktör
+birbirinden tam bağımsız değil, güçlü ilişkilidir. Bu zaten
+beklenebilir: öğretim elemanını beğenen öğrenci dersi de beğenme
+eğilimindedir. Tüm ölçek alfasının 0,992 çıkması da aynı olgunun
+başka bir yüzüdür. Raporlanırken bu birlikte yazılır, biri
+saklanmaz.</p></aside>
+<h2 id="adim-5-i-ki-grup-karsilastirmasi">Adım 5 — İki grup karşılaştırması</h2>
+<p><strong>Soru:</strong> Derse çok katılan öğrenciler öğretim elemanını farklı mı değerlendiriyor?</p>
+<p>İki grubun ortalaması bağımsız örneklem t testiyle karşılaştırılır. Bu
+test, grupların yayılımının birbirine yakın olmasını varsayar; Levene
+testi tam bu varsayımı denetler. Varsayım karşılanmadığında, farklı
+yayılımlara dayanıklı olan Welch sürümü kullanılır. Test istatistiğinin
+yanındaki parantez içindeki sayı serbestlik derecesidir: testin kaç
+bağımsız bilgi üzerinden hesaplandığını gösterir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Bağımsız örneklem t testi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Grup A — düşük katılım (0–1) : n = 2.930  ort = 3,032  ss = 1,256
+Grup B — yüksek katılım (3–4): n = 2.098  ort = 3,540  ss = 1,096
+
+Levene varyans eşitliği : W = 30,100  p &lt; 0,001
+                          → varyanslar eşit DEĞİL, Welch düzeltmesi
+
+Welch t(4.834) = 15,232   p &lt; 0,001
+Cohen d = 0,426 → KÜÇÜK ile ORTA arası etki</pre></div>
+
+<aside class="not istatistik"><span class="not-baslik">Cohen d nasıl okunur</span><p>İki grup ortalaması arasındaki farkı, ortak standart sapma biriminde
+verir. Eşikler: 0,2 küçük · 0,5 orta · 0,8 büyük (Cohen, 1988).
+Buradaki d = 0,426, iki grup ortalamasının yaklaşık yarım standart sapma
+ayrıştığını söyler — küçük ile orta arasında, <strong>gerçek ama ölçülü</strong> bir
+fark.</p>
+<p>p değerinin 3,3 × 10⁻⁵¹ olması bu farkı büyütmez. O sayı yalnız
+şunu söyler: 5.000 kişilik bir örneklemde bu büyüklükteki bir farkın
+rastlantıyla ortaya çıkması neredeyse olanaksızdır. <strong>Farkın ne kadar
+büyük olduğunu söyleyen tek sayı d'dir.</strong></p></aside>
+<h2 id="adim-6-uc-ve-daha-fazla-grup">Adım 6 — Üç ve daha fazla grup</h2>
+<p><strong>Soru:</strong> Dersi güç bulan öğrenciler dersi farklı mı değerlendiriyor?</p>
+<p>İkiden çok grup karşılaştırıldığı için tek yönlü ANOVA kullanılır. ANOVA
+yalnız "gruplar arasında bir fark var mı" sorusunu yanıtlar; farkın hangi
+gruplar arasında olduğunu söylemez. Bunu söylemek için ardından ikili
+karşılaştırmalar yapılır. Tukey HSD, karşılaştırma sayısı arttıkça
+rastlantıyla anlamlı sonuç bulma olasılığının da artmasını hesaba katan
+bir yöntemdir. Grupların yayılımı eşit olmadığında ANOVA'nın
+Alexander–Govern düzeltmesi raporlanır; bu, eşit olmayan varyanslara
+dayanıklı sürümdür.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Tek yönlü ANOVA ve Tukey post-hoc</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Algılanan güçlük</th>
+<th>n</th>
+<th>Ders puanı ortalaması</th>
+<th>SS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — çok kolay</td>
+<td>1.620</td>
+<td>2,828</td>
+<td>1,339</td>
+</tr>
+<tr>
+<td>2</td>
+<td>549</td>
+<td>3,134</td>
+<td>1,072</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.774</td>
+<td><strong>3,343</strong></td>
+<td>1,031</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1.225</td>
+<td>3,213</td>
+<td>1,025</td>
+</tr>
+<tr>
+<td>5 — çok güç</td>
+<td>652</td>
+<td>2,772</td>
+<td>1,288</td>
+</tr>
+</tbody>
+</table></div>
+<p>Levene: W = 47,778, p &lt; 0,001 → varyanslar eşit değil
+F(4, 5.815) = 57,797, p &lt; 0,001
+Alexander–Govern düzeltmesi: A = 209,886, p &lt; 0,001
+<strong>eta kare = 0,038</strong> → güçlük algısı, ders puanındaki değişkenliğin
+yalnız %3,8'ini açıklıyor</p>
+<p><strong>Tukey HSD — on ikili karşılaştırma</strong></p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Karşılaştırma</th>
+<th>Ortalama farkı</th>
+<th>Anlamlı mı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 ↔ 2</td>
+<td>+0,305</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>1 ↔ 3</td>
+<td>+0,514</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>1 ↔ 4</td>
+<td>+0,384</td>
+<td>evet</td>
+</tr>
+<tr>
+<td><strong>1 ↔ 5</strong></td>
+<td><strong>−0,057</strong></td>
+<td><strong>hayır</strong></td>
+</tr>
+<tr>
+<td>2 ↔ 3</td>
+<td>+0,209</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>2 ↔ 4</td>
+<td>+0,079</td>
+<td>hayır</td>
+</tr>
+<tr>
+<td>2 ↔ 5</td>
+<td>−0,362</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>3 ↔ 4</td>
+<td>−0,130</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>3 ↔ 5</td>
+<td>−0,571</td>
+<td>evet</td>
+</tr>
+<tr>
+<td>4 ↔ 5</td>
+<td>−0,441</td>
+<td>evet</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s05_anova_kutu.svg"
+ alt="Güçlük düzeyine göre ders puanı" loading="lazy"></div>
+<figcaption><b>Şekil 8.6</b> İlişki <strong>doğrusal değil, ters U biçiminde.</strong> Çok kolay ve çok güç
+bulunan dersler en düşük puanı alıyor; orta güçlükteki ders en yüksek
+puanı. Bu, Tukey tablosundaki en ilginç satırı açıklıyor: 1 ile 5
+arasında anlamlı fark <strong>yok</strong> — iki uç birbirine benziyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s05_anova_kutu.svg">s05_anova_kutu.svg</a>
+ · <a href="varlik/sekil_png/s05_anova_kutu.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not ipucu"><span class="not-baslik">Doğrusal olmayan ilişkiyi ANOVA yakalar, korelasyon kaçırır</span><p>Aşağıdaki korelasyon adımında ders puanı ile güçlük arasındaki Pearson
+r'yi 0,060 olarak göreceksiniz — neredeyse sıfır. Oysa ANOVA aynı
+ilişkiyi F = 57,797, p &lt; 0,001 ile yakalıyor. Çelişki değil: Pearson
+<strong>doğrusal</strong> ilişkiyi ölçer, buradaki ilişki ters U biçimindedir ve
+doğrusal bileşeni zayıftır. Ders: bir korelasyonun sıfıra yakın
+çıkması, ilişki olmadığı anlamına gelmez. <strong>Her zaman saçılım
+grafiğine ya da grup ortalamalarına bakın.</strong></p></aside>
+<h2 id="adim-7-parametrik-olmayan-karsiliklar">Adım 7 — Parametrik olmayan karşılıklar</h2>
+<p>Aynı iki soru, bu kez sıra temelli testlerle yanıtlanıyor. Mann–Whitney
+iki grup için t testinin, Kruskal–Wallis ikiden çok grup için ANOVA'nın
+karşılığıdır. Bu testler puanların kendisini değil, bütün kayıtlar
+birlikte sıralandığında aldıkları sıra numaralarını kullanır. Yanlarında
+verilen sıra-noktasal r ve epsilon kare bu testlerin etki büyüklükleridir;
+sırasıyla Cohen d ile eta kare'nin yerini tutar.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Sıra temelli testler</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Mann–Whitney U = 3.778.992   p &lt; 0,001   sıra-noktasal r = 0,230
+  → t testiyle AYNI yönde sonuç; karar varsayıma bağlı değil
+
+Kruskal–Wallis H(4) = 195,877   p &lt; 0,001   epsilon kare = 0,033
+  → ANOVA ile AYNI yönde sonuç; etki büyüklüğü de benzer (0,038 / 0,033)</pre></div>
+
+<aside class="not "><span class="not-baslik">İkisini birden raporlamanın değeri</span><p>Hakem "Likert verisinde parametrik test kullanmışsınız" dediğinde
+verilecek yanıt hazırdır: <em>"Parametrik olmayan karşılıkları da
+uygulanmış, sonuçlar aynı yönde ve benzer etki büyüklüğünde çıkmıştır
+(Tablo X)."</em> Bu üç satırlık ek analiz, bir revizyon turu kazandırır.</p></aside>
+<h2 id="adim-8-korelasyon">Adım 8 — Korelasyon</h2>
+<p>Korelasyon katsayısı, iki değişkenin birlikte değişip değişmediğini −1 ile
++1 arasında bir sayıyla verir. Pearson r bu birlikte değişimi doğrusal bir
+ilişki varsayarak ölçer; Spearman rho ise değerler yerine sıra
+numaralarını kullandığı için ilişki doğrusal olmasa da, uç değerler
+bulunsa da bozulmaz. İkisinin birbirine yakın çıkması, okunan ilişkinin
+ölçüm biçimine bağlı olmadığını gösterir. r kare katsayının karesidir ve
+bir değişkendeki değişkenliğin ne kadarının öteki değişkenle
+paylaşıldığını verir.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s06_korelasyon.svg"
+ alt="Pearson korelasyon matrisi" loading="lazy"></div>
+<figcaption><b>Şekil 8.7</b> Beş değişkenin Pearson korelasyon matrisi. En güçlü ilişki ders ve
+öğretim puanı arasında (r = 0,90) — zaten aynı anketin iki boyutu.
+İkinci güçlü ilişki katılım ile güçlük arasında (r = 0,44): güç
+bulunan derse daha çok devam ediliyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s06_korelasyon.svg">s06_korelasyon.svg</a>
+ · <a href="varlik/sekil_png/s06_korelasyon.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">İkili korelasyonlar — p ile r kare birlikte</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Değişken çifti</th>
+<th>Pearson r</th>
+<th>p</th>
+<th><strong>r kare</strong></th>
+<th>Spearman rho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ders puanı – Öğretim puanı</td>
+<td>0,902</td>
+<td>&lt; 0,001</td>
+<td><strong>0,813</strong></td>
+<td>0,882</td>
+</tr>
+<tr>
+<td>Katılım – Güçlük</td>
+<td>0,437</td>
+<td>&lt; 0,001</td>
+<td><strong>0,191</strong></td>
+<td>0,449</td>
+</tr>
+<tr>
+<td>Öğretim puanı – Katılım</td>
+<td>0,200</td>
+<td>&lt; 0,001</td>
+<td><strong>0,040</strong></td>
+<td>0,188</td>
+</tr>
+<tr>
+<td>Ders puanı – Katılım</td>
+<td>0,161</td>
+<td>&lt; 0,001</td>
+<td><strong>0,026</strong></td>
+<td>0,151</td>
+</tr>
+<tr>
+<td>Güçlük – Tekrar sayısı</td>
+<td>0,110</td>
+<td>&lt; 0,001</td>
+<td><strong>0,012</strong></td>
+<td>0,105</td>
+</tr>
+<tr>
+<td>Öğretim puanı – Güçlük</td>
+<td>0,089</td>
+<td>&lt; 0,001</td>
+<td><strong>0,008</strong></td>
+<td>0,065</td>
+</tr>
+<tr>
+<td>Katılım – Tekrar sayısı</td>
+<td>−0,078</td>
+<td>&lt; 0,001</td>
+<td><strong>0,006</strong></td>
+<td>−0,071</td>
+</tr>
+<tr>
+<td>Ders puanı – Güçlük</td>
+<td>0,060</td>
+<td>&lt; 0,001</td>
+<td><strong>0,004</strong></td>
+<td>0,047</td>
+</tr>
+<tr>
+<td>Öğretim puanı – Tekrar sayısı</td>
+<td>−0,044</td>
+<td>0,0007</td>
+<td><strong>0,002</strong></td>
+<td>−0,053</td>
+</tr>
+<tr>
+<td><strong>Ders puanı – Tekrar sayısı</strong></td>
+<td><strong>−0,033</strong></td>
+<td><strong>0,012</strong></td>
+<td><strong>0,001</strong></td>
+<td>−0,041</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Son satıra dikkat</span><p>Ders puanı ile dersi tekrar sayısı arasındaki ilişki <strong>istatistiksel
+olarak anlamlıdır</strong> (p = 0,012) ama varyansın <strong>binde birini</strong>
+açıklar. Bu bulguyu "ders puanı ile tekrar sayısı arasında anlamlı
+bir ilişki saptanmıştır" diye yazmak teknik olarak doğru, pratik
+olarak yanıltıcıdır.</p>
+<p>Tablodaki r kare sütunu bu yüzden kalın: <strong>p sütunu on satırın
+dokuzunda aynı şeyi söylüyor, r kare sütunu onunu da ayırıyor.</strong></p></aside>
+<h2 id="adim-9-coklu-dogrusal-regresyon">Adım 9 — Çoklu doğrusal regresyon</h2>
+<p>Çoklu regresyon bir sonucu birden çok değişkenle birlikte yordar ve her
+değişkenin katkısını, öteki değişkenler sabit tutulmuş gibi verir.
+Tablodaki B, ilgili değişken bir birim arttığında sonucun ne kadar
+değiştiğidir; SH (standart hata) bu tahminin belirsizliğidir. Yordayıcılar
+birbirine çok benzediğinde katsayılar güvenilmez hâle gelir; VIF bu durumu
+ölçer ve değerin büyümesi aynı bilginin modele birden çok kez girdiği
+anlamına gelir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Öğretim elemanı puanını yordayan model</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Model:</strong> öğretim puanı ~ katılım + güçlük + tekrar sayısı +
+öğretim elemanı (kategorik)</p>
+<p>R kare = <strong>0,0531</strong> · düzeltilmiş R kare = 0,0523
+F(5, 5.814) = 65,198, p &lt; 0,001</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Terim</th>
+<th>B</th>
+<th>SH</th>
+<th>t</th>
+<th>p</th>
+<th>%95 GA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sabit</td>
+<td>3,127</td>
+<td>0,063</td>
+<td>50,06</td>
+<td>&lt; 0,001</td>
+<td>[3,004 – 3,249]</td>
+</tr>
+<tr>
+<td>Derse katılım</td>
+<td><strong>0,150</strong></td>
+<td>0,012</td>
+<td>12,90</td>
+<td><strong>&lt; 0,001</strong></td>
+<td>[0,127 – 0,173]</td>
+</tr>
+<tr>
+<td>Algılanan güçlük</td>
+<td>0,008</td>
+<td>0,013</td>
+<td>0,64</td>
+<td><strong>0,522</strong></td>
+<td>[−0,017 – 0,033]</td>
+</tr>
+<tr>
+<td>Dersi tekrar sayısı</td>
+<td>−0,038</td>
+<td>0,029</td>
+<td>−1,30</td>
+<td>0,193</td>
+<td>[−0,096 – 0,019]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 2 (ref: 1)</td>
+<td>0,106</td>
+<td>0,052</td>
+<td>2,04</td>
+<td>0,042</td>
+<td>[0,004 – 0,208]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 3 (ref: 1)</td>
+<td><strong>−0,196</strong></td>
+<td>0,046</td>
+<td>−4,23</td>
+<td><strong>&lt; 0,001</strong></td>
+<td>[−0,287 – −0,105]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Varsayım denetimleri</strong>
+VIF: tümü 1,05 – 2,19 arasında (10 eşiğinin çok altında, çok
+doğrusallık yok)
+Breusch–Pagan: LM = 126,967, p &lt; 0,001 → artık varyansı sabit değil
+Durbin–Watson: 1,938 → artıklar bağımsız (2'ye çok yakın)</p></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s07_regresyon_katsayi.svg"
+ alt="Regresyon katsayıları ve güven aralıkları" loading="lazy"></div>
+<figcaption><b>Şekil 8.8</b> Katsayılar ve %95 güven aralıkları (orman grafiği). Dolu noktalar
+p &lt; 0,05 olanları gösteriyor. Güven aralığı sıfır çizgisini kesen iki
+değişken — algılanan güçlük ve dersi tekrar sayısı — anlamlı değil.
+<span class="indir">Dosya: <a href="varlik/sekil/s07_regresyon_katsayi.svg">s07_regresyon_katsayi.svg</a>
+ · <a href="varlik/sekil_png/s07_regresyon_katsayi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not uyari"><span class="not-baslik">Bu tablodaki en öğretici satır</span><p><strong>Algılanan güçlük.</strong> Korelasyon tablosunda öğretim puanıyla r = 0,089
+ve p &lt; 0,001 ile anlamlıydı. Regresyonda, katılım denetlendiğinde
+B = 0,008 ve p = 0,522 — tamamen anlamsız.</p>
+<p>Neden? Güçlük ile katılım arasında r = 0,437'lik güçlü bir ilişki var.
+Güçlüğün öğretim puanıyla görünen ilişkisi aslında <strong>katılım
+üzerinden</strong> işliyor. Katılımı modele koyduğunuzda güçlüğün kendi
+başına bir katkısı kalmıyor.</p>
+<p>Buna <strong>örtük değişken etkisi</strong> (confounding) denir ve tek tek
+korelasyonlara bakarak çalışan analizlerin en büyük tuzağıdır.
+Regresyon bu tuzağı görünür kılar; korelasyon matrisi kılmaz.</p></aside>
+
+<aside class="not istatistik"><span class="not-baslik">R kare = 0,053 — bu kötü bir model mi</span><p>Model, öğretim elemanı değerlendirmesindeki değişkenliğin yalnız
+%5,3'ünü açıklıyor. Bu, modelin başarısız olduğu anlamına gelmez;
+değerlendirmenin <strong>büyük ölçüde başka şeylerden</strong> etkilendiği
+anlamına gelir — öğrencinin beklentisi, dersin içeriği, kişisel
+etkileşim, o günün havası.</p>
+<p>Sosyal bilimlerde R kare 0,05–0,15 bandı olağandışı değildir.
+Yanlış olan, düşük R kare'yi gizlemek ya da anlamlı katsayıları
+"güçlü yordayıcı" diye sunmaktır. Doğru cümle şudur: <em>"Model
+istatistiksel olarak anlamlıdır ancak açıklanan varyans sınırlıdır
+(R² = 0,053); bulgular yordayıcı bir model olarak değil, ilişkinin
+yönünü gösteren bir kanıt olarak yorumlanmalıdır."</em></p></aside>
+
+<aside class="not "><span class="not-baslik">Breusch–Pagan anlamlı çıktı — ne yapılır</span><p>Artık, bir kaydın gözlenen değeri ile modelin o kayıt için öngördüğü değer
+arasındaki farktır. Bu artıkların yayılımının bütün kayıtlarda aynı
+olmaması (heteroskedastisite) katsayı tahminlerini değil <strong>standart
+hataları</strong> bozar; yani p değerleri ve
+güven aralıkları güvenilmez hâle gelir. Çözüm modeli değiştirmek
+değil, <strong>dirençli standart hata</strong> (robust/HC3) kullanmaktır:
+<code>model.get_robustcov_results(cov_type="HC3")</code>. Raporda bu tercih
+belirtilir.</p></aside>
+<h2 id="adim-10-lojistik-regresyon">Adım 10 — Lojistik regresyon</h2>
+<p><strong>Soru:</strong> Bir değerlendirmenin "yüksek" (genel puan ≥ 4) olma olasılığını ne belirliyor?</p>
+<p>Sonuç burada bir puan değil, iki şıklı bir durumdur: değerlendirme
+yüksektir ya da değildir. Böyle bir sonuç için doğrusal regresyon yerine
+lojistik regresyon kullanılır; model her kayıt için "yüksek" olma
+olasılığını tahmin eder. Doğrusal modeldeki R kare'nin burada doğrudan bir
+karşılığı yoktur. McFadden sözde R kare, modelin hiç yordayıcı içermeyen
+bir modele göre ne kadar iyileştiğini gösteren yaklaşık bir ölçüdür ve R
+kare gibi "açıklanan varyans" diye okunmaz.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Lojistik regresyon — olasılık oranları</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>Sonuç değişkeni: genel puan ≥ 4
+  1 (yüksek): 1.863 (%32,0)   ·   0 (diğer): 3.957</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Terim</th>
+<th>B</th>
+<th>p</th>
+<th><strong>OR</strong></th>
+<th>%95 GA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derse katılım</td>
+<td>0,178</td>
+<td>&lt; 0,001</td>
+<td><strong>1,195</strong></td>
+<td>[1,145 – 1,247]</td>
+</tr>
+<tr>
+<td>Algılanan güçlük</td>
+<td>−0,085</td>
+<td>&lt; 0,001</td>
+<td><strong>0,918</strong></td>
+<td>[0,875 – 0,963]</td>
+</tr>
+<tr>
+<td>Dersi tekrar sayısı</td>
+<td>−0,041</td>
+<td>0,475</td>
+<td>0,960</td>
+<td>[0,859 – 1,073]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 2 (ref: 1)</td>
+<td>−0,172</td>
+<td>0,061</td>
+<td>0,842</td>
+<td>[0,704 – 1,008]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 3 (ref: 1)</td>
+<td>−0,651</td>
+<td>&lt; 0,001</td>
+<td><strong>0,521</strong></td>
+<td>[0,443 – 0,614]</td>
+</tr>
+</tbody>
+</table></div>
+<p>McFadden sözde R kare = 0,0245
+ROC eğrisi altındaki alan (AUC) = <strong>0,601</strong></p></div></div>
+
+<aside class="not istatistik"><span class="not-baslik">Olasılık oranı (OR) nasıl okunur</span><p>OR = 1 → etki yok. OR &gt; 1 → değişken arttıkça olayın olma olasılığı
+artar. OR &lt; 1 → azalır.</p>
+<p>Buradaki <strong>1,195</strong>: katılım düzeyi bir basamak arttığında, yüksek
+değerlendirme alma şansının almama şansına oranı — istatistikte buna
+"odds" denir — %19,5 artıyor. Bu, yüksek değerlendirme olasılığının
+kendisinin %19,5 arttığı anlamına gelmez; oranla olasılık aynı şey
+değildir. <strong>0,521</strong>: üçüncü öğretim
+elemanının dersinde yüksek değerlendirme bahis oranı, birincinin
+yaklaşık yarısı.</p>
+<p><strong>Güven aralığı 1'i içeriyorsa etki anlamlı değildir.</strong> Tabloda
+"dersi tekrar sayısı" ve "öğretim elemanı 2" satırlarında aralık 1'i
+kapsıyor; bu ikisi anlamsızdır.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">AUC 0,601 ne demek</span><p>Rastgele seçilen bir "yüksek değerlendirme" ile bir "diğer"
+karşılaştırıldığında, model yüksek olana daha büyük olasılık atama
+şansı %60,1. Rastgele tahmin %50 verir. Yani model rastgeleden iyi
+ama <strong>tahmin aracı olarak kullanılamaz.</strong></p>
+<p>Bu, modelin işe yaramadığı anlamına gelmez — <strong>ne için kullanıldığına
+bağlıdır.</strong> Hangi değişkenin hangi yönde etkili olduğunu anlamak için
+model yeterlidir ve katsayıları yorumlanabilir. Bir öğrencinin
+vereceği puanı önceden kestirmek için yetersizdir. Makalede bu ayrım
+açıkça yazılır.</p></aside>
+<h2 id="adim-11-ki-kare">Adım 11 — Ki-kare</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Öğretim elemanı × derse katılım</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Öğretim elemanı</th>
+<th>Katılım 0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>166</td>
+<td>152</td>
+<td>107</td>
+<td>217</td>
+<td>133</td>
+</tr>
+<tr>
+<td>2</td>
+<td>396</td>
+<td>291</td>
+<td>211</td>
+<td>317</td>
+<td>229</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.340</td>
+<td>585</td>
+<td>474</td>
+<td>718</td>
+<td>484</td>
+</tr>
+</tbody>
+</table></div>
+<p>khi-kare(8) = 105,178   p &lt; 0,001
+<strong>Cramér V = 0,095</strong> → zayıf ilişki
+Beklenen frekansı 5'ten küçük hücre: 0 / 15 (ölçüt: %20'den az olmalı) ✓</p></div></div>
+
+<aside class="not istatistik"><span class="not-baslik">Cramér V — ki-kare&#x27;nin etki büyüklüğü</span><p>khi-kare istatistiği örneklem büyüklüğüyle doğrudan artar; 5.820
+gözlemde neredeyse her çapraz tablo anlamlı çıkar. Cramér V bunu
+düzeltir ve 0–1 arası bir değer verir. Kaba eşikler: 0,10 zayıf,
+0,30 orta, 0,50 güçlü.</p>
+<p>Buradaki 0,095, ilişkinin <strong>pratikte ihmal edilebilir</strong> olduğunu
+söylüyor — p &lt; 0,001 olmasına rağmen. Bu bölümün üçüncü kez
+tekrarladığı derstir.</p></aside>
+<h2 id="adim-12-anlamlilik-ile-etki-buyuklugunun-ayrimi">Adım 12 — Anlamlılık ile etki büyüklüğünün ayrımı</h2>
+<p>Son adım bir test değil, bir denetim. İki kavram burada açıkça ayrılıyor:
+istatistiksel anlamlılık, gözlenen farkın rastlantıyla ortaya çıkma
+olasılığının düşük olduğunu söyler; etki büyüklüğü, farkın ne kadar büyük
+olduğunu söyler. Yukarıdaki on bir adımda üç kez karşılaştığımız durum, bu
+ikisinin birbirinin yerine kullanılmasıdır.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Panel A — aynı veriden 500 kez örnek çekildiğinde r ne kadar oynar</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>Ölçülen ilişki: ders puanı – güçlük algısı. Tüm veride r = 0,060,
+r kare = 0,0036 (açıklanan varyans %0,36).</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>n</th>
+<th>r ortalaması</th>
+<th>r %2,5</th>
+<th>r %97,5</th>
+<th>p &lt; 0,05 çıkma oranı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>0,051</td>
+<td><strong>−0,328</strong></td>
+<td><strong>0,471</strong></td>
+<td>%7</td>
+</tr>
+<tr>
+<td>50</td>
+<td>0,049</td>
+<td>−0,238</td>
+<td>0,314</td>
+<td>%8</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0,067</td>
+<td>−0,128</td>
+<td>0,272</td>
+<td>%12</td>
+</tr>
+<tr>
+<td>300</td>
+<td>0,060</td>
+<td>−0,062</td>
+<td>0,184</td>
+<td>%20</td>
+</tr>
+<tr>
+<td>1.000</td>
+<td>0,059</td>
+<td>0,006</td>
+<td>0,114</td>
+<td>%45</td>
+</tr>
+<tr>
+<td>3.000</td>
+<td>0,060</td>
+<td>0,033</td>
+<td>0,086</td>
+<td>%96</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Panel B — r SABİT tutulursa, p yalnız n ile ne olur</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>n</th>
+<th>r</th>
+<th>t</th>
+<th>p</th>
+<th>Karar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>0,060</td>
+<td>0,319</td>
+<td>0,752</td>
+<td>anlamsız</td>
+</tr>
+<tr>
+<td>50</td>
+<td>0,060</td>
+<td>0,417</td>
+<td>0,678</td>
+<td>anlamsız</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0,060</td>
+<td>0,596</td>
+<td>0,552</td>
+<td>anlamsız</td>
+</tr>
+<tr>
+<td>300</td>
+<td>0,060</td>
+<td>1,040</td>
+<td>0,299</td>
+<td>anlamsız</td>
+</tr>
+<tr>
+<td>1.000</td>
+<td>0,060</td>
+<td>1,904</td>
+<td>0,057</td>
+<td>anlamsız</td>
+</tr>
+<tr>
+<td><strong>5.820</strong></td>
+<td>0,060</td>
+<td>4,596</td>
+<td><strong>&lt; 0,001</strong></td>
+<td><strong>anlamlı</strong></td>
+</tr>
+<tr>
+<td>20.000</td>
+<td>0,060</td>
+<td>8,521</td>
+<td>&lt; 0,001</td>
+<td>anlamlı</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<aside class="not uyari"><span class="not-baslik">İki panel iki ayrı şey söylüyor</span><p><strong>Panel A:</strong> n = 30'da aynı gerçek ilişki için hesaplanan r,
+−0,33 ile +0,47 arasında herhangi bir yere düşebiliyor. Yani küçük
+örneklemden okunan tek bir r sayısı, <strong>işareti bile güvenilir
+olmayan</strong> bir tahmindir. Son sütun istatistiksel güçtür: gerçekten
+var olan bu ilişkiyi n = 30'da yakalama şansı yalnız %7.</p>
+<p><strong>Panel B:</strong> r hiç değişmiyor — yalnız n büyüyor ve "anlamsız" sonuç
+"anlamlı"ya dönüyor. Açıklanan varyans ise hep aynı: %0,36.</p>
+<p>İki panel birlikte şunu söylüyor: <strong>"p &lt; 0,001" ifadesi bir bulgunun
+büyüklüğü hakkında hiçbir şey söylemez.</strong> Raporlanması gereken üçlü
+şudur — etki büyüklüğü, güven aralığı, örneklem büyüklüğü.</p></aside>
+<h2 id="bulgular-bolumunu-yazmak">Bulgular bölümünü yazmak</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Analiz çıktısından Bulgular bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimleri alanında yayın yapan bir araştırmacı olarak bir
+dergi makalesinin Bulgular bölümünü yazıyorsun.
+
+KAYNAK
+Ekte analiz çıktısı var: sosyal_analiz.txt ve sosyal_analiz.json.
+On iki analiz bloğu içeriyor.
+
+GÖREV
+Bulgular bölümünü yaz.
+
+YAPI
+— Alt başlıklar araştırma sorularına göre, analiz adımlarına göre
+  değil
+— Her alt başlık: önce bulgu cümlesi, sonra destekleyici sayılar,
+  sonra ilgili tablo/şekil göndermesi
+— Tablolar metnin içinde değil, &quot;Tablo 1&quot; gibi numaralanıp metinden
+  gönderme yapılarak
+
+HER İSTATİSTİKSEL SONUÇ İÇİN ZORUNLU
+test istatistiği + serbestlik derecesi + p değeri + etki büyüklüğü.
+Dördü eksikse cümle yazma.
+
+SAYI BİÇİMİ
+— Ondalık ayracı virgül
+— p &lt; 0,001&#x27;den küçükse &quot;p &lt; 0,001&quot; yaz, bilimsel gösterim kullanma
+— Binlik ayracı nokta (5.820)
+
+ÜSLUP
+— Resmî akademik Türkçe, edilgen anlatım
+— Bulguları YORUMLAMA. Tartışma bölümü ayrı. Burada ne bulunduğu
+  yazılır, ne anlama geldiği değil.
+— &quot;Beklendiği gibi&quot;, &quot;ilginç biçimde&quot; gibi değerlendirme ifadeleri
+  kullanma
+
+SINIRLAR
+— Çıktıda olmayan hiçbir sayı yazma.
+— Yuvarlarken değer değiştirme; üç ondalık basamak kullan.
+— Anlamsız çıkan sonuçları atlama. p = 0,522 çıkan güçlük katsayısı
+  da raporlanır.
+— Düşük R kare&#x27;yi ya da düşük AUC&#x27;yi gizleme ya da yumuşatma;
+  olduğu gibi yaz.
+
+DENETİM
+Bölümün sonuna bir kontrol listesi ekle:
+— Kaç istatistiksel sonuç raporlandı?
+— Bunların kaçında etki büyüklüğü var?
+— İkisi eşit değilse hangi sonuçta etki büyüklüğü eksik?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tıp · klinik çalışma</span>
+<span class="ad">Analiz çıktısından Bulgular bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir dergi makalesinin Bulgular bölümünü yazıyorsun. Hedef dergi bir
+birinci basamak sağlık hizmetleri dergisi; okurları aile hekimleri.
+
+KAYNAK
+Ekte analiz çıktısı var: analiz_sonuc.txt ve analiz_sonuc.json.
+Dokuz analiz bloğu içeriyor. Ayrıca CONSORT akış şeması sayıları ve
+üç tablo.
+
+ÇALIŞMA
+Tip 2 diyabet hastalarında haftalık telefon hatırlatmasının ilaç
+uyumuna etkisi. İki kollu, altı ay izlemli. Müdahale 148, kontrol
+152 hasta. Birincil sonuç: ilaç uyum ölçeği puanı. İkincil sonuç:
+HbA1c değişimi.
+
+GÖREV
+Bulgular bölümünü yaz.
+
+YAPI
+— Önce katılımcı akışı ve başlangıç özellikleri (Tablo 1)
+— Sonra birincil sonuç
+— Sonra ikincil sonuç
+— Sonra alt grup analizleri (önceden planlanmış olanlar)
+— Son olarak istenmeyen olaylar ve çalışmadan ayrılmalar
+
+HER SONUÇ İÇİN DÖRT SAYI ZORUNLU
+test istatistiği · serbestlik derecesi · p değeri · etki büyüklüğü
+Dördü birden yoksa o cümleyi yazma; eksik olanı bana bildir.
+
+ÜSLUP
+— Resmî akademik Türkçe, edilgen anlatım
+— Klinik okur için kısa cümle; her bulgu tek paragraf
+
+KLİNİK ÇALIŞMAYA ÖZGÜ KURALLAR
+— Gruplar arası farkı mutlak ve göreli olarak birlikte ver: hem
+  ortalama fark hem yüzde değişim.
+— Güven aralığı zorunlu; klinik okur p değerinden çok aralığa bakar.
+— Tedaviye niyet (intention-to-treat) analizi mi, protokole uyan
+  (per-protocol) analizi mi? Hangisi raporlandığını her sonuçta
+  belirt.
+— Çalışmadan ayrılanların sayısı ve nedeni mutlaka yazılsın.
+
+SAYI BİÇİMİ
+— Ondalık ayracı virgül, binlik ayracı nokta
+— p &lt; 0,001 ise &quot;p &lt; 0,001&quot; yaz
+— HbA1c için bir ondalık, ölçek puanı için bir ondalık
+
+SINIRLAR
+— Bulguyu YORUMLAMA. &quot;Bu, müdahalenin etkili olduğunu
+  göstermektedir&quot; cümlesi kurma.
+— &quot;Beklendiği gibi&quot;, &quot;umut verici&quot; gibi değerlendirme ifadeleri
+  kullanma.
+— Anlamsız çıkan sonuçları atlama; ikincil sonuç anlamsızsa
+  olduğu gibi raporla.
+— Alt grup analizlerinde anlamlı çıkanı öne çıkarma; hepsini
+  birlikte ver ve önceden planlanmış olduklarını belirt.
+— Klinik anlamlılık hakkında hüküm verme; bu Tartışma&#x27;nın işi.
+
+DENETİM
+Bölüm sonunda bir kontrol listesi:
+— Kaç istatistiksel sonuç raporlandı?
+— Kaçında güven aralığı var?
+— Kaçında etki büyüklüğü var?
+— Katılımcı sayıları akış şemasıyla tutuyor mu? (148 + 152 = 300;
+  ayrılanlar düşülünce analize giren sayı kaç?)</pre></div>
+
+<aside class="not "><span class="not-baslik">Aynı kalıp, farklı zorunluluklar</span><p>Bu doldurulmuş örnek, 8. bölümdeki eğitim örneğiyle aynı kalıptan
+çıktı ama dört zorunluluk eklendi ve hepsi klinik alandan geliyor.</p>
+<p><strong>Mutlak ve göreli fark birlikte.</strong> Bir hekim için "uyum puanı 3,2
+arttı" ile "%18 arttı" farklı bilgilerdir; ikisi de gerekir.</p>
+<p><strong>Güven aralığı zorunlu.</strong> Klinik dergilerin çoğu p değerini tek
+başına kabul etmez.</p>
+<p><strong>ITT mi PP mi.</strong> Bu ayrım klinik çalışmada kararı değiştirir ve
+belirtilmezse hakem ilk bunu sorar.</p>
+<p><strong>Alt grupta anlamlı olanı öne çıkarma.</strong> Bu, klinik literatürün
+en bilinen yanlılık kaynağı. Sınır olarak yazılmazsa model doğal
+olarak ilginç olanı öne alır.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Betimsel istatistik süs değildir; test seçiminin girdisidir.</p></li><li><p>Büyük örneklemde normallik testi p değerine değil, çarpıklık/basıklık
+büyüklüğüne bakılarak yorumlanır.</p></li><li><p>Yüksek Cronbach alfa (&gt; 0,90) madde fazlalığı uyarısıdır, kusursuzluk
+belgesi değil.</p></li><li><p>Sıfıra yakın korelasyon, ilişki yok demek değildir. Ders puanı ile
+güçlük arasında r = 0,06 ama ANOVA'da F = 57,8 — ilişki ters U
+biçimli.</p></li><li><p>Regresyon, korelasyonun gizlediğini gösterir: güçlük tek başına
+anlamlıyken, katılım denetlendiğinde anlamsız.</p></li><li><p>Her sonuçta dört sayı: test istatistiği, serbestlik derecesi (testin kaç
+bağımsız bilgi üzerinden hesaplandığını gösteren ve parantez içinde
+yazılan sayı), p ve <strong>etki büyüklüğü.</strong> Dördüncüsü olmadan cümle kurulmaz.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="07-analiz-secimi.html"><span class="yon">← Önceki</span><span class="ad">Hangi analizi seçmeliyim</span></a><a class="sag" href="09-web-guvenligi.html"><span class="yon">Sonraki →</span><span class="ad">Makine öğrenmesi ve veri sızıntısı</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

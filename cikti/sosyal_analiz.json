@@ -1,0 +1,1261 @@
+{
+ "veri": {
+  "n": 5820,
+  "madde": 28,
+  "eksik": 0,
+  "kaynak_doi": "10.24432/C5S02S"
+ },
+ "betimsel": [
+  {
+   "değişken": "ders_puan",
+   "n": 5820,
+   "ortalama": 3.089,
+   "ss": 1.18,
+   "ortanca": 3.0,
+   "min": 1.0,
+   "maks": 5.0,
+   "çarpıklık": -0.177,
+   "basıklık": -0.747
+  },
+  {
+   "değişken": "ogretim_puan",
+   "n": 5820,
+   "ortalama": 3.259,
+   "ss": 1.193,
+   "ortanca": 3.188,
+   "min": 1.0,
+   "maks": 5.0,
+   "çarpıklık": -0.416,
+   "basıklık": -0.616
+  },
+  {
+   "değişken": "genel_puan",
+   "n": 5820,
+   "ortalama": 3.186,
+   "ss": 1.158,
+   "ortanca": 3.071,
+   "min": 1.0,
+   "maks": 5.0,
+   "çarpıklık": -0.33,
+   "basıklık": -0.607
+  },
+  {
+   "değişken": "attendance",
+   "n": 5820,
+   "ortalama": 1.676,
+   "ss": 1.475,
+   "ortanca": 1.0,
+   "min": 0.0,
+   "maks": 4.0,
+   "çarpıklık": 0.23,
+   "basıklık": -1.411
+  },
+  {
+   "değişken": "difficulty",
+   "n": 5820,
+   "ortalama": 2.784,
+   "ss": 1.349,
+   "ortanca": 3.0,
+   "min": 1.0,
+   "maks": 5.0,
+   "çarpıklık": -0.009,
+   "basıklık": -1.182
+  },
+  {
+   "değişken": "nb.repeat",
+   "n": 5820,
+   "ortalama": 1.214,
+   "ss": 0.532,
+   "ortanca": 1.0,
+   "min": 1.0,
+   "maks": 3.0,
+   "çarpıklık": 2.437,
+   "basıklık": 4.784
+  }
+ ],
+ "madde_betimsel": [
+  {
+   "madde": "Q1",
+   "boyut": "Ders",
+   "ortalama": 2.93,
+   "ss": 1.341,
+   "çarpıklık": -0.046
+  },
+  {
+   "madde": "Q2",
+   "boyut": "Ders",
+   "ortalama": 3.074,
+   "ss": 1.285,
+   "çarpıklık": -0.204
+  },
+  {
+   "madde": "Q3",
+   "boyut": "Ders",
+   "ortalama": 3.179,
+   "ss": 1.254,
+   "çarpıklık": -0.318
+  },
+  {
+   "madde": "Q4",
+   "boyut": "Ders",
+   "ortalama": 3.082,
+   "ss": 1.285,
+   "çarpıklık": -0.207
+  },
+  {
+   "madde": "Q5",
+   "boyut": "Ders",
+   "ortalama": 3.106,
+   "ss": 1.279,
+   "çarpıklık": -0.217
+  },
+  {
+   "madde": "Q6",
+   "boyut": "Ders",
+   "ortalama": 3.107,
+   "ss": 1.281,
+   "çarpıklık": -0.229
+  },
+  {
+   "madde": "Q7",
+   "boyut": "Ders",
+   "ortalama": 3.066,
+   "ss": 1.279,
+   "çarpıklık": -0.189
+  },
+  {
+   "madde": "Q8",
+   "boyut": "Ders",
+   "ortalama": 3.042,
+   "ss": 1.283,
+   "çarpıklık": -0.134
+  },
+  {
+   "madde": "Q9",
+   "boyut": "Ders",
+   "ortalama": 3.166,
+   "ss": 1.269,
+   "çarpıklık": -0.279
+  },
+  {
+   "madde": "Q10",
+   "boyut": "Ders",
+   "ortalama": 3.091,
+   "ss": 1.275,
+   "çarpıklık": -0.201
+  },
+  {
+   "madde": "Q11",
+   "boyut": "Ders",
+   "ortalama": 3.184,
+   "ss": 1.295,
+   "çarpıklık": -0.297
+  },
+  {
+   "madde": "Q12",
+   "boyut": "Ders",
+   "ortalama": 3.036,
+   "ss": 1.306,
+   "çarpıklık": -0.144
+  },
+  {
+   "madde": "Q13",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.243,
+   "ss": 1.264,
+   "çarpıklık": -0.377
+  },
+  {
+   "madde": "Q14",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.291,
+   "ss": 1.255,
+   "çarpıklık": -0.432
+  },
+  {
+   "madde": "Q15",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.287,
+   "ss": 1.253,
+   "çarpıklık": -0.43
+  },
+  {
+   "madde": "Q16",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.17,
+   "ss": 1.288,
+   "çarpıklık": -0.289
+  },
+  {
+   "madde": "Q17",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.398,
+   "ss": 1.268,
+   "çarpıklık": -0.534
+  },
+  {
+   "madde": "Q18",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.223,
+   "ss": 1.28,
+   "çarpıklık": -0.347
+  },
+  {
+   "madde": "Q19",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.262,
+   "ss": 1.268,
+   "çarpıklık": -0.385
+  },
+  {
+   "madde": "Q20",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.285,
+   "ss": 1.277,
+   "çarpıklık": -0.4
+  },
+  {
+   "madde": "Q21",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.307,
+   "ss": 1.27,
+   "çarpıklık": -0.423
+  },
+  {
+   "madde": "Q22",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.318,
+   "ss": 1.268,
+   "çarpıklık": -0.435
+  },
+  {
+   "madde": "Q23",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.202,
+   "ss": 1.273,
+   "çarpıklık": -0.309
+  },
+  {
+   "madde": "Q24",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.167,
+   "ss": 1.276,
+   "çarpıklık": -0.273
+  },
+  {
+   "madde": "Q25",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.313,
+   "ss": 1.257,
+   "çarpıklık": -0.436
+  },
+  {
+   "madde": "Q26",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.222,
+   "ss": 1.271,
+   "çarpıklık": -0.346
+  },
+  {
+   "madde": "Q27",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.155,
+   "ss": 1.292,
+   "çarpıklık": -0.277
+  },
+  {
+   "madde": "Q28",
+   "boyut": "Öğretim elemanı",
+   "ortalama": 3.308,
+   "ss": 1.279,
+   "çarpıklık": -0.427
+  }
+ ],
+ "normallik": [
+  {
+   "değişken": "ders_puan",
+   "Kolmogorov_Smirnov_D": 0.1084,
+   "p": 5.22e-60,
+   "çarpıklık": -0.177,
+   "basıklık": -0.747,
+   "yorum": "Çarpıklık ve basıklık ±1 aralığında; büyük örneklemde parametrik test uygulanabilir, ancak sonuçlar parametrik olmayan karşılığıyla birlikte raporlanır."
+  },
+  {
+   "değişken": "ogretim_puan",
+   "Kolmogorov_Smirnov_D": 0.1314,
+   "p": 3.95e-88,
+   "çarpıklık": -0.416,
+   "basıklık": -0.616,
+   "yorum": "Çarpıklık ve basıklık ±1 aralığında; büyük örneklemde parametrik test uygulanabilir, ancak sonuçlar parametrik olmayan karşılığıyla birlikte raporlanır."
+  }
+ ],
+ "guvenilirlik": {
+  "Ders boyutu": {
+   "madde_sayısı": 12,
+   "alfa": 0.9828
+  },
+  "Öğretim elemanı boyutu": {
+   "madde_sayısı": 16,
+   "alfa": 0.9909
+  },
+  "Tüm ölçek": {
+   "madde_sayısı": 28,
+   "alfa": 0.992
+  },
+  "madde_toplam": [
+   {
+    "madde": "Q1",
+    "düzeltilmiş_madde_toplam_r": 0.804,
+    "madde_silinirse_alfa": 0.992
+   },
+   {
+    "madde": "Q2",
+    "düzeltilmiş_madde_toplam_r": 0.884,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q3",
+    "düzeltilmiş_madde_toplam_r": 0.883,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q4",
+    "düzeltilmiş_madde_toplam_r": 0.87,
+    "madde_silinirse_alfa": 0.9918
+   },
+   {
+    "madde": "Q5",
+    "düzeltilmiş_madde_toplam_r": 0.905,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q6",
+    "düzeltilmiş_madde_toplam_r": 0.888,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q7",
+    "düzeltilmiş_madde_toplam_r": 0.893,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q8",
+    "düzeltilmiş_madde_toplam_r": 0.884,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q9",
+    "düzeltilmiş_madde_toplam_r": 0.872,
+    "madde_silinirse_alfa": 0.9918
+   },
+   {
+    "madde": "Q10",
+    "düzeltilmiş_madde_toplam_r": 0.919,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q11",
+    "düzeltilmiş_madde_toplam_r": 0.875,
+    "madde_silinirse_alfa": 0.9918
+   },
+   {
+    "madde": "Q12",
+    "düzeltilmiş_madde_toplam_r": 0.865,
+    "madde_silinirse_alfa": 0.9918
+   },
+   {
+    "madde": "Q13",
+    "düzeltilmiş_madde_toplam_r": 0.926,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q14",
+    "düzeltilmiş_madde_toplam_r": 0.928,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q15",
+    "düzeltilmiş_madde_toplam_r": 0.925,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q16",
+    "düzeltilmiş_madde_toplam_r": 0.928,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q17",
+    "düzeltilmiş_madde_toplam_r": 0.865,
+    "madde_silinirse_alfa": 0.9918
+   },
+   {
+    "madde": "Q18",
+    "düzeltilmiş_madde_toplam_r": 0.921,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q19",
+    "düzeltilmiş_madde_toplam_r": 0.925,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q20",
+    "düzeltilmiş_madde_toplam_r": 0.921,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q21",
+    "düzeltilmiş_madde_toplam_r": 0.916,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q22",
+    "düzeltilmiş_madde_toplam_r": 0.916,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q23",
+    "düzeltilmiş_madde_toplam_r": 0.933,
+    "madde_silinirse_alfa": 0.9915
+   },
+   {
+    "madde": "Q24",
+    "düzeltilmiş_madde_toplam_r": 0.921,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q25",
+    "düzeltilmiş_madde_toplam_r": 0.914,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q26",
+    "düzeltilmiş_madde_toplam_r": 0.914,
+    "madde_silinirse_alfa": 0.9916
+   },
+   {
+    "madde": "Q27",
+    "düzeltilmiş_madde_toplam_r": 0.892,
+    "madde_silinirse_alfa": 0.9917
+   },
+   {
+    "madde": "Q28",
+    "düzeltilmiş_madde_toplam_r": 0.896,
+    "madde_silinirse_alfa": 0.9917
+   }
+  ]
+ },
+ "afa": {
+  "kmo": 0.9885,
+  "bartlett_ki2": 297891.4,
+  "bartlett_p": 0.0,
+  "ozdeger_1_ustu": 2,
+  "ilk_dort_ozdeger": [
+   23.041,
+   1.253,
+   0.395,
+   0.361
+  ],
+  "aciklanan_varyans_toplam": 86.8,
+  "aciklanan_f1": 47.7,
+  "aciklanan_f2": 39.1,
+  "yapiya_uyan_madde": 28,
+  "madde_sayisi": 28,
+  "yukler": [
+   {
+    "madde": "Q1",
+    "Faktör 1": 0.355,
+    "Faktör 2": 0.825,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q2",
+    "Faktör 1": 0.489,
+    "Faktör 2": 0.788,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q3",
+    "Faktör 1": 0.572,
+    "Faktör 2": 0.696,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q4",
+    "Faktör 1": 0.47,
+    "Faktör 2": 0.791,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q5",
+    "Faktör 1": 0.52,
+    "Faktör 2": 0.785,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q6",
+    "Faktör 1": 0.513,
+    "Faktör 2": 0.769,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q7",
+    "Faktör 1": 0.484,
+    "Faktör 2": 0.807,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q8",
+    "Faktör 1": 0.474,
+    "Faktör 2": 0.806,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q9",
+    "Faktör 1": 0.555,
+    "Faktör 2": 0.701,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q10",
+    "Faktör 1": 0.543,
+    "Faktör 2": 0.779,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q11",
+    "Faktör 1": 0.573,
+    "Faktör 2": 0.684,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q12",
+    "Faktör 1": 0.492,
+    "Faktör 2": 0.759,
+    "baskın": "Faktör 2",
+    "beklenen_boyut": "Ders"
+   },
+   {
+    "madde": "Q13",
+    "Faktör 1": 0.773,
+    "Faktör 2": 0.535,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q14",
+    "Faktör 1": 0.813,
+    "Faktör 2": 0.492,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q15",
+    "Faktör 1": 0.811,
+    "Faktör 2": 0.491,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q16",
+    "Faktör 1": 0.729,
+    "Faktör 2": 0.586,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q17",
+    "Faktör 1": 0.85,
+    "Faktör 2": 0.364,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q18",
+    "Faktör 1": 0.785,
+    "Faktör 2": 0.514,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q19",
+    "Faktör 1": 0.808,
+    "Faktör 2": 0.495,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q20",
+    "Faktör 1": 0.837,
+    "Faktör 2": 0.457,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q21",
+    "Faktör 1": 0.852,
+    "Faktör 2": 0.432,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q22",
+    "Faktör 1": 0.855,
+    "Faktör 2": 0.429,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q23",
+    "Faktör 1": 0.774,
+    "Faktör 2": 0.542,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q24",
+    "Faktör 1": 0.735,
+    "Faktör 2": 0.57,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q25",
+    "Faktör 1": 0.843,
+    "Faktör 2": 0.44,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q26",
+    "Faktör 1": 0.774,
+    "Faktör 2": 0.516,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q27",
+    "Faktör 1": 0.721,
+    "Faktör 2": 0.544,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   },
+   {
+    "madde": "Q28",
+    "Faktör 1": 0.833,
+    "Faktör 2": 0.427,
+    "baskın": "Faktör 1",
+    "beklenen_boyut": "Öğretim"
+   }
+  ]
+ },
+ "t_testi": {
+  "grup_a": {
+   "tanım": "katılım 0–1",
+   "n": 2930,
+   "ortalama": 3.032,
+   "ss": 1.256
+  },
+  "grup_b": {
+   "tanım": "katılım 3–4",
+   "n": 2098,
+   "ortalama": 3.54,
+   "ss": 1.096
+  },
+  "levene_W": 30.1,
+  "levene_p": 4.3e-08,
+  "esit_varyans": false,
+  "t": 15.232,
+  "p": 3.3e-51,
+  "cohen_d": 0.426
+ },
+ "anova": {
+  "grup_ozeti": [
+   {
+    "difficulty": 1,
+    "n": 1620,
+    "ortalama": 2.828,
+    "ss": 1.339
+   },
+   {
+    "difficulty": 2,
+    "n": 549,
+    "ortalama": 3.134,
+    "ss": 1.072
+   },
+   {
+    "difficulty": 3,
+    "n": 1774,
+    "ortalama": 3.343,
+    "ss": 1.031
+   },
+   {
+    "difficulty": 4,
+    "n": 1225,
+    "ortalama": 3.213,
+    "ss": 1.025
+   },
+   {
+    "difficulty": 5,
+    "n": 652,
+    "ortalama": 2.772,
+    "ss": 1.288
+   }
+  ],
+  "levene_W": 47.778,
+  "levene_p": 1.38e-39,
+  "F": 57.797,
+  "df_arasi": 4,
+  "df_ici": 5815,
+  "p": 6.61e-48,
+  "eta_kare": 0.0382,
+  "tukey": [
+   {
+    "grup1": 1,
+    "grup2": 2,
+    "fark": 0.305,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   },
+   {
+    "grup1": 1,
+    "grup2": 3,
+    "fark": 0.514,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   },
+   {
+    "grup1": 1,
+    "grup2": 4,
+    "fark": 0.384,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   },
+   {
+    "grup1": 1,
+    "grup2": 5,
+    "fark": -0.057,
+    "p_düzeltilmiş": 0.828,
+    "anlamlı": false
+   },
+   {
+    "grup1": 2,
+    "grup2": 3,
+    "fark": 0.209,
+    "p_düzeltilmiş": 0.0021,
+    "anlamlı": true
+   },
+   {
+    "grup1": 2,
+    "grup2": 4,
+    "fark": 0.079,
+    "p_düzeltilmiş": 0.672,
+    "anlamlı": false
+   },
+   {
+    "grup1": 2,
+    "grup2": 5,
+    "fark": -0.362,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   },
+   {
+    "grup1": 3,
+    "grup2": 4,
+    "fark": -0.13,
+    "p_düzeltilmiş": 0.0215,
+    "anlamlı": true
+   },
+   {
+    "grup1": 3,
+    "grup2": 5,
+    "fark": -0.571,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   },
+   {
+    "grup1": 4,
+    "grup2": 5,
+    "fark": -0.441,
+    "p_düzeltilmiş": 0.0,
+    "anlamlı": true
+   }
+  ]
+ },
+ "parametrik_olmayan": {
+  "mann_whitney_U": 3778992.0,
+  "mw_p": 1.29e-44,
+  "rank_biserial": 0.23,
+  "kruskal_H": 195.877,
+  "kruskal_df": 4,
+  "kruskal_p": 2.89e-41,
+  "epsilon_kare": 0.033
+ },
+ "korelasyon": {
+  "degiskenler": [
+   "ders_puan",
+   "ogretim_puan",
+   "attendance",
+   "difficulty",
+   "nb.repeat"
+  ],
+  "pearson": [
+   [
+    1.0,
+    0.902,
+    0.161,
+    0.06,
+    -0.033
+   ],
+   [
+    0.902,
+    1.0,
+    0.2,
+    0.089,
+    -0.044
+   ],
+   [
+    0.161,
+    0.2,
+    1.0,
+    0.437,
+    -0.078
+   ],
+   [
+    0.06,
+    0.089,
+    0.437,
+    1.0,
+    0.11
+   ],
+   [
+    -0.033,
+    -0.044,
+    -0.078,
+    0.11,
+    1.0
+   ]
+  ],
+  "spearman": [
+   [
+    1.0,
+    0.882,
+    0.151,
+    0.047,
+    -0.041
+   ],
+   [
+    0.882,
+    1.0,
+    0.188,
+    0.065,
+    -0.053
+   ],
+   [
+    0.151,
+    0.188,
+    1.0,
+    0.449,
+    -0.071
+   ],
+   [
+    0.047,
+    0.065,
+    0.449,
+    1.0,
+    0.105
+   ],
+   [
+    -0.041,
+    -0.053,
+    -0.071,
+    0.105,
+    1.0
+   ]
+  ],
+  "ciftler": [
+   {
+    "çift": "ders_puan – ogretim_puan",
+    "pearson_r": 0.902,
+    "pearson_p": 0.0,
+    "spearman_rho": 0.882,
+    "spearman_p": 0.0,
+    "r_kare": 0.813
+   },
+   {
+    "çift": "ders_puan – attendance",
+    "pearson_r": 0.161,
+    "pearson_p": 5.36e-35,
+    "spearman_rho": 0.151,
+    "spearman_p": 7.75e-31,
+    "r_kare": 0.026
+   },
+   {
+    "çift": "ders_puan – difficulty",
+    "pearson_r": 0.06,
+    "pearson_p": 4.4e-06,
+    "spearman_rho": 0.047,
+    "spearman_p": 0.000312,
+    "r_kare": 0.004
+   },
+   {
+    "çift": "ders_puan – nb.repeat",
+    "pearson_r": -0.033,
+    "pearson_p": 0.0115,
+    "spearman_rho": -0.041,
+    "spearman_p": 0.00186,
+    "r_kare": 0.001
+   },
+   {
+    "çift": "ogretim_puan – attendance",
+    "pearson_r": 0.2,
+    "pearson_p": 8.42e-54,
+    "spearman_rho": 0.188,
+    "spearman_p": 2.07e-47,
+    "r_kare": 0.04
+   },
+   {
+    "çift": "ogretim_puan – difficulty",
+    "pearson_r": 0.089,
+    "pearson_p": 1.3e-11,
+    "spearman_rho": 0.065,
+    "spearman_p": 5.97e-07,
+    "r_kare": 0.008
+   },
+   {
+    "çift": "ogretim_puan – nb.repeat",
+    "pearson_r": -0.044,
+    "pearson_p": 0.00073,
+    "spearman_rho": -0.053,
+    "spearman_p": 4.94e-05,
+    "r_kare": 0.002
+   },
+   {
+    "çift": "attendance – difficulty",
+    "pearson_r": 0.437,
+    "pearson_p": 8.59e-270,
+    "spearman_rho": 0.449,
+    "spearman_p": 3.46e-286,
+    "r_kare": 0.191
+   },
+   {
+    "çift": "attendance – nb.repeat",
+    "pearson_r": -0.078,
+    "pearson_p": 2.45e-09,
+    "spearman_rho": -0.071,
+    "spearman_p": 6.85e-08,
+    "r_kare": 0.006
+   },
+   {
+    "çift": "difficulty – nb.repeat",
+    "pearson_r": 0.11,
+    "pearson_p": 2.83e-17,
+    "spearman_rho": 0.105,
+    "spearman_p": 1.18e-15,
+    "r_kare": 0.012
+   }
+  ]
+ },
+ "regresyon": {
+  "r_kare": 0.0531,
+  "duzeltilmis_r_kare": 0.0523,
+  "F": 65.198,
+  "df_model": 5,
+  "df_artik": 5814,
+  "F_p": 1.95e-66,
+  "katsayilar": [
+   {
+    "terim": "Intercept",
+    "B": 3.1267,
+    "SH": 0.0625,
+    "t": 50.056,
+    "p": 0.0,
+    "alt_GA": 3.0042,
+    "üst_GA": 3.2491
+   },
+   {
+    "terim": "C(instr)[T.2]",
+    "B": 0.1058,
+    "SH": 0.0519,
+    "t": 2.039,
+    "p": 0.0415,
+    "alt_GA": 0.0041,
+    "üst_GA": 0.2076
+   },
+   {
+    "terim": "C(instr)[T.3]",
+    "B": -0.1962,
+    "SH": 0.0464,
+    "t": -4.228,
+    "p": 2.39e-05,
+    "alt_GA": -0.2871,
+    "üst_GA": -0.1052
+   },
+   {
+    "terim": "attendance",
+    "B": 0.15,
+    "SH": 0.0116,
+    "t": 12.902,
+    "p": 1.42e-37,
+    "alt_GA": 0.1272,
+    "üst_GA": 0.1728
+   },
+   {
+    "terim": "difficulty",
+    "B": 0.0082,
+    "SH": 0.0127,
+    "t": 0.641,
+    "p": 0.522,
+    "alt_GA": -0.0168,
+    "üst_GA": 0.0332
+   },
+   {
+    "terim": "Q('nb.repeat')",
+    "B": -0.0381,
+    "SH": 0.0293,
+    "t": -1.303,
+    "p": 0.193,
+    "alt_GA": -0.0955,
+    "üst_GA": 0.0192
+   }
+  ],
+  "vif": [
+   {
+    "değişken": "const",
+    "VIF": 1.0
+   },
+   {
+    "değişken": "attendance",
+    "VIF": 1.269
+   },
+   {
+    "değişken": "difficulty",
+    "VIF": 1.277
+   },
+   {
+    "değişken": "nb.repeat",
+    "VIF": 1.047
+   },
+   {
+    "değişken": "instr_2",
+    "VIF": 2.171
+   },
+   {
+    "değişken": "instr_3",
+    "VIF": 2.193
+   }
+  ],
+  "breusch_pagan_LM": 126.967,
+  "breusch_pagan_p": 1.05e-25,
+  "durbin_watson": 1.938
+ },
+ "lojistik": {
+  "sonuc_tanimi": "genel_puan >= 4",
+  "pozitif_n": 1863,
+  "pozitif_oran": 0.3201,
+  "mcfadden_r2": 0.0245,
+  "auc": 0.6011,
+  "katsayilar": [
+   {
+    "terim": "Intercept",
+    "B": -0.3434,
+    "SH": 0.1156,
+    "p": 0.00297,
+    "OR": 0.7094,
+    "OR_alt_GA": 0.5655,
+    "OR_üst_GA": 0.8897
+   },
+   {
+    "terim": "C(instr)[T.2]",
+    "B": -0.1715,
+    "SH": 0.0916,
+    "p": 0.0611,
+    "OR": 0.8424,
+    "OR_alt_GA": 0.704,
+    "OR_üst_GA": 1.008
+   },
+   {
+    "terim": "C(instr)[T.3]",
+    "B": -0.6511,
+    "SH": 0.083,
+    "p": 4.34e-15,
+    "OR": 0.5214,
+    "OR_alt_GA": 0.4432,
+    "OR_üst_GA": 0.6136
+   },
+   {
+    "terim": "attendance",
+    "B": 0.1778,
+    "SH": 0.0217,
+    "p": 2.51e-16,
+    "OR": 1.1946,
+    "OR_alt_GA": 1.1449,
+    "OR_üst_GA": 1.2465
+   },
+   {
+    "terim": "difficulty",
+    "B": -0.0853,
+    "SH": 0.0244,
+    "p": 0.000466,
+    "OR": 0.9182,
+    "OR_alt_GA": 0.8754,
+    "OR_üst_GA": 0.9632
+   },
+   {
+    "terim": "Q('nb.repeat')",
+    "B": -0.0406,
+    "SH": 0.0569,
+    "p": 0.475,
+    "OR": 0.9602,
+    "OR_alt_GA": 0.8589,
+    "OR_üst_GA": 1.0734
+   }
+  ]
+ },
+ "ki_kare": {
+  "capraz_tablo": [
+   {
+    "instr": 1,
+    "0": 166,
+    "1": 152,
+    "2": 107,
+    "3": 217,
+    "4": 133
+   },
+   {
+    "instr": 2,
+    "0": 396,
+    "1": 291,
+    "2": 211,
+    "3": 317,
+    "4": 229
+   },
+   {
+    "instr": 3,
+    "0": 1340,
+    "1": 585,
+    "2": 474,
+    "3": 718,
+    "4": 484
+   }
+  ],
+  "satir_adi": "instr",
+  "sutun_adi": "attendance",
+  "ki2": 105.178,
+  "sd": 8,
+  "p": 3.72e-19,
+  "cramers_v": 0.0951,
+  "kucuk_beklenen_hucre": 0,
+  "hucre_sayisi": 15
+ },
+ "anlamlilik_dersi": {
+  "evren_r": 0.06,
+  "evren_r_kare": 0.0036,
+  "panel_a": [
+   {
+    "n": 30,
+    "r_ortalama": 0.051,
+    "r_alt_2.5": -0.328,
+    "r_ust_97.5": 0.471,
+    "anlamli_cikma_orani": 0.072
+   },
+   {
+    "n": 50,
+    "r_ortalama": 0.049,
+    "r_alt_2.5": -0.238,
+    "r_ust_97.5": 0.314,
+    "anlamli_cikma_orani": 0.078
+   },
+   {
+    "n": 100,
+    "r_ortalama": 0.067,
+    "r_alt_2.5": -0.128,
+    "r_ust_97.5": 0.272,
+    "anlamli_cikma_orani": 0.124
+   },
+   {
+    "n": 300,
+    "r_ortalama": 0.06,
+    "r_alt_2.5": -0.062,
+    "r_ust_97.5": 0.184,
+    "anlamli_cikma_orani": 0.2
+   },
+   {
+    "n": 1000,
+    "r_ortalama": 0.059,
+    "r_alt_2.5": 0.006,
+    "r_ust_97.5": 0.114,
+    "anlamli_cikma_orani": 0.448
+   },
+   {
+    "n": 3000,
+    "r_ortalama": 0.06,
+    "r_alt_2.5": 0.033,
+    "r_ust_97.5": 0.086,
+    "anlamli_cikma_orani": 0.956
+   }
+  ],
+  "panel_b": [
+   {
+    "n": 30,
+    "r": 0.06,
+    "t": 0.319,
+    "p": 0.752,
+    "karar": "anlamsız"
+   },
+   {
+    "n": 50,
+    "r": 0.06,
+    "t": 0.417,
+    "p": 0.678,
+    "karar": "anlamsız"
+   },
+   {
+    "n": 100,
+    "r": 0.06,
+    "t": 0.596,
+    "p": 0.552,
+    "karar": "anlamsız"
+   },
+   {
+    "n": 300,
+    "r": 0.06,
+    "t": 1.04,
+    "p": 0.299,
+    "karar": "anlamsız"
+   },
+   {
+    "n": 1000,
+    "r": 0.06,
+    "t": 1.904,
+    "p": 0.0573,
+    "karar": "anlamsız"
+   },
+   {
+    "n": 5820,
+    "r": 0.06,
+    "t": 4.596,
+    "p": 4.4e-06,
+    "karar": "anlamlı"
+   },
+   {
+    "n": 20000,
+    "r": 0.06,
+    "t": 8.521,
+    "p": 1.69e-17,
+    "karar": "anlamlı"
+   }
+  ]
+ }
+}

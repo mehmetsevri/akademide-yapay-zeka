@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitel analiz: tematik analizin altı aşaması</title>
+<meta name="description" content="116 açık uçlu Türkçe yanıt üzerinde gerçekten yürütülmüş bir tematik analiz: 63 kod, 19 tema, ikinci kodlayıcı ve Cohen kappa = 0,890.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Nitel analiz: tematik analizin altı aşaması</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa etkin" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a><div class="alt-liste"><a href="#braun-ve-clarke-in-alti-asamasi">Braun ve Clarke&#x27;ın altı aşaması</a><a href="#asama-1-veriye-asinalik">Aşama 1 — Veriye aşinalık</a><a href="#asama-2-i-lk-kodlarin-uretimi">Aşama 2 — İlk kodların üretimi</a><a href="#asama-3-kodlarin-temalara-toplanmasi">Aşama 3 — Kodların temalara toplanması</a><a href="#asama-4-guvenilirlik-ikinci-okuma">Aşama 4 — Güvenilirlik: ikinci okuma</a><a href="#asama-5-6-sikliklar-ve-alintilar">Aşama 5–6 — Sıklıklar ve alıntılar</a><a href="#betimsel-analiz-ile-tematik-analizin-farki">Betimsel analiz ile tematik analizin farkı</a><a href="#nitel-bulgulari-yazmak">Nitel bulguları yazmak</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 10</div><h1>Nitel analiz: tematik analizin altı aşaması</h1><p class="ozet">116 açık uçlu Türkçe yanıt üzerinde gerçekten yürütülmüş bir tematik analiz: 63 kod, 19 tema, ikinci kodlayıcı ve Cohen kappa = 0,890.</p><p>Nitel analizde araştırmacının kendisi araçtır. Bu, yapay zekânın
+burada işe yaramayacağı anlamına gelmez — ama rolünün nerede bittiğini
+baştan bilmeyi gerektirir. Bu bölüm tam bir tematik analizi, altı
+aşamasıyla, gerçekten yürüterek gösteriyor.</p>
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Açık uçlu anket yanıtları</span></div>
+<dl><dt>Boyut</dt><dd>116 yanıt · 1.601 kelime · 45 katılımcı · 3 soru</dd><dt>Pakette</dt><dd><a href="veri/sosyal/anket_acik_uclu.csv">anket_acik_uclu.csv</a> · <a href="kod/07_acik_uclu_veri.py">07_acik_uclu_veri.py</a> · <a href="kod/08_tematik_analiz.py">08_tematik_analiz.py</a> · <a href="cikti/tematik_analiz.txt">tematik_analiz.txt</a></dd></dl>
+<p><strong>Bu metinler sentetiktir.</strong> Gerçek katılımcılardan toplanmamıştır.
+Nedeni şu: açık uçlu yanıt içeren, kişisel veri barındırmayan ve açık
+lisansla dağıtılabilen Türkçe bir akademisyen anketi mikro verisi
+kamuya açık değildir. Kursun nicel örnekleri gerçek veri setleriyle
+yürütüldü; yalnız bu nitel katman üretildi. Üreten betik pakettedir.</p></div>
+<h2 id="braun-ve-clarke-in-alti-asamasi">Braun ve Clarke'ın altı aşaması</h2>
+<p>Tematik analiz, "okuyup tema çıkarma" değildir. Altı aşamalı, her
+aşaması kaydedilebilir bir yöntemdir.</p>
+<ol class="adimlar"><li><p><strong>Veriye aşinalık.</strong> Bütün veri okunur; bu aşamada kod üretilmez,
+yalnız kenar notu alınır. Betikle ölçülemeyen tek aşamadır — ama
+süresi ve not sayısı raporlanabilir.</p></li><li><p><strong>İlk kodların üretimi.</strong> Her anlamlı birim bir ya da birden çok
+kodla işaretlenir. Kod bir etikettir, yorum değil.</p></li><li><p><strong>Temaların aranması.</strong> Kodlar, ortak bir örüntü etrafında
+gruplanır. Bir tema bir kodlar kümesidir, bir kodun büyütülmüş hâli
+değil.</p></li><li><p><strong>Temaların gözden geçirilmesi.</strong> İki soru: tema içindeki kodlar
+gerçekten bir arada mı duruyor (iç tutarlılık), temalar birbirinden
+ayrışıyor mu (dış ayrıklık)? Güvenilirlik denetimi bu aşamada yapılır.</p></li><li><p><strong>Temaların tanımlanması ve adlandırılması.</strong> Her temaya bir ad ve
+bir-iki cümlelik tanım. Ad betimleyici olmalı; "zorluklar" değil,
+"kuralsızlık".</p></li><li><p><strong>Raporlama.</strong> Sıklıklar, temsil edici alıntılar, tema haritası.</p></li></ol>
+
+<aside class="not uyari"><span class="not-baslik">Yapay zekânın rolü nerede biter</span><p>Model <strong>kod önerebilir</strong>, kodları gruplamanıza <strong>yardım edebilir</strong>,
+alıntı adayları <strong>bulabilir</strong>. Yapamayacağı şey, hangi kodun hangi
+temaya ait olduğuna <strong>karar vermektir</strong> — çünkü bu karar, araştırma
+sorunuza, kuramsal duruşunuza ve veriyle kurduğunuz ilişkiye bağlıdır.
+Nitel analizde bu ilişki yöntemin kendisidir; devredilemez.</p>
+<p>Pratikte bu şu demektir: modelin ürettiği kodların <strong>hepsini</strong>
+gözden geçirin. Bu kurstaki analizde modelin ilk kod önerilerinin
+yaklaşık yarısı değiştirildi.</p></aside>
+<h2 id="asama-1-veriye-asinalik">Aşama 1 — Veriye aşinalık</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Aşinalık kaydı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Veri        : 116 açık uçlu yanıt, 1.601 kelime, 45 katılımcı
+Okuma turu  : 2
+Kenar notu  : 41
+Süre        : 95 dakika
+
+Yanıtların tamamı iki kez okundu; ilk okumada kod üretilmedi, yalnız
+kenar notu alındı. Kodlar ikinci okumada üretildi.</pre></div>
+
+<aside class="not "><span class="not-baslik">Bu kaydın yöntem bölümündeki karşılığı</span><p><em>"Veri seti, kodlama öncesinde araştırmacı tarafından iki kez
+okunmuş; ilk okumada kod üretilmeksizin 41 kenar notu alınmıştır."</em>
+Bu cümle, aşinalık aşamasının gerçekten yapıldığını gösterir. Nitel
+araştırmada yöntem bölümü, yapılan işi anlatır — yapılacak işi değil.</p></aside>
+<h2 id="asama-2-i-lk-kodlarin-uretimi">Aşama 2 — İlk kodların üretimi</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Açık uçlu yanıtlardan ilk kod önerileri</span>
+<span class="arac">Nitel analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma yöntemleri konusunda çalışan bir araştırma
+asistanısın. Braun ve Clarke&#x27;ın tematik analiz yaklaşımını
+biliyorsun.
+
+KAYNAK
+Ekte bir anketin açık uçlu yanıtları var: katilimci_no, soru_no,
+yanit sütunları. [n] yanıt.
+
+ARAŞTIRMA SORUSU
+[sorunuzu yazın]
+
+GÖREV
+Her yanıt için bir ya da birden çok KOD öner. Kod, yanıtta geçen
+anlamlı bir içeriği adlandıran kısa bir etikettir.
+
+KODLAMA KURALLARI
+— Kod betimleyici olsun, yorumlayıcı değil. Yanıtta ne söylendiğini
+  adlandır, ne demek istendiğini değil.
+— Bir yanıt birden çok şey söylüyorsa birden çok kod ver.
+— Aynı içerik için her zaman aynı kodu kullan; eşanlamlı kod üretme.
+— Kod adları 2–5 kelime olsun.
+— Hiçbir şey söylemeyen, konuya değmeyen yanıtlar için
+  &quot;kodlanamaz&quot; yaz. Zorlama kod üretme.
+
+ÇIKTI — iki bölüm
+
+BÖLÜM 1 — KOD ÖNERİLERİ
+| Katılımcı | Soru | Yanıt (ilk 50 karakter) | Önerilen kod(lar) |
+
+BÖLÜM 2 — KOD KİTABI TASLAĞI
+| Kod | Tanım (tek cümle) | Kaç yanıtta geçti | Örnek yanıt no |
+
+SINIRLAR
+— Yanıtta olmayan bir içeriği koda dönüştürme.
+— Katılımcı hakkında çıkarım yapma (&quot;bu kişi muhtemelen…&quot;).
+— Kodları henüz temalara gruplandırma; bu ayrı bir aşama.
+— Yanıtları yeniden yazma ya da düzeltme; olduğu gibi alıntıla.
+
+DENETİM
+— Kodlanan yanıt sayısı ile verilen yanıt sayısı eşit mi?
+— Kaç yanıta birden çok kod verildi?
+— Yalnız bir yanıtta geçen kod kaç tane? (Bunlar ya birleştirilmeli
+  ya da gerçekten özgün bir içeriktir — ayırt etmemi sağla.)</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tarih · sözlü tarih</span>
+<span class="ad">Açık uçlu yanıtlardan ilk kod önerileri</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma yöntemleri konusunda çalışan bir araştırma
+asistanısın. Braun ve Clarke&#x27;ın tematik analiz yaklaşımını
+biliyorsun.
+
+KAYNAK
+Ekte sözlü tarih görüşmelerinin dökümü var: gorusme_dokumleri.csv
+Sütunlar: gorusmeci_no, dogum_yili, meslek, soru_no, yanit
+32 görüşmeci, dört açık uçlu soru, toplam 1.148 yanıt birimi.
+Görüşmeler 2024–2025&#x27;te yapıldı, ses kayıtlarından çözümlendi.
+
+ARAŞTIRMA SORUSU
+1960–1980 arasında köyden kente göç eden birinci kuşak göçmenlerin,
+geride bıraktıkları yere ilişkin anlatılarında hangi örüntüler var?
+
+GÖREV
+Her yanıt birimi için bir ya da birden çok KOD öner. Kod, yanıtta
+geçen anlamlı bir içeriği adlandıran kısa bir etikettir.
+
+KODLAMA KURALLARI
+— Kod betimleyici olsun, yorumlayıcı değil. Yanıtta ne söylendiğini
+  adlandır, ne demek istendiğini değil.
+— Bir yanıt birden çok şey söylüyorsa birden çok kod ver.
+— Aynı içerik için her zaman aynı kodu kullan; eşanlamlı kod
+  üretme.
+— Kod adları 2–5 kelime olsun.
+— Hiçbir şey söylemeyen, konuya değmeyen yanıtlar için
+  &quot;kodlanamaz&quot; yaz. Zorlama kod üretme.
+
+SÖZLÜ TARİHE ÖZGÜ KURALLAR
+— Görüşmecinin anlattığı OLAY ile olaya yüklediği ANLAM ayrı
+  kodlanmalı. &quot;1973&#x27;te taşındık&quot; bir olay, &quot;orayı bir daha hiç
+  göremedim&quot; bir anlamdır.
+— Zaman belirsizliklerini kod olarak işaretle (&quot;o yıllarda&quot;,
+  &quot;bir ara&quot;). Sözlü tarihte bu belirsizlik veridir, eksiklik değil.
+— Görüşmecinin kendi sözcüklerini koru. &quot;Gurbet&quot; demişse &quot;göç&quot;
+  diye kodlama; ayrı bir kod aç.
+— Aynı olayın iki görüşmecide farklı anlatılması bir çelişki
+  değildir; iki ayrı kayıt olarak kodla.
+
+ÇIKTI — iki bölüm
+
+BÖLÜM 1 — KOD ÖNERİLERİ
+| Görüşmeci | Soru | Yanıt (ilk 50 karakter) | Önerilen kod(lar) |
+
+BÖLÜM 2 — KOD KİTABI TASLAĞI
+| Kod | Tanım (tek cümle) | Kaç yanıtta geçti | Örnek yanıt no |
+
+SINIRLAR
+— Yanıtta olmayan bir içeriği koda dönüştürme.
+— Görüşmeci hakkında çıkarım yapma (&quot;bu kişi muhtemelen...&quot;).
+— Kodları henüz temalara gruplandırma; bu ayrı bir aşama.
+— Yanıtları yeniden yazma, düzeltme ya da ağız özelliklerini
+  standartlaştırma; olduğu gibi alıntıla.
+— Tarihsel bilgi düzeltmesi yapma. Görüşmeci yanlış bir tarih
+  söylediyse düzeltme, söylediği gibi kodla; doğrulama ayrı bir iş.
+
+DENETİM
+— Kodlanan yanıt sayısı ile verilen yanıt sayısı eşit mi?
+— Kaç yanıta birden çok kod verildi?
+— Yalnız bir yanıtta geçen kod kaç tane? Bunlar ya birleştirilmeli
+  ya da gerçekten özgün bir içeriktir — ayırt etmemi sağla.
+— &quot;Olay&quot; kodu ile &quot;anlam&quot; kodu dağılımı nasıl? Biri ezici
+  çoğunluktaysa kodlama bir yöne kaymış olabilir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Sözlü tarihte kodlamanın kendine özgü kuralı</span><p>Dört ek kural var ve en önemlisi sonuncusu: <strong>"Tarihsel bilgi
+düzeltmesi yapma."</strong></p>
+<p>Bir görüşmeci "1971'de geldik" diyorsa ve siz belgelerden 1973
+olduğunu biliyorsanız, kodlamada yapılacak şey düzeltmek değil.
+Görüşmecinin hatırladığı tarih, sözlü tarih çalışmasında kendi
+başına bir veridir; hafızanın nasıl çalıştığını gösterir.</p>
+<p>Model bu ayrımı bilmez; tutarsızlık görünce düzeltme eğilimindedir.
+<strong>Nitel veride "yanlış" görünen şey çoğu zaman bulgunun kendisidir.</strong></p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Kodlama sonucu — araştırmacı gözden geçirmesinden sonra</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Üretilen kod sayısı       : 63
+Yapılan kod ataması       : 127
+Yanıt başına ortalama kod : 1,09
+Çok kodlu yanıt sayısı    : 10</pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Kod kitabı ile ham veri birlikte yayımlanır</span><p>Nitel analizin yeniden üretilebilirliği, kod kitabının ve kod
+atamalarının yayımlanmasına bağlıdır. Bu kursta ikisi de ayrı CSV
+dosyası olarak pakette duruyor:
+<code>cikti/tematik_kod_kitabi.csv</code> ve <code>cikti/tematik_kod_atamalari.csv</code>.
+Okuyucu, sizin vardığınız temalara aynı veriden varıp
+varamayacağını ancak bu iki dosyayla sınayabilir.</p></aside>
+<h2 id="asama-3-kodlarin-temalara-toplanmasi">Aşama 3 — Kodların temalara toplanması</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Üç soru, on dokuz tema, altmış üç kod</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>SORU 1 — Fayda görülen aşamalar          19 kod → 6 tema
+   Literatürle baş etme        ← S1-L1, S1-L2, S1-L3, S1-L4
+   Dil engelini aşma           ← S1-D1, S1-D2, S1-D3, S1-D4
+   Veriyi işler hâle getirme   ← S1-V1, S1-V2, S1-V3, S1-V4
+   Düşünme ortağı              ← S1-Z1, S1-Z2, S1-Z3
+   İdari ve yayın yükü         ← S1-Y1, S1-Y2, S1-Y3
+   Mesafeli duranlar           ← S1-M1
+
+SORU 2 — Çekince ve kaygılar             23 kod → 7 tema
+   Güvenilirlik                ← S2-G1, S2-G2, S2-G3, S2-G4
+   Yazarlık ve özgünlük        ← S2-O1, S2-O2, S2-O3, S2-O4
+   Veri ve gizlilik            ← S2-V1, S2-V2, S2-V3
+   Kuralsızlık                 ← S2-K1, S2-K2, S2-K3, S2-K4
+   Öğretim ve değerlendirme    ← S2-E1, S2-E2, S2-E3
+   Beceri ve erişim            ← S2-B1, S2-B2, S2-B3, S2-B4
+   Kaygı duymayanlar           ← S2-N1
+
+SORU 3 — Kurumdan beklentiler            21 kod → 6 tema
+   Eğitim ve rehberlik         ← S3-R1, S3-R2, S3-R3, S3-R4
+   Erişim ve altyapı           ← S3-A1, S3-A2, S3-A3, S3-A4
+   Yazılı politika             ← S3-P1, S3-P2, S3-P3, S3-P4
+   Yönetmelik ve denetim       ← S3-Y1, S3-Y2, S3-Y3, S3-Y4, S3-Y5
+   Yöntem desteği              ← S3-M1, S3-M2, S3-M3
+   Beklentisi olmayanlar       ← S3-S1</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/n02_kod_tema_haritasi.svg"
+ alt="Kod-tema haritası" loading="lazy"></div>
+<figcaption><b>Şekil 10.1</b> Altmış üç kodun on dokuz tema altındaki dağılımı. Kutu genişliği kodun
+sıklığını gösteriyor; boş kutular, kod kitabında tanımlı olup veride
+karşılığı çıkmamış kodlardır. Bu boş kutular silinmedi — kod kitabının
+kapsamını gösteriyorlar.
+<span class="indir">Dosya: <a href="varlik/sekil/n02_kod_tema_haritasi.svg">n02_kod_tema_haritasi.svg</a>
+ · <a href="varlik/sekil_png/n02_kod_tema_haritasi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Neden &#x27;Mesafeli duranlar&#x27; ve &#x27;Kaygı duymayanlar&#x27; ayrı tema</span><p>Çünkü bir tema olmak için olumlu içerik taşımak gerekmez. "Fayda
+görmüyorum" diyen beş katılımcı, veride gerçek bir örüntüdür ve
+görmezden gelinirse bulgu çarpıtılmış olur. Nitel analizde en sık
+yapılan hata, araştırmacının aradığı örüntüyü destekleyen yanıtları
+öne çıkarıp ötekileri "diğer" kutusuna atmaktır.</p></aside>
+<h2 id="asama-4-guvenilirlik-ikinci-okuma">Aşama 4 — Güvenilirlik: ikinci okuma</h2>
+<p>Temalar gözden geçirilirken sorulan soru şudur: <strong>başka biri aynı veriden
+aynı temalara varır mı?</strong> Bunu sınamak için yanıtların bir bölümü ikinci kez, ilk kodlar
+görülmeksizin kodlanır ve iki kodlama karşılaştırılır. İkinci kodlamayı
+<strong>başka biri</strong> yaparsa ölçülen şey kodlayıcılar arası uyum, <strong>aynı kişi</strong>
+bir süre sonra yaparsa kodlayıcı içi uyumdur. Kappa iki durumda da aynı
+formülle hesaplanır ama kanıt değeri farklıdır: kodlayıcılar arası uyum
+daha güçlüdür, çünkü araştırmacının kendi alışkanlığını dışarıda bırakır.</p>
+<p>Bu kurstaki ikinci kodlama, ilk kodlar görülmeksizin <strong>aynı araştırmacı</strong>
+tarafından yapıldı; dolayısıyla aşağıdaki sayı kodlayıcı içi uyumdur.
+Kendi çalışmanızda ikinci kodlayıcıyı başka biri yapabiliyorsa yapın;
+yapamıyorsanız hangisi olduğunu yöntem bölümünde açıkça yazın.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad"></span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>kappa" tur="ham"
+İkinci okumaya alınan yanıt : 30 (tüm yanıtların %26'sı)
+Gözlenen uyum               : %90,0
+Rastlantıyla beklenen uyum  : %8,8
+Cohen kappa                 : 0,890   → çok iyi uyum</p>
+<p>UYUŞMAYAN ÜÇ YANIT</p>
+<p>K085 / Soru 1
+  1. okuma : İdari ve yayın yükü
+  2. okuma : Düşünme ortağı
+  yanıt    : «Nitel veri kodlamada deniyorum. Görüşme dökümlerini
+              verip ilk kodları çıkarttırıyorum, sonra kendim gözden
+              geçiriyorum. Zaman kazandırıyor ama kodların yarısını
+              değiştiriyorum.»</p>
+<p>K094 / Soru 1
+  1. okuma : Literatürle baş etme
+  2. okuma : Dil engelini aşma
+  yanıt    : «Literatür ve dil. Bu ikisi dışında kullanmıyorum,
+              kullanmak da istemiyorum.»</p>
+<p>K013 / Soru 3
+  1. okuma : Yazılı politika
+  2. okuma : Yönetmelik ve denetim
+  yanıt    : «Yasaklanmasını bekliyorum ama olmayacağını biliyorum.
+              O hâlde en azından sınır konsun.»</p></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/n03_kodlayici_uyumu.svg"
+ alt="Kodlayıcılar arası uyum" loading="lazy"></div>
+<figcaption><b>Şekil 10.2</b> Üç sayı yan yana: rastlantıyla beklenen uyum (%8,8), gözlenen uyum
+(%90,0) ve rastlantı düzeltilmiş uyum, yani Cohen kappa (0,890).
+İkinci ile üçüncü arasındaki küçük fark, on dokuz temalı bir
+sınıflamada rastlantısal uyumun zaten düşük olmasından kaynaklanıyor.
+<span class="indir">Dosya: <a href="varlik/sekil/n03_kodlayici_uyumu.svg">n03_kodlayici_uyumu.svg</a>
+ · <a href="varlik/sekil_png/n03_kodlayici_uyumu.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not istatistik"><span class="not-baslik">Cohen kappa nedir, neden yüzde uyum yetmez</span><p>İki kodlayıcının uyumunun <strong>rastlantı düzeltilmiş</strong> ölçüsüdür:</p>
+<p>kappa = (gözlenen uyum − beklenen uyum) / (1 − beklenen uyum)</p>
+<p>Yüzde uyum tek başına yanıltıcıdır. İki kodlayıcı her yanıta en
+yaygın temayı verse bile yüzde uyum yüksek çıkar. Kappa, rastlantıyla beklenecek uyumu hesaplayıp gözlenen uyumdan düşer.</p>
+<p><strong>Yorum eşikleri</strong> (Fleiss, 1981): &lt; 0,40 zayıf · 0,40–0,75 orta-iyi · &gt; 0,75 çok iyi. Landis ve Koch (1977) biraz farklı bantlar kullanır: 0,61–0,80 güçlü, 0,81–1,00 neredeyse tam. Buradaki 0,890 iki ölçüte göre de en üst banttadır.</p>
+<p><strong>Kaç yanıt ikinci okumaya alınır?</strong> Yaygın uygulama %20–30'dur;
+burada %26. Tamamını iki kez kodlamak ideal ama çoğu çalışmada
+olanaksızdır.</p></aside>
+
+<aside class="not "><span class="not-baslik">Kappa&#x27;nın 1,00 olmaması bir hata değildir</span><p>Uyuşmayan üç yanıta bakın: üçü de <strong>sınır</strong> yanıtlardır. K085 hem bir
+yöntem işinden (nitel kodlama) hem bir düşünme ortaklığından söz
+ediyor. K094 iki temayı tek cümlede sayıyor. K013 hem politika hem
+yönetmelik istiyor.</p>
+<p>Bu yanıtlar iki temaya da değiyor. Kappa'nın 1,00 olmaması, kodlama
+kararının <strong>yorum içerdiğinin</strong> kanıtıdır — ve nitel analizde bu bir
+kusur değil, yöntemin doğasıdır. Raporda yazılması gereken şey
+uyuşmazlığın <strong>nasıl çözüldüğüdür:</strong> burada üçü de tartışılıp
+birinci okumanın kodu korunmuştur.</p></aside>
+<h2 id="asama-5-6-sikliklar-ve-alintilar">Aşama 5–6 — Sıklıklar ve alıntılar</h2>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/n01_tema_sikligi.svg"
+ alt="Üç sorudaki tema sıklıkları" loading="lazy"></div>
+<figcaption><b>Şekil 10.3</b> Her sorudaki temaların katılımcı sayısına göre dağılımı. Sıklık, kod
+ataması sayısıyla değil <strong>kaç farklı katılımcının</strong> o temaya
+değindiğiyle ölçülüyor — bir kişinin aynı şeyi üç kez söylemesi
+temayı üç kat güçlü göstermemeli.
+<span class="indir">Dosya: <a href="varlik/sekil/n01_tema_sikligi.svg">n01_tema_sikligi.svg</a>
+ · <a href="varlik/sekil_png/n01_tema_sikligi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Soru 1 — Fayda görülen aşamalar (44 yanıt)</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Katılımcı</th>
+<th>%</th>
+<th>Kod ataması</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>İdari ve yayın yükü</td>
+<td>12</td>
+<td>27</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Literatürle baş etme</td>
+<td>9</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Veriyi işler hâle getirme</td>
+<td>9</td>
+<td>20</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Dil engelini aşma</td>
+<td>6</td>
+<td>14</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Düşünme ortağı</td>
+<td>6</td>
+<td>14</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Mesafeli duranlar</td>
+<td>5</td>
+<td>11</td>
+<td>5</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Temsil edici alıntı — Düşünme ortağı (K043):</strong>
+«Fikir aşamasında. Kafamdaki yarım fikri anlatıp üstüne konuşuyorum,
+bir tür düşünme ortağı gibi. Çıktısını kullanmıyorum, konuşmanın
+kendisi fayda veriyor.»</p></div></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Soru 2 — Çekince ve kaygılar (40 yanıt)</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Katılımcı</th>
+<th>%</th>
+<th>Kod ataması</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Güvenilirlik</strong></td>
+<td><strong>13</strong></td>
+<td><strong>32</strong></td>
+<td>13</td>
+</tr>
+<tr>
+<td>Yazarlık ve özgünlük</td>
+<td>8</td>
+<td>20</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Kuralsızlık</td>
+<td>6</td>
+<td>15</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Beceri ve erişim</td>
+<td>5</td>
+<td>12</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Kaygı duymayanlar</td>
+<td>4</td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Öğretim ve değerlendirme</td>
+<td>4</td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Veri ve gizlilik</td>
+<td>2</td>
+<td>5</td>
+<td>3</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Temsil edici alıntı — Güvenilirlik (K112):</strong>
+«Atıf uydurmasının en sinsi hâli: gerçek bir DOI'ye yanlış başlık
+yakıştırması. DOI açılıyor, yazı başka. Kontrol ederken açılıyor mu
+diye bakmak yetmiyor.»</p></div></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Soru 3 — Kurumdan beklentiler (32 yanıt)</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Katılımcı</th>
+<th>%</th>
+<th>Kod ataması</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eğitim ve rehberlik</td>
+<td>10</td>
+<td>31</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Erişim ve altyapı</td>
+<td>7</td>
+<td>22</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Yazılı politika</td>
+<td>7</td>
+<td>22</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Yönetmelik ve denetim</td>
+<td>7</td>
+<td>22</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Yöntem desteği</td>
+<td>3</td>
+<td>9</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Beklentisi olmayanlar</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Temsil edici alıntı — Eğitim ve rehberlik (K004):</strong>
+«Eğitim. Ama bir saatlik tanıtım değil, elini kirleterek yapılan,
+kendi verimle çalıştığım bir atölye.»</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Nitel bulguda yüzde kullanmanın sınırı</span><p>Yukarıdaki tablolarda yüzde verildi çünkü örüntünün büyüklüğünü
+görmeyi kolaylaştırıyor. Ama nitel analizde yüzde, nicel bir iddia
+değildir: bu 45 katılımcı bir örneklemi temsil etmez ve "%32"
+istatistiksel bir tahmin değildir.</p>
+<p>Doğru dil: <em>"Katılımcıların önemli bir bölümü (13/40) güvenilirlik
+temasına değinmiştir."</em> Yanlış dil: <em>"Akademisyenlerin %32'si
+güvenilirlik kaygısı taşımaktadır."</em> İkincisi, nitel veriden nicel
+bir genelleme çıkarıyor.</p></aside>
+<h2 id="betimsel-analiz-ile-tematik-analizin-farki">Betimsel analiz ile tematik analizin farkı</h2>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Betimsel içerik analizi</span></p>
+<p class="kart-baslik">Ne söylendiğini sayar</p>
+<p>Önceden belirlenmiş kategorilere göre, metinde hangi içeriğin kaç kez
+geçtiği sayılır. Kategoriler veriden değil kuramdan ya da önceki
+çalışmalardan gelir. Sonuç bir frekans tablosudur. Hızlıdır ve
+tekrarlanabilirliği yüksektir.</p></div><div class="kart"><p><span class="no">Tematik analiz</span></p>
+<p class="kart-baslik">Örüntüyü veriden çıkarır</p>
+<p>Kodlar veriden türetilir, temalar kodlardan oluşur. Araştırmacının
+yorumu yöntemin parçasıdır. Sonuç bir tema yapısıdır. Daha yavaştır,
+daha derindir ve güvenilirliği ikinci kodlayıcıyla gösterilir.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Hangisini seçmeli</span><p>Araştırma sorunuz "<strong>ne kadar sık</strong>" diye soruyorsa betimsel içerik
+analizi; "<strong>nasıl</strong> ve <strong>neden</strong>" diye soruyorsa tematik analiz.
+İkisini birleştirmek de olur: temaları tematik analizle çıkarıp
+sıklıklarını raporlamak — bu bölümde yapılan budur.</p></aside>
+<h2 id="nitel-bulgulari-yazmak">Nitel bulguları yazmak</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tema yapısından Bulgular bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma yayımlayan bir araştırmacı olarak Bulgular bölümünü
+yazıyorsun.
+
+KAYNAK
+Ekte üç dosya:
+— tematik_analiz.json: tema yapısı, sıklıklar, kodlayıcı uyumu
+— tematik_kod_kitabi.csv: 63 kodun tanımları
+— anket_acik_uclu.csv: ham yanıtların tamamı
+
+GÖREV
+Nitel bulgular bölümünü yaz.
+
+YAPI
+Her tema için:
+1. Tema adı — alt başlık olarak
+2. Tanım — temanın neyi kapsadığı, 2–3 cümle
+3. Kapsam — kaç katılımcının bu temaya değindiği
+4. İçerik — temaya giren kodların anlattığı örüntü, 1–2 paragraf
+5. Alıntı — en çok iki alıntı, her biri katılımcı numarasıyla
+
+ALINTI SEÇME ÖLÇÜTLERİ
+— Temayı en açık gösteren yanıtı seç, en uzun olanı değil
+— Aynı katılımcıdan birden çok tema için alıntı yapma
+— Alıntıyı kısaltıyorsan kesilen yeri […] ile göster
+— Yanıtı düzeltme; yazım hatası varsa olduğu gibi bırak
+
+ÜSLUP
+— Resmî akademik Türkçe
+— Alıntıları italik ya da tırnak içinde, katılımcı kodu parantezde
+— Temalar arası geçişlerde bağlantı cümleleri kur; temalar
+  birbirinden kopuk listelenmesin
+
+SINIRLAR
+— Hiçbir alıntıyı değiştirme, birleştirme ya da uydurma. Her alıntı
+  ham veri dosyasında birebir bulunmalı.
+— Nitel bulgudan nicel genelleme çıkarma. &quot;Katılımcıların %32&#x27;si&quot;
+  yerine &quot;katılımcıların önemli bir bölümü (13/40)&quot; yaz.
+— Bulguyu yorumlama; bu Bulgular bölümü, Tartışma değil.
+— Veride olmayan bir temadan söz etme.
+
+DENETİM
+Bölümün sonunda:
+— Kaç tema raporlandı? Tema yapısındaki sayıyla eşit mi?
+— Kaç alıntı kullanıldı, kaç farklı katılımcıdan?
+— Her alıntının ham veri dosyasında bulunduğunu doğruladın mı?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Tema yapısından Bulgular bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma yayımlayan bir araştırmacı olarak Bulgular bölümünü
+yazıyorsun.
+
+KAYNAK
+Ekte üç dosya:
+— tematik_analiz.json: 19 tema, 63 kod, sıklıklar, kodlayıcı uyumu
+  (Cohen kappa = 0,890)
+— tematik_kod_kitabi.csv: 63 kodun tanımları
+— anket_acik_uclu.csv: 116 ham yanıtın tamamı
+
+ARAŞTIRMA SORUSU
+Akademisyenler üretken yapay zekâ araçlarını araştırma süreçlerinin
+hangi aşamalarında yararlı buluyor, hangi kaygıları taşıyor ve
+kurumlarından ne bekliyor?
+
+GÖREV
+Nitel bulgular bölümünü yaz.
+
+YAPI
+Üç ana başlık (üç soru), her başlık altında temalar sıklığa göre.
+Her tema için:
+1. Tema adı — alt başlık olarak
+2. Tanım — temanın neyi kapsadığı, 2–3 cümle
+3. Kapsam — kaç katılımcının bu temaya değindiği
+4. İçerik — temaya giren kodların anlattığı örüntü, 1–2 paragraf
+5. Alıntı — en çok iki alıntı, her biri katılımcı numarasıyla
+
+ALINTI SEÇME ÖLÇÜTLERİ
+— Temayı en açık gösteren yanıtı seç, en uzun olanı değil
+— Aynı katılımcıdan birden çok tema için alıntı yapma
+— Alıntıyı kısaltıyorsan kesilen yeri […] ile göster
+— Yanıtı düzeltme; yazım hatası varsa olduğu gibi bırak
+
+BU ANALİZE ÖZGÜ
+— &quot;Mesafeli duranlar&quot; ve &quot;Kaygı duymayanlar&quot; temalarını da
+  raporla. Azınlık temalarını atlamak bulguyu çarpıtır.
+— Kodlayıcılar arası uyum (kappa = 0,890) ve uyuşmayan üç yanıtın
+  nasıl çözüldüğü, bölümün başında kısaca verilsin.
+— Veri sentetik. Bölümün başına bunu belirten bir cümle koy.
+
+ÜSLUP
+— Resmî akademik Türkçe
+— Alıntılar tırnak içinde, katılımcı kodu parantezde
+— Temalar arası geçişlerde bağlantı cümleleri kur
+
+SINIRLAR
+— Hiçbir alıntıyı değiştirme, birleştirme ya da uydurma. Her alıntı
+  ham veri dosyasında birebir bulunmalı.
+— Nitel bulgudan nicel genelleme çıkarma. &quot;Katılımcıların %32&#x27;si&quot;
+  yerine &quot;katılımcıların önemli bir bölümü (13/40)&quot; yaz.
+— Bulguyu yorumlama; bu Bulgular bölümü, Tartışma değil.
+— Veride olmayan bir temadan söz etme.
+
+DENETİM
+Bölümün sonunda:
+— Kaç tema raporlandı? Tema yapısındaki sayıyla (19) eşit mi?
+— Kaç alıntı kullanıldı, kaç farklı katılımcıdan?
+— Her alıntının ham veri dosyasında bulunduğunu doğruladın mı?</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Alıntı doğrulaması makineyle yapılır</span><p>Yukarıdaki istemin son denetim maddesi önemlidir ama yeterli
+değildir: model kendi alıntısını "doğruladım" diyebilir. Gerçek doğrulama, metindeki her alıntıyı ham veride arayan kısa bir
+betiktir.</p></aside>
+
+<div class="kod-blok">
+<header><span class="dil">python</span>
+<span>Metindeki her alıntının ham veride bulunduğunu doğrulama</span></header>
+<pre><code>import re
+import pandas as pd
+
+yanitlar = pd.read_csv(&quot;anket_acik_uclu.csv&quot;)[&quot;yanit&quot;].tolist()
+metin = open(&quot;bulgular.md&quot;, encoding=&quot;utf-8&quot;).read()
+
+# Tirnak icindeki her pasaji cikar (« » ya da &quot; &quot;)
+alintilar = re.findall(r&quot;«(.+?)»&quot;, metin, flags=re.S)
+
+bulunamayan = []
+for a in alintilar:
+    temiz = &quot; &quot;.join(a.replace(&quot;[…]&quot;, &quot;…&quot;).split())
+    # Kesilmis alinti olabilir: parcalarin her biri aranir
+    parcalar = [p.strip() for p in temiz.split(&quot;…&quot;) if len(p.strip()) &gt; 15]
+    for p in parcalar:
+        if not any(p in &quot; &quot;.join(y.split()) for y in yanitlar):
+            bulunamayan.append(p[:70])
+
+print(f&quot;Metindeki alinti sayisi      : {len(alintilar)}&quot;)
+print(f&quot;Ham veride bulunamayan parca : {len(bulunamayan)}&quot;)
+for b in bulunamayan:
+    print(f&quot;   BULUNAMADI: {b}…&quot;)</code></pre></div>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Tematik analiz altı aşamalı bir yöntemdir; her aşaması kaydedilir ve
+raporlanır.</p></li><li><p>Model kod önerir, siz karar verirsiniz. Bu kurstaki analizde model
+önerilerinin yaklaşık yarısı değiştirildi.</p></li><li><p>Kod kitabı ve kod atamaları ham veriyle birlikte yayımlanır; nitel
+analizin yeniden üretilebilirliği buna bağlıdır.</p></li><li><p>Güvenilirlik, ikinci bir okumayla ve Cohen kappa ile gösterilir.
+Kappa'nın 1,00 olmaması kusur değil; uyuşmazlıkların nasıl
+çözüldüğünü yazmamak kusurdur.</p></li><li><p>Sıklık, kod sayısıyla değil kaç farklı katılımcının değindiğiyle
+ölçülür.</p></li><li><p>Nitel veriden nicel genelleme çıkarılmaz. "13/40" yazılır, "%32'si"
+yazılmaz.</p></li><li><p>Metindeki her alıntının ham veride birebir bulunduğu makineyle
+doğrulanır.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="09-web-guvenligi.html"><span class="yon">← Önceki</span><span class="ad">Makine öğrenmesi ve veri sızıntısı</span></a><a class="sag" href="11-grafik-tablo.html"><span class="yon">Sonraki →</span><span class="ad">Şekil ve tablo: analiz çıktısından yayına</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

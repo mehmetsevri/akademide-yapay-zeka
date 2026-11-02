@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model nasıl çalışır, neden yanılır — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Büyük dil modelinin davranışını, akademik işte karşınıza çıkacak sonuçlar açısından açıklıyoruz: neden kaynak uydurur, neden emin görünür, hangi iş ha">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Model nasıl çalışır, neden yanılır</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa etkin" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><div class="alt-liste"><a href="#model-ne-yapiyor">Model ne yapıyor</a><a href="#neden-kaynak-uyduruyor">Neden kaynak uyduruyor</a><a href="#hangi-is-hangi-araca">Hangi iş hangi araca</a><a href="#kaynaga-bagli-calisma-nedir">Kaynağa bağlı çalışma nedir</a><a href="#sicaklik-uzunluk-ve-diger-ayarlar">Sıcaklık, uzunluk ve diğer ayarlar</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 1</div><h1>Model nasıl çalışır, neden yanılır</h1><p class="ozet">Büyük dil modelinin davranışını, akademik işte karşınıza çıkacak sonuçlar açısından açıklıyoruz: neden kaynak uydurur, neden emin görünür, hangi iş hangi araca verilir.</p><p>Bir aracı doğru kullanmanın önkoşulu, onun neyi yapamadığını bilmektir.
+Bu bölüm teknik bir ders değil; büyük dil modellerinin davranışını,
+akademik işte karşılaşacağınız sonuçlar açısından açıklıyor.</p>
+<h2 id="model-ne-yapiyor">Model ne yapıyor</h2>
+<p>Bir büyük dil modeli, metnin devamını tahmin eder. Önüne konan sözcük
+dizisine bakar ve "bundan sonra hangi sözcük gelmeli" sorusunu, çok
+büyük bir metin yığınından öğrendiği örüntülere göre yanıtlar. Sonra
+aynı işlemi, kendi ürettiği sözcüğü de dizinin sonuna ekleyerek
+yineler.</p>
+<p>Bu basit görünen mekanizmanın akademik iş açısından dört sonucu var ve
+dördü de bu kursun geri kalanını belirliyor.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Sonuç 1</span></p>
+<p class="kart-baslik">Model doğruyu değil, olasıyı üretir</p>
+<p>"Bu cümleden sonra en olası devam nedir" sorusunun yanıtı çoğu zaman
+doğru olanla örtüşür — ama örtüşmek zorunda değildir. Model, doğru
+bir kaynak ile inandırıcı görünen uydurma bir kaynağı aynı rahatlıkla
+üretir, çünkü ikisi de "olası metin"dir.</p></div><div class="kart"><p><span class="no">Sonuç 2</span></p>
+<p class="kart-baslik">Emin görünmek, emin olmak değildir</p>
+<p>Modelin üslubu her zaman kendinden emindir. Bu bir karakter özelliği
+değil, eğitildiği metinlerin üslubudur: akademik ve ansiklopedik
+metinler kendinden emin yazılır. Belirsizliği ifade etmesi için
+ayrıca istenmelidir.</p></div><div class="kart"><p><span class="no">Sonuç 3</span></p>
+<p class="kart-baslik">Hafızası oturumla sınırlıdır</p>
+<p>Model, bu özellik ayrıca açılmadıkça önceki konuşmaları hatırlamaz.
+Bir oturumda verdiğiniz bağlam o oturumda geçerlidir. Uzun oturumlarda başta verilen talimatların
+etkisi zayıflar — bu yüzden uzun işlerde talimat yinelenir.</p></div><div class="kart"><p><span class="no">Sonuç 4</span></p>
+<p class="kart-baslik">Bilgisi bir tarihte durur</p>
+<p>Modelin eğitim verisi belirli bir tarihe kadardır. O tarihten sonraki
+yayınları bilmez. Ama bilmediğini söylemek yerine, bildiği eski
+bilgiyle yanıt verme eğilimindedir. Son bir yılın literatürünü ondan
+sormak güvenli değildir.</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">En sinsi hata biçimi</span><p>Uydurma kaynakların en zor yakalanan türü, <strong>gerçek bir DOI'ye yanlış
+bir başlık yakıştırılmış</strong> olanıdır. DOI'yi tarayıcıya yazarsınız,
+açılır — ama açılan sayfadaki makale, modelin size söylediği makale
+değildir. "Bağlantı çalışıyor mu" diye bakmak bu hatayı yakalamaz.
+Başlığın kendisi karşılaştırılmalıdır. Bu kursta kullanılan her DOI,
+içerik görüşmesiyle (content negotiation) doğrulanmıştır; ikisini de
+uydurmuş olduğumu 5. bölümde göstereceğim.</p></aside>
+<h2 id="neden-kaynak-uyduruyor">Neden kaynak uyduruyor</h2>
+<p>Bu soru sık sorulur. Yanıt şu: kaynak uydurmak modelin bir arızası
+değil, çalışma biçiminin doğal sonucudur.
+Modelin gördüğü milyonlarca atıf şu kalıbı taşır: yazar adı, yıl,
+başlık, dergi, cilt, sayfa, DOI. Model bu kalıbı çok iyi öğrenmiştir.
+Sizden bir atıf istendiğinde, kalıbı <strong>doldurur</strong>. Doldurduğu alanlar tek tek
+bakıldığında akla yatkındır: o alanda çalışan gerçek bir yazarın adı,
+o konuyla ilgili inandırıcı bir başlık, o alanda yayın yapan gerçek bir
+dergi. Yalnız bu üçü hiçbir zaman bir arada yayımlanmamıştır. Ortaya
+çıkan şey bir veritabanı kaydı değil, bir <strong>kalıp tamamlama</strong>dır.</p>
+<figure class="sekil" id="s-uyum">
+<div class="cerceve"><img src="varlik/sekil/n03_kodlayici_uyumu.svg"
+ alt="Şekil 1.1" loading="lazy"></div>
+<figcaption><b>Şekil 1.1</b> Açık uçlu anket yanıtlarını temalara ayırma işine nitel kodlama denir.
+Bu şekil, kursta her kodlama kararının ikinci bir okumayla bağımsız
+olarak yinelendiğini ve iki okumanın ne ölçüde örtüştüğünü gösteriyor.
+Burada erken veriliyor çünkü bir ilkeyi özetliyor:
+<strong>tek bir okumaya, tek bir modele, tek bir çıktıya güvenilmez.</strong>
+Ayrıntısı 10. bölümde.
+<span class="indir">Dosya: <a href="varlik/sekil/n03_kodlayici_uyumu.svg">n03_kodlayici_uyumu.svg</a>
+ · <a href="varlik/sekil_png/n03_kodlayici_uyumu.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Buradan çıkan pratik kural: <strong>modelden kaynak istenmez, kaynak
+doğrulatılır.</strong> Kaynağı siz bulur, modele verirsiniz; model o kaynak
+üzerinde çalışır. Kursun 5. bölümü tam olarak bu düzeni kuruyor.</p>
+<h2 id="hangi-is-hangi-araca">Hangi iş hangi araca</h2>
+<p>Araçlar birbirinin yerine geçmez. Aşağıdaki tablo, bu kursta hangi işin
+hangi araçla yapıldığını ve neden öyle yapıldığını gösteriyor.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>İş</th>
+<th>Uygun araç türü</th>
+<th>Neden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uzun metin yazma, düzenleme, eleştirme</td>
+<td>Genel amaçlı sohbet modeli (Claude, ChatGPT, Gemini)</td>
+<td>Metin üretimi ve değerlendirmesi bu araçların asıl işi</td>
+</tr>
+<tr>
+<td>Kod yazma ve veri analizi</td>
+<td>Kod odaklı araçlar (Claude Code, Codex, Copilot)</td>
+<td>Kodu yazıp <strong>çalıştırabilen</strong> araç, yazıp bırakandan daha güvenlidir</td>
+</tr>
+<tr>
+<td>Literatür arama</td>
+<td>Veri tabanının kendisi (WoS, Scopus, IEEE Xplore)</td>
+<td>Dil modeli bir arama motoru değildir; kayıt tutmaz</td>
+</tr>
+<tr>
+<td>Literatür tarama yardımı</td>
+<td>Kaynak bağlı araçlar (Elicit, Consensus, Scite)</td>
+<td>Yanıtı belirli bir makale kümesine bağlarlar</td>
+</tr>
+<tr>
+<td>Kendi PDF'leriniz üzerinde soru-yanıt</td>
+<td>Yalnız sizin yüklediğiniz belgelere bakan araçlar (ör. NotebookLM)</td>
+<td>Yanıt yalnız verdiğiniz belgelerden üretilir</td>
+</tr>
+<tr>
+<td>Kaynak yönetimi</td>
+<td>Zotero, Mendeley, EndNote</td>
+<td>Künye doğruluğu bir veritabanı işidir</td>
+</tr>
+<tr>
+<td>Atıf doğrulama</td>
+<td>doi.org (DOI numarasını yazıp yayıncının kaydını okumak), Crossref, Retraction Watch</td>
+<td>Künyeyi yayıncının kendi kaydından okumak tek güvenilir yoldur</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not ipucu"><span class="not-baslik">Bu kursun tek kuralı</span><p>Model <strong>bir şeyi üretebilir</strong> ya da <strong>verdiğiniz bir şey üzerinde
+çalışabilir.</strong> İkincisi birincisinden her zaman daha güvenlidir. "Bana on
+kaynak bul" ile "şu on kaynağı okudum, hangisi benim soruma yanıt
+veriyor" arasındaki fark, bu kursun yarısıdır.</p></aside>
+<h2 id="kaynaga-bagli-calisma-nedir">Kaynağa bağlı çalışma nedir</h2>
+<aside class="not "><span class="not-baslik">Bu bölümdeki iki istem neden doldurulmuş hâliyle veriliyor</span><p>Kursun geri kalanındaki istemler <strong>kalıp</strong> biçimindedir: içlerinde
+<code>[sorunuzu yazın]</code> gibi, sizin dolduracağınız boşluklar bulunur. Her
+kalıbın altında da, aynı kalıbın gerçek bir örnekle doldurulmuş hâli
+durur.</p>
+<p>Aşağıdaki iki istem bunun dışında. İkisi de baştan somut yazıldı,
+çünkü amaçları bir iş yaptırmak değil, <strong>iki yaklaşımı yan yana
+göstermek.</strong> Birincisi ne yapılmaması gerektiğinin örneği, ikincisi
+ne yapılması gerektiğinin.</p></aside>
+<p>Bir isteme kaynak eklemek, modelin davranışını kökten değiştirir.
+Kaynak verilmediğinde model kendi örüntülerinden üretir; kaynak
+verildiğinde o metni işler. İkisinin farkını görmek için aynı soruyu
+iki kez sorduk.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kaynaksız soru — ne olmaması gerektiğinin örneği</span>
+<span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Kimlik avı (phishing) URL&#x27;lerinin makine öğrenmesiyle saptanması
+konusunda son beş yılın en önemli beş makalesini DOI&#x27;leriyle birlikte
+listele.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Bu istemin sorunu</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>Bu isteme verilecek her yanıt denetlenmeden kullanılamaz, çünkü model
+elindeki bir listeden seçmiyor — kalıbı dolduruyor. Yanıtta çıkan beş
+künyenin kaçının gerçek olduğu ancak tek tek doğrulanarak anlaşılır.
+Doğrulama işi, aramayı kendiniz yapmaktan uzun sürer.</p>
+<p><strong>Asıl sorun şu:</strong> yanıt doğru çıksa bile yöntem savunulabilir değildir.
+Makalenizin Yöntem bölümüne "kaynakları bir dil modeline sordum"
+yazamazsınız. Sistematik bir tarama, hangi veri tabanında hangi dizgiyle
+hangi tarihte arandığını yazmayı gerektirir.</p></div></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kaynağa bağlı soru — doğru kullanım</span>
+<span class="arac">Literatür</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Sana Web of Science&#x27;tan 14 Ekim 2026 tarihinde indirdiğim 64 kaydın
+BibTeX dosyasını veriyorum (ekte).
+
+GÖREV
+Bu 64 kayıt arasından, aşağıdaki araştırma sorusuna doğrudan katkı
+veren kayıtları seç.
+
+ARAŞTIRMA SORUSU
+URL dizgisinden türetilen sözcüksel özelliklerle, sayfa içeriğine
+erişmeden kimlik avı saptaması ne ölçüde başarılıdır?
+
+SEÇİM ÖLÇÜTLERİ
+Dahil et:
+  — URL tabanlı ya da sözcüksel özellik kullanan ampirik çalışma
+  — en az bir nicel başarı ölçütü raporlayan (F1, AUC, kesinlik)
+  — 2019 veya sonrası
+Hariç tut:
+  — yalnız sayfa içeriği ya da görsel özellik kullananlar
+  — derleme ve konum bildirisi niteliğindeki yazılar
+  — tam metni erişilemeyenler
+
+ÇIKTI BİÇİMİ
+Markdown tablo, şu sütunlarla:
+  BibTeX anahtarı | Yıl | Başlık | Karar (DAHİL / HARİÇ) | Gerekçe (en çok 12 kelime)
+
+SINIRLAR
+— Yalnız verdiğim dosyadaki kayıtları değerlendir. Listeye kayıt EKLEME.
+— Dosyada olmayan hiçbir künye, DOI ya da başlık üretme.
+— Bir kaydın başlığı ve özeti karar vermeye yetmiyorsa kararı
+  &quot;BELİRSİZ&quot; yaz ve neyin eksik olduğunu belirt.
+
+DENETİM
+Tablonun altına şu üç sayıyı yaz: değerlendirilen kayıt sayısı,
+DAHİL sayısı, BELİRSİZ sayısı. Üçünün toplamı 64 etmelidir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Bu istemi neden iyi sayıyoruz</span><p>İstemin altı parçasından beşi burada: rol yok, ama görev, kaynak,
+biçim, sınır ve denetim açık. En önemlisi son iki bölüm: <strong>"listeye kayıt ekleme"</strong>
+uydurmayı engelliyor, <strong>"üçünün toplamı 64 etmelidir"</strong> ise modelin
+kendi çıktısını sayarak denetlemesini sağlıyor. Toplam tutmuyorsa bir
+şey atlanmış demektir ve bunu siz saymadan görürsünüz. Altı parçanın
+tamamı 3. bölümde.</p></aside>
+<h2 id="sicaklik-uzunluk-ve-diger-ayarlar">Sıcaklık, uzunluk ve diğer ayarlar</h2>
+<p>Akademik işte iki ayar önemlidir ve ikisi de çoğu arayüzde gizlidir.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Sıcaklık (temperature)</span></p>
+<p class="kart-baslik">Çeşitlilik ayarı</p>
+<p>Düşük değer (0–0,3) daha öngörülebilir, tekrarlanabilir çıktı verir;
+veri analizi, kod ve künye işleri için uygundur. Yüksek değer (0,7–1,0)
+daha çeşitli üretir; başlık alternatifi, fikir listesi gibi işlerde
+işe yarar. Aynı istemi iki kez koşturup farklı yanıt alıyorsanız
+sıcaklık sıfır değildir.</p></div><div class="kart"><p><span class="no">Bağlam penceresi</span></p>
+<p class="kart-baslik">Modelin bir anda görebildiği metin</p>
+<p>Oturum uzadıkça pencere dolar; eski kısımlar özetlenir ya da düşer.
+Uzun bir makale üzerinde çalışırken baştaki talimatlarınızın hâlâ
+geçerli olduğunu varsaymayın. Uzun işte her ana adımda talimatı
+yineleyin, ya da işi ayrı oturumlara bölün.</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Aynı istem, farklı yanıt</span><p>Bir isteme bugün aldığınız yanıtla yarın alacağınız yanıt aynı
+olmayabilir. Model sürümleri değişir, varsayılan ayarlar değişir. Bu
+yüzden yöntem bölümünde <strong>hangi model, hangi sürüm, hangi tarih</strong>
+yazılır. Bu kurstaki bütün çıktılar Claude Opus 5 ile 2 Kasım 2026'da
+üretildi ve her çıktı kutusunun köşesinde bu damga duruyor.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Model doğruyu değil olasıyı üretir. Çıktının doğruluğu ayrı bir işle
+denetlenir, modelin üslubuna bakılarak değerlendirilmez.</p></li><li><p>Kaynak modelden istenmez; kaynak modele verilir. "Bul" yerine
+"verdiğim şunun üzerinde çalış" denir.</p></li><li><p>Uydurma kaynağın en tehlikeli türü, gerçek DOI'ye yanlış başlık
+yakıştırılmış olanıdır. Bağlantının açılması doğrulama değildir.</p></li><li><p>Hangi model, hangi sürüm, hangi tarih — bu üçü yöntem bölümüne yazılır.</p></li><li><p>Bir çıktıyı kullanmadan önce tek bir soru sorun: bu sayıyı, bu
+künyeyi, bu cümleyi nereden doğrulayabilirim?</p></li></ol>
+
+<nav class="sayfa-alt"><a href="durum-raporu.html"><span class="yon">← Önceki</span><span class="ad">Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sag" href="02-etik.html"><span class="yon">Sonraki →</span><span class="ad">Etik, yazarlık, gizlilik ve beyan</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

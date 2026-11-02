@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makaleyi bölüm bölüm yazmak — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Hangi bölümün hangi sırayla yazılacağı ve her bölüm için ayrı bir istem. Yöntemden öze, kısıt yazmaktan dergi seçimine.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Makaleyi bölüm bölüm yazmak</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa etkin" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><div class="alt-liste"><a href="#yazim-sirasi">Yazım sırası</a><a href="#yontem-bolumu">Yöntem bölümü</a><a href="#bulgular-bolumu">Bulgular bölümü</a><a href="#tartisma-bolumu">Tartışma bölümü</a><a href="#giris-bolumu">Giriş bölümü</a><a href="#oz-ve-baslik">Öz ve başlık</a><a href="#ayni-calismadan-bildiri-posteri">Aynı çalışmadan bildiri posteri</a><a href="#dil-ve-insanlastirma">Dil ve insanlaştırma</a><a href="#dergi-secimi-ve-gonderim">Dergi seçimi ve gönderim</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 12</div><h1>Makaleyi bölüm bölüm yazmak</h1><p class="ozet">Hangi bölümün hangi sırayla yazılacağı ve her bölüm için ayrı bir istem. Yöntemden öze, kısıt yazmaktan dergi seçimine.</p><p>Makaleyi baştan sona sırayla yazmak, çoğu kişinin denediği ve çoğu
+kişinin tıkandığı yoldur. Giriş bölümüyle başlarsanız, henüz
+bulmadığınız bir şeyi tanıtmaya çalışırsınız. Bu bölüm başka bir sıra
+öneriyor ve her bölüm için ayrı bir istem veriyor.</p>
+<h2 id="yazim-sirasi">Yazım sırası</h2>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/g02_yazim_sirasi.svg"
+ alt="Makale yazım sırası" loading="lazy"></div>
+<figcaption><b>Şekil 12.1</b> Makale bölümlerinin yazılma sırası ile okunma sırası farklıdır. Soldaki
+sütun okurun gördüğü sırayı, sağdaki yazarın izlemesi gereken sırayı
+gösteriyor.
+<span class="indir">Dosya: <a href="varlik/sekil/g02_yazim_sirasi.svg">g02_yazim_sirasi.svg</a>
+ · <a href="varlik/sekil_png/g02_yazim_sirasi.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Mantığı basit: <strong>elinizde en çok malzeme olan bölümden başlayın.</strong></p>
+<ol class="adimlar"><li><p><strong>Yöntem.</strong> Ne yaptığınızı zaten biliyorsunuz. Analiz defterinizi ve
+temizleme günlüğünüzü açıp yazmaya başlayabilirsiniz. En kolay bölüm
+budur ve yazarken çalışmanın sınırlarını yeniden görürsünüz.</p></li><li><p><strong>Bulgular.</strong> Sayılar elinizde. Yorum yok, yalnız ne bulunduğu. Tablo
+ve şekilleri burada yerleştirirsiniz.</p></li><li><p><strong>Tartışma.</strong> Bulguların ne anlama geldiği. Burada ilk kez
+literatürle konuşmaya başlarsınız, dolayısıyla hangi kaynaklara
+ihtiyacınız olduğu belli olur.</p></li><li><p><strong>İlgili çalışmalar.</strong> Tartışmayı yazarken hangi çalışmalarla
+konuştuğunuz ortaya çıkmıştır. Şimdi onları düzenli bir bölüme
+dönüştürürsünüz.</p></li><li><p><strong>Giriş.</strong> Artık çalışmanın ne olduğunu, ne bulduğunu ve literatürde
+nereye oturduğunu biliyorsunuz. Giriş bunların tanıtımıdır; önce
+yazılırsa tahmine dayanır.</p></li><li><p><strong>Sonuç.</strong> Girişte verdiğiniz sözün tutulup tutulmadığı. Girişten
+sonra yazılır ki sözle karşılığı birbirini tutsun.</p></li><li><p><strong>Öz.</strong> Makalenin tamamının özeti. Sondan bir önceki sırada yazılır; özetlenecek şey ancak o zaman hazırdır.</p></li><li><p><strong>Başlık.</strong> En kısa bölüm, en son. Çalışmanın tamamını gördükten
+sonra en iyi başlığı bulursunuz.</p></li></ol>
+
+<aside class="not ipucu"><span class="not-baslik">Bu sıranın pratik faydası</span><p>Giriş bölümünü yazım sırasının sonlarına bırakmak, en çok vakit kazandıran
+tek karardır.
+Baştan yazılan giriş, çalışma ilerledikçe üç dört kez yeniden yazılır;
+çünkü her yeni bulgu girişteki iddiayı değiştirir. Sonda yazılan giriş
+bir kez yazılır.</p></aside>
+<h2 id="yontem-bolumu">Yöntem bölümü</h2>
+<p>Yöntem bölümünün ölçütü tek: <strong>başka biri bu bölümü okuyup çalışmayı
+yineleyebilir mi?</strong></p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Yöntem bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında yayın yapan bir araştırmacı olarak makalenin Yöntem bölümünü
+yazıyorsun.
+
+KAYNAK — dört dosya veriyorum
+1. Veri setinin künyesi ve betimi
+2. Temizleme günlüğü (hangi karar, kaç satır, hangi gerekçe)
+3. Analiz çıktısı (hangi test, hangi varsayım denetimi, hangi sonuç)
+4. Kullandığım yazılım ve sürümleri
+
+GÖREV
+Yöntem bölümünü yaz.
+
+ALT BAŞLIKLAR
+1. Araştırma deseni
+2. Veri kaynağı ve örneklem
+3. Veri hazırlama
+4. Ölçme araçları (varsa)
+5. Analiz yöntemi
+6. Yazılım ve yeniden üretilebilirlik
+
+ZORUNLU İÇERİK
+— Örneklem büyüklüğü ve nasıl elde edildiği
+— Çıkarılan her kayıt ve gerekçesi (temizleme günlüğünden)
+— Her analiz için: hangi test, neden seçildi, hangi varsayım
+  denetlendi, nasıl denetlendi
+— Varsayım sağlanmadıysa ne yapıldı
+— Yazılım adları ve sürüm numaraları
+— Rastgelelik varsa kullanılan tohum değeri
+— Etik kurul onayı (varsa numara ve tarih)
+
+ÜSLUP
+— Resmî akademik Türkçe, geçmiş zaman, edilgen çatı
+— &quot;Yapılacaktır&quot; değil &quot;yapılmıştır&quot;; bu bölüm olan biteni anlatır
+
+SINIRLAR
+— Verdiğim dosyalarda olmayan hiçbir işlemden söz etme.
+— Bulgu yazma. Yöntem bölümünde sonuç olmaz.
+— Yöntemi savunma ya da övme. &quot;Bu yöntem en uygun olanıdır&quot; deme;
+  neden seçildiğini söyle, yeter.
+— &quot;Literatürde yaygın olarak kullanılan&quot; gibi kaynaksız
+  genellemelerden kaçın.
+
+DENETİM
+Bölümün sonuna şu soruyu yanıtla: bu bölümü okuyan biri, elinde
+yalnız veri seti ve bu metinle çalışmayı yineleyebilir mi? Eksik
+kalan bilgi varsa listele.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Yöntem bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimleri alanında yayın yapan bir araştırmacı olarak
+makalenin Yöntem bölümünü yazıyorsun. Hedef dergi, ölçme ve
+değerlendirme ağırlıklı bir eğitim dergisi.
+
+KAYNAK — dört dosya
+1. Veri setinin künyesi ve betimi: Gündüz &amp; Fokoué (2013), Turkiye
+   Student Evaluation, UCI, doi:10.24432/C5S02S. 5.820 değerlendirme,
+   28 Likert maddesi (1–5), beş ek değişken, eksik hücre yok.
+2. Veri hazırlama günlüğü: 04_gazi_veri_hazirla.py çıktısı — hangi madde hangi boyuta atandı, ölçek puanları nasıl hesaplandı, Türkçe madde sözlüğü nasıl eşleştirildi.
+3. Analiz çıktısı: sosyal_analiz.txt ve sosyal_analiz.json — on iki
+   blok. Her blokta testin adı, varsayım denetimi, sonuç ve etki
+   büyüklüğü var.
+4. Yazılım: Python 3.14; pandas 3.1.0, NumPy 2.5.4, SciPy 1.18.1,
+   statsmodels 0.15.0, scikit-learn 1.9.1, Matplotlib 3.11.2.
+   Rastgelelik içeren adımlarda tohum 20261103.
+
+ÇALIŞMANIN SORUSU
+Ders değerlendirme ölçeğinin iki boyutu birbirinden ayrışıyor mu, ve
+derse katılım ile algılanan güçlük bu boyutları farklı mı
+etkiliyor?
+
+GÖREV
+Yöntem bölümünü yaz.
+
+ALT BAŞLIKLAR
+1. Araştırma deseni
+2. Veri kaynağı ve örneklem
+3. Veri hazırlama
+4. Ölçme aracı
+5. Analiz yöntemi
+6. Yazılım ve yeniden üretilebilirlik
+
+ZORUNLU İÇERİK
+— Örneklem büyüklüğü ve nasıl elde edildiği
+— İkincil veri kullanıldığı açıkça belirtilsin; veri setinin özgün
+  toplama yöntemine ilişkin ayrıntılar için kaynağa gönderme yap
+— Ölçek puanlarının nasıl hesaplandığı
+— Her analiz için: hangi test, neden seçildi, hangi varsayım
+  denetlendi, nasıl denetlendi
+— Varsayım sağlanmadıysa ne yapıldı (Welch, Alexander–Govern)
+— Parametrik olmayan karşılıkların da uygulandığı
+— Yazılım adları ve sürüm numaraları, tohum değeri
+
+BU ÇALIŞMAYA ÖZGÜ
+— Veri açık erişimli olduğu için etik kurul onayı gerekmedi; bunu
+  bir cümleyle ve gerekçesiyle belirt. Atlanırsa hakem sorar.
+— n = 5.820 olduğu için normallik testlerinin küçük sapmalarda bile
+  anlamlı çıkacağı ve kararın çarpıklık/basıklık büyüklüğüne
+  dayandırıldığı mutlaka yazılsın.
+
+ÜSLUP
+— Resmî akademik Türkçe, geçmiş zaman, edilgen çatı
+— &quot;Yapılacaktır&quot; değil &quot;yapılmıştır&quot;
+
+SINIRLAR
+— Verdiğim dosyalarda olmayan hiçbir işlemden söz etme.
+— Bulgu yazma.
+— Yöntemi savunma ya da övme.
+— &quot;Literatürde yaygın olarak kullanılan&quot; gibi kaynaksız
+  genellemelerden kaçın.
+
+DENETİM
+Bölümün sonuna şu soruyu yanıtla: bu bölümü okuyan biri, elinde
+yalnız veri seti ve bu metinle çalışmayı yineleyebilir mi? Eksik
+kalan bilgi varsa listele.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Yöntem bölümünden bir parça — 8. bölümün analizinden üretildi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>2.3. Veri hazırlama</strong></p>
+<p>Ham veri setinde 5.820 değerlendirme kaydı bulunmakta olup eksik hücre
+yer almamaktadır. Yirmi sekiz Likert maddesinin tamamı 1–5 aralığında
+kodlanmıştır. Maddeler, veri setinin özgün belgelendirmesinde
+tanımlanan iki boyuta göre gruplanmıştır: dersle ilgili maddeler
+(Q1–Q12) ve öğretim elemanıyla ilgili maddeler (Q13–Q28). Her katılımcı için bu iki boyutun ölçek puanı ile yirmi sekiz maddenin
+tamamından bir genel puan, ilgili maddelerin aritmetik ortalaması alınarak
+hesaplanmıştır.</p>
+<p><strong>2.5. Analiz yöntemi</strong></p>
+<p>Analizler, çıktı dosyasındaki on iki bloğa karşılık gelen altı aşamada
+yürütülmüştür. Birinci aşamada betimsel
+istatistikler hesaplanmış; dağılım biçimi, çarpıklık ve basıklık
+katsayılarıyla değerlendirilmiştir. Örneklem büyüklüğü nedeniyle
+normallik testlerinin küçük sapmalarda dahi anlamlı sonuç vereceği
+göz önünde bulundurularak, dağılım varsayımına ilişkin karar yalnız
+test sonuçlarına değil, çarpıklık ve basıklık değerlerinin
+büyüklüğüne de dayandırılmıştır (çarpıklık −0,42 ile −0,18; basıklık
+−0,75 ile −0,61 aralığındadır).</p>
+<p>İkinci aşamada iç tutarlılık Cronbach alfa katsayısıyla hesaplanmış,
+madde-toplam korelasyonları ve madde çıkarıldığında elde edilecek alfa
+değerleri raporlanmıştır. Üçüncü aşamada açımlayıcı faktör analizi
+uygulanmış; uygulanabilirlik Kaiser–Meyer–Olkin ölçütü ve Bartlett
+küresellik testiyle sınanmıştır. Faktörler temel bileşenler yöntemiyle
+çıkarılmış, varimax döndürmesi uygulanmıştır.</p>
+<p>Dördüncü aşamada grup karşılaştırmaları yapılmıştır. Varyansların
+eşitliği Levene testiyle denetlenmiş, eşitlik sağlanmadığında bağımsız
+örneklem t testinde Welch düzeltmesi, tek yönlü varyans analizinde
+Alexander–Govern düzeltmesi uygulanmıştır. Tüm parametrik testlerin
+parametrik olmayan karşılıkları (Mann–Whitney U, Kruskal–Wallis H) da
+uygulanmış ve sonuçlar birlikte raporlanmıştır. Çoklu karşılaştırmalar
+için Tukey HSD kullanılmıştır. Her test için etki büyüklüğü
+hesaplanmıştır: Cohen d, eta kare, epsilon kare ve sıra-noktasal
+korelasyon.</p>
+<p>Beşinci aşamada çoklu doğrusal regresyon kurulmuştur. Çok doğrusallık
+varyans şişirme faktörleriyle (tümü 2,20'nin altında), artık
+varyansının sabitliği Breusch–Pagan testiyle, artıkların bağımsızlığı
+Durbin–Watson istatistiğiyle (1,938) denetlenmiştir. Altıncı aşamada
+ikili sonuç değişkeni için lojistik regresyon uygulanmış, olasılık
+oranları %95 güven aralıklarıyla raporlanmıştır.</p>
+<p><strong>2.6. Yazılım ve yeniden üretilebilirlik</strong></p>
+<p>Analizler Python 3.14 ortamında yürütülmüştür. Kullanılan paketler ve
+sürümleri: pandas 3.1.0, NumPy 2.5.4, SciPy 1.18.1, statsmodels 0.15.0,
+scikit-learn 1.9.1, Matplotlib 3.11.2. Rastgelelik içeren tüm
+işlemlerde tohum değeri 20261103 olarak sabitlenmiştir. Analiz
+betiği ve ham çıktılar ek dosyalarda sunulmuştur.</p>
+<p><strong>DENETİM — bu bölümle çalışma yinelenebilir mi?</strong></p>
+<p>Yinelenebilir. Veri seti açık erişimlidir, dönüştürme adımları
+açıklanmıştır, her testin varsayım denetimi belirtilmiştir, yazılım
+sürümleri ve tohum değeri verilmiştir. Eksik kalan tek bilgi, veri
+setinin özgün toplama yöntemine ilişkin ayrıntılardır; bu bilgi
+ikincil veri kullanıldığı için özgün kaynağa atıfla verilmiştir.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Yöntem bölümünü yazmak kolaysa, iyi çalışmışsınız demektir</span><p>Yukarıdaki metin, 6. bölümdeki temizleme günlüğü ile 8. bölümdeki
+analiz çıktısından <strong>doğrudan</strong> yazıldı. Hiçbir şey hatırlanmadı.</p>
+<p>Yöntem bölümünü yazmak zorlaşıyorsa bunun nedeni genellikle yazma
+becerisi değil, kayıt tutmamaktır. Analizi yaparken günlük tutmadıysanız
+üç ay sonra "eksik veriyi nasıl doldurmuştum?" sorusuna yanıt
+veremezsiniz.</p></aside>
+<h2 id="bulgular-bolumu">Bulgular bölümü</h2>
+<p>Yöntem ne yaptığınızı, Bulgular ne bulduğunuzu anlatır. <strong>Ne anlama
+geldiği buraya girmez.</strong></p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Bulgular bölümüne girmemesi gereken cümle</div>
+<pre>Beklendiği gibi, derse katılımı yüksek olan
+öğrenciler öğretim elemanını daha olumlu
+değerlendirmiştir. Bu bulgu, katılımın
+öğrenci memnuniyetini artırdığını
+göstermektedir.</pre></div>
+<div class="guclu"><div class="baslik">Bulgular bölümüne giren cümle</div>
+<pre>Derse katılımı yüksek olan öğrencilerin öğretim
+elemanı değerlendirme puanı (n = 2.098,
+ort = 3,540, ss = 1,096), katılımı düşük olan
+öğrencilerinkinden (n = 2.930, ort = 3,032,
+ss = 1,256) yüksektir; Welch t(4.834) = 15,232,
+p &lt; 0,001, Cohen d = 0,426.</pre></div></div>
+<p>Soldaki cümlede iki sorun var. <strong>"Beklendiği gibi"</strong> bir yorumdur;
+beklentinizin ne olduğu Giriş bölümünde yazılır, burada değil.
+<strong>"Katılımın memnuniyeti artırdığını göstermektedir"</strong> ise bir neden
+sonuç iddiasıdır; kesitsel bir veride bunu söyleyemezsiniz ve zaten
+Tartışma bölümünün işidir.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Bulgular bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir dergi makalesinin Bulgular bölümünü yazıyorsun.
+
+KAYNAK
+Ekte analiz çıktısı (metin ve JSON), tablolar ve şekil altyazıları.
+
+GÖREV
+Bulgular bölümünü yaz.
+
+YAPI
+— Alt başlıklar ARAŞTIRMA SORULARINA göre olsun, analiz adımlarına
+  göre değil
+— Her alt başlıkta önce bulgu cümlesi, sonra destekleyici sayılar,
+  sonra tablo/şekil göndermesi
+— Tablolar metnin içine gömülmesin; numaralanıp metinden gönderme
+  yapılsın
+
+HER SONUÇ İÇİN DÖRT SAYI ZORUNLU
+test istatistiği · serbestlik derecesi · p değeri · etki büyüklüğü
+Dördü birden yoksa o cümleyi yazma; eksik olanı bana bildir.
+
+SAYI BİÇİMİ
+— Ondalık ayracı virgül, binlik ayracı nokta
+— p &lt; 0,001 ise &quot;p &lt; 0,001&quot; yaz, bilimsel gösterim kullanma
+— Üç ondalık basamak
+
+SINIRLAR
+— Bulguyu YORUMLAMA. &quot;Bu, şunu göstermektedir&quot; cümlesi kurma.
+— &quot;Beklendiği gibi&quot;, &quot;ilginç biçimde&quot;, &quot;dikkat çekici olarak&quot; gibi
+  değerlendirme ifadeleri kullanma.
+— Anlamsız çıkan sonuçları atlama; hepsi raporlanır.
+— Düşük R kare, düşük AUC gibi zayıf sonuçları yumuşatma.
+— Çıktıda olmayan hiçbir sayı yazma.
+
+DENETİM
+Bölüm sonunda: kaç istatistiksel sonuç raporlandı, kaçında etki
+büyüklüğü var? Sayılar eşit değilse hangisinde eksik?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Bulgular bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir eğitim bilimleri dergisinin Bulgular bölümünü yazıyorsun.
+
+KAYNAK
+sosyal_analiz.txt ve sosyal_analiz.json — on iki analiz bloğu.
+Dokuz şekil (s01–s09) ve altyazıları. Dört tablo.
+
+ARAŞTIRMA SORULARI
+S1. Ölçeğin iç tutarlılığı ne düzeyde?
+S2. Maddeler kaç boyut altında kümeleniyor, bu yapı beklenen iki
+    boyutla uyuşuyor mu?
+S3. Derse katılım, öğretim elemanı değerlendirmesini etkiliyor mu?
+S4. Algılanan güçlük, ders değerlendirmesini etkiliyor mu?
+S5. Katılım ve güçlük birlikte modellendiğinde her birinin katkısı
+    ne?
+
+GÖREV
+Bulgular bölümünü yaz.
+
+YAPI
+— Alt başlıklar ARAŞTIRMA SORULARINA göre (S1–S5), analiz
+  adımlarına göre değil
+— Her alt başlıkta önce bulgu cümlesi, sonra destekleyici sayılar,
+  sonra tablo/şekil göndermesi
+
+HER SONUÇ İÇİN DÖRT SAYI ZORUNLU
+test istatistiği · serbestlik derecesi · p değeri · etki büyüklüğü
+
+SAYI BİÇİMİ
+— Ondalık ayracı virgül, binlik ayracı nokta
+— p &lt; 0,001 ise &quot;p &lt; 0,001&quot; yaz, bilimsel gösterim kullanma
+— Üç ondalık basamak
+
+BU ÇALIŞMAYA ÖZGÜ
+— Cronbach alfa 0,992 çıktı. Bunu yalnız olumlu okuma; madde
+  fazlalığı yorumunu da raporla.
+— Güçlük ile ders puanı arasındaki ilişki doğrusal değil, ters U
+  biçimli. Korelasyon katsayısı sıfıra yakın (r = 0,060) ama ANOVA
+  anlamlı. İkisini birlikte, çelişki gibi sunmadan yaz.
+— Regresyonda güçlük anlamsızlaşıyor (p = 0,522). Bunu raporla;
+  nedenini Tartışma&#x27;ya bırak.
+— R kare = 0,053. Düşük olduğu için gizleme ya da yumuşatma.
+
+SINIRLAR
+— Bulguyu YORUMLAMA. &quot;Bu, şunu göstermektedir&quot; cümlesi kurma.
+— &quot;Beklendiği gibi&quot;, &quot;ilginç biçimde&quot; gibi değerlendirme ifadeleri
+  kullanma.
+— Anlamsız çıkan sonuçları atlama.
+— Çıktıda olmayan hiçbir sayı yazma.
+
+DENETİM
+Bölüm sonunda: kaç istatistiksel sonuç raporlandı, kaçında etki
+büyüklüğü var? Sayılar eşit değilse hangisinde eksik?</pre></div>
+<h2 id="tartisma-bolumu">Tartışma bölümü</h2>
+<p>Tartışma, bulguyu üç şeye bağlar: <strong>literatüre</strong>, <strong>sınırlara</strong> ve
+<strong>sonraki adıma.</strong> En çok hata yapılan bölümdür, çünkü burada yazarın
+söylemek istediği ile verinin söylediği ayrışır.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Yaygın hata 1</span></p>
+<p class="kart-baslik">Bulguyu abartmak</p>
+<p>"Modelimiz %97 başarı göstermiştir, bu da kimlik avı tespitinde yeni
+bir çığır açmaktadır." İkinci cümlenin dayanağı yok. Bir ölçüm
+değeri, alanın dönüştüğünün kanıtı değildir.</p></div><div class="kart"><p><span class="no">Yaygın hata 2</span></p>
+<p class="kart-baslik">Kendini gereksiz yere savunmak</p>
+<p>"Çalışmanın en büyük kısıtı örneklemin tek bir kurumdan gelmesidir ve
+bu nedenle bulgular genellenemez; ayrıca kesitsel desen nedensellik
+kurmaya izin vermemektedir; ayrıca..." Kısıtlar bir kez, kendi
+bölümünde, sade yazılır. Her paragrafta yinelenen özür, güven
+vermez.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Kısıt yazmanın doğru biçimi</span><p>Kısıt gerçekse yazılır. Ama <strong>kapsamı olumlu kurun.</strong> "Yalnızca üç
+öğretim elemanının dersleri incelenmiştir, sonuçlar genellenemez"
+yerine "bulgular üç öğretim elemanının on üç dersi ve 5.820
+değerlendirme üzerinde elde edilmiştir" yazın. İkisi aynı olguyu
+taşır; biri özür diler, öteki bildirir.</p>
+<p>Hakemin kendiliğinden görmeyeceği bir zaafı gidip gözüne sokmayın.
+Bu, bir şey gizlemek değil; sınırı yerinde ve bir kez söylemektir.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tartışma bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında deneyimli bir araştırmacı olarak Tartışma bölümünü
+yazıyorsun.
+
+KAYNAK — üç dosya
+1. Bulgular bölümünün tam metni
+2. Sentez matrisi (literatürdeki çalışmalar ve bulguları)
+3. Çalışmanın yöntem özeti
+
+GÖREV
+Tartışma bölümünü yaz.
+
+YAPI — beş parça
+1. Ana bulguların özeti (en çok bir paragraf, sayı tekrarlamadan)
+2. Her ana bulgunun literatürle ilişkisi: destekliyor mu,
+   çelişiyor mu, genişletiyor mu? Her iddiaya sentez matrisinden
+   atıf.
+3. Beklenmedik ya da olumsuz bulguların açıklanması
+4. Kısıtlar
+5. Sonraki araştırma için somut öneriler
+
+KISITLAR BÖLÜMÜ İÇİN ÖZEL KURALLAR
+— En çok dört kısıt yaz. Daha fazlası okuru yorar ve çalışmanın
+  değerini gölgeler.
+— Her kısıt için: ne olduğu, bulguyu nasıl etkilediği, ne
+  yapılabileceği.
+— Kapsamı olumlu kur. &quot;Yalnızca X yapılmıştır&quot; yerine
+  &quot;X üzerinde ölçülmüştür&quot; yaz.
+— Dramatize etme. &quot;En büyük kısıt&quot;, &quot;ciddi bir sınırlılık&quot;,
+  &quot;bu nedenle çalışma yalnızca keşfedicidir&quot; gibi kendini
+  mahkûm eden ifadeler kullanma.
+— Kısıtları yalnız bu bölümde yaz; özete, girişe ve sonuca
+  serpiştirme.
+
+SINIRLAR
+— Bulgularda olmayan bir sonuçtan söz etme.
+— Kesitsel veriden nedensellik çıkarma.
+— Sentez matrisinde olmayan hiçbir çalışmaya atıf yapma.
+— Çalışmayı övme. &quot;Önemli bir katkı sunmaktadır&quot; gibi cümleler
+  kurma; katkının ne olduğunu söyle, değerini okur takdir eder.
+— &quot;Gelecek çalışmalar bu konuyu daha derinlemesine incelemelidir&quot;
+  gibi içi boş öneriler yazma. Öneri somut olsun: hangi veri,
+  hangi yöntem, hangi soru.
+
+DENETİM
+Sonunda: kaç kısıt yazıldı, kaçı somut bir öneriyle eşleştirildi?
+Metinde kaç atıf var, hepsi sentez matrisinde mi?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Tartışma bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimleri alanında deneyimli bir araştırmacı olarak Tartışma
+bölümünü yazıyorsun.
+
+KAYNAK — üç dosya
+1. Bulgular bölümünün tam metni
+2. Sentez matrisi: ders değerlendirme ölçeklerinin yapı geçerliği
+   üzerine 31 çalışma, yedi sütun
+3. Yöntem özeti
+
+GÖREV
+Tartışma bölümünü yaz.
+
+YAPI — beş parça
+1. Ana bulguların özeti (en çok bir paragraf, sayı tekrarlamadan)
+2. Her ana bulgunun literatürle ilişkisi
+3. Beklenmedik bulguların açıklanması
+4. Kısıtlar
+5. Sonraki araştırma için somut öneriler
+
+BU ÇALIŞMADA AÇIKLANMASI GEREKEN ÜÇ ŞEY
+— İki faktör ayrıştı ama çapraz yükler yüksek. Bunu nasıl
+  yorumlamalı: ayrı yapılar mı, yoksa tek bir genel izlenimin iki
+  görünümü mü?
+— Güçlük ile ders puanı arasındaki ters U ilişkisi. Çok kolay ve
+  çok güç dersler neden benzer puan alıyor?
+— Güçlüğün regresyonda anlamsızlaşması. Doğrusal modelin ters U biçimli ilişkiyi yakalayamadığını ve güçlük ile ders puanı arasındaki doğrusal ilişkinin sıfıra yakın olduğunu (r = 0,060) öne al; katılımla olan orta düzeyli ilişkiyi (r = 0,437) ikincil etken olarak ele al.
+
+KISITLAR BÖLÜMÜ İÇİN ÖZEL KURALLAR
+— En çok dört kısıt yaz.
+— Her kısıt için: ne olduğu, bulguyu nasıl etkilediği, ne
+  yapılabileceği.
+— Kapsamı olumlu kur. &quot;Yalnızca üç öğretim elemanının dersleri
+  incelenmiştir&quot; yerine &quot;bulgular üç öğretim elemanının on üç dersi
+  ve 5.820 değerlendirme üzerinde elde edilmiştir&quot;.
+— Dramatize etme.
+— Kısıtları yalnız bu bölümde yaz.
+
+SINIRLAR
+— Bulgularda olmayan bir sonuçtan söz etme.
+— Kesitsel veriden nedensellik çıkarma. Katılım ile puan arasındaki
+  ilişki iki yönlü olabilir: iyi hoca derse devamı artırıyor da
+  olabilir.
+— Sentez matrisinde olmayan hiçbir çalışmaya atıf yapma.
+— Çalışmayı övme.
+— &quot;Gelecek çalışmalar bu konuyu daha derinlemesine incelemelidir&quot;
+  gibi içi boş öneriler yazma.
+
+DENETİM
+Sonunda: kaç kısıt yazıldı, kaçı somut bir öneriyle eşleştirildi?
+Metinde kaç atıf var, hepsi sentez matrisinde mi?</pre></div>
+<h2 id="giris-bolumu">Giriş bölümü</h2>
+<p>Giriş, okuru "bu makaleyi neden okumalıyım" sorusundan "bunu okumak
+istiyorum" noktasına taşır. Standart bir yapısı vardır ve bu yapı
+işe yarar.</p>
+<ol class="adimlar"><li><p><strong>Alanı kurun.</strong> Konunun neden önemli olduğu. Bir ya da iki paragraf,
+kaynaklı. Burada abartı gerekmez; alan zaten önemliyse okur bilir.</p></li><li><p><strong>Boşluğu gösterin.</strong> Şu ana kadar ne yapıldı ve ne yapılmadı. Boşluk
+iddiası bir sayıyla desteklenmeli: "incelenen 22 çalışmanın yalnız
+üçü çapraz doğrulama raporlamıştır" gibi.</p></li><li><p><strong>Boşluğu doldurma sözünü verin.</strong> Bu çalışma ne yapıyor. Tek
+paragraf, net.</p></li><li><p><strong>Katkıyı sayın.</strong> Maddeler hâlinde, abartısız. "İlk kez" demeden
+önce iki kez düşünün; taramanız bunu destekliyor mu?</p></li><li><p><strong>Yol haritası verin.</strong> Makalenin kalanında ne var. Kısa dergilerde
+atlanabilir.</p></li></ol>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Giriş bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir dergi makalesinin Giriş bölümünü yazıyorsun.
+
+KAYNAK — dört dosya
+1. Bulgular bölümü (tamamlanmış)
+2. Tartışma bölümü (tamamlanmış)
+3. İlgili çalışmalar bölümü (tamamlanmış)
+4. Boşluk analizi
+
+GÖREV
+Giriş bölümünü yaz. 700–900 kelime.
+
+YAPI
+1. Alanın önemi ve bağlam (1–2 paragraf)
+2. Mevcut durumun özeti ve boşluk (2 paragraf)
+3. Bu çalışmanın yanıt aradığı soru (1 paragraf)
+4. Katkılar (maddeler hâlinde, 3–5 madde)
+5. Makalenin yapısı (1 kısa paragraf)
+
+BOŞLUK CÜMLESİ İÇİN KURAL
+Boşluk iddiası sayıyla desteklenmeli. &quot;Literatürde yeterince
+çalışılmamıştır&quot; yazma. Bunun yerine: &quot;İncelenen [n] çalışmanın
+yalnız [k] tanesi [X] raporlamaktadır&quot; biçiminde yaz.
+
+SINIRLAR
+— Bulgular bölümünde olmayan bir sonuçtan söz etme.
+— Sentez matrisinde olmayan çalışmaya atıf yapma.
+— &quot;İlk kez&quot; iddiasını, boşluk analizi açıkça desteklemiyorsa yazma.
+— Abartılı sıfatlardan kaçın: &quot;çığır açan&quot;, &quot;devrim niteliğinde&quot;,
+  &quot;son derece kritik&quot;.
+— Kısıtlardan söz etme; kısıtlar Tartışma bölümünde.
+— Retorik soruyla paragraf başlatma.
+
+DENETİM
+Sonunda üç soruyu yanıtla:
+1. Boşluk iddiası bir sayıyla desteklendi mi? Hangi sayı?
+2. Sayılan katkıların her biri Bulgular bölümünde karşılığını
+   buluyor mu? Tek tek eşleştir.
+3. &quot;İlk kez&quot; ya da benzeri bir öncelik iddiası var mı? Varsa
+   dayanağı ne?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Giriş bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir eğitim bilimleri dergisinin Giriş bölümünü yazıyorsun.
+
+KAYNAK — dört dosya
+1. Bulgular bölümü (tamamlanmış)
+2. Tartışma bölümü (tamamlanmış)
+3. İlgili çalışmalar bölümü (tamamlanmış)
+4. Boşluk analizi: 31 çalışmanın yalnız yedisi iki boyutun
+   ayrışmasını istatistiksel olarak sınamış; bu yedisinin dördü
+   örneklem büyüklüğünü 500&#x27;ün altında tutmuş.
+
+GÖREV
+Giriş bölümünü yaz. 700–900 kelime.
+
+YAPI
+1. Alanın önemi ve bağlam (1–2 paragraf): ders değerlendirmeleri
+   akademik atama ve yükseltmelerde kullanılıyor; neyi ölçtüğü
+   doğrudan sonuç doğuruyor
+2. Mevcut durumun özeti ve boşluk (2 paragraf)
+3. Bu çalışmanın yanıt aradığı soru (1 paragraf)
+4. Katkılar (maddeler hâlinde, 3–5 madde)
+5. Makalenin yapısı (1 kısa paragraf)
+
+BOŞLUK CÜMLESİ İÇİN KURAL
+Boşluk iddiası sayıyla desteklenmeli. Elindeki sayı şu: 31
+çalışmanın yalnız yedisi yapı ayrışmasını sınamış, dördü n &lt; 500
+ile. Bu sayıları kullan.
+
+SINIRLAR
+— Bulgular bölümünde olmayan bir sonuçtan söz etme.
+— Sentez matrisinde olmayan çalışmaya atıf yapma.
+— &quot;İlk kez&quot; iddiasını yazma; boşluk analizi bunu desteklemiyor,
+  yalnız örneklem büyüklüğü avantajı var.
+— Abartılı sıfatlardan kaçın.
+— Kısıtlardan söz etme; kısıtlar Tartışma&#x27;da.
+— Retorik soruyla paragraf başlatma.
+
+DENETİM
+Sonunda üç soruyu yanıtla:
+1. Boşluk iddiası bir sayıyla desteklendi mi? Hangi sayı?
+2. Sayılan katkıların her biri Bulgular bölümünde karşılığını
+   buluyor mu? Tek tek eşleştir.
+3. &quot;İlk kez&quot; ya da benzeri bir öncelik iddiası var mı?</pre></div>
+<h2 id="oz-ve-baslik">Öz ve başlık</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Öz (abstract)</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir dergi makalesinin özünü yazıyorsun.
+
+KAYNAK
+Makalenin tamamlanmış hâli (ekte).
+
+GÖREV
+Yapılandırılmış öz yaz.
+
+YAPI — beş cümle grubu, toplam 200–250 kelime
+1. Bağlam ve problem (1–2 cümle)
+2. Amaç (1 cümle)
+3. Yöntem: veri, örneklem büyüklüğü, analiz (2–3 cümle)
+4. Bulgular: en önemli iki ya da üç sonuç, SAYILARLA (3–4 cümle)
+5. Sonuç ve katkı (1–2 cümle)
+
+ZORUNLU
+— Bulgular bölümünde en az bir sayı geçsin (etki büyüklüğü ya da
+  ana ölçüm değeri)
+— Örneklem büyüklüğü yazsın
+— Kullanılan ana yöntem adıyla geçsin
+
+SINIRLAR
+— Özde atıf olmaz.
+— Kısaltma ilk geçtiğinde açılsın; öz tek başına okunur.
+— Makalede olmayan hiçbir bulgu ya da sayı yazma.
+— &quot;Bu çalışmada incelenmiştir&quot; gibi içi boş amaç cümleleri kurma;
+  neyin incelendiğini söyle.
+— Kısıtlardan söz etme; öz dar bir alandır, kısıt Tartışma&#x27;da.
+
+AYRICA
+Özün altına 5–7 anahtar kelime öner. Her biri için şunu belirt:
+bu terim [alan sözlüğünde var / yalnız bu çalışmada kullanılıyor].
+Sözlükte olan terimler aramada bulunmayı kolaylaştırır.
+
+DENETİM
+Kelime sayısını yaz. 250&#x27;yi aşıyorsa hangi cümlenin
+kısaltılabileceğini belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Öz (abstract)</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bir eğitim bilimleri dergisinin özünü yazıyorsun. Dergi
+yapılandırılmış öz istemiyor; tek paragraf, 250 kelime sınırı.
+
+KAYNAK
+Makalenin tamamlanmış hâli (ekte).
+
+GÖREV
+Öz yaz.
+
+YAPI — beş cümle grubu, toplam 200–250 kelime
+1. Bağlam ve problem (1–2 cümle)
+2. Amaç (1 cümle)
+3. Yöntem: veri, örneklem büyüklüğü, analiz (2–3 cümle)
+4. Bulgular: en önemli üç sonuç, SAYILARLA (3–4 cümle)
+5. Sonuç ve katkı (1–2 cümle)
+
+ZORUNLU
+— Örneklem büyüklüğü (5.820) geçsin
+— En az üç sayı geçsin: alfa değeri, açıklanan varyans, bir etki
+  büyüklüğü
+— Kullanılan ana yöntemler adıyla geçsin: açımlayıcı faktör
+  analizi, çoklu regresyon
+— Verinin ikincil ve açık erişimli olduğu belirtilsin
+
+SINIRLAR
+— Özde atıf olmaz.
+— Kısaltma ilk geçtiğinde açılsın.
+— Makalede olmayan hiçbir bulgu ya da sayı yazma.
+— &quot;Bu çalışmada incelenmiştir&quot; gibi içi boş amaç cümleleri kurma.
+— Kısıtlardan söz etme.
+— Düşük R kare&#x27;yi gizleme; raporlanacaksa olduğu gibi yaz.
+
+AYRICA
+Özün altına 5–7 anahtar kelime öner. Her biri için şunu belirt:
+bu terim [ERIC Thesaurus&#x27;ta var / yalnız bu çalışmada kullanılıyor].
+
+DENETİM
+Kelime sayısını yaz. 250&#x27;yi aşıyorsa hangi cümlenin
+kısaltılabileceğini belirt.</pre></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Başlık seçenekleri</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Makalenin özü ve bulgular bölümü (ekte).
+
+GÖREV
+Altı başlık seçeneği üret; üç farklı türden ikişer tane olsun:
+— İki tanesi BETİMLEYİCİ: ne yapıldığını söyler
+— İki tanesi BULGU İÇEREN: ne bulunduğunu söyler
+— İki tanesi SORU biçiminde
+
+HER BAŞLIK İÇİN
+— Başlığın kendisi
+— Kelime sayısı
+— Hangi anahtar terimleri taşıyor (aramada bulunabilirlik için)
+— Güçlü yanı, tek cümle
+— Zayıf yanı, tek cümle
+
+SINIRLAR
+— On iki kelimeyi aşan başlık önerme.
+— İki noktadan sonra alt başlık eklemeyi alışkanlık hâline
+  getirme; en çok iki seçenekte kullan.
+— Makalenin desteklemediği bir iddia taşıyan başlık yazma.
+— &quot;Yeni bir yaklaşım&quot;, &quot;kapsamlı bir inceleme&quot; gibi içi boş
+  nitelemelerden kaçın.
+
+DENETİM
+Altı başlığı, aramada bulunabilirlik açısından sırala ve
+gerekçesini yaz. En çok aranacak terimi taşıyan hangisi?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Başlık seçenekleri</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Makalenin özü ve bulgular bölümü (ekte).
+
+ÇALIŞMANIN ÖZÜ
+5.820 ders değerlendirmesinde ölçeğin iki boyutunun (ders ve
+öğretim elemanı) ayrışıp ayrışmadığı sınandı. İki faktör ayrıştı
+(28/28 madde beklenen boyuta yüklendi, açıklanan varyans %86,8) ama
+çapraz yükler yüksek. Derse katılım her iki boyutu da etkiliyor;
+algılanan güçlük, katılım denetlendiğinde anlamsızlaşıyor.
+
+GÖREV
+Altı başlık seçeneği üret; üç farklı türden ikişer tane olsun:
+— İkisi BETİMLEYİCİ: ne yapıldığını söyler
+— İkisi BULGU İÇEREN: ne bulunduğunu söyler
+— İkisi SORU biçiminde
+
+HER BAŞLIK İÇİN
+— Başlığın kendisi
+— Kelime sayısı
+— Hangi anahtar terimleri taşıyor (aramada bulunabilirlik için)
+— Güçlü yanı, tek cümle
+— Zayıf yanı, tek cümle
+
+SINIRLAR
+— On iki kelimeyi aşan başlık önerme.
+— İki noktadan sonra alt başlık eklemeyi en çok iki seçenekte
+  kullan.
+— Makalenin desteklemediği bir iddia taşıyan başlık yazma.
+  Özellikle: iki boyut ayrıştı ama çapraz yükler yüksek; &quot;iki
+  boyut birbirinden bağımsızdır&quot; diyen bir başlık yanlış olur.
+— &quot;Yeni bir yaklaşım&quot;, &quot;kapsamlı bir inceleme&quot; gibi içi boş
+  nitelemelerden kaçın.
+— Türkçe başlık üret; altına İngilizce karşılığını da yaz.
+
+DENETİM
+Altı başlığı, aramada bulunabilirlik açısından sırala ve
+gerekçesini yaz. &quot;Ders değerlendirme&quot; ve &quot;yapı geçerliği&quot;
+terimlerini kaç başlık taşıyor?</pre></div>
+<h2 id="ayni-calismadan-bildiri-posteri">Aynı çalışmadan bildiri posteri</h2>
+<p>Poster, makalenin kısaltılmış hâli değildir. Makale okunur, poster
+<strong>uzaktan taranır.</strong> Ziyaretçi üç metreden başlığı, bir metreden
+şekilleri, ancak ilgisini çekerse yakından metni okur. Bu yüzden
+posterin ilk işi, bulguyu başlıkta söylemektir.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Konu bildiren başlık</div>
+<pre>Çay posasından elde edilen aktif
+karbonun boyar madde giderimi
+üzerine bir çalışma</pre></div>
+<div class="guclu"><div class="baslik">Bulgu bildiren başlık</div>
+<pre>Çay posası aktif karbonu yüksek
+pH&#x27;ta ticari kömüre yaklaşıyor:
+malzeme ile pH arasında etkileşim var</pre></div></div>
+<p>Soldaki başlık konuyu söylüyor, sağdaki bulguyu. Koridordan geçen biri
+soldakinden hiçbir şey öğrenmez; sağdakinden çalışmanın sonucunu
+öğrenir ve durmaya karar verebilir.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Konferans posteri içeriği ve yerleşimi</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bilimsel poster tasarımı yapan bir araştırma iletişimi uzmanısın.
+Posterin okunma biçimini biliyorsun: üç metreden başlık, bir metreden
+şekil, yakından metin.
+
+BAĞLAM — EKTE VERİLEN DOSYALAR
+1. Analiz çıktısı: [dosya adı] — bütün sayılar buradan alınacak
+2. Hazır şekiller: [şekil dosyalarının adları ve her birinin ne
+   gösterdiği]
+3. [Varsa] makalenin taslağı ya da genişletilmiş özeti
+4. Konferansın poster ölçüsü ve varsa şablon kuralları: [ölçü]
+
+ÇALIŞMA
+[Çalışmanın iki cümlelik özeti: ne yapıldı, ne bulundu]
+
+GÖREV
+Posterin içeriğini ve yerleşim planını üret.
+
+ÖNCE BAŞLIK
+Üç başlık önerisi yaz. Her biri BULGUYU söylesin, konuyu değil.
+En fazla iki satır, üç metreden okunabilecek uzunlukta. Hangisini
+neden önerdiğini tek cümleyle açıkla.
+
+SONRA YERLEŞİM
+Üç sütunluk bir düzen kur. Her kutu için şunları ver:
+— Kutu başlığı ve sıra numarası
+— İçerik: madde madde, poster diliyle yazılmış (tam cümle şart değil)
+— Varsa hangi şekil bu kutuya girecek
+— Kutunun hangi sütunda ve hangi sırada olacağı
+
+İÇERİK KURALLARI
+— Her kutu tek bir iş yapsın. İki konu anlatan kutu bölünsün.
+— Hiçbir kutuda altı maddeden fazla olmasın.
+— Sayılar ek dosyadan alınsın; yuvarlama yapılacaksa belirtilsin.
+— Yöntem kutusu tasarımı versin, protokolü değil.
+— Sonuçlar numaralı maddeler hâlinde, en çarpıcı olan başta.
+— Sınırlılık kutusu olsun ve tek bir sınırı iyi anlatsın; liste olmasın.
+
+ZORUNLU KUTULAR
+— Veri ve yapay zekâ beyanı: veri gerçek mi sentetik mi, hangi
+  aşamada hangi araç kullanıldı
+— Kaynaklar: en fazla beş, yalnız posterde adı geçenler
+— İletişim ya da kodun bulunabileceği yer
+
+SINIRLAR
+— Ek dosyalarda olmayan sayı üretme. Eksikse &quot;[bu sayı verilmedi]&quot;
+  yaz.
+— Şekil uydurma; yalnız listede verilen şekilleri yerleştir.
+— Poster metnini makale paragrafı gibi yazma. Uzun cümle kurma.
+— &quot;Gelecek çalışmalarda incelenecektir&quot; gibi içi boş kapanış yazma;
+  sonraki adımı somut yaz.
+
+DENETİM
+Planın sonunda şunu listele: her sütunun kaç kutusu var, hangi şekil
+nerede, posterde geçen her sayının ek dosyadaki karşılığı hangi satır.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya · adsorpsiyon</span>
+<span class="ad">Konferans posteri içeriği ve yerleşimi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bilimsel poster tasarımı yapan bir araştırma iletişimi uzmanısın.
+Posterin okunma biçimini biliyorsun: üç metreden başlık, bir metreden
+şekil, yakından metin.
+
+BAĞLAM — EKTE VERİLEN DOSYALAR
+1. Analiz çıktısı: cikti/adsorpsiyon_analiz.json — bütün sayılar
+   buradan alınacak. İçinde ANOVA tablosu, Tukey karşılaştırmaları,
+   izoterm parametreleri ve güven aralıkları, duyarlılık analizi var.
+2. Hazır şekiller:
+   — k01_temizleme.svg: yedi temizleme adımının kaç satırı etkilediği
+   — k02_anova_kiyas.svg: eksik ve bloklanmış modelin F değerleri
+   — k03_etkilesim.svg: pH düzeyine göre iki adsorbanın kapasitesi
+   — k04_izoterm.svg: Langmuir ve Freundlich uyumu, iki panel
+3. Konferans poster ölçüsü: A0 dikey (841 × 1189 mm)
+
+ÇALIŞMA
+Çay fabrikası atığından elde edilen aktif karbonun katyonik boyar
+madde giderimini, ticari aktif karbonla karşılaştırmalı olarak tam
+faktöriyel kesikli deneyle ölçtük. Ticari kömür genel olarak daha
+iyi, ama üstünlüğü pH&#x27;a bağlı: pH 3&#x27;te fark yok denecek kadar az,
+pH 10&#x27;da belirginleşiyor.
+
+GÖREV
+Posterin içeriğini ve yerleşim planını üret.
+
+ÖNCE BAŞLIK
+Üç başlık önerisi yaz. Her biri BULGUYU söylesin, konuyu değil.
+En fazla iki satır, üç metreden okunabilecek uzunlukta. Hangisini
+neden önerdiğini tek cümleyle açıkla.
+
+SONRA YERLEŞİM
+Üç sütunluk bir düzen kur. Her kutu için şunları ver:
+— Kutu başlığı ve sıra numarası
+— İçerik: madde madde, poster diliyle yazılmış
+— Varsa hangi şekil bu kutuya girecek
+— Kutunun hangi sütunda ve hangi sırada olacağı
+
+İÇERİK KURALLARI
+— Her kutu tek bir iş yapsın.
+— Hiçbir kutuda altı maddeden fazla olmasın.
+— Sayılar ek dosyadan alınsın; yuvarlama yapılacaksa belirtilsin.
+— Yöntem kutusu tasarımı versin, protokolü değil.
+— Sonuçlar numaralı maddeler hâlinde, en çarpıcı olan başta.
+— Sınırlılık kutusu olsun ve tek bir sınırı iyi anlatsın.
+
+BU ÇALIŞMAYA ÖZGÜ
+— Analizin &quot;Adım 0&quot; bölümü, derişim ve süre modele konmadığında
+  bütün etkilerin kaybolduğunu gösteriyor. Bu bir yöntem dersi;
+  postere ayrı bir kutu olarak koy ve k02 şeklini oraya yerleştir.
+— Çay posasının qmax güven aralığı çok geniş ve gerçek değeri
+  kapsamıyor. Sınırlılık kutusu bunu anlatsın; nedenini de söylesin.
+— Veri sentetiktir. Bunu hem başlık bandında hem beyan kutusunda
+  belirt; okur posterin önünden sayı alıp gitmesin.
+
+ZORUNLU KUTULAR
+— Veri ve yapay zekâ beyanı
+— Kaynaklar: en fazla beş
+— Kodun ve verinin bulunabileceği yer
+
+SINIRLAR
+— Ek dosyalarda olmayan sayı üretme.
+— Şekil uydurma; yalnız listedeki dört şekli yerleştir.
+— Poster metnini makale paragrafı gibi yazma.
+— &quot;Gelecek çalışmalarda incelenecektir&quot; yazma; sonraki adımı somut
+  yaz — hangi derişim aralığı, neden.
+
+DENETİM
+Planın sonunda şunu listele: her sütunun kaç kutusu var, hangi şekil
+nerede, posterde geçen her sayının analiz çıktısındaki karşılığı.</pre></div>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Örnek poster — çizen betik ve kaynak veri</span></div>
+<dl><dt>Boyut</dt><dd>A0 dikey · 841 × 1189 mm · dört gömülü şekil</dd><dt>Pakette</dt><dd><a href="varlik/sekil/p01_poster.svg">p01_poster.svg</a> · <a href="varlik/sekil_png/p01_poster.png">p01_poster.png</a> · <a href="kod/18_poster.py">18_poster.py</a> · <a href="cikti/adsorpsiyon_analiz.json">adsorpsiyon_analiz.json</a></dd></dl>
+<p>Posteri çizen betik ve beslendiği analiz çıktısı. <code>python 18_poster.py
+cikti/adsorpsiyon_analiz.json varlik/sekil</code> komutu posteri yeniden
+üretir; sayılar her koşuda analiz çıktısından okunur.</p></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/p01_poster.svg"
+ alt="Üç sütunlu A0 konferans posteri: başlık bandı, araştırma sorusu, yöntem, dört analiz şekli, sonuçlar ve beyan kutuları" loading="lazy"></div>
+<figcaption><b>Şekil 12.4</b> İstemin ürettiği plana göre çizilen poster. A0 dikey, 841 × 1189 mm.
+Posterdeki bütün sayılar <code>cikti/adsorpsiyon_analiz.json</code> dosyasından
+okunarak yerleştirildi; hiçbiri elle yazılmadı. Çizen betik:
+<code>kod/18_poster.py</code>
+<span class="indir">Dosya: <a href="varlik/sekil/p01_poster.svg">p01_poster.svg</a>
+ · <a href="varlik/sekil_png/p01_poster.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Plan ile çizim arasındaki iş bölümü</span><p>İstem bir <strong>plan</strong> üretti: başlık önerileri, kutu sırası, her kutunun
+içeriği, hangi şeklin nereye gideceği. Çizim işini betik yaptı.</p>
+<p>Bu ayrım bilerek kuruldu. Modelden doğrudan "poster SVG'si üret"
+istenebilirdi; sonuç büyük olasılıkla ilk bakışta makul, yakından
+bakıldığında bozuk olurdu — kutular taşar, sayılar uydurulur,
+şekiller yanlış yerleşir. Plan metin olarak denetlenebilir; çizim ise
+sayıları doğrudan analiz çıktısından okuyan bir betiğe bırakılır.</p>
+<p>Betiğin iki ayrıntısı poster işine özgü:</p>
+<p><strong>Şekiller dosyaya gömüldü, bağlanmadı.</strong> Bir SVG tarayıcıda <code>&lt;img&gt;</code>
+olarak gösterildiğinde dış dosya çekilmez; bağlantılı şekiller boş
+çıkardı. Gömme ayrıca posteri tek dosya yapıyor, matbaaya götürmesi
+kolay.</p>
+<p><strong>Gömülen her şekle kimlik öneki verildi.</strong> matplotlib her şekilde
+aynı harf kimliklerini yazar; dört şekil aynı belgeye girince ikinci
+tanım yok sayılır ve yazılar birbirine karışır. Önek bunu önlüyor.</p></aside>
+
+<aside class="not ipucu"><span class="not-baslik">Poster yazısı ne kadar büyük olmalı</span><p>Ölçüt basit: <strong>gövde metni iki metreden okunabilmeli.</strong> A0 posterde
+bu, yaklaşık 24-28 punto demektir. Bu posterde gövde 9,5 mm
+(yaklaşık 27 punto), bölüm başlıkları 11,4 mm, ana başlık 29 mm.</p>
+<p>Bilgisayar ekranında tasarlarken yazı hep yeterince büyük görünür;
+A0'a basıldığında küçük kalır. Pratik denetim: posteri ekranda %25
+oranında küçültün. Gövde metnini hâlâ okuyabiliyorsanız basılı hâlde
+de okunur.</p></aside>
+<h2 id="dil-ve-insanlastirma">Dil ve insanlaştırma</h2>
+<p>Yapay zekâ yardımıyla yazılmış metinlerin bazı ortak izleri vardır.
+Bunlar yanlışlık değil, <strong>tekdüzeliktir</strong> — ve deneyimli bir okur fark
+eder.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Sık görülen izler</span></p>
+<p class="kart-baslik">Nelere bakılır</p>
+<p>Her paragrafın sonuna konan özet cümlesi. Üçlü listeler ("hızlı,
+güvenilir ve ölçeklenebilir"). "Sadece ... değil, aynı zamanda ..."
+kalıbının sık yinelenmesi. Gereğinden çok uzun tire. Abartılı
+nitelemeler. Her bölümün aynı uzunlukta olması. Hiç kullanılmayan
+devrik cümle.</p></div><div class="kart"><p><span class="no">İnsan metninde olan</span></p>
+<p class="kart-baslik">Neler eksik kalır</p>
+<p>Düzensiz paragraf uzunlukları. Ara sıra çok kısa cümleler. Bir
+fikrin iki paragrafta anlatılması, başka bir fikrin yarım cümlede
+geçilmesi. Kişisel bir örnek. Belirli bir yöntem tercihine duyulan
+şüphenin dile getirilmesi.</p></div></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Yapay zekâ izlerini temizleme</span>
+<span class="arac">Son okuma</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>GÖREV
+Aşağıdaki metni, yapay zekâ yardımıyla yazılmış metinlerin tipik
+izleri açısından denetle.
+
+ARANACAK İZLER
+1. Her paragrafın sonuna konan özetleyici cümle
+2. Üçlü liste kalıbı (&quot;x, y ve z&quot;)
+3. &quot;Sadece ... değil, aynı zamanda ...&quot; yapısı
+4. Gereğinden çok uzun tire kullanımı
+5. Abartılı niteleme sıfatları
+6. Şişkin fiiller: &quot;ele almaktadır&quot;, &quot;önemli bir rol oynamaktadır&quot;,
+   &quot;beraberinde getirmektedir&quot;
+7. Soyut adlaştırma: &quot;kullanımının sağlanması&quot; yerine &quot;kullanmak&quot;
+8. Paragraf uzunluklarının tekdüzeliği
+9. Retorik soruyla paragraf açma
+
+ÇIKTI
+| # | İz türü | Şu anki cümle | Önerilen hâli |
+
+SINIRLAR
+— Metni baştan yazma. Yalnız işaretle ve nokta atışı öneri ver.
+— Teknik terimi sadeleştirmeyi önerme; terim gerekliyse kalır.
+— Anlamı değiştirme. Her öneri, özgün cümleyle aynı şeyi
+  söylemelidir.
+— Sayı, künye ve istatistiksel ifadelere dokunma.
+— Metin zaten doğal akıyorsa &quot;değişiklik gerekmiyor&quot; yaz. Sorun
+  üretme.
+
+DENETİM
+Sonunda: kaç iz bulundu, bunların kaçı ciddi (okur fark eder),
+kaçı küçük (fark edilmez)?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Yapay zekâ izlerini temizleme</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>GÖREV
+Aşağıdaki metni, yapay zekâ yardımıyla yazılmış metinlerin tipik
+izleri açısından denetle.
+
+METİN
+[makalenizin Tartışma bölümünü buraya yapıştırın — bu örnekte
+1.400 kelimelik bir Tartışma bölümü]
+
+ARANACAK İZLER
+1. Her paragrafın sonuna konan özetleyici cümle
+2. Üçlü liste kalıbı (&quot;x, y ve z&quot;)
+3. &quot;Sadece ... değil, aynı zamanda ...&quot; yapısı
+4. Gereğinden çok uzun tire kullanımı
+5. Abartılı niteleme sıfatları
+6. Şişkin fiiller: &quot;ele almaktadır&quot;, &quot;önemli bir rol oynamaktadır&quot;,
+   &quot;beraberinde getirmektedir&quot;
+7. Soyut adlaştırma: &quot;kullanımının sağlanması&quot; yerine &quot;kullanmak&quot;
+8. Paragraf uzunluklarının tekdüzeliği
+9. Retorik soruyla paragraf açma
+
+BU METNE ÖZGÜ EK KONTROL
+10. Nedensel dil kaçağı: kesitsel veriden nedensellik çıkaran
+    cümleler. &quot;Katılım puanı artırmaktadır&quot; gibi. Bunları ayrı
+    işaretle; bu bir üslup sorunu değil, yöntem hatasıdır.
+11. Kısıt tekrarı: kısıtlar Tartışma&#x27;nın kendi bölümünde bir kez
+    yazılmalı. Başka paragraflara sızmış özür cümlesi var mı?
+
+ÇIKTI
+| # | İz türü | Şu anki cümle | Önerilen hâli |
+
+Nedensel dil kaçaklarını tablonun başına koy; ötekilerden önce
+gelsinler.
+
+SINIRLAR
+— Metni baştan yazma. Yalnız işaretle ve nokta atışı öneri ver.
+— Teknik terimi sadeleştirmeyi önerme.
+— Anlamı değiştirme.
+— Sayı, künye ve istatistiksel ifadelere dokunma.
+— Metin zaten doğal akıyorsa &quot;değişiklik gerekmiyor&quot; yaz. Sorun
+  üretme.
+
+DENETİM
+Sonunda: kaç iz bulundu, bunların kaçı ciddi (okur fark eder),
+kaçı küçük? Nedensel dil kaçağı kaç tane?</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Saptama araçlarına göre yazmayın</span><p>Metninizi "yapay zekâ saptama" araçlarından geçirip ona göre
+düzeltmeye çalışmak kötü bir fikirdir. Bu araçların yanlış işaretleme
+oranı yüksektir, özellikle ana dili İngilizce olmayan yazarlarda.
+Onların puanını düşürmek için yazdığınız metin, genellikle daha kötü
+bir metin olur.</p>
+<p>Amaç puandan kaçmak değil, <strong>okunabilir ve sizin sesinizi taşıyan</strong>
+bir metin yazmak olmalı.</p></aside>
+<h2 id="dergi-secimi-ve-gonderim">Dergi seçimi ve gönderim</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Dergi uygunluk değerlendirmesi</span>
+<span class="arac">Gönderim</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Yayın danışmanısın. Bir makale için dergi uygunluğu
+değerlendiriyorsun.
+
+KAYNAK
+1. Makalenin özü ve anahtar kelimeleri
+2. Aday dergilerin listesi: her biri için ad, kapsam metni,
+   kabul oranı (biliniyorsa), ortalama değerlendirme süresi,
+   açık erişim ücreti, dizin bilgisi
+
+GÖREV
+Her dergi için uygunluk değerlendirmesi yap.
+
+HER DERGİ İÇİN
+| Ölçüt | Değerlendirme |
+|---|---|
+| Kapsam uyumu | Yüksek / Orta / Düşük + tek cümle gerekçe |
+| Yöntem uyumu | Bu dergi bu tür yöntem kullanan çalışma yayımlıyor mu |
+| Okur kitlesi | Makalenin hedef okuruyla örtüşüyor mu |
+| Süre | Değerlendirme süresi benim takvimime uyuyor mu |
+| Maliyet | Açık erişim ücreti ve kurum anlaşması durumu |
+| Risk | Editörün makaleyi hakeme hiç göndermeden reddetmesi (masa başı reddi) riski nelerden kaynaklanabilir |
+
+SONUÇ
+Dergileri sırala. Birinci ve ikinci tercihi gerekçelendir.
+
+SINIRLAR
+— Verdiğim liste dışında dergi önerme.
+— Kabul oranı, etki faktörü gibi sayıları uydurma; vermediğim
+  bilgiyi &quot;bilinmiyor&quot; diye işaretle.
+— Bir derginin yağmacı (predatory) olup olmadığı konusunda
+  kesin hüküm verme; şüphe varsa hangi işaretlerin
+  denetlenmesi gerektiğini söyle.
+
+DENETİM
+Her dergi için kaç ölçütte &quot;bilinmiyor&quot; yazdın? Bu bilgileri
+nereden bulabileceğimi söyle.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Dergi uygunluk değerlendirmesi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Yayın danışmanısın. Bir makale için dergi uygunluğu
+değerlendiriyorsun.
+
+KAYNAK
+1. Makalenin özü ve anahtar kelimeleri (ekte)
+2. Aday dergiler — her biri için kapsam metnini, bilinen
+   değerlendirme süresini, açık erişim ücretini ve dizin bilgisini
+   ekliyorum:
+   — Dergi A: eğitim ölçme ve değerlendirme, SSCI, ücretsiz,
+     ortalama 5 ay
+   — Dergi B: yükseköğretim araştırmaları, SSCI, 2.400 $ açık
+     erişim, ortalama 3 ay
+   — Dergi C: Türkçe yayın yapan ulusal eğitim dergisi, TR Dizin,
+     ücretsiz, ortalama 4 ay
+   — Dergi D: psikometri ve ölçek geliştirme, SSCI Q1, 3.100 $,
+     ortalama 7 ay
+
+DURUMUM
+Üniversitemin Dergi B ile okuma anlaşması var ama yayın ücreti
+anlaşması yok. Atama kriterlerim için SSCI gerekiyor. Elimdeki
+takvim: altı ay içinde kabul almam gerekiyor.
+
+GÖREV
+Her dergi için uygunluk değerlendirmesi yap.
+
+HER DERGİ İÇİN
+| Ölçüt | Değerlendirme |
+|---|---|
+| Kapsam uyumu | Yüksek / Orta / Düşük + tek cümle gerekçe |
+| Yöntem uyumu | Bu dergi ikincil veri analizi yayımlıyor mu |
+| Okur kitlesi | Makalenin hedef okuruyla örtüşüyor mu |
+| Süre | Altı aylık takvimime uyuyor mu |
+| Maliyet | Ücret ve kurum anlaşması durumu |
+| Risk | Bu dergide masa başı reddi riski neden kaynaklanabilir |
+
+SONUÇ
+Dergileri sırala. Birinci ve ikinci tercihi gerekçelendir.
+
+BU DURUMA ÖZGÜ
+— İkincil veri analizi bazı dergilerde &quot;özgün veri toplanmamış&quot;
+  gerekçesiyle masa başı reddi alıyor. Her dergi için bu riski ayrı
+  değerlendir.
+— Dergi D en prestijli ama süre takvimime uymuyor olabilir; bunu
+  açıkça tart.
+
+SINIRLAR
+— Verdiğim liste dışında dergi önerme.
+— Kabul oranı, etki faktörü gibi sayıları uydurma; vermediğim
+  bilgiyi &quot;bilinmiyor&quot; diye işaretle.
+— Bir derginin yağmacı olup olmadığı konusunda kesin hüküm verme.
+
+DENETİM
+Her dergi için kaç ölçütte &quot;bilinmiyor&quot; yazdın? Bu bilgileri
+nereden bulabileceğimi söyle.</pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Gönderimden önceki son kontrol</span><p>Bu beş şeyi mutlaka yapın: <strong>(1)</strong> Metindeki her sayının tablo ya da
+şekilde aynı değerle bulunduğunu doğrulayın. <strong>(2)</strong> Her DOI'yi
+kaynağından denetleyin. <strong>(3)</strong> Kaynakçadaki her künyenin metinde,
+metindeki her atıfın kaynakçada olduğunu kontrol edin. <strong>(4)</strong> Yapay
+zekâ beyanını yazın. <strong>(5)</strong> Derginin yazım kılavuzunu baştan sona okuyun. Bu aslında ilk adımda yapılacak iştir; listenin sonunda hatırlatılmasının nedeni, çoğu kişinin atlamasıdır.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Makale okunduğu sırayla yazılmaz. Yöntem ve Bulgular'dan başlayın;
+Giriş'i, Tartışma ve İlgili çalışmalar bittikten sonra yazın.</p></li><li><p>Yöntem bölümünün ölçütü tek: başka biri bunu okuyup çalışmayı
+yineleyebilir mi?</p></li><li><p>Bulgular bölümünde yorum olmaz. "Beklendiği gibi" bir yorumdur.</p></li><li><p>Kısıtlar bir kez, kendi bölümünde, en çok dört madde, kapsamı olumlu
+kurarak yazılır. Her paragrafta yinelenen özür güven vermez.</p></li><li><p>Boşluk iddiası sayıyla desteklenir. "Yeterince çalışılmamıştır"
+cümlesi dayanaksızdır.</p></li><li><p>Yapay zekâ izlerini temizlemek, saptama aracının puanını düşürmek
+için değil, metni okunur kılmak içindir.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="11-grafik-tablo.html"><span class="yon">← Önceki</span><span class="ad">Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sag" href="13-proje.html"><span class="yon">Sonraki →</span><span class="ad">Proje önerisi yazmak</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

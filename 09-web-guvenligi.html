@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makine öğrenmesi ve veri sızıntısı — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Gerçek bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı — ve kursun en sert dersi: %99,9 doğruluk aldığınızda sevinmeyin, şüphelenin.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Makine öğrenmesi ve veri sızıntısı</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa etkin" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><div class="alt-liste"><a href="#adim-1-modelden-once-veriye-bakmak">Adım 1 — Modelden önce veriye bakmak</a><a href="#adim-2-bir-yan-bulgu-https">Adım 2 — Bir yan bulgu: HTTPS</a><a href="#adim-3-naif-model">Adım 3 — Naif model</a><a href="#adim-4-teshis-sistematik-tarama">Adım 4 — Teşhis: sistematik tarama</a><a href="#adim-5-tek-sutun-cikarmak-yetmiyor">Adım 5 — Tek sütun çıkarmak yetmiyor</a><a href="#adim-6-cerceveyi-degistirmek">Adım 6 — Çerçeveyi değiştirmek</a><a href="#adim-7-capraz-dogrulama">Adım 7 — Çapraz doğrulama</a><a href="#adim-8-hangi-url-nitelikleri-calisiyor">Adım 8 — Hangi URL nitelikleri çalışıyor</a><a href="#adim-9-yorumlanabilir-karsilastirma">Adım 9 — Yorumlanabilir karşılaştırma</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 9</div><h1>Makine öğrenmesi ve veri sızıntısı</h1><p class="ozet">Gerçek bir kimlik avı veri seti üzerinde tam bir sınıflandırma hattı — ve kursun en sert dersi: %99,9 doğruluk aldığınızda sevinmeyin, şüphelenin.</p><p>Bu bölüm bir makine öğrenmesi hattını baştan sona kuruyor. Model
+olağanüstü bir sonuç veriyor; bölümün geri kalanı bu sonucun nedenini
+arıyor ve dürüst sayıyı yeniden hesaplıyor.</p>
+<p>Anlatının sonucu tek cümleyle şudur: <strong>yüksek doğruluk bir başarı
+belgesi değil, bir denetim gerekçesidir.</strong></p>
+<p>Bölümün dört adımının altında — naif model, sızıntı taraması, çerçeveyi
+değiştirme ve model yorumlama — o adımı üreten istem var. Aşağıdaki
+sayıların tamamı bu istemlerle üretildi; istemlerin doldurulmuş hâlleri,
+bu kursta gerçekten koşturulan metinlerin kendisidir.</p>
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">PhiUSIIL kimlik avı URL veri seti</span></div>
+<dl></dl>
+<p>profile empowered phishing URL detection framework based on similarity
+index and incremental learning. Computers &amp; Security, 136, 103545.
+Veri seti: UCI Machine Learning Repository."
+doi="10.1016/j.cose.2023.103545" lisans="CC BY 4.0" boyut="Tam set 235.795 kayıt · kursta 5.000 satırlık katmanlı altküme · 40 sayısal özellik" dosya="veri/web_guvenligi/phishing_ornek_5000.csv, kod/06_analiz_web_guvenligi.py, cikti/web_guvenligi_analiz.txt"
+Altkümede 2.141 kimlik avı (%42,8) ve 2.859 meşru (%57,2) kayıt var;
+oran tam veri setindekiyle aynıdır. Özellikler iki aileden gelir:
+URL dizgisinden hesaplananlar ve sayfa içeriğinden çıkarılanlar. Bu
+ayrım bölümün dönüm noktası olacak.</p></div>
+<h2 id="adim-1-modelden-once-veriye-bakmak">Adım 1 — Modelden önce veriye bakmak</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Etki büyüklüğüne göre en ayırt edici altı özellik</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Kimlik avı ort.</th>
+<th>Meşru ort.</th>
+<th>Cohen d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URLSimilarityIndex</td>
+<td>49,537</td>
+<td><strong>100,000</strong></td>
+<td><strong>−3,466</strong></td>
+</tr>
+<tr>
+<td>HasSocialNet</td>
+<td>0,005</td>
+<td>0,791</td>
+<td>−2,529</td>
+</tr>
+<tr>
+<td>HasCopyrightInfo</td>
+<td>0,061</td>
+<td>0,803</td>
+<td>−2,190</td>
+</tr>
+<tr>
+<td>HasDescription</td>
+<td>0,051</td>
+<td>0,737</td>
+<td>−1,890</td>
+</tr>
+<tr>
+<td>IsHTTPS</td>
+<td>0,490</td>
+<td><strong>1,000</strong></td>
+<td>−1,557</td>
+</tr>
+<tr>
+<td>DomainTitleMatchScore</td>
+<td>16,490</td>
+<td>76,084</td>
+<td>−1,491</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w01_etki_buyukluk.svg"
+ alt="En ayırt edici on dört özelliğin etki büyüklükleri" loading="lazy"></div>
+<figcaption><b>Şekil 9.1</b> On dört özelliğin Cohen d değerleri. Sosyal bilimlerde d = 0,8 "büyük
+etki" sayılır; buradaki ilk altı özellik bu eşiğin iki-dört katında.
+<span class="indir">Dosya: <a href="varlik/sekil/w01_etki_buyukluk.svg">w01_etki_buyukluk.svg</a>
+ · <a href="varlik/sekil_png/w01_etki_buyukluk.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not uyari"><span class="not-baslik">İlk uyarı burada veriliyor</span><p>|d| = 3,47 son derece olağandışıdır. Bu büyüklükte bir fark, özelliğin
+etiketten <strong>farklı bir şey ölçtüğünden</strong> kuşku duymayı gerektirir.
+İkinci sütuna bakın: meşru sınıfın ortalaması tam <strong>100,000</strong>. Bir
+ortalamanın yuvarlak bir sayıya tam oturması, dağılımın o sınıfta
+sabit olabileceğini düşündürür.</p>
+<p>Bu aşamada not alıp devam ediyoruz — çünkü bu kursun amacı, bir
+araştırmacının gerçekte izlediği yolu göstermek. Çoğumuz not alır ve
+devam ederiz. Önemli olan, sonra geri dönmektir.</p></aside>
+<h2 id="adim-2-bir-yan-bulgu-https">Adım 2 — Bir yan bulgu: HTTPS</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">HTTPS × etiket çapraz tablosu</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>HTTPS</th>
+<th>Kimlik avı</th>
+<th>Meşru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yok (0)</td>
+<td><strong>1.091</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>Var (1)</td>
+<td>1.050</td>
+<td>2.859</td>
+</tr>
+</tbody>
+</table></div>
+<p>khi-kare(1) = 1.860,50 · p &lt; 0,001 · <strong>Cramér V = 0,610</strong> (güçlü ilişki)</p>
+<p>HTTPS kullanan sitelerin <strong>%26,9'u</strong> kimlik avı.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Bu tablonun iki ayrı okunuşu</span><p><strong>Pratik okuma:</strong> "Adres çubuğunda kilit simgesi varsa site
+güvenlidir" yaygın inancı yanlıştır. HTTPS kullanan sitelerin dörtte
+birinden fazlası bu veri setinde kimlik avıdır. Sertifika ücretsiz
+ve otomatik alınabildiğinden, HTTPS artık bir güven göstergesi değil
+bir asgari standarttır.</p>
+<p><strong>Yöntemsel okuma:</strong> Üst satıra bakın. HTTPS kullanmayan <strong>1.091</strong>
+kaydın <strong>tamamı</strong> kimlik avı; meşru sınıfta HTTPS'siz tek bir kayıt
+yok. Yani <code>IsHTTPS</code> da meşru sınıfta sabit. Bu, bir sonraki adımın
+habercisidir.</p></aside>
+<h2 id="adim-3-naif-model">Adım 3 — Naif model</h2>
+<p>Standart yol şudur: bütün sayısal özellikleri modele ver, veriyi eğitim ve
+test olarak böl, eğit, ölç. Kullanılan model rastgele ormandır: veriyi
+farklı altkümeler üzerinde eğitilmiş çok sayıda karar ağacına veren ve
+ağaçların kararlarını oylayarak birleştiren bir yöntem. Tek bir ağacın
+kararsızlığını azalttığı için tablo biçimli veride ilk denenen
+seçeneklerden biridir. Bölme katmanlıdır; yani kimlik avı ve meşru
+kayıtların oranı eğitim ile test kümelerinde veri setindeki oranla aynı
+tutulur, böylece test kümesi şans eseri dengesiz düşmez.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Rastgele orman — 40 özellik, 3.500 eğitim / 1.500 test</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>doğruluk    : 0,9993
+kesinlik    : 1,0000
+duyarlılık  : 0,9984
+F1          : 0,9992
+ROC AUC     : 1,0000
+PR AUC      : 1,0000
+
+Karışıklık matrisi
+  doğru negatif  858      yanlış pozitif   0
+  yanlış negatif   1      doğru pozitif  641</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">DUR</span><p>Yukarıdaki ölçütler şu sorulara karşılık gelir. Doğruluk, bütün kayıtların
+kaçının doğru sınıflandığıdır. Kesinlik, modelin "kimlik avı" dediği
+kayıtların kaçının gerçekten kimlik avı olduğudur. Duyarlılık, veride
+bulunan kimlik avı kayıtlarının kaçının yakalandığıdır. F1 ise kesinlik
+ile duyarlılığın ortak özetidir. Karışıklık matrisi bu sayıların
+kaynağıdır: yanlış pozitif, meşru bir sayfaya kimlik avı demektir; yanlış
+negatif, bir kimlik avı sayfasını meşru saymaktır.</p>
+<p>1.500 kayıtlık test kümesinde <strong>tek bir yanlış pozitif yok</strong> ve yalnız <strong>bir</strong> yanlış negatif var. ROC AUC tam 1,000.</p>
+<p>Gerçek bir güvenlik probleminde bu düzey bir sonuç, modelin problemi
+çözdüğünü değil, problemin <strong>yanlışlıkla kolaylaştığını</strong> gösterir.
+Kimlik avı saptaması açık bir problemdir; saldırganlar sürekli yöntem
+değiştirir. Bu alanda %99,9 doğruluk alan bir model, ya alanı dönüştürmüştür ya da bir
+şey kaçırmıştır. Yayımlanmış örneklerde ikincisi çok daha sık görülür.</p>
+<p>Bu sayıyı yayımlamadan önce nedenini bulmak zorunludur.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Temel sınıflandırma hattı</span>
+<span class="arac">Analiz</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Makine öğrenmesi uygulayan bir araştırma asistanısın. Çıktıların bir
+dergi makalesinin Bulgular bölümüne girecek.
+
+KAYNAK
+[veri dosyası] — [n] satır, [k] sütun.
+Sonuç değişkeni: [sütun adı], [kaç sınıf], sınıf dağılımı [oran].
+
+GÖREV
+İkili sınıflandırma hattı kur ve başarıyı ölç.
+
+ADIMLAR
+1. Veriyi eğitim ve test olarak ayır. Bölme KATMANLI olsun: iki
+   sınıfın oranı her iki kümede veri setindekiyle aynı kalsın.
+2. [model adı] ile eğit.
+3. Test kümesinde şu ölçütleri hesapla: doğruluk, kesinlik,
+   duyarlılık, F1, ROC AUC, PR AUC.
+4. Karışıklık matrisini dört hücresiyle bas.
+
+ZORUNLU
+— Pozitif sınıfın hangisi olduğunu baştan yaz ve çıktıda belirt.
+  Kesinlik ve duyarlılık bu seçime göre anlam değiştirir.
+— Rastgelelik içeren her yerde sabit tohum kullan: [tohum].
+— Her ölçütün ne ölçtüğünü kodun yorum satırında açıkla.
+— Değişken ve fonksiyon adları Türkçe olsun.
+
+SINIRLAR
+— Hiperparametre araması yapma. Bu ilk ölçüm; varsayılan ayarlarla
+  nerede olduğumuzu görmek istiyorum.
+— Özellik seçimi yapma. Bütün sayısal sütunları ver.
+— Sonucu yorumlama. Sayıları bas, yorumu bana bırak.
+— Başarı yüksek çıkarsa bunu olumlu okuma; yalnız raporla.
+
+DENETİM
+Eğitim ve test kümelerindeki sınıf oranlarını ayrı ayrı bas.
+İkisi veri setindeki oranla aynı mı?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Web güvenliği — kursta koşulan istem</span>
+<span class="ad">Temel sınıflandırma hattı</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Makine öğrenmesi uygulayan bir araştırma asistanısın. Çıktıların bir
+dergi makalesinin Bulgular bölümüne girecek.
+
+KAYNAK
+phishing_ornek_5000.csv — 5.000 satır, 43 sütun.
+Sonuç değişkeni: etiket, iki sınıf (kimlik_avi / mesru).
+Sınıf dağılımı: kimlik avı 2.141 (%42,8), meşru 2.859 (%57,2).
+Sayısal olmayan sütunlar: TLD, etiket. label sütunu etiketin sayısal
+kopyası; modele VERME, sızıntı olur.
+
+GÖREV
+İkili sınıflandırma hattı kur ve başarıyı ölç.
+
+ADIMLAR
+1. Veriyi %70 eğitim, %30 test olarak ayır. Bölme KATMANLI olsun.
+2. Rastgele orman ile eğit (300 ağaç).
+3. Test kümesinde şu ölçütleri hesapla: doğruluk, kesinlik,
+   duyarlılık, F1, ROC AUC, PR AUC.
+4. Karışıklık matrisini dört hücresiyle bas.
+
+ZORUNLU
+— Pozitif sınıf = kimlik avı. Çıktıda bunu açıkça yaz. Bir güvenlik
+  uygulamasında ilgilenilen sınıf tehdittir; kesinlik ve duyarlılık
+  buna göre okunur.
+— Sabit tohum: 20261103.
+— Her ölçütün ne ölçtüğünü kodun yorum satırında açıkla. Özellikle
+  kesinlik ile duyarlılık arasındaki farkı, bu probleme çevirerek
+  yaz: yanlış pozitif meşru bir siteyi engellemek, yanlış negatif
+  bir kimlik avı sayfasını geçirmektir.
+— Değişken ve fonksiyon adları Türkçe olsun.
+
+SINIRLAR
+— Hiperparametre araması yapma.
+— Özellik seçimi yapma. label dışındaki bütün sayısal sütunları ver.
+— Sonucu yorumlama. Sayıları bas, yorumu bana bırak.
+— Başarı yüksek çıkarsa bunu olumlu okuma; yalnız raporla.
+
+DENETİM
+Eğitim ve test kümelerindeki sınıf oranlarını ayrı ayrı bas.
+İkisi veri setindeki oranla aynı mı?</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Kaynak kutusundaki tek satır</span><p><em>"label sütunu etiketin sayısal kopyası; modele VERME, sızıntı
+olur."</em></p>
+<p>Bu satır olmasaydı model %100 doğruluk verirdi ve bu bölümün
+anlatısı daha ilk adımda biterdi. Veri setinde <code>etiket</code> ve <code>label</code>
+aynı bilgiyi taşıyor; biri metin, biri sayı.</p>
+<p>En açık sızıntı türü budur ve en kolay gözden kaçandır. Bir veri
+setini modele vermeden önce <strong>sütun listesini okuyun</strong>; cevabın
+kendisini taşıyan bir sütun var mı?</p></aside>
+<h2 id="adim-4-teshis-sistematik-tarama">Adım 4 — Teşhis: sistematik tarama</h2>
+<p>Aranan şey veri sızıntısıdır: modele verilen bir özelliğin, ölçülmek
+istenen niteliği değil doğrudan cevabın kendisini taşıması. Sızıntı varsa
+model öğrenmez, yalnızca okur. Şüphe doğduğunda tek tek sütun denemek
+yerine bütün sütunlar iki ölçütle taranır.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">(a) Meşru sınıfta tamamen sabit olan özellikler</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Meşru sınıfta SS</th>
+<th>Kimlik avında SS</th>
+<th>Tek eşik doğruluğu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URLSimilarityIndex</td>
+<td><strong>0,0000</strong></td>
+<td>22,2523</td>
+<td>%98,96</td>
+</tr>
+<tr>
+<td>IsHTTPS</td>
+<td><strong>0,0000</strong></td>
+<td>0,5000</td>
+<td>%79,00</td>
+</tr>
+<tr>
+<td>NoOfQMarkInURL</td>
+<td><strong>0,0000</strong></td>
+<td>0,3044</td>
+<td>%59,94</td>
+</tr>
+<tr>
+<td>IsDomainIP</td>
+<td><strong>0,0000</strong></td>
+<td>0,0806</td>
+<td>%57,46</td>
+</tr>
+<tr>
+<td>HasObfuscation</td>
+<td><strong>0,0000</strong></td>
+<td>0,0647</td>
+<td>%57,36</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Beş özellik</strong>, meşru sınıftaki 2.859 kaydın <strong>tamamında</strong> aynı
+değeri alıyor. Bu bir ölçüm değil; veri setinin kuruluşundan gelen
+bir düzenliliktir.</p></div></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">(b) Tek bir &#x27;if&#x27; satırıyla %90 üstü doğruluk veren özellikler</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Tek eşik doğruluğu</th>
+<th>Hangi aileden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URLSimilarityIndex</td>
+<td>%98,96</td>
+<td>arama/karşılaştırma</td>
+</tr>
+<tr>
+<td>NoOfExternalRef</td>
+<td>%96,00</td>
+<td>sayfa içeriği</td>
+</tr>
+<tr>
+<td>LineOfCode</td>
+<td>%95,18</td>
+<td>sayfa içeriği</td>
+</tr>
+<tr>
+<td>NoOfImage</td>
+<td>%94,32</td>
+<td>sayfa içeriği</td>
+</tr>
+<tr>
+<td>NoOfJS</td>
+<td>%92,58</td>
+<td>sayfa içeriği</td>
+</tr>
+<tr>
+<td>NoOfCSS</td>
+<td>%90,04</td>
+<td>sayfa içeriği</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w02_sizinti_teshis.svg"
+ alt="Sızıntının teşhisi" loading="lazy"></div>
+<figcaption><b>Şekil 9.2</b> Sol panel sızıntının görüntüsü: kimlik avı sınıfı geniş bir dağılım
+gösterirken, meşru sınıfın 2.859 kaydının tamamı tek bir noktada —
+tam olarak 100,0. Sağ panel modelsiz tek eşiğin doğruluğu; kırmızı
+çubuklar meşru sınıfta sabit olan özellikler.
+<span class="indir">Dosya: <a href="varlik/sekil/w02_sizinti_teshis.svg">w02_sizinti_teshis.svg</a>
+ · <a href="varlik/sekil_png/w02_sizinti_teshis.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Burada iki ayrı sorun var, karıştırılmamalı</span><p><strong>Sorun 1 — sızıntı.</strong> Beş özellik meşru sınıfta sabit. Bu,
+özelliğin etiketi taşıması demektir; modelin öğrenecek bir şeyi
+yoktur, sadece okur.</p>
+<p><strong>Sorun 2 — örneklem artefaktı.</strong> Sayfa içeriğinden gelen beş özellik
+(dış bağlantı, kod satırı, görsel, JS, CSS sayısı) tek eşikle %90
+üstü doğruluk veriyor. Bunlar sızıntı değil — gerçek bir örüntü:
+meşru siteler büyük, zengin, çok bağlantılı; kimlik avı sayfaları
+küçük ve çıplak.</p>
+<p>Ama modelin öğrendiği şey kimlik avı davranışı değil, <strong>sayfa
+boyutudur.</strong> Saldırgan sayfasını şişirirse model çöker. Bu, sızıntıdan
+farklı ama aynı derecede ciddi bir sorundur: model, genellemesi
+olmayan bir kestirme yol bulmuştur.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Sistematik sızıntı taraması</span>
+<span class="arac">Analiz</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri sızıntısı denetimi yapan bir araştırma asistanısın.
+
+DURUM
+[model] ile [başarı değeri] elde ettim. Bu sayı alanım için
+olağandışı yüksek. Sızıntı olup olmadığını denetlemek istiyorum.
+
+GÖREV
+Bütün özellikleri iki ölçütle tara ve sonucu tablo olarak ver.
+
+ÖLÇÜT 1 — SINIF İÇİ SABİTLİK
+Her özellik için, her sınıf içindeki standart sapmayı hesapla. Bir
+sınıfta standart sapma sıfırsa, o özellik o sınıftaki bütün
+kayıtlarda aynı değeri alıyor demektir. Bu bir ölçüm değil,
+etiketin özelliğe sızmasıdır.
+
+ÖLÇÜT 2 — TEK EŞİK GÜCÜ
+Her özellik için, tek bir eşik değeriyle elde edilebilecek en
+yüksek doğruluğu hesapla. Eşikleri özelliğin nicelik değerlerinden
+üret, iki yönü de dene (eşiğin altı pozitif / üstü pozitif).
+
+ÇIKTI
+| Özellik | Sınıf A&#x27;da SS | Sınıf B&#x27;de SS | Bir sınıfta sabit mi | Tek eşik doğruluğu |
+
+Tabloyu tek eşik doğruluğuna göre azalan sırala.
+
+SONRA
+— Bir sınıfta tamamen sabit olan özellikleri ayrı listele.
+— Tek eşikle %90 üstü doğruluk veren özellikleri ayrı listele.
+— İkinci listedeki özellikler hangi aileden geliyor? (Ölçüm
+  zamanına, veri kaynağına ya da hesaplanma biçimine göre grupla.)
+
+SINIRLAR
+— Hiçbir sütunu kendiliğinden silme. Taramayı yap, kararı bana
+  bırak.
+— &quot;Bu sızıntıdır&quot; hükmü verme; ölçüyü ver, hangi özelliğin neden
+  şüpheli olduğunu açıkla, kararı ben vereceğim.
+— Taramayı yalnız en önemli birkaç özellikte yapma; BÜTÜN sütunları
+  tara. Sızıntı çoğu zaman beklemediğiniz sütundadır.
+
+DENETİM
+Kaç özellik tarandı? Kaçı bir sınıfta sabit? Kaçı tek eşikle %90
+üstü veriyor? Üç sayıyı da bas.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Web güvenliği — kursta koşulan istem</span>
+<span class="ad">Sistematik sızıntı taraması</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Veri sızıntısı denetimi yapan bir araştırma asistanısın.
+
+DURUM
+Rastgele orman ile test kümesinde %99,93 doğruluk ve 1,000 ROC AUC
+elde ettim. 1.500 kayıtlık test kümesinde tek bir yanlış pozitif
+yok. Kimlik avı saptaması açık bir problemdir ve bu düzey bir sonuç
+alanda olağandışıdır. Sızıntı olup olmadığını denetlemek istiyorum.
+
+İLK İŞARET
+Betimsel karşılaştırmada URLSimilarityIndex için Cohen d = −3,47
+çıktı ve meşru sınıftaki ortalaması tam olarak 100,000. Yuvarlak bir
+sayıya tam oturan ortalama, o sınıfta dağılımın sabit olabileceğini
+düşündürüyor.
+
+GÖREV
+Bütün özellikleri iki ölçütle tara ve sonucu tablo olarak ver.
+
+ÖLÇÜT 1 — SINIF İÇİ SABİTLİK
+Her özellik için, her sınıf içindeki standart sapmayı hesapla.
+
+ÖLÇÜT 2 — TEK EŞİK GÜCÜ
+Her özellik için, tek bir eşik değeriyle elde edilebilecek en
+yüksek doğruluğu hesapla. Eşikleri 80 nicelik noktasından üret, iki
+yönü de dene.
+
+ÇIKTI
+| Özellik | Kimlik avında SS | Meşruda SS | Meşruda sabit mi | Tek eşik doğruluğu |
+
+Tabloyu tek eşik doğruluğuna göre azalan sırala.
+
+SONRA
+— Meşru sınıfta tamamen sabit olan özellikleri ayrı listele.
+— Tek eşikle %90 üstü doğruluk veren özellikleri ayrı listele.
+— İkinci listedeki özellikler hangi aileden geliyor? Burada iki
+  aile var: URL dizgisinden hesaplananlar ve sayfa içeriğinden
+  çıkarılanlar. Hangisi baskın?
+
+SINIRLAR
+— Hiçbir sütunu kendiliğinden silme.
+— &quot;Bu sızıntıdır&quot; hükmü verme; ölçüyü ver, kararı ben vereceğim.
+— Taramayı BÜTÜN sütunlarda yap, yalnız şüphelendiğim sütunda
+  değil. İlk işaret URLSimilarityIndex&#x27;i gösteriyor ama başka
+  sütunlar da aynı sorunu taşıyor olabilir.
+— Sayfa içeriği özelliklerinin yüksek çıkması tek başına sızıntı
+  değildir; gerçek bir örüntü de olabilir. İkisini ayırt etmeye
+  çalışma, ikisini de listele.
+
+DENETİM
+Kaç özellik tarandı? Kaçı meşru sınıfta sabit? Kaçı tek eşikle %90
+üstü veriyor? Üç sayıyı da bas.</pre></div>
+
+<aside class="not "><span class="not-baslik">İki istem arasındaki en önemli fark</span><p>Kalıpta "DURUM" kutusu boş; doldurulmuş hâlde <strong>ilk işaret</strong> yazılı:
+<em>"meşru sınıftaki ortalaması tam olarak 100,000."</em></p>
+<p>Bu, taramayı başlatan gözlemdir ve 1. adımdaki betimsel
+karşılaştırmadan geliyor. Modele bunu söylemek, taramanın yönünü
+değiştirmiyor — tarama yine bütün sütunlarda yapılıyor — ama
+çıktının yorumunu bağlıyor: model neyin arandığını biliyor.</p>
+<p>Son sınır da önemli: <em>"sayfa içeriği özelliklerinin yüksek çıkması
+tek başına sızıntı değildir."</em> Bu uyarı olmasaydı model altı
+özelliğin hepsini "sızıntı" diye etiketlerdi. Oysa bunların bir
+kısmı gerçek bir örüntü; ayrımı yapan sizsiniz.</p></aside>
+<h2 id="adim-5-tek-sutun-cikarmak-yetmiyor">Adım 5 — Tek sütun çıkarmak yetmiyor</h2>
+<p>Sızıntı bulunduğunda ilk tepki o sütunu silmektir. Bu tepkinin yeterli
+olup olmadığı ölçülmelidir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">URLSimilarityIndex çıkarıldıktan sonra</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Naif model F1        : 0,9992
+Tek sütun çıkarılmış : 0,9984
+Değişim              : −0,0008</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Neredeyse hiç değişmedi</span><p>Çünkü diğer özellikler aynı bilgiyi taşıyor. Bir sütun sildiğinizde
+model komşusuna geçer. Sızıntı tek bir sütunda değil, <strong>veri setinin
+iki sınıfını toplama biçiminde.</strong></p>
+<p>Bu, uygulamada en sık yapılan yarım düzeltmedir: sızdıran sütun
+silinir, sayı neredeyse değişmez, "düzelttik" denir ve yanlış sayı
+yayımlanır. Düzeltmenin işe yarayıp yaramadığı <strong>ölçülmeden</strong>
+raporlanmaz.</p></aside>
+<h2 id="adim-6-cerceveyi-degistirmek">Adım 6 — Çerçeveyi değiştirmek</h2>
+<p>Doğru soru şu değildir: "hangi sütunu silmeliyim?" Doğru soru şudur:
+<strong>"bu model gerçekte ne zaman karar verecek?"</strong></p>
+<p>Modelin gerçekte hangi bilgiyle ve hangi anda karar vereceğine yerleşim
+senaryosu diyoruz. Bir kimlik avı süzgecinin yerleşim senaryosu nettir:
+kullanıcı bağlantıya <strong>tıklamadan önce</strong> karar vermek zorundadır. Sayfa içeriği o anda elde yoktur — onu elde etmek
+için siteye bağlanmak, yani tam da engellenmek istenen şeyi yapmak
+gerekir. Dolayısıyla sayfa özellikleri kullanmak, yalnız istatistiksel
+değil <strong>yöntemsel</strong> bir hatadır: geleceği bilerek geçmişi tahmin
+etmeye benzer.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Kullanılan — 11 özellik</span></p>
+<p class="kart-baslik">Yalnız URL dizgisinden hesaplananlar</p>
+<p><code>URLLength</code> · <code>DomainLength</code> · <code>TLDLength</code> · <code>NoOfSubDomain</code> ·
+<code>CharContinuationRate</code> · <code>URLCharProb</code> · <code>NoOfLettersInURL</code> ·
+<code>LetterRatioInURL</code> · <code>NoOfDegitsInURL</code> · <code>DegitRatioInURL</code> ·
+<code>SpacialCharRatioInURL</code></p></div><div class="kart"><p><span class="no">Dışarıda bırakılan</span></p>
+<p class="kart-baslik">Üç gerekçeyle</p>
+<p><strong>Sızıntı:</strong> URLSimilarityIndex, IsHTTPS, IsDomainIP, HasObfuscation,
+NoOfQMarkInURL — meşru sınıfta sabit.
+<strong>Yerleşim senaryosuna aykırı:</strong> bütün sayfa içeriği özellikleri —
+ancak siteye bağlanınca elde edilir.
+<strong>Türetilmiş:</strong> TLDLegitimateProb — şüphelenildi, denetlendi, tek
+eşikle yalnız %66,9 doğruluk veriyor ve modele katkısı yok; sızıntı
+değil ama veri setinin kendi etiketinden türediği için dışarıda
+bırakıldı.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Denetlenip temize çıkan şüphe de raporlanır</span><p><code>TLDLegitimateProb</code> için yaptığımız şey — şüphelen, ölç, temize çıkar,
+yine de dışarıda bırak ve gerekçesini yaz — makalede bir cümleyle
+raporlanır. Hakem "neden bu özelliği kullanmadınız" diye sorduğunda
+yanıt hazırdır. Denetlenmemiş bir şüphe, hakem raporunda geri döndüğünde denetlenmiş bir
+şüpheden daha pahalıya mal olur.</p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Üç modelin karşılaştırması — aynı veri, üç çerçeve</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Özellik</th>
+<th>Doğruluk</th>
+<th>Kesinlik</th>
+<th>Duyarlılık</th>
+<th>F1</th>
+<th>ROC AUC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Naif</td>
+<td>40</td>
+<td>0,9993</td>
+<td>1,0000</td>
+<td>0,9984</td>
+<td>0,9992</td>
+<td>1,0000</td>
+</tr>
+<tr>
+<td>2. Tek sütun çıkarılmış</td>
+<td>39</td>
+<td>0,9987</td>
+<td>1,0000</td>
+<td>0,9969</td>
+<td>0,9984</td>
+<td>1,0000</td>
+</tr>
+<tr>
+<td><strong>3. Yerleşime uygun</strong></td>
+<td><strong>11</strong></td>
+<td><strong>0,9800</strong></td>
+<td><strong>0,9811</strong></td>
+<td><strong>0,9720</strong></td>
+<td><strong>0,9765</strong></td>
+<td><strong>0,9955</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Yerleşime uygun modelin karışıklık matrisi</strong> (1.500 kayıtlık test)
+  doğru negatif 846 · yanlış pozitif 12
+  yanlış negatif 18 · doğru pozitif 624</p></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w03_model_kiyas.svg"
+ alt="Üç modelin karşılaştırması" loading="lazy"></div>
+<figcaption><b>Şekil 9.3</b> Üç çerçeve, dört ölçüt. Düşey eksen 0,90'dan başlıyor ve bu kesme
+şekilde açıkça işaretlendi — işaretlenmemiş kesilmiş eksen, şekille
+yanıltmanın en yaygın biçimidir. Raporlanacak sayı üçüncü gruptur.
+<span class="indir">Dosya: <a href="varlik/sekil/w03_model_kiyas.svg">w03_model_kiyas.svg</a>
+ · <a href="varlik/sekil_png/w03_model_kiyas.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w05_karisiklik.svg"
+ alt="İki modelin karışıklık matrisi" loading="lazy"></div>
+<figcaption><b>Şekil 9.4</b> Naif model ile yerleşime uygun modelin karışıklık matrisleri. Soldaki
+tek bir hata yapıyor, sağdaki otuz. Soldaki sayı bir ölçüm değil,
+veri setinin kuruluşunun yankısıdır.
+<span class="indir">Dosya: <a href="varlik/sekil/w05_karisiklik.svg">w05_karisiklik.svg</a>
+ · <a href="varlik/sekil_png/w05_karisiklik.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w04_roc.svg"
+ alt="ROC eğrileri" loading="lazy"></div>
+<figcaption><b>Şekil 9.5</b> İki modelin ROC eğrileri. ROC eğrisi, modelin karar eşiği aşağıdan
+yukarıya gezdirilirken yakalanan kimlik avı oranının, boşa çıkan uyarı
+oranıyla birlikte nasıl değiştiğini gösterir. Eğrinin altındaki alan (AUC)
+0,5 ise model rastgele tahminden iyi değildir, 1,0 ise iki sınıfı kusursuz
+sıralıyor demektir. Naif modelin eğrisi sol üst köşeye yapışıyor; AUC
+1,000. <strong>Köşeye yapışan bir ROC eğrisi, kutlanacak
+bir sonuç değil, denetlenecek bir işarettir.</strong>
+<span class="indir">Dosya: <a href="varlik/sekil/w04_roc.svg">w04_roc.svg</a>
+ · <a href="varlik/sekil_png/w04_roc.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">F1 0,999&#x27;dan 0,977&#x27;ye düştü — bu bir kayıp mı</span><p>Hayır, bir <strong>düzeltmedir.</strong> Önceki sayı yanlıştı. Daha doğrusu:
+önceki sayı başka bir sorunun yanıtıydı — "bu veri setinin iki
+sınıfını ayırt edebilir misin?" sorusunun. Bizim sorumuz ise "bir
+URL'ye bakıp, sayfayı açmadan, kimlik avı olup olmadığını
+söyleyebilir misin?" idi.</p>
+<p>İkinci soruya yanıt F1 = 0,977'dir ve bu iyi bir yanıttır.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Yerleşime uygun çerçeveyle yeniden ölçüm</span>
+<span class="arac">Analiz</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Makine öğrenmesi uygulayan bir araştırma asistanısın.
+
+DURUM
+Sızıntı taraması [n] özelliğin sorunlu olduğunu gösterdi. Ayrıca
+özelliklerin bir bölümü, modelin gerçek kullanımında elde
+OLMAYACAK bilgiden geliyor.
+
+YERLEŞİM SENARYOSU
+[Modelin gerçekte ne zaman ve hangi bilgiyle karar vereceğini
+yazın. Örnek: &quot;karar, kullanıcı bağlantıya tıklamadan önce
+verilmeli; o anda yalnız URL dizgisi elde var.&quot;]
+
+GÖREV
+Yalnız yerleşim senaryosunda elde olacak özelliklerle modeli
+yeniden eğit ve üç modeli karşılaştır.
+
+KULLANILACAK ÖZELLİKLER
+[liste]
+
+DIŞARIDA BIRAKILANLAR — her biri için gerekçe
+— [özellik] — [sızıntı / senaryoya aykırı / türetilmiş]
+
+KARŞILAŞTIRILACAK ÜÇ MODEL
+1. Naif — bütün özellikler
+2. Yalnız en baskın sızdıran özellik çıkarılmış
+3. Yerleşime uygun — yalnız senaryoda elde olacak özellikler
+
+ÇIKTI
+Üç modelin doğruluk, kesinlik, duyarlılık, F1, ROC AUC değerlerini
+tek tabloda ver. Üçüncü modelin karışıklık matrisini ayrıca bas.
+
+ZORUNLU
+— Aynı eğitim/test bölünmesini üç modelde de kullan; aksi hâlde
+  karşılaştırma geçersiz olur.
+— Aynı tohum, aynı model ayarları.
+
+SINIRLAR
+— Düşen başarıyı &quot;kayıp&quot; diye yorumlama; bu bir düzeltmedir.
+— Dışarıda bıraktığım bir özelliği &quot;performansı artırıyor&quot; diye
+  geri önerme.
+— Üçüncü modelin başarısını artırmak için ayar denemesi yapma;
+  önce dürüst taban sayıyı görmek istiyorum.
+
+DENETİM
+Üç modelin özellik sayısını ve F1 değerini yan yana bas. İkinci ile
+birinci arasındaki fark, üçüncü ile birinci arasındaki farktan ne
+kadar küçük?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Web güvenliği — kursta koşulan istem</span>
+<span class="ad">Yerleşime uygun çerçeveyle yeniden ölçüm</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Makine öğrenmesi uygulayan bir araştırma asistanısın.
+
+DURUM
+Sızıntı taraması beş özelliğin meşru sınıfta tamamen sabit olduğunu
+gösterdi: URLSimilarityIndex, IsHTTPS, NoOfQMarkInURL, IsDomainIP,
+HasObfuscation. Ayrıca tek eşikle %90 üstü doğruluk veren altı özellikten beşi sayfa
+içeriğinden geliyor.
+
+YERLEŞİM SENARYOSU
+Bir kimlik avı süzgeci, kullanıcı bağlantıya tıklamadan ÖNCE karar
+vermek zorundadır. O anda yalnız URL dizgisi elde vardır. Sayfa
+içeriği özelliklerini elde etmek için siteye bağlanmak gerekir;
+yani tam da engellenmek istenen şey yapılır. Bu yüzden sayfa
+özellikleri kullanmak istatistiksel değil, yöntemsel bir hatadır.
+
+GÖREV
+Yalnız URL dizgisinden hesaplanabilen özelliklerle modeli yeniden
+eğit ve üç modeli karşılaştır.
+
+KULLANILACAK ÖZELLİKLER — 11 sözcüksel özellik
+URLLength, DomainLength, TLDLength, NoOfSubDomain,
+CharContinuationRate, URLCharProb, NoOfLettersInURL,
+LetterRatioInURL, NoOfDegitsInURL, DegitRatioInURL,
+SpacialCharRatioInURL
+
+DIŞARIDA BIRAKILANLAR — her biri için gerekçe
+— URLSimilarityIndex, IsHTTPS, IsDomainIP, HasObfuscation,
+  NoOfQMarkInURL — meşru sınıfta sabit; sızıntı
+— LineOfCode, LargestLineLength, HasTitle, DomainTitleMatchScore,
+  URLTitleMatchScore, HasFavicon, IsResponsive, NoOfURLRedirect,
+  HasDescription, NoOfPopup, NoOfiFrame, HasExternalFormSubmit,
+  HasSocialNet, HasHiddenFields, HasPasswordField, Bank, Pay,
+  Crypto, HasCopyrightInfo, NoOfImage, NoOfCSS, NoOfJS,
+  NoOfExternalRef — yalnız siteye bağlanınca elde edilir; yerleşim
+  senaryosuna aykırı
+— TLDLegitimateProb — şüphelendim, denetledim: tek eşikle yalnız
+  %66,9 doğruluk veriyor ve modele katkısı yok. Sızıntı değil, ama
+  veri setinin kendi etiket dağılımından türediği için dışarıda
+  bırakıyorum. Bu kararı ve gerekçesini çıktıda belirt.
+
+KARŞILAŞTIRILACAK ÜÇ MODEL
+1. Naif — 40 özellik
+2. Yalnız URLSimilarityIndex çıkarılmış — 39 özellik
+3. Yerleşime uygun — 11 sözcüksel özellik
+
+ÇIKTI
+Üç modelin doğruluk, kesinlik, duyarlılık, F1, ROC AUC değerlerini
+tek tabloda ver. Üçüncü modelin karışıklık matrisini ayrıca bas.
+
+ZORUNLU
+— Aynı eğitim/test bölünmesini üç modelde de kullan.
+— Aynı tohum (20261103), aynı model ayarları (300 ağaç).
+
+SINIRLAR
+— Düşen başarıyı &quot;kayıp&quot; diye yorumlama; bu bir düzeltmedir.
+— Dışarıda bıraktığım bir özelliği geri önerme.
+— Üçüncü modelin başarısını artırmak için ayar denemesi yapma.
+
+DENETİM
+Üç modelin özellik sayısını ve F1 değerini yan yana bas. İkinci ile
+birinci arasındaki fark, üçüncü ile birinci arasındaki farktan ne
+kadar küçük? Bu oran, tek sütun silmenin neden yetmediğini
+gösterecek.</pre></div>
+<h2 id="adim-7-capraz-dogrulama">Adım 7 — Çapraz doğrulama</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Beş katlı çapraz doğrulama</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>F1 (5 kat)      : 0,9813  0,9685  0,9720  0,9646  0,9647
+  ortalama ± ss : 0,9702 ± 0,0062
+
+ROC AUC (5 kat) : 0,9970  0,9944  0,9972  0,9954  0,9953
+  ortalama ± ss : 0,9959 ± 0,0011</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w07_capraz_dogrulama.svg"
+ alt="Beş katlı çapraz doğrulama" loading="lazy"></div>
+<figcaption><b>Şekil 9.6</b> Her katın F1 değeri ayrı ayrı, ortalama ve ±1 standart sapma bandıyla.
+En iyi kat (0,9813) ile en kötü kat (0,9646) arasındaki fark 0,0167 —
+tek bir bölünmeden okunan sayının ne kadar oynayabileceğini gösteriyor.
+<span class="indir">Dosya: <a href="varlik/sekil/w07_capraz_dogrulama.svg">w07_capraz_dogrulama.svg</a>
+ · <a href="varlik/sekil_png/w07_capraz_dogrulama.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not istatistik"><span class="not-baslik">Neden tek bölünme yetmez</span><p>Beş katlı çapraz doğrulama veriyi beş eşit parçaya böler; her turda bir
+parça test, kalan dördü eğitim olarak kullanılır ve beş tur sonunda her
+kayıt bir kez test edilmiş olur. Tek bir eğitim/test bölünmesinden çıkan
+sayı ise o bölünmenin şansına bağlıdır. Yukarıdaki beş kat arasındaki 0,0167'lik fark, yalnız
+hangi kayıtların teste düştüğünden kaynaklanıyor — model ve veri
+aynı.</p>
+<p>Makalede tek bir sayı raporlamak eksik bildirimdir. Yazılacak cümle
+şudur: <em>"Yalnız URL dizgisinden türetilen 11 sözcüksel özellikle
+eğitilen rastgele orman modeli, beş katlı çapraz doğrulamada
+F1 = 0,970 ± 0,006 ve ROC AUC = 0,996 ± 0,001 başarısı göstermiştir
+(n = 5.000)."</em></p></aside>
+<h2 id="adim-8-hangi-url-nitelikleri-calisiyor">Adım 8 — Hangi URL nitelikleri çalışıyor</h2>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Permütasyon önemi — 20 yineleme</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>F1'deki ortalama düşüş</th>
+<th>SS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LetterRatioInURL</td>
+<td><strong>0,3081</strong></td>
+<td>0,0049</td>
+</tr>
+<tr>
+<td>SpacialCharRatioInURL</td>
+<td><strong>0,2483</strong></td>
+<td>0,0074</td>
+</tr>
+<tr>
+<td>URLLength</td>
+<td><strong>0,1677</strong></td>
+<td>0,0064</td>
+</tr>
+<tr>
+<td>NoOfLettersInURL</td>
+<td>0,1162</td>
+<td>0,0078</td>
+</tr>
+<tr>
+<td>DomainLength</td>
+<td>0,0412</td>
+<td>0,0037</td>
+</tr>
+<tr>
+<td>NoOfSubDomain</td>
+<td>0,0380</td>
+<td>0,0043</td>
+</tr>
+<tr>
+<td>DegitRatioInURL</td>
+<td>0,0093</td>
+<td>0,0015</td>
+</tr>
+<tr>
+<td>URLCharProb</td>
+<td>0,0084</td>
+<td>0,0026</td>
+</tr>
+<tr>
+<td>CharContinuationRate</td>
+<td>0,0026</td>
+<td>0,0021</td>
+</tr>
+<tr>
+<td>TLDLength</td>
+<td>0,0019</td>
+<td>0,0012</td>
+</tr>
+<tr>
+<td>NoOfDegitsInURL</td>
+<td>0,0007</td>
+<td>0,0020</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w06_permutasyon.svg"
+ alt="Permütasyon önemi" loading="lazy"></div>
+<figcaption><b>Şekil 9.7</b> Permütasyon önemi, bir özelliğin değerleri karıştırıldığında başarının
+ne kadar düştüğünü ölçer. Ağaç tabanlı önem ölçütünden daha
+güvenilirdir çünkü doğrudan "bu özellik olmasa ne kaybederim"
+sorusunu yanıtlar.
+<span class="indir">Dosya: <a href="varlik/sekil/w06_permutasyon.svg">w06_permutasyon.svg</a>
+ · <a href="varlik/sekil_png/w06_permutasyon.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Tartışma bölümü bu listeden yazılır</span><p>Model dört özelliğe dayanıyor: URL'deki harf oranı, özel karakter
+oranı, URL uzunluğu ve harf sayısı. Bu, alandaki bilgiyle tutarlı:
+kimlik avı URL'leri genellikle uzundur, çok sayıda özel karakter ve
+rakam içerir, okunabilir harf oranı düşüktür.</p>
+<p><strong>Tartışma bölümü modelin kendisinden değil bu listeden yazılır.</strong>
+"Rastgele orman %97 başarı gösterdi" bir bulgu değil, bir ölçümdür.
+Bulgu şudur: <em>"Kimlik avı saptamasında ayırt edici bilginin büyük
+bölümü URL'nin karakter bileşiminde taşınmaktadır; alan adı yapısına
+ilişkin özelliklerin katkısı sınırlıdır."</em></p></aside>
+<h2 id="adim-9-yorumlanabilir-karsilastirma">Adım 9 — Yorumlanabilir karşılaştırma</h2>
+<p>Rastgele orman daha başarılı olabilir ama neden öyle karar verdiğini
+söylemez. Lojistik regresyon her özellik için bir katsayı ve bu katsayıdan
+türeyen bir olasılık oranı verir. Aşağıdaki tabloda katsayılar
+standartlaştırılmıştır; yani her özellik kendi standart sapması birimine
+çevrilmiştir, böylece farklı ölçeklerdeki özellikler yan yana okunabilir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Lojistik regresyon — aynı 11 özellik</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>doğruluk 0,8700 · kesinlik 0,9552 · duyarlılık 0,7305 ·
+<strong>F1 0,8279</strong> · ROC AUC 0,9335</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Standart B</th>
+<th>Olasılık oranı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NoOfLettersInURL</td>
+<td><strong>+5,941</strong></td>
+<td><strong>380,15</strong></td>
+</tr>
+<tr>
+<td>URLLength</td>
+<td><strong>−4,993</strong></td>
+<td><strong>0,0068</strong></td>
+</tr>
+<tr>
+<td>NoOfDegitsInURL</td>
+<td>+3,686</td>
+<td>39,90</td>
+</tr>
+<tr>
+<td>SpacialCharRatioInURL</td>
+<td>+2,598</td>
+<td>13,43</td>
+</tr>
+<tr>
+<td>LetterRatioInURL</td>
+<td>+2,380</td>
+<td>10,81</td>
+</tr>
+<tr>
+<td>DegitRatioInURL</td>
+<td>+2,275</td>
+<td>9,73</td>
+</tr>
+<tr>
+<td>DomainLength</td>
+<td>−2,184</td>
+<td>0,113</td>
+</tr>
+<tr>
+<td>URLCharProb</td>
+<td>−0,691</td>
+<td>0,501</td>
+</tr>
+<tr>
+<td>CharContinuationRate</td>
+<td>+0,554</td>
+<td>1,740</td>
+</tr>
+<tr>
+<td>NoOfSubDomain</td>
+<td>−0,331</td>
+<td>0,718</td>
+</tr>
+<tr>
+<td>TLDLength</td>
+<td>+0,249</td>
+<td>1,282</td>
+</tr>
+</tbody>
+</table></div></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Bu tabloda bir sorun var ve saklanmıyor</span><p>İlk iki satıra bakın: <code>NoOfLettersInURL</code> için OR = 380, <code>URLLength</code>
+için OR = 0,0068. Yani aynı modelde biri olasılığı 380 kat artırıyor,
+öteki 150 kat azaltıyor. Bu, gerçek bir etki değil <strong>çoklu
+doğrusallık</strong> belirtisidir.</p>
+<p>URL'deki harf sayısı ile URL uzunluğu neredeyse aynı şeyi ölçer; bir
+URL uzadıkça harf sayısı da artar. İki yakın eşli değişken aynı modele
+girdiğinde katsayılar birbirini dengelemeye çalışır ve devasa, zıt
+işaretli değerler üretir. Katsayıların <strong>toplamı</strong> anlamlıdır, tek
+tek değerleri yorumlanamaz.</p>
+<p><strong>Ne yapılmalı:</strong> ya iki değişkenden biri çıkarılır, ya oran
+cinsinden tek bir değişkene indirgenir (zaten <code>LetterRatioInURL</code>
+var), ya da düzenlileştirme (ridge/lasso) uygulanır. 8. bölümdeki
+doğrusal regresyonda VIF denetimi yapmıştık; burada aynı denetimi
+lojistik modele de uygulamak gerekirdi.</p>
+<p>Bunu gizlemek yerine gösteriyoruz, çünkü bu kursun konusu tam olarak
+bu: <strong>modelin verdiği her sayı yorumlanabilir değildir.</strong></p></aside>
+
+<aside class="not "><span class="not-baslik">İki modelin karşılaştırması</span><p>Rastgele orman F1 = 0,977, lojistik regresyon F1 = 0,828. Aradaki
+fark, yorumlanabilirlik karşılığında ödenen bedeldir — ve buradaki
+bedel yüksektir, çünkü ilişkiler doğrusal değildir.</p>
+<p>Hangisinin raporlanacağı çalışmanın sorusuna bağlıdır: <strong>tahmin
+başarısı</strong> mı aranıyor, <strong>mekanizma açıklaması</strong> mı? İkisi birden
+isteniyorsa ikisi de raporlanır — nitekim burada öyle yapıldı.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Permütasyon önemi ve yorumlanabilir karşılaştırma</span>
+<span class="arac">Analiz</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Model yorumlama üzerine çalışan bir araştırma asistanısın.
+
+KAYNAK
+Eğitilmiş [model] ve test kümesi. Kullanılan özellikler: [liste].
+
+GÖREV — iki bölüm
+
+BÖLÜM 1 — PERMÜTASYON ÖNEMİ
+Her özelliğin değerlerini test kümesinde rastgele karıştır ve
+başarının ne kadar düştüğünü ölç. [n] yineleme yap, ortalama ve
+standart sapma ver.
+
+Neden ağaç tabanlı önem değil: ağaç önemi, çok değerli ve sürekli
+özellikleri yapay olarak şişirir. Permütasyon önemi doğrudan &quot;bu
+özellik olmasa ne kaybederim&quot; sorusunu yanıtlar.
+
+BÖLÜM 2 — YORUMLANABİLİR MODEL
+Aynı özelliklerle lojistik regresyon kur. Katsayıları
+standartlaştır (her özelliği kendi standart sapması birimine
+çevir), olasılık oranlarını hesapla.
+
+ÇIKTI
+— Permütasyon önemi tablosu, azalan sırada
+— Lojistik regresyon katsayı tablosu, mutlak değere göre sıralı
+— İki modelin başarı ölçütleri yan yana
+
+ZORUNLU
+— Lojistik regresyonda çoklu doğrusallığı denetle. Birbirine çok
+  benzeyen özellikler varsa katsayılar devasa ve zıt işaretli
+  çıkar; bu bir bulgu değil bir uyarıdır. Böyle bir durum varsa
+  AÇIKÇA belirt.
+— Sabit tohum: [tohum].
+
+SINIRLAR
+— Hangi modelin &quot;daha iyi&quot; olduğuna karar verme; ikisinin ne işe
+  yaradığını yaz, seçimi bana bırak.
+— Katsayıları nedensel okuma. &quot;X arttıkça Y olur&quot; değil, &quot;X&#x27;teki
+  bir standart sapmalık artış, modelde Y kadarlık bir değişimle
+  ilişkili&quot;.
+— Permütasyon önemi düşük çıkan özellikleri &quot;gereksiz&quot; diye
+  nitelemenin yanlış olduğunu belirt: birbirine benzeyen iki
+  özellik varsa, biri karıştırıldığında öteki aynı bilgiyi taşır
+  ve ikisinin de önemi düşük görünür.
+
+DENETİM
+Permütasyon öneminde ilk dört özellik, toplam düşüşün yüzde kaçını
+oluşturuyor? Lojistik regresyonda mutlak değeri 3&#x27;ü aşan katsayı
+var mı? Varsa hangileri ve aralarında yüksek korelasyon var mı?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Web güvenliği — kursta koşulan istem</span>
+<span class="ad">Permütasyon önemi ve yorumlanabilir karşılaştırma</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Model yorumlama üzerine çalışan bir araştırma asistanısın.
+
+KAYNAK
+Eğitilmiş rastgele orman (300 ağaç) ve 1.500 kayıtlık test kümesi.
+Kullanılan 11 sözcüksel özellik: URLLength, DomainLength,
+TLDLength, NoOfSubDomain, CharContinuationRate, URLCharProb,
+NoOfLettersInURL, LetterRatioInURL, NoOfDegitsInURL,
+DegitRatioInURL, SpacialCharRatioInURL.
+
+GÖREV — iki bölüm
+
+BÖLÜM 1 — PERMÜTASYON ÖNEMİ
+Her özelliğin değerlerini test kümesinde rastgele karıştır ve F1&#x27;in
+ne kadar düştüğünü ölç. 20 yineleme yap, ortalama ve standart sapma
+ver.
+
+BÖLÜM 2 — YORUMLANABİLİR MODEL
+Aynı 11 özellikle lojistik regresyon kur. Katsayıları
+standartlaştır, olasılık oranlarını hesapla.
+
+ÇIKTI
+— Permütasyon önemi tablosu, azalan sırada
+— Lojistik regresyon katsayı tablosu, mutlak değere göre sıralı
+— İki modelin başarı ölçütleri yan yana
+
+ZORUNLU
+— Lojistik regresyonda çoklu doğrusallığı denetle. Bu özellik
+  kümesinde özellikle NoOfLettersInURL ile URLLength ve
+  LetterRatioInURL ile NoOfLettersInURL arasında yüksek korelasyon
+  bekliyorum; URL uzadıkça harf sayısı da artar. Katsayılar devasa
+  ve zıt işaretli çıkarsa bunu AÇIKÇA belirt ve &quot;bu bir bulgu
+  değil, bir uyarıdır&quot; diye yaz.
+— Sabit tohum: 20261103.
+
+SINIRLAR
+— Hangi modelin &quot;daha iyi&quot; olduğuna karar verme.
+— Katsayıları nedensel okuma.
+— Permütasyon önemi düşük çıkan özellikleri &quot;gereksiz&quot; diye
+  nitelendirme; birbirine benzeyen özelliklerde ikisinin de önemi
+  düşük görünür.
+— Çoklu doğrusallık çıkarsa modeli kendiliğinden düzeltme (özellik
+  çıkarma, ridge uygulama). Sorunu göster, çözüm kararını bana
+  bırak.
+
+DENETİM
+Permütasyon öneminde ilk dört özellik, toplam düşüşün yüzde kaçını
+oluşturuyor? Lojistik regresyonda mutlak değeri 3&#x27;ü aşan katsayı
+var mı? Varsa hangileri ve aralarında yüksek korelasyon var mı?</pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Çoklu doğrusallık uyarısı isteme neden yazıldı</span><p>Doldurulmuş istemde hangi iki özellik çiftinin sorun çıkaracağı
+önceden söyleniyor. Bu tahmin alan bilgisinden geliyor: URL
+uzunluğu ile harf sayısı aynı şeyin iki ölçüsüdür.</p>
+<p>Uyarı yazılmasaydı model katsayı tablosunu olduğu gibi verirdi ve
+OR = 380 gibi bir değeri <strong>bulgu sanabilirdiniz.</strong> Bölümün 9.
+adımındaki tablo tam olarak bunu gösteriyor.</p>
+<p>Son sınır da bilinçli: <em>"modeli kendiliğinden düzeltme."</em> Çoklu
+doğrusallığı gidermenin birkaç yolu var ve hangisinin seçileceği
+yöntemsel bir karardır. Model bunu sessizce yapsa, tablodaki
+sayıların neden değiştiğini anlamazsınız.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Yüksek doğruluk bir başarı belgesi değil, bir denetim gerekçesidir.
+Alanınızda olağandışı bir sayı aldığınızda nedenini arayın.</p></li><li><p>Sızıntı aranırken tek tek sütun denenmez; bütün sütunlar iki ölçütle
+taranır — bir sınıfta sabit mi, tek eşikle kaç yüzde veriyor.</p></li><li><p>Bir sütun silmek genellikle yetmez. Düzeltmenin işe yarayıp
+yaramadığı ölçülür, varsayılmaz.</p></li><li><p>Doğru soru "hangi sütunu sileyim" değil, "model gerçekte ne zaman
+karar verecek". Çerçeve düzeltildiğinde raporlanan sayı, ölçmek istediğiniz şeye karşılık
+gelmeye başlar.</p></li><li><p>Tek bölünmeden tek sayı raporlanmaz; çapraz doğrulama ortalaması ve
+standart sapması yazılır.</p></li><li><p>Tartışma bölümü modelin başarı sayısından değil, permütasyon önemi
+listesinden yazılır.</p></li><li><p>Lojistik regresyonda da çoklu doğrusallık denetlenir. Devasa ve zıt
+işaretli katsayılar bir bulgu değil, bir uyarıdır.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="08-nicel-analiz.html"><span class="yon">← Önceki</span><span class="ad">Nicel analiz: on iki adım, gerçek veri</span></a><a class="sag" href="10-nitel-analiz.html"><span class="yon">Sonraki →</span><span class="ad">Nitel analiz: tematik analizin altı aşaması</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

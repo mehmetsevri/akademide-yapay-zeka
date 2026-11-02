@@ -1,0 +1,1607 @@
+{
+ "veri": {
+  "yanit": 116,
+  "kelime": 1601,
+  "katilimci": 45,
+  "sentetik": true
+ },
+ "asinalik": {
+  "okuma_turu": 2,
+  "not_sayisi": 41,
+  "harcanan_sure_dakika": 95,
+  "aciklama": "Yanıtların tamamı iki kez okundu; ilk okumada kod üretilmedi, yalnız kenar notu alındı. Kodlar ikinci okumada üretildi."
+ },
+ "kod_kitabi": [
+  {
+   "kod": "S1-L1",
+   "tema": "Literatürle baş etme",
+   "tanim": "Tarama, ön ayıklama, ilgili kaynağı seçme"
+  },
+  {
+   "kod": "S1-L2",
+   "tema": "Literatürle baş etme",
+   "tanim": "Makale veya metin özetletme"
+  },
+  {
+   "kod": "S1-L3",
+   "tema": "Literatürle baş etme",
+   "tanim": "Anahtar kelime üretme, literatür boşluğu arama"
+  },
+  {
+   "kod": "S1-L4",
+   "tema": "Literatürle baş etme",
+   "tanim": "Alan dışı veya yeni bir konuya giriş yapma"
+  },
+  {
+   "kod": "S1-D1",
+   "tema": "Dil engelini aşma",
+   "tanim": "İngilizce yazım, dil düzeltme, redaksiyon"
+  },
+  {
+   "kod": "S1-D2",
+   "tema": "Dil engelini aşma",
+   "tanim": "Türkçeden İngilizceye çeviri"
+  },
+  {
+   "kod": "S1-D3",
+   "tema": "Dil engelini aşma",
+   "tanim": "Son okuma, yazım hatası, cümle düzeltme"
+  },
+  {
+   "kod": "S1-D4",
+   "tema": "Dil engelini aşma",
+   "tanim": "Öz, başlık ve anahtar kelime metinleri"
+  },
+  {
+   "kod": "S1-V1",
+   "tema": "Veriyi işler hâle getirme",
+   "tanim": "Analiz kodu yazma veya hata ayıklama"
+  },
+  {
+   "kod": "S1-V2",
+   "tema": "Veriyi işler hâle getirme",
+   "tanim": "İstatistiksel yöntem seçimi, hesap doğrulama"
+  },
+  {
+   "kod": "S1-V3",
+   "tema": "Veriyi işler hâle getirme",
+   "tanim": "Veri temizleme ve biçim birleştirme"
+  },
+  {
+   "kod": "S1-V4",
+   "tema": "Veriyi işler hâle getirme",
+   "tanim": "Grafik ve tablo üretimi, biçimlendirme"
+  },
+  {
+   "kod": "S1-Z1",
+   "tema": "Düşünme ortağı",
+   "tanim": "Metin planı, bölüm iskeleti çıkarma"
+  },
+  {
+   "kod": "S1-Z2",
+   "tema": "Düşünme ortağı",
+   "tanim": "Fikir geliştirme, araştırma sorusunu daraltma"
+  },
+  {
+   "kod": "S1-Z3",
+   "tema": "Düşünme ortağı",
+   "tanim": "Kendi metnini zayıf nokta için denetletme"
+  },
+  {
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü",
+   "tanim": "Hakem cevabı, editör yazışması, idari metinler"
+  },
+  {
+   "kod": "S1-Y2",
+   "tema": "İdari ve yayın yükü",
+   "tanim": "Öğretim malzemesi, sunum, öğrenci desteği"
+  },
+  {
+   "kod": "S1-Y3",
+   "tema": "İdari ve yayın yükü",
+   "tanim": "Ölçek maddesi, nitel kodlama gibi yöntem işleri"
+  },
+  {
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar",
+   "tanim": "Fayda görmeme, kullanmama veya kararsızlık"
+  },
+  {
+   "kod": "S2-G1",
+   "tema": "Güvenilirlik",
+   "tanim": "Var olmayan kaynak veya atıf uydurma"
+  },
+  {
+   "kod": "S2-G2",
+   "tema": "Güvenilirlik",
+   "tanim": "Yanlışı kendinden emin biçimde söyleme"
+  },
+  {
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik",
+   "tanim": "Hesap, analiz veya yöntem hatası"
+  },
+  {
+   "kod": "S2-G4",
+   "tema": "Güvenilirlik",
+   "tanim": "Güncel literatürü bilmemesi"
+  },
+  {
+   "kod": "S2-O1",
+   "tema": "Yazarlık ve özgünlük",
+   "tanim": "Metnin kime ait olduğunun belirsizliği"
+  },
+  {
+   "kod": "S2-O2",
+   "tema": "Yazarlık ve özgünlük",
+   "tanim": "Katkı ve yazarlık sınırının tanımsızlığı"
+  },
+  {
+   "kod": "S2-O3",
+   "tema": "Yazarlık ve özgünlük",
+   "tanim": "Metinlerin benzeşmesi, üslup kaybı"
+  },
+  {
+   "kod": "S2-O4",
+   "tema": "Yazarlık ve özgünlük",
+   "tanim": "Yüzeysellik, derinleşmeme"
+  },
+  {
+   "kod": "S2-V1",
+   "tema": "Veri ve gizlilik",
+   "tanim": "Hassas veya kişisel verinin araca yüklenmesi"
+  },
+  {
+   "kod": "S2-V2",
+   "tema": "Veri ve gizlilik",
+   "tanim": "Yayımlanmamış verinin üçüncü tarafa gitmesi"
+  },
+  {
+   "kod": "S2-V3",
+   "tema": "Veri ve gizlilik",
+   "tanim": "Kullanım sözleşmelerinin bilinmemesi"
+  },
+  {
+   "kod": "S2-K1",
+   "tema": "Kuralsızlık",
+   "tanim": "Kurumsal politikanın bulunmaması"
+  },
+  {
+   "kod": "S2-K2",
+   "tema": "Kuralsızlık",
+   "tanim": "Dergi politikalarının dağınık ve farklı olması"
+  },
+  {
+   "kod": "S2-K3",
+   "tema": "Kuralsızlık",
+   "tanim": "Etik kurul yaklaşımının belirsizliği"
+  },
+  {
+   "kod": "S2-K4",
+   "tema": "Kuralsızlık",
+   "tanim": "Geri çekilme veya yaptırım riski"
+  },
+  {
+   "kod": "S2-E1",
+   "tema": "Öğretim ve değerlendirme",
+   "tanim": "Ödev ve tezlerin değerlendirilemezliği"
+  },
+  {
+   "kod": "S2-E2",
+   "tema": "Öğretim ve değerlendirme",
+   "tanim": "Öğrencinin kullanımı beyan etmemesi"
+  },
+  {
+   "kod": "S2-E3",
+   "tema": "Öğretim ve değerlendirme",
+   "tanim": "Hakemlik sürecinde kullanılması"
+  },
+  {
+   "kod": "S2-B1",
+   "tema": "Beceri ve erişim",
+   "tanim": "Kendi yazma veya düşünme becerisinin körelmesi"
+  },
+  {
+   "kod": "S2-B2",
+   "tema": "Beceri ve erişim",
+   "tanim": "Ücretli araçlara erişim eşitsizliği"
+  },
+  {
+   "kod": "S2-B3",
+   "tema": "Beceri ve erişim",
+   "tanim": "Türkçe üretim niteliğinin düşüklüğü"
+  },
+  {
+   "kod": "S2-B4",
+   "tema": "Beceri ve erişim",
+   "tanim": "Kurumsal hesap yokluğu, kişisel hesapla kurum işi"
+  },
+  {
+   "kod": "S2-N1",
+   "tema": "Kaygı duymayanlar",
+   "tanim": "Kaygı bildirmeme veya önemsememe"
+  },
+  {
+   "kod": "S3-R1",
+   "tema": "Eğitim ve rehberlik",
+   "tanim": "Uygulamalı, kendi verisiyle çalışılan eğitim"
+  },
+  {
+   "kod": "S3-R2",
+   "tema": "Eğitim ve rehberlik",
+   "tanim": "Alana özgü rehber (nitel, derleme, Türkçe yazım)"
+  },
+  {
+   "kod": "S3-R3",
+   "tema": "Eğitim ve rehberlik",
+   "tanim": "Akran desteği, deneyimliyle eşleştirme, tartışma ortamı"
+  },
+  {
+   "kod": "S3-R4",
+   "tema": "Eğitim ve rehberlik",
+   "tanim": "Öğrenmeye ayrılacak zaman"
+  },
+  {
+   "kod": "S3-A1",
+   "tema": "Erişim ve altyapı",
+   "tanim": "Kurumsal lisans ve kurumsal hesap"
+  },
+  {
+   "kod": "S3-A2",
+   "tema": "Erişim ve altyapı",
+   "tanim": "Kurum içinde çalışan, veriyi dışarı çıkarmayan sürüm"
+  },
+  {
+   "kod": "S3-A3",
+   "tema": "Erişim ve altyapı",
+   "tanim": "Veri tabanlarıyla bütünleşme"
+  },
+  {
+   "kod": "S3-A4",
+   "tema": "Erişim ve altyapı",
+   "tanim": "Kurumsal dil ve redaksiyon hizmeti"
+  },
+  {
+   "kod": "S3-P1",
+   "tema": "Yazılı politika",
+   "tanim": "Bağlayıcı kurum politikası metni"
+  },
+  {
+   "kod": "S3-P2",
+   "tema": "Yazılı politika",
+   "tanim": "Beyan cümlesi şablonu"
+  },
+  {
+   "kod": "S3-P3",
+   "tema": "Yazılı politika",
+   "tanim": "Dergi politikalarını derleyen rehber"
+  },
+  {
+   "kod": "S3-P4",
+   "tema": "Yazılı politika",
+   "tanim": "Yazarlık ve katkı konusunda kurum görüşü"
+  },
+  {
+   "kod": "S3-Y1",
+   "tema": "Yönetmelik ve denetim",
+   "tanim": "Etik kurul form ve yönergesinin güncellenmesi"
+  },
+  {
+   "kod": "S3-Y2",
+   "tema": "Yönetmelik ve denetim",
+   "tanim": "Tez yönetmeliğinde açık hüküm"
+  },
+  {
+   "kod": "S3-Y3",
+   "tema": "Yönetmelik ve denetim",
+   "tanim": "Öğrenci kullanımına ilişkin düzenleme"
+  },
+  {
+   "kod": "S3-Y4",
+   "tema": "Yönetmelik ve denetim",
+   "tanim": "Sözleşmelerin hukuki incelenmesi"
+  },
+  {
+   "kod": "S3-Y5",
+   "tema": "Yönetmelik ve denetim",
+   "tanim": "Kaynak doğrulama zorunluluğu"
+  },
+  {
+   "kod": "S3-M1",
+   "tema": "Yöntem desteği",
+   "tanim": "İstatistik danışmanlığı"
+  },
+  {
+   "kod": "S3-M2",
+   "tema": "Yöntem desteği",
+   "tanim": "Şekil ve tablo standartları"
+  },
+  {
+   "kod": "S3-M3",
+   "tema": "Yöntem desteği",
+   "tanim": "Üretilen kodun gözden geçirilmesi kültürü"
+  },
+  {
+   "kod": "S3-S1",
+   "tema": "Beklentisi olmayanlar",
+   "tanim": "Kurumdan beklenti bildirmeme"
+  }
+ ],
+ "atamalar": [
+  {
+   "katilimci_no": "K004",
+   "soru_no": 1,
+   "kod": "S1-L1",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K007",
+   "soru_no": 1,
+   "kod": "S1-D1",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K011",
+   "soru_no": 1,
+   "kod": "S1-V1",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K013",
+   "soru_no": 1,
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar"
+  },
+  {
+   "katilimci_no": "K016",
+   "soru_no": 1,
+   "kod": "S1-Z1",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K019",
+   "soru_no": 1,
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K022",
+   "soru_no": 1,
+   "kod": "S1-Y2",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K025",
+   "soru_no": 1,
+   "kod": "S1-Z3",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K025",
+   "soru_no": 1,
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K028",
+   "soru_no": 1,
+   "kod": "S1-V3",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K031",
+   "soru_no": 1,
+   "kod": "S1-D4",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K034",
+   "soru_no": 1,
+   "kod": "S1-L2",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K034",
+   "soru_no": 1,
+   "kod": "S1-L4",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K037",
+   "soru_no": 1,
+   "kod": "S1-L3",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K040",
+   "soru_no": 1,
+   "kod": "S1-V4",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K043",
+   "soru_no": 1,
+   "kod": "S1-Z2",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K046",
+   "soru_no": 1,
+   "kod": "S1-V4",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K049",
+   "soru_no": 1,
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K052",
+   "soru_no": 1,
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar"
+  },
+  {
+   "katilimci_no": "K055",
+   "soru_no": 1,
+   "kod": "S1-L1",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K055",
+   "soru_no": 1,
+   "kod": "S1-Y3",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K058",
+   "soru_no": 1,
+   "kod": "S1-V4",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K061",
+   "soru_no": 1,
+   "kod": "S1-Z3",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K064",
+   "soru_no": 1,
+   "kod": "S1-V2",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K067",
+   "soru_no": 1,
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar"
+  },
+  {
+   "katilimci_no": "K070",
+   "soru_no": 1,
+   "kod": "S1-Y2",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K073",
+   "soru_no": 1,
+   "kod": "S1-D2",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K076",
+   "soru_no": 1,
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K079",
+   "soru_no": 1,
+   "kod": "S1-L3",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K082",
+   "soru_no": 1,
+   "kod": "S1-Y2",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K085",
+   "soru_no": 1,
+   "kod": "S1-Y3",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K088",
+   "soru_no": 1,
+   "kod": "S1-D3",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K091",
+   "soru_no": 1,
+   "kod": "S1-Z2",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K094",
+   "soru_no": 1,
+   "kod": "S1-L1",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K094",
+   "soru_no": 1,
+   "kod": "S1-D1",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K097",
+   "soru_no": 1,
+   "kod": "S1-V4",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K100",
+   "soru_no": 1,
+   "kod": "S1-Y2",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K103",
+   "soru_no": 1,
+   "kod": "S1-L4",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K106",
+   "soru_no": 1,
+   "kod": "S1-V1",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K109",
+   "soru_no": 1,
+   "kod": "S1-Y1",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K112",
+   "soru_no": 1,
+   "kod": "S1-L3",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K115",
+   "soru_no": 1,
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar"
+  },
+  {
+   "katilimci_no": "K118",
+   "soru_no": 1,
+   "kod": "S1-Y3",
+   "tema": "İdari ve yayın yükü"
+  },
+  {
+   "katilimci_no": "K121",
+   "soru_no": 1,
+   "kod": "S1-Z2",
+   "tema": "Düşünme ortağı"
+  },
+  {
+   "katilimci_no": "K124",
+   "soru_no": 1,
+   "kod": "S1-V2",
+   "tema": "Veriyi işler hâle getirme"
+  },
+  {
+   "katilimci_no": "K127",
+   "soru_no": 1,
+   "kod": "S1-M1",
+   "tema": "Mesafeli duranlar"
+  },
+  {
+   "katilimci_no": "K130",
+   "soru_no": 1,
+   "kod": "S1-D4",
+   "tema": "Dil engelini aşma"
+  },
+  {
+   "katilimci_no": "K133",
+   "soru_no": 1,
+   "kod": "S1-L2",
+   "tema": "Literatürle baş etme"
+  },
+  {
+   "katilimci_no": "K004",
+   "soru_no": 2,
+   "kod": "S2-G1",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K007",
+   "soru_no": 2,
+   "kod": "S2-O1",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K007",
+   "soru_no": 2,
+   "kod": "S2-K1",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K010",
+   "soru_no": 2,
+   "kod": "S2-V1",
+   "tema": "Veri ve gizlilik"
+  },
+  {
+   "katilimci_no": "K013",
+   "soru_no": 2,
+   "kod": "S2-O1",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K016",
+   "soru_no": 2,
+   "kod": "S2-K1",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K016",
+   "soru_no": 2,
+   "kod": "S2-K2",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K019",
+   "soru_no": 2,
+   "kod": "S2-E1",
+   "tema": "Öğretim ve değerlendirme"
+  },
+  {
+   "katilimci_no": "K022",
+   "soru_no": 2,
+   "kod": "S2-B1",
+   "tema": "Beceri ve erişim"
+  },
+  {
+   "katilimci_no": "K025",
+   "soru_no": 2,
+   "kod": "S2-B2",
+   "tema": "Beceri ve erişim"
+  },
+  {
+   "katilimci_no": "K028",
+   "soru_no": 2,
+   "kod": "S2-K4",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K031",
+   "soru_no": 2,
+   "kod": "S2-N1",
+   "tema": "Kaygı duymayanlar"
+  },
+  {
+   "katilimci_no": "K034",
+   "soru_no": 2,
+   "kod": "S2-G2",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K037",
+   "soru_no": 2,
+   "kod": "S2-E3",
+   "tema": "Öğretim ve değerlendirme"
+  },
+  {
+   "katilimci_no": "K040",
+   "soru_no": 2,
+   "kod": "S2-B1",
+   "tema": "Beceri ve erişim"
+  },
+  {
+   "katilimci_no": "K043",
+   "soru_no": 2,
+   "kod": "S2-V2",
+   "tema": "Veri ve gizlilik"
+  },
+  {
+   "katilimci_no": "K043",
+   "soru_no": 2,
+   "kod": "S2-V3",
+   "tema": "Veri ve gizlilik"
+  },
+  {
+   "katilimci_no": "K046",
+   "soru_no": 2,
+   "kod": "S2-O3",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K049",
+   "soru_no": 2,
+   "kod": "S2-K3",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K052",
+   "soru_no": 2,
+   "kod": "S2-N1",
+   "tema": "Kaygı duymayanlar"
+  },
+  {
+   "katilimci_no": "K055",
+   "soru_no": 2,
+   "kod": "S2-G2",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K055",
+   "soru_no": 2,
+   "kod": "S2-K1",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K058",
+   "soru_no": 2,
+   "kod": "S2-B3",
+   "tema": "Beceri ve erişim"
+  },
+  {
+   "katilimci_no": "K061",
+   "soru_no": 2,
+   "kod": "S2-G2",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K064",
+   "soru_no": 2,
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K067",
+   "soru_no": 2,
+   "kod": "S2-O4",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K070",
+   "soru_no": 2,
+   "kod": "S2-E2",
+   "tema": "Öğretim ve değerlendirme"
+  },
+  {
+   "katilimci_no": "K073",
+   "soru_no": 2,
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K076",
+   "soru_no": 2,
+   "kod": "S2-B4",
+   "tema": "Beceri ve erişim"
+  },
+  {
+   "katilimci_no": "K079",
+   "soru_no": 2,
+   "kod": "S2-G4",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K082",
+   "soru_no": 2,
+   "kod": "S2-N1",
+   "tema": "Kaygı duymayanlar"
+  },
+  {
+   "katilimci_no": "K085",
+   "soru_no": 2,
+   "kod": "S2-O1",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K088",
+   "soru_no": 2,
+   "kod": "S2-O2",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K091",
+   "soru_no": 2,
+   "kod": "S2-O2",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K094",
+   "soru_no": 2,
+   "kod": "S2-K2",
+   "tema": "Kuralsızlık"
+  },
+  {
+   "katilimci_no": "K097",
+   "soru_no": 2,
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K100",
+   "soru_no": 2,
+   "kod": "S2-E1",
+   "tema": "Öğretim ve değerlendirme"
+  },
+  {
+   "katilimci_no": "K103",
+   "soru_no": 2,
+   "kod": "S2-G2",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K106",
+   "soru_no": 2,
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K112",
+   "soru_no": 2,
+   "kod": "S2-G1",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K118",
+   "soru_no": 2,
+   "kod": "S2-O2",
+   "tema": "Yazarlık ve özgünlük"
+  },
+  {
+   "katilimci_no": "K124",
+   "soru_no": 2,
+   "kod": "S2-G3",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K127",
+   "soru_no": 2,
+   "kod": "S2-N1",
+   "tema": "Kaygı duymayanlar"
+  },
+  {
+   "katilimci_no": "K130",
+   "soru_no": 2,
+   "kod": "S2-G1",
+   "tema": "Güvenilirlik"
+  },
+  {
+   "katilimci_no": "K004",
+   "soru_no": 3,
+   "kod": "S3-R1",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K007",
+   "soru_no": 3,
+   "kod": "S3-A1",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K010",
+   "soru_no": 3,
+   "kod": "S3-A2",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K013",
+   "soru_no": 3,
+   "kod": "S3-P1",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K016",
+   "soru_no": 3,
+   "kod": "S3-P1",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K019",
+   "soru_no": 3,
+   "kod": "S3-Y3",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K022",
+   "soru_no": 3,
+   "kod": "S3-S1",
+   "tema": "Beklentisi olmayanlar"
+  },
+  {
+   "katilimci_no": "K025",
+   "soru_no": 3,
+   "kod": "S3-P2",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K028",
+   "soru_no": 3,
+   "kod": "S3-P3",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K031",
+   "soru_no": 3,
+   "kod": "S3-A1",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K031",
+   "soru_no": 3,
+   "kod": "S3-R1",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K034",
+   "soru_no": 3,
+   "kod": "S3-Y5",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K037",
+   "soru_no": 3,
+   "kod": "S3-P1",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K040",
+   "soru_no": 3,
+   "kod": "S3-R4",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K043",
+   "soru_no": 3,
+   "kod": "S3-Y4",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K046",
+   "soru_no": 3,
+   "kod": "S3-Y1",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K049",
+   "soru_no": 3,
+   "kod": "S3-Y1",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K052",
+   "soru_no": 3,
+   "kod": "S3-R1",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K055",
+   "soru_no": 3,
+   "kod": "S3-R2",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K058",
+   "soru_no": 3,
+   "kod": "S3-R2",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K061",
+   "soru_no": 3,
+   "kod": "S3-R3",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K064",
+   "soru_no": 3,
+   "kod": "S3-M1",
+   "tema": "Yöntem desteği"
+  },
+  {
+   "katilimci_no": "K070",
+   "soru_no": 3,
+   "kod": "S3-Y2",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K073",
+   "soru_no": 3,
+   "kod": "S3-A4",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K076",
+   "soru_no": 3,
+   "kod": "S3-A1",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K079",
+   "soru_no": 3,
+   "kod": "S3-A3",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K082",
+   "soru_no": 3,
+   "kod": "S3-R3",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K085",
+   "soru_no": 3,
+   "kod": "S3-R2",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K091",
+   "soru_no": 3,
+   "kod": "S3-P4",
+   "tema": "Yazılı politika"
+  },
+  {
+   "katilimci_no": "K097",
+   "soru_no": 3,
+   "kod": "S3-M2",
+   "tema": "Yöntem desteği"
+  },
+  {
+   "katilimci_no": "K106",
+   "soru_no": 3,
+   "kod": "S3-M3",
+   "tema": "Yöntem desteği"
+  },
+  {
+   "katilimci_no": "K112",
+   "soru_no": 3,
+   "kod": "S3-Y5",
+   "tema": "Yönetmelik ve denetim"
+  },
+  {
+   "katilimci_no": "K130",
+   "soru_no": 3,
+   "kod": "S3-A1",
+   "tema": "Erişim ve altyapı"
+  },
+  {
+   "katilimci_no": "K130",
+   "soru_no": 3,
+   "kod": "S3-R1",
+   "tema": "Eğitim ve rehberlik"
+  },
+  {
+   "katilimci_no": "K130",
+   "soru_no": 3,
+   "kod": "S3-P1",
+   "tema": "Yazılı politika"
+  }
+ ],
+ "kod_sayisi": 63,
+ "atama_sayisi": 127,
+ "cok_kodlu_yanit": 10,
+ "kodlayici_uyumu": {
+  "n": 30,
+  "gözlenen_uyum": 0.9,
+  "beklenen_uyum": 0.0878,
+  "kappa": 0.8904,
+  "yorum": "çok iyi"
+ },
+ "uyusmazliklar": [
+  {
+   "katilimci": "K085",
+   "soru": 1,
+   "okuma_1": "İdari ve yayın yükü",
+   "okuma_2": "Düşünme ortağı"
+  },
+  {
+   "katilimci": "K094",
+   "soru": 1,
+   "okuma_1": "Literatürle baş etme",
+   "okuma_2": "Dil engelini aşma"
+  },
+  {
+   "katilimci": "K013",
+   "soru": 3,
+   "okuma_1": "Yazılı politika",
+   "okuma_2": "Yönetmelik ve denetim"
+  }
+ ],
+ "temalar": [
+  {
+   "soru_no": 1,
+   "tema": "İdari ve yayın yükü",
+   "katilimci": 12,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 27.3,
+   "kod_atamasi": 12,
+   "kodlar": [
+    {
+     "kod": "S1-Y1",
+     "sıklık": 5
+    },
+    {
+     "kod": "S1-Y2",
+     "sıklık": 4
+    },
+    {
+     "kod": "S1-Y3",
+     "sıklık": 3
+    }
+   ],
+   "alinti_katilimci": "K025",
+   "alinti": "Proje önerisi yazarken özgün değer kısmını tartışmak için kullanıyorum. Benim yazdığımı okutup 'bir değerlendirici bunu nasıl eleştirir' diye sorduruyorum. Çok işe yarıyor."
+  },
+  {
+   "soru_no": 1,
+   "tema": "Literatürle baş etme",
+   "katilimci": 9,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 20.5,
+   "kod_atamasi": 10,
+   "kodlar": [
+    {
+     "kod": "S1-L1",
+     "sıklık": 3
+    },
+    {
+     "kod": "S1-L3",
+     "sıklık": 3
+    },
+    {
+     "kod": "S1-L2",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-L4",
+     "sıklık": 2
+    }
+   ],
+   "alinti_katilimci": "K004",
+   "alinti": "Literatür taramasında işe yarıyor. Elli makalenin özetini okuyup hangisini açacağıma karar vermek yerine, hepsini birden taratıp bana ilgili olanları listeletiyorum. Zaman kazancı ciddi."
+  },
+  {
+   "soru_no": 1,
+   "tema": "Veriyi işler hâle getirme",
+   "katilimci": 9,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 20.5,
+   "kod_atamasi": 9,
+   "kodlar": [
+    {
+     "kod": "S1-V4",
+     "sıklık": 4
+    },
+    {
+     "kod": "S1-V1",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-V2",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-V3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K064",
+   "alinti": "İstatistik seçiminde. Verim şu, sorum bu, hangi testi kullanmalıyım diye soruyorum. Sonra kendim doğruluyorum ama nereden başlayacağımı biliyorum artık."
+  },
+  {
+   "soru_no": 1,
+   "tema": "Dil engelini aşma",
+   "katilimci": 6,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 13.6,
+   "kod_atamasi": 6,
+   "kodlar": [
+    {
+     "kod": "S1-D1",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-D4",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-D2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S1-D3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K007",
+   "alinti": "Esas olarak İngilizce yazarken. Metni ben yazıyorum, sonra dil düzeltmesi için veriyorum. Native speaker'a para ödemekten kurtuldum."
+  },
+  {
+   "soru_no": 1,
+   "tema": "Düşünme ortağı",
+   "katilimci": 6,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 13.6,
+   "kod_atamasi": 6,
+   "kodlar": [
+    {
+     "kod": "S1-Z2",
+     "sıklık": 3
+    },
+    {
+     "kod": "S1-Z3",
+     "sıklık": 2
+    },
+    {
+     "kod": "S1-Z1",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K025",
+   "alinti": "Proje önerisi yazarken özgün değer kısmını tartışmak için kullanıyorum. Benim yazdığımı okutup 'bir değerlendirici bunu nasıl eleştirir' diye sorduruyorum. Çok işe yarıyor."
+  },
+  {
+   "soru_no": 1,
+   "tema": "Mesafeli duranlar",
+   "katilimci": 5,
+   "soru_yanit_sayisi": 44,
+   "yuzde": 11.4,
+   "kod_atamasi": 5,
+   "kodlar": [
+    {
+     "kod": "S1-M1",
+     "sıklık": 5
+    }
+   ],
+   "alinti_katilimci": "K067",
+   "alinti": "Çok yararlı bulmuyorum. Ürettiği metin yüzeysel kalıyor, düzeltmek yeniden yazmaktan uzun sürüyor."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Güvenilirlik",
+   "katilimci": 13,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 32.5,
+   "kod_atamasi": 13,
+   "kodlar": [
+    {
+     "kod": "S2-G3",
+     "sıklık": 5
+    },
+    {
+     "kod": "S2-G2",
+     "sıklık": 4
+    },
+    {
+     "kod": "S2-G1",
+     "sıklık": 3
+    },
+    {
+     "kod": "S2-G4",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K004",
+   "alinti": "Uydurduğu kaynaklar. İki kez bana var olmayan makale verdi, DOI'si de vardı, açtım açılmadı. Artık her kaynağı tek tek kontrol ediyorum ama bu da ayrı iş."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Yazarlık ve özgünlük",
+   "katilimci": 8,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 20.0,
+   "kod_atamasi": 8,
+   "kodlar": [
+    {
+     "kod": "S2-O1",
+     "sıklık": 3
+    },
+    {
+     "kod": "S2-O2",
+     "sıklık": 3
+    },
+    {
+     "kod": "S2-O3",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-O4",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K007",
+   "alinti": "Yazdığı metin benim mi? Dil düzeltmesi yaptırdığımda hâlâ benim metnim sayılır mı, nereye kadar? Bunun sınırı belirsiz ve kimse söylemiyor."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Kuralsızlık",
+   "katilimci": 6,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 15.0,
+   "kod_atamasi": 7,
+   "kodlar": [
+    {
+     "kod": "S2-K1",
+     "sıklık": 3
+    },
+    {
+     "kod": "S2-K2",
+     "sıklık": 2
+    },
+    {
+     "kod": "S2-K4",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-K3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K016",
+   "alinti": "Kurum kuralı yok. Hangi derginin ne istediğini de bilmiyorum. Beyan etmem gerekiyor mu, ne yazmam gerekiyor, nereye yazmam gerekiyor — hiçbiri belli değil."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Beceri ve erişim",
+   "katilimci": 5,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 12.5,
+   "kod_atamasi": 5,
+   "kodlar": [
+    {
+     "kod": "S2-B1",
+     "sıklık": 2
+    },
+    {
+     "kod": "S2-B2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-B3",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-B4",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K025",
+   "alinti": "Ücret. Ben kendi paramla ödüyorum, ödemeyen meslektaşım ücretsiz sürümle çalışıyor ve arasındaki fark büyük. Bu eşitsizlik yayın rekabetine de yansıyor."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Kaygı duymayanlar",
+   "katilimci": 4,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 10.0,
+   "kod_atamasi": 4,
+   "kodlar": [
+    {
+     "kod": "S2-N1",
+     "sıklık": 4
+    }
+   ],
+   "alinti_katilimci": "K082",
+   "alinti": "Kaygılarım var ama kullanmaya devam ediyorum. Çelişkili olduğumu biliyorum."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Öğretim ve değerlendirme",
+   "katilimci": 4,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 10.0,
+   "kod_atamasi": 4,
+   "kodlar": [
+    {
+     "kod": "S2-E1",
+     "sıklık": 2
+    },
+    {
+     "kod": "S2-E3",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-E2",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K037",
+   "alinti": "Hakemlikte kullanılması. Benim makalemi bir hakemin yapay zekâya okutup rapor yazdırdığını düşünmek rahatsız edici. Değerlendirilmeyi hak ettiğim şey okunmamış olabilir."
+  },
+  {
+   "soru_no": 2,
+   "tema": "Veri ve gizlilik",
+   "katilimci": 2,
+   "soru_yanit_sayisi": 40,
+   "yuzde": 5.0,
+   "kod_atamasi": 3,
+   "kodlar": [
+    {
+     "kod": "S2-V1",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-V2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S2-V3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K010",
+   "alinti": "Veri gizliliği. Hasta verisiyle çalışıyorum, bu veriyi hiçbir buluta yüklemem. Ama meslektaşlarımın yüklediğini biliyorum ve kimse uyarmıyor."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Eğitim ve rehberlik",
+   "katilimci": 10,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 31.2,
+   "kod_atamasi": 10,
+   "kodlar": [
+    {
+     "kod": "S3-R1",
+     "sıklık": 4
+    },
+    {
+     "kod": "S3-R2",
+     "sıklık": 3
+    },
+    {
+     "kod": "S3-R3",
+     "sıklık": 2
+    },
+    {
+     "kod": "S3-R4",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K040",
+   "alinti": "Zaman. Öğrenmek için zaman istiyorum, ders yükü ve idari işle bu araçları öğrenmeye vakit kalmıyor."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Erişim ve altyapı",
+   "katilimci": 7,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 21.9,
+   "kod_atamasi": 7,
+   "kodlar": [
+    {
+     "kod": "S3-A1",
+     "sıklık": 4
+    },
+    {
+     "kod": "S3-A2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-A4",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-A3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K079",
+   "alinti": "Veri tabanı erişimiyle bu araçları birleştiren bir altyapı. Web of Science'a bağlı çalışsa literatür sorunu çözülür."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Yazılı politika",
+   "katilimci": 7,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 21.9,
+   "kod_atamasi": 7,
+   "kodlar": [
+    {
+     "kod": "S3-P1",
+     "sıklık": 4
+    },
+    {
+     "kod": "S3-P2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-P3",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-P4",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K037",
+   "alinti": "Hakemlik süreçleri için kural. Hakemlerin bu araçları kullanıp kullanamayacağı dergi düzeyinde değil, kurum düzeyinde de konuşulmalı."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Yönetmelik ve denetim",
+   "katilimci": 7,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 21.9,
+   "kod_atamasi": 7,
+   "kodlar": [
+    {
+     "kod": "S3-Y5",
+     "sıklık": 2
+    },
+    {
+     "kod": "S3-Y1",
+     "sıklık": 2
+    },
+    {
+     "kod": "S3-Y3",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-Y4",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-Y2",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K019",
+   "alinti": "Öğrenci tarafı için düzenleme. Ödev ve tezlerde ne kadarına izin verildiği belirlenmezse ben tek başıma çözemem."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Yöntem desteği",
+   "katilimci": 3,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 9.4,
+   "kod_atamasi": 3,
+   "kodlar": [
+    {
+     "kod": "S3-M1",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-M2",
+     "sıklık": 1
+    },
+    {
+     "kod": "S3-M3",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K064",
+   "alinti": "İstatistik danışmanlığı. Yapay zekâdan bağımsız olarak bu zaten eksik; bu araçlar yanlış analizi hızlandırdı."
+  },
+  {
+   "soru_no": 3,
+   "tema": "Beklentisi olmayanlar",
+   "katilimci": 1,
+   "soru_yanit_sayisi": 32,
+   "yuzde": 3.1,
+   "kod_atamasi": 1,
+   "kodlar": [
+    {
+     "kod": "S3-S1",
+     "sıklık": 1
+    }
+   ],
+   "alinti_katilimci": "K022",
+   "alinti": "Beklentim yok. Kendi başımıza öğreniyoruz, öyle devam eder."
+  }
+ ]
+}

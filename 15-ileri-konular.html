@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İleri konular — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Model ve çaba seçimi, bağlam penceresinin sınırları, proje bağlamı, iş akışı paketleme, Zotero ve veri tabanı bağlantıları, ajan tabanlı çalışmanın sı">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">İleri konular</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa etkin" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a><div class="alt-liste"><a href="#hangi-ise-hangi-model">Hangi işe hangi model</a><a href="#caba-ayari-ayni-model-farkli-derinlik">Çaba ayarı: aynı model, farklı derinlik</a><a href="#baglam-penceresi-neyi-kac-kez-verebilirsiniz">Bağlam penceresi: neyi kaç kez verebilirsiniz</a><a href="#projeler-baglami-her-seferde-yeniden-yazmamak">Projeler: bağlamı her seferde yeniden yazmamak</a><a href="#skill-ler-tekrarlanan-is-akisini-paketlemek">Skill&#x27;ler: tekrarlanan iş akışını paketlemek</a><a href="#mcp-kaynak-yoneticinizi-ve-veri-tabanlarini-baglamak">MCP: kaynak yöneticinizi ve veri tabanlarını bağlamak</a><a href="#ajan-tabanli-calisma-cok-adimli-isler">Ajan tabanlı çalışma: çok adımlı işler</a><a href="#kod-ve-analiz-tarafi-ucbirim-araclari">Kod ve analiz tarafı: uçbirim araçları</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 15</div><h1>İleri konular</h1><p class="ozet">Model ve çaba seçimi, bağlam penceresinin sınırları, proje bağlamı, iş akışı paketleme, Zotero ve veri tabanı bağlantıları, ajan tabanlı çalışmanın sınırı.</p><p>Önceki bölümler tek bir pencereye yazılan istemler üzerineydi. Bu bölüm,
+o pencerenin dışına çıkan araçları anlatıyor: hangi modelin hangi işe
+uygun olduğunu, uzun belgelerle çalışmanın sınırlarını, tekrarlanan iş
+akışlarını paketlemeyi, kaynak yöneticinizi ve veri tabanlarını doğrudan
+bağlamayı.</p>
+<aside class="not uyari"><span class="not-baslik">Bu bölüm en hızlı eskiyen bölüm</span><p>Model adları, bağlam sınırları ve fiyatlar birkaç ayda bir değişiyor.
+Buradaki sayılar <strong>2 Kasım 2026</strong> tarihinde geçerliydi ve kaynağı
+belirtilmiştir.</p>
+<p>Yöntem kısmı — hangi işe hangi yetenek gerekir, bağlam nasıl yönetilir,
+neyi paketlemeye değer — daha yavaş değişir. Sayılara değil, ayrımlara
+odaklanın; sayıyı kullanacağınız gün sağlayıcının kendi sayfasından
+doğrulayın.</p></aside>
+<h2 id="hangi-ise-hangi-model">Hangi işe hangi model</h2>
+<p>Akademik işlerde model seçimi tek bir eksende yapılmaz. Üç soru ayrı
+ayrı sorulur:</p>
+<ol class="adimlar"><li><p><strong>İş ne kadar muhakeme istiyor?</strong> Bir metni biçimlendirmek ile bir
+yöntem tartışmasını değerlendirmek aynı şey değildir.</p></li><li><p><strong>Girdi ne kadar büyük?</strong> Tek bir özet mi, yoksa kırk PDF mi?</p></li><li><p><strong>Kaç kez koşacak?</strong> Bir kez mi, yoksa dört yüz kayıt için döngü
+içinde mi?</p></li></ol>
+<p>Üçüncü soru çoğu zaman atlanıyor ama belirleyici olan odur. Tek seferlik
+bir iş için en yetenekli modeli kullanmanın maliyeti önemsizdir; dört
+yüz kez koşacak bir işte aynı seçim hem pahalı hem yavaştır.</p>
+<p>Kasım 2026 itibarıyla Claude ailesi şöyle:</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Bağlam</th>
+<th>Milyon jeton başına (girdi / çıktı)</th>
+<th>Akademik karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Fable 5.1</td>
+<td>1M</td>
+<td>10 $ / 50 $</td>
+<td>En zor muhakeme; uzun soluklu özerk görevler</td>
+</tr>
+<tr>
+<td>Claude Opus 5.5</td>
+<td>1M</td>
+<td>4 $ / 20 $</td>
+<td>Varsayılan. Yöntem tartışması, hakem cevabı, analiz planı</td>
+</tr>
+<tr>
+<td>Claude Sonnet 5.5</td>
+<td>1M</td>
+<td>2 $ / 10 $</td>
+<td>Günlük iş: yazım, kod, veri çıkarımı, biçimlendirme</td>
+</tr>
+<tr>
+<td>Claude Haiku 5.5</td>
+<td>1M</td>
+<td>0,10 $ / 0,50 $</td>
+<td>Toplu ve basit iş: sınıflandırma, etiketleme, ayıklama</td>
+</tr>
+</tbody>
+</table></div>
+<p>Çıktı sınırı dört modelde de 128 bin jeton. Fiyatlar Anthropic'in
+doğrudan API fiyatlarıdır; aylık abonelikle web arayüzünden
+kullanıyorsanız jeton başına ödeme yapmazsınız ve bu tablo sizin için
+yalnızca <strong>yetenek sıralaması</strong> olarak okunur.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Doğru eşleme</span></p>
+<p class="kart-baslik">Muhakeme gerektiren, az sayıda iş</p>
+<p>Analiz planı kurmak, hakem raporuna cevap yazmak, yöntem bölümünü
+denetlemek, bir tartışmanın zayıf halkasını bulmak. Bunlar az sayıda
+koşar ve yanlış yanıtın bedeli yüksektir. En yetenekli modeli
+kullanın; tasarruf etmeyin.</p></div><div class="kart"><p><span class="no">Doğru eşleme</span></p>
+<p class="kart-baslik">Kalıp gerektiren, çok sayıda iş</p>
+<p>Kırk PDF'ten yöntem bilgisi çıkarmak, dört yüz açık uçlu yanıtı
+kodlamak, iki yüz kaynağı biçimlendirmek. Burada iş tekrarlıdır ve
+kalıp bellidir. Daha küçük model hem ucuz hem hızlıdır; doğruluğu
+örneklem denetimiyle ölçün.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Küçük modeli seçerken yapılan denetim</span><p>Toplu bir işi küçük modele verdiğinizde, sonucun tamamını okuyamazsınız
+— zaten o yüzden toplu veriyorsunuz. Yapılacak şey şu: <strong>aynı işin
+rastgele seçilmiş yirmi kaydını büyük modele de koşturun ve ikisini
+karşılaştırın.</strong></p>
+<p>Uyuşma yüksekse küçük model yeterlidir. Uyuşma düşükse, nerede
+ayrıldıklarına bakın — çoğu zaman sorun modelde değil, istemin belirsiz
+kalan bir yerindedir. İstemi düzeltip yeniden ölçün.</p>
+<p>Bu, 10. bölümdeki kodlayıcılar arası uyum mantığının aynısıdır. Burada
+kodlayıcılardan biri insan değil, öteki model.</p></aside>
+<h2 id="caba-ayari-ayni-model-farkli-derinlik">Çaba ayarı: aynı model, farklı derinlik</h2>
+<p>Güncel modellerde model seçiminden ayrı bir ayar daha var: <strong>çaba
+düzeyi</strong> (<code>effort</code>). Düşükten yükseğe beş kademe: <code>low</code>, <code>medium</code>,
+<code>high</code>, <code>xhigh</code>, <code>max</code>.</p>
+<p>Bu ayar, modelin yanıt vermeden önce ne kadar düşüneceğini belirler.
+Yükseltmek daha iyi muhakeme getirir ama daha çok jeton harcar ve daha
+uzun sürer.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Çaba</th>
+<th>Akademik işe karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>low</code></td>
+<td>Biçimlendirme, çeviri, basit ayıklama, etiketleme</td>
+</tr>
+<tr>
+<td><code>medium</code></td>
+<td>Yazım taslağı, kod üretimi, özetleme</td>
+</tr>
+<tr>
+<td><code>high</code></td>
+<td>Analiz planı, yöntem denetimi, hakem cevabı</td>
+</tr>
+<tr>
+<td><code>xhigh</code> / <code>max</code></td>
+<td>Çok adımlı muhakeme; doğruluğun maliyetten önemli olduğu tek seferlik işler</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pratik sonuç şudur: <strong>daha yeni bir modeli düşük çabada koşturmak,
+çoğu zaman eski bir modeli yüksek çabada koşturmaktan iyidir.</strong> Önce
+modeli güncelleyin, sonra çabayı ayarlayın.</p>
+<h2 id="baglam-penceresi-neyi-kac-kez-verebilirsiniz">Bağlam penceresi: neyi kaç kez verebilirsiniz</h2>
+<p>Bağlam penceresi, modelin bir seferde "görebildiği" metnin üst
+sınırıdır. İstem, ekler ve modelin yanıtı bu sınırın içine sığmak
+zorundadır.</p>
+<p>Jeton (token), modelin metni parçaladığı birimdir — kabaca bir
+kelimenin parçası. Kaba bir parmak hesabı:</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Belge</th>
+<th>Yaklaşık jeton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bir sayfa Türkçe akademik metin</td>
+<td>600 – 900</td>
+</tr>
+<tr>
+<td>Yirmi sayfalık bir makale</td>
+<td>12.000 – 18.000</td>
+</tr>
+<tr>
+<td>Yüz sayfalık bir tez</td>
+<td>60.000 – 90.000</td>
+</tr>
+<tr>
+<td>Kırk makalelik bir korpus</td>
+<td>500.000 – 700.000</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not uyari"><span class="not-baslik">Türkçe, İngilizceden daha çok jeton tüketir</span><p>Bu araçların metin parçalama düzeni ağırlıklı olarak İngilizceye göre
+kurulmuştur. Türkçe sondan eklemeli bir dil olduğu için aynı anlamı
+taşıyan metin <strong>İngilizcesinden belirgin biçimde fazla jeton
+harcar.</strong> "Değerlendirilebilirliğinden" tek bir kelimedir ama birkaç
+parçaya bölünür.</p>
+<p>Pratik etkisi: Türkçe bir tez, aynı uzunlukta bir İngilizce tezden
+daha erken sınıra dayanır. Yukarıdaki tablo bu farkı hesaba katarak
+verildi; yine de kaba bir tahmindir.</p>
+<p>Kesin sayı gerekiyorsa tahmin etmeyin — sağlayıcıların jeton sayma
+hizmetleri var ve bedelsizdir.</p></aside>
+<p>1 milyon jetonluk bir pencereye kırk makalelik bir korpus sığar. Ama
+<strong>sığması, iyi çalışacağı anlamına gelmez.</strong> Pencere doldukça modelin
+ortadaki bilgiyi gözden kaçırma eğilimi artar. Uzun belgelerle
+çalışırken üç kural işe yarar:</p>
+<ol class="adimlar"><li><p><strong>Önemli olanı başa ve sona koyun.</strong> Modelin en iyi hatırladığı yerler
+bunlardır. Asıl soruyu eklerin sonrasına yazın.</p></li><li><p><strong>Her belgeyi adlandırın.</strong> "Ek 3: Yılmaz (2024), yöntem bölümü" gibi.
+Model hangi bilginin nereden geldiğini ancak söylerseniz bilir — ve
+ancak o zaman doğru atıf yapabilir.</p></li><li><p><strong>Bölün.</strong> Kırk makaleyi tek seferde vermek yerine, her makaleden
+yapılandırılmış bir çıkarım alın (5. bölümdeki toplu çıkarım istemi),
+sonra o çıkarımları birlikte verin. Bu hem ucuzdur hem daha
+doğrudur.</p></li></ol>
+<h2 id="projeler-baglami-her-seferde-yeniden-yazmamak">Projeler: bağlamı her seferde yeniden yazmamak</h2>
+<p>Aynı çalışma üzerinde haftalarca konuşuyorsanız, her oturumda "ben
+şu veri setiyle şu soruyu çalışıyorum" diye baştan anlatmak hem zaman
+kaybıdır hem tutarsızlık üretir — her anlatışınız biraz farklı olur.</p>
+<p>Projeler bunu çözer: bir kez kurduğunuz bağlam, o projedeki bütün
+konuşmalarda hazır bulunur.</p>
+<p>Akademik bir proje bağlamına konacaklar:</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Konacaklar</span></p>
+<p class="kart-baslik">Değişmeyen bilgi</p>
+<p>Araştırma sorusu ve hipotezler · veri setinin künyesi ve değişken
+listesi · yöntem kararları ve gerekçeleri · kullanılan yazım dili ve
+atıf biçimi · hedef dergi ve yazım kuralları · daha önce verilmiş
+kararlar ("bu analizde X testini kullanmıyoruz, çünkü…")</p></div><div class="kart"><p><span class="no">Konmayacaklar</span></p>
+<p class="kart-baslik">Hassas ya da geçici bilgi</p>
+<p>Katılımcı kimlik bilgileri · yayımlanmamış ham veri · hakemlikte
+elinize geçen başkasının metni · üçüncü kişilerin kişisel verileri ·
+her oturumda değişen geçici sorular</p></div></div>
+
+<aside class="not etik"><span class="not-baslik">Proje bağlamı kalıcıdır — ona göre doldurun</span><p>Bir oturumda yazdığınız şey o oturumla kalır; proje bağlamına
+yazdığınız şey orada durur ve her konuşmaya girer. Bu, kolaylık olduğu
+kadar risktir.</p>
+<p>Özellikle iki şeye dikkat: <strong>kimliksizleştirilmemiş veri</strong> ve
+<strong>başkasına ait yayımlanmamış metin.</strong> İkisi de proje bağlamına
+konmaz. TÜBİTAK'ın rehberi, yayımlanmamış proje içeriğinin dış
+hizmetlere yüklenmesini açıkça yasaklıyor; aynı mantık hakemliğini
+yaptığınız makale için de geçerlidir.</p>
+<p>Kurumunuzun bir kurumsal aboneliği varsa veri işleme koşulları
+bireysel abonelikten farklı olabilir. Hangi koşulla kullandığınızı
+bilin.</p></aside>
+<h2 id="skill-ler-tekrarlanan-is-akisini-paketlemek">Skill'ler: tekrarlanan iş akışını paketlemek</h2>
+<p>Bir istemi üçüncü kez yazıyorsanız, o istem artık bir araçtır.</p>
+<p>Skill, bir iş akışını adlandırılmış bir pakete dönüştürür: talimatlar,
+kontrol listeleri, örnek çıktılar ve gerekirse çalıştırılabilir kod tek
+bir klasörde durur. Çağırdığınızda yalnız o iş için gerekli talimat
+yüklenir.</p>
+<p>Akademik olarak paketlenmeye değen işler, şu üç ölçütü birden
+karşılayanlardır:</p>
+<ol class="adimlar"><li><p><strong>Tekrarlanıyor.</strong> Her makalede, her hakem cevabında, her başvuruda
+aynı adımlar yürüyor.</p></li><li><p><strong>Adımları sabit, içeriği değişken.</strong> PRISMA akışı her derlemede
+aynıdır; korpus her seferinde başkadır.</p></li><li><p><strong>Yanlış yapılması pahalı.</strong> Atlanırsa fark edilmeyen ama
+yakalandığında geri dönüşü zor olan denetimler — atıf doğrulama, sayı
+tutarlılığı, raporlama standardına uyum.</p></li></ol>
+<p>Somut örnekler: PRISMA protokolü kurma ve akış şeması üretme · korpustan
+yapılandırılmış veri çıkarma · istatistik raporlama denetimi (her p
+değerinin yanında etki büyüklüğü var mı, her testin varsayım denetimi
+yapılmış mı) · dergi biçim denetimi · hakem cevabı iskeleti · atıf ve
+DOI doğrulama.</p>
+<aside class="not "><span class="not-baslik">Paketlemenin asıl kazancı tutarlılık</span><p>Zaman kazancı görünür olanıdır; asıl kazanç tutarlılıktır.</p>
+<p>Aynı denetimi her seferinde elle yazdığınızda, bazı turlarda bir maddeyi
+atlarsınız. Paketlenmiş bir denetim listesi her koşuda aynı maddeleri
+sorar. Bu, denetimin kendisini <strong>ölçülebilir</strong> kılar: hangi maddenin kaç
+kez sorun çıkardığını görebilirsiniz.</p></aside>
+<h2 id="mcp-kaynak-yoneticinizi-ve-veri-tabanlarini-baglamak">MCP: kaynak yöneticinizi ve veri tabanlarını bağlamak</h2>
+<p>Şimdiye kadarki bütün örneklerde veriyi siz taşıdınız: PDF'i indirdiniz,
+BibTeX'i dışa aktardınız, dosyayı eke koydunuz.</p>
+<p>MCP (Model Context Protocol), bu taşımayı ortadan kaldıran açık bir
+bağlantı standardıdır. Bir kez kurulduktan sonra model, izin verdiğiniz
+kaynaklara <strong>doğrudan</strong> erişir.</p>
+<p>Akademik olarak anlamlı bağlantılar:</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bağlantı</th>
+<th>Ne sağlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zotero</td>
+<td>Kütüphanenizdeki kayıtlar, etiketler, notlar ve ekli PDF'lerin tam metni</td>
+</tr>
+<tr>
+<td>arXiv, PubMed, OpenAlex, Crossref</td>
+<td>Tarama, künye çekme, DOI doğrulama, atıf ağı</td>
+</tr>
+<tr>
+<td>Yerel dosya sistemi</td>
+<td>Proje klasörünüzdeki veri, kod ve çıktılar</td>
+</tr>
+<tr>
+<td>Veri tabanı</td>
+<td>Kurumsal bir veri ambarına doğrudan sorgu</td>
+</tr>
+</tbody>
+</table></div>
+<p>Zotero bağlantısı en çok işe yarayanıdır, çünkü iki sorunu birden
+çözer. Birincisi: kaynak uydurma. Model kütüphanenizi okuyabiliyorsa,
+hafızasından künye üretmek yerine sizin kaydınızı kullanır. İkincisi:
+ek taşıma. "Şu konudaki okuduklarımı karşılaştır" diyebilirsiniz;
+PDF'leri tek tek yüklemeniz gerekmez.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Zotero koleksiyonundan sentez matrisi</span>
+<span class="arac">Literatür</span><span class="arac">MCP · Zotero bağlantısı</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme yürüten bir araştırma asistanısın. Zotero
+kütüphaneme erişimin var.
+
+KAYNAK
+Zotero&#x27;da &quot;[koleksiyon adı]&quot; koleksiyonu. Yalnız bu koleksiyondaki
+kayıtları kullan; kütüphanenin geri kalanına bakma.
+
+GÖREV
+Koleksiyondaki her kayıt için aşağıdaki alanları çıkar ve tek bir
+tablo kur.
+
+ALANLAR
+— Künye: yazar, yıl, dergi
+— Araştırma sorusu: tek cümle
+— Örneklem: n, kim, nereden
+— Yöntem: tasarım ve kullanılan temel analiz
+— Ana bulgu: sayıyla, tek cümle
+— Yazarların belirttiği sınırlılık
+— Bu çalışmanın benim soruma bakan yanı: [araştırma sorunuz]
+
+KURALLAR
+— Her alanı kaydın TAM METNİNDEN doldur. Ekli PDF yoksa ya da metin
+  okunamıyorsa, o hücreye &quot;tam metin yok&quot; yaz ve özetten
+  doldurmaya ÇALIŞMA.
+— Bir alan metinde bulunamıyorsa &quot;belirtilmemiş&quot; yaz. Tahmin etme.
+— Sayıları metindeki birimiyle ver; dönüştürme.
+— Her satırın sonunda bilginin alındığı sayfa numarasını yaz.
+
+DENETİM
+Tablonun altına şunları yaz: koleksiyonda kaç kayıt vardı, kaçında
+tam metin bulundu, hangi kayıtlarda hangi alanlar boş kaldı.</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Bağlantı kurmak erişim vermektir</span><p>MCP bağlantısı, modele sizin adınıza okuma — bazı durumlarda yazma —
+yetkisi verir. Üç kuralı baştan koyun:</p>
+<p><strong>Yalnız gerekeni bağlayın.</strong> Zotero'nun tamamı yerine tek bir
+koleksiyon, dosya sisteminin tamamı yerine tek bir proje klasörü.</p>
+<p><strong>Yazma yetkisini ayrı düşünün.</strong> Okuma yetkisiyle yazma yetkisi aynı
+şey değildir. Kütüphanenizi okumasına izin vermek, kayıt
+değiştirmesine izin vermek anlamına gelmemeli.</p>
+<p><strong>Hassas kaynakları hiç bağlamayın.</strong> Kimliksizleştirilmemiş veri,
+hakemliğini yaptığınız metinler, kurumsal gizli belgeler. Bir kez
+bağlandığında hangi oturumda neyin okunduğunu izlemek zordur.</p></aside>
+<h2 id="ajan-tabanli-calisma-cok-adimli-isler">Ajan tabanlı çalışma: çok adımlı işler</h2>
+<p>Buraya kadarki bütün istemler tek adımlıydı: siz sordunuz, model
+yanıtladı. Ajan tabanlı çalışmada model <strong>adımları kendisi planlar</strong> ve
+sırayla yürütür: dosya okur, kod yazar, çalıştırır, sonucuna bakar,
+gerekirse düzeltir.</p>
+<p>Akademik işlerde bu yaklaşımın gerçekten kazandırdığı yerler dardır ama
+belirgindir:</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Uygun</span></p>
+<p class="kart-baslik">Çok dosyalı, tekrarlı, denetlenebilir işler</p>
+<p>Kırk PDF'ten tabloya çıkarım yapıp eksikleri raporlamak · bir veri
+setini temizleyip analiz edip şekilleri üretmek · bir kod tabanındaki
+analizi yeniden üretilebilir hâle getirmek · yüzlerce kaynağın DOI'sini
+tek tek doğrulamak.</p>
+<p>Ortak özellikleri: adımlar çok, her adımın çıktısı <strong>denetlenebilir</strong>,
+ve hata yapıldığında fark edilir.</p></div><div class="kart"><p><span class="no">Uygun değil</span></p>
+<p class="kart-baslik">Yargı gerektiren, denetlenmesi zor işler</p>
+<p>Bulguları yorumlamak · hangi kuramın uygun olduğuna karar vermek ·
+bir tartışmanın sınırlarını çizmek · etik değerlendirme.</p>
+<p>Bunlarda çıktı akla yatkın görünür ama doğruluğu ancak alanı bilen biri
+tarafından anlaşılır. Otomatikleştirmek, denetimi zorlaştırır.</p></div></div>
+<p>Ayrımı tek cümleyle: <strong>çıktısını denetleyebildiğiniz işi
+otomatikleştirin, denetleyemediğinizi otomatikleştirmeyin.</strong></p>
+<aside class="not "><span class="not-baslik">Bu kursun kendisi bu yöntemle üretildi</span><p>Kurstaki on sekiz Python betiği, üç veri seti, yirmi yedi şekil ve
+bütün analiz çıktıları ajan tabanlı bir çalışmayla üretildi: kod
+yazıldı, koşturuldu, çıktısına bakıldı, hata bulununca düzeltildi.</p>
+<p>Bu yöntemin işe yaramasının nedeni, <strong>her adımın denetlenebilir
+olmasıydı.</strong> Bir betik ya koşar ya koşmaz; bir sayı ya tutar ya tutmaz;
+bir şekil ya okunur ya okunmaz. 9. bölümdeki veri sızıntısı da böyle
+yakalandı — F1 değeri fazla iyi çıktığı için şüphelenildi, sonra
+sütunlar tek tek tarandı.</p>
+<p>Yorum gerektiren kısımlar — hangi örneğin seçileceği, neyin
+vurgulanacağı, bir uyarının nereye konacağı — otomatikleştirilmedi.</p></aside>
+<h2 id="kod-ve-analiz-tarafi-ucbirim-araclari">Kod ve analiz tarafı: uçbirim araçları</h2>
+<p>Veri analizi ve kod yazımı için tarayıcı penceresi yerine doğrudan
+bilgisayarınızda çalışan araçlar var. Akademik açıdan iki farkları
+önemlidir: <strong>verileriniz makinenizden çıkmaz</strong> (yalnız istemle birlikte
+gönderdiğiniz parça gider) ve <strong>kodu kendileri koşturup çıktısına
+bakabilirler.</strong></p>
+<p>Bu alanda iki yaygın araç var: Anthropic'in Claude Code'u ve OpenAI'ın
+Codex'i. İkisi de benzer işi yapar; seçim büyük ölçüde hangi
+sağlayıcıyla çalıştığınıza bağlıdır.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Akademik kullanım</span></p>
+<p class="kart-baslik">Nerede kazandırır</p>
+<p>Veri temizleme ve analiz betikleri · şekil üretimi ve yeniden üretimi ·
+bir analizi baştan sona yeniden üretilebilir hâle getirme · LaTeX
+derleme hatalarını çözme · büyük bir veri setini keşfetme.</p>
+<p>Ortak nokta: çıktının doğruluğu <strong>koşturarak</strong> sınanabilir.</p></div><div class="kart"><p><span class="no">Akademik kullanım</span></p>
+<p class="kart-baslik">Nerede dikkat gerekir</p>
+<p>Araç, çalıştığı klasördeki dosyaları okuyabilir ve değiştirebilir.
+Kimliksizleştirilmemiş veri bulunan bir klasörde çalıştırmadan önce
+hangi dosyaların okunabileceğini düşünün.</p>
+<p>Sürüm denetimi (git) kullanın. Aracın yaptığı her değişikliği
+görebilmek, onu güvenle kullanmanın ön koşuludur.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Model seçimi bu araçlarda da aynı mantıkla</span><p>Her iki araç da altta hangi modelin koşacağını seçmenize izin verir ve
+mantık bu bölümün başındakiyle aynıdır: keşif ve planlama için
+yetenekli model, tekrarlı düzenleme için hızlı model.</p>
+<p>Codex tarafındaki model adları ve bağlam sınırları hakkında güvenilir
+ve güncel bilgi için üçüncü taraf kaynaklara değil, <strong>OpenAI'ın kendi
+belgelerine</strong> bakın; bu alanda blog yazıları hızla eskiyor ve birbiriyle
+çelişiyor. Aynı şey Claude tarafı için de geçerli: bu sayfadaki tablo
+2 Kasım 2026 tarihlidir.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Model seçimini üç soruyla yapın: ne kadar muhakeme, ne kadar girdi,
+kaç kez koşacak. Üçüncüsü çoğu zaman belirleyicidir.</p></li><li><p>Toplu bir işi küçük modele verdiğinizde, rastgele yirmi kaydı büyük
+modelle karşılaştırarak denetleyin.</p></li><li><p>Türkçe metin İngilizceden fazla jeton harcar. Uzun belgelerle
+çalışırken bunu hesaba katın; kesin sayı gerekiyorsa tahmin etmeyin,
+saydırın.</p></li><li><p>Pencereye sığması iyi çalışacağı anlamına gelmez. Kırk makaleyi tek
+seferde vermek yerine her birinden yapılandırılmış çıkarım alıp onları
+birleştirin.</p></li><li><p>Proje bağlamına değişmeyen bilgiyi koyun; kimliksizleştirilmemiş veri
+ve başkasına ait yayımlanmamış metni asla.</p></li><li><p>Bir istemi üçüncü kez yazıyorsanız paketleyin. Asıl kazanç zamandan
+değil, tutarlılıktan gelir.</p></li><li><p>MCP bağlantısı erişim vermektir: yalnız gerekeni bağlayın, yazma
+yetkisini ayrı düşünün.</p></li><li><p>Çıktısını denetleyebildiğiniz işi otomatikleştirin; denetleyemediğinizi
+otomatikleştirmeyin.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="14-hakemlik.html"><span class="yon">← Önceki</span><span class="ad">Hakemlik ve hakem cevabı</span></a><a class="sag" href="16-istem-kutuphanesi.html"><span class="yon">Sonraki →</span><span class="ad">İstem kütüphanesi</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

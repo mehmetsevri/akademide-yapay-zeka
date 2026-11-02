@@ -1,0 +1,6 @@
+﻿degisken,anlam,kodlama
+instr,Öğretim elemanı kimliği,"1, 2, 3 — üç öğretim elemanı"
+class,Ders kodu,1–13 — on üç farklı ders
+nb.repeat,Dersi kaçıncı kez alıyor,"1 = birinci, 2 = ikinci, 3 = üçüncü kez"
+attendance,Derse katılım düzeyi,0 = hiç … 4 = tam katılım
+difficulty,Dersi algılanan güçlüğü,1 = çok kolay … 5 = çok güç

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakemlik ve hakem cevabı — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Başkasının makalesini değerlendirmek ve değerlendirildiğinizde yanıt yazmak. Gizliliği bozmadan yapay zekâdan yararlanmanın yolu.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Hakemlik ve hakem cevabı</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa etkin" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a><div class="alt-liste"><a href="#hakem-raporu-neyi-icerir">Hakem raporu neyi içerir</a><a href="#degerlendirme-kontrol-listesi">Değerlendirme kontrol listesi</a><a href="#hakem-raporu-yazmak">Hakem raporu yazmak</a><a href="#kendi-makalenize-ikinci-goz">Kendi makalenize ikinci göz</a><a href="#hakem-cevabi-yazmak">Hakem cevabı yazmak</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 14</div><h1>Hakemlik ve hakem cevabı</h1><p class="ozet">Başkasının makalesini değerlendirmek ve değerlendirildiğinizde yanıt yazmak. Gizliliği bozmadan yapay zekâdan yararlanmanın yolu.</p><p>Bu bölüm iki yönlü. Önce hakem olarak başkasının makalesini
+değerlendirmek, sonra hakem olarak değerlendirildiğinizde yanıt
+yazmak. İki iş birbirinin aynası; birini iyi yapan öteki için de
+hazırlanmış olur.</p>
+<aside class="not uyari"><span class="not-baslik">Önce bir sınır</span><p>Size hakemlik için gönderilen makale <strong>yayımlanmamış ve gizli</strong> bir
+metindir. Onu bir dil modeline yüklemek, üçüncü bir tarafa yazarın
+izni olmadan yayımlanmamış veri vermektir. Birçok yayıncı bunu açıkça
+yasaklamıştır.</p>
+<p>Bu bölümdeki istemler bu sınırı gözetiyor: <strong>makalenin kendisi
+dışarı çıkmıyor.</strong> Model, sizin yazdığınız rapor üzerinde ve sizin
+yazdığınız notlar üzerinde çalışıyor.</p></aside>
+<h2 id="hakem-raporu-neyi-icerir">Hakem raporu neyi içerir</h2>
+<p>İyi bir hakem raporunun üç bölümü vardır ve üçü farklı okurlara
+yazılır.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Bölüm 1</span></p>
+<p class="kart-baslik">Yazara</p>
+<p>Yazarın göreceği kısım. Yapıcı, somut ve eyleme çevrilebilir
+olmalı. Her eleştiri bir yere işaret etmeli: hangi sayfa, hangi
+paragraf, hangi tablo. "Yöntem zayıf" bir eleştiri değildir;
+"Tablo 2'de etki büyüklüğü raporlanmamış" eleştiridir.</p></div><div class="kart"><p><span class="no">Bölüm 2</span></p>
+<p class="kart-baslik">Editöre gizli not</p>
+<p>Yazarın görmeyeceği kısım. Buraya kararınızın gerçek gerekçesini,
+yazara söylemenin uygun olmadığı gözlemleri ve kendi
+uzmanlığınızın sınırlarını yazarsınız. "Bu makalenin istatistik
+bölümünü değerlendirecek uzmanlığım yok" demek, bir zayıflık değil
+dürüstlüktür.</p></div><div class="kart"><p><span class="no">Bölüm 3</span></p>
+<p class="kart-baslik">Karar ve güven düzeyi</p>
+<p>Kabul / küçük revizyon / büyük revizyon / ret. Yanına kendi güven
+düzeyinizi yazın: bu alanda ne kadar uzmansınız, makalenin hangi
+bölümünü değerlendirebildiniz.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Eleştiriyi sıralamanın önemi</span><p>Eleştirileri önem sırasına koyun ve <strong>büyük</strong> ile <strong>küçük</strong> olanları
+ayırın. Yirmi maddelik düz bir liste, yazarın hangisinin kabul
+kararını etkilediğini anlamasını engeller. İki başlık yeter: "karar
+için belirleyici olanlar" ve "düzeltilmesi yararlı olanlar".</p></aside>
+<h2 id="degerlendirme-kontrol-listesi">Değerlendirme kontrol listesi</h2>
+<p>Her alanın kendi ölçütleri var ama şu altı soru hemen her ampirik
+makalede sorulur.</p>
+<ol class="adimlar"><li><p><strong>Soru ile yöntem uyuşuyor mu?</strong> Araştırma sorusu neyi soruyor,
+kullanılan yöntem neyi yanıtlıyor? Örneğin nedensellik iddia eden
+bir soruya kesitsel veriyle yanıt verilemez.</p></li><li><p><strong>Örneklem yeterli mi, nasıl seçilmiş?</strong> Örneklem büyüklüğünün
+gerekçesi var mı? Güç analizi yapılmış mı? Seçim yöntemi
+bulguların kimlere genellenebileceğini belirliyor.</p></li><li><p><strong>Varsayımlar denetlenmiş mi?</strong> Parametrik test kullanılmışsa
+dağılım ve varyans varsayımları sınanmış mı, sonuçları raporlanmış
+mı?</p></li><li><p><strong>Etki büyüklükleri raporlanmış mı?</strong> Yalnız p değeri veren bir
+bulgular bölümü eksiktir. Bu, en sık yazılan ve en kolay
+düzeltilebilen eleştiridir.</p></li><li><p><strong>Sonuçlar verinin desteklediğinden fazlasını iddia ediyor mu?</strong>
+Tartışma bölümü, Bulgular bölümünde olmayan bir şey söylüyor mu?</p></li><li><p><strong>Çalışma yinelenebilir mi?</strong> Veri, kod ve yeterli yöntem ayrıntısı
+var mı? Yoksa neden yok?</p></li></ol>
+<h2 id="hakem-raporu-yazmak">Hakem raporu yazmak</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Hakem raporunu düzenleme — makale dışarı çıkmadan</span>
+<span class="arac">Hakemlik</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik hakem raporlarının biçimi ve üslubu konusunda deneyimli bir
+editoryal danışmansın.
+
+ÖNEMLİ SINIR
+Sana değerlendirdiğim makaleyi VERMİYORUM. Makale yayımlanmamış ve
+gizlidir. Sana yalnız kendi aldığım notları veriyorum.
+
+KAYNAK — benim notlarım
+Her not: [sayfa/bölüm] — [gözlemim] — [önem: büyük/küçük]
+
+1. [notlarınızı buraya yazın]
+2. ...
+
+KARARIM: [kabul / küçük revizyon / büyük revizyon / ret]
+GÜVEN DÜZEYİM: [bu alanda ne kadar uzmanım, hangi bölümü
+değerlendirebildim]
+
+GÖREV
+Bu notlardan üç bölümlü bir hakem raporu düzenle.
+
+BÖLÜM 1 — YAZARA
+— Önce iki cümlelik tarafsız bir özet: makale ne yapıyor
+— Sonra &quot;Karar için belirleyici noktalar&quot; başlığı altında büyük
+  eleştiriler, numaralı
+— Sonra &quot;Düzeltilmesi yararlı noktalar&quot; başlığı altında küçük
+  eleştiriler, numaralı
+— Her madde: gözlem + nereye işaret ettiği + ne yapılabileceği
+
+BÖLÜM 2 — EDİTÖRE GİZLİ NOT
+Kararın gerekçesi, değerlendiremediğim bölümler, varsa etik kaygı.
+
+BÖLÜM 3 — KARAR VE GÜVEN DÜZEYİ
+
+ÜSLUP KURALLARI
+— Metni değerlendir, yazarı değil. &quot;Yazarlar anlamamış&quot; yazma;
+  &quot;Bu bölümde şu ilişki açık değil&quot; yaz.
+— Edilgen ve nesnel ol ama soğuk olma.
+— Her eleştiriye bir çıkış yolu göster.
+— Abartılı övgü de abartılı eleştiri kadar yararsızdır.
+
+SINIRLAR
+— Benim notlarımda olmayan hiçbir eleştiri ekleme. Makaleyi
+  görmedin; değerlendiremezsin.
+— Makalenin içeriği hakkında tahmin yürütme.
+— Kaynak önerme. Hangi çalışmanın eksik olduğunu bilemezsin.
+— Benim kararımı değiştirmeye çalışma; kararı ben verdim.
+
+DENETİM
+Sonunda: kaç eleştiri maddesi var, kaçı büyük, kaçı somut bir
+öneriyle eşleştirildi? Önerisi olmayan madde varsa belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya · hakemlik</span>
+<span class="ad">Hakem raporunu düzenleme — makale dışarı çıkmadan</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik hakem raporlarının biçimi ve üslubu konusunda deneyimli bir
+editoryal danışmansın.
+
+ÖNEMLİ SINIR
+Sana değerlendirdiğim makaleyi VERMİYORUM. Makale yayımlanmamış ve
+gizlidir. Sana yalnız kendi aldığım notları veriyorum.
+
+KAYNAK — benim notlarım
+Her not: [bölüm] — [gözlemim] — [önem: büyük/küçük]
+
+1. Yöntem, s. 4 — Üç adsorban karşılaştırılmış ama BET yüzey alanı
+   ölçülmemiş. Gözlenen farkın malzemeden mi yüzey alanından mı
+   geldiği ayrıştırılamıyor — BÜYÜK
+2. Yöntem, s. 5 — Tekrar sayısı yazmıyor. Tablolarda ± değer var
+   ama bunun standart sapma mı standart hata mı olduğu belirsiz —
+   BÜYÜK
+3. Bulgular, Tablo 2 — İzoterm modelleri doğrusallaştırılarak
+   uydurulmuş. Bu, hata yapısını bozar ve parametre tahminlerini
+   yanlı yapar — BÜYÜK
+4. Bulgular, s. 8 — &quot;Çay posası ticari karbondan üstündür&quot; deniyor
+   ama fark için istatistiksel test yok, yalnız ortalamalar
+   karşılaştırılmış — BÜYÜK
+5. Tartışma, s. 11 — Maliyet avantajı iddiası var ama hiçbir
+   maliyet verisi sunulmamış — KÜÇÜK
+6. Şekil 3 — Eksen etiketlerinde birim yok — KÜÇÜK
+7. Giriş, s. 2 — İki kaynak 2009 ve 2011 tarihli; alanda son beş
+   yılda çok sayıda çalışma var — KÜÇÜK
+8. Genel — Dil akıcı, yapı düzgün, deneysel kısım ayrıntılı
+   anlatılmış — OLUMLU
+
+KARARIM: Büyük revizyon
+GÜVEN DÜZEYİM: Adsorpsiyon ve atık değerlendirme konusunda
+çalışıyorum; izoterm modellemesi alanım. İstatistiksel test
+seçimi konusunda orta düzeyde bilgim var, bu kısmı ikinci bir
+hakemin değerlendirmesi yararlı olur.
+
+GÖREV
+Bu notlardan üç bölümlü bir hakem raporu düzenle.
+
+BÖLÜM 1 — YAZARA
+— Önce iki cümlelik tarafsız bir özet: makale ne yapıyor
+— &quot;Karar için belirleyici noktalar&quot; başlığı altında büyük
+  eleştiriler, numaralı
+— &quot;Düzeltilmesi yararlı noktalar&quot; başlığı altında küçük
+  eleştiriler, numaralı
+— Her madde: gözlem + nereye işaret ettiği + ne yapılabileceği
+— Olumlu gözlemi de yaz; raporun yalnız eleştiriden oluşması
+  yazarı yönlendirmez
+
+BÖLÜM 2 — EDİTÖRE GİZLİ NOT
+Kararın gerekçesi, değerlendiremediğim bölümler, varsa etik kaygı.
+
+BÖLÜM 3 — KARAR VE GÜVEN DÜZEYİ
+
+ÜSLUP KURALLARI
+— Metni değerlendir, yazarı değil.
+— Edilgen ve nesnel ol ama soğuk olma.
+— Her eleştiriye bir çıkış yolu göster. Örneğin 3. maddede
+  doğrusal olmayan regresyon önerisi gibi.
+— Abartılı övgü de abartılı eleştiri kadar yararsızdır.
+
+SINIRLAR
+— Benim notlarımda olmayan hiçbir eleştiri ekleme. Makaleyi
+  görmedin; değerlendiremezsin.
+— Makalenin içeriği hakkında tahmin yürütme.
+— Kaynak önerme. Hangi çalışmanın eksik olduğunu bilemezsin;
+  7. maddede &quot;güncel kaynak eklenmeli&quot; demekle yetin, hangi
+  kaynak olduğunu yazma.
+— Benim kararımı değiştirmeye çalışma.
+
+DENETİM
+Sonunda: kaç eleştiri maddesi var, kaçı büyük, kaçı somut bir
+öneriyle eşleştirildi? Önerisi olmayan madde varsa belirt.</pre></div>
+
+<aside class="not "><span class="not-baslik">Notlardaki sekizinci madde neden var</span><p><em>"Dil akıcı, yapı düzgün, deneysel kısım ayrıntılı anlatılmış —
+OLUMLU."</em></p>
+<p>Bir hakem raporunun yalnız eleştiriden oluşması, yazarın neyi
+koruması gerektiğini bilmemesine yol açar. Büyük revizyon isteyen
+bir raporda yazar metni baştan yazmaya kalkabilir ve iyi olan
+kısımları da bozabilir.</p>
+<p>Olumlu gözlem bir nezaket cümlesi değil, bir yönlendirmedir.
+Bu yüzden notlar arasında yer alıyor ve isteme "olumlu gözlemi de
+yaz" satırı konuldu.</p></aside>
+
+<aside class="not "><span class="not-baslik">Bu istem neyi yapıyor, neyi yapmıyor</span><p><strong>Yapmıyor:</strong> makaleyi okumuyor, değerlendirmiyor, eleştiri
+üretmiyor. Değerlendirme işi tamamen sizin.</p>
+<p><strong>Yapıyor:</strong> dağınık notlarınızı okunur bir rapora çeviriyor,
+eleştirileri önem sırasına koyuyor, üslubu düzenliyor ve önerisi
+olmayan eleştirileri işaretliyor.</p>
+<p>Bu ayrım, hem etik sınırı korur hem de işin değerli kısmını — yargıyı
+— size bırakır.</p></aside>
+<h2 id="kendi-makalenize-ikinci-goz">Kendi makalenize ikinci göz</h2>
+<p>Göndermeden önce makalenizi bir hakem gibi okutmak, bir revizyon
+turu kazandırır. Burada makale sizin olduğu için gizlilik sorunu
+yoktur.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Göndermeden önce hakem gözüyle okuma</span>
+<span class="arac">Yayın öncesi</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bu makalenin gönderileceği derginin hakem havuzundan bir
+değerlendiricisin. Alanı biliyorsun ama bu alt konuda uzman
+değilsin; yani açıklanmamış her şey sana da kapalı.
+
+KAYNAK
+Makalemin tam metni, tabloları ve şekilleri.
+
+GÖREV
+Bu makaleyi değerlendir ve bir hakem raporu yaz.
+
+İNCELEYECEĞİN NOKTALAR
+1. Araştırma sorusu ile yöntem uyuşuyor mu?
+2. Örneklem büyüklüğü gerekçelendirilmiş mi?
+3. Her testin varsayımı denetlenmiş ve raporlanmış mı?
+4. Her sonuçta etki büyüklüğü var mı?
+5. Tartışma bölümü, Bulgular&#x27;da olmayan bir iddia taşıyor mu?
+6. Kısıtlar bölümü gerçek kısıtları mı yazıyor, yoksa
+   geçiştirilmiş mi?
+7. Çalışma bu metinle yinelenebilir mi?
+8. Şekil ve tablolar metinden bağımsız okunabiliyor mu?
+9. Her sayı, gönderme yapılan tablo ya da şekilde var mı?
+
+ÇIKTI
+Üç bölüm: yazara / editöre gizli not / karar ve güven düzeyi.
+
+ÖZEL İSTEK
+Raporun sonuna şu başlığı ekle: **&quot;Panelde ilk eleştirilecek üç
+nokta.&quot;** Burada, makaleyi reddetmek isteyen bir hakemin kullanacağı
+en güçlü üç gerekçeyi yaz.
+
+SINIRLAR
+— Nazik olma. Beni cesaretlendirmen gerekmiyor; gerçek hakem de
+  cesaretlendirmez.
+— Metinde olmayan bir şeyi varsayma. Açıklanmamışsa eksik say.
+— Kusur ÜRETME. İyi olan bir bölüm için &quot;iyi&quot; de ve geç. Her
+  bölüme eleştiri yazmak zorunda değilsin.
+— Kaynak önerme; literatürün güncel hâlini bilmiyorsun.
+— Üslup düzeltmesiyle içerik eleştirisini karıştırma; ikisini ayır.
+
+DENETİM
+Sonunda: kaç eleştiri büyük, kaç eleştiri küçük? Bunlardan kaçı,
+metne bir paragraf eklenerek giderilebilir? Kaçı yeni analiz
+gerektirir?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Göndermeden önce hakem gözüyle okuma</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Bu makalenin gönderileceği derginin hakem havuzundan bir
+değerlendiricisin. Eğitim bilimlerini biliyorsun ama psikometri ve
+faktör analizi alt alanında uzman değilsin; yani açıklanmamış her
+şey sana da kapalı.
+
+KAYNAK
+Makalemin tam metni, dört tablosu ve dokuz şekli.
+
+GÖREV
+Bu makaleyi değerlendir ve bir hakem raporu yaz.
+
+İNCELEYECEĞİN NOKTALAR
+1. Araştırma sorusu ile yöntem uyuşuyor mu?
+2. Örneklem büyüklüğü gerekçelendirilmiş mi?
+3. Her testin varsayımı denetlenmiş ve raporlanmış mı?
+4. Her sonuçta etki büyüklüğü var mı?
+5. Tartışma bölümü, Bulgular&#x27;da olmayan bir iddia taşıyor mu?
+6. Kısıtlar bölümü gerçek kısıtları mı yazıyor, yoksa
+   geçiştirilmiş mi?
+7. Çalışma bu metinle yinelenebilir mi?
+8. Şekil ve tablolar metinden bağımsız okunabiliyor mu?
+9. Her sayı, gönderme yapılan tablo ya da şekilde var mı?
+
+BU MAKALEYE ÖZGÜ SORULAR
+10. Cronbach alfa 0,992 raporlanmış. Metin bunu nasıl yorumluyor?
+    Yalnız &quot;yüksek güvenilirlik&quot; diyorsa eksik.
+11. İki faktör ayrışmış ama çapraz yükler yüksek. Metin bunu
+    gizliyor mu, açıkça tartışıyor mu?
+12. R kare = 0,053. Metin bu düşük değeri nasıl ele alıyor?
+    Yumuşatılmış mı, olduğu gibi mi?
+13. İkincil veri kullanılmış. Verinin özgün toplama yöntemi ve
+    sınırları yeterince aktarılmış mı?
+
+ÇIKTI
+Üç bölüm: yazara / editöre gizli not / karar ve güven düzeyi.
+
+ÖZEL İSTEK
+Raporun sonuna şu başlığı ekle: **&quot;Panelde ilk eleştirilecek üç
+nokta.&quot;**
+
+SINIRLAR
+— Nazik olma. Beni cesaretlendirmen gerekmiyor.
+— Metinde olmayan bir şeyi varsayma. Açıklanmamışsa eksik say.
+— Kusur ÜRETME. İyi olan bir bölüm için &quot;iyi&quot; de ve geç.
+— Kaynak önerme; literatürün güncel hâlini bilmiyorsun.
+— Üslup düzeltmesiyle içerik eleştirisini karıştırma; ikisini ayır.
+
+DENETİM
+Sonunda: kaç eleştiri büyük, kaç eleştiri küçük? Bunlardan kaçı,
+metne bir paragraf eklenerek giderilebilir? Kaçı yeni analiz
+gerektirir?</pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">İsteme neden ‘kusur üretme’ satırı konuldu</span><p>Bir metni eleştirmesi istenen model, eleştiri üretme eğilimindedir —
+istenen şey buysa, boş yere de olsa bulur. "Kusur ÜRETME, iyi olana
+iyi de" satırı bunu engeller.</p>
+<p>Bu satır olmadan aldığınız rapor, gerçek sorunlarla uydurma sorunları
+karıştırır ve hangisinin hangisi olduğunu ayırmak için harcadığınız
+zaman, raporun kazandırdığından fazla olur.</p></aside>
+<h2 id="hakem-cevabi-yazmak">Hakem cevabı yazmak</h2>
+<p>Revizyon isteği geldiğinde yazılan yanıt mektubu kararı belirgin biçimde
+etkiler. Editör çoğu zaman makaleyi baştan okumaz; önce yanıt mektubuna
+bakar.</p>
+<ol class="adimlar"><li><p><strong>Her maddeye ayrı ayrı yanıt verin.</strong> Hakemin maddesini aynen
+alıntılayın, altına yanıtınızı yazın. Birleştirmeyin, atlamayın.</p></li><li><p><strong>Değişikliğin yerini gösterin.</strong> "Düzeltildi" yetmez. "Bölüm 3.2,
+ikinci paragraf, s. 7" yazın ve revize metinden alıntı verin.</p></li><li><p><strong>Katılmadığınız yerde katılmayın — ama gerekçeyle.</strong> Her eleştiriyi
+kabul etmek zorunda değilsiniz. Karşı çıkarken savunmacı olmayın;
+nedenini açıklayın ve mümkünse bir orta yol önerin.</p></li><li><p><strong>Teşekkür edin ama abartmayın.</strong> Her maddeye "değerli yorumunuz
+için teşekkür ederiz" yazmak mektubu şişirir ve samimiyetsiz
+görünür. Baştaki tek bir teşekkür paragrafı yeter.</p></li><li><p><strong>İki hakem çelişiyorsa editöre sorun.</strong> Biri "genişletin" öteki
+"kısaltın" diyorsa, ikisini birden yapamazsınız. Bunu belirtin ve
+hangi yolu seçtiğinizi gerekçelendirin.</p></li></ol>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Hakem cevabı mektubu</span>
+<span class="arac">Revizyon</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Revizyon sürecinde yanıt mektubu hazırlayan bir yayın danışmanısın.
+
+KAYNAK — dört şey veriyorum
+1. Hakem raporlarının tam metni
+2. Makalenin özgün hâli
+3. Revize edilmiş hâli
+4. Her hakem maddesi için kararım:
+   [madde no] — [KABUL ETTİM / KISMEN / KATILMIYORUM] — [ne yaptım
+   ya da neden katılmadım]
+
+GÖREV
+Yanıt mektubunu yaz.
+
+YAPI
+— Giriş: bir paragraf, kısa teşekkür ve değişikliklerin özeti
+— Her hakem için ayrı başlık
+— Her madde için:
+    Hakem yorumu (aynen alıntı, italik)
+    Yanıtımız (ne yaptık ya da neden yapmadık)
+    Değişikliğin yeri (bölüm, sayfa, paragraf)
+    Revize metinden alıntı (değişiklik varsa)
+
+ÜSLUP
+— Nesnel ve saygılı ama savunmacı değil
+— Her maddeye ayrı teşekkür yazma; baştaki tek teşekkür yeter
+— Katılmadığım yerlerde gerekçeyi açıkça yaz, özür dileme
+— Kısa tut; editör uzun mektubu okumaz
+
+SINIRLAR
+— Yapmadığım bir değişikliği &quot;yapıldı&quot; diye yazma.
+— Revize metinde olmayan bir alıntı verme.
+— Hakemin söylemediği bir eleştiriyi yanıtlama.
+— Benim &quot;KATILMIYORUM&quot; dediğim maddeyi kabul etmiş gibi yazma.
+— &quot;Haklısınız&quot; diye başlayıp sonra karşı çıkma; tutarlı ol.
+
+AYRICA
+İki hakem birbiriyle çelişen bir şey istiyorsa bunu tespit et ve
+mektupta nasıl ele alınacağını öner.
+
+DENETİM
+Sonunda: hakemlerin toplam kaç maddesi vardı, kaçına yanıt
+verildi? Eşit değilse hangisi atlandı?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri</span>
+<span class="ad">Hakem cevabı mektubu</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Revizyon sürecinde yanıt mektubu hazırlayan bir yayın danışmanısın.
+
+KAYNAK — dört şey veriyorum
+1. İki hakem raporunun tam metni (toplam 19 madde)
+2. Makalenin özgün hâli
+3. Revize edilmiş hâli
+4. Her hakem maddesi için kararım (aşağıda)
+
+KARARLARIM
+
+Hakem 1
+1.1 — KABUL ETTİM — Cronbach alfa yorumuna madde fazlalığı
+      tartışması eklendi (Bölüm 4.1, s. 9, yeni paragraf)
+1.2 — KABUL ETTİM — Çapraz yükler tablosu eklendi (yeni Tablo 3)
+1.3 — KISMEN — Doğrulayıcı faktör analizi istendi. Bağımsız ikinci bir örneklem bulunmadığı için veri rastgele iki alt örnekleme bölündü; DFA bir yarıda uygulanıp uyum indeksleri raporlandı, bunun bağımsız doğrulama değil çapraz geçerlik kanıtı olduğu belirtildi (Bölüm 4.2)
+1.4 — KATILMIYORUM — &quot;R kare düşük olduğu için model
+      raporlanmamalı&quot; deniyor. Düşük R kare, modelin yanlış
+      olduğunu değil açıklanan varyansın sınırlı olduğunu gösterir;
+      katsayılar yine yorumlanabilir. Metne bu ayrımı açıklayan bir
+      paragraf eklendi (Bölüm 5.3)
+1.5 — KABUL ETTİM — Şekil 4&#x27;ün eksen birimleri eklendi
+
+Hakem 2
+2.1 — KABUL ETTİM — İkincil verinin toplama yöntemi Bölüm 3.2&#x27;ye
+      eklendi, özgün kaynağa gönderme yapıldı
+2.2 — KABUL ETTİM — Parametrik olmayan test sonuçları tabloya
+      eklendi (Tablo 2, yeni sütun)
+2.3 — KATILMIYORUM — Hakem 1 &quot;analizi genişletin&quot; diyor, Hakem 2
+      &quot;makale uzun, kısaltın&quot; diyor. İkisini birden yapamıyorum;
+      editörün görüşünü istiyorum. Çapraz geçerlik analizini
+      ekledim, buna karşılık betimsel istatistik tablosunu eke
+      taşıdım
+2.4 — KABUL ETTİM — Dil düzenlemesi yapıldı
+[kalan 10 madde benzer biçimde]
+
+GÖREV
+Yanıt mektubunu yaz.
+
+YAPI
+— Giriş: bir paragraf, kısa teşekkür ve değişikliklerin özeti
+— Her hakem için ayrı başlık
+— Her madde için:
+    Hakem yorumu (aynen alıntı, italik)
+    Yanıtımız (ne yaptık ya da neden yapmadık)
+    Değişikliğin yeri (bölüm, sayfa, paragraf)
+    Revize metinden alıntı (değişiklik varsa)
+
+ÜSLUP
+— Nesnel ve saygılı ama savunmacı değil
+— Her maddeye ayrı teşekkür yazma; baştaki tek teşekkür yeter
+— Katılmadığım yerlerde gerekçeyi açıkça yaz, özür dileme
+— Kısa tut
+
+SINIRLAR
+— Yapmadığım bir değişikliği &quot;yapıldı&quot; diye yazma.
+— Revize metinde olmayan bir alıntı verme.
+— Hakemin söylemediği bir eleştiriyi yanıtlama.
+— Benim &quot;KATILMIYORUM&quot; dediğim maddeyi kabul etmiş gibi yazma.
+— &quot;Haklısınız&quot; diye başlayıp sonra karşı çıkma; tutarlı ol.
+
+AYRICA
+2.3 maddesinde iki hakem çelişiyor. Bunu mektupta ayrı bir başlık
+altında ele al ve editöre açıkça sor. Hangi yolu seçtiğimi ve
+nedenini yaz.
+
+DENETİM
+Sonunda: hakemlerin toplam kaç maddesi vardı (19), kaçına yanıt
+verildi? Eşit değilse hangisi atlandı? Kaç maddede KATILMIYORUM
+dedim, her birinde gerekçe var mı?</pre></div>
+
+<aside class="not "><span class="not-baslik">Çelişen iki hakem</span><p>2.3 maddesi gerçek bir durumu gösteriyor: bir hakem genişletme,
+öteki kısaltma istiyor.</p>
+<p>Yapılacak şey ikisini de memnun etmeye çalışmak değil. Bir yol
+seçilir, gerekçesi yazılır ve <strong>editöre açıkça sorulur.</strong> Burada
+seçilen yol dengeli: istenen analiz eklendi, karşılığında daha az
+kritik bir tablo eke taşındı.</p>
+<p>Editör çelişkiyi zaten biliyor; onu açıkça yazmanız, raporları
+okuduğunuzu ve bir karar verdiğinizi gösterir. Sessizce birini
+görmezden gelmek, ikinci revizyon turunun en sık nedenidir.</p></aside>
+
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Savunmacı yanıt</div>
+<pre>Hakemin bu konudaki değerli eleştirisine
+katılmakla birlikte, çalışmamızın kapsamı
+gereği bu analizin yapılması mümkün
+olmamıştır. Ancak bu durumun çalışmanın
+sonuçlarını etkilemediğini düşünüyoruz ve
+gelecek çalışmalarda bu konunun ele
+alınacağını belirtmek isteriz.</pre></div>
+<div class="guclu"><div class="baslik">İşe yarayan yanıt</div>
+<pre>Hakemin önerdiği duyarlılık analizini uyguladık. Katılım değişkenini üç
+farklı eşikle kodlayan sürümlerde ana bulgu değişmemiştir; etki büyüklüğü
+0,41 ile 0,44 arasında kalmıştır. Sonuç Bölüm 4.3&#x27;e ve yeni Tablo 6&#x27;ya
+eklenmiştir (s. 14).</pre></div></div>
+
+<aside class="not "><span class="not-baslik">Soldaki yanıtın üç sorunu</span><p><strong>Birincisi:</strong> ne yapıldığını söylemiyor. Hakem "katılıyorum ama
+yapmadım" cümlesinden bir şey öğrenmiyor. <strong>İkincisi:</strong> "sonuçları
+etkilemediğini düşünüyoruz" bir kanıt değil, bir görüş — oysa bunu
+göstermek kolay. <strong>Üçüncüsü:</strong> "gelecek çalışmalarda ele alınacaktır"
+bu revizyonun sorununu çözmüyor.</p>
+<p>Sağdaki yanıt, hakemin eleştirisini bir analize çeviriyor ve sonucu
+rakamla veriyor. Bu analiz birkaç saat sürer ve bir revizyon turu
+kazandırır.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">Katılmamak meşrudur</span><p>Her eleştiriyi kabul etmek zorunda değilsiniz. Hakem de yanılabilir,
+yanlış okumuş olabilir ya da sizin alanınızda olmayabilir.</p>
+<p>Katılmadığınızda şunu yazın: eleştiriyi nasıl anladığınız, neden
+katılmadığınız, bu konuda ne yaptığınız (örneğin metne açıklayıcı bir
+cümle eklemek). Editör, gerekçeli bir karşı çıkışı sessiz bir
+uyumdan daha ciddiye alır.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Hakemliğe gelen makale gizlidir; bir dil modeline yüklenmez. Model,
+sizin notlarınız üzerinde çalışır.</p></li><li><p>Hakem raporu üç bölümlüdür: yazara, editöre gizli not, karar ve
+güven düzeyi.</p></li><li><p>Eleştiriler büyük ve küçük diye ayrılır. Düz bir yirmi maddelik
+liste, yazarın neyin belirleyici olduğunu anlamasını engeller.</p></li><li><p>Metni değerlendirin, yazarı değil. Her eleştiriye bir çıkış yolu
+gösterin.</p></li><li><p>Kendi makalenize ikinci göz tutarken isteme "kusur ÜRETME" satırını
+koyun; yoksa uydurma sorunlarla gerçek sorunları ayırmak zaman alır.</p></li><li><p>Hakem cevabında her maddeye ayrı yanıt verin, değişikliğin yerini
+gösterin ve katılmadığınız yerde gerekçeyle katılmayın.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="13-proje.html"><span class="yon">← Önceki</span><span class="ad">Proje önerisi yazmak</span></a><a class="sag" href="15-ileri-konular.html"><span class="yon">Sonraki →</span><span class="ad">İleri konular</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

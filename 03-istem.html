@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İstem yazmanın altı parçası — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Kursun en çok kullanılacak bölümü. Bir istemi iş tarifine çeviren altı parça, aynı işin iki farklı istemle yazılmış hâli ve ikisinin gerçek çıktıları.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">İstem yazmanın altı parçası</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa etkin" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a><div class="alt-liste"><a href="#alti-parca">Altı parça</a><a href="#ayni-is-iki-istem">Aynı iş, iki istem</a><a href="#sinir-ve-denetim-en-cok-is-goren-iki-parca">Sınır ve denetim: en çok iş gören iki parça</a><a href="#baglami-yonetmek">Bağlamı yönetmek</a><a href="#yaygin-alti-hata">Yaygın altı hata</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 3</div><h1>İstem yazmanın altı parçası</h1><p class="ozet">Kursun en çok kullanılacak bölümü. Bir istemi iş tarifine çeviren altı parça, aynı işin iki farklı istemle yazılmış hâli ve ikisinin gerçek çıktıları.</p><p>Bu kursun en çok kullanacağınız bölümü burası. Geri kalan her bölümde
+istemler göreceksiniz; hepsi burada anlatılan altı parçadan kurulu.</p>
+<p>Bir istem bir soru değil, bir <strong>iş tarifidir.</strong> Bir araştırma
+görevlisine iş verirken yazacağınız notu düşünün: ne isteniyor, hangi
+malzemeyle, hangi biçimde, neyi yapmayacak ve işin bittiğini nasıl
+anlayacağız. İyi istem tam olarak bunları içerir.</p>
+<h2 id="alti-parca">Altı parça</h2>
+<div class="kartlar iki"><div class="kart"><p><span class="no">1</span></p>
+<p class="kart-baslik">Rol</p>
+<p>Modelin hangi uzmanlıkla ve hangi okur için yazacağı. "Sistematik
+derleme yürüten kıdemli bir araştırma asistanısın" cümlesi, üslubu
+ve ayrıntı düzeyini birlikte ayarlar. Her istemde gerekmez; uzmanlık
+gerektiren işlerde gerekir.</p></div><div class="kart"><p><span class="no">2</span></p>
+<p class="kart-baslik">Görev</p>
+<p>Tek bir eylem, buyruk kipiyle. "Yardım et" değil, "seç", "karşılaştır",
+"yeniden yaz", "çıkar". İki iş varsa iki istem yazılır. Birleşik görev,
+ikisini de yarım yaptırır.</p></div><div class="kart"><p><span class="no">3</span></p>
+<p class="kart-baslik">Kaynak</p>
+<p>Model neyin üzerinde çalışacak. Veri, metin, tablo, PDF, kendi
+taslağınız. Kaynak verilmediğinde model kendi örüntülerinden üretir —
+ve kursun 1. bölümünde gördüğümüz sorunlar başlar.</p></div><div class="kart"><p><span class="no">4</span></p>
+<p class="kart-baslik">Biçim</p>
+<p>Çıktının şekli. Tablo mu paragraf mı, kaç kelime, hangi sütunlar,
+hangi dil. Biçim belirtilmezse model varsayılanına döner: madde
+işaretli, başlıklı, üç maddelik bir yapı. Akademik metinde bu yapı
+nadiren işe yarar.</p></div><div class="kart"><p><span class="no">5</span></p>
+<p class="kart-baslik">Sınır</p>
+<p>Ne yapılmayacağı. "Verdiğim listeye ekleme yapma", "kaynak uydurma",
+"metni yeniden yazma, yalnız işaretle". Sınırlar, istemin en sık
+atlanan ve en çok iş gören parçasıdır.</p></div><div class="kart"><p><span class="no">6</span></p>
+<p class="kart-baslik">Denetim</p>
+<p>Modelin kendi çıktısını sınaması için bir ölçüt. "Satır sayısı girdiyle
+aynı olmalı", "her iddianın yanına kaynak numarası koy", "sonunda
+toplamı yaz". Bu parça, hatayı siz aramadan görünür kılar.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Altısı da her istemde gerekmez</span><p>Kısa bir dil düzeltmesi için rol ve denetim gereksizdir. Ama bir
+makale bölümü yazdırıyorsanız altısı da gerekir. Pratik kural: <strong>iş
+ne kadar uzun ve geri dönüşü ne kadar zorsa, o kadar çok parça.</strong></p></aside>
+<h2 id="ayni-is-iki-istem">Aynı iş, iki istem</h2>
+<p>Farkı görmenin en iyi yolu aynı işi iki kez istemektir. Aşağıda iki
+örnek var: biri sayısal bir analiz, öteki metin üzerinde çalışan bir
+iş. İkisi de aynı altı parçayı kullanıyor.</p>
+<h3>Birinci örnek — sayısal bir iş</h3>
+<p>Gazi Üniversitesi ders değerlendirme verisi üzerinde yaptığımız
+analizin ilk adımı.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Belirsiz istem</div>
+<pre>Elimde bir anket verisi var, 28 Likert sorusu ve 5820
+cevap. Bunu analiz eder misin? Güvenilirlik falan da
+baksan iyi olur.</pre></div>
+<div class="guclu"><div class="baslik">Açık istem</div>
+<pre>ROL
+Eğitim bilimlerinde ölçme ve değerlendirme alanında
+çalışan bir istatistik danışmanısın.
+
+GÖREV
+Ekteki veri setinin güvenilirlik analizini yap ve
+raporla.
+
+KAYNAK
+gazi_ders_degerlendirme.csv — 5.820 satır. Q1–Q28
+sütunları 5&#x27;li Likert (1 = kesinlikle katılmıyorum,
+5 = kesinlikle katılıyorum). Ölçeğin iki boyutlu
+olduğu varsayılıyor: Q1–Q12 ders, Q13–Q28 öğretim
+elemanı. Eksik hücre yok.
+
+İSTENEN ANALİZLER
+1. Her boyut için ve tüm ölçek için Cronbach alfa
+2. Her madde için düzeltilmiş madde-toplam korelasyonu
+3. Her madde için &quot;madde silinirse alfa&quot; değeri
+
+BİÇİM
+— Önce üç alfa değerini tek bir tabloda ver
+— Sonra 28 satırlık madde tablosunu ver
+— Her tablonun altına iki cümlelik okuma notu yaz
+— Analizi yapan Python kodunu da ver; kod yorum
+  satırlarıyla açıklanmış olsun
+
+SINIRLAR
+— Alfa yüksek çıkarsa &quot;ölçek güvenilirdir&quot; deyip
+  geçme. 0,90 üstü değerlerin madde fazlalığına da
+  işaret ettiğini belirt.
+— Veride olmayan hiçbir sayı üretme.
+— Madde metinlerini uydurma; sözlük dosyasında
+  verilmişse onu kullan, verilmemişse &quot;madde metni
+  sağlanmadı&quot; yaz.
+
+DENETİM
+Rapor sonunda şunu doğrula: madde tablosunda 28 satır
+var mı? Düzeltilmiş madde-toplam korelasyonu 0,30&#x27;un
+altında kalan madde var mı, kaç tane? Yanıtı açıkça yaz.</pre></div></div>
+<p>Soldaki istemin alacağı yanıt yanlış olmayabilir — ama kullanılamaz.
+Hangi alfa hangi boyutun, olumsuz yönde yazılmış (ters kodlu) madde
+var mı, yüksek alfa iyi mi kötü mü — bunların hepsini yeniden sormak
+gerekir. Sağdaki istem tek
+seferde raporlanabilir bir çıktı verir.</p>
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad"></span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>burada gösterilmiyor" tur="metin"
+<strong>Ölçek düzeyinde güvenilirlik</strong></p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Ölçek</th>
+<th>Madde sayısı</th>
+<th>Cronbach alfa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ders boyutu (Q1–Q12)</td>
+<td>12</td>
+<td>0,983</td>
+</tr>
+<tr>
+<td>Öğretim elemanı boyutu (Q13–Q28)</td>
+<td>16</td>
+<td>0,991</td>
+</tr>
+<tr>
+<td>Tüm ölçek</td>
+<td>28</td>
+<td>0,992</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Okuma notu:</em> Üç değer de yaygın olarak kullanılan 0,70 eşiğinin çok
+üstündedir; maddeler arası tutarlılık son derece yüksektir. Ancak bu
+yükseklik tek başına olumlu okunmamalıdır — aşağıdaki nota bakınız.</p>
+<p><strong>Madde düzeyinde</strong> (ilk ve son üçer satır gösteriliyor; tam tablo 28
+satırdır)</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Madde</th>
+<th>Düzeltilmiş madde-toplam r</th>
+<th>Madde silinirse alfa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>0,804</td>
+<td>0,9921</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>0,878</td>
+<td>0,9918</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>0,860</td>
+<td>0,9919</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>Q26</td>
+<td>0,913</td>
+<td>0,9917</td>
+</tr>
+<tr>
+<td>Q27</td>
+<td>0,874</td>
+<td>0,9918</td>
+</tr>
+<tr>
+<td>Q28</td>
+<td>0,925</td>
+<td>0,9917</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Okuma notu:</em> En düşük madde-toplam korelasyonu Q1'de (0,804), en
+yüksek Q23'tedir (0,933). Hiçbir madde 0,30 eşiğinin altında kalmamaktadır. "Madde silinirse alfa"
+sütunundaki en yüksek değer Q1'in 0,9921'idir ve mevcut alfadan (0,992)
+ancak binde birin altında yüksektir; yani çıkarılması ölçeği anlamlı
+biçimde iyileştirecek madde yoktur.</p>
+<p><strong>Yüksek alfa üzerine uyarı</strong></p>
+<p>0,992 değeri kusursuz bir ölçek anlamına gelmez. Cronbach alfa madde
+sayısıyla birlikte mekanik olarak yükselir; 28 maddelik bir ölçekte
+yüksek alfa beklenen bir sonuçtur. Streiner (2003), 0,90 üstü
+değerleri <strong>madde fazlalığı</strong> uyarısı olarak değerlendirir: maddeler
+birbirini tekrar ediyor olabilir. Bu veri setinde madde-toplam
+korelasyonlarının 0,80–0,93 bandında toplanması bu yorumu
+desteklemektedir. Ölçek kısaltma çalışması düşünülebilir.</p>
+<p><strong>DENETİM</strong>
+— Madde tablosunda satır sayısı: 28 ✓
+— Düzeltilmiş madde-toplam korelasyonu 0,30'un altında kalan madde
+  sayısı: <strong>0</strong></p></div></div>
+
+<aside class="not istatistik"><span class="not-baslik">Cronbach alfa nedir, ne zaman bakılır</span><p>Aynı yapıyı ölçtüğü varsayılan maddelerin birbiriyle ne kadar tutarlı
+olduğunu gösterir; 0 ile 1 arasında değer alır. <strong>Ne zaman:</strong> birden
+çok maddeyi toplayıp ya da ortalayıp tek bir "ölçek puanı"
+üreteceğiniz her durumda, puanı hesaplamadan önce. <strong>Neden:</strong> maddeler
+farklı şeyler ölçüyorsa ortalamaları anlamsızdır. <strong>Eşik:</strong> 0,70
+genellikle yeterli sayılır; 0,90 üstü madde fazlalığını düşündürür.
+<strong>Sınırı:</strong> alfa tek boyutluluğun kanıtı değildir — bunun için faktör
+analizi gerekir (8. bölüm).</p></aside>
+<h3>İkinci örnek — metin üzerinde çalışan bir iş</h3>
+<p>İstem yazmak istatistikçilere özgü bir beceri değil. Aşağıdaki örnek
+bir tarih çalışmasından; elinizde sayı yok, metin var.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Belirsiz istem</div>
+<pre>Elimde 40 tane Osmanlı salnamesinin taranmış hâli
+var. Bunlarda eğitimle ilgili kısımları bulup bana
+özet çıkarır mısın?</pre></div>
+<div class="guclu"><div class="baslik">Açık istem</div>
+<pre>ROL
+Osmanlı taşra idaresi ve maarif tarihi üzerine
+çalışan bir araştırma asistanısın.
+
+GÖREV
+Vereceğim salname metinlerinde eğitim kurumlarına
+ilişkin bölümleri bul ve yapılandırılmış bir tabloya
+çıkar.
+
+KAYNAK
+Kırk vilayet salnamesinin metne dönüştürülmüş hâli.
+Her dosyanın adı: [vilayet]_[hicri yıl].txt
+Metinler optik karakter tanıma ile üretildi; yazım
+hataları var.
+
+NEYİ ARIYORUZ
+Eğitim kurumu adı geçen her kayıt. Kurum türleri:
+mekteb-i ibtidai, mekteb-i rüşdi, mekteb-i idadi,
+medrese, darülmuallimin, sıbyan mektebi.
+
+ÇIKTI BİÇİMİ
+Markdown tablo:
+Dosya | Vilayet | Hicrî yıl | Kurum türü | Kurum
+sayısı | Öğrenci sayısı | Sayfa/bölüm | Alıntı
+
+&quot;Alıntı&quot; sütununa metinden birebir alıntı koy, en
+çok 20 kelime.
+
+SINIRLAR
+— Metinde geçmeyen hiçbir kurum, sayı ya da yıl
+  yazma.
+— Sayı okunmuyorsa &quot;okunamadı&quot; yaz, tahmin etme.
+  Optik tanıma hatası olabilir; ٣ ile ٨ karışır.
+— Kurum türünü metindeki adıyla yaz; modern
+  karşılığına çevirme. Çeviri ayrı bir sütun
+  olarak istenebilir, şimdilik gerekmiyor.
+— Metni yorumlama, özetleme. Bu bir çıkarım işi,
+  yorum işi değil.
+
+DENETİM
+Tablonun altına şunları yaz:
+— Kaç dosya tarandı?
+— Kaç kayıt çıkarıldı?
+— Hiç kurum kaydı bulunmayan dosya var mı, hangileri?
+— &quot;Okunamadı&quot; yazdığın hücre sayısı kaç?</pre></div></div>
+
+<aside class="not "><span class="not-baslik">İki örneğin ortak noktası</span><p>Biri Likert verisi, öteki Osmanlıca metin. Ama ikisinde de aynı dört
+şey var: <strong>kaynağın ne olduğu</strong>, <strong>çıktının biçimi</strong>, <strong>neyin
+yapılmayacağı</strong> ve <strong>nasıl denetleneceği.</strong></p>
+<p>İkinci örnekteki "٣ ile ٨ karışır" uyarısı, alan bilgisinin isteme
+girdiği yerdir. Modelin bilmediği, sizin bildiğiniz şey budur. İyi
+istem, sizin alan bilginizi modele aktaran istemdir.</p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad"></span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>sütunuyla" tur="metin"
+| Dosya | Vilayet | Hicrî yıl | Kurum türü | Kurum sayısı | Öğrenci sayısı | Sayfa/bölüm | Alıntı |
+|---|---|---|---|---|---|---|---|
+| trabzon_1286.txt | Trabzon | 1286 | mekteb-i ibtidai | 47 | okunamadı | s. 112, Maarif | "nefs-i Trabzon'da kırk yedi aded mekteb-i ibtidai" |
+| trabzon_1286.txt | Trabzon | 1286 | mekteb-i rüşdi | 3 | 184 | s. 113, Maarif | "üç rüşdiye mektebi mevcud olub yüz seksen dört talebe" |
+| sivas_1288.txt | Sivas | 1288 | medrese | okunamadı | okunamadı | s. 88, Medaris | "medaris-i mevcude ... [sayı okunamadı]" |</p>
+<p><strong>DENETİM</strong>
+— Taranan dosya: 40
+— Çıkarılan kayıt: 213
+— Hiç kurum kaydı bulunmayan dosya: 3
+  (konya_1290.txt, bursa_1292.txt, aydin_1295.txt — bu dosyalarda
+  eğitim bölümü bulunamadı; metin eksik taranmış olabilir)
+— "Okunamadı" yazılan hücre: 58</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Denetim satırları olmasaydı ne olurdu</span><p>Üç dosyada hiç kayıt bulunamadı ve 58 hücre okunamadı. Bu iki sayı,
+isteme konan denetim maddeleri sayesinde görünür oldu.</p>
+<p>Denetim olmasaydı 213 satırlık düzgün görünen bir tablo alırdınız ve
+üç salnamenin hiç taranmadığını fark etmezdiniz. Tabloya bakan biri
+de fark etmez — çünkü eksik olan şey orada <strong>yok</strong>, yanlış bir şey
+yok.</p>
+<p>En tehlikeli hata, yanlış bir satır değil; hiç gelmemiş bir
+satırdır.</p></aside>
+<h2 id="sinir-ve-denetim-en-cok-is-goren-iki-parca">Sınır ve denetim: en çok iş gören iki parça</h2>
+<p>Bu ikisi atlandığında ne olduğunu göstermek için aynı istemi, sınır ve
+denetim bölümleri silinerek koşturduk.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Sınır silinince</span></p>
+<p class="kart-baslik">Model, istenmeyeni de yapar</p>
+<p>Madde metinleri sözlük dosyasında yoksa, model onları <strong>uydurur</strong>.
+"Q7: Ders materyalleri yeterliydi" gibi makul görünen ama veride
+bulunmayan madde metinleri üretir. Rapora girerse ve kimse
+denetlemezse, yayımlanan tabloda uydurma madde metinleri olur.</p></div><div class="kart"><p><span class="no">Denetim silinince</span></p>
+<p class="kart-baslik">Eksik çıktı fark edilmez</p>
+<p>28 maddelik tablo 26 satırla gelir ve bunu kimse saymaz. "Tabloda 28
+satır var mı" sorusu isteme yazıldığında, model sayar ve eksikse
+kendi söyler. Bir satırlık denetim cümlesi, elle yapacağınız kontrolde nereye
+bakmanız gerektiğini söyler.</p></div></div>
+
+<aside class="not uyari"><span class="not-baslik">Denetim cümlesi sihir değil</span><p>Model kendi çıktısını sayarken de yanılabilir. Denetim cümlesi hatayı
+<strong>görünür kılar</strong>, yok etmez. Kritik sayıları yine de siz doğrularsınız.
+Faydası şu: denetim cümlesi olmadan nereye bakacağınızı bilmezsiniz,
+olduğunda bakacağınız yer bellidir.</p></aside>
+<h2 id="baglami-yonetmek">Bağlamı yönetmek</h2>
+<p>Uzun işlerde en sık yapılan hata, her şeyi tek oturumda yapmaya
+çalışmaktır. Oturum uzadıkça baştaki talimatların etkisi zayıflar.</p>
+<ol class="adimlar"><li><p><strong>İşi aşamalara bölün.</strong> Literatür taraması bir oturum, veri analizi
+başka bir oturum, yazım başka bir oturum. Aralarında dosya taşıyın,
+konuşma taşımayın.</p></li><li><p><strong>Her aşamanın çıktısını dosyaya yazın.</strong> Bir sonraki oturuma konuşma
+geçmişini değil, çıktı dosyasını verin. Bu, hem bağlamı temiz tutar
+hem işinizi yeniden üretilebilir kılar.</p></li><li><p><strong>Uzun oturumlarda talimatı yineleyin.</strong> Yirmi mesaj sonra "hatırlatma:
+yalnız verdiğim dosyadaki kayıtları kullan, yeni kayıt ekleme" demek
+gereksiz değildir.</p></li><li><p><strong>Her ana adımda bir durum özeti isteyin.</strong> "Şu ana kadar ne yaptık,
+hangi kararlar verildi, sırada ne var — on madde." Bu özet, oturum
+koparsa devam etmenizi sağlar.</p></li></ol>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Oturum devir notu — uzun işler için</span>
+<span class="arac">Her aşama</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Bu oturumda yaptığımız işi, yeni bir oturuma devredilebilecek bir
+devir notuna çevir.
+
+BİÇİM — altı başlık, her biri madde listesi:
+
+1. AMAÇ — bu işin hedefi, bir cümle
+2. YAPILAN — tamamlanan adımlar, her biri tek satır, sonuçlarıyla
+3. KARARLAR — verilen yöntem kararları ve gerekçeleri
+4. DOSYALAR — üretilen her dosyanın adı ve içeriği, tek satırla
+5. AÇIK SORULAR — henüz karara bağlanmamış konular
+6. SIRADAKİ ADIM — yeni oturumun ilk işi ne olmalı
+
+SINIRLAR
+— Bu oturumda gerçekten olan şeyleri yaz. Yapılmamış bir adımı
+  &quot;yapıldı&quot; diye listeleme.
+— Yorum ekleme; durum bildirimi yaz.
+— Dosya adlarını tam yaz, kısaltma.
+
+DENETİM
+Notun sonuna şunu ekle: &quot;Bu notu okuyan yeni bir oturum, elinde yalnız
+listelenen dosyalarla işe kaldığı yerden devam edebilir mi?&quot; Yanıtın
+hayırsa eksik olanı belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya · çok oturumlu analiz</span>
+<span class="ad">Oturum devir notu — uzun işler için</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Bu oturumda yaptığımız işi, yeni bir oturuma devredilebilecek bir
+devir notuna çevir.
+
+OTURUMUN KAPSAMI
+Adsorpsiyon deney verisinin temizlenmesi ve ilk analizleri. Üç
+saatlik bir çalışmaydı; 216 satırlık ham veriden temiz dosya
+üretildi, iki faktörlü ANOVA koşuldu, izoterm modelleri uyduruldu.
+
+BİÇİM — altı başlık, her biri madde listesi:
+
+1. AMAÇ — bu işin hedefi, bir cümle
+2. YAPILAN — tamamlanan adımlar, her biri tek satır, sonuçlarıyla
+3. KARARLAR — verilen yöntem kararları ve gerekçeleri
+4. DOSYALAR — üretilen her dosyanın adı ve içeriği, tek satırla
+5. AÇIK SORULAR — henüz karara bağlanmamış konular
+6. SIRADAKİ ADIM — yeni oturumun ilk işi ne olmalı
+
+BU OTURUMA ÖZGÜ — mutlaka yer alsın
+— Cihaz arızası döneminde (12–18 Mart) alınan ölçümler silinmedi,
+  &quot;şüpheli&quot; olarak etiketlendi. Duyarlılık analizinde
+  kullanılacak. Yeni oturum bunu bilmezse ya siler ya da normal
+  veri sanır.
+— Fahrenheit girilmiş 14 sıcaklık değeri Celsius&#x27;a çevrildi.
+  Çevrilen satırların numaraları temizleme günlüğünde.
+— İzoterm modelleri DOĞRUSAL OLMAYAN regresyonla uyduruldu,
+  doğrusallaştırma ile değil. Bu bir yöntem kararıdır ve
+  gerekçesi makalede yazılacak.
+— Üç koşulda tekrar sayısı ikide kaldı (üçüncü deney başarısız).
+  Eksik tekrarlar tamamlanmadı; n = 2 olarak raporlanıyor.
+
+SINIRLAR
+— Bu oturumda gerçekten olan şeyleri yaz. Yapılmamış bir adımı
+  &quot;yapıldı&quot; diye listeleme.
+— Yorum ekleme; durum bildirimi yaz.
+— Dosya adlarını tam yaz, kısaltma.
+— &quot;Şüpheli&quot; etiketli veriyle ilgili kararı değiştirme önerisi
+  sunma; o karar verildi.
+
+DENETİM
+Notun sonuna şunu ekle: &quot;Bu notu okuyan yeni bir oturum, elinde
+yalnız listelenen dosyalarla işe kaldığı yerden devam edebilir mi?&quot;
+Yanıtın hayırsa eksik olanı belirt.</pre></div>
+
+<aside class="not "><span class="not-baslik">Devir notunun en kritik maddesi</span><p><em>"Cihaz arızası döneminde alınan ölçümler silinmedi, 'şüpheli'
+olarak etiketlendi."</em></p>
+<p>Bu bilgi devir notunda olmazsa, yeni oturum o satırları ya normal
+veri sanır ya da fark edip siler. İki durumda da analiz değişir ve
+siz üç hafta sonra sonuçların neden tutmadığını anlamaya
+çalışırsınız.</p>
+<p><strong>Devir notunun değeri yapılanları listelemekte değil, verilmiş
+kararları taşımaktadır.</strong> Hangi dosyanın üretildiği zaten
+klasörde görünür; o dosyanın neden öyle olduğu yalnız notta yazar.</p></aside>
+<h2 id="yaygin-alti-hata">Yaygın altı hata</h2>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Hata</th>
+<th>Neden sorun</th>
+<th>Düzeltmesi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Yardım et", "bir bakar mısın"</td>
+<td>Görev belirsiz; model ne yapacağını seçer</td>
+<td>Buyruk kipiyle tek eylem yazın</td>
+</tr>
+<tr>
+<td>İki işi tek isteme sıkıştırmak</td>
+<td>İkisi de yarım yapılır</td>
+<td>İki istem yazın</td>
+</tr>
+<tr>
+<td>Kaynak vermemek</td>
+<td>Model kendi örüntüsünden üretir</td>
+<td>Veriyi, metni, dosyayı verin</td>
+</tr>
+<tr>
+<td>Biçim belirtmemek</td>
+<td>Varsayılan madde listesi gelir</td>
+<td>Tablo mu paragraf mı, kaç kelime — yazın</td>
+</tr>
+<tr>
+<td>"Güzel olsun", "akademik olsun"</td>
+<td>Ölçülemez istek</td>
+<td>Ölçülebilir ölçüt verin: kelime sayısı, sütun adı, yapı</td>
+</tr>
+<tr>
+<td>Çıktıyı denetlemeden kullanmak</td>
+<td>Hata metne girer</td>
+<td>Denetim ölçütü yazın, sonra siz de bakın</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not ipucu"><span class="not-baslik">Bir istemi iyileştirmenin en hızlı yolu</span><p>Beğenmediğiniz bir çıktı aldığınızda istemi baştan yazmayın. Şunu
+sorun: <strong>"Bu yanıtı üretirken benim isteğimde hangi bilgi eksikti?"</strong>
+Modelin kendi yanıtını bu açıdan eleştirmesini isteyin. Çoğu zaman
+eksik olan parçayı kendisi söyler ve siz onu isteme eklersiniz.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">İstemi iyileştiren istem</span>
+<span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Aşağıda sana verdiğim istemi ve senin ona verdiğin yanıtı görüyorsun.
+
+İSTEM:
+[buraya kendi isteminizi yapıştırın]
+
+YANIT:
+[aldığınız yanıtı yapıştırın]
+
+GÖREV
+Bu yanıtın benim işime yaramamasının nedenlerini, istemdeki
+eksikliklere bağlayarak çözümle.
+
+BİÇİM — üç bölüm:
+
+A. İSTEMDE EKSİK OLAN BİLGİLER
+   Her madde: [eksik olan şey] — [bu eksik yüzünden yanıtta ne oldu]
+
+B. İSTEMDE BELİRSİZ OLAN İFADELER
+   Her madde: [belirsiz ifade] — [kaç farklı biçimde anlaşılabilir]
+
+C. YENİDEN YAZILMIŞ İSTEM
+   Eksikleri giderilmiş tam metin. Altı parçayı da içersin: rol,
+   görev, kaynak, biçim, sınır, denetim.
+
+SINIR
+Yanıtını savunma. Amacım senin yanıtını değerlendirmek değil, istemi
+düzeltmek. Kusuru istemde ara.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · İlahiyat · metin incelemesi</span>
+<span class="ad">İstemi iyileştiren istem</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Aşağıda sana verdiğim istemi ve senin ona verdiğin yanıtı
+görüyorsun.
+
+İSTEM:
+&quot;Elimde 12 hadis şerhinden alınmış 340 rivayet değerlendirmesi var.
+Bunları şârihin mezhebine göre karşılaştırır mısın? Hangi mezhepte
+hangi niteleme daha çok geçiyor, bir tablo çıkar.&quot;
+
+YANIT:
+[Model, &quot;Hanefî şârihlerde genellikle daha ihtiyatlı bir dil
+kullanılırken, Şâfiî şârihlerde terimler daha teknik bir çerçevede
+ele alınmaktadır&quot; gibi genel değerlendirmelerle dolu üç paragraf
+yazdı. Sonunda dört satırlık bir tablo verdi ama tablodaki sayılar
+verdiğim dosyayla uyuşmuyor; nereden geldiği belli değil. Ayrıca
+metinde geçmeyen iki şârih adı saydı.]
+
+GÖREV
+Bu yanıtın benim işime yaramamasının nedenlerini, istemdeki
+eksikliklere bağlayarak çözümle.
+
+BİÇİM — üç bölüm
+
+A. İSTEMDE EKSİK OLAN BİLGİLER
+   Her madde: [eksik olan şey] — [bu eksik yüzünden yanıtta ne oldu]
+
+B. İSTEMDE BELİRSİZ OLAN İFADELER
+   Her madde: [belirsiz ifade] — [kaç farklı biçimde anlaşılabilir]
+
+C. YENİDEN YAZILMIŞ İSTEM
+   Eksikleri giderilmiş tam metin. Altı parçayı da içersin: rol,
+   görev, kaynak, biçim, sınır, denetim.
+
+BU DURUMDA ÖZELLİKLE BAK
+— &quot;Niteleme&quot; sözcüğü neyi kastediyor? Hadis değerlendirmesinde
+  sahih, hasen, zayıf, garîb, münker gibi onlarca terim var. İstem
+  hangilerini sayacağını söylememiş.
+— &quot;Karşılaştır&quot; ne demek? Sıklık mı, oran mı, istatistiksel test mi?
+— Mezhep bilgisi dosyada var mı, modelin bilmesi mi bekleniyor?
+— Model iki şârih adı uydurdu. İstemin hangi parçası bunu
+  engelleyebilirdi?
+
+SINIR
+Yanıtını savunma. Amacım senin yanıtını değerlendirmek değil,
+istemi düzeltmek. Kusuru istemde ara.</pre></div>
+
+<aside class="not "><span class="not-baslik">Köşeli parantez içindeki yanıt özeti</span><p>Doldurulmuş örnekte YANIT bölümü, modelin yanıtının tamamı değil
+<strong>özeti.</strong> Köşeli parantez içinde ne olduğunu anlatıyorsunuz.</p>
+<p>Bu bilerek böyle. Üç paragraflık kötü bir yanıtı olduğu gibi
+yapıştırmak isteme gereksiz yer kaplar ve modeli o metnin içinde
+gezinmeye zorlar. Siz zaten neyin yanlış olduğunu biliyorsunuz;
+söylemeniz yeter: <em>"sayılar dosyayla uyuşmuyor"</em>, <em>"metinde
+geçmeyen iki ad saydı."</em></p>
+<p>Bu iki cümle, üç paragraflık yanıttan daha çok bilgi taşıyor.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>İstem bir soru değil iş tarifidir. Altı parçası var: rol, görev,
+kaynak, biçim, sınır, denetim.</p></li><li><p>En çok atlanan iki parça sınır ve denetimdir; en çok iş gören de
+onlardır.</p></li><li><p>Bir istemi iyileştirmenin en etkili yolu, ona kaynak eklemektir.
+"Bul" yerine "şunun üzerinde çalış" deyin.</p></li><li><p>Uzun işi tek oturuma sıkıştırmayın. Aşamalara bölün, aralarında dosya
+taşıyın.</p></li><li><p>Kötü çıktı alınca istemi değil, istemdeki eksiği arayın. Modele
+sorabilirsiniz.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="02-etik.html"><span class="yon">← Önceki</span><span class="ad">Etik, yazarlık, gizlilik ve beyan</span></a><a class="sag" href="04-soru.html"><span class="yon">Sonraki →</span><span class="ad">Fikirden araştırma sorusuna</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giriş — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Akademik araştırma ve yayın sürecinde üretken yapay zekâ kullanımını, gerçekten çalıştırılmış istemler ve gerçek çıktılarla anlatan Türkçe uygulamalı kurs.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Giriş</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa etkin" href="index.html"><span>Giriş</span></a><div class="alt-liste"><a href="#neden-simdi">Neden şimdi</a><a href="#asil-bosluk-kullanimda-degil-beyanda">Asıl boşluk kullanımda değil, beyanda</a><a href="#kurs-neyi-iceriyor">Kurs neyi içeriyor</a><a href="#bu-kurs-neyi-farkli-yapiyor">Bu kurs neyi farklı yapıyor</a><a href="#i-ki-ornek-alan-boyunca-ilerliyoruz">İki örnek alan boyunca ilerliyoruz</a><a href="#kursun-haritasi">Kursun haritası</a><a href="#kimin-icin">Kimin için</a><a href="#paketin-icindekiler">Paketin içindekiler</a></div><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik kapak">
+<div class="sorumluluk-serit">
+<p><b><a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a> tarafından akademik eğitim amacıyla tasarlanmıştır.</b>
+Buradaki istemler, örnekler ve çıktılar öğretim malzemesidir. Yapay zekâ
+tabanlı araçların kullanımından doğan hatalardan, eksik ya da yanlış
+bilgiden, uydurma kaynaktan ve bunların yer aldığı çalışmalardan
+kurs ve hazırlayanı sorumlu tutulamaz. Sorumluluk, aracı kullanan
+araştırmacıya aittir.</p>
+<p class="ince"><a href="beyan.html">Sorumluluk, etik ve kullanım
+beyanının tamamı</a></p>
+</div>
+
+<div class="kapak-ust">
+<div class="ust-etiket">Uygulamalı kurs · Türkçe · açık erişim</div>
+<h1>Akademide üretken yapay zekâ</h1>
+<p class="alt-baslik">Fikirden hakem cevabına kadar bütün araştırma sürecini,
+<b>gerçekten çalıştırılmış istemler</b> ve <b>gerçekten üretilmiş çıktılar</b>
+üzerinden anlatan bir kurs. Her istem gerçekten koşuldu; sayfalardaki
+sayılar ve şekiller bu koşuların çıktısıdır. Hiçbir örnek sonradan
+kurgulanmadı.</p>
+</div>
+
+<h2 id="neden-simdi">Neden şimdi</h2>
+<p>Araştırmacıların yapay zekâ kullanımı bir yılda sıçradı. Wiley'nin iki
+dalgalı ExplanAItions çalışmasında, herhangi bir işinde yapay zekâ aracı
+kullandığını söyleyenlerin oranı %57'den %84'e çıktı. Araştırma ve yayın
+görevlerinde kullanım %45'ten %62'ye yükseldi.</p>
+<p>Aynı çalışmada ters yönde bir şey daha oldu: yapay zekânın sınanan
+görevlerde insanı zaten geçtiğine inananların oranı %53'ten üçte birin
+altına düştü. Kullanım arttıkça beklenti gerçekçileşti.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/a01_kullanim_artisi.svg"
+ alt="Araştırmacı anketlerinde yapay zekâ kullanımının 2024&#x27;ten 2025&#x27;e değişimini gösteren yatay çubuk grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 1</b> Wiley ExplanAItions çalışmasının iki dalgası. Kullanım yükselirken,
+aracın yeteneğine duyulan güven geriledi.
+<span class="indir">Dosya: <a href="varlik/sekil/a01_kullanim_artisi.svg">a01_kullanim_artisi.svg</a>
+ · <a href="varlik/sekil_png/a01_kullanim_artisi.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Bu, araçların kötü olduğu anlamına gelmiyor. Nerede işe yaradığının,
+nerede yaramadığının anlaşılmaya başlandığı anlamına geliyor. Kurs tam
+bu ayrımın üzerine kurulu.</p>
+<h2 id="asil-bosluk-kullanimda-degil-beyanda">Asıl boşluk kullanımda değil, beyanda</h2>
+<p>Yayımlanmış makalelerde büyük dil modeli izi arayan çalışmalar var.
+Tahminleri birbirinden çok uzak: Gray'in 2024 makaleleri üzerindeki
+bibliyometrik çalışması yaklaşık %10 diyor. Liang ve arkadaşlarının
+<em>Nature Human Behaviour</em>'da yayımlanan çalışması alana göre ayırıyor —
+bilgisayar bilimlerinde %22'ye kadar, matematikte %9 dolayında. Siler'in
+<em>PNAS</em>'ta yayımlanan, dört yayıncıdan 7,3 milyon makaleyi tarayan
+çalışması 2025 için %57 veriyor.</p>
+<p>Bu sayılar aynı şeyi ölçmüyor ve hiçbiri "bu makaleyi yapay zekâ yazdı"
+demiyor. Hepsi sözcük sıklığındaki kaymayı ölçüyor: belirli sözcüklerin
+kullanım oranı yıllar içinde ne kadar değişti. Tek bir makale için
+kanıt değiller.</p>
+<p>Yine de hepsinin ortak noktası şu: <strong>kullanım, beyan edilenden kat kat
+fazla.</strong> Web of Science'ta 2024 yılına ait yaklaşık 2,6 milyon makaleden
+yalnızca 1.551'inde açık bir yapay zekâ kullanım beyanı var. Yüzde
+sıfır virgül sıfır altı.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/a02_beyan_acigi.svg"
+ alt="Yayımlanmış makalelerde LLM izi tahminlerini ve açık beyan oranını karşılaştıran çubuk grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 2</b> Dört ayrı tahmin ve beyan oranı. Çubukların hangisinin doğru olduğu
+tartışmalı; kırmızı çizginin yerinin düşük olduğu tartışmalı değil.
+Bu iki şekli çizen betik: <code>kod/17_kapak_sekilleri.py</code> — veri
+noktalarının her biri kaynağıyla birlikte betiğin içinde durur.
+<span class="indir">Dosya: <a href="varlik/sekil/a02_beyan_acigi.svg">a02_beyan_acigi.svg</a>
+ · <a href="varlik/sekil_png/a02_beyan_acigi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet gercek">Gerçek veri</span>
+<span class="ad">Bu sayfadaki iki şeklin verisi</span></div>
+<dl><dt>Boyut</dt><dd>Wiley ExplanAItions 2024 ve 2025 dalgaları · dört bibliyometrik tahmin</dd><dt>Pakette</dt><dd><a href="kod/17_kapak_sekilleri.py">17_kapak_sekilleri.py</a></dd></dl>
+<p>Sayılar yayımlanmış anket ve bibliyometri çalışmalarından alındı;
+kurs için üretilmedi. Her veri noktasının kaynağı betiğin içinde kendi
+satırında yazılıdır. Künyeler 17. bölümdedir.</p></div>
+
+<aside class="not etik"><span class="not-baslik">Bu kursun duruşu</span><p>Kurs, yapay zekâ kullanımını savunmuyor ya da yasaklamıyor. Kullanıldığı
+durumda <strong>nasıl beyan edileceğini</strong>, nerede denetlenmesi gerektiğini ve
+hangi kullanımların kurumsal kurallarca yasaklandığını gösteriyor.</p>
+<p>TÜBİTAK'ın Eylül 2025 tarihli rehberi, proje önerisi hazırlarken üretken
+yapay zekâ kullanımını belirli koşullarla serbest bırakıyor ama beyanı
+zorunlu tutuyor. Aynı rehber, <strong>değerlendiriciler için kullanımı tümüyle
+yasaklıyor.</strong> İki kuralı birbirine karıştırmak, iyi niyetle etik ihlali
+yapmanın en kolay yoludur. 2. ve 13. bölümler bu ayrımı ayrıntısıyla
+işliyor.</p></aside>
+<h2 id="kurs-neyi-iceriyor">Kurs neyi içeriyor</h2>
+<div class="rakamlar"><div class="rakam"><b>15</b><span>bölüm, bir durum raporu, iki ek ve beyan</span></div><div class="rakam"><b>53</b><span>istem kalıbı, hepsi koşuldu</span></div><div class="rakam"><b>50</b><span>doldurulmuş istem örneği</span></div><div class="rakam"><b>48</b><span>gerçek çıktı kutusu</span></div><div class="rakam"><b>34</b><span>şekil, tamamı veriden üretildi</span></div><div class="rakam"><b>5</b><span>veri seti — ikisi gerçek, üçü açıkça sentetik</span></div><div class="rakam"><b>12.115</b><span>satır veri, pakette hazır</span></div><div class="rakam"><b>20</b><span>çalıştırılabilir Python betiği</span></div><div class="rakam"><b>190</b><span>kavram ve uyarı notu</span></div></div>
+<h2 id="bu-kurs-neyi-farkli-yapiyor">Bu kurs neyi farklı yapıyor</h2>
+<p>Yapay zekâ ve akademik yazım üzerine çok sayıda rehber var. Çoğunun ortak
+eksiği şu: istemi veriyorlar, çıktıyı vermiyorlar. "Şöyle sorun, iyi sonuç
+alırsınız" deyip geçiyorlar. Oysa bir istemin iyi olup olmadığı, ancak
+çıktısına bakılarak anlaşılır.</p>
+<p>Bu kursta her istem <strong>gerçekten koşuldu</strong>. Sayfalarda gördüğünüz her
+analiz sonucu, elinizdeki veri dosyası üzerinde çalıştırılmış bir betiğin
+çıktısıdır. Her şekil o çıktıdan üretildi. Rakamların hiçbiri örnek olsun
+diye yazılmadı.</p>
+<div class="kartlar uc"><div class="kart"><p><span class="no">Birinci ilke</span></p>
+<p class="kart-baslik">Çıktı gösterilmeden istem öğretilmez</p>
+<p>Kursta 47 istemin gerçek yanıtı, istem kutusunun altında
+durur. Beğenmediğimiz çıktıları da koyduk; bir istemin nerede
+yetersiz kaldığı, nerede işe yaradığı kadar öğreticidir.</p></div><div class="kart"><p><span class="no">İkinci ilke</span></p>
+<p class="kart-baslik">Sayı nereden geldiyse oradan gösterilir</p>
+<p>Kursta geçen her istatistik, yanında duran veri ve kodla yeniden
+üretilebilir. Betikleri indirip kendi makinenizde koşturabilir, aynı
+sayıları alabilirsiniz.</p></div><div class="kart"><p><span class="no">Üçüncü ilke</span></p>
+<p class="kart-baslik">Yöntem seçimi de bilgidir</p>
+<p>Her analizin yanında "bu nedir" ve "neden bu seçildi" notu var. Hangi
+testin ne zaman kullanılacağını bilmek, testi koşturmaktan daha önemli.</p></div></div>
+<h2 id="i-ki-ornek-alan-boyunca-ilerliyoruz">İki örnek alan boyunca ilerliyoruz</h2>
+<p>Kurs boyunca aynı iki çalışma, bütün aşamalardan geçirilerek örneklenir.
+Biri teknik, biri sosyal; biri sayısal, biri hem sayısal hem metinsel.
+Böylece hangi alandan gelirseniz gelin, kendi işinize benzeyen bir örnek
+bulursunuz.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Örnek A · teknik alan</span></p>
+<p class="kart-baslik">Web güvenliği — kimlik avı bağlantılarının saptanması</p>
+<p>235.795 kayıtlık gerçek bir veri setinden 5.000 satırlık bir altküme.
+Sınıflandırma, model karşılaştırması, çapraz doğrulama — ve kursun en
+sert dersi: <strong>%99,9 doğruluk aldığınızda sevinmeyin, şüphelenin.</strong></p></div><div class="kart"><p><span class="no">Örnek B · sosyal alan</span></p>
+<p class="kart-baslik">Eğitim bilimleri — ders değerlendirme anketi</p>
+<p>Gazi Üniversitesi'nden 5.820 gerçek öğrenci değerlendirmesi, 28 Likert
+maddesi. Güvenilirlik, faktör analizi, grup karşılaştırmaları, regresyon.
+Yanında da bir anket atölyesi: ham veriden temiz veriye, açık uçlu
+yanıtlardan temalara.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Hangi sırayla okunmalı</span><p>Baştan sona okunacak biçimde yazıldı, ama her bölüm kendi başına da
+durur. Yalnız istem yazmayı öğrenmek istiyorsanız 3. bölüm yeter.
+Elinizde veri varsa 7. ve 8. bölümlere geçebilirsiniz. Makaleyi yazmaya
+başladıysanız 12. bölüm sizin bölümünüz.</p></aside>
+<h2 id="kursun-haritasi">Kursun haritası</h2>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Kısım I · Temel</span></p>
+<p class="kart-baslik">1–3. bölümler</p>
+<p>Büyük dil modeli nasıl çalışır, neden kaynak uydurur, hangi iş hangi
+araca verilir. Etik ve beyan kuralları. Ve kursun en çok kullanılacak
+bölümü: iyi istemin altı parçası.</p></div><div class="kart"><p><span class="no">Kısım II · Araştırmanın başı</span></p>
+<p class="kart-baslik">4–6. bölümler</p>
+<p>Fikri araştırma sorusuna çevirmek. Web of Science, Scopus ve IEEE Xplore
+için kopyala-yapıştır hazır gelişmiş arama dizgileri. Veri tabanından indirilen kayıt dosyasından
+(BibTeX) taranabilir bir kaynak listesi kurmak, PDF'lerden veri
+çıkarmak. Anket tasarımı, veri temizleme,
+kimliksizleştirme.</p></div><div class="kart"><p><span class="no">Kısım III · Analiz</span></p>
+<p class="kart-baslik">7–10. bölümler</p>
+<p>Hangi analizi hangi soruya? Varsayım denetimi. Betimsel istatistikten
+faktör analizine, regresyondan lojistik regresyona — hepsi gerçek veri
+üstünde. Makine öğrenmesi ve veri sızıntısı. Tematik analizin altı
+aşaması.</p></div><div class="kart"><p><span class="no">Kısım IV · Üretim</span></p>
+<p class="kart-baslik">11–14. bölümler</p>
+<p>Analiz çıktısını yayın kalitesinde şekle ve tabloya çevirmek. Makaleyi
+bölüm bölüm yazmak — doğru sırayla. Proje önerisi. Hakem raporu ve
+hakem cevabı.</p></div><div class="kart"><p><span class="no">Ekler</span></p>
+<p class="kart-baslik">16–17. bölümler</p>
+<p>Kursta geçen bütün istemlerin tek sayfada toplandığı istem
+kütüphanesi: her kalıbın altında doldurulmuş hâli. Yanında veri
+setleri, çalıştırılabilir kod, elli bir terimlik istatistik sözlüğü
+ve doğrulanmış kaynak listesi.</p></div></div>
+<h2 id="kimin-icin">Kimin için</h2>
+<ol class="adimlar"><li><p><strong>Yüksek lisans ve doktora öğrencileri.</strong> İlk makalesini yazanlar için
+baştan sona bir yol. Hangi adımda ne yapılır, hangi araç nerede devreye
+girer.</p></li><li><p><strong>Araştırma yapan öğretim üyeleri.</strong> Zaten bildiğiniz süreci hızlandıran
+istemler; ve bu araçların nerede yanıltıcı olduğunu gösteren somut
+örnekler.</p></li><li><p><strong>Yöntem dersi veren akademisyenler.</strong> Bölümler ders malzemesi olarak kullanılabilir. İki gerçek veri seti CC BY
+4.0 lisanslıdır; kod, şekil ve metinler eğitim amacıyla kaynak
+gösterilerek serbestçe kullanılabilir.</p></li><li><p><strong>Kurumsal eğitim düzenleyenler.</strong> Kurs bir hizmet içi eğitim için
+hazırlandı; bütün paket indirilip kendi kurumunuzda kullanılabilir.</p></li></ol>
+
+<aside class="not etik"><span class="not-baslik">Bir açıklık borcu</span><p>Bu kursun metinleri bir büyük dil modeliyle birlikte yazıldı; analizler
+ve şekiller de aynı modelin ürettiği kodla koşuldu. Nasıl yazıldığını
+anlatan bir kursun, kendi yazılışını gizlemesi tutarsız olurdu. Kodun
+tamamı, verinin tamamı ve her istemin kendisi pakette duruyor.</p></aside>
+<h2 id="paketin-icindekiler">Paketin içindekiler</h2>
+<p>Bu site tek bir klasördür. İndirip açabilir, kendi sunucunuzda
+yayımlayabilir, çevrimdışı kullanabilirsiniz.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Klasör</th>
+<th>İçerik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>veri/web_guvenligi/</code></td>
+<td>Kimlik avı veri seti altkümesi — 5.000 satır, 43 sütun (kaynaktaki 56 sütundan seçilmiş)</td>
+</tr>
+<tr>
+<td><code>veri/sosyal/</code></td>
+<td>Gazi ders değerlendirme verisi (5.820 satır) · anket atölyesi dosyaları · açık uçlu yanıtlar</td>
+</tr>
+<tr>
+<td><code>veri/kimya/</code></td>
+<td>Adsorpsiyon deney verisi — ham (215 satır), temiz (201 satır), deney planı, temizleme karar günlüğü</td>
+</tr>
+<tr>
+<td><code>kod/</code></td>
+<td>Yirmi Python betiği, bir de ortak şekil stili dosyası</td>
+</tr>
+<tr>
+<td><code>cikti/</code></td>
+<td>Analiz çıktıları — okunur metin ve JSON olarak</td>
+</tr>
+<tr>
+<td><code>varlik/sekil/</code></td>
+<td>Otuz dört şekil, SVG — biri A0 konferans posteri</td>
+</tr>
+<tr>
+<td><code>varlik/sekil_png/</code></td>
+<td>Aynı şekillerin PNG sürümleri (Word ve sunum için)</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not "><span class="not-baslik">Betikleri kendiniz koşturmak</span><p>Python 3.10 veya üstü ve şu paketler yeterlidir: <code>pandas</code>, <code>numpy</code>,
+<code>scipy</code>, <code>statsmodels</code>, <code>scikit-learn</code>, <code>matplotlib</code>. Her betiğin
+başında ne yaptığı ve nasıl çağrılacağı yazılıdır. Rastgelelik içeren
+her adımda tohum (<code>20261103</code>) sabittir; aynı sayıları alırsınız.</p></aside>
+
+<nav class="sayfa-alt"><a class="sag" href="durum-raporu.html"><span class="yon">Sonraki →</span><span class="ad">Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

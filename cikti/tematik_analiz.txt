@@ -1,0 +1,182 @@
+﻿==============================================================================
+TEMATİK ANALİZ — Braun & Clarke (2006) altı aşama
+==============================================================================
+Veri: 116 açık uçlu yanıt, 1,601 kelime, 45 katılımcı
+UYARI — Metinler sentetiktir; yöntem göstermek için yazılmıştır.
+
+AŞAMA 1 — Veriye aşinalık
+------------------------------------------------------------------------------
+Okuma turu : 2
+Kenar notu : 41
+Süre       : 95 dakika
+Yanıtların tamamı iki kez okundu; ilk okumada kod üretilmedi, yalnız kenar notu alındı. Kodlar ikinci okumada üretildi.
+
+AŞAMA 2 — İlk kodların üretimi
+------------------------------------------------------------------------------
+Üretilen kod sayısı      : 63
+Yapılan kod ataması      : 127
+Yanıt başına ortalama kod: 1.09
+Çok kodlu yanıt sayısı   : 10
+
+AŞAMA 3 — Kodların temalara toplanması
+------------------------------------------------------------------------------
+Soru 1: 19 kod → 6 tema
+   Literatürle baş etme           ← S1-L1, S1-L2, S1-L3, S1-L4
+   Dil engelini aşma              ← S1-D1, S1-D2, S1-D3, S1-D4
+   Veriyi işler hâle getirme      ← S1-V1, S1-V2, S1-V3, S1-V4
+   Düşünme ortağı                 ← S1-Z1, S1-Z2, S1-Z3
+   İdari ve yayın yükü            ← S1-Y1, S1-Y2, S1-Y3
+   Mesafeli duranlar              ← S1-M1
+
+Soru 2: 23 kod → 7 tema
+   Güvenilirlik                   ← S2-G1, S2-G2, S2-G3, S2-G4
+   Yazarlık ve özgünlük           ← S2-O1, S2-O2, S2-O3, S2-O4
+   Veri ve gizlilik               ← S2-V1, S2-V2, S2-V3
+   Kuralsızlık                    ← S2-K1, S2-K2, S2-K3, S2-K4
+   Öğretim ve değerlendirme       ← S2-E1, S2-E2, S2-E3
+   Beceri ve erişim               ← S2-B1, S2-B2, S2-B3, S2-B4
+   Kaygı duymayanlar              ← S2-N1
+
+Soru 3: 21 kod → 6 tema
+   Eğitim ve rehberlik            ← S3-R1, S3-R2, S3-R3, S3-R4
+   Erişim ve altyapı              ← S3-A1, S3-A2, S3-A3, S3-A4
+   Yazılı politika                ← S3-P1, S3-P2, S3-P3, S3-P4
+   Yönetmelik ve denetim          ← S3-Y1, S3-Y2, S3-Y3, S3-Y4, S3-Y5
+   Yöntem desteği                 ← S3-M1, S3-M2, S3-M3
+   Beklentisi olmayanlar          ← S3-S1
+
+AŞAMA 4 — Temaların gözden geçirilmesi: kodlayıcılar arası uyum
+------------------------------------------------------------------------------
+İkinci okumaya alınan yanıt: 30 (tüm yanıtların %26'sı)
+Gözlenen uyum : %90.0
+Beklenen uyum : %8.8 (rastlantıyla)
+Cohen kappa   : 0.8904  → çok iyi uyum
+
+Uyuşmayan yanıtlar ve iki okumanın gerekçeleri:
+  K085 / S1
+    1. okuma: İdari ve yayın yükü
+    2. okuma: Düşünme ortağı
+    yanıt   : «Nitel veri kodlamada deniyorum. Görüşme dökümlerini verip ilk kodları çıkarttırıyorum, sonra kendim gözden geç…»
+  K094 / S1
+    1. okuma: Literatürle baş etme
+    2. okuma: Dil engelini aşma
+    yanıt   : «Literatür ve dil. Bu ikisi dışında kullanmıyorum, kullanmak da istemiyorum.…»
+  K013 / S3
+    1. okuma: Yazılı politika
+    2. okuma: Yönetmelik ve denetim
+    yanıt   : «Yasaklanmasını bekliyorum ama olmayacağını biliyorum. O hâlde en azından sınır konsun.…»
+
+Uyuşmazlıkların üçü de SINIR yanıtlarda. Bu yanıtlar iki temaya
+da değiyor; kappa'nın 1,00 olmaması bir hata değil, kodlama
+kararının yorum içerdiğinin kanıtıdır. Raporda uyuşmazlıkların
+nasıl çözüldüğü yazılır: burada üçü de tartışılıp birinci
+okumanın kodu korunmuştur.
+
+AŞAMA 5–6 — Tema tanımları, sıklıklar ve alıntılar
+==============================================================================
+
+SORU 1 — Üretken yapay zekâ araçlarını araştırma sürecinizin hangi aşamasında yararlı buluyorsunuz? Örnek vererek yazınız.
+(yanıt sayısı: 44)
+------------------------------------------------------------------------------
+▸ İdari ve yayın yükü
+  katılımcı: 12/44 (%27)   kod ataması: 12
+  en sık kodlar: S1-Y1 (5), S1-Y2 (4), S1-Y3 (3)
+  alıntı (K025): «Proje önerisi yazarken özgün değer kısmını tartışmak için kullanıyorum. Benim yazdığımı okutup 'bir değerlendirici bunu nasıl eleştirir' diye sorduruyorum. Çok işe yarıyor.»
+
+▸ Literatürle baş etme
+  katılımcı: 9/44 (%20)   kod ataması: 10
+  en sık kodlar: S1-L1 (3), S1-L3 (3), S1-L2 (2)
+  alıntı (K004): «Literatür taramasında işe yarıyor. Elli makalenin özetini okuyup hangisini açacağıma karar vermek yerine, hepsini birden taratıp bana ilgili olanları listeletiyorum. Zaman kazancı ciddi.»
+
+▸ Veriyi işler hâle getirme
+  katılımcı: 9/44 (%20)   kod ataması: 9
+  en sık kodlar: S1-V4 (4), S1-V1 (2), S1-V2 (2)
+  alıntı (K064): «İstatistik seçiminde. Verim şu, sorum bu, hangi testi kullanmalıyım diye soruyorum. Sonra kendim doğruluyorum ama nereden başlayacağımı biliyorum artık.»
+
+▸ Dil engelini aşma
+  katılımcı: 6/44 (%14)   kod ataması: 6
+  en sık kodlar: S1-D1 (2), S1-D4 (2), S1-D2 (1)
+  alıntı (K007): «Esas olarak İngilizce yazarken. Metni ben yazıyorum, sonra dil düzeltmesi için veriyorum. Native speaker'a para ödemekten kurtuldum.»
+
+▸ Düşünme ortağı
+  katılımcı: 6/44 (%14)   kod ataması: 6
+  en sık kodlar: S1-Z2 (3), S1-Z3 (2), S1-Z1 (1)
+  alıntı (K025): «Proje önerisi yazarken özgün değer kısmını tartışmak için kullanıyorum. Benim yazdığımı okutup 'bir değerlendirici bunu nasıl eleştirir' diye sorduruyorum. Çok işe yarıyor.»
+
+▸ Mesafeli duranlar
+  katılımcı: 5/44 (%11)   kod ataması: 5
+  en sık kodlar: S1-M1 (5)
+  alıntı (K067): «Çok yararlı bulmuyorum. Ürettiği metin yüzeysel kalıyor, düzeltmek yeniden yazmaktan uzun sürüyor.»
+
+
+SORU 2 — Bu araçların akademik kullanımına ilişkin çekince ve kaygılarınızı yazınız.
+(yanıt sayısı: 40)
+------------------------------------------------------------------------------
+▸ Güvenilirlik
+  katılımcı: 13/40 (%32)   kod ataması: 13
+  en sık kodlar: S2-G3 (5), S2-G2 (4), S2-G1 (3)
+  alıntı (K004): «Uydurduğu kaynaklar. İki kez bana var olmayan makale verdi, DOI'si de vardı, açtım açılmadı. Artık her kaynağı tek tek kontrol ediyorum ama bu da ayrı iş.»
+
+▸ Yazarlık ve özgünlük
+  katılımcı: 8/40 (%20)   kod ataması: 8
+  en sık kodlar: S2-O1 (3), S2-O2 (3), S2-O3 (1)
+  alıntı (K007): «Yazdığı metin benim mi? Dil düzeltmesi yaptırdığımda hâlâ benim metnim sayılır mı, nereye kadar? Bunun sınırı belirsiz ve kimse söylemiyor.»
+
+▸ Kuralsızlık
+  katılımcı: 6/40 (%15)   kod ataması: 7
+  en sık kodlar: S2-K1 (3), S2-K2 (2), S2-K4 (1)
+  alıntı (K016): «Kurum kuralı yok. Hangi derginin ne istediğini de bilmiyorum. Beyan etmem gerekiyor mu, ne yazmam gerekiyor, nereye yazmam gerekiyor — hiçbiri belli değil.»
+
+▸ Beceri ve erişim
+  katılımcı: 5/40 (%12)   kod ataması: 5
+  en sık kodlar: S2-B1 (2), S2-B2 (1), S2-B3 (1)
+  alıntı (K025): «Ücret. Ben kendi paramla ödüyorum, ödemeyen meslektaşım ücretsiz sürümle çalışıyor ve arasındaki fark büyük. Bu eşitsizlik yayın rekabetine de yansıyor.»
+
+▸ Kaygı duymayanlar
+  katılımcı: 4/40 (%10)   kod ataması: 4
+  en sık kodlar: S2-N1 (4)
+  alıntı (K082): «Kaygılarım var ama kullanmaya devam ediyorum. Çelişkili olduğumu biliyorum.»
+
+▸ Öğretim ve değerlendirme
+  katılımcı: 4/40 (%10)   kod ataması: 4
+  en sık kodlar: S2-E1 (2), S2-E3 (1), S2-E2 (1)
+  alıntı (K037): «Hakemlikte kullanılması. Benim makalemi bir hakemin yapay zekâya okutup rapor yazdırdığını düşünmek rahatsız edici. Değerlendirilmeyi hak ettiğim şey okunmamış olabilir.»
+
+▸ Veri ve gizlilik
+  katılımcı: 2/40 (%5)   kod ataması: 3
+  en sık kodlar: S2-V1 (1), S2-V2 (1), S2-V3 (1)
+  alıntı (K010): «Veri gizliliği. Hasta verisiyle çalışıyorum, bu veriyi hiçbir buluta yüklemem. Ama meslektaşlarımın yüklediğini biliyorum ve kimse uyarmıyor.»
+
+
+SORU 3 — Bu konuda kurumunuzdan beklentileriniz nelerdir?
+(yanıt sayısı: 32)
+------------------------------------------------------------------------------
+▸ Eğitim ve rehberlik
+  katılımcı: 10/32 (%31)   kod ataması: 10
+  en sık kodlar: S3-R1 (4), S3-R2 (3), S3-R3 (2)
+  alıntı (K040): «Zaman. Öğrenmek için zaman istiyorum, ders yükü ve idari işle bu araçları öğrenmeye vakit kalmıyor.»
+
+▸ Erişim ve altyapı
+  katılımcı: 7/32 (%22)   kod ataması: 7
+  en sık kodlar: S3-A1 (4), S3-A2 (1), S3-A4 (1)
+  alıntı (K079): «Veri tabanı erişimiyle bu araçları birleştiren bir altyapı. Web of Science'a bağlı çalışsa literatür sorunu çözülür.»
+
+▸ Yazılı politika
+  katılımcı: 7/32 (%22)   kod ataması: 7
+  en sık kodlar: S3-P1 (4), S3-P2 (1), S3-P3 (1)
+  alıntı (K037): «Hakemlik süreçleri için kural. Hakemlerin bu araçları kullanıp kullanamayacağı dergi düzeyinde değil, kurum düzeyinde de konuşulmalı.»
+
+▸ Yönetmelik ve denetim
+  katılımcı: 7/32 (%22)   kod ataması: 7
+  en sık kodlar: S3-Y5 (2), S3-Y1 (2), S3-Y3 (1)
+  alıntı (K019): «Öğrenci tarafı için düzenleme. Ödev ve tezlerde ne kadarına izin verildiği belirlenmezse ben tek başıma çözemem.»
+
+▸ Yöntem desteği
+  katılımcı: 3/32 (%9)   kod ataması: 3
+  en sık kodlar: S3-M1 (1), S3-M2 (1), S3-M3 (1)
+  alıntı (K064): «İstatistik danışmanlığı. Yapay zekâdan bağımsız olarak bu zaten eksik; bu araçlar yanlış analizi hızlandırdı.»
+
+▸ Beklentisi olmayanlar
+  katılımcı: 1/32 (%3)   kod ataması: 1
+  en sık kodlar: S3-S1 (1)
+  alıntı (K022): «Beklentim yok. Kendi başımıza öğreniyoruz, öyle devam eder.»

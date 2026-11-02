@@ -1,0 +1,396 @@
+﻿VERİ PROFİLİ — Gazi Üniversitesi ders değerlendirme verisi
+==============================================================================
+
+Gözlem sayısı : 5.820
+Değişken sayısı: 36
+Tam dolu satır : 5.820
+
+Bu profil, ham veri yerine yapay zekâya bağlam olarak
+verilmek üzere üretildi. Hiçbir satır-düzeyi bilgi içermez.
+
+------------------------------------------------------------------------------
+
+instr
+  ölçüm düzeyi : sıralı ya da nominal  (3 tamsayı düzeyi: [1, 2, 3] — hangisi olduğu veriden anlaşılmaz, siz söylemelisiniz)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 3,00
+  ortalama / SS: 2,486 / 0,718
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,6924, p = 0,0000
+  çarpıklık    : -1,027 · basıklık: -0,351
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+class
+  ölçüm düzeyi : sayma (kesikli)  (13 farklı tamsayı)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 13,00
+  ortalama / SS: 7,276 / 3,688
+  medyan / ÇAG : 7,000 / 6,000
+  Shapiro-Wilk : W = 0,9367, p = 0,0000
+  çarpıklık    : 0,060 · basıklık: -1,172
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+nb.repeat
+  ölçüm düzeyi : sıralı ya da nominal  (3 tamsayı düzeyi: [1, 2, 3] — hangisi olduğu veriden anlaşılmaz, siz söylemelisiniz)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 3,00
+  ortalama / SS: 1,214 / 0,532
+  medyan / ÇAG : 1,000 / 0,000
+  Shapiro-Wilk : W = 0,4421, p = 0,0000
+  çarpıklık    : 2,437 · basıklık: 4,784
+  dağılım notu : belirgin sapma; parametrik test öncesi dönüşüm ya da parametrik olmayan alternatif düşünülmeli (5.000 kişilik rastgele altküme üzerinde)
+
+attendance
+  ölçüm düzeyi : sıralı ya da nominal  (5 tamsayı düzeyi: [0, 1, 2, 3, 4] — hangisi olduğu veriden anlaşılmaz, siz söylemelisiniz)
+  eksik        : 0 (%0,0)
+  aralık       : 0,00 – 4,00
+  ortalama / SS: 1,676 / 1,475
+  medyan / ÇAG : 1,000 / 3,000
+  Shapiro-Wilk : W = 0,8537, p = 0,0000
+  çarpıklık    : 0,230 · basıklık: -1,411
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+difficulty
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 2,784 / 1,349
+  medyan / ÇAG : 3,000 / 3,000
+  Shapiro-Wilk : W = 0,8779, p = 0,0000
+  çarpıklık    : -0,009 · basıklık: -1,182
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q1
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 2,930 / 1,341
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8965, p = 0,0000
+  çarpıklık    : -0,046 · basıklık: -1,143
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q2
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,074 / 1,285
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8999, p = 0,0000
+  çarpıklık    : -0,204 · basıklık: -0,978
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q3
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,179 / 1,254
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8973, p = 0,0000
+  çarpıklık    : -0,318 · basıklık: -0,828
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q4
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,082 / 1,285
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9005, p = 0,0000
+  çarpıklık    : -0,207 · basıklık: -0,976
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q5
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,106 / 1,279
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9017, p = 0,0000
+  çarpıklık    : -0,217 · basıklık: -0,950
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q6
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,107 / 1,281
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9003, p = 0,0000
+  çarpıklık    : -0,229 · basıklık: -0,946
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q7
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,066 / 1,279
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9024, p = 0,0000
+  çarpıklık    : -0,189 · basıklık: -0,967
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q8
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,042 / 1,283
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9048, p = 0,0000
+  çarpıklık    : -0,134 · basıklık: -0,991
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q9
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,166 / 1,269
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8983, p = 0,0000
+  çarpıklık    : -0,279 · basıklık: -0,870
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q10
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,091 / 1,275
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,9021, p = 0,0000
+  çarpıklık    : -0,201 · basıklık: -0,935
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q11
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,184 / 1,295
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8948, p = 0,0000
+  çarpıklık    : -0,297 · basıklık: -0,928
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q12
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,036 / 1,306
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8999, p = 0,0000
+  çarpıklık    : -0,144 · basıklık: -1,029
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q13
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,243 / 1,264
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8935, p = 0,0000
+  çarpıklık    : -0,377 · basıklık: -0,809
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q14
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,291 / 1,255
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8901, p = 0,0000
+  çarpıklık    : -0,432 · basıklık: -0,744
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q15
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,287 / 1,253
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8900, p = 0,0000
+  çarpıklık    : -0,430 · basıklık: -0,732
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q16
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,170 / 1,288
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8968, p = 0,0000
+  çarpıklık    : -0,289 · basıklık: -0,919
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q17
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,398 / 1,268
+  medyan / ÇAG : 4,000 / 1,000
+  Shapiro-Wilk : W = 0,8792, p = 0,0000
+  çarpıklık    : -0,534 · basıklık: -0,665
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q18
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,223 / 1,280
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8937, p = 0,0000
+  çarpıklık    : -0,347 · basıklık: -0,862
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q19
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,262 / 1,268
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8915, p = 0,0000
+  çarpıklık    : -0,385 · basıklık: -0,799
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q20
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,285 / 1,277
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8901, p = 0,0000
+  çarpıklık    : -0,400 · basıklık: -0,806
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q21
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,307 / 1,270
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8895, p = 0,0000
+  çarpıklık    : -0,423 · basıklık: -0,773
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q22
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,318 / 1,268
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8880, p = 0,0000
+  çarpıklık    : -0,435 · basıklık: -0,756
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q23
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,202 / 1,273
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8968, p = 0,0000
+  çarpıklık    : -0,309 · basıklık: -0,861
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q24
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,167 / 1,276
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8991, p = 0,0000
+  çarpıklık    : -0,273 · basıklık: -0,899
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q25
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,313 / 1,257
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8900, p = 0,0000
+  çarpıklık    : -0,436 · basıklık: -0,731
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q26
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,222 / 1,271
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8946, p = 0,0000
+  çarpıklık    : -0,346 · basıklık: -0,837
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q27
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,155 / 1,292
+  medyan / ÇAG : 3,000 / 2,000
+  Shapiro-Wilk : W = 0,8967, p = 0,0000
+  çarpıklık    : -0,277 · basıklık: -0,948
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+Q28
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,308 / 1,279
+  medyan / ÇAG : 3,000 / 1,000
+  Shapiro-Wilk : W = 0,8873, p = 0,0000
+  çarpıklık    : -0,427 · basıklık: -0,786
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+ders_puan
+  ölçüm düzeyi : sürekli  (49 farklı değer)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,089 / 1,180
+  medyan / ÇAG : 3,000 / 1,750
+  Shapiro-Wilk : W = 0,9432, p = 0,0000
+  çarpıklık    : -0,177 · basıklık: -0,747
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+ogretim_puan
+  ölçüm düzeyi : sürekli  (65 farklı değer)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,259 / 1,193
+  medyan / ÇAG : 3,188 / 1,250
+  Shapiro-Wilk : W = 0,9251, p = 0,0000
+  çarpıklık    : -0,416 · basıklık: -0,616
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+genel_puan
+  ölçüm düzeyi : sürekli  (113 farklı değer)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 5,00
+  ortalama / SS: 3,186 / 1,158
+  medyan / ÇAG : 3,071 / 1,429
+  Shapiro-Wilk : W = 0,9405, p = 0,0000
+  çarpıklık    : -0,330 · basıklık: -0,607
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın eşiklerin içinde; büyük örneklemde beklenen durum (5.000 kişilik rastgele altküme üzerinde)
+
+------------------------------------------------------------------------------
+
+YÜKSEK İLİŞKİLİ DEĞİŞKEN ÇİFTLERİ (|r| > 0,80)
+
+Regresyon kurulacaksa bu çiftler çoklu bağlantı
+üretir; ikisini birden modele koymadan önce düşünün.
+
+  ogretim_puan — genel_puan: r = 0,982
+  ders_puan — genel_puan: r = 0,967
+  Q20 — ogretim_puan: r = 0,951
+  Q22 — ogretim_puan: r = 0,950
+  Q14 — ogretim_puan: r = 0,950
+  Q21 — ogretim_puan: r = 0,950
+  Q10 — ders_puan: r = 0,949
+  Q25 — ogretim_puan: r = 0,948
+  Q19 — ogretim_puan: r = 0,947
+  Q23 — ogretim_puan: r = 0,947
+  Q15 — ogretim_puan: r = 0,947
+  Q21 — Q22: r = 0,941
+  Q18 — ogretim_puan: r = 0,940
+  Q13 — ogretim_puan: r = 0,940
+  Q5 — ders_puan: r = 0,939
+  … ve 281 çift daha
+

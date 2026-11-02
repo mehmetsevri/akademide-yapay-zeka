@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Şekil ve tablo: analiz çıktısından yayına</title>
+<meta name="description" content="Bir analiz sonucunun yayın kalitesinde şekle ve tabloya nasıl dönüştüğü. Şekille yanıltmanın yaygın biçimleri ve bunlardan kaçınmanın yolları.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Şekil ve tablo: analiz çıktısından yayına</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa etkin" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><div class="alt-liste"><a href="#sekil-mi-tablo-mu">Şekil mi tablo mu</a><a href="#yayin-kalitesinde-seklin-dort-kurali">Yayın kalitesinde şeklin dört kuralı</a><a href="#analiz-ciktisindan-sekle">Analiz çıktısından şekle</a><a href="#dort-sekil-turu-dort-istem">Dört şekil türü, dört istem</a><a href="#birden-cok-sekli-ayni-dile-getirmek">Birden çok şekli aynı dile getirmek</a><a href="#tablo-mimarisi">Tablo mimarisi</a><a href="#sekil-ve-tablo-basliklari">Şekil ve tablo başlıkları</a><a href="#sekil-ile-metnin-uyumu">Şekil ile metnin uyumu</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 11</div><h1>Şekil ve tablo: analiz çıktısından yayına</h1><p class="ozet">Bir analiz sonucunun yayın kalitesinde şekle ve tabloya nasıl dönüştüğü. Şekille yanıltmanın yaygın biçimleri ve bunlardan kaçınmanın yolları.</p><p>Analiz bitti, elinizde sayılar var. Şimdi bu sayıları okurun
+anlayacağı bir biçime çevirmek gerekiyor. Bu bölüm, bir analiz
+çıktısının nasıl yayın kalitesinde şekle ve tabloya dönüştüğünü
+gösteriyor.</p>
+<p>İşin önemli bir kısmı estetik değil, dürüstlük meselesi. Yanıltıcı
+bir grafik, yanlış bir sayıdan daha etkili yanıltır; çünkü okur
+grafiğe bakarken sayıyı kontrol etmez.</p>
+<h2 id="sekil-mi-tablo-mu">Şekil mi tablo mu</h2>
+<p>İkisi aynı işi yapmaz. Hangisini seçeceğiniz, okurun o bilgiyle ne
+yapacağına bağlıdır.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Tablo kullanın</span></p>
+<p class="kart-baslik">Okurun sayıyı okuması gerekiyorsa</p>
+<p>Okur değeri not alacaksa, başka bir çalışmayla karşılaştıracaksa ya
+da sizin hesabınızı denetleyecekse tablo gerekir. Regresyon
+katsayıları, güvenilirlik değerleri, örneklem sayıları hep tabloya
+girer.</p>
+<p>Bir de şu var: tablolar aranabilir. Okuyucu makalenizi PDF olarak
+açıp "Cronbach" diye arattığında tablodaki değeri bulur, şekildeki
+değeri bulamaz.</p></div><div class="kart"><p><span class="no">Şekil kullanın</span></p>
+<p class="kart-baslik">Okurun örüntüyü görmesi gerekiyorsa</p>
+<p>Bir eğilim, bir karşılaştırma ya da bir dağılım anlatıyorsanız şekil
+daha hızlı iş görür. Gözün yakaladığı örüntüyü tablodan okumak
+zaman alır.</p>
+<ol start="8">
+<li>bölümdeki ters U biçimli ilişki buna iyi bir örnek. Tabloda beş
+ortalama vardı ve hiçbiri "ters U" demiyordu. Kutu grafiğine bakınca
+biçim bir saniyede görünüyor.</li>
+</ol></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Pratik bir ölçüt</span><p>Aynı veriyi hem tablo hem şekil olarak koymayın. Hangisi gerektiğine
+karar vermek için şunu sorun: okur bu değerin <strong>kendisine</strong> mi
+ihtiyaç duyacak, yoksa değerler <strong>arasındaki ilişkiye</strong> mi? Birincisi
+tablo, ikincisi şekil.</p></aside>
+<h2 id="yayin-kalitesinde-seklin-dort-kurali">Yayın kalitesinde şeklin dört kuralı</h2>
+<ol class="adimlar"><li><p><strong>Her çizgi bir bilgi taşımalı.</strong> Bu ilkenin adı veri-mürekkep oranıdır: şekle harcanan mürekkebin ne kadarı veriyi gösteriyor, ne kadarı süs. Arka plan deseni, gölge, üç boyutlu efekt, çerçeve içinde çerçeve. Bunların hiçbiri bilgi taşımaz,
+hepsi okumayı yavaşlatır. Bir öğeyi sildiğinizde şekil hâlâ aynı
+şeyi söylüyorsa o öğe gereksizdi.</p></li><li><p><strong>Etiketi verinin yanına koyun.</strong> Açıklama kutusu (legend), okurun
+gözünü şekille kutu arasında gidip gelmeye zorlar. İki ya da üç
+seriniz varsa etiketi doğrudan çizginin ucuna yazın. Açıklama kutusu
+ancak seri sayısı arttığında gerekir.</p></li><li><p><strong>Eksen sıfırdan başlamıyorsa bunu yazın.</strong> Çubuk grafikte eksenin
+sıfırdan başlamaması farkları olduğundan büyük gösterir. Bazen
+kesmek gerekir, çünkü 0,97 ile 0,99 arasındaki fark sıfırdan başlayan
+bir eksende görünmez. O zaman kesmeyi şeklin üstünde açıkça
+belirtin. 9. bölümdeki Şekil 9.3 bunun örneği.</p></li><li><p><strong>Yazı tipi metninkiyle aynı aileden olsun.</strong> Şekil, makalenin
+içinde duran bir nesnedir, dışarıdan yapıştırılmış bir resim değil.
+Bu kursun bütün şekilleri sayfa metniyle aynı yazı tipini kullanıyor.</p></li></ol>
+
+<aside class="not uyari"><span class="not-baslik">Renk konusunda iki şey</span><p><strong>Birincisi:</strong> erkeklerin yaklaşık yüzde sekizi, kadınların ise yüzde yarımı kırmızı ile yeşili ayırt etmekte zorlanır. Bu iki rengi tek ayırt edici olarak kullanmayın. Renge ek olarak biçim, doku ya da
+doğrudan etiket koyun.</p>
+<p><strong>İkincisi:</strong> birçok okur makaleyi siyah beyaz çıktı alır. Şeklinizi
+gri tonlamaya çevirip bakın; seriler hâlâ birbirinden ayrılıyor mu?
+Ayrılmıyorsa renk dışında bir ayırt edici gerekir.</p></aside>
+<h2 id="analiz-ciktisindan-sekle">Analiz çıktısından şekle</h2>
+<p>Aşağıdaki istem, 8. bölümdeki analiz çıktısından aşağıdaki şekli üretti.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Analiz sonucundan yayın kalitesinde şekil</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik yayın için şekil hazırlayan bir veri görselleştirme
+uzmanısın. Tufte&#x27;nin veri-mürekkep oranı ilkesini uyguluyorsun.
+
+KAYNAK
+Ekte analiz çıktısı var (JSON). Şekli üreteceğim veri bu dosyada;
+hiçbir değeri elle girme, hepsini dosyadan oku.
+
+ÇİZİLECEK ŞEKİL
+Beş güçlük düzeyine göre ders puanı dağılımı. Her düzeyde kutu
+grafiği, üstüne grup ortalamalarını birleştiren bir çizgi.
+
+NEDEN BU ŞEKİL
+ANOVA anlamlı çıktı ama ilişkinin biçimi tablodan okunmuyor. Okurun
+görmesi gereken şey, ilişkinin doğrusal olmadığı.
+
+TASARIM KURALLARI
+— Beyaz zemin, çerçeve yok, üst ve sağ eksen çizgisi yok
+— Izgara çizgileri yalnız DEĞER ekseninde, çok açık gri
+  (dikey grafikte yatay çizgi, yatay çubuk grafiğinde dikey çizgi;
+   kategori ekseninde ızgara bilgi taşımaz)
+— Renk anlam taşısın: en yüksek ortalamalı grup vurgulansın,
+  ötekiler nötr kalsın
+— Grup büyüklükleri (n) her kutunun üstünde yazsın
+— Başlıkta test sonucu dursun: F değeri, serbestlik dereceleri,
+  p ve etki büyüklüğü
+— Şeklin altına veri kaynağı künyesi ve bir okuma notu
+— Ondalık ayracı virgül, binlik ayracı nokta (Türkçe yazım)
+— Yunan harfi kullanma; &quot;eta kare&quot; diye yaz (yazı tipi sorunu
+  çıkarıyor)
+
+TEKNİK
+— Python, matplotlib
+— Çıktı hem SVG (web için) hem PNG 200 dpi (Word için)
+— Yazı tipi: PT Sans, yedekleriyle birlikte
+— Kod yorumlanmış olsun, değişken adları Türkçe
+
+SINIRLAR
+— Veride olmayan hiçbir değeri çizme.
+— Ekseni kesme. Kutu grafiğinde ölçeğin tamamı (1–5) görünsün.
+— Süsleme ekleme: gölge, gradyan, üç boyut, arka plan deseni yok.
+— Şekli &quot;güzelleştirmek&quot; için veriyi yuvarlama ya da gruplama.
+
+DENETİM
+Kodun sonunda şekildeki grup ortalamalarını ekrana bas. Bu
+değerlerin JSON dosyasındaki değerlerle aynı olduğunu
+karşılaştırabileyim.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Analiz sonucundan yayın kalitesinde şekil</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik yayın için şekil hazırlayan bir veri görselleştirme
+uzmanısın. Tufte&#x27;nin veri-mürekkep oranı ilkesini uyguluyorsun.
+
+KAYNAK
+sosyal_analiz.json — &quot;anova&quot; bloğu. Beş güçlük düzeyi için grup
+büyüklükleri, ortalamalar ve standart sapmalar; F değeri,
+serbestlik dereceleri, p ve eta kare. Ham puanlar
+gazi_ders_degerlendirme.csv&#x27;de.
+
+ÇİZİLECEK ŞEKİL
+Beş güçlük düzeyine göre ders puanı dağılımı. Her düzeyde kutu
+grafiği, üstüne grup ortalamalarını birleştiren bir çizgi.
+
+NEDEN BU ŞEKİL
+ANOVA anlamlı çıktı (F = 57,80, p &lt; 0,001) ama ilişkinin BİÇİMİ
+tablodan okunmuyor. Okurun görmesi gereken şey, ilişkinin doğrusal
+olmadığı: orta güçlükteki dersler en yüksek puanı alıyor, iki uç
+düşük kalıyor.
+
+TASARIM KURALLARI
+— Beyaz zemin, çerçeve yok, üst ve sağ eksen çizgisi yok
+— Izgara çizgileri yalnız DEĞER ekseninde, çok açık gri
+  (dikey grafikte yatay çizgi, yatay çubuk grafiğinde dikey çizgi;
+   kategori ekseninde ızgara bilgi taşımaz)
+— Renk anlam taşısın: en yüksek ortalamalı grup (3. düzey)
+  vurgulansın, ötekiler nötr kalsın
+— Grup büyüklükleri (n) her kutunun üstünde yazsın
+— Ortalamalar kırmızı eşkenar dörtgenle işaretlensin ve kesikli
+  çizgiyle birleştirilsin
+— Başlıkta test sonucu dursun: F, serbestlik dereceleri, p ve eta
+  kare
+— Şeklin altına veri kaynağı künyesi ve bir okuma notu
+— Ondalık ayracı virgül, binlik ayracı nokta
+— Yunan harfi kullanma; &quot;eta kare&quot; diye yaz (PT Sans&#x27;ta Yunan
+  harfleri yok, PNG çıktısında kutu olarak görünüyor)
+
+TEKNİK
+— Python, matplotlib
+— Çıktı hem SVG (web için) hem PNG 200 dpi (Word için)
+— Yazı tipi: PT Sans, yedekleriyle birlikte
+— Kod yorumlanmış olsun, değişken adları Türkçe
+
+SINIRLAR
+— Veride olmayan hiçbir değeri çizme.
+— Ekseni kesme. Kutu grafiğinde ölçeğin tamamı (1–5) görünsün.
+— Süsleme ekleme: gölge, gradyan, üç boyut, arka plan deseni yok.
+— Şekli &quot;güzelleştirmek&quot; için veriyi yuvarlama ya da gruplama.
+— Altyazıda nedensel dil kullanma.
+
+DENETİM
+Kodun sonunda şekildeki grup ortalamalarını ekrana bas. Bu
+değerlerin JSON dosyasındaki değerlerle aynı olduğunu
+karşılaştırabileyim.</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s05_anova_kutu.svg"
+ alt="İstemin ürettiği şekil" loading="lazy"></div>
+<figcaption><b>Şekil 11.1</b> Yukarıdaki istemin ürettiği şekil. Beş kutu, grup büyüklükleri,
+ortalamaları birleştiren kırmızı çizgi, başlıkta test sonucu, altta
+kaynak künyesi ve okuma notu. Ters U biçimi ilk bakışta görünüyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s05_anova_kutu.svg">s05_anova_kutu.svg</a>
+ · <a href="varlik/sekil_png/s05_anova_kutu.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">İstemin hangi parçası hangi tasarım kararını üretti</span><p>"Renk anlam taşısın" maddesi, orta gruptaki kutunun koyu, ötekilerin
+açık olmasını sağladı. "Grup büyüklükleri yazsın" maddesi, üstteki
+n = 1.620 gibi etiketleri getirdi. "Başlıkta test sonucu dursun"
+maddesi, şeklin tek başına okunabilmesini sağladı; okur metne
+dönmeden ne göreceğini biliyor.</p>
+<p>Bu üç madde olmasaydı çıkan şey standart bir kutu grafiği olurdu:
+doğru ama işe yaramayan.</p></aside>
+<h2 id="dort-sekil-turu-dort-istem">Dört şekil türü, dört istem</h2>
+<p>Yukarıdaki istem bir kutu grafiği içindi. Aşağıda, kursta kullanılan şekil
+türlerinden dördünün istemi var — sonuncusu iki şekil birden üretiyor.
+Hepsi aynı tasarım kurallarını paylaşıyor; değişen, şeklin ne anlatması
+gerektiği.</p>
+<h3>Anket dağılımı — ayrışan yığılı çubuk</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Likert dağılımı şekli</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+[veri dosyası] — [n] katılımcı, [k] Likert maddesi, [basamak]&#x27;li
+ölçek.
+
+ÇİZİLECEK ŞEKİL
+Ayrışan yığılı çubuk (diverging stacked bar). Her madde bir satır;
+yanıt kategorileri yatay olarak yığılı. Merkez, orta kategorinin
+ortasından geçsin — böylece olumlu ve olumsuz yanıtlar iki yana
+ayrışır.
+
+NEDEN BU ŞEKİL
+Ortalama tablosu dağılımı gizler. İki uca yığılmış bir dağılım ile
+ortada toplanmış bir dağılım aynı ortalamayı verebilir. Okurun
+görmesi gereken şey yanıtların biçimi.
+
+TASARIM
+— Renk düzeni ayrışan olsun: olumsuz uçtan olumlu uca geçen bir
+  dizi, orta kategori nötr gri
+— Maddeler [sıralama ölçütünüz] göre sıralansın
+— Yatay eksen yüzde; merkez sıfır
+— Açıklama kutusu altta, yatay
+— Madde kodlarının yanına boyut etiketi koy
+
+SINIRLAR
+— Üç boyut, gölge, gradyan kullanma.
+— Yüzdeleri çubukların içine yazma; [k] madde × [basamak] kategori
+  okunmaz bir sayı yığını üretir.
+— Eksik veriyi ayrı bir kategori olarak gösterme; yüzdeleri geçerli
+  yanıtlar üzerinden hesapla ve bunu altyazıda belirt.
+
+DENETİM
+Her maddede kategorilerin yüzdeleri toplamı 100 ediyor mu? Bir
+maddede etmiyorsa hangisi ve neden?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Likert dağılımı şekli</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+gazi_ders_degerlendirme.csv — 5.820 değerlendirme, 28 Likert
+maddesi, 5&#x27;li ölçek (1 = kesinlikle katılmıyorum, 5 = kesinlikle
+katılıyorum). Maddelerin boyutu gazi_madde_sozlugu.csv&#x27;de:
+Q1–Q12 ders, Q13–Q28 öğretim elemanı.
+
+ÇİZİLECEK ŞEKİL
+Ayrışan yığılı çubuk. Her madde bir satır; beş yanıt kategorisi
+yatay olarak yığılı. Merkez, &quot;3 — kararsız&quot; kategorisinin
+ortasından geçsin.
+
+NEDEN BU ŞEKİL
+Madde ortalamaları 2,93 ile 3,40 arasında toplanıyor; tabloya bakıldığında
+&quot;herkes kararsız&quot; izlenimi doğuyor. Oysa yanıtlar
+uçlara yığılmış. Okurun görmesi gereken şey bu.
+
+TASARIM
+— Beş renk, ayrışan düzen: koyu kırmızıdan koyu turkuaza, orta
+  kategori açık gri
+— Maddeler veri setindeki sırada kalsın (Q1&#x27;den Q28&#x27;e); boyut
+  yapısı bu sırayla zaten görünüyor
+— Yatay eksen yüzde, −72 ile +72 arası, merkez sıfır
+— Açıklama kutusu altta, üç sütun hâlinde
+— Madde kodunun yanına boyut harfi: (D) ders, (Ö) öğretim elemanı
+— Yükseklik 8,2 inç; 28 satır sıkışmasın
+
+SINIRLAR
+— Üç boyut, gölge, gradyan kullanma.
+— Yüzdeleri çubukların içine yazma; 28 × 5 = 140 sayı okunmaz.
+— Bu veri setinde eksik hücre yok; eksik kategorisi açma.
+— Maddeleri ortalamaya göre sıralama. Sıralarsan boyut yapısı
+  dağılır ve şeklin ikinci mesajı kaybolur.
+
+DENETİM
+Her maddede beş kategorinin yüzdeleri toplamı 100 ediyor mu?</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s01_likert_dagilim.svg"
+ alt="İstemin ürettiği Likert dağılım şekli" loading="lazy"></div>
+<figcaption><b>Şekil 11.2</b> <strong>İstemin ürettiği şekil.</strong> Yirmi sekiz madde, beş kategori, merkez
+"kararsız" yanıtının ortasından geçiyor. Ortalamalar 2,93 ile 3,40
+arasında sıkışıkken dağılımın uçlara yığıldığı buradan görünüyor —
+tablodan görünmeyen şey tam olarak bu.
+<span class="indir">Dosya: <a href="varlik/sekil/s01_likert_dagilim.svg">s01_likert_dagilim.svg</a>
+ · <a href="varlik/sekil_png/s01_likert_dagilim.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">İstemin hangi satırı neyi üretti</span><p><strong>"Merkez, 'kararsız' kategorisinin ortasından geçsin."</strong> Çubukların
+ortadan ikiye ayrılmasını ve olumlu-olumsuzun iki yana dağılmasını
+bu satır sağladı. Merkezi sıfıra koysaydınız olumsuz yanıtlar
+görünmezdi.</p>
+<p><strong>"Madde kodunun yanına boyut harfi."</strong> Soldaki (D) ve (Ö)
+etiketleri. Bu olmadan okur hangi maddenin hangi boyuta ait
+olduğunu bilemez ve şeklin ikinci mesajı — iki boyutun ayrışması —
+kaybolur.</p>
+<p><strong>"Maddeleri ortalamaya göre sıralama."</strong> Bu bir yasaktı. Sıralanmış
+olsaydı şekil daha düzenli görünürdü ama Q1–Q12 ve Q13–Q28 blokları
+dağılır, boyut yapısı görünmez olurdu.</p></aside>
+<h3>İlişki matrisi — ısı haritası</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Korelasyon ısı haritası</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+[analiz çıktısı dosyası] — korelasyon matrisi, [k] değişken.
+
+ÇİZİLECEK ŞEKİL
+Alt üçgen ısı haritası. Üst üçgen boş bırakılsın; matris simetrik
+olduğu için aynı bilgiyi iki kez göstermenin anlamı yok.
+
+TASARIM
+— Ayrışan renk ölçeği, merkez sıfırda, −1 ile +1 arası sabit
+— Her hücreye katsayıyı yaz; koyu zeminde beyaz, açık zeminde
+  koyu yazı
+— Köşegen 1,00 değerleri ince yazıyla, ötekiler kalın
+— Değişken adları kod değil okunur Türkçe olsun
+— Renk ölçeği çubuğu sağda, başlığı &quot;r&quot;
+
+SINIRLAR
+— Renk ölçeğini veriye göre otomatik ayarlama; −1/+1 sabit olsun.
+  Otomatik ölçek, zayıf ilişkileri güçlü gösterir.
+— Anlamlılık yıldızı koyma; yıldızlar örneklem büyüklüğünü
+  yansıtır, ilişkinin gücünü değil.
+— Üst üçgeni doldurma.
+
+DENETİM
+Matris simetrik mi? Köşegen 1,00 mı? En güçlü ve en zayıf
+ilişkileri değerleriyle bas.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Korelasyon ısı haritası</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+sosyal_analiz.json içindeki &quot;korelasyon&quot; bloğu. Beş değişken:
+ders_puan, ogretim_puan, attendance, difficulty, nb.repeat.
+Pearson ve Spearman matrisleri ayrı ayrı var; şekil Pearson&#x27;ı
+göstersin.
+
+ÇİZİLECEK ŞEKİL
+Alt üçgen ısı haritası.
+
+TASARIM
+— RdBu_r renk ölçeği, −1 ile +1 arası sabit
+— Her hücreye katsayıyı virgüllü yaz (0,90 biçiminde)
+— Mutlak değeri 0,55&#x27;i aşan hücrelerde beyaz yazı, ötekilerde koyu
+— Köşegen 1,00 değerleri ince, ötekiler kalın
+— Değişken adları: Ders puanı, Öğretim puanı, Katılım, Güçlük,
+  Tekrar sayısı
+— Renk ölçeği çubuğu sağda, başlığı &quot;r&quot;, çerçevesiz
+
+SINIRLAR
+— Renk ölçeğini veriye göre otomatik ayarlama.
+— Anlamlılık yıldızı koyma. n = 5.820&#x27;de neredeyse her ilişki
+  anlamlı çıkıyor; yıldızlar yanıltıcı olur.
+— Üst üçgeni doldurma.
+— Altyazıya bir uyarı ekle: bu büyüklükte bir örneklemde r = 0,03
+  bile anlamlı çıkar, r kare okunmalıdır.
+
+DENETİM
+Matris simetrik mi? Köşegen 1,00 mı? En güçlü (ders–öğretim) ve en
+zayıf (ders–tekrar) ilişkileri değerleriyle bas.</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s06_korelasyon.svg"
+ alt="İstemin ürettiği korelasyon ısı haritası" loading="lazy"></div>
+<figcaption><b>Şekil 11.3</b> <strong>İstemin ürettiği şekil.</strong> Alt üçgen dolu, üst üçgen boş; renk
+ölçeği −1 ile +1 arasında sabit. Ders ve öğretim puanı arasındaki
+0,90'lık ilişki ile tekrar sayısındaki sıfıra yakın değerler aynı
+ölçekte okunabiliyor.
+<span class="indir">Dosya: <a href="varlik/sekil/s06_korelasyon.svg">s06_korelasyon.svg</a>
+ · <a href="varlik/sekil_png/s06_korelasyon.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Sabit renk ölçeği neyi engelledi</span><p>Renk ölçeği veriye göre otomatik ayarlansaydı, en büyük değer (0,90)
+en koyu renge, en küçük değer (−0,08) en açık renge boyanırdı. O
+zaman 0,16'lık zayıf bir ilişki, ölçeğin ortasında durduğu için orta
+güçlükte görünürdü.</p>
+<p>Sabit ölçekte 0,16 neredeyse renksiz kalıyor — olması gerektiği gibi.
+<strong>Bir ısı haritasında renk ölçeğini veriye uydurmak, okura ilişkileri
+olduğundan güçlü göstermenin en kolay yoludur.</strong></p></aside>
+<h3>Model katsayıları — orman grafiği</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Regresyon katsayıları — orman grafiği</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+[analiz çıktısı] — regresyon katsayıları, standart hatalar, güven
+aralıkları, p değerleri.
+
+ÇİZİLECEK ŞEKİL
+Orman grafiği (forest plot). Her yordayıcı bir satır; katsayı bir
+nokta, güven aralığı yatay çizgi. Sıfırda dikey bir referans
+çizgisi.
+
+NEDEN BU ŞEKİL
+Katsayı tablosu okunur ama hangi aralığın sıfırı kestiği gözle
+görünmez. Orman grafiğinde anlamlı olan ile olmayan bir bakışta
+ayrışır.
+
+TASARIM
+— Anlamlı katsayılar (p &lt; [eşik]) dolu nokta ve koyu renk;
+  anlamsızlar içi boş nokta ve gri
+— Sıfır çizgisi koyu ve ince
+— Her satırın sağına katsayı değeri ve p değeri yazılsın
+— Yordayıcı adları okunur Türkçe; referans kategorisi belirtilsin
+— Sabit terim (intercept) grafiğe KONMASIN; ölçeği bozar
+
+SINIRLAR
+— Güven aralıklarını kesme; hepsi tam görünsün.
+— Katsayıları büyüklüğe göre sıralama; kuramsal sıra daha
+  okunurdur.
+— Standartlaştırılmamış ve standartlaştırılmış katsayıları aynı
+  grafikte karıştırma.
+
+DENETİM
+Kaç katsayının güven aralığı sıfırı kesiyor? Bu sayı, p &lt; [eşik]
+olmayan katsayı sayısıyla aynı mı? Aynı değilse nedenini açıkla.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Regresyon katsayıları — orman grafiği</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+sosyal_analiz.json içindeki &quot;regresyon&quot; bloğu. Model:
+ogretim_puan ~ attendance + difficulty + nb.repeat + C(instr).
+Altı katsayı var (sabit terim dahil), her biri için B, SH, t, p ve
+%95 güven aralığı.
+
+ÇİZİLECEK ŞEKİL
+Orman grafiği. Beş yordayıcı (sabit terim hariç), her biri bir
+satır.
+
+TASARIM
+— p &lt; 0,05 olanlar dolu lacivert nokta; olmayanlar içi boş gri
+— Sıfırda dikey referans çizgisi
+— Her satırın sağına &quot;B = +0,150   p &lt; 0,001&quot; biçiminde etiket;
+  ondalık ayracı virgül, eksi işareti tipografik (−)
+— Yordayıcı adları: Derse katılım, Algılanan güçlük, Dersi tekrar
+  sayısı, Öğretim elemanı 2 (ref: 1), Öğretim elemanı 3 (ref: 1)
+— Başlıkta model istatistikleri: R kare, F, serbestlik dereceleri
+— Sabit terimi grafiğe koyma; değeri 3,127 ve ölçeği bozar
+
+SINIRLAR
+— Güven aralıklarını kesme.
+— Katsayıları büyüklüğe göre sıralama.
+— Altyazıda nedensel dil kullanma. &quot;Katılım puanı artırıyor&quot; değil,
+  &quot;katılım ile puan arasında pozitif ilişki&quot;.
+— Altyazıya şu notu ekle: güçlük, katılım denetlendiğinde
+  anlamsızlaşıyor; bu örtük değişken etkisidir.
+
+DENETİM
+Kaç katsayının güven aralığı sıfırı kesiyor? Bu sayı, p &lt; 0,05
+olmayan katsayı sayısıyla aynı mı?</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/s07_regresyon_katsayi.svg"
+ alt="İstemin ürettiği orman grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 11.4</b> <strong>İstemin ürettiği şekil.</strong> Beş yordayıcı, sabit terim grafiğe
+konmadı. Dolu noktalar p &lt; 0,05 olanları gösteriyor; güven aralığı
+sıfır çizgisini kesen iki değişken — algılanan güçlük ve dersi
+tekrar sayısı — içi boş nokta ile çizildi.
+<span class="indir">Dosya: <a href="varlik/sekil/s07_regresyon_katsayi.svg">s07_regresyon_katsayi.svg</a>
+ · <a href="varlik/sekil_png/s07_regresyon_katsayi.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Sabit terimi grafiğe koymamak neden gerekiyordu</span><p>Sabit terim 3,127. Öteki katsayılar −0,196 ile +0,150 arasında.
+Hepsi aynı eksende çizilseydi, yatay eksen 0 ile 3,2 arasına
+yayılır ve beş yordayıcının tamamı sıfırın etrafında tek bir nokta
+yığınına dönüşürdü.</p>
+<p>Sabit terim bir yordayıcı değildir; modelin başlangıç noktasıdır.
+Tabloda yer alır, orman grafiğinde yer almaz. <strong>İstemde bu satır
+olmasaydı şekil teknik olarak doğru ama okunamaz çıkardı.</strong></p></aside>
+<h3>Sınıflandırma başarısı — ROC ve karışıklık matrisi</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">ROC eğrisi ve karışıklık matrisi</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+[analiz çıktısı] — [kaç model] için tahmin olasılıkları ve gerçek
+etiketler.
+
+ÇİZİLECEK İKİ ŞEKİL
+
+ŞEKİL A — ROC eğrisi
+Bütün modeller aynı eksende. Köşegen referans çizgisi (rastgele
+tahmin). Her eğrinin açıklamasında AUC değeri.
+
+ŞEKİL B — karışıklık matrisi
+[kaç model] için yan yana. Her hücrede sayı ve hücrenin adı
+(doğru negatif, yanlış pozitif, yanlış negatif, doğru pozitif).
+
+TASARIM
+— ROC: eksenler 0–1, kare en-boy oranı, açıklama sağ altta
+— Karışıklık matrisi: tek renkli ısı haritası, koyu hücrede beyaz
+  yazı
+— Satır etiketi &quot;Gerçek durum&quot;, sütun etiketi &quot;Modelin tahmini&quot;
+— Her matrisin başlığında model adı ve F1 değeri
+
+SINIRLAR
+— Karışıklık matrisini yüzdeye çevirme; ham sayı daha bilgilendirici.
+— ROC eğrisini yumuşatma; basamaklı hâli gerçek veriyi gösterir.
+— Köşeye yapışan bir eğriyi &quot;mükemmel&quot; diye etiketleme; altyazıda
+  bunun denetlenmesi gereken bir işaret olduğunu belirt.
+
+DENETİM
+Karışıklık matrisindeki dört hücrenin toplamı, test kümesi
+büyüklüğüne eşit mi? Her model için ayrı ayrı bas.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Web güvenliği — kursta koşulan istem</span>
+<span class="ad">ROC eğrisi ve karışıklık matrisi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+web_guvenligi_analiz.json içindeki &quot;egriler&quot;, &quot;naif_model&quot; ve
+&quot;durust_model&quot; blokları. İki model: naif (40 özellik) ve yerleşime
+uygun (11 sözcüksel özellik). Test kümesi 1.500 kayıt.
+Pozitif sınıf = kimlik avı.
+
+ÇİZİLECEK İKİ ŞEKİL
+
+ŞEKİL A — ROC eğrisi
+İki model aynı eksende. Köşegen referans çizgisi. Açıklamada AUC
+değerleri: naif 1,000, yerleşime uygun 0,996.
+
+ŞEKİL B — karışıklık matrisi
+İki model yan yana. Her hücrede sayı ve hücre adı.
+
+TASARIM
+— ROC: eksenler −0,02 ile 1,02, kare en-boy, açıklama sağ altta
+— Naif model kırmızı, yerleşime uygun lacivert, rastgele tahmin
+  gri kesikli
+— Karışıklık matrisi: Blues renk ölçeği, koyu hücrede beyaz yazı
+— Satır etiketi &quot;Gerçek durum&quot;, sütun &quot;Modelin tahmini&quot;
+— Etiketler: meşru / kimlik avı
+— Her matrisin başlığında model adı, özellik sayısı ve F1
+
+SINIRLAR
+— Karışıklık matrisini yüzdeye çevirme.
+— ROC eğrisini yumuşatma.
+— Naif modelin eğrisini &quot;mükemmel&quot; diye etiketleme. Altyazıya şunu
+  yaz: köşeye yapışan bir ROC eğrisi, kutlanacak bir sonuç değil,
+  denetlenecek bir işarettir.
+
+DENETİM
+Her modelde dört hücrenin toplamı 1.500 ediyor mu?</pre></div>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w04_roc.svg"
+ alt="İstemin ürettiği ROC eğrisi" loading="lazy"></div>
+<figcaption><b>Şekil 11.5</b> <strong>İstemin ürettiği birinci şekil.</strong> İki model aynı eksende. Naif
+modelin eğrisi (kırmızı) sol üst köşeye yapışıyor; yerleşime uygun
+model (lacivert) biraz altında seyrediyor. Altyazıdaki uyarı
+istemden geliyor: köşeye yapışan eğri kutlanacak değil,
+denetlenecek bir işarettir.
+<span class="indir">Dosya: <a href="varlik/sekil/w04_roc.svg">w04_roc.svg</a>
+ · <a href="varlik/sekil_png/w04_roc.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/w05_karisiklik.svg"
+ alt="İstemin ürettiği karışıklık matrisleri" loading="lazy"></div>
+<figcaption><b>Şekil 11.6</b> <strong>İstemin ürettiği ikinci şekil.</strong> Aynı istem iki şekil üretti.
+Soldaki naif model 1.500 kayıtta tek bir hata yapıyor, sağdaki
+yerleşime uygun model otuz. Hücrelerde ham sayı var; istemde
+"yüzdeye çevirme" yasağı bunun içindi.
+<span class="indir">Dosya: <a href="varlik/sekil/w05_karisiklik.svg">w05_karisiklik.svg</a>
+ · <a href="varlik/sekil_png/w05_karisiklik.png">PNG sürümü</a></span></figcaption>
+</figure>
+
+<aside class="not "><span class="not-baslik">Ham sayı neden yüzdeden iyi</span><p>Karışıklık matrisini yüzdeye çevirmek yaygın bir alışkanlık ama
+bilgi kaybettirir. "Yanlış negatif %1,2" cümlesi, bunun 18 kayıt
+mı 180 kayıt mı olduğunu söylemez.</p>
+<p>Bir güvenlik uygulamasında bu fark belirleyicidir: günde bir milyon
+URL tarayan bir süzgeçte %1,2 yanlış negatif, on iki bin kaçırılmış
+kimlik avı sayfası demektir. <strong>Ham sayı, okurun kendi ölçeğine
+çevirmesine izin verir; yüzde çevirmez.</strong></p></aside>
+
+<aside class="not "><span class="not-baslik">Dört istemde ayrı ayrı konulan üç sınır</span><p>ayrı sınır kümesi istiyor. Aşağıdaki üçü birer isteme yazıldı ama hepsinde
+geçerlidir; kendi şeklinizi çizdirirken üçünü de ekleyin.</p>
+<p><strong>"Otomatik ölçek kullanma."</strong> Isı haritası isteminde yazılı: renk ölçeği −1 ile +1 arasında sabit kalsın. Aynı mantık çubuk grafikte eksen başlangıcı için de geçerlidir. Otomatik ayar, küçük farkları büyük gösterir ve bu, şekille yanıltmanın en sessiz biçimidir.</p>
+<p><strong>"Süsleme ekleme."</strong> Likert isteminde yazılı: üç boyut, gölge, gradyan yok. Varsayılan ayarlar bazen bunları getirdiği için açıkça yasaklanması gerekir.</p>
+<p><strong>"Altyazıda nedensel dil kullanma."</strong> Orman grafiği isteminde yazılı. Şekil bir ilişki gösterir, bir neden değil; altyazı metinden bağımsız okunduğu için bu ayrım orada en çok kaybolur.</p></aside>
+<h2 id="birden-cok-sekli-ayni-dile-getirmek">Birden çok şekli aynı dile getirmek</h2>
+<p>Bir makalede sekiz şekil varsa ve her biri farklı renk, farklı yazı
+tipi, farklı eksen biçimi kullanıyorsa okur her şekilde yeniden
+öğrenmek zorunda kalır. Çözüm, bütün şekillerin tek bir stil
+dosyasından üretilmesidir.</p>
+<div class="kod-blok">
+<header><span class="dil">python</span>
+<span>Tek stil dosyası — bütün şekiller aynı dili konuşur</span></header>
+<pre><code># sekil_stili.py — her şekil betiği bunu içe aktarır.
+# Renk, yazı tipi ve eksen kararları tek yerde durur; birini
+# değiştirdiğinizde bütün şekiller birlikte değişir.
+
+LACIVERT = &quot;#1F3A5F&quot;   # ana renk, başlıklar
+TURKUAZ  = &quot;#2E8B9A&quot;   # ikincil seri
+KIRMIZI  = &quot;#B4474E&quot;   # uyarı, eşik çizgileri
+GRI      = &quot;#6B7280&quot;   # açıklama ve dipnot
+
+def stil_kur():
+    plt.rcParams.update({
+        &quot;figure.facecolor&quot;: &quot;white&quot;,
+        &quot;axes.spines.top&quot;: False,      # üst ve sağ çerçeve
+        &quot;axes.spines.right&quot;: False,    # bilgi taşımaz, silinir
+        &quot;axes.grid&quot;: True,
+        &quot;axes.grid.axis&quot;: &quot;y&quot;,         # ızgara yalnız değer ekseninde
+        &quot;grid.color&quot;: &quot;#EDEFF2&quot;,       # görünsün ama öne çıkmasın
+        &quot;legend.frameon&quot;: False,       # açıklama kutusunun çerçevesi gereksiz
+        &quot;font.sans-serif&quot;: [&quot;PT Sans&quot;, &quot;DejaVu Sans&quot;, &quot;Arial&quot;],
+        &quot;svg.fonttype&quot;: &quot;none&quot;,        # SVG&#x27;de yazı yazı olarak kalsın
+    })
+
+def ts(sayi, basamak=3):
+    &quot;&quot;&quot;Sayıyı Türkçe yazım kurallarıyla biçimler: 1234.5 → 1.234,50
+
+    Şekil üstündeki her sayı metin olarak okunur; metnin dili
+    Türkçeyse ondalık ayracı virgül, binlik ayracı nokta olmalıdır.
+    Python bunun tam tersini yazar, o yüzden ikisini doğrudan
+    değiştirmek olmaz — biri ötekine dönüşür. Önce binlik ayracı
+    geçici bir ime alınır.
+    &quot;&quot;&quot;
+    return (f&quot;{sayi:,.{basamak}f}&quot;
+            .replace(&quot;,&quot;, &quot;\x00&quot;).replace(&quot;.&quot;, &quot;,&quot;).replace(&quot;\x00&quot;, &quot;.&quot;))</code></pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Bu kursun şekilleri de böyle üretildi</span><p>Yirmi bir şeklin tamamı tek bir <code>sekil_stili.py</code> dosyasından besleniyor.
+Renk paleti değişirse yirmi bir şekil birlikte değişir.
+Dosya pakette; kendi çalışmanızda değiştirip kullanabilirsiniz.</p></aside>
+<h2 id="tablo-mimarisi">Tablo mimarisi</h2>
+<p>Akademik tablo, elektronik tablo programından kopyalanmış bir hücre
+yığını değildir. Okunacak biçimde kurulur.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Kaçının</span></p>
+<p class="kart-baslik">Sık görülen tablo hataları</p>
+<p>Her hücrenin etrafında çizgi olması. Gereksiz ondalık basamak
+(örneğin 3,28571). Aynı sütunda farklı basamak sayısı. Sütun
+başlığında birim yazmayıp her hücreye birim yazmak. Satırları
+anlamsız bir sırada bırakmak (örneğin alfabetik). Anlamlılık
+yıldızlarını (*, **, ***) açıklamadan kullanmak.</p></div><div class="kart"><p><span class="no">Yapın</span></p>
+<p class="kart-baslik">İşe yarayan tablo</p>
+<p>Yalnız yatay çizgi: üstte, başlıktan sonra, altta. Sayıları ondalık
+noktasına göre hizalayın. Basamak sayısını ölçüm duyarlılığına göre
+seçin, genellikle üç ondalık yeter. Birimi sütun başlığına yazın.
+Satırları anlamlı bir büyüklüğe göre sıralayın. Tabloyu metinden
+bağımsız okunabilir yapın: başlık ne olduğunu söylesin, dipnot
+kısaltmaları açsın.</p></div></div>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Analiz çıktısından yayına hazır tablo</span>
+<span class="arac">Görselleştirme</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik yayın için tablo hazırlıyorsun. Hedef dergi, Amerikan Psikoloji
+Derneği&#x27;nin yedinci baskı yazım kılavuzunu (APA 7) kullanıyor.
+
+KAYNAK
+Ekte çoklu regresyon çıktısı var (JSON): katsayılar, standart
+hatalar, t değerleri, p değerleri, güven aralıkları, model
+istatistikleri ve VIF değerleri.
+
+GÖREV
+Bu çıktıdan yayına hazır bir tablo üret.
+
+TABLO KURALLARI
+— Başlık: &quot;Tablo N&quot; ve tablonun ne gösterdiğini söyleyen bir cümle
+— Sütunlar: Yordayıcı | B | SH | t | p | %95 GA
+— Değişken adları okunur Türkçe olsun, kod adı değil
+  (örneğin &quot;C(instr)[T.3]&quot; değil, &quot;Öğretim elemanı 3 (ref: 1)&quot;)
+— Üç ondalık basamak, ondalık ayracı virgül
+— p &lt; 0,001 ise &quot;&lt; 0,001&quot; yaz, bilimsel gösterim kullanma
+— Referans kategorisini sütun adında belirt
+— Model istatistikleri (R kare, F, serbestlik dereceleri, n)
+  tablonun altına not olarak
+— Yıldız kullanacaksan dipnotta açıkla; kullanmaman tercih edilir,
+  p değerleri zaten tabloda
+
+ÇIKTI — üç biçim
+1. Markdown tablo (bu sohbette okunabilsin)
+2. LaTeX kodu (booktabs paketiyle, yalnız yatay çizgi)
+3. Word&#x27;e yapıştırılabilir sekme ayraçlı düz metin
+
+SINIRLAR
+— Çıktıda olmayan hiçbir sayı yazma.
+— Yuvarlarken değer değiştirme; üç ondalıkta kes, yeniden
+  hesaplama.
+— Anlamsız çıkan katsayıları tablodan çıkarma. Hepsi raporlanır.
+— Tabloyu yorumlama; tablo tablodur, yorum metinde olur.
+
+DENETİM
+Tablodaki satır sayısı, çıktıdaki katsayı sayısıyla eşit mi? Yaz.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — kursta koşulan istem</span>
+<span class="ad">Analiz çıktısından yayına hazır tablo</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Akademik yayın için tablo hazırlıyorsun. Hedef dergi, Amerikan
+Psikoloji Derneği&#x27;nin yedinci baskı yazım kılavuzunu (APA 7)
+kullanıyor.
+
+KAYNAK
+sosyal_analiz.json — &quot;regresyon&quot; bloğu. Altı katsayı (sabit terim
+dahil), her biri için B, standart hata, t, p ve %95 güven aralığı.
+Ayrıca model istatistikleri (R kare, düzeltilmiş R kare, F,
+serbestlik dereceleri) ve VIF değerleri.
+
+GÖREV
+Bu çıktıdan yayına hazır bir tablo üret.
+
+TABLO KURALLARI
+— Başlık: &quot;Tablo 3&quot; ve tablonun ne gösterdiğini söyleyen bir cümle
+— Sütunlar: Yordayıcı | B | SH | t | p | %95 GA
+— Değişken adları okunur Türkçe olsun, kod adı değil:
+  &quot;C(instr)[T.3]&quot; yerine &quot;Öğretim elemanı 3 (ref: 1)&quot;
+  &quot;Q(&#x27;nb.repeat&#x27;)&quot; yerine &quot;Dersi tekrar sayısı&quot;
+— Üç ondalık basamak, ondalık ayracı virgül
+— p &lt; 0,001 ise &quot;&lt; 0,001&quot; yaz, bilimsel gösterim kullanma
+— Referans kategorisini sütun adında belirt
+— Model istatistikleri (R kare, F, serbestlik dereceleri, n)
+  tablonun altına not olarak
+— VIF değerleri ayrı sütun olmasın; en yüksek VIF değeri nota
+  yazılsın
+— Yıldız kullanma; p değerleri zaten tabloda
+
+ÇIKTI — üç biçim
+1. Markdown tablo (bu sohbette okunabilsin)
+2. LaTeX kodu (booktabs paketiyle, yalnız yatay çizgi)
+3. Word&#x27;e yapıştırılabilir sekme ayraçlı düz metin
+
+SINIRLAR
+— Çıktıda olmayan hiçbir sayı yazma.
+— Yuvarlarken değer değiştirme; üç ondalıkta kes, yeniden
+  hesaplama.
+— Anlamsız çıkan katsayıları tablodan çıkarma. Güçlük (p = 0,522)
+  ve tekrar sayısı (p = 0,193) da raporlanır.
+— Tabloyu yorumlama; tablo tablodur, yorum metinde olur.
+
+DENETİM
+Tablodaki satır sayısı, çıktıdaki katsayı sayısıyla eşit mi? Yaz.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">İstemin ürettiği tablo — Markdown biçimi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Tablo 3.</strong> Öğretim elemanı değerlendirme puanını yordayan
+değişkenlere ilişkin çoklu doğrusal regresyon sonuçları</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Yordayıcı</th>
+<th>B</th>
+<th>SH</th>
+<th>t</th>
+<th>p</th>
+<th>%95 GA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sabit</td>
+<td>3,127</td>
+<td>0,063</td>
+<td>50,06</td>
+<td>&lt; 0,001</td>
+<td>[3,004 – 3,249]</td>
+</tr>
+<tr>
+<td>Derse katılım</td>
+<td>0,150</td>
+<td>0,012</td>
+<td>12,90</td>
+<td>&lt; 0,001</td>
+<td>[0,127 – 0,173]</td>
+</tr>
+<tr>
+<td>Algılanan güçlük</td>
+<td>0,008</td>
+<td>0,013</td>
+<td>0,64</td>
+<td>0,522</td>
+<td>[−0,017 – 0,033]</td>
+</tr>
+<tr>
+<td>Dersi tekrar sayısı</td>
+<td>−0,038</td>
+<td>0,029</td>
+<td>−1,30</td>
+<td>0,193</td>
+<td>[−0,096 – 0,019]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 2 (ref: 1)</td>
+<td>0,106</td>
+<td>0,052</td>
+<td>2,04</td>
+<td>0,042</td>
+<td>[0,004 – 0,208]</td>
+</tr>
+<tr>
+<td>Öğretim elemanı 3 (ref: 1)</td>
+<td>−0,196</td>
+<td>0,046</td>
+<td>−4,23</td>
+<td>&lt; 0,001</td>
+<td>[−0,287 – −0,105]</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Not.</em> n = 5.820. R² = 0,053; düzeltilmiş R² = 0,052;
+F(5, 5.814) = 65,20; p &lt; 0,001. B = standartlaştırılmamış regresyon
+katsayısı; SH = standart hata; GA = güven aralığı. Çok doğrusallık
+denetiminde tüm VIF değerleri 2,20'nin altındadır.</p>
+<p><strong>DENETİM:</strong> Tablodaki satır sayısı 6, çıktıdaki katsayı sayısı 6. ✓</p></div></div>
+
+<div class="kod-blok">
+<header><span class="dil">latex</span>
+<span>Aynı tablonun LaTeX sürümü</span></header>
+<pre><code>\begin{table}[htbp]
+\centering
+\caption{Öğretim elemanı değerlendirme puanını yordayan değişkenlere
+         ilişkin çoklu doğrusal regresyon sonuçları}
+\label{tab:regresyon}
+\begin{tabular}{lrrrrc}
+\toprule
+Yordayıcı &amp; $B$ &amp; SH &amp; $t$ &amp; $p$ &amp; \%95 GA \\
+\midrule
+Sabit                       &amp;  3,127 &amp; 0,063 &amp; 50,06 &amp; $&lt;$,001 &amp; [3,004--3,249] \\
+Derse katılım               &amp;  0,150 &amp; 0,012 &amp; 12,90 &amp; $&lt;$,001 &amp; [0,127--0,173] \\
+Algılanan güçlük            &amp;  0,008 &amp; 0,013 &amp;  0,64 &amp;   ,522  &amp; [--0,017--0,033] \\
+Dersi tekrar sayısı         &amp; --0,038 &amp; 0,029 &amp; --1,30 &amp; ,193   &amp; [--0,096--0,019] \\
+Öğretim elemanı 2 (ref: 1)  &amp;  0,106 &amp; 0,052 &amp;  2,04 &amp;   ,042  &amp; [0,004--0,208] \\
+Öğretim elemanı 3 (ref: 1)  &amp; --0,196 &amp; 0,046 &amp; --4,23 &amp; $&lt;$,001 &amp; [--0,287----0,105] \\
+\bottomrule
+\end{tabular}
+
+\vspace{2mm}
+\footnotesize
+\textit{Not.} $n = 5.820$. $R^2 = 0{,}053$; düzeltilmiş
+$R^2 = 0{,}052$; $F(5, 5.814) = 65{,}20$; $p &lt; 0{,}001$.
+\end{table}</code></pre></div>
+<h2 id="sekil-ve-tablo-basliklari">Şekil ve tablo başlıkları</h2>
+<p>Başlık, şeklin ya da tablonun metinden bağımsız okunmasını sağlar.
+Okurların çoğu makaleyi baştan sona okumaz; şekillere bakar, ilgisini
+çekeni metinde arar.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">İşe yaramayan başlık</div>
+<pre>Şekil 3. Sonuçlar.
+
+Şekil 4. Model karşılaştırması.
+
+Tablo 2. Regresyon analizi.</pre></div>
+<div class="guclu"><div class="baslik">İşe yarayan başlık</div>
+<pre>Şekil 3. Güçlük algısına göre ders değerlendirme
+puanları. Orta güçlükteki dersler en yüksek puanı
+almakta, iki uç düşük kalmaktadır (n = 5.820).
+
+Şekil 4. Üç farklı özellik kümesiyle eğitilen modelin
+başarısı. Yalnız URL dizgisinden hesaplanan 11 özellikle
+F1 = 0,977 elde edilmektedir.
+
+Tablo 2. Öğretim elemanı değerlendirmesini yordayan
+değişkenler. Derse katılım denetlendiğinde algılanan
+güçlüğün katkısı anlamsızlaşmaktadır.</pre></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Başlıkta bulgu da olabilir</span><p>Soldaki başlıklar neyin çizildiğini söylüyor, sağdakiler ne
+bulunduğunu. İkisi de doğru. Bazı dergiler bulgu içeren başlığı
+tercih eder, bazıları nötr başlık ister. Derginin yazım kılavuzuna
+bakın; belirtilmemişse bulgu içeren başlık okura daha çok iş görür.</p></aside>
+<h2 id="sekil-ile-metnin-uyumu">Şekil ile metnin uyumu</h2>
+<p>Son adım bir denetim. Metinde yazdığınız her sayı, gönderme yaptığınız
+şekilde ya da tabloda gerçekten var mı?</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Şekil–metin tutarlılık denetimi</span>
+<span class="arac">Yayın öncesi</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Üç şey veriyorum:
+1. Makalenin tam metni
+2. Bütün tabloların içeriği
+3. Şekillerin altyazıları ve her şeklin dayandığı analiz çıktısı
+
+GÖREV
+Metin ile şekil ve tablolar arasındaki her tutarsızlığı bul.
+
+ŞUNLARI DENETLE
+1. Metinde geçen her sayı, gönderme yapılan tablo ya da şekilde
+   aynı değerle var mı?
+2. Metinde &quot;Şekil 3&#x27;te görüldüğü gibi&quot; denen yerde Şekil 3
+   gerçekten bunu gösteriyor mu?
+3. Numaralandırma: Şekil 1, 2, 3 diye sırayla mı gidiyor, atlanan
+   var mı?
+4. Metinde hiç gönderme yapılmayan şekil ya da tablo var mı?
+5. Var olmayan bir şekle gönderme yapılıyor mu?
+6. Aynı değer iki ayrı yerde farklı yuvarlanmış mı?
+   (örneğin bir yerde 0,43, başka yerde 0,426)
+
+ÇIKTI
+| Tür | Nerede | Sorun | Doğrusu ne olmalı |
+
+SINIRLAR
+— Yalnız tutarsızlık bildir. Üslup, dil ya da içerik önerisi verme.
+— Emin olmadığın yerde &quot;doğrulanamadı&quot; yaz, tahmin etme.
+— Metni düzeltme; sorunu göster, düzeltmeyi bana bırak.
+
+DENETİM
+Sonunda şunları yaz: metinde kaç sayısal değer var, kaçı bir
+şekil/tabloyla eşleşti, kaçı eşleşmedi.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim — gönderim öncesi</span>
+<span class="ad">Şekil–metin tutarlılık denetimi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Üç şey veriyorum:
+1. Makalenin tam metni (6.800 kelime)
+2. Dört tablonun içeriği
+3. Dokuz şeklin altyazıları ve her şeklin dayandığı analiz çıktısı
+   (sosyal_analiz.json)
+
+GÖREV
+Metin ile şekil ve tablolar arasındaki her tutarsızlığı bul.
+
+ŞUNLARI DENETLE
+1. Metinde geçen her sayı, gönderme yapılan tablo ya da şekilde
+   aynı değerle var mı?
+2. Metinde &quot;Şekil 3&#x27;te görüldüğü gibi&quot; denen yerde Şekil 3
+   gerçekten bunu gösteriyor mu?
+3. Numaralandırma: Şekil 1, 2, 3 diye sırayla mı gidiyor, atlanan
+   var mı?
+4. Metinde hiç gönderme yapılmayan şekil ya da tablo var mı?
+5. Var olmayan bir şekle gönderme yapılıyor mu?
+6. Aynı değer iki ayrı yerde farklı yuvarlanmış mı?
+   (örneğin bir yerde 0,43, başka yerde 0,426)
+
+BU MAKALEYE ÖZGÜ EK DENETİM
+7. Revizyon sırasında analiz yeniden koşuldu ve üç değer değişti:
+   Cronbach alfa (0,991 → 0,992), eta kare (0,037 → 0,038) ve
+   Cohen d (0,424 → 0,426). Eski değerlerin metinde kalıp
+   kalmadığını özellikle ara.
+8. Ondalık ayracı tutarlılığı: metinde virgül, tablolarda virgül,
+   şekil altyazılarında virgül mü? Bir yerde nokta kaldıysa bul.
+9. Serbestlik dereceleri: her test istatistiğinin yanında
+   parantez içinde serbestlik derecesi var mı?
+
+ÇIKTI
+| Tür | Nerede | Sorun | Doğrusu ne olmalı |
+
+7. maddeden çıkan bulguları tablonun en başına koy.
+
+SINIRLAR
+— Yalnız tutarsızlık bildir. Üslup, dil ya da içerik önerisi verme.
+— Emin olmadığın yerde &quot;doğrulanamadı&quot; yaz, tahmin etme.
+— Metni düzeltme; sorunu göster, düzeltmeyi bana bırak.
+
+DENETİM
+Sonunda şunları yaz: metinde kaç sayısal değer var, kaçı bir
+şekil/tabloyla eşleşti, kaçı eşleşmedi? Eski değer kalıntısı kaç
+tane bulundu?</pre></div>
+
+<aside class="not "><span class="not-baslik">Yedinci madde neden eklendi</span><p><em>"Revizyon sırasında analiz yeniden koşuldu ve üç değer değişti."</em></p>
+<p>Bu, tutarsızlığın en sık kaynağıdır. Hakem bir düzeltme ister,
+analiz yeniden koşulur, tablolar güncellenir — ama metnin içinde,
+paragrafın ortasında geçen aynı değer unutulur.</p>
+<p>Modele hangi değerlerin değiştiğini söylemek, denetimi genel bir
+taramadan hedefli bir aramaya çevirir. Genel tarama 6.800 kelimede
+bu üç sayıyı kaçırabilir; hedefli arama kaçırmaz.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">Bu denetim en sık şurada hata bulur</span><p>Revizyon sonrası. Analizi yeniden koşturup bir sayı değiştiğinde,
+tablodaki değer güncellenir ama metnin içinde geçen aynı değer
+unutulur. Hakem bunu yakaladığında bütün makalenin güvenilirliği
+sorgulanır. Gönderimden önce bu denetimi mutlaka yapın.</p></aside>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Tablo sayının kendisi içindir, şekil sayılar arasındaki ilişki için.
+Aynı veriyi ikisine birden koymayın.</p></li><li><p>Bilgi taşımayan her çizgiyi silin. Bir öğeyi kaldırdığınızda şekil
+aynı şeyi söylüyorsa o öğe gereksizdi.</p></li><li><p>Ekseni kesmek bazen gerekir, ama kestiğinizi şeklin üstünde yazın.</p></li><li><p>Bütün şekilleri tek bir stil dosyasından üretin. Renk paletini bir
+kez değiştirin, hepsi birlikte değişsin.</p></li><li><p>Şekil ve tablo başlığı, metinden bağımsız okunabilmeli. Okurların
+çoğu önce şekillere bakar.</p></li><li><p>Gönderimden önce metindeki her sayının şekil ya da tabloda
+bulunduğunu makineyle doğrulayın. En çok hata revizyon sonrası
+çıkar.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="10-nitel-analiz.html"><span class="yon">← Önceki</span><span class="ad">Nitel analiz: tematik analizin altı aşaması</span></a><a class="sag" href="12-makale.html"><span class="yon">Sonraki →</span><span class="ad">Makaleyi bölüm bölüm yazmak</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

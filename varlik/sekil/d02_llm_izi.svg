@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.163125pt" height="317.5536pt" viewBox="0 0 547.163125 317.5536" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T04:10:26.117213</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 317.5536 
+L 547.163125 317.5536 
+L 547.163125 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 114.443125 255.456 
+L 538.523125 255.456 
+L 538.523125 39.24 
+L 114.443125 39.24 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 114.443125 79.987551 
+L 473.280048 79.987551 
+L 473.280048 49.068 
+L 114.443125 49.068 
+z
+" clip-path="url(#pa22ddc5ff8)" style="fill: #2e8b9a"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 114.443125 135.201034 
+L 334.63851 135.201034 
+L 334.63851 104.281483 
+L 114.443125 104.281483 
+z
+" clip-path="url(#pa22ddc5ff8)" style="fill: #2e8b9a"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 114.443125 190.414517 
+L 261.240048 190.414517 
+L 261.240048 159.494966 
+L 114.443125 159.494966 
+z
+" clip-path="url(#pa22ddc5ff8)" style="fill: #2e8b9a"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 114.443125 245.628 
+L 261.240048 245.628 
+L 261.240048 214.708449 
+L 114.443125 214.708449 
+z
+" clip-path="url(#pa22ddc5ff8)" style="fill: #2e8b9a"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 114.443125 255.456 
+L 114.443125 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mf771a08ac1" d="M 0 0 
+L 0 3.5 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mf771a08ac1" x="114.443125" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="114.443125" y="269.581" transform="rotate(-0 114.443125 269.581)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 195.996971 255.456 
+L 195.996971 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mf771a08ac1" x="195.996971" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="195.996971" y="269.581" transform="rotate(-0 195.996971 269.581)">5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 277.550817 255.456 
+L 277.550817 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mf771a08ac1" x="277.550817" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="277.550817" y="269.581" transform="rotate(-0 277.550817 269.581)">10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 359.104663 255.456 
+L 359.104663 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mf771a08ac1" x="359.104663" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="359.104663" y="269.581" transform="rotate(-0 359.104663 269.581)">15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 440.65851 255.456 
+L 440.65851 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mf771a08ac1" x="440.65851" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="440.65851" y="269.581" transform="rotate(-0 440.65851 269.581)">20</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 522.212356 255.456 
+L 522.212356 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mf771a08ac1" x="522.212356" y="255.456" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="522.212356" y="269.581" transform="rotate(-0 522.212356 269.581)">25</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #2a2a2a" x="326.483125" y="283.831" transform="rotate(-0 326.483125 283.831)">Metinlerin yüzdesi</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <path d="M 114.443125 64.527775 
+L 538.523125 64.527775 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <defs>
+       <path id="m0222bf815c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0222bf815c" x="114.443125" y="64.527775" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(35.237812 62.952775)">Bilgisayar bilimleri</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(35.243437 73.752775)">Liang ve ark., 2025</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_15">
+      <path d="M 114.443125 119.741258 
+L 538.523125 119.741258 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m0222bf815c" x="114.443125" y="119.741258" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(8.64 118.166258)">PubMed özetleri (alt sınır)</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(17.040937 128.966258)">Science Advances, 2025</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <path d="M 114.443125 174.954742 
+L 538.523125 174.954742 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m0222bf815c" x="114.443125" y="174.954742" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(66.789844 173.379742)">Matematik</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(35.243437 184.179742)">Liang ve ark., 2025</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_19">
+      <path d="M 114.443125 230.168225 
+L 538.523125 230.168225 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m0222bf815c" x="114.443125" y="230.168225" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(46.378125 228.593225)">Nature portföyü</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(35.243437 239.393225)">Liang ve ark., 2025</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 116.074202 255.456 
+L 116.074202 39.24 
+" clip-path="url(#pa22ddc5ff8)" style="fill: none; stroke: #b4474e; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 114.443125 255.456 
+L 114.443125 39.24 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 114.443125 255.456 
+L 538.523125 255.456 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 10px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="481.435433" y="67.027775" transform="rotate(-0 481.435433 67.027775)">%22,0</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="342.793894" y="122.241258" transform="rotate(-0 342.793894 122.241258)">%13,5</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 10px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="269.395433" y="177.454742" transform="rotate(-0 269.395433 177.454742)">%9,0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 10px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="269.395433" y="232.668225" transform="rotate(-0 269.395433 232.668225)">%9,0</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #b4474e" transform="translate(126.676202 42.23536)">Açıkça beyan edilen: %0,1</text>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #b4474e" transform="translate(126.676202 53.63536)">(2025'in ilk çeyreğinde %0,43)</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(114.443125 18.84)">Metinde LLM izi var, beyanda yok</text>
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(114.443125 33.24)">Tahmin edilen kullanım ile açık beyan arasındaki uçurum</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #6b7280" transform="translate(48.779125 296.5136)">Kaynak: Liang ve ark., Nature Human Behaviour (2025) · Science Advances (2025) · 5,2 milyon makalelik Q1 taraması (2026)</text>
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #6b7280" transform="translate(48.779125 306.1136)">Tahminler sözcük sıklığı kaymasına dayanır; tek bir makale için kanıt değildir.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa22ddc5ff8">
+   <rect x="114.443125" y="39.24" width="424.08" height="216.216"/>
+  </clipPath>
+ </defs>
+</svg>

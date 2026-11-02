@@ -1,0 +1,62 @@
+{
+  "başlangıç_satır": 314,
+  "bitiş_satır": 312,
+  "silinen_satır": 2,
+  "kalan_eksik_hücre": 14,
+  "günlük": [
+    {
+      "adım": "Mükerrer kayıt",
+      "karar": "Tamamen aynı satırların ikinci kopyası silindi",
+      "etkilenen": 2,
+      "gerekçe": "Aynı katılımcının formu iki kez göndermesi; aynı kişi iki kez sayılırsa standart hata olduğundan küçük tahmin edilir."
+    },
+    {
+      "adım": "Kategori birleştirme",
+      "karar": "fakülte 16 → 6 düzey, unvan 12 → 5 düzey",
+      "etkilenen": 17,
+      "gerekçe": "Form serbest metin kabul ettiği için aynı fakülte farklı yazımlarla girilmiş; birleştirilmezse grup karşılaştırmaları sahte düzeylerle çalışır."
+    },
+    {
+      "adım": "Ölçek dışı Likert değeri",
+      "karar": "1–5 aralığı dışındaki hücreler eksik işaretlendi",
+      "etkilenen": 1,
+      "gerekçe": "Ölçek 5 basamaklı; 7 gibi bir değer veri girişi hatasıdır, ortalamaya katılırsa ölçek puanını yukarı çeker."
+    },
+    {
+      "adım": "Aralık dışı: yas",
+      "karar": "22–75 dışındaki değerler eksik işaretlendi",
+      "etkilenen": 1,
+      "gerekçe": "Olanaksız değer (örn. 3 yaş, haftada 168 saat) ölçüm değil giriş hatasıdır."
+    },
+    {
+      "adım": "Aralık dışı: haftalik_saat",
+      "karar": "0–60 dışındaki değerler eksik işaretlendi",
+      "etkilenen": 1,
+      "gerekçe": "Olanaksız değer (örn. 3 yaş, haftada 168 saat) ölçüm değil giriş hatasıdır."
+    },
+    {
+      "adım": "Ters kodlama",
+      "karar": "AF6T, KK4T düz kodlandı (yeni = 6 − eski)",
+      "etkilenen": 2,
+      "gerekçe": "Olumsuz yazılmış maddeler çevrilmezse ölçek içi tutarlılık (Cronbach α) yapay olarak düşer ve faktör yükü ters çıkar."
+    },
+    {
+      "adım": "Katılımcı bazında eksik",
+      "karar": "Likert maddelerinin %20'sinden fazlasını boş bırakan katılımcı çıkarıldı",
+      "etkilenen": 0,
+      "gerekçe": "Çok sayıda madde eksikse ölçek puanı güvenilir biçimde hesaplanamaz; eşik Bennett (2001) ölçütüne dayanır."
+    },
+    {
+      "adım": "Madde içi eksik",
+      "karar": "Kalan eksik hücreler katılımcının o ölçekteki kendi ortalamasıyla dolduruldu",
+      "etkilenen": 128,
+      "gerekçe": "Madde ortalaması yerine kişi ortalaması kullanılması, yanıt üslubu farklarını (yüksek/düşük puanlama eğilimi) korur."
+    },
+    {
+      "adım": "Türetilmiş değişken",
+      "karar": "yogun_kullanici = haftalık saat ≥ ortanca (2.4 saat)",
+      "etkilenen": 1,
+      "gerekçe": "Ortanca bölme, lojistik regresyon ve ki-kare örnekleri için ikili bir sonuç değişkeni sağlar; eşik veriden okunur, dışarıdan dayatılmaz."
+    }
+  ]
+}

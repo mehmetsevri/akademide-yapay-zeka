@@ -1,0 +1,285 @@
+﻿ADSORPSİYON VERİSİ — ANALİZ SONUÇLARI
+==========================================================================
+
+!!! SENTETİK VERİ. Bu sayılar bir bulgu değil, yöntem
+    örneğidir. Hiçbiri alıntılanamaz. !!!
+
+Gözlem sayısı: 201
+Tasarım: 2 adsorban × 3 pH × 2 sıcaklık × 3 derişim × 2 süre
+
+
+ADIM 0 — İLK KURULUM ve NEDEN İŞE YARAMADIĞI
+--------------------------------------------------------------------------
+
+Analizi ilk kurduğumuzda yalnız ilgi konusu üç faktörü
+modele koyduk: adsorban, pH, sıcaklık. Başlangıç derişimi
+ile temas süresini dışarıda bıraktık — 'onlar araştırma
+sorusunun konusu değil' diye düşündük. Sonuç şöyle çıktı:
+
+Kaynak                               KT   sd           F         p     η²p
+adsorban                            7,5    1        0,04     0,849   0,000
+pH                                278,9    2        0,67     0,511   0,007
+sıcaklık                            0,3    1        0,00     0,968   0,000
+adsorban × pH                       9,1    2        0,02     0,978   0,000
+adsorban × sıcaklık                 6,8    1        0,03     0,857   0,000
+pH × sıcaklık                      19,9    2        0,05     0,953   0,001
+adsorban × pH × sıcaklık            3,1    2        0,01     0,993   0,000
+Hata                           39.147,3  189           —         —       —
+
+Hiçbir etki anlamlı değil, bütün etki büyüklükleri sıfıra
+yakın. Oysa çay posası ile ticari kömürün farklı
+davrandığını betimsel tabloda zaten görüyorduk.
+
+Nedeni şu: q, başlangıç derişimine çok güçlü bağlıdır.
+25 mg/L'de yaklaşık 11 mg/g, 100 mg/L'de yaklaşık 45 mg/g
+tutunuyor. Bu farkı modele koymazsanız, o varyans 'hata'
+sayılır ve F oranının paydasını şişirir. Payda şişince
+bütün F değerleri birin altına düşer.
+
+Çözüm, deney tasarımı dilinde BLOKLAMA: kontrol edilen
+ama ilgi konusu olmayan faktörler modele ana etki olarak
+girer, etkileşimleri sorulmaz. Böylece varyansları hata
+teriminden çıkar. Aşağıdaki bütün adımlar bu kurulumla.
+
+
+ADIM 1 — VARSAYIM DENETİMİ
+--------------------------------------------------------------------------
+
+Neden bu adım: ANOVA, hata teriminin yaklaşık normal
+dağıldığını ve grupların varyanslarının benzer olduğunu
+varsayar. Varsayım tutmazsa F de p de güvenilmez olur.
+
+Shapiro-Wilk (model artıkları): W = 0,8657, p = 0,0000
+  → Artıklar normallikten sapıyor.
+
+Şüpheli dönem dışarıda bırakıldığında aynı sınama:
+  W = 0,9219, p = 0,0000
+  W değeri 0,866 → 0,922
+  yükseliyor. Yani normallikten sapmanın büyük bölümü
+  cihaz arızası dönemindeki kaymış okumalardan geliyor.
+  Sapma hâlâ anlamlı; n = 201 gibi örneklemlerde
+  Shapiro-Wilk küçük sapmaları da yakalar. F sınaması
+  bu ölçekte normallik sapmalarına karşı dayanıklıdır,
+  ama bulgular Adım 5'te şüpheli dönem olmadan da
+  yineleniyor.
+
+Levene (36 hücre, medyan merkezli): W = 3,343, p = 0,0000
+  → Varyanslar eşit DEĞİL.
+
+Sapmanın nereden geldiğini aramak gerekiyor; 'varsayım
+tutmadı' demek tek başına bir şey öğretmez. Aynı sınamayı
+her derişim düzeyi İÇİNDE ayrı ayrı yapalım:
+
+  C0 =  25 mg/L: W = 1,331, p = 0,2339 · hücre SS aralığı 0,05-0,28 mg/g
+  C0 =  50 mg/L: W = 2,230, p = 0,0246 · hücre SS aralığı 0,12-0,60 mg/g
+  C0 = 100 mg/L: W = 1,759, p = 0,0850 · hücre SS aralığı 0,33-2,25 mg/g
+
+Hücre standart sapması, hücre ortalamasıyla birlikte
+büyüyor mu: r = 0,343, p = 0,0034 (n = 71 hücre).
+
+Tablo şunu söylüyor: 25 mg/L'de hücre içi standart sapma 0,05-0,28 mg/g iken,
+100 mg/L'de 0,33-2,25 mg/g'a çıkıyor.
+Yani varyans eşitsizliği karşılaştırdığımız gruplar arasında
+değil, derişim düzeyleri arasında. Nedeni ölçüm hatasının
+çarpımsal olması: spektrofotometre okuması yüzde cinsinden
+sapar, mutlak cinsten değil. Yüksek derişimde aynı yüzde
+daha büyük bir mg/g farkı demektir.
+
+Bu, modeli kurma biçimimizi doğruluyor: derişim modelde
+blok olarak duruyor, dolayısıyla her derişim düzeyi kendi
+içinde karşılaştırılıyor. Blok içi Levene sınamaları üç
+düzeyde de ya anlamsız ya sınırda; karşılaştırmaların
+yapıldığı yerde varyanslar yeterince benzer.
+
+
+ADIM 2-3 — BLOKLANMIŞ ANOVA ve ETKİ BÜYÜKLÜĞÜ
+--------------------------------------------------------------------------
+
+Neden bu test: üç faktörün etkisini ayrı ayrı VE birlikte
+sınamak gerekiyor. Üç ayrı t testi etkileşimi göremez;
+oysa 'ticari kömürün üstünlüğü pH'a bağlı mı' sorusu tam
+olarak bir etkileşim sorusudur.
+
+Model: q_mgG ~ C(adsorban) * C(pH) * C(sicaklik_C) + C(baslangic_derisim_mgL) + C(temas_suresi_dk)
+Açıklanan varyans: R² = 0,9960
+
+Kaynak                               KT   sd           F         p     η²p
+adsorban                           79,8    1       95,00    <0,001   0,338
+pH                                176,1    2      104,76    <0,001   0,530
+sıcaklık                            9,2    1       10,89     0,001   0,055
+başlangıç derişimi (blok)      38.916,4    2   23.152,69    <0,001   0,996
+temas süresi (blok)                21,0    1       24,94    <0,001   0,118
+adsorban × pH                      10,0    2        5,96     0,003   0,060
+adsorban × sıcaklık                 1,5    1        1,74     0,189   0,009
+pH × sıcaklık                       0,8    2        0,50     0,605   0,005
+adsorban × pH × sıcaklık            0,5    2        0,28     0,757   0,003
+Hata                              156,3  186           —         —       —
+
+Kısmi eta kare eşikleri (Cohen 1988): 0,01 küçük · 0,06 orta · 0,14 büyük
+
+Anlamlı bulunan terimler (bloklar hariç):
+  adsorban: F(1, 186) = 95,00, p < 0,001, η²p = 0,338
+  pH: F(2, 186) = 104,76, p < 0,001, η²p = 0,530
+  sıcaklık: F(1, 186) = 10,89, p = 0,001, η²p = 0,055
+  adsorban × pH: F(2, 186) = 5,96, p = 0,003, η²p = 0,060
+
+Etkileşim terimi anlamlı çıktığında ana etkiler tek başına
+yorumlanmaz. adsorban × pH anlamlı olduğu için 'ticari
+kömür daha iyidir' demek eksik kalır; doğru ifade 'ticari
+kömürün üstünlüğü pH düzeyine göre değişir'.
+
+Etkileşimin okunuşu — pH düzeyine göre adsorban farkı:
+
+  pH 3: çay posası 25,05 mg/g · ticari 25,09 mg/g · fark 0,04 mg/g
+  pH 7: çay posası 27,65 mg/g · ticari 27,75 mg/g · fark 0,10 mg/g
+  pH 10: çay posası 27,06 mg/g · ticari 28,00 mg/g · fark 0,94 mg/g
+
+Farkın pH 3'te 0,04 mg/g'dan pH 10'da 0,94 mg/g'a çıkması
+etkileşimin yönünü gösteriyor: ticari kömürün üstünlüğü
+yalnız yüksek pH'ta belirginleşiyor. Ortalamalar üç
+derişim ve iki süre üzerinden alındığı için mutlak
+büyüklükler bastırılmış görünür; sınamanın kendisi
+bloklanmış modelde yapıldı.
+
+Post hoc — pH düzeyleri arası Tukey HSD:
+(pH üç düzeyli; ANOVA 'bir fark var' der, hangi ikilinin
+ farklı olduğunu söylemez. Hata terimi bloklanmış modelden
+ alındı: KO_hata = 0,8404, sd = 186.)
+
+  pH 3.0 - pH 7.0: fark = -2,62 mg/g, q = 23,13, p = <0,001
+  pH 3.0 - pH 10.0: fark = -2,47 mg/g, q = 21,91, p = <0,001
+  pH 7.0 - pH 10.0: fark = 0,16 mg/g, q = 1,41, p = 0,577
+
+
+ADIM 4 — İZOTERM MODELLERİ
+--------------------------------------------------------------------------
+
+Neden bu adım: ANOVA 'fark var mı' sorusunu yanıtlar ama
+mekanizma hakkında bir şey söylemez. İzoterm uyumu,
+tutunmanın tek katmanlı mı (Langmuir) yoksa heterojen
+yüzeyde mi (Freundlich) olduğuna dair kanıt sunar.
+
+Her iki model pH 7, 45 °C, 120 dk koşulunda uyduruldu;
+izoterm tanımı gereği tek sıcaklık ve tek pH gerektirir.
+
+Çay posası (n = 8 nokta):
+  Langmuir  : qmax = 88,0 mg/g · KL = 0,1364 L/mg
+              R² = 0,9575 · AIC = 20,9 · RMSE = 2,87 mg/g
+  Freundlich: KF = 12,30 · n = 1,58
+              R² = 0,9276 · AIC = 25,1 · RMSE = 3,75 mg/g
+  Daha iyi uyan: Langmuir (AIC farkı 4,3)
+
+Ticari kömür (n = 9 nokta):
+  Langmuir  : qmax = 176,4 mg/g · KL = 0,0997 L/mg
+              R² = 0,9980 · AIC = -3,4 · RMSE = 0,66 mg/g
+  Freundlich: KF = 16,15 · n = 1,21
+              R² = 0,9974 · AIC = -0,8 · RMSE = 0,76 mg/g
+  Daha iyi uyan: Langmuir (AIC farkı 2,5)
+
+
+Doğrusallaştırma neden önerilmedi
+
+(a) Dönüştürülmüş ölçekteki R² karşılaştırılamaz.
+
+Doğrusallaştırılmış uyumun R²'si, dönüştürülmüş değişken
+üzerinde hesaplanır: Langmuir için Ce/q, Freundlich için
+ln q. Bunlar farklı şeyleri ölçer; iki R² aynı tabloda
+yan yana konamaz. Aynı parametrelerle özgün ölçekte
+(mg/g) yeniden hesaplandığında tablo şöyle:
+
+Adsorban      yöntem                  Langmuir R²  Freundlich R²        seçim
+Çay posası    doğrusal olmayan             0,9575         0,9276     Langmuir
+              doğrusallaştırılmış          0,9552         0,9087     Langmuir
+Ticari        doğrusal olmayan             0,9980         0,9974     Langmuir
+              doğrusallaştırılmış          0,9980         0,9970     Langmuir
+
+Özgün ölçeğe getirildiğinde iki yöntem de Langmuir'i
+seçiyor. Dönüştürülmüş ölçekteki R² ile bakılsaydı
+Freundlich kazanıyordu — yani sonucu değiştiren şey
+modelin kendisi değil, R²'nin hangi ölçekte
+hesaplandığıydı.
+
+(b) Doğrusallaştırma parametreleri kaydırıyor.
+
+Adsorban      Parametre     doğ. olmayan  doğrusallaş.     fark
+Çay posası    qmax (mg/g)         87,954        91,893     %4,5
+              KL (L/mg)            0,136         0,123   %-10,1
+              KF                  12,299        10,525   %-14,4
+              n                    1,584         1,373   %-13,3
+Ticari        qmax (mg/g)        176,435       174,302    %-1,2
+              KL (L/mg)            0,100         0,101     %1,5
+              KF                  16,153        15,907    %-1,5
+              n                    1,211         1,185    %-2,1
+
+q'daki eşit dağılmış ölçüm hatası Ce/q'ya taşındığında
+küçük q değerlerinde büyür. En küçük kareler her noktaya
+eşit ağırlık verdiği için düşük derişimli noktalar hak
+ettiğinden fazla ağırlık kazanır.
+
+(c) Tahminler gerçek değerlere ne kadar yakın?
+
+Bu veri sentetik olduğu için üretim modelinin gerçek
+parametrelerini biliyoruz. Gerçek bir çalışmada bu denetim
+yapılamaz; burada yapılabiliyor ve öğretici bir şey
+gösteriyor.
+
+Adsorban      Parametre       gerçek    tahmin       %95 güven aralığı  kapsıyor mu
+Çay posası    qmax (mg/g)      148,0      88,0          [52,2 – 123,7]        HAYIR
+              KL (L/mg)       0,0671    0,1364       [0,0377 – 0,2352]         evet
+Ticari        qmax (mg/g)      176,0     176,4         [137,8 – 215,0]         evet
+              KL (L/mg)       0,1000    0,0997       [0,0712 – 0,1282]         evet
+
+Ticari kömürde tahminler gerçeğe çok yakın. Çay posasında
+qmax tahmini gerçeğin epey altında ve güven aralığı
+gerçek değeri KAPSAMIYOR. Nedeni yöntem değil, deney
+aralığı: çay posasının denge derişimleri 1,3-9,8 mg/L
+arasında kalıyor. En yüksek derişimde bile kapasitenin
+ancak %57 kadarı doluyor; izoterm doygunluk
+bölgesine girmiyor. qmax doygunluk düzeyidir, ulaşılmamış
+bir düzey veriden güvenilir biçimde çıkarılamaz.
+
+Pratik sonuç: qmax raporlanacaksa, derişim aralığının
+doygunluk bölgesini kapsadığı gösterilmelidir. Geniş
+güven aralığı bu uyarıyı zaten veriyor — çay posasında
+qmax aralığının genişliği, tahminin %81
+kadarı.
+
+Not: n = 8-9 nokta, izoterm uyumu için az. Yayımlanacak
+bir çalışmada derişim basamağı sayısı artırılır.
+
+
+ADIM 5 — ŞÜPHELİ DÖNEM DUYARLILIK ANALİZİ
+--------------------------------------------------------------------------
+
+Neden bu adım: 12-18 Mart ölçümleri cihaz bakım kaydı
+nedeniyle kuşkulu. Onları atmak da tutmak da bir karar;
+hangisinin sonucu değiştirdiğini göstermek, kararı okurun
+denetlemesine açar.
+
+Şüpheli dönem dışarıda bırakıldığında (n = 186):
+
+Kaynak                          F (tümü)   F (hariç)  η²p (tümü)  η²p (hariç)
+adsorban                           95,00      117,99       0,338        0,408
+pH                                104,76      123,92       0,530        0,592
+sıcaklık                           10,89       17,76       0,055        0,094
+başlangıç derişimi (blok)      23.152,69   33.182,14       0,996        0,997
+temas süresi (blok)                24,94       22,50       0,118        0,116
+adsorban × pH                       5,96        6,09       0,060        0,067
+adsorban × sıcaklık                 1,74        0,56       0,009        0,003
+pH × sıcaklık                       0,50        1,13       0,005        0,013
+adsorban × pH × sıcaklık            0,28        0,01       0,003        0,000
+
+Anlamlılık kararı değişen terim yok; bulgular şüpheli döneme duyarlı değil.
+
+
+BETİMSEL ÖZET
+--------------------------------------------------------------------------
+
+Adsorban         pH    n    q ort.     q SS   giderim %
+Çay posası        3   31     25,05    13,05        84,8
+Çay posası        7   34     27,64    14,12        92,2
+Çay posası       10   34     27,05    14,34        93,5
+Ticari            3   32     25,09    13,42        91,0
+Ticari            7   34     27,75    14,78        95,8
+Ticari           10   36     28,00    15,04        96,3
+

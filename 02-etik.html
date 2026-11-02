@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etik, yazarlık, gizlilik ve beyan — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Üç soru ve üç net yanıt: kim yazar sayılır, veri nereye gidiyor, ne beyan edilir. Yanında kendi beyan metninizi üreten bir istem ve onun gerçek çıktıs">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Etik, yazarlık, gizlilik ve beyan</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa etkin" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><div class="alt-liste"><a href="#kim-yazar-sayilir">Kim yazar sayılır</a><a href="#neyin-yapilabilecegi-neyin-yapilamayacagi">Neyin yapılabileceği, neyin yapılamayacağı</a><a href="#veri-nereye-gidiyor">Veri nereye gidiyor</a><a href="#ne-beyan-edilir">Ne beyan edilir</a><a href="#ogrenci-tarafi">Öğrenci tarafı</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 2</div><h1>Etik, yazarlık, gizlilik ve beyan</h1><p class="ozet">Üç soru ve üç net yanıt: kim yazar sayılır, veri nereye gidiyor, ne beyan edilir. Yanında kendi beyan metninizi üreten bir istem ve onun gerçek çıktısı.</p><p>Bu bölüm bir yasak listesi değil. Akademide yapay zekâ kullanımının
+etik çerçevesi üç soruya indirgenebilir: <strong>Kim yazar sayılır? Veri
+nereye gidiyor? Ne beyan edilir?</strong> Üçünün yanıtı da, sanıldığı kadar
+belirsiz değildir.</p>
+<h2 id="kim-yazar-sayilir">Kim yazar sayılır</h2>
+<p>Bu konuda uluslararası mutabakat vardır ve tektir: <strong>yapay zekâ yazar
+olamaz.</strong> Gerekçe teknik değil, sorumlulukla ilgilidir.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">ICMJE ölçütü</span></p>
+<p class="kart-baslik">Yazarlık dört koşulu birden gerektirir</p>
+<p>Uluslararası Tıp Dergisi Editörleri Komitesi (ICMJE) dört koşul sayar:
+araştırmaya önemli bir katkı vermek · taslağı yazmak ya da eleştirel
+biçimde gözden geçirmek · yayımlanacak son sürümü onaylamak ·
+<strong>çalışmanın her yönünden sorumluluk almayı kabul etmek.</strong> Yazar
+sayılmak için dördü birden gerekir. Son koşul bir aracın yerine
+getiremeyeceği türdendir: bir araç hesap veremez.</p></div><div class="kart"><p><span class="no">COPE duruşu</span></p>
+<p class="kart-baslik">Sorumluluk devredilemez</p>
+<p>Yayın Etiği Komitesi'nin — kısa adıyla COPE'un — konumu açıktır: yapay
+zekâ araçları yazarlık ölçütlerini karşılayamaz; kullanımları yöntem ya da teşekkür bölümünde
+açıklanmalıdır. Metinde yapay zekâ kaynaklı bir hata varsa sorumlusu
+insan yazarlardır.</p></div></div>
+
+<aside class="not etik"><span class="not-baslik">Pratik sonuç</span><p>Modelin ürettiği bir cümleyi makalenize koyuyorsanız, o cümle artık
+sizindir. Yanlışsa sizin yanlışınızdır. Bu, kullanmayı yasaklamaz —
+<strong>denetlemeden kullanmayı</strong> yasaklar.</p></aside>
+<h2 id="neyin-yapilabilecegi-neyin-yapilamayacagi">Neyin yapılabileceği, neyin yapılamayacağı</h2>
+<p>Aşağıdaki ayrım yaygın dergi politikalarının ortak paydasıdır. Yine de
+gönderim yapacağınız derginin kendi metnini okumak zorunludur; bu tablo
+onun yerine geçmez.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>İş</th>
+<th>Durum</th>
+<th>Not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dil düzeltme, redaksiyon, akıcılık</td>
+<td>Genellikle serbest</td>
+<td>Çoğu dergi bu iş için beyan istemez; istemeyen bir dergiye beyan yazmanın da zararı olmaz</td>
+</tr>
+<tr>
+<td>Çeviri (kendi metninizin)</td>
+<td>Genellikle serbest</td>
+<td>Terim kaymalarını denetleyin</td>
+</tr>
+<tr>
+<td>Özet ve başlık taslağı</td>
+<td>Serbest, beyanla</td>
+<td>Son hâli siz yazarsınız</td>
+</tr>
+<tr>
+<td>Kod yazma ve veri analizi</td>
+<td>Serbest, beyanla</td>
+<td>Üretilen kod gözden geçirilmeden kullanılmaz</td>
+</tr>
+<tr>
+<td>Literatür ön ayıklama</td>
+<td>Serbest, yöntemde açıklanarak</td>
+<td>Kararı insan verir; ölçütler yazılır</td>
+</tr>
+<tr>
+<td>Şekil ve tablo üretimi</td>
+<td>Serbest, beyanla</td>
+<td>Veriden üretilmiş olmalı; "örnek grafik" değil</td>
+</tr>
+<tr>
+<td>Bulgu yorumlama taslağı</td>
+<td>Dikkatle, beyanla</td>
+<td>Yorum yazarındır; model taslak verir</td>
+</tr>
+<tr>
+<td><strong>Hakem raporu yazdırma</strong></td>
+<td><strong>Genellikle yasak</strong></td>
+<td>Değerlendirilen makale yayımlanmamış, gizli bir metindir</td>
+</tr>
+<tr>
+<td><strong>Kaynakça üretme</strong></td>
+<td><strong>Yapılmaz</strong></td>
+<td>Uydurma riski; kaynak veri tabanından gelir</td>
+</tr>
+<tr>
+<td><strong>Veri üretme veya tamamlama</strong></td>
+<td><strong>Yasak</strong></td>
+<td>Veri uydurma, biçimi ne olursa olsun bilimsel suistimaldir</td>
+</tr>
+<tr>
+<td><strong>Yazar olarak gösterme</strong></td>
+<td><strong>Yasak</strong></td>
+<td>Hiçbir dergi kabul etmez</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not uyari"><span class="not-baslik">Hakemlik konusunda ayrıca dikkat</span><p>Size hakemlik için gönderilen bir makale, <strong>yayımlanmamış ve gizli</strong>
+bir metindir. Onu bir dil modeline yüklemek, üçüncü bir tarafa
+yazarın izni olmadan yayımlanmamış veri vermektir. Birçok yayıncı
+bunu açıkça yasaklamıştır. 14. bölümde hakem raporunu yapay zekâdan
+yardım alarak ama metni dışarı çıkarmadan yazmanın yolunu
+göstereceğiz.</p></aside>
+<h2 id="veri-nereye-gidiyor">Veri nereye gidiyor</h2>
+<p>Bu, etik kadar hukuki bir sorudur; çoğu akademisyen yanıtını bilmeden
+bu araçları kullanıyor.</p>
+<ol class="adimlar"><li><p><strong>Girdiğiniz metin bir sunucuya gider.</strong> Yerel çalışan bir model
+kullanmıyorsanız, yazdığınız her şey şirketin sunucusunda işlenir.</p></li><li><p><strong>Saklanma süresi sözleşmeye bağlıdır.</strong> Kurumsal planlarda genellikle
+girdiler modelin eğitiminde kullanılmaz; bireysel ve ücretsiz
+planlarda bu güvence her zaman yoktur. Hangi planı kullandığınızı ve
+o planın ne vaat ettiğini bilmek sizin sorumluluğunuzdadır.</p></li><li><p><strong>Kişisel veri KVKK kapsamındadır.</strong> Ad, T.C. kimlik numarası, iletişim
+bilgisi, sağlık verisi, öğrenci kimliği — bunların hiçbiri
+kimliksizleştirilmeden bir buluta çıkmaz. 6. bölümde kimliksizleştirmeyi
+adım adım yapıyoruz.</p></li><li><p><strong>Yayımlanmamış veri, ticari sır kadar korunmayı gerektirir.</strong> Henüz
+yayımlanmamış bulgularınız,
+patent başvurusuna konu olabilecek bir yöntem, kurumunuzun sözleşmeli
+projesine ait veri — bunlar kişisel veri olmasa da dışarı çıkmamalıdır.</p></li></ol>
+
+<aside class="not ipucu"><span class="not-baslik">Pratik bir eşik</span><p>Şu soruyu sorun: <strong>bu metni, tanımadığım bir meslektaşıma e-postayla
+gönderir miydim?</strong> Yanıt hayırsa, bir dil modeline de vermeyin. Soru
+kabaca ama işe yarar biçimde doğru eşiği verir.</p></aside>
+<h2 id="ne-beyan-edilir">Ne beyan edilir</h2>
+<p>Beyan, bir itiraf değil bir yöntem bildirimidir. Mikroskop kullandığınızı
+nasıl yazıyorsanız öyle yazılır: <strong>ne, nerede, ne için.</strong></p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Zayıf beyan — hem fazla hem eksik</div>
+<pre>Bu çalışmanın hazırlanmasında yapay zekâ araçlarından
+yararlanılmıştır. Yazarlar, üretilen tüm içeriği kontrol
+etmiş olup sorumluluk yazarlara aittir. Yapay zekâ
+kullanımının çalışmanın özgünlüğünü etkilemediği
+değerlendirilmektedir.</pre></div>
+<div class="guclu"><div class="baslik">İşe yarar beyan</div>
+<pre>Bu çalışmada Claude Opus 5 (Anthropic) iki aşamada
+kullanılmıştır: (i) İngilizce metnin dil düzeltmesi,
+(ii) Python ile veri analizi kodunun yazılması. Üretilen
+kodun çıktıları yazarlarca bağımsız olarak doğrulanmıştır.
+Literatür taraması, kaynak seçimi, bulguların yorumlanması
+ve metnin kuramsal çerçevesi yazarlara aittir. Model hiçbir
+kaynak künyesi üretmemiş, tüm atıflar Web of Science ve
+Crossref üzerinden doğrulanmıştır.</pre></div></div>
+
+<aside class="not "><span class="not-baslik">İki beyanın farkı nerede</span><p>Soldaki beyan, kullanımın <strong>ne olduğunu</strong> söylemiyor. "Yararlanılmıştır"
+sözcüğü dil düzeltmesinden metin yazdırmaya kadar her şeyi kapsar;
+hakem bundan bilgi çıkaramaz. Üstelik son cümle gereksiz bir savunma:
+kimse sormadan özgünlük tartışması açıyor.</p>
+<p>Sağdaki beyan iki aşamayı adıyla sayıyor, neyin yazarlara ait olduğunu
+olumlu dille belirtiyor ve en önemlisini söylüyor: kaynaklar modelden
+gelmedi. Hakemin merak edeceği soru tam olarak budur.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kendi beyan metninizi üretme</span>
+<span class="arac">Yayın</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Bir akademik makale için yapay zekâ kullanım beyanı yazacağım.
+
+KULLANIM DÖKÜMÜ
+Aşağıda, çalışma sırasında yapay zekâ aracını kullandığım her adımı
+yazıyorum. Her satır: [aşama] — [ne yaptırdım] — [çıktıyı nasıl
+denetledim].
+
+1. Veri temizleme — temizleme kodunu yazdırdım — çıktı satır sayılarını
+   elle karşılaştırdım, temizleme günlüğünü inceledim
+2. İstatistiksel analiz — analiz kodunu yazdırdım — üç testi SPSS&#x27;te
+   yeniden koşturup sonuçları karşılaştırdım
+3. Şekil üretimi — grafik kodunu yazdırdım — her şeklin eksenlerini ve
+   değerlerini analiz çıktısıyla karşılaştırdım
+4. Dil düzeltme — İngilizce metnin redaksiyonunu yaptırdım — her
+   değişikliği tek tek onayladım
+5. [kendi adımlarınızı buraya ekleyin]
+
+YAPMADIĞIM ŞEYLER
+— Kaynak künyesi ürettirmedim; tüm atıflar Scopus&#x27;tan indirildi
+— Bulgu yorumunu yazdırmadım
+— Hakem raporu ya da hakem cevabı yazdırmadım
+
+GÖREV
+Bu dökümden, bir dergi gönderiminde kullanılabilecek bir beyan
+paragrafı yaz.
+
+BİÇİM
+— Tek paragraf, 70–110 kelime
+— Resmî akademik Türkçe, edilgen anlatım
+— Kullanılan aracın adı ve sürümü açıkça geçsin
+— Hangi aşamalarda kullanıldığı somut olarak sayılsın
+— Denetimin nasıl yapıldığı belirtilsin
+
+SINIRLAR
+— Savunmacı cümle kurma. &quot;Özgünlüğü etkilememiştir&quot;, &quot;etik kurallara
+  tam uyulmuştur&quot; gibi kendi kendini savunan ifadeler kullanma.
+— Yapmadığım bir şeyi beyana ekleme.
+— Dökümde olmayan hiçbir kullanım biçiminden söz etme.
+— Kapsamı olumlu kur: neyin yapılmadığını saymak yerine neyin
+  yapıldığını yaz.
+
+AYRICA
+Paragrafın altına, aynı beyanın İngilizce sürümünü ekle.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tarih · arşiv çalışması</span>
+<span class="ad">Kendi beyan metninizi üretme</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Bir akademik makale için yapay zekâ kullanım beyanı yazacağım.
+
+KULLANIM DÖKÜMÜ
+Aşağıda, çalışma sırasında yapay zekâ aracını kullandığım her adımı
+yazıyorum. Her satır: [aşama] — [ne yaptırdım] — [çıktıyı nasıl
+denetledim].
+
+1. Arşiv taraması — 40 salnamenin metne dönüştürülmüş hâlinden
+   eğitim kurumu kayıtlarını çıkarttırdım — çıkarılan 213 kaydın
+   tamamını özgün taramalarla karşılaştırdım, 11 okuma hatası
+   düzelttim
+2. Veri düzenleme — çıkarılan kayıtları tabloya dönüştüren Python
+   kodunu yazdırdım — satır sayılarını elle saydım, üç dosyanın
+   hiç taranmadığını fark edip yeniden işledim
+3. Tablo ve şekil — vilayet bazında dağılım grafiğini çizdiren kodu
+   yazdırdım — eksen değerlerini çıkarım tablosuyla karşılaştırdım
+4. Dil düzeltme — Türkçe metnin yazım ve noktalama denetimini
+   yaptırdım — her değişikliği tek tek onayladım
+5. İngilizce özet — kendi yazdığım Türkçe özetin çevirisini
+   yaptırdım — terim karşılıklarını (salname, maarif, mekteb-i
+   rüşdi) elle düzelttim, çevirinin kullandığı karşılıkları
+   değiştirdim
+
+YAPMADIĞIM ŞEYLER
+— Kaynak künyesi ürettirmedim; arşiv künyeleri BOA kataloğundan,
+  basılı eser künyeleri kütüphane kataloglarından alındı
+— Osmanlıca metin çevirisi yaptırmadım; harf çevrimi bana ait
+— Bulgu yorumunu yazdırmadım
+— Tarihsel bağlam ya da dönemlendirme konusunda görüş almadım
+
+GÖREV
+Bu dökümden, bir dergi gönderiminde kullanılabilecek bir beyan
+paragrafı yaz.
+
+BİÇİM
+— Tek paragraf, 70–110 kelime
+— Resmî akademik Türkçe, edilgen anlatım
+— Kullanılan aracın adı ve sürümü açıkça geçsin
+— Hangi aşamalarda kullanıldığı somut olarak sayılsın
+— Denetimin nasıl yapıldığı belirtilsin
+
+SINIRLAR
+— Savunmacı cümle kurma. &quot;Özgünlüğü etkilememiştir&quot;, &quot;etik
+  kurallara tam uyulmuştur&quot; gibi kendi kendini savunan ifadeler
+  kullanma.
+— Yapmadığım bir şeyi beyana ekleme.
+— Dökümde olmayan hiçbir kullanım biçiminden söz etme.
+— Kapsamı olumlu kur: neyin yapılmadığını saymak yerine neyin
+  yapıldığını yaz.
+— Harf çevriminin ve tarihsel yorumun bana ait olduğu mutlaka
+  geçsin; bu, tarih alanında hakemin ilk soracağı şey.
+
+AYRICA
+Paragrafın altına, aynı beyanın İngilizce sürümünü ekle.</pre></div>
+
+<aside class="not "><span class="not-baslik">Alan değişince beyanda ne değişir</span><p>Bu beyan ile 8. bölümdeki istatistik beyanı aynı kalıptan çıktı ama
+içerikleri bambaşka. Fark, <strong>hakemin neyi soracağında.</strong></p>
+<p>İstatistik çalışmasında hakem "analiz kodunu denetlediniz mi" diye
+sorar. Tarih çalışmasında "harf çevrimini kim yaptı" ve "okuma
+hatalarını kontrol ettiniz mi" diye sorar. Beyan, o soruyu
+sorulmadan yanıtlar.</p>
+<p>İkinci maddede bir ayrıntı var: <em>"üç dosyanın hiç taranmadığını
+fark edip yeniden işledim."</em> Bu cümle, denetimin gerçekten
+yapıldığının kanıtıdır. "Çıktılar kontrol edilmiştir" demek
+kolaydır; <strong>neyi yakaladığınızı söylemek inandırıcıdır.</strong></p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Bu istemin yukarıdaki döküm ile verdiği çıktı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Türkçe</strong></p>
+<p>Bu çalışmanın yürütülmesinde Claude Opus 5 (Anthropic) dört aşamada
+kullanılmıştır: veri temizleme kodunun yazımı, istatistiksel analiz
+kodunun yazımı, şekillerin üretimi ve İngilizce metnin dil düzeltmesi.
+Temizleme adımında satır sayıları ve temizleme günlüğü yazarlarca
+karşılaştırılmış; analiz adımında üç test SPSS ortamında yeniden
+koşturularak sonuçlar doğrulanmış; şekillerin eksen ve değerleri analiz
+çıktısıyla karşılaştırılmış; dil düzeltmelerinin tamamı tek tek
+onaylanmıştır. Kaynak künyeleri Scopus üzerinden indirilmiş, bulguların
+yorumlanması ve metnin kuramsal çerçevesi yazarlarca oluşturulmuştur.</p>
+<p><strong>English</strong></p>
+<p>Claude Opus 5 (Anthropic) was used at four stages of this study: writing
+the data-cleaning code, writing the statistical analysis code, producing
+the figures, and language editing of the English manuscript. Row counts
+and the cleaning log were checked by the authors; three tests were re-run
+in SPSS and the results compared; figure axes and values were verified
+against the analysis output; and every language edit was approved
+individually. Bibliographic records were retrieved from Scopus, and the
+interpretation of findings and the theoretical framing are the authors'
+own.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Beyan disiplini — bir kez, yerinde, sade</span><p>Sınırları ve kullanımı <strong>bir kez</strong> yazın: kendi bölümünde. Özete,
+girişe, tartışmaya ve sonuca ayrı ayrı serpiştirmeyin. Her yerde
+yinelenen bir beyan, güven vermez; tedirginlik yayar. Aynı biçimde
+"bu çalışmanın en büyük kısıtı" gibi kendini mahkûm eden ifadelerden
+kaçının. Kısıt gerçekse yazılır — bir kez, sade, abartısız.</p></aside>
+<h2 id="ogrenci-tarafi">Öğrenci tarafı</h2>
+<p>Bu kursun hedef kitlesi araştırmacılar ama çoğu araştırmacı aynı zamanda
+öğretim üyesi. Öğrenci kullanımı ayrı bir sorun ve tek başınıza
+çözemezsiniz.</p>
+<div class="kartlar iki"><div class="kart"><p><span class="no">Yapılabilecek</span></p>
+<p class="kart-baslik">Ders izlencesine açık bir madde koymak</p>
+<p>"Bu derste yapay zekâ araçları şu işlerde kullanılabilir, şu işlerde
+kullanılamaz; kullanılan her yerde beyan edilir." Bir paragraf yeter
+ve tartışmaların çoğunu baştan keser. Beyan etmeyi zorunlu kılmak,
+yasaklamaktan daha uygulanabilirdir.</p></div><div class="kart"><p><span class="no">Yapılamayacak</span></p>
+<p class="kart-baslik">Saptama yazılımlarına güvenmek</p>
+<p>Bir metnin yapay zekâ tarafından yazıldığını saptadığını söyleyen
+araçlar, insanın yazdığı metinleri de sık sık yapay zekâ ürünü diye
+işaretler. Bu yanlış işaretleme, ana dili İngilizce olmayan yazarların
+metinlerinde belirgin biçimde artar. Bir öğrenciyi böyle bir çıktıya dayanarak
+suçlamak savunulabilir değildir.</p></div></div>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Yapay zekâ yazar olamaz, çünkü sorumluluk alamaz. Metinde ne varsa
+sizindir.</p></li><li><p>Hakemlik için gönderilen makale gizli bir metindir; dışarı çıkarılmaz.</p></li><li><p>Kişisel veri ve yayımlanmamış veri, kimliksizleştirilmeden buluta
+verilmez. Ölçüt basit: tanımadığınız birine e-postayla gönderir
+miydiniz?</p></li><li><p>Beyan bir itiraf değil, yöntem bildirimidir: ne, nerede, ne için ve
+nasıl denetlendi. Bir kez, kendi bölümünde, savunmasız.</p></li><li><p>Kaynak künyesi modelden gelmez. Bu kuralın istisnası yoktur.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="01-nasil-calisir.html"><span class="yon">← Önceki</span><span class="ad">Model nasıl çalışır, neden yanılır</span></a><a class="sag" href="03-istem.html"><span class="yon">Sonraki →</span><span class="ad">İstem yazmanın altı parçası</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>

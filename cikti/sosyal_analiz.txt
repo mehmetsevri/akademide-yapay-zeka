@@ -1,0 +1,321 @@
+﻿VERİ SETİ
+------------------------------------------------------------------------------
+Gündüz, N., & Fokoué, E. (2013). Turkiye Student Evaluation.
+UCI Machine Learning Repository. https://doi.org/10.24432/C5S02S
+Gözlem sayısı : 5,820
+Likert maddesi: 28 (1–5)
+Eksik hücre   : 0
+
+==============================================================================
+ADIM 1 — Betimsel istatistik
+==============================================================================
+Nedir : Değişkenlerin merkezî eğilimi, yayılımı ve dağılım biçimi.
+Neden : Her analizin ilk adımı. Çarpıklık ve basıklık, sonraki adımda parametrik mi parametrik olmayan mı test kullanılacağını belirler.
+------------------------------------------------------------------------------
+    değişken    n  ortalama    ss  ortanca  min  maks  çarpıklık  basıklık
+   ders_puan 5820     3.089 1.180    3.000  1.0   5.0     -0.177    -0.747
+ogretim_puan 5820     3.259 1.193    3.188  1.0   5.0     -0.416    -0.616
+  genel_puan 5820     3.186 1.158    3.071  1.0   5.0     -0.330    -0.607
+  attendance 5820     1.676 1.475    1.000  0.0   4.0      0.230    -1.411
+  difficulty 5820     2.784 1.349    3.000  1.0   5.0     -0.009    -1.182
+   nb.repeat 5820     1.214 0.532    1.000  1.0   3.0      2.437     4.784
+
+Madde bazlı ortalamalar (ilk 6 ve son 6):
+madde           boyut  ortalama    ss  çarpıklık
+   Q1            Ders     2.930 1.341     -0.046
+   Q2            Ders     3.074 1.285     -0.204
+   Q3            Ders     3.179 1.254     -0.318
+   Q4            Ders     3.082 1.285     -0.207
+   Q5            Ders     3.106 1.279     -0.217
+   Q6            Ders     3.107 1.281     -0.229
+  Q23 Öğretim elemanı     3.202 1.273     -0.309
+  Q24 Öğretim elemanı     3.167 1.276     -0.273
+  Q25 Öğretim elemanı     3.313 1.257     -0.436
+  Q26 Öğretim elemanı     3.222 1.271     -0.346
+  Q27 Öğretim elemanı     3.155 1.292     -0.277
+  Q28 Öğretim elemanı     3.308 1.279     -0.427
+
+==============================================================================
+ADIM 2 — Dağılım varsayımının denetimi
+==============================================================================
+Nedir : Verinin normal dağılıma uygunluğunun sınanması.
+Neden : n = 5.820 gibi büyük örneklemlerde normallik testleri çok küçük sapmalarda bile anlamlı çıkar. Bu yüzden karar, yalnız p değerine değil çarpıklık/basıklık büyüklüğüne de dayandırılır.
+------------------------------------------------------------------------------
+ders_puan: K–S D = 0.1084, p = 5.22e-60, çarpıklık = -0.177, basıklık = -0.747
+ogretim_puan: K–S D = 0.1314, p = 3.95e-88, çarpıklık = -0.416, basıklık = -0.616
+
+==============================================================================
+ADIM 3 — Güvenilirlik — Cronbach alfa
+==============================================================================
+Nedir : Aynı yapıyı ölçtüğü varsayılan maddelerin birbiriyle tutarlılığı.
+Neden : Ölçek puanı hesaplanmadan önce maddelerin gerçekten tek bir şeyi ölçtüğü gösterilmelidir. Aksi hâlde ortalama anlamsızdır.
+------------------------------------------------------------------------------
+Ders boyutu              k = 12   α = 0.9828
+Öğretim elemanı boyutu   k = 16   α = 0.9909
+Tüm ölçek                k = 28   α = 0.9920
+
+Düzeltilmiş madde-toplam korelasyonları: en düşük 0.804 (Q1), en yüksek 0.933 (Q23)
+Ölçüt: < 0,30 olan madde ölçekten çıkarılmaya aday sayılır. Bu ölçeğin altında kalan madde sayısı: 0
+
+NOT — α = 0.992 gibi çok yüksek bir değer kusursuz ölçek demek değildir.
+Maddelerin birbirini tekrar ettiğine (gereksiz uzunluğa) de işaret
+eder. Streiner (2003) 0,90 üstünü madde fazlalığı uyarısı sayar.
+
+==============================================================================
+ADIM 4 — Açımlayıcı faktör analizi (AFA)
+==============================================================================
+Nedir : Maddelerin kaç gizli boyut altında kümelendiğinin veriden çıkarılması.
+Neden : Ölçeğin iki boyutlu (ders / öğretim elemanı) olduğu iddiası veriyle sınanır. Önce AFA'nın uygulanabilirliği KMO ve Bartlett ile denetlenir.
+------------------------------------------------------------------------------
+KMO (örneklem yeterliği)       : 0.9885   (> 0,90 'mükemmel')
+Bartlett küresellik testi      : χ² = 297,891.4, p = 0  (p < 0,05 gerekli)
+1'den büyük özdeğer sayısı     : 2
+İlk dört özdeğer               : 23.041, 1.253, 0.395, 0.361
+
+İki faktörlü varimax döndürülmüş yük matrisi — her maddenin yüklendiği faktör:
+     Faktör 1  Faktör 2    baskın beklenen_boyut
+Q1      0.355     0.825  Faktör 2           Ders
+Q2      0.489     0.788  Faktör 2           Ders
+Q3      0.572     0.696  Faktör 2           Ders
+Q4      0.470     0.791  Faktör 2           Ders
+Q5      0.520     0.785  Faktör 2           Ders
+Q6      0.513     0.769  Faktör 2           Ders
+Q7      0.484     0.807  Faktör 2           Ders
+Q8      0.474     0.806  Faktör 2           Ders
+Q9      0.555     0.701  Faktör 2           Ders
+Q10     0.543     0.779  Faktör 2           Ders
+Q11     0.573     0.684  Faktör 2           Ders
+Q12     0.492     0.759  Faktör 2           Ders
+Q13     0.773     0.535  Faktör 1        Öğretim
+Q14     0.813     0.492  Faktör 1        Öğretim
+Q15     0.811     0.491  Faktör 1        Öğretim
+Q16     0.729     0.586  Faktör 1        Öğretim
+Q17     0.850     0.364  Faktör 1        Öğretim
+Q18     0.785     0.514  Faktör 1        Öğretim
+Q19     0.808     0.495  Faktör 1        Öğretim
+Q20     0.837     0.457  Faktör 1        Öğretim
+Q21     0.852     0.432  Faktör 1        Öğretim
+Q22     0.855     0.429  Faktör 1        Öğretim
+Q23     0.774     0.542  Faktör 1        Öğretim
+Q24     0.735     0.570  Faktör 1        Öğretim
+Q25     0.843     0.440  Faktör 1        Öğretim
+Q26     0.774     0.516  Faktör 1        Öğretim
+Q27     0.721     0.544  Faktör 1        Öğretim
+Q28     0.833     0.427  Faktör 1        Öğretim
+
+Açıklanan varyans — F1: %47.7, F2: %39.1, toplam: %86.8
+Beklenen iki boyutlu yapıya uyan madde: 28/28
+
+==============================================================================
+ADIM 5 — İki grup karşılaştırması — bağımsız örneklem t testi
+==============================================================================
+Nedir : İki ayrı grubun ortalamalarının farklı olup olmadığının sınanması.
+Neden : Karşılaştırılacak grup sayısı iki, bağımlı değişken sürekli ve gruplar birbirinden bağımsız olduğunda kullanılan testtir. Burada soru: derse çok katılan öğrenciler öğretim elemanını farklı mı değerlendiriyor?
+------------------------------------------------------------------------------
+Grup A — düşük katılım (0–1): n = 2,930  ort = 3.032  ss = 1.256
+Grup B — yüksek katılım (3–4): n = 2,098  ort = 3.540  ss = 1.096
+Levene varyans eşitliği: W = 30.100, p = 4.3e-08  →  Welch düzeltmesi uygulandı
+t(4834) = 15.232, p = 3.3e-51
+Cohen d = 0.426  (küçük etki)
+
+NOT — p değeri farkın VAR olup olmadığını söyler, BÜYÜKLÜĞÜNÜ söylemez.
+Etki büyüklüğü (Cohen d) raporlanmadan t testi sonucu yorumlanamaz.
+
+==============================================================================
+ADIM 6 — Üç ve daha fazla grup — tek yönlü ANOVA
+==============================================================================
+Nedir : Üç veya daha fazla grubun ortalamalarının birbirinden farklı olup olmadığının tek bir testle sınanması.
+Neden : Beş güçlük düzeyi var; ikili t testlerini tekrar etmek I. tip hata oranını şişirir. ANOVA bu beş ortalamayı tek testte karşılaştırır, sonra hangi ikilinin farklı olduğu post-hoc testle bulunur.
+------------------------------------------------------------------------------
+Güçlük düzeyine göre ders puanı:
+               n  ortalama     ss
+difficulty                       
+1           1620     2.828  1.339
+2            549     3.134  1.072
+3           1774     3.343  1.031
+4           1225     3.213  1.025
+5            652     2.772  1.288
+
+Levene: W = 47.778, p = 1.38e-39
+F(4, 5815) = 57.797, p = 6.61e-48
+η² (eta kare) = 0.0382  →  güçlük algısı, ders puanındaki değişkenliğin %3.8'ini açıklıyor
+Varyanslar eşit değil → Alexander–Govern düzeltmesi: A = 209.886, p = 2.81e-44
+
+Tukey HSD post-hoc (hangi ikili farklı):
+Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+====================================================
+group1 group2 meandiff p-adj   lower   upper  reject
+----------------------------------------------------
+     1      2   0.3052    0.0  0.1493  0.4612   True
+     1      3   0.5141    0.0  0.4056  0.6226   True
+     1      4   0.3844    0.0  0.2648  0.5039   True
+     1      5  -0.0568 0.8281 -0.2032  0.0897  False
+     2      3   0.2089 0.0021  0.0547  0.3631   True
+     2      4   0.0791 0.6716  -0.083  0.2413  False
+     2      5   -0.362    0.0 -0.5449 -0.1791   True
+     3      4  -0.1298 0.0215 -0.2471 -0.0125   True
+     3      5  -0.5709    0.0 -0.7155 -0.4263   True
+     4      5  -0.4411    0.0 -0.5942 -0.2881   True
+----------------------------------------------------
+
+==============================================================================
+ADIM 7 — Parametrik olmayan karşılıklar
+==============================================================================
+Nedir : Normal dağılım varsayımı kurulmadan, sıra (rank) üzerinden çalışan testler.
+Neden : Likert verisi sıralı ölçektir ve dağılımı normal olmayabilir. Parametrik testin sonucunu parametrik olmayan karşılığıyla birlikte raporlamak, sonucun varsayıma bağlı olmadığını gösterir.
+------------------------------------------------------------------------------
+Mann–Whitney U = 3,778,992, p = 1.29e-44, sıra-noktasal r = 0.230
+  → t testiyle aynı yönde sonuç; karar varsayıma bağlı değil.
+Kruskal–Wallis H(4) = 195.877, p = 2.89e-41, ε² = 0.0330
+  → ANOVA ile aynı yönde sonuç.
+
+==============================================================================
+ADIM 8 — İlişki — korelasyon matrisi
+==============================================================================
+Nedir : İki sürekli değişkenin birlikte değişme derecesi.
+Neden : Pearson doğrusal ilişkiyi, Spearman sıralı/monotonik ilişkiyi ölçer. Likert ve sayım değişkenlerinde ikisi birlikte raporlanır; aralarındaki fark doğrusallıktan sapmayı gösterir.
+------------------------------------------------------------------------------
+Pearson r:
+              ders_puan  ogretim_puan  attendance  difficulty  nb.repeat
+ders_puan         1.000         0.902       0.161       0.060     -0.033
+ogretim_puan      0.902         1.000       0.200       0.089     -0.044
+attendance        0.161         0.200       1.000       0.437     -0.078
+difficulty        0.060         0.089       0.437       1.000      0.110
+nb.repeat        -0.033        -0.044      -0.078       0.110      1.000
+
+Spearman rho:
+              ders_puan  ogretim_puan  attendance  difficulty  nb.repeat
+ders_puan         1.000         0.882       0.151       0.047     -0.041
+ogretim_puan      0.882         1.000       0.188       0.065     -0.053
+attendance        0.151         0.188       1.000       0.449     -0.071
+difficulty        0.047         0.065       0.449       1.000      0.105
+nb.repeat        -0.041        -0.053      -0.071       0.105      1.000
+
+NOT — n = 5.820'de r = 0,03 bile p < 0,05 çıkar. Bu yüzden r²
+(açıklanan varyans oranı) raporlanmadan korelasyon yorumlanamaz.
+Örnek: ders_puan – nb.repeat → r = -0.033, p = 0.0115, ama r² = 0.001 (%0.1 açıklanan varyans)
+
+==============================================================================
+ADIM 9 — Çoklu doğrusal regresyon
+==============================================================================
+Nedir : Birden çok yordayıcının, sürekli bir sonuç değişkenini birlikte ne kadar açıkladığının modellenmesi.
+Neden : Korelasyon tek ilişkiyi verir; regresyon diğer değişkenler sabit tutulduğunda her birinin kendi katkısını verir. Soru: öğretim elemanı değerlendirmesini katılım, güçlük, tekrar ve öğretim elemanı kimliği birlikte ne kadar açıklıyor?
+------------------------------------------------------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           ogretim_puan   R-squared:                       0.053
+Model:                            OLS   Adj. R-squared:                  0.052
+Method:                 Least Squares   F-statistic:                     65.20
+Date:                Mon, 02 Nov 2026   Prob (F-statistic):           1.95e-66
+Time:                        02:27:37   Log-Likelihood:                -9123.6
+No. Observations:                5820   AIC:                         1.826e+04
+Df Residuals:                    5814   BIC:                         1.830e+04
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          3.1267      0.062     50.056      0.000       3.004       3.249
+C(instr)[T.2]      0.1058      0.052      2.039      0.042       0.004       0.208
+C(instr)[T.3]     -0.1962      0.046     -4.228      0.000      -0.287      -0.105
+attendance         0.1500      0.012     12.902      0.000       0.127       0.173
+difficulty         0.0082      0.013      0.641      0.522      -0.017       0.033
+Q('nb.repeat')    -0.0381      0.029     -1.303      0.193      -0.095       0.019
+==================================================================================
+
+Çok doğrusallık denetimi (VIF > 10 sorun sayılır):
+  değişken   VIF
+     const 1.000
+attendance 1.269
+difficulty 1.277
+ nb.repeat 1.047
+   instr_2 2.171
+   instr_3 2.193
+
+Breusch–Pagan (artık varyansının sabitliği): LM = 126.967, p = 1.05e-25
+Durbin–Watson (artıkların bağımsızlığı): 1.938  (2'ye yakın olması beklenir)
+R² = 0.0531   düzeltilmiş R² = 0.0523
+F(5, 5814) = 65.198, p = 1.95e-66
+
+==============================================================================
+ADIM 10 — Lojistik regresyon
+==============================================================================
+Nedir : Sonuç değişkeni iki kategorili olduğunda olasılığın modellenmesi.
+Neden : Doğrusal regresyon 0–1 arası bir olasılığı modellemek için uygun değildir (aralık dışına çıkar). Lojistik regresyon log-odds ölçeğinde çalışır; katsayılar olasılık oranı (OR) olarak yorumlanır.
+------------------------------------------------------------------------------
+Sonuç değişkeni: genel puan ≥ 4 → 'yüksek değerlendirme'
+  1 (yüksek): 1,863  (%32.0)
+  0 (diğer) : 3,957
+
+         terim       B     SH            p     OR  OR_alt_GA  OR_üst_GA
+     Intercept -0.3434 0.1156 2.970000e-03 0.7094     0.5655     0.8897
+ C(instr)[T.2] -0.1715 0.0916 6.110000e-02 0.8424     0.7040     1.0080
+ C(instr)[T.3] -0.6511 0.0830 4.340000e-15 0.5214     0.4432     0.6136
+    attendance  0.1778 0.0217 2.510000e-16 1.1946     1.1449     1.2465
+    difficulty -0.0853 0.0244 4.660000e-04 0.9182     0.8754     0.9632
+Q('nb.repeat') -0.0406 0.0569 4.750000e-01 0.9602     0.8589     1.0734
+
+Nagelkerke benzeri sözde R² (McFadden) = 0.0245
+ROC eğrisi altındaki alan (AUC) = 0.6011
+OR > 1 → o değişken arttıkça yüksek değerlendirme olasılığı artar.
+
+==============================================================================
+ADIM 11 — Kategorik değişkenler — ki-kare bağımsızlık testi
+==============================================================================
+Nedir : İki kategorik değişkenin birbirinden bağımsız olup olmadığının sınanması.
+Neden : Ortalama hesaplanamayan değişkenlerde (fakülte, unvan, öğretim elemanı) grup farkı ki-kare ile sınanır. Etki büyüklüğü Cramér V ile raporlanır.
+------------------------------------------------------------------------------
+Çapraz tablo — öğretim elemanı × derse katılım (gözlenen):
+attendance     0    1    2    3    4
+instr                               
+1            166  152  107  217  133
+2            396  291  211  317  229
+3           1340  585  474  718  484
+
+χ²(8) = 105.178, p = 3.72e-19
+Cramér V = 0.0951  (zayıf ilişki)
+Beklenen frekansı 5'ten küçük hücre sayısı: 0 (toplam 15 hücre) — ölçüt: %20'den az olmalı
+
+==============================================================================
+ADIM 12 — Anlamlılık ile etki büyüklüğünün ayrımı
+==============================================================================
+Nedir : p değerinin örneklem büyüklüğüne bağlılığının ve küçük örneklemde katsayı kararsızlığının gösterilmesi.
+Neden : Bu adım bir test değil, bir denetimdir. İki ayrı olgu birbirine karıştırılır: küçük örneklemde katsayı DALGALANIR, büyük örneklemde küçük katsayı ANLAMLI ÇIKAR. İkisi farklı sorun.
+------------------------------------------------------------------------------
+Elimizdeki tüm veride ilişki (ders puanı – güçlük algısı):
+  r = 0.060   r² = 0.0036   (%0.36 açıklanan varyans)
+  Bu değeri 'evren değeri' kabul edip aşağıda referans alıyoruz.
+
+PANEL A — Aynı veriden 500 kez örnek çekilirse r ne kadar oynar?
+------------------------------------------------------------------------------
+   n  r ortalaması  r %2,5  r %97,5  p<0,05 çıkma oranı
+  30         0.051  -0.328    0.471               0.072
+  50         0.049  -0.238    0.314               0.078
+ 100         0.067  -0.128    0.272               0.124
+ 300         0.060  -0.062    0.184               0.200
+1000         0.059   0.006    0.114               0.448
+3000         0.060   0.033    0.086               0.956
+
+Okuma: n = 30'da r, −0,3 ile +0,4 arasında herhangi bir yere
+düşebiliyor. Yani küçük örneklemden okunan tek bir r sayısı,
+işaretinin bile güvenilir olmadığı bir tahmindir. Son sütun
+istatistiksel GÜÇTÜR: n = 30'da bu ilişkiyi yakalama şansı
+%7, n = 3.000'de %96.
+
+PANEL B — r SABİT tutulursa (r = 0.060), p yalnız n ile ne olur?
+------------------------------------------------------------------------------
+    n    r     t            p    karar
+   30 0.06 0.319 7.520000e-01 anlamsız
+   50 0.06 0.417 6.780000e-01 anlamsız
+  100 0.06 0.596 5.520000e-01 anlamsız
+  300 0.06 1.040 2.990000e-01 anlamsız
+ 1000 0.06 1.904 5.730000e-02 anlamsız
+ 5820 0.06 4.596 4.400000e-06  anlamlı
+20000 0.06 8.521 1.690000e-17  anlamlı
+
+Okuma: r hiç değişmedi; yalnız n büyüdü ve 'anlamsız' sonuç
+'anlamlı'ya döndü. Açıklanan varyans ise hep aynı: %0,36.
+Demek ki 'p < 0,001' ifadesi tek başına bir bulgunun büyüklüğü
+hakkında hiçbir şey söylemez. Raporlanması gereken üçlü şudur:
+  etki büyüklüğü + güven aralığı + örneklem büyüklüğü.

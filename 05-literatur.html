@@ -1,0 +1,1787 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literatür taraması: aramadan senteze — Akademide Üretken Yapay Zekâ</title>
+<meta name="description" content="Web of Science, Scopus, IEEE Xplore, PubMed, ERIC, PsycINFO ve EconLit için kopyala-yapıştır hazır gelişmiş arama dizgileri; BibTeX&#x27;ten seçime, PDF&#x27;te">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Literatür taraması: aramadan senteze</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa etkin" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><div class="alt-liste"><a href="#anahtar-kelime-mimarisi">Anahtar kelime mimarisi</a><a href="#veri-tabani-basina-hazir-dizgiler">Veri tabanı başına hazır dizgiler</a><a href="#i-ndirme-ve-tekillestirme">İndirme ve tekilleştirme</a><a href="#secim-indirdiginiz-kayitlar-uzerinde">Seçim: indirdiğiniz kayıtlar üzerinde</a><a href="#prisma-akisini-kaydetmek">PRISMA akışını kaydetmek</a><a href="#pdf-ten-yapilandirilmis-veri-cikarimi">PDF&#x27;ten yapılandırılmış veri çıkarımı</a><a href="#0-konsoli-de-satir">0. KONSOLİDE SATIR</a><a href="#1-performans-tablosu">1. PERFORMANS TABLOSU</a><a href="#2-yontem-ayrintisi">2. YÖNTEM AYRINTISI</a><a href="#3-bi-zi-m-sorumuzla-i-li-ski-si">3. BİZİM SORUMUZLA İLİŞKİSİ</a><a href="#4-alintilanabi-li-r-cumleler">4. ALINTILANABİLİR CÜMLELER</a><a href="#deneti-m-belgede-bulunamayan-alanlar">DENETİM — belgede bulunamayan alanlar</a><a href="#kirk-pdf-tek-seferde">Kırk PDF, tek seferde</a><a href="#sentez-matrisi">Sentez matrisi</a><a href="#atif-dogrulama">Atıf doğrulama</a><a href="#literatur-bolumunu-yazmak">Literatür bölümünü yazmak</a><a href="#bu-bolumden-alinacaklar">Bu bölümden alınacaklar</a></div><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-ileri-konular.html"><span class="no">15</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="16-istem-kutuphanesi.html"><span class="no">16</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="17-kaynaklar.html"><span class="no">17</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 5</div><h1>Literatür taraması: aramadan senteze</h1><p class="ozet">Web of Science, Scopus, IEEE Xplore, PubMed, ERIC, PsycINFO ve EconLit için kopyala-yapıştır hazır gelişmiş arama dizgileri; BibTeX'ten seçime, PDF'ten yapılandırılmış çıkarıma. Gerçek bir makale üzerinde koşturulmuş tam bir çıkarım örneğiyle.</p><p>Bu bölümün temel kuralı 1. bölümde konuldu: <strong>kaynak modelden
+istenmez, kaynağı siz bulur modele verirsiniz.</strong> Aşağıdaki akışın her
+adımı bu kurala göre kurulmuştur. Arama veri tabanında yapılır, indirme
+sizin tarayıcınızdan olur, model yalnız indirdiğiniz kayıtlar üzerinde
+çalışır.</p>
+<aside class="not uyari"><span class="not-baslik">Dört adım ve kimin yaptığı</span><p><strong>Siz:</strong> arama dizgisini veri tabanına girip kayıtları BibTeX olarak indirirsiniz; BibTeX, her kaydın yazarını, yılını, başlığını ve özetini düz metin olarak tutan, bütün kaynak yöneticilerinin okuduğu bir künye dosyası biçimidir. <strong>Model:</strong> indirdiğiniz dosyadan seçim yapar.
+<strong>Siz:</strong> seçilenlerin PDF'lerini indirirsiniz. <strong>Model:</strong> PDF'lerden
+yapılandırılmış çıkarım yapar. Model hiçbir adımda veri tabanına
+erişmez, hiçbir künye üretmez.</p></aside>
+<h2 id="anahtar-kelime-mimarisi">Anahtar kelime mimarisi</h2>
+<p>Arama dizgisi, araştırma sorusunu PICOC parçalarına ayırıp her parçayı bir
+<strong>kavram kümesine</strong> çevirmekten ibarettir. Bir kümenin içinde terimler OR
+ile bağlanır: veri tabanı bunlardan herhangi birini içeren kaydı getirir.
+Kümeler ise AND ile bağlanır: bir kaydın listeye girmesi için her kümeden
+en az bir terim içermesi gerekir. Kısaca: küme içi OR, kümeler arası AND.</p>
+<ol class="adimlar"><li><p><strong>Her PICOC parçası bir küme olur.</strong> Population bir küme, Intervention
+bir küme, Outcome bir küme. Comparison genellikle ayrı küme olmaz;
+Context çoğu zaman filtreye döner.</p></li><li><p><strong>Her küme eş anlamlılarla genişletilir.</strong> Aynı şeyin alandaki bütün
+adları: kısaltma ve açılımı, Amerikan ve İngiliz yazımı, eski ve yeni
+terim, tekil ve çoğul.</p></li><li><p><strong>Kök budama (truncation) eklenir.</strong> Kelimenin değişmeyen kökünü yazıp sonuna yıldız koymak, o kökten türeyen bütün biçimleri taramaya dahil eder: <code>detect*</code> → detect, detects, detected, detection, detector. Yıldız en az üç karakterden sonra
+gelir ve kelime başına konmaz.</p></li><li><p><strong>Tırnak kuralına dikkat edilir.</strong> Web of Science'ta tırnak içindeki
+yıldız gerçek yıldız sayılır ve sıfır sonuç verir. Çok kelimeli ifade
+tırnağa alınır, kök budamalı tek kelime alınmaz. Scopus'ta tırnak
+içinde yıldız çalışır. İkisi aynı değil.</p></li></ol>
+
+<aside class="not uyari"><span class="not-baslik">En sık yapılan hata</span><p><code>TS=("historic*")</code> Web of Science'ta <strong>sıfır sonuç</strong> verir. Doğrusu
+tırnaksızdır: <code>TS=(historic*)</code>. Yalnızca iki tırnak işaretinden doğan bu fark, taramanın tamamını sessizce
+boşa çıkarır; hata mesajı almazsınız, yalnızca sonuç sayısı düşük gelir ve "demek ki bu konu çalışılmamış"
+sanırsınız.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kavram kümelerini üretme</span>
+<span class="arac">Literatür</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme yürüten bir bilgi uzmanısın. Arama dizgisi
+kurulumunda veri tabanı sözdizimlerini biliyorsun.
+
+ARAŞTIRMA SORUSU
+[sorunuzu buraya yazın]
+
+PICOC
+P: [...]  I: [...]  C: [...]  O: [...]  C: [...]
+
+GÖREV
+Bu sorudan üç ila dört kavram kümesi çıkar ve her kümeyi arama
+terimleriyle doldur.
+
+HER KÜME İÇİN
+— Kümenin adı ve hangi PICOC parçasına karşılık geldiği
+— Terim listesi. Her terim için genişletme türünü belirt:
+  [çekirdek] [eş anlamlı] [kısaltma] [açılım] [yazım varyantı]
+  [eski terim] [kök budamalı]
+— Küme başına 8–18 terim. Daha azı taramayı dar, daha fazlası
+  gürültülü yapar.
+
+GENİŞLETME KURALLARI
+— Kısaltma ve açılımını birlikte ver (ML + &quot;machine learning&quot;)
+— Amerikan ve İngiliz yazımını birlikte ver (modeling + modelling)
+— Kök budama için yıldızı en az üç karakterden sonra koy
+— Çok kelimeli ifadeleri tırnağa al, tek kelimelik budamalıları alma
+
+ÇIKTI BİÇİMİ
+Her küme için bir Markdown tablo: Terim | Tür | Neden eklendi
+Tablonun altına o kümenin OR ile bağlanmış tek satırlık hâlini yaz.
+
+SINIRLAR
+— Konuya değmeyen terim ekleme. Her terim için &quot;neden eklendi&quot;
+  sütununu doldurabiliyor olmalısın.
+— Hiçbir yayın, yazar ya da künye adı verme.
+— Veri tabanına özgü sözdizimi ekleme; bu adımda yalnız terim
+  listesi üretilir. Sözdizimi sonraki adımda eklenir.
+
+DENETİM
+Her kümenin terim sayısını yaz. Toplam terim sayısı 60&#x27;ı aşarsa
+hangi terimlerin çıkarılabileceğini belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tıp · klinik araştırma</span>
+<span class="ad">Kavram kümelerini üretme</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme yürüten bir bilgi uzmanısın. Arama dizgisi
+kurulumunda veri tabanı sözdizimlerini biliyorsun.
+
+ARAŞTIRMA SORUSU
+Tip 2 diyabet tanılı erişkinlerde telefonla yapılan düzenli
+hatırlatmalar, olağan bakıma kıyasla ilaç uyumunu artırıyor mu?
+
+PICOC
+P: Tip 2 diyabet tanılı erişkin hastalar
+I: Telefonla düzenli hatırlatma (sesli arama ya da kısa mesaj)
+C: Olağan bakım, hatırlatma yapılmayan grup
+O: İlaç uyumu (ölçek puanı ya da reçete yenileme oranı), HbA1c
+C: Birinci basamak sağlık hizmeti, en az üç aylık izlem
+
+GÖREV
+Bu sorudan üç ila dört kavram kümesi çıkar ve her kümeyi arama
+terimleriyle doldur.
+
+HER KÜME İÇİN
+— Kümenin adı ve hangi PICOC parçasına karşılık geldiği
+— Terim listesi. Her terim için genişletme türünü belirt:
+  [çekirdek] [eş anlamlı] [kısaltma] [açılım] [yazım varyantı]
+  [eski terim] [kök budamalı]
+— Küme başına 8–18 terim.
+
+GENİŞLETME KURALLARI
+— Kısaltma ve açılımını birlikte ver (T2DM + &quot;type 2 diabetes&quot;)
+— Amerikan ve İngiliz yazımını birlikte ver (behavior + behaviour)
+— Kök budama için yıldızı en az üç karakterden sonra koy
+— Çok kelimeli ifadeleri tırnağa al, tek kelimelik budamalıları alma
+
+BU ALANA ÖZGÜ EK GÖREV
+PubMed&#x27;de arama yapacağım için her küme için ayrıca MeSH terimi
+öner. MeSH terimi ile serbest metin terimini ayrı ayrı listele;
+hangisinin kontrollü sözlükten, hangisinin başlık-özet taramasından
+geldiği belli olsun. MeSH terimini uydurma; emin değilsen
+&quot;MeSH karşılığı doğrulanmalı&quot; yaz.
+
+ÇIKTI BİÇİMİ
+Her küme için bir Markdown tablo: Terim | Tür | Kaynak (MeSH /
+serbest metin) | Neden eklendi
+Tablonun altına o kümenin OR ile bağlanmış tek satırlık hâlini yaz.
+
+SINIRLAR
+— Konuya değmeyen terim ekleme. Her terim için &quot;neden eklendi&quot;
+  sütununu doldurabiliyor olmalısın.
+— Hiçbir yayın, yazar ya da künye adı verme.
+— Veri tabanına özgü sözdizimi ekleme; bu adımda yalnız terim
+  listesi üretilir. Sözdizimi sonraki adımda eklenir.
+— Tip 1 diyabet ve gestasyonel diyabet terimlerini ekleme; soru
+  yalnız tip 2 hakkında. Bu ayrımı korumak taramanın kapsamını
+  belirler.
+
+DENETİM
+Her kümenin terim sayısını yaz. Toplam terim sayısı 60&#x27;ı aşarsa
+hangi terimlerin çıkarılabileceğini belirt. Ayrıca: kaç terim MeSH
+kaynaklı, kaçı serbest metin?</pre></div>
+
+<aside class="not "><span class="not-baslik">Doldurulmuş örnekte eklenen alan bilgisi</span><p>Kalıpta olmayan iki şey var. <strong>Birincisi</strong>, PubMed'e özgü MeSH
+görevi: tıp taraması yapacaksanız kontrollü sözlük olmadan eksik
+tararsınız, ama her alanda MeSH yoktur; bu yüzden kalıba değil
+doldurulmuş hâle yazılır.</p>
+<p><strong>İkincisi</strong> ve daha önemlisi, sınırlardaki şu satır: <em>"Tip 1
+diyabet ve gestasyonel diyabet terimlerini ekleme."</em> Model
+"diyabet" terim kümesini genişletirken bunları kendiliğinden
+ekler, çünkü eş anlamlı gibi görünürler. Oysa farklı hastalıklar
+ve sorunuzun dışındalar. <strong>Terim kümesini genişletmek kadar,
+nereye kadar genişletilmeyeceğini söylemek de gerekir.</strong></p></aside>
+<h2 id="veri-tabani-basina-hazir-dizgiler">Veri tabanı başına hazır dizgiler</h2>
+<p>Aşağıdaki dizgiler altı ayrı alandan yazılmıştır. Hepsi aynı kalıbı
+kullanıyor: kavram kümeleri, küme içi OR, kümeler arası AND. Kendi
+konunuz için kalıbı koruyup terimleri değiştirin.</p>
+<p>Alanınız listede yoksa, size en yakın olanın yapısına bakın. Bir
+kimya sorgusuyla bir ilahiyat sorgusu aynı iskelete oturur; değişen
+yalnız terimlerdir ve hangi veri tabanında arandığıdır.</p>
+<h3>Mühendislik — Web of Science</h3>
+<pre class="yalin">TS=(
+  ( phishing OR &quot;phishing URL*&quot; OR &quot;malicious URL*&quot; OR
+    &quot;fraudulent website*&quot; OR &quot;fake website*&quot; OR spoofed OR
+    &quot;credential theft&quot; OR &quot;web-based attack*&quot; )
+  AND
+  ( &quot;lexical feature*&quot; OR &quot;URL feature*&quot; OR &quot;character-level&quot; OR
+    &quot;string-based&quot; OR &quot;URL string&quot; OR n-gram OR trigram OR
+    &quot;static feature*&quot; OR &quot;URL-based&quot; )
+  AND
+  ( &quot;machine learning&quot; OR ML OR &quot;deep learning&quot; OR classif* OR
+    &quot;random forest&quot; OR &quot;support vector&quot; OR SVM OR
+    &quot;neural network*&quot; OR &quot;gradient boost*&quot; OR transformer* )
+  AND
+  ( detect* OR identif* OR predict* OR F1 OR AUC OR precision OR
+    recall OR accuracy )
+)
+AND PY=(2019-2026)
+AND DT=(Article OR Review OR &quot;Proceedings Paper&quot;)
+AND LA=(English)</pre>
+
+<aside class="not "><span class="not-baslik">Karakter sınırı aşılırsa</span><p>Web of Science'ta bir TS bloğu 6.000 karakterle sınırlıdır. Dizgi
+uzunsa her kümeyi ayrı bir arama olarak koşturun ve <strong>Search History</strong>
+sekmesinde birleştirin: <code>#1 AND #2 AND #3 AND #4</code>, sonra filtreleri
+ekleyin. Bu yöntem ayrıca her kümenin kaç kayıt getirdiğini gösterir;
+hangi kümenin taramayı daralttığını görürsünüz.</p></aside>
+<h3>Mühendislik — Scopus</h3>
+<pre class="yalin">( TITLE-ABS-KEY (
+    ( phishing OR &quot;phishing url*&quot; OR &quot;malicious url*&quot; OR
+      &quot;fraudulent website*&quot; OR &quot;fake website*&quot; )
+    AND
+    ( &quot;lexical featur*&quot; OR &quot;url featur*&quot; OR &quot;character-level&quot; OR
+      &quot;string-based&quot; OR n-gram OR trigram OR &quot;static featur*&quot; )
+    AND
+    ( &quot;machine learning&quot; OR &quot;deep learning&quot; OR classif* OR
+      &quot;random forest&quot; OR svm OR &quot;neural network*&quot; )
+  ) )
+AND PUBYEAR &gt; 2018 AND PUBYEAR &lt; 2027
+AND ( LIMIT-TO ( DOCTYPE , &quot;ar&quot; ) OR LIMIT-TO ( DOCTYPE , &quot;cp&quot; )
+      OR LIMIT-TO ( DOCTYPE , &quot;re&quot; ) )
+AND ( LIMIT-TO ( LANGUAGE , &quot;English&quot; ) )
+AND ( LIMIT-TO ( SUBJAREA , &quot;COMP&quot; ) OR LIMIT-TO ( SUBJAREA , &quot;ENGI&quot; ) )</pre>
+<h3>Mühendislik — IEEE Xplore (Command Search)</h3>
+<pre class="yalin">(&quot;All Metadata&quot;:phishing OR &quot;All Metadata&quot;:&quot;malicious URL&quot; OR
+ &quot;All Metadata&quot;:&quot;fraudulent website&quot;)
+AND
+(&quot;All Metadata&quot;:&quot;lexical feature&quot; OR &quot;All Metadata&quot;:&quot;URL feature&quot; OR
+ &quot;All Metadata&quot;:&quot;character-level&quot; OR &quot;All Metadata&quot;:n-gram)
+AND
+(&quot;All Metadata&quot;:&quot;machine learning&quot; OR &quot;All Metadata&quot;:&quot;deep learning&quot; OR
+ &quot;All Metadata&quot;:classification OR &quot;All Metadata&quot;:&quot;random forest&quot;)</pre>
+<p>Yıl aralığı ve içerik türü (Journals, Conferences) arayüzdeki süzgeçlerden
+eklenir. Komut aramasında yıl sınırı yazmak yerine süzgeç kullanmak
+güvenlidir; komut ekranının yıl alanını kabul edip etmediği arayüz
+sürümüne göre değişir.</p>
+<h3>Eğitim bilimleri — Web of Science</h3>
+<pre class="yalin">TS=(
+  ( &quot;student evaluation of teaching&quot; OR &quot;course evaluation*&quot; OR
+    &quot;teaching evaluation*&quot; OR SET OR &quot;student rating*&quot; OR
+    &quot;student feedback&quot; OR &quot;end-of-course survey*&quot; )
+  AND
+  ( &quot;perceived difficulty&quot; OR &quot;course difficulty&quot; OR workload OR
+    &quot;academic rigor&quot; OR rigour OR attendance OR &quot;class attendance&quot; OR
+    engagement )
+  AND
+  ( bias* OR valid* OR reliab* OR &quot;factor structure&quot; OR
+    &quot;measurement invariance&quot; OR predict* OR &quot;multilevel model*&quot; )
+)
+AND PY=(2015-2026)
+AND DT=(Article OR Review)
+AND WC=(&quot;Education &amp; Educational Research&quot; OR &quot;Psychology, Educational&quot;)</pre>
+<h3>Eğitim bilimleri — ERIC ve PsycINFO</h3>
+<pre class="yalin">ERIC (EBSCO):
+  (DE &quot;Student Evaluation of Teacher Performance&quot; OR
+   TI &quot;course evaluation*&quot; OR AB &quot;student rating*&quot;)
+  AND (TI difficulty OR AB difficulty OR TI workload OR AB attendance)
+  AND (TI validity OR AB validity OR TI bias OR AB bias)
+  AND PY 2015-2026 AND PT &quot;Journal Articles&quot; (hakemlilik ERIC/EBSCO&#x27;da
+  arayüzdeki &quot;Peer Reviewed&quot; kutusundan eklenir; PT alanı yayın türünü
+  belirtir)
+
+  PsycINFO (APA):
+  (DE &quot;Student Attitudes&quot; OR DE &quot;Course Evaluation&quot;)
+  AND (TI difficulty OR AB difficulty OR AB workload)
+  AND (DE &quot;Test Validity&quot; OR TI bias OR AB bias)
+  AND PY 2015-2026 AND LA english AND PT &quot;Peer Reviewed Journal&quot;</pre>
+
+<aside class="not ipucu"><span class="not-baslik">Google Scholar&#x27;ın yeri</span><p>Google Scholar sistematik taramanın ana kaynağı olamaz: arama geçmişi
+tutmaz, sonuç sayısı tekrarlanabilir değildir, dışa aktarma sınırlıdır.
+Gusenbauer ve Haddaway (2020), akademik arama sistemlerini sistematik
+derleme ölçütlerine göre karşılaştırmış ve Google Scholar'ın bu iş için
+tek başına yeterli olmadığını göstermiştir.
+Yeri şudur: <strong>bulduğunuzu doğrulamak.</strong> Ana taramanızı yaptıktan
+sonra Scholar'da ilk 100–200 sonuca bakın; sizin listenizde olmayan
+önemli bir çalışma çıkıyorsa dizginiz eksiktir.</p></aside>
+<h3>Kimya — Web of Science ve Scopus</h3>
+<pre class="yalin">Web of Science
+TS=(
+  ( &quot;activated carbon&quot; OR biochar OR &quot;carbonaceous adsorbent&quot; OR
+    &quot;agricultural waste&quot; OR &quot;tea waste&quot; OR &quot;biomass-derived&quot; )
+  AND
+  ( adsorpt* OR &quot;dye removal&quot; OR &quot;methylene blue&quot; OR
+    &quot;cationic dye&quot; OR decoloriz* OR decolouris* )
+  AND
+  ( isotherm* OR kinetic* OR Langmuir OR Freundlich OR
+    &quot;adsorption capacity&quot; OR &quot;removal efficiency&quot; )
+)
+AND PY=(2015-2026)
+AND DT=(Article OR Review)
+AND LA=English
+
+Scopus
+( TITLE-ABS-KEY (
+    ( &quot;activated carbon&quot; OR biochar OR &quot;agricultural waste&quot; )
+    AND ( adsorpt* OR &quot;dye removal&quot; OR &quot;methylene blue&quot; )
+    AND ( isotherm* OR kinetic* OR &quot;adsorption capacity&quot; ) ) )
+AND PUBYEAR &gt; 2014
+AND ( LIMIT-TO ( SUBJAREA , &quot;CENG&quot; ) OR LIMIT-TO ( SUBJAREA , &quot;CHEM&quot; )
+      OR LIMIT-TO ( SUBJAREA , &quot;ENVI&quot; ) )</pre>
+
+<aside class="not "><span class="not-baslik">Kimya sorgularında iki özel nokta</span><p><strong>Yazım varyantları.</strong> <code>decolorization</code> ve <code>decolourisation</code> aynı
+şeydir; ikisini de yazmazsanız literatürün yarısını kaçırırsınız.
+Aynı durum <code>sulfate</code>/<code>sulphate</code>, <code>aluminum</code>/<code>aluminium</code> için de
+geçerli.</p>
+<p><strong>Madde adları.</strong> Bir bileşiği yalnız yaygın adıyla aramayın. Metilen
+mavisi için <code>"methylene blue"</code> yeterli olmayabilir; <code>"basic blue 9"</code>
+ve CAS numarası (<code>61-73-4</code>) de kullanılır. Kimyasal veri
+tabanlarında (SciFinder, Reaxys) arama CAS numarasıyla yapılır.</p></aside>
+<h3>Tıp ve sağlık — PubMed</h3>
+<pre class="yalin">( &quot;Diabetes Mellitus, Type 2&quot;[MeSH Terms]
+  OR &quot;type 2 diabetes&quot;[tiab] OR &quot;T2DM&quot;[tiab] )
+AND
+( &quot;Reminder Systems&quot;[MeSH Terms] OR &quot;Telephone&quot;[MeSH Terms]
+  OR reminder*[tiab] OR &quot;telephone follow-up&quot;[tiab]
+  OR &quot;text message*&quot;[tiab] OR mHealth[tiab] )
+AND
+( &quot;Medication Adherence&quot;[MeSH Terms] OR adherence[tiab]
+  OR compliance[tiab] OR persistence[tiab] )
+AND ( Randomized Controlled Trial[pt] OR Clinical Trial[pt] )
+AND English[lang]
+AND ( &quot;2015/01/01&quot;[dp] : &quot;2026/12/31&quot;[dp] )</pre>
+
+<aside class="not "><span class="not-baslik">PubMed&#x27;in farkı: kontrollü sözlük</span><p>PubMed'de her makaleye, uzmanlar tarafından <strong>MeSH</strong> (Medical Subject
+Headings) terimleri atanır. <code>"Diabetes Mellitus, Type 2"[MeSH Terms]</code>
+yazdığınızda, makalenin metninde "tip 2 diyabet" geçmese bile konusu
+buysa bulunur.</p>
+<p>Bu yüzden tıp taramalarında iki katman birlikte kullanılır: MeSH
+terimi (kontrollü sözlük) <strong>ve</strong> serbest metin <code>[tiab]</code> (başlık ve
+özet). MeSH, henüz dizinlenmemiş yeni makaleleri kaçırır; serbest
+metin onları yakalar. İkisi OR ile bağlanır.</p>
+<p>Benzer bir kontrollü sözlük EMBASE'de <strong>Emtree</strong>, PsycINFO'da <strong>APA
+Thesaurus</strong> adını alır.</p></aside>
+<h3>Beşerî bilimler — tarih ve ilahiyat</h3>
+<p>Bu alanlarda tarama iki bakımdan farklıdır. Birincisi, kaynakların
+önemli bir bölümü <strong>kitap</strong> ve <strong>kitap bölümüdür</strong>; yalnız dergi
+makalesi tarayan bir dizin alanın yarısını göstermez. İkincisi,
+<strong>dil</strong> belirleyicidir: Türkçe, Arapça, Osmanlıca ve İngilizce
+literatür ayrı ayrı taranır.</p>
+<pre class="yalin">Web of Science (Arts &amp; Humanities Citation Index)
+TS=(
+  ( &quot;Ottoman&quot; OR &quot;Osmanlı&quot; OR &quot;late Ottoman&quot; OR Tanzimat )
+  AND
+  ( salname* OR yearbook* OR &quot;provincial yearbook*&quot; OR almanac* )
+  AND
+  ( education* OR school* OR maarif OR mekteb* OR medrese* )
+)
+AND PY=(2000-2026)
+AND DT=(Article OR Review OR &quot;Book Chapter&quot;)
+
+TR Dizin / DergiPark (Türkçe literatür)
+  ( salname VEYA &quot;vilayet salnamesi&quot; VEYA &quot;devlet salnamesi&quot; )
+  VE ( maarif VEYA eğitim VEYA mektep VEYA medrese )
+  Yıl: 2000-2026
+
+İSAM Veri Tabanı (ilahiyat ve İslam araştırmaları)
+  Konu: hadis şerhi
+  Anahtar: garib VEYA garîb VEYA &quot;ferd hadis&quot;
+  Tür: makale + kitap bölümü + tez</pre>
+
+<aside class="not uyari"><span class="not-baslik">Beşerî bilimlerde kaçırılan üç kaynak türü</span><p><strong>Tezler.</strong> YÖK Ulusal Tez Merkezi, Türkiye'deki beşerî bilimler
+literatürünün büyük bir bölümünü tutar ve uluslararası dizinlerde
+görünmez. Taramanıza mutlaka ekleyin.</p>
+<p><strong>Kitaplar ve kitap bölümleri.</strong> Web of Science'ın Book Citation
+Index'i sınırlıdır. Kütüphane kataloglarını (WorldCat, TO-KAT) ve
+yayınevi kataloglarını ayrı taramanız gerekir.</p>
+<p><strong>Osmanlıca ve Arapça kaynaklar.</strong> Harf çevrimi (transliterasyon)
+standart değildir: aynı kelime <code>salname</code>, <code>sâlnâme</code>, <code>salnâme</code> diye
+yazılabilir. Hepsini ayrı ayrı deneyin; kök budama burada işe
+yaramaz, çünkü fark kelimenin ortasındadır.</p></aside>
+<h3>Ekonomi ve işletme — EconLit ve Scopus</h3>
+<pre class="yalin">EconLit (EBSCO)
+( SU &quot;minimum wage&quot; OR TI &quot;minimum wage&quot; OR AB &quot;asgari ücret&quot; )
+AND ( SU employment OR TI employment OR AB &quot;job loss&quot;
+      OR AB &quot;labor demand&quot; OR AB &quot;labour demand&quot; )
+AND ( TI &quot;small firm*&quot; OR AB &quot;small business*&quot; OR AB SME
+      OR AB &quot;micro enterprise*&quot; )
+AND PY 2010-2026
+AND JE ( J38 OR J23 OR J31 )
+# JEL kodu alan etiketi arayüze göre değişir: EBSCO&#x27;da JE,
+# ProQuest sürümünde CC. Kendi arayüzünüzde doğrulayın.
+
+Scopus
+( TITLE-ABS-KEY (
+    ( &quot;minimum wage&quot; OR &quot;wage floor&quot; )
+    AND ( employment OR &quot;labor demand&quot; OR &quot;labour demand&quot; OR
+          &quot;job destruction&quot; )
+    AND ( &quot;small firm*&quot; OR SME OR &quot;micro enterprise*&quot; ) ) )
+AND PUBYEAR &gt; 2009
+AND ( LIMIT-TO ( SUBJAREA , &quot;ECON&quot; ) OR LIMIT-TO ( SUBJAREA , &quot;BUSI&quot; ) )</pre>
+
+<aside class="not "><span class="not-baslik">JEL kodları ne işe yarar</span><p>Ekonomi literatürü <strong>JEL sınıflama kodlarıyla</strong> etiketlenir. <code>J38</code>
+ücret politikası, <code>J23</code> istihdam talebi, <code>J31</code> ücret düzeyi ve yapısı
+demektir. Bu kodları aramanıza eklemek, aynı kelimeleri başka bir
+anlamda kullanan çalışmaları eler.</p>
+<p>Benzer kod sistemleri başka alanlarda da var: matematikte MSC,
+fizikte PACS, bilgisayar bilimlerinde ACM CCS. Alanınızın kodu varsa
+kullanın; anahtar kelimeden daha keskin süzer.</p></aside>
+<h2 id="i-ndirme-ve-tekillestirme">İndirme ve tekilleştirme</h2>
+<ol class="adimlar"><li><p><strong>Her veri tabanında dizgiyi koşturun ve ham kayıt sayısını not edin.</strong> Sistematik derlemelerde taramanın hangi aşamada kaç kaydı elediğini gösteren standart şemaya PRISMA akış şeması denir; bu şema şu sayıları ister: hangi veri tabanından kaç kayıt,
+hangi tarihte.</p></li><li><p><strong>Kayıtları BibTeX ya da RIS olarak indirin.</strong> Web of Science: Export
+→ BibTeX, "Full Record" seçeneğiyle (özet dahil olsun). Scopus: Export
+→ BibTeX, Citation information + Abstract &amp; keywords işaretli. IEEE
+Xplore: seçili kayıtlar → Download Citations → BibTeX + Citation and
+Abstract.</p></li><li><p><strong>Tek bir kütüphaneye aktarın.</strong> Zotero, Mendeley ya da EndNote.
+Zotero'da <code>Dosya → İçe Aktar</code> ile her BibTeX dosyasını ayrı bir
+koleksiyona alın; böylece hangi kaydın hangi veri tabanından geldiği
+kaybolmaz.</p></li><li><p><strong>Tekilleştirin.</strong> Tekilleştirme, aynı çalışmanın birden çok veri tabanından gelen kopyalarını teke indirmektir. Zotero'da <code>Duplicate Items</code> görünümü bunu yapar. DOI eşleşmesi
+güvenilirdir, başlık eşleşmesi değildir — aynı çalışmanın konferans ve
+dergi sürümleri farklı DOI taşır ama aynı çalışmadır; bunları elle
+birleştirirsiniz.</p></li><li><p><strong>Tekilleştirme sonrası sayıyı not edin.</strong> PRISMA bu sayıyı da ister.</p></li></ol>
+
+<aside class="not uyari"><span class="not-baslik">Özet alanı boş gelirse</span><p>Bazı dışa aktarmalarda özet alanı boş gelir. Bir sonraki adımdaki seçim
+istemi başlık ve özete dayanır; özet yoksa model karar veremez ve
+"BELİRSİZ" der. Bu doğru davranıştır — ama işinizi yavaşlatır. Dışa
+aktarma ayarlarında özetin işaretli olduğundan emin olun.</p></aside>
+<h2 id="secim-indirdiginiz-kayitlar-uzerinde">Seçim: indirdiğiniz kayıtlar üzerinde</h2>
+<p>Bu adımda model ilk kez devreye girer ve yalnız <strong>sizin indirdiğiniz
+dosya</strong> üzerinde çalışır.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">BibTeX kayıtlarından dahil/hariç kararı</span>
+<span class="arac">Literatür · tarama</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için kayıt tarayan bir araştırma asistanısın.
+PRISMA akışının &quot;screening&quot; adımındasın.
+
+KAYNAK
+Ekteki BibTeX dosyası. [n] kayıt içeriyor. Her kayıtta en az başlık,
+yıl, yayın yeri ve özet var.
+
+ARAŞTIRMA SORUSU
+[sorunuzu yazın]
+
+DAHİL ETME ÖLÇÜTLERİ
+I1 — Hakemli dergi makalesi, konferans bildirisi ya da kitap bölümü
+I2 — [konunuza özgü içerik ölçütü]
+I3 — En az bir nicel başarı/etki ölçütü raporlıyor
+I4 — Yayın yılı [aralık]
+I5 — Dil: İngilizce ya da Türkçe
+
+HARİÇ TUTMA ÖLÇÜTLERİ
+E1 — Konum bildirisi, editöre mektup, bir sayfalık özet
+E2 — Derleme (birincil çalışma aranıyor)
+E3 — [konunuza özgü dışlama]
+E4 — Aynı çalışmanın mükerrer sürümü
+
+GÖREV
+Her kaydı sırayla değerlendir ve bir karar ver.
+
+ÇIKTI BİÇİMİ
+Markdown tablo:
+| # | BibTeX anahtarı | Yıl | Başlık (en çok 60 karakter) | Karar | Ölçüt | Gerekçe |
+
+Karar sütunu yalnız şunlardan biri olabilir: DAHİL / HARİÇ / BELİRSİZ
+Ölçüt sütunu kararı veren ölçütün kodudur (I2, E3 gibi).
+Gerekçe en çok 15 kelime.
+
+SINIRLAR
+— Yalnız verdiğim dosyadaki kayıtları değerlendir. Kayıt EKLEME.
+— Dosyada olmayan hiçbir künye, DOI, yazar ya da başlık üretme.
+— Başlık ve özet karar vermeye yetmiyorsa BELİRSİZ yaz ve gerekçe
+  sütununa neyin eksik olduğunu yaz. Tahmin yürütme.
+— Bir kaydın kalitesi hakkında görüş bildirme; yalnız ölçütlere bak.
+
+DENETİM
+Tablonun altına şunları yaz:
+— Değerlendirilen kayıt sayısı
+— DAHİL / HARİÇ / BELİRSİZ sayıları
+— Üçünün toplamı
+Toplam, verdiğim kayıt sayısına eşit olmalı. Eşit değilse hangi
+kayıtları atladığını belirt.
+
+AYRICA
+En sık kullanılan üç hariç tutma ölçütünü sıklıklarıyla yaz. Bu,
+arama dizgimin fazla geniş olup olmadığını gösterecek.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Ekonomi · politika değerlendirmesi</span>
+<span class="ad">BibTeX kayıtlarından dahil/hariç kararı</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için kayıt tarayan bir araştırma asistanısın.
+PRISMA akışının &quot;screening&quot; adımındasın.
+
+KAYNAK
+Ekteki BibTeX dosyası: wos_scopus_econlit_birlesik.bib
+186 kayıt içeriyor. Her kayıtta başlık, yıl, yayın yeri ve özet
+var. Üç veri tabanından indirildi ve Zotero&#x27;da tekilleştirildi.
+
+ARAŞTIRMA SORUSU
+Asgari ücret artışlarının küçük işletmelerde istihdama etkisi
+nedir?
+
+DAHİL ETME ÖLÇÜTLERİ
+I1 — Hakemli dergi makalesi, çalışma tebliği (working paper) ya da
+     kitap bölümü
+I2 — Asgari ücret değişiminin istihdam üzerindeki etkisini
+     AMPİRİK olarak ölçen çalışma
+I3 — En az bir nicel tahmin raporluyor (istihdam esnekliği,
+     yüzde değişim, katsayı)
+I4 — Yayın yılı 2010–2026
+I5 — Dil: İngilizce ya da Türkçe
+I6 — İşletme büyüklüğüne göre ayrıştırılmış sonuç veriyor ya da
+     yalnız küçük işletmeleri inceliyor
+
+HARİÇ TUTMA ÖLÇÜTLERİ
+E1 — Konum bildirisi, editöre mektup, politika notu
+E2 — Derleme ya da meta-analiz (birincil çalışma aranıyor; bunlar
+     ayrı bir listede toplanacak, kaynakçalarından yararlanılacak)
+E3 — Yalnız kuramsal model, veri yok
+E4 — Yalnız toplam istihdamı inceleyen, işletme büyüklüğüne göre
+     ayrıştırmayan çalışmalar
+E5 — Aynı çalışmanın mükerrer sürümü (çalışma tebliği + dergi
+     makalesi; dergi sürümü tutulur)
+
+GÖREV
+Her kaydı sırayla değerlendir ve bir karar ver.
+
+ÇIKTI BİÇİMİ
+Markdown tablo:
+| # | BibTeX anahtarı | Yıl | Başlık (en çok 60 karakter) | Karar | Ölçüt | Gerekçe |
+
+Karar sütunu yalnız şunlardan biri olabilir: DAHİL / HARİÇ / BELİRSİZ
+Ölçüt sütunu kararı veren ölçütün kodudur (I6, E4 gibi).
+Gerekçe en çok 15 kelime.
+
+SINIRLAR
+— Yalnız verdiğim dosyadaki kayıtları değerlendir. Kayıt EKLEME.
+— Dosyada olmayan hiçbir künye, DOI, yazar ya da başlık üretme.
+— Başlık ve özet karar vermeye yetmiyorsa BELİRSİZ yaz ve gerekçe
+  sütununa neyin eksik olduğunu yaz. Tahmin yürütme.
+— Bir kaydın kalitesi hakkında görüş bildirme; yalnız ölçütlere bak.
+— E5 için dikkat: aynı yazar ve benzer başlık her zaman mükerrer
+  demek değildir. Emin değilsen BELİRSİZ yaz, ben bakarım.
+
+DENETİM
+Tablonun altına şunları yaz:
+— Değerlendirilen kayıt sayısı
+— DAHİL / HARİÇ / BELİRSİZ sayıları
+— Üçünün toplamı (186 etmeli)
+— En sık kullanılan üç hariç tutma ölçütü, sıklıklarıyla
+— I6 (işletme büyüklüğüne göre ayrıştırma) yüzünden kaç kayıt
+  elendi? Bu sayı yüksekse arama dizgim fazla geniş demektir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Son denetim maddesi ne işe yarıyor</span><p><em>"I6 yüzünden kaç kayıt elendi?"</em> sorusu, taramanın kendisini
+değerlendiriyor.</p>
+<p>Diyelim yanıt 94 çıktı: 186 kaydın yarısından fazlası, işletme
+büyüklüğüne göre ayrıştırma yapmadığı için elendi. Bu iki şey
+anlatır. Birincisi, arama dizgisine "küçük işletme" kümesi
+eklenmemiş ya da zayıf kalmış. İkincisi — ve daha ilginci —
+literatürde bu ayrıştırmanın az yapıldığı. Bu, özgün değer
+bölümünüzün ilk cümlesidir.</p>
+<p><strong>Tarama sayıları yalnız PRISMA şeması için tutulmaz; neyin
+çalışılmadığını da gösterir.</strong></p></aside>
+
+<aside class="not "><span class="not-baslik">BELİRSİZ kararı neden önemli</span><p>"BELİRSİZ" seçeneği olmayan bir seçim istemi, modeli her kayıt için
+karar vermeye zorlar — ve emin olmadığı yerde tahmin yürütür. Üçüncü
+bir seçenek vermek, belirsizliği görünür kılar. Bu kayıtların tam
+metnine siz bakarsınız. Sistematik derlemede bu zaten standart
+uygulamadır: başlık-özet taraması belirsizleri tam metin taramasına
+devreder.</p></aside>
+<h2 id="prisma-akisini-kaydetmek">PRISMA akışını kaydetmek</h2>
+<p>PRISMA akış şeması, çoğu derginin sistematik derlemelerden istediği
+standart bir şemadır ve yalnız yedi sayı ister. Bu sayıları tarama sırasında tutarsanız şema
+kendiliğinden çıkar.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Aşama</th>
+<th>Ne sayılır</th>
+<th>Örnek değerler (gösterim amaçlı)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identification</td>
+<td>Her veri tabanından gelen ham kayıt</td>
+<td>WoS 128 · Scopus 164 · IEEE 97 = <strong>389</strong></td>
+</tr>
+<tr>
+<td>Duplicates removed</td>
+<td>Tekilleştirmede çıkan</td>
+<td><strong>112</strong></td>
+</tr>
+<tr>
+<td>Screened</td>
+<td>Başlık-özet taramasına giren</td>
+<td><strong>277</strong></td>
+</tr>
+<tr>
+<td>Excluded at screening</td>
+<td>Başlık-özette elenen</td>
+<td><strong>203</strong></td>
+</tr>
+<tr>
+<td>Full-text assessed</td>
+<td>Tam metni okunan</td>
+<td><strong>74</strong></td>
+</tr>
+<tr>
+<td>Excluded at full text</td>
+<td>Tam metinde elenen, gerekçeleriyle</td>
+<td><strong>52</strong></td>
+</tr>
+<tr>
+<td>Included</td>
+<td>Sentezde kullanılan</td>
+<td><strong>22</strong></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not uyari"><span class="not-baslik">Bu tablodaki sayılar gösterim amaçlıdır</span><p>Yukarıdaki yedi sayı, akışın nasıl kaydedileceğini göstermek için
+yazılmış <strong>örnek</strong> değerlerdir; bu kurs kapsamında böyle bir tarama
+yürütülmedi. Kendi taramanızda bu kutulara kendi sayılarınızı
+yazarsınız. Kursta gerçekten yürütülen tek literatür işi, aşağıdaki
+tek makale üzerindeki veri çıkarımıdır — ve o çıkarım gerçektir.</p></aside>
+<h2 id="pdf-ten-yapilandirilmis-veri-cikarimi">PDF'ten yapılandırılmış veri çıkarımı</h2>
+<p>Seçilen makalelerin PDF'lerini siz indirirsiniz. Model o PDF'leri
+okuyup sentez matrisinin satırlarını üretir. Aşağıdaki istem, gerçek
+bir açık erişim makalesi üzerinde koşuldu.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tek makaleden yapılandırılmış çıkarım</span>
+<span class="arac">Literatür · çıkarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için veri çıkarımı yapan kıdemli bir araştırma
+asistanısın.
+
+KAYNAK
+Ekteki PDF. Yalnız bu belgedeki bilgiyi kullan.
+
+GÖREV
+Bu makaleden, sentez matrisine girecek yapılandırılmış bir çıkarım
+üret.
+
+ÇIKTI BİÇİMİ
+
+## 0. KONSOLİDE SATIR
+| Alan | Değer |
+|---|---|
+| Künye (APA 7) | |
+| Yıl | |
+| Yayın yeri | |
+| Çalışma türü | ampirik / derleme / konum bildirisi |
+| Veri | kaynak, büyüklük, sınıf dengesi |
+| Yöntem | model/yaklaşım, özellik kümesi, doğrulama düzeni |
+| Ana bulgu | en çok 2 cümle, sayılarla |
+| Kısıtlar | yazarın belirttikleri + [çıkarımcı notu] etiketli kendi gözlemlerin |
+
+## 1. PERFORMANS TABLOSU
+Makalede raporlanan her nicel sonuç. Sütunlar makaleye göre uyarlanır.
+
+## 2. YÖNTEM AYRINTISI
+Veri hazırlama, özellik mühendisliği, model seçimi, hiperparametre,
+doğrulama — her biri bir paragraf.
+
+## 3. BİZİM SORUMUZLA İLİŞKİSİ
+Bu çalışma bizim araştırma sorumuza ne söylüyor? Destekliyor mu,
+sınırlandırıyor mu, yöntem mi veriyor? En çok 4 cümle.
+
+## 4. ALINTILANABİLİR CÜMLELER
+Makalede geçen, kendi metnimizde atıfla kullanılabilecek en çok üç
+nicel iddia. Her birini sayfa/bölüm bilgisiyle ver.
+
+DİL VE ÜSLUP
+— Resmî akademik Türkçe, edilgen anlatım
+— Sayısal değerleri birimiyle ver
+— Kısaltma ilk geçtiğinde açılımıyla
+
+SINIRLAR
+— Belgede olmayan hiçbir sayı, yöntem ya da bulgu yazma.
+— Makalenin söylemediği bir şeyi &quot;muhtemelen&quot; diye tamamlama.
+— Bilgi belgede yoksa &quot;Raporlanmamış&quot; yaz.
+— Yorum ile aktarımı karıştırma: kendi gözlemlerini [çıkarımcı notu]
+  etiketiyle işaretle.
+
+DENETİM
+Çıkarımın sonuna: belgede bulunamayan ve &quot;Raporlanmamış&quot; yazdığın
+alanları listele.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Fizik · ince film</span>
+<span class="ad">Tek makaleden yapılandırılmış çıkarım</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için veri çıkarımı yapan kıdemli bir araştırma
+asistanısın.
+
+KAYNAK
+Ekteki PDF: Zhang ve ark. (2023), &quot;Thickness-dependent performance
+of CIGS thin-film solar cells&quot;, Solar Energy Materials and Solar
+Cells. Yalnız bu belgedeki bilgiyi kullan.
+
+ARAŞTIRMA SORUMUZ
+İnce film güneş hücrelerinde soğurucu katman kalınlığı dönüşüm
+verimini nasıl etkiliyor?
+
+GÖREV
+Bu makaleden, sentez matrisine girecek yapılandırılmış bir çıkarım
+üret.
+
+ÇIKTI BİÇİMİ
+
+## 0. KONSOLİDE SATIR
+| Alan | Değer |
+|---|---|
+| Künye (APA 7) | |
+| Yıl | |
+| Yayın yeri | |
+| Çalışma türü | deneysel / benzetim / hibrit |
+| Malzeme sistemi | soğurucu, tampon, pencere katmanı |
+| Üretim yöntemi | |
+| İncelenen kalınlık aralığı | nm cinsinden, kaç farklı değer |
+| Numune sayısı | her kalınlık için kaç hücre üretilmiş |
+| Ölçüm koşulları | aydınlatma standardı, sıcaklık |
+| Ana bulgu | en çok 2 cümle, sayılarla |
+| Kısıtlar | yazarın belirttikleri + [çıkarımcı notu] etiketli kendi gözlemlerin |
+
+## 1. PERFORMANS TABLOSU
+Her kalınlık değeri için: dönüşüm verimi (%), açık devre gerilimi
+(V), kısa devre akım yoğunluğu (mA/cm²), dolum faktörü.
+Değer ± standart sapma biçiminde verilmişse öyle al.
+
+## 2. YÖNTEM AYRINTISI
+Katman büyütme, kalınlık ölçümü (hangi yöntemle), karakterizasyon,
+ölçüm düzeni — her biri bir paragraf.
+
+## 3. BİZİM SORUMUZLA İLİŞKİSİ
+Bu çalışma bizim araştırma sorumuza ne söylüyor? En çok 4 cümle.
+
+## 4. ALINTILANABİLİR CÜMLELER
+En çok üç nicel iddia, sayfa/bölüm bilgisiyle.
+
+DİL VE ÜSLUP
+— Resmî akademik Türkçe, edilgen anlatım
+— Sayısal değerleri birimiyle ver
+— Kısaltma ilk geçtiğinde açılımıyla (CIGS = bakır indiyum galyum
+  diselenür)
+
+SINIRLAR
+— Belgede olmayan hiçbir sayı, yöntem ya da bulgu yazma.
+— Grafikten göz kararı değer okuma. Verim yalnız şekilde verilmişse
+  &quot;yalnız şekilde&quot; yaz; sayıyı tahmin etme.
+— Kalınlık birimlerine dikkat: bazı makaleler µm, bazıları nm
+  kullanır. Belgede hangisi yazıyorsa onu al, çevirme; çevirmen
+  gerekiyorsa çevirdiğini belirt.
+— Makalenin söylemediği bir şeyi &quot;muhtemelen&quot; diye tamamlama.
+— Bilgi belgede yoksa &quot;Raporlanmamış&quot; yaz.
+
+DENETİM
+Çıkarımın sonuna:
+— Belgede bulunamayan ve &quot;Raporlanmamış&quot; yazdığın alanları listele.
+— Numune sayısı raporlanmış mı? Raporlanmamışsa bunu ayrıca
+  vurgula; tek hücreden alınan verim değeri ile on hücrenin
+  ortalaması aynı ağırlıkta değildir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Alana özgü üç sınır</span><p>Doldurulmuş örnekte kalıba üç satır eklendi ve üçü de alan
+bilgisinden geliyor.</p>
+<p><strong>"Grafikten göz kararı değer okuma."</strong> İnce film literatüründe
+verim–kalınlık ilişkisi genellikle eğriyle verilir. Model eğriyi
+göremez ama metinde geçen bir sayıyı o eğriye ait sanabilir.</p>
+<p><strong>"Kalınlık birimlerine dikkat."</strong> 500 nm ile 0,5 µm aynı şeydir
+ama tabloda yan yana durduklarında karşılaştırma bozulur. Birim
+dönüşümünü modele bırakırsanız sessizce yapar ve siz görmezsiniz.</p>
+<p><strong>"Numune sayısı raporlanmış mı?"</strong> Bu alanda tek hücreden verim
+raporlamak yaygındır. Denetim maddesine konulması, çıkarımın
+literatürün zayıf noktasını da kaydetmesini sağlar.</p></aside>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Bu istemin gerçek çıktısı — Joshi ve ark. (2019) üzerinde koşuldu</span>
+<span class="damga">Claude Opus 5 · arXiv:1910.06277 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><h2 id="0-konsoli-de-satir">0. KONSOLİDE SATIR</h2>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Alan</th>
+<th>Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Künye (APA 7)</td>
+<td>Joshi, A., Lloyd, L., Westin, P., &amp; Seethapathy, S. (2019). <em>Using lexical features for malicious URL detection — A machine learning approach</em>. arXiv:1910.06277.</td>
+</tr>
+<tr>
+<td>Yıl</td>
+<td>2019</td>
+</tr>
+<tr>
+<td>Yayın yeri</td>
+<td>arXiv ön baskı (cs.CR); hakem değerlendirmesi bilgisi raporlanmamış</td>
+</tr>
+<tr>
+<td>Çalışma türü</td>
+<td>Ampirik — uygulamalı sınıflandırma çalışması</td>
+</tr>
+<tr>
+<td>Veri</td>
+<td>Yaklaşık 5 milyon URL. Kaynaklar: Openphish, Alexa beyaz listeleri ve kurum içi FireEye kaynakları. Sınıf dengesi 60:40 (meşru:zararlı).</td>
+</tr>
+<tr>
+<td>Yöntem</td>
+<td>Rastgele orman (Random Forest), karar ağacı kestiricilerle. Özellikler: 23 sözcüksel özellik + 1.000 trigram tabanlı özellik, toplam 1.023 boyutlu vektör. CRISP-DM süreç modeli izlenmiştir.</td>
+</tr>
+<tr>
+<td>Ana bulgu</td>
+<td>Yalnız sözcüksel özelliklerle çalışan rastgele orman modeli %92 doğruluk, 0,99 AUC ve %0,38 yanlış negatif oranı elde etmiştir. Model üretim ortamına alındıktan sonra zararlı saptamalarında %22 artış raporlanmıştır.</td>
+</tr>
+<tr>
+<td>Kısıtlar</td>
+<td>Yazarların belirttiği: model boyutu, gecikme ve yanlış negatif oranı arasında ödünleşim bulunması. <strong>[çıkarımcı notu]</strong> Veri seti kuruma özgüdür ve kamuya açık değildir; sonuçlar bağımsız olarak yeniden üretilemez. <strong>[çıkarımcı notu]</strong> Çapraz doğrulama düzeni ve standart sapma raporlanmamıştır; tüm başarı değerleri tek sayı olarak verilmiştir. <strong>[çıkarımcı notu]</strong> Beyaz liste kaynağı olarak Alexa kullanılması, meşru sınıfın sistematik olarak popüler sitelerden oluşması anlamına gelir; bu, sınıflar arası ayrımı kolaylaştırmış olabilir.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="1-performans-tablosu">1. PERFORMANS TABLOSU</h2>
+<p><strong>Tablo 2 — sınıflandırıcı karşılaştırması</strong></p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Algoritma</th>
+<th>Doğruluk (%)</th>
+<th>AUC</th>
+<th>Yanlış negatif oranı (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random Forest</td>
+<td>92</td>
+<td>0,99</td>
+<td>0,38</td>
+</tr>
+<tr>
+<td>Gradient Boost</td>
+<td>90</td>
+<td>0,92</td>
+<td>9</td>
+</tr>
+<tr>
+<td>AdaBoost</td>
+<td>90</td>
+<td>0,90</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Lojistik regresyon</td>
+<td>87</td>
+<td>0,96</td>
+<td>4,75</td>
+</tr>
+<tr>
+<td>Naive Bayes</td>
+<td>70</td>
+<td>0,74</td>
+<td>10,38</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tablo 3 — özellik çıkarım stratejilerinin karşılaştırması</strong></p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Trigram sayısı</th>
+<th>Sözcüksel özellik sayısı</th>
+<th>Yanlış pozitif (%)</th>
+<th>Yanlış negatif (%)</th>
+<th>Doğruluk (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.000</td>
+<td>0</td>
+<td>29,8</td>
+<td>0,40</td>
+<td>85</td>
+</tr>
+<tr>
+<td>1.000</td>
+<td>23</td>
+<td>16,8</td>
+<td>0,38</td>
+<td>92</td>
+</tr>
+<tr>
+<td>300</td>
+<td>23</td>
+<td>12,5</td>
+<td>0,93</td>
+<td>93</td>
+</tr>
+<tr>
+<td>100</td>
+<td>23</td>
+<td>11,5</td>
+<td>1,09</td>
+<td>94</td>
+</tr>
+<tr>
+<td>0</td>
+<td>23</td>
+<td>8,15</td>
+<td>1,10</td>
+<td>95</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tablo 4 — ağaç derinliği ayarı</strong></p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Azami derinlik</th>
+<th>Yanlış negatif (%)</th>
+<th>Doğruluk (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>1,13</td>
+<td>72</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0,81</td>
+<td>81</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0,48</td>
+<td>88</td>
+</tr>
+<tr>
+<td>20</td>
+<td>0,38</td>
+<td>92</td>
+</tr>
+<tr>
+<td>27</td>
+<td>0,73</td>
+<td>94</td>
+</tr>
+<tr>
+<td>30</td>
+<td>0,75</td>
+<td>95</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="2-yontem-ayrintisi">2. YÖNTEM AYRINTISI</h2>
+<p><strong>Veri hazırlama.</strong> URL dizgileri sayısal vektörlere dönüştürülmüştür.
+Ayrıştırma için <code>urllib</code>, trigram üretimi için <code>NLTK</code>, trigramların
+kodlanması için <code>mmh3</code> (MurmurHash) kullanılmıştır.</p>
+<p><strong>Özellik mühendisliği.</strong> Yirmi üç sözcüksel özellik, URL'nin beş
+bileşeninden çıkarılmıştır: URL'nin tamamı (uzunluk, noktalama
+sayıları, rakam-harf oranı), üst düzey alan adı (şüpheli listede olup
+olmadığı), birincil alan adı (IP içermesi, uzunluk, rakam sayısı,
+alfanümerik olmayan karakter sayısı, tire sayısı, @ sayısı, ilk 100
+Alexa alan adında olup olmaması), alt alan adı (nokta ve alt alan adı
+sayısı) ve yol (dizin sayısı, <code>%20</code> varlığı, büyük harfli dizin,
+tek karakterli dizin, özel karakter ve sıfır sayısı, büyük-küçük harf
+oranı).</p>
+<p><strong>Özellik ayıklama.</strong> Uzunluk tabanlı özellikler arasında yüksek
+korelasyon gözlenmiş; korelasyon katsayısı 0,75'i aşan her çift için
+yalnız bir özellik tutulmuştur.</p>
+<p><strong>Model seçimi.</strong> Rastgele orman, iki gerekçeyle seçilmiştir: eğitim
+verisindeki dalgalanmalara karşı duyarsızlığı ve yorumlanabilirliği.
+Yazarlar, derin öğrenme modellerinin "kara kutu" davranışının, URL'yi
+zararlı yapan örüntülerin anlaşılmasını engellediğini belirtmektedir.</p>
+<p><strong>Hiperparametre.</strong> Esas olarak azami ağaç derinliği ayarlanmış;
+düğüm bölme ve yaprak düğüm için asgari örnek sayılarının doğruluk ve
+yanlış negatif oranı üzerinde kayda değer etkisi gözlenmemiştir.</p>
+<p><strong>Doğrulama düzeni.</strong> Raporlanmamış. Eğitim/test oranı, çapraz
+doğrulama kat sayısı ve tekrar sayısı belgede belirtilmemiştir.</p>
+<p><strong>Yerleşim.</strong> Model, AWS üzerinde barındırılan FAUDE (FireEye Advanced
+URL Detection Engine) mimarisine bir Docker kapsayıcısı içinde, "RF
+Selector" adlı eklenti olarak yerleştirilmiştir.</p>
+<h2 id="3-bi-zi-m-sorumuzla-i-li-ski-si">3. BİZİM SORUMUZLA İLİŞKİSİ</h2>
+<p>Bu çalışma, araştırma sorumuzun temel varsayımını doğrudan
+desteklemektedir: yalnız URL dizgisinden türetilen özelliklerle, sayfa
+içeriğine hiç erişmeden yüksek başarılı bir sınıflandırma
+yapılabilmektedir. Çalışmanın en doğrudan katkısı, saf sözcüksel
+yaklaşımın gecikme avantajını gerekçelendirmesidir: sözcüksel
+özellikler URL dizgisinin doğrudan türevi olduğu için uzak sunucu
+sorgusu gerektirmez. Tablo 3, bizim bulgumuzla ilginç bir karşıtlık
+taşır: trigram sayısı azaldıkça doğruluk yükselmekte (%85'ten %95'e)
+ama yanlış negatif oranı da artmaktadır (%0,40'tan %1,10'a) — yani
+doğruluk tek başına raporlanması yanıltıcı bir ölçüttür. Çalışmanın
+bizim için en önemli sınırı, veri setinin kapalı olmasıdır; bu yüzden
+bir karşılaştırma ölçütü (baseline) olarak değil, yöntemsel bir
+dayanak olarak kullanılabilir.</p>
+<h2 id="4-alintilanabi-li-r-cumleler">4. ALINTILANABİLİR CÜMLELER</h2>
+<ol>
+<li>"Yalnız statik sözcüksel özelliklerle eğitilen rastgele orman
+   modeli %92 doğruluk ve 0,99 AUC elde etmiştir" (Tablo 2, s. 5).</li>
+<li>"Sözcüksel özellikler URL dizgisinin doğrudan türevi olduğundan
+   hesaplanmaları çok verimlidir ve düşük gecikme sağlanmıştır"
+   (Data Modelling bölümü, s. 4).</li>
+<li>"Üretim ortamına yerleştirildikten sonra FAUDE üzerindeki zararlı
+   saptamalarında %22 artış gözlenmiştir" (Deployment bölümü, s. 6).</li>
+</ol>
+<h2 id="deneti-m-belgede-bulunamayan-alanlar">DENETİM — belgede bulunamayan alanlar</h2>
+<p>— <strong>Doğrulama düzeni:</strong> eğitim/test bölünmesi, çapraz doğrulama kat
+  sayısı ve tekrar sayısı raporlanmamıştır.
+— <strong>Değişkenlik ölçüsü:</strong> hiçbir başarı değeri için standart sapma,
+  güven aralığı ya da tekrar sayısı verilmemiştir.
+— <strong>Veri erişilebilirliği:</strong> veri setinin paylaşılıp paylaşılmadığı
+  belirtilmemiştir; kurum içi kaynaklar kullanıldığı için erişilemez
+  olduğu anlaşılmaktadır.
+— <strong>Hakem değerlendirmesi:</strong> arXiv sürümünde dergi/konferans bilgisi
+  yoktur.</p></div></div>
+
+<aside class="not ipucu"><span class="not-baslik">Bu çıkarımın en değerli kısmı hangisi</span><p>"DENETİM" bölümü. Modele "bulamadıklarını listele" demek, makalenin
+<strong>eksiklerini</strong> görünür kılar. Yukarıdaki dört maddenin üçü (çapraz doğrulama yok, standart sapma yok,
+veri kapalı) sizin kendi çalışmanızın katkısını yazarken doğrudan
+kullanılır: "Önceki
+çalışmalardan farklı olarak bu çalışmada beş katlı çapraz doğrulama
+uygulanmış ve sonuçlar standart sapmalarıyla raporlanmıştır."</p></aside>
+<h2 id="kirk-pdf-tek-seferde">Kırk PDF, tek seferde</h2>
+<p>Yukarıdaki çıkarım tek bir makale içindi. Gerçek bir taramada
+elinizde kırk, altmış, bazen iki yüz PDF olur. Bunları tek tek
+yapmak hem uzun sürer hem de her seferinde biçim kayar; yirminci
+makalede sütunlar birinciyle aynı olmaz.</p>
+<p>Çözüm, işi <strong>bir klasör üzerinde döngüyle</strong> yürütmektir. Bu, sohbet
+penceresinde yapılmaz; kod yazıp çalıştırabilen bir araç gerekir
+(Claude Code, Codex ve benzerleri).</p>
+<aside class="not uyari"><span class="not-baslik">Toplu çıkarımda üç şey mutlaka olmalı</span><p><strong>Hata günlüğü.</strong> Bazı PDF'ler açılmaz, bazıları taranmış görüntüdür
+ve metin katmanı yoktur. Bunlar sessizce atlanırsa korpusunuz
+eksilir ve haberiniz olmaz.</p>
+<p><strong>Kaynak izi.</strong> Her satırda bilginin hangi dosyadan, hangi sayfadan
+geldiği yazmalı. Yoksa bir sayıyı sonradan doğrulayamazsınız.</p>
+<p><strong>Boş bırakma izni.</strong> Modele "bulamazsan boş bırak" demezseniz,
+bulamadığında uydurur. Toplu işte bunu fark etmek tek tek işten çok
+daha zordur, çünkü kimse kırk satırı tek tek okumaz.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Klasördeki bütün PDF&#x27;lerden toplu çıkarım</span>
+<span class="arac">Literatür · çıkarım</span><span class="arac">Claude Code / Codex</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için veri çıkarımı yapan bir araştırma
+asistanısın. Kod yazıp çalıştırabiliyorsun.
+
+GİRDİ
+Klasör: [klasör yolu]
+İçinde [n] adet PDF var. Dosya adları: [adlandırma düzeniniz, örneğin
+&quot;Yazar_Yil_KisaBaslik.pdf&quot; ya da &quot;düzensiz&quot;]
+Ayrıca aynı klasörde [varsa BibTeX/RIS dosyanızın adı] bulunuyor;
+künye bilgileri oradan alınabilir.
+
+GÖREV
+Klasördeki her PDF için aynı çıkarımı yap ve hepsini tek bir Excel
+dosyasında birleştir.
+
+ÇIKARILACAK ALANLAR
+Her makale için şu sütunlar doldurulacak:
+  [sütun listenizi yazın — tek PDF çıkarımındaki &quot;konsolide satır&quot;
+   alanlarıyla aynı olmalı]
+Örnek: sira_no, dosya_adi, kunye_apa, yil, yayin_yeri, calisma_turu,
+veri_kaynagi, orneklem_n, yontem, dogrulama_duzeni, ana_bulgu,
+en_iyi_sonuc, etki_buyuklugu, kisitlar, veri_acik_mi
+
+ÇIKTI DOSYALARI — üç tane
+1. [dosya adı].xlsx — her makale bir satır, yukarıdaki sütunlar
+2. islem_gunlugu.csv — her dosya için bir satır:
+   dosya_adi | durum (BAŞARILI / KISMİ / BAŞARISIZ) | sayfa_sayisi |
+   metin_karakter_sayisi | bos_birakilan_alan_sayisi | hata_mesaji
+3. denetim_raporu.md — aşağıdaki DENETİM bölümünde istenenler
+
+İŞLEM KURALLARI
+— Her PDF&#x27;i sırayla işle; biri hata verirse DURMA, kaydet ve devam et
+— Metin katmanı olmayan (taranmış) PDF&#x27;leri ayrı işaretle; bunlarda
+  çıkarım yapma, &quot;metin katmanı yok&quot; yaz
+— Her alan için, bilginin alındığı sayfa numarasını ayrı bir sütunda
+  tut (örneğin &quot;orneklem_n_sayfa&quot;)
+— Dosya adı ile künye uyuşmuyorsa günlüğe yaz, kendi kararınla
+  düzeltme
+
+SINIRLAR
+— Belgede bulunmayan hiçbir bilgiyi üretme. Bulunamayan alana
+  &quot;Raporlanmamış&quot; yaz; boş bırakma, tahmin etme.
+— Bir makalenin bilgisini başka bir makaleden tamamlama.
+— Sayıları yuvarlamadan, belgede yazdığı gibi al. Birim varsa birimi
+  de yaz.
+— Bir PDF işlenemiyorsa o satırı atlama; satırı aç, durumu
+  &quot;BAŞARISIZ&quot; yaz, öteki alanları boş bırak. Eksik satır, yanlış
+  satırdan daha tehlikelidir çünkü sayım tutmaz.
+
+DENETİM — raporda şunlar olacak
+1. Klasördeki PDF sayısı ile Excel&#x27;deki satır sayısı eşit mi?
+   Değilse hangi dosyalar eksik?
+2. Kaç dosya BAŞARILI, kaç KISMİ, kaç BAŞARISIZ?
+3. BAŞARISIZ olanların her biri için neden?
+4. Hangi sütunda kaç &quot;Raporlanmamış&quot; var? En çok boş kalan üç sütun
+   hangisi? (Bu, hem çıkarımın hem de literatürün eksiğini gösterir.)
+5. Aynı künyeyi taşıyan iki satır var mı? (Mükerrer PDF)
+6. Örneklem büyüklüğü, yıl gibi sayısal alanlarda olanaksız değer
+   var mı? (Örneğin yıl 1890 ya da n = 0)</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Makine mühendisliği</span>
+<span class="ad">Klasördeki bütün PDF&#x27;lerden toplu çıkarım</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme için veri çıkarımı yapan bir araştırma
+asistanısın. Kod yazıp çalıştırabiliyorsun.
+
+GİRDİ
+Klasör: ~/arastirma/eklemeli-imalat-derleme/pdf/
+İçinde 47 adet PDF var. Dosya adları düzensiz: bir kısmı
+&quot;Yilmaz2023.pdf&quot; gibi, bir kısmı &quot;1-s2.0-S0924013622...pdf&quot; gibi
+yayıncı indirme adıyla duruyor.
+Aynı klasörde wos_scopus_birlesik.bib bulunuyor; taramadan gelen 45 kaydın
+künyesi orada. İki PDF klasöre sonradan elle eklendi, künyeleri dosyada
+yok. DOI alanı dolu.
+
+ARAŞTIRMA SORUSU
+Eklemeli imalatla üretilen Ti-6Al-4V parçalarda ısıl işlem, yorulma
+ömrünü ne ölçüde değiştiriyor?
+
+GÖREV
+Klasördeki her PDF için aynı çıkarımı yap ve hepsini tek bir Excel
+dosyasında birleştir.
+
+ÇIKARILACAK ALANLAR
+sira_no, dosya_adi, bibtex_anahtari, kunye_apa, yil, yayin_yeri,
+uretim_yontemi (SLM / EBM / DED / diğer), malzeme,
+isil_islem_var_mi, isil_islem_sicakligi_C, isil_islem_suresi_saat,
+numune_sayisi, yorulma_deneyi_turu, gerilim_orani_R,
+yorulma_omru_cevrim, yuzey_puruzlulugu_Ra_um, karsilastirma_grubu,
+ana_bulgu, yazar_kisitlari, veri_acik_mi
+
+Her sayısal alan için bir de &quot;_sayfa&quot; sütunu aç: bilginin alındığı
+sayfa numarası.
+
+ÇIKTI DOSYALARI — üç tane
+1. eklemeli_imalat_cikarim.xlsx — her makale bir satır
+2. islem_gunlugu.csv — dosya_adi | durum | sayfa_sayisi |
+   metin_karakter_sayisi | bos_birakilan_alan_sayisi | hata_mesaji
+3. denetim_raporu.md
+
+İŞLEM KURALLARI
+— Her PDF&#x27;i sırayla işle; biri hata verirse DURMA, kaydet ve devam et
+— Metin katmanı olmayan PDF&#x27;leri ayrı işaretle; bunlarda çıkarım
+  yapma, &quot;metin katmanı yok&quot; yaz. 2010 öncesi bazı dergi
+  taramalarında bu sorun çıkıyor.
+— Dosya adlarını bibtex_anahtari ile eşleştir. Eşleştirme için önce
+  DOI ara (PDF&#x27;in ilk sayfasında genellikle var), bulamazsan
+  başlık benzerliğine bak. Eşleşmeyen dosyaları günlüğe yaz,
+  tahminle eşleştirme.
+— Yorulma ömrünü çevrim sayısı olarak al. Makalede logaritmik
+  ölçekte verilmişse dönüştür ve dönüştürdüğünü sütunda belirt.
+— Sıcaklık birimi Celsius olsun; Fahrenheit verilmişse çevir ve
+  günlüğe yaz.
+
+SINIRLAR
+— Belgede bulunmayan hiçbir bilgiyi üretme. Bulunamayan alana
+  &quot;Raporlanmamış&quot; yaz; boş bırakma, tahmin etme.
+— Bir makalenin bilgisini başka bir makaleden tamamlama. Aynı
+  grubun iki makalesi benzer olabilir; yine de her satır kendi
+  belgesinden doldurulacak.
+— Grafik üzerinden okunan değerleri çıkarma. Yorulma ömrü yalnız
+  tabloda ya da metinde sayıyla verilmişse al; S-N eğrisinden göz
+  kararı okuma. Böyle bir durumda &quot;yalnız şekilde&quot; yaz.
+— Bir PDF işlenemiyorsa o satırı atlama; satırı aç, durumu
+  &quot;BAŞARISIZ&quot; yaz, öteki alanları boş bırak.
+
+DENETİM — raporda şunlar olacak
+1. Klasördeki PDF sayısı (47) ile Excel&#x27;deki satır sayısı eşit mi?
+   Değilse hangi dosyalar eksik?
+2. Kaç dosya BAŞARILI, kaç KISMİ, kaç BAŞARISIZ?
+3. BAŞARISIZ olanların her biri için neden?
+4. Hangi sütunda kaç &quot;Raporlanmamış&quot; var? En çok boş kalan üç sütun
+   hangisi?
+5. BibTeX ile eşleşmeyen kaç PDF var? Hangileri?
+6. Aynı DOI&#x27;yi taşıyan iki satır var mı?
+7. Olanaksız değer denetimi: yorulma ömrü negatif ya da sıfır olan,
+   sıcaklığı 1.700 °C&#x27;yi (titanyum ergime noktası) aşan, numune
+   sayısı 1&#x27;den küçük olan satır var mı?</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Toplu çıkarımın denetim raporundan bir parça</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>TOPLU ÇIKARIM DENETİM RAPORU
+================================================================
+Klasör  : ~/arastirma/eklemeli-imalat-derleme/pdf/
+Tarih   : 2 Kasım 2026
+PDF     : 47        Excel satırı: 47        ✓ eşit
+
+DURUM DAĞILIMI
+  BAŞARILI  : 38   (%80,9)
+  KISMİ     :  6   (%12,8)
+  BAŞARISIZ :  3   (%6,4)
+
+BAŞARISIZ DOSYALAR
+  1-s2.0-S0924013619301234.pdf metin katmanı yok — sayfalar görüntü olarak
+  gömülmüş; yayıncı nüshası taranmış hâlde yüklenmiş
+  Chen2015_fatigue.pdf
+      dosya açılamadı — bozuk PDF yapısı (xref tablosu okunamıyor)
+  kim_2021_additive.pdf
+      metin katmanı var ama 2 sayfa — yalnızca genişletilmiş özet,
+      tam metin değil
+
+KISMİ OLANLAR — hangi alanlar boş kaldı
+  Patel2022.pdf          — gerilim_orani_R, numune_sayisi
+  Rodriguez2021.pdf      — yuzey_puruzlulugu_Ra_um
+  Tanaka2020.pdf         — numune_sayisi, yazar_kisitlari
+  Ozturk2023.pdf         — isil_islem_suresi_saat
+  Wang2019.pdf           — gerilim_orani_R
+  Fernandez2024.pdf      — yuzey_puruzlulugu_Ra_um, veri_acik_mi
+
+EN ÇOK BOŞ KALAN SÜTUNLAR
+  numune_sayisi          : 14/44 satırda &quot;Raporlanmamış&quot;  (%31,8)
+  gerilim_orani_R        : 11/44 satırda &quot;Raporlanmamış&quot;  (%25,0)
+  veri_acik_mi           :  9/44 satırda &quot;Raporlanmamış&quot;  (%20,5)
+
+BİBTEX EŞLEŞTİRME
+  DOI ile eşleşen        : 41
+  Başlık ile eşleşen     :  4
+  Eşleşmeyen             :  2
+      kim_2021_additive.pdf  (BibTeX&#x27;te karşılığı yok — klasöre
+                              elle eklenmiş olabilir)
+      ek_kaynak.pdf          (dosya adı künye taşımıyor)
+
+MÜKERRER DENETİMİ Aynı DOI&#x27;yi taşıyan satır: yok Başlığı ve yazar kadrosu
+birebir aynı olan çift: 1 Yilmaz2023.pdf ve 1-s2.0-S0924013623005678.pdf →
+aynı çalışmanın konferans ve dergi sürümü; DOI&#x27;leri farklı → ELLE KARAR
+GEREKİYOR
+
+OLANAKSIZ DEĞER DENETİMİ
+  Yorulma ömrü ≤ 0       : yok
+  Sıcaklık &gt; 1.700 °C    : yok
+  Numune sayısı &lt; 1      : yok
+  ✓ olanaksız değer bulunmadı
+
+GRAFİKTEN OKUNAMAYAN
+  7 makalede yorulma ömrü yalnız S-N eğrisinde verilmiş; sayıyla
+  raporlanmamış. Bu satırlarda &quot;yalnız şekilde&quot; yazıldı. Meta-analiz
+  yapacaksanız bu yedi makale için şekilden veri çıkarma aracı
+  (WebPlotDigitizer gibi) gerekir ve bu, Yöntem bölümünde
+  belirtilmelidir.</pre></div>
+
+<aside class="not "><span class="not-baslik">Bu raporun en değerli üç satırı</span><p><strong>"numune_sayisi : 14/44 satırda Raporlanmamış (%31,8)"</strong>
+Bu bir çıkarım eksiği değil, <strong>literatürün eksiği.</strong> Kırk dört
+makalenin on dördü kaç numuneyle çalıştığını yazmamış. Bu, kendi
+makalenizin Giriş bölümündeki boşluk cümlesidir: <em>"İncelenen 44
+çalışmanın 14'ü numune sayısını raporlamamaktadır."</em></p>
+<p><strong>"7 makalede yorulma ömrü yalnız S-N eğrisinde verilmiş"</strong>
+Meta-analiz planlıyorsanız bu yedi makale için ek iş var ve bunu
+şimdi biliyorsunuz, üç ay sonra değil.</p>
+<p><strong>"Başlığı ve yazar kadrosu birebir aynı olan çift: 1 → ELLE KARAR GEREKİYOR"</strong>
+Model mükerrer olduğunu tespit etti ama silmedi. Doğru davranış bu:
+konferans ve dergi sürümünden hangisinin alınacağı bir yöntem
+kararıdır, dosya işlemi değil.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Toplu çıkarımın doğruluk denetimi — örnekleme ile</span>
+<span class="arac">Literatür · çıkarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Toplu çıkarım bitti. Şimdi çıkarımın doğru olup olmadığını
+sınayacağız.
+
+NEDEN
+Kırk yedi satırı tek tek kontrol etmek, çıkarımı elle yapmakla aynı
+süreyi alır. Onun yerine rastgele bir örnek seçip o örnekte hata
+oranını ölçeriz. Hata oranı düşükse tabloya güvenilir; yüksekse
+çıkarım istemini düzeltip baştan koşturmak gerekir.
+
+GÖREV
+1. Excel&#x27;deki satırlardan rastgele [n] tanesini seç (en az 8, ya da
+   toplam satırın %20&#x27;si — hangisi büyükse). Tohumu sabitle ve yaz.
+2. Seçilen her satır için, ilgili PDF&#x27;i yeniden aç ve her alanı
+   belgeyle karşılaştır.
+3. Her alan için üç karardan birini ver:
+   DOĞRU / YANLIŞ / EKSİK (belgede var ama çıkarımda yok)
+
+ÇIKTI
+| Satır | Dosya | Alan | Tablodaki değer | Belgedeki değer | Karar |
+
+Yalnız YANLIŞ ve EKSİK olanları listele; DOĞRU olanları sayıyla özetle.
+
+SONRA
+— Denetlenen alan sayısı, doğru sayısı, hata oranı (%)
+— Hatalar hangi alanlarda yoğunlaşıyor?
+— Hata türü nedir: okuma hatası mı, birim karışıklığı mı, yanlış
+  sayfadan alma mı, uydurma mı?
+— Uydurma (belgede hiç olmayan bir değer) bulundu mu? Bu en ciddi
+  hata türüdür; bir tane bile varsa tabloya güvenilmez.
+
+SINIRLAR
+— Denetlediğin satırları kendin seçme; rastgele seç ve tohumu yaz.
+  Kolay olanı seçmek denetimi anlamsız kılar.
+— Tabloyu düzeltme; yalnız hatayı göster. Düzeltme kararını ben
+  vereceğim.
+— &quot;Yaklaşık doğru&quot; diye bir karar yok. 142 ile 142,3 farklıdır;
+  YANLIŞ yaz ve farkı göster.
+
+KARAR ÖLÇÜTÜ
+Hata oranı %5&#x27;in altındaysa tablo kullanılabilir, hatalar elle
+düzeltilir. %5–15 arasındaysa istemi düzeltip yeniden koştur.
+%15&#x27;in üstündeyse çıkarım yaklaşımı değişmeli: alanları azalt ya da
+PDF&#x27;leri bölümlere ayırarak işle.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Makine mühendisliği</span>
+<span class="ad">Toplu çıkarımın doğruluk denetimi — örnekleme ile</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>Toplu çıkarım bitti: 47 PDF&#x27;ten 44&#x27;ü işlendi. Excel&#x27;de 47 satır var — üçü
+BAŞARISIZ olarak açıldı, veri taşıyan 44 satır ve 20 sütun. Şimdi
+çıkarımın doğru olup olmadığını sınayacağız.
+
+NEDEN
+880 hücreyi tek tek kontrol etmek, çıkarımı elle yapmakla aynı
+süreyi alır. Onun yerine rastgele bir örnek seçip o örnekte hata
+oranını ölçeriz.
+
+GÖREV
+1. Excel&#x27;deki 44 satırdan rastgele 9 tanesini seç (%20,5). Tohumu
+   20261103 olarak sabitle ve seçilen satır numaralarını yaz.
+2. Seçilen her satır için ilgili PDF&#x27;i yeniden aç ve her alanı
+   belgeyle karşılaştır.
+3. Her alan için üç karardan birini ver:
+   DOĞRU / YANLIŞ / EKSİK (belgede var ama çıkarımda yok)
+
+BU ALANDA ÖZELLİKLE BAKILACAKLAR
+— Isıl işlem sıcaklığı: Celsius mu alınmış? Bazı makaleler
+  Fahrenheit ya da Kelvin kullanıyor.
+— Yorulma ömrü: çevrim sayısı mı, logaritma mı? Dönüştürüldüyse
+  doğru dönüştürülmüş mü?
+— Gerilim oranı R: −1 ile 0,1 çok farklı yükleme koşullarıdır;
+  karıştırılmış mı?
+— Numune sayısı: &quot;üç numune&quot; ile &quot;üç koşulda üçer numune&quot; aynı
+  değil. Hangisi alınmış?
+
+ÇIKTI
+| Satır | Dosya | Alan | Tablodaki değer | Belgedeki değer | Karar |
+
+Yalnız YANLIŞ ve EKSİK olanları listele; DOĞRU olanları sayıyla
+özetle.
+
+SONRA
+— Denetlenen alan sayısı, doğru sayısı, hata oranı (%)
+— Hatalar hangi alanlarda yoğunlaşıyor?
+— Hata türü nedir: okuma hatası mı, birim karışıklığı mı, yanlış
+  sayfadan alma mı, uydurma mı?
+— Uydurma (belgede hiç olmayan bir değer) bulundu mu? Bu en ciddi
+  hata türüdür; bir tane bile varsa tabloya güvenilmez.
+
+SINIRLAR
+— Denetlediğin satırları kendin seçme; rastgele seç ve tohumu yaz.
+— Tabloyu düzeltme; yalnız hatayı göster.
+— &quot;Yaklaşık doğru&quot; diye bir karar yok. 10⁵ ile 1,2 × 10⁵ farklıdır;
+  YANLIŞ yaz ve farkı göster.
+
+KARAR ÖLÇÜTÜ
+Hata oranı %5&#x27;in altındaysa tablo kullanılabilir, hatalar elle
+düzeltilir. %5–15 arasındaysa istemi düzeltip yeniden koştur.
+%15&#x27;in üstündeyse çıkarım yaklaşımı değişmeli.</pre></div>
+
+<aside class="not ipucu"><span class="not-baslik">Neden örnekleme yetiyor</span><p>Kırk dört işlenmiş makale × yirmi alan = 880 hücre. Hepsini denetlemek
+çıkarımı elle yapmak demektir ve toplu işin anlamı kalmaz.</p>
+<p>Dokuz makalelik rastgele bir örnekte (yaklaşık 180 hücre) hiç hata
+çıkmazsa, gerçek hata oranının %2'nin altında olduğunu makul
+güvenle söyleyebilirsiniz. Bir iki hata çıkarsa hangi alanda
+yoğunlaştığını görür, o alanı tek tek kontrol edersiniz.</p>
+<p>Bu, kalite kontrolde kullanılan standart örnekleme mantığıdır.
+Yöntem bölümünde şöyle yazılır: <em>"Çıkarım doğruluğu, rastgele seçilen 9 çalışma (%20,5) üzerinde ikinci bir okumayla sınanmış ve 180 alanın 178'i doğru bulunmuştur (hata oranı %1,1)."</em></p></aside>
+<h2 id="sentez-matrisi">Sentez matrisi</h2>
+<p>Her makale için yukarıdaki çıkarım yapıldıktan sonra, "konsolide
+satır"lar bir tabloda birleştirilir. Bu tablo makalenin İlgili
+Çalışmalar bölümünün iskeletidir.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Çıkarımlardan sentez matrisi ve boşluk analizi</span>
+<span class="arac">Literatür · sentez</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Ekte [n] makaleden yaptığım yapılandırılmış çıkarımlar var. Her biri
+ayrı bir dosya; hepsi aynı şablonla üretildi.
+
+GÖREV — iki bölüm
+
+BÖLÜM 1 — SENTEZ MATRİSİ
+Bütün çalışmaları tek bir tabloda topla.
+Sütunlar: Çalışma (yazar, yıl) | Veri (kaynak, n) | Özellik kümesi |
+Model | Doğrulama düzeni | En iyi sonuç | Veri açık mı
+
+BÖLÜM 2 — BOŞLUK ANALİZİ
+Matrisi dört eksende tara ve her eksende ne YAPILMADIĞINI göster:
+  (a) Veri — hangi veri türü/kaynağı hiç kullanılmamış
+  (b) Yöntem — hangi yaklaşım denenmemiş
+  (c) Doğrulama — raporlama sıkılığında ortak eksik ne
+  (d) Bağlam — hangi uygulama senaryosu çalışılmamış
+
+Her boşluk için şunu ver:
+  — Boşluğun tanımı, tek cümle
+  — Bu boşluğu gösteren kanıt: matristeki hangi sütunda kaç çalışma
+    neyi raporlamıyor (sayıyla)
+  — Boşluğu kapatmanın değeri, tek cümle
+
+SINIRLAR
+— Verdiğim çıkarımlarda olmayan hiçbir çalışmadan söz etme.
+— &quot;Literatürde bu konu yeterince çalışılmamıştır&quot; gibi kanıtsız
+  genelleme yapma. Her boşluk iddiası bir sayıyla desteklenmeli.
+— Boşluk bulamadığın eksende &quot;bu eksende belirgin bir boşluk yok&quot;
+  yaz. Boşluk uydurma.
+
+DENETİM
+Matristeki satır sayısı verdiğim çıkarım sayısına eşit mi? Yaz.
+Her boşluk iddiasının yanında bir sayı var mı? Kontrol et ve
+eksik olanı belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Makine mühendisliği</span>
+<span class="ad">Çıkarımlardan sentez matrisi ve boşluk analizi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Ekte 44 makaleden yaptığım yapılandırılmış çıkarımlar var:
+eklemeli_imalat_cikarim.xlsx. Hepsi aynı şablonla üretildi ve
+doğruluk denetiminden geçti (hata oranı %1,1).
+
+ARAŞTIRMA SORUMUZ
+Eklemeli imalatla üretilen Ti-6Al-4V parçalarda ısıl işlem, yorulma
+ömrünü ne ölçüde değiştiriyor?
+
+GÖREV — iki bölüm
+
+BÖLÜM 1 — SENTEZ MATRİSİ
+Bütün çalışmaları tek bir tabloda topla.
+Sütunlar: Çalışma (yazar, yıl) | Üretim yöntemi | Isıl işlem
+(sıcaklık/süre) | Karşılaştırma grubu | Numune sayısı |
+Yorulma deneyi (tür, R oranı) | Ana sonuç | Veri açık mı
+
+Satırları ısıl işlem sıcaklığına göre sırala; böylece sıcaklık
+aralıklarındaki boşluk görünür olur.
+
+BÖLÜM 2 — BOŞLUK ANALİZİ
+Matrisi dört eksende tara ve her eksende ne YAPILMADIĞINI göster:
+  (a) Malzeme ve üretim — hangi yöntem/parametre hiç denenmemiş
+  (b) Isıl işlem koşulu — hangi sıcaklık–süre bileşimi boş
+  (c) Raporlama — ortak eksik ne (numune sayısı, standart sapma,
+      gerilim oranı)
+  (d) Karşılaştırma tasarımı — kaç çalışma birden fazla ısıl işlem
+      koşulunu aynı düzende karşılaştırmış
+
+Her boşluk için şunu ver:
+  — Boşluğun tanımı, tek cümle
+  — Bu boşluğu gösteren kanıt: matristeki hangi sütunda kaç çalışma
+    neyi raporlamıyor (sayıyla)
+  — Boşluğu kapatmanın değeri, tek cümle
+
+SINIRLAR
+— Verdiğim çıkarımlarda olmayan hiçbir çalışmadan söz etme.
+— &quot;Literatürde bu konu yeterince çalışılmamıştır&quot; gibi kanıtsız
+  genelleme yapma. Her boşluk iddiası bir sayıyla desteklenmeli.
+— Boşluk bulamadığın eksende &quot;bu eksende belirgin bir boşluk yok&quot;
+  yaz. Boşluk uydurma.
+— Bir boşluğun &quot;önemli&quot; olduğunu söylemek için gerekçe göster;
+  bazı boşluklar kimse ilgilenmediği için boştur.
+
+DENETİM
+— Matristeki satır sayısı verdiğim çıkarım sayısına (44) eşit mi?
+— Her boşluk iddiasının yanında bir sayı var mı? Eksik olanı
+  belirt.
+— Boşluk analizinden çıkan cümlelerden hangisi, özgün değer
+  bölümünde doğrudan kullanılabilir? En güçlü üçünü işaretle.</pre></div>
+<h2 id="atif-dogrulama">Atıf doğrulama</h2>
+<p>Kaynaklar veri tabanından geldiği için künyelerin gövdesi güvenilirdir;
+yine de dışa aktarmada kısalan başlıklar, eksik sayfa aralıkları ve yanlış
+cilt numaraları görülür. Buna bir de yazım sırasında metne elle eklenen ya
+da eski bir taslaktan taşınan künyeler eklenir. Gönderimden önce hepsi doğrulanır.</p>
+<div class="kod-blok">
+<header><span class="dil">bash</span>
+<span>Bir DOI&#x27;yi kaynağından doğrulamak — içerik görüşmesi</span></header>
+<pre><code># DOI&#x27;nin gerçek künyesini doğrudan kayıt otoritesinden alır.
+# Tarayıcıda açıp bakmaktan farkı: makine okunur veri döner,
+# başlık karşılaştırması gözle değil dizgi karşılaştırmasıyla yapılır.
+
+curl -sL -H &quot;Accept: application/vnd.citationstyles.csl+json&quot; \
+     &quot;https://doi.org/10.24432/C5S02S&quot; | python3 -m json.tool | head -20</code></pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Gerçek çıktı</span>
+<span class="ad">Yukarıdaki komutun gerçek çıktısı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>&quot;title&quot;: &quot;Turkiye Student Evaluation&quot;,
+&quot;author&quot;: [ { &quot;family&quot;: &quot;Ernest Fokoue&quot; } ],
+&quot;issued&quot;: { &quot;date-parts&quot;: [ [ 2013 ] ] },
+&quot;publisher&quot;: &quot;UCI Machine Learning Repository&quot;,
+&quot;DOI&quot;: &quot;10.24432/C5S02S&quot;</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Bu kursu hazırlarken yaptığım hata</span><p>Bu iki veri setinin DOI'lerini ilk yazdığımda <strong>ikisini de uydurmuştum.</strong>
+<code>10.24432/C5C023</code> ve <code>10.24432/C5FQ8D</code> — ikisi de biçim olarak kusursuz,
+ikisi de UCI'nin gerçek DOI ön ekini taşıyor, ikisi de inandırıcı.
+Yukarıdaki komutu koşturunca ikisi de <strong>"DOI Not Found"</strong> döndü.
+Gerçek künyeleri UCI'nin kendi sayfalarından aldım: eğitim değerlendirme
+veri seti için <code>10.24432/C5S02S</code>, kimlik avı veri seti için ise UCI
+sayfasının gösterdiği kaynak yayının DOI'si olan
+<code>10.1016/j.cose.2023.103545</code>.</p>
+<p>Bunu burada anlatıyorum çünkü kursun en soyut uyarısının en somut
+kanıtı bu: uydurma künye, uydurma olduğu anlaşılmayacak kadar doğru
+görünür. Tek çözüm, her künyeyi kaynağından doğrulamaktır.</p></aside>
+
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Kaynakça denetimi</span>
+<span class="arac">Yayın öncesi</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Ekte makalemin kaynakçası var: [n] künye.
+
+GÖREV
+Her künyeyi biçimsel tutarlılık açısından denetle ve doğrulanması
+gereken alanları işaretle.
+
+HER KÜNYE İÇİN KONTROL ET
+1. Alan eksikliği — yazar, yıl, başlık, yayın yeri, cilt/sayı,
+   sayfa, DOI; hangisi eksik?
+2. Biçim tutarlılığı — aynı stilin bütün künyelerde uygulanması
+3. İç tutarlılık — yıl ile cilt numarası uyumlu mu, DOI ön eki
+   yayıncıyla uyumlu mu
+4. Metin içi karşılığı — [ayrıca makale metnini de veriyorum]
+   kaynakçada olup metinde geçmeyen, metinde geçip kaynakçada
+   olmayan künyeler
+
+ÇIKTI
+| # | Künye (kısaltılmış) | Sorun türü | Ne yapılmalı |
+
+SINIRLAR
+— Bir künyenin GERÇEK olup olmadığını söyleyemezsin; bunu
+  bilmiyorsun. Yalnız biçimsel sorunları işaretle.
+— Künyeyi düzeltme, yalnız sorunu göster.
+— Eksik alanı tamamlama. Eksikse &quot;eksik&quot; yaz.
+
+DENETİM
+Sonunda: doğrulanması gereken DOI&#x27;lerin listesini tek sütun hâlinde
+ver; bu listeyi curl ile tek tek koşturacağım.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tarih · çok dilli kaynakça</span>
+<span class="ad">Kaynakça denetimi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>KAYNAK
+Ekte makalemin kaynakçası var: 63 künye. Ayrıca makalenin tam
+metnini de veriyorum.
+
+KAYNAKÇANIN ÖZELLİĞİ
+Dört dilde kaynak var: Türkçe (28), İngilizce (21), Osmanlıca
+basma eser (9), Arapça (5). Stil: Chicago notes-bibliography.
+Arşiv belgeleri de kaynakçada (BOA fon kodlarıyla).
+
+GÖREV
+Her künyeyi biçimsel tutarlılık açısından denetle ve doğrulanması
+gereken alanları işaretle.
+
+HER KÜNYE İÇİN KONTROL ET
+1. Alan eksikliği — yazar, yıl, başlık, yayın yeri, cilt/sayı,
+   sayfa, DOI; hangisi eksik?
+2. Biçim tutarlılığı — aynı stilin bütün künyelerde uygulanması
+3. İç tutarlılık — yıl ile cilt numarası uyumlu mu
+4. Metin içi karşılığı — kaynakçada olup metinde geçmeyen,
+   metinde geçip kaynakçada olmayan künyeler
+
+BU KAYNAKÇAYA ÖZGÜ EK KONTROLLER
+5. Harf çevrimi tutarlılığı — aynı Osmanlıca eser adı iki ayrı
+   yerde farklı çevrilmiş mi? (salnâme / salname / sâlnâme)
+6. Hicrî–milâdî tarih — hicrî tarih verilen künyelerde milâdî
+   karşılığı parantez içinde var mı, tutarlı mı?
+7. Arşiv künyeleri — fon kodu, dosya ve gömlek numarası eksiksiz
+   mi? Chicago stilinde arşiv belgesi biçimi tutturulmuş mu?
+8. Arapça eser adları — harf çevrimi sistemi (İA mı, DİA mı, LoC
+   mu) kaynakça boyunca aynı mı?
+
+ÇIKTI
+| # | Künye (kısaltılmış) | Sorun türü | Ne yapılmalı |
+
+SINIRLAR
+— Bir künyenin GERÇEK olup olmadığını söyleyemezsin; bunu
+  bilmiyorsun. Yalnız biçimsel sorunları işaretle.
+— Künyeyi düzeltme, yalnız sorunu göster.
+— Eksik alanı tamamlama. Eksikse &quot;eksik&quot; yaz.
+— Harf çevrimi konusunda hangi sistemin &quot;doğru&quot; olduğuna karar
+  verme; yalnız TUTARSIZLIĞI göster. Sistem seçimi benim kararım.
+
+DENETİM
+Sonunda:
+— Kaç künyede en az bir sorun bulundu?
+— Harf çevrimi tutarsızlığı kaç eserde var, hangileri?
+— Doğrulanması gereken DOI&#x27;lerin listesini tek sütun hâlinde ver;
+  bu listeyi curl ile tek tek koşturacağım.</pre></div>
+
+<aside class="not "><span class="not-baslik">Dört dilli kaynakçanın kendine özgü sorunu</span><p>Kalıptaki dört kontrol her kaynakçada işe yarar. Doldurulmuş örnekte
+eklenen dört kontrol ise yalnız bu kaynakçaya özgü ve en çok iş
+gören onlar.</p>
+<p>Özellikle beşincisi: <strong>aynı eser adının iki ayrı yerde farklı
+çevrilmesi.</strong> Bu hata gözle yakalanmaz çünkü iki künye kaynakçanın
+farklı sayfalarındadır. Hakem yakalarsa, bütün kaynakçanın özensiz
+olduğu izlenimi doğar.</p>
+<p>Son sınır da önemli: <em>"hangi sistemin doğru olduğuna karar verme."</em>
+Harf çevrimi sistemi bir alan tercihidir ve dergiye göre değişir.
+Model bir sistem dayatırsa kaynakçanızı derginin istemediği bir
+biçime çevirmiş olursunuz.</p></aside>
+<h2 id="literatur-bolumunu-yazmak">Literatür bölümünü yazmak</h2>
+<p>Literatür bölümü, sentez matrisinden yazılır — makalelerden değil.
+Matris yoksa bölüm "A şunu yaptı, B bunu yaptı" listesine döner.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Sentez matrisinden İlgili Çalışmalar bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında deneyimli bir araştırmacı olarak, bir dergi makalesinin
+İlgili Çalışmalar bölümünü yazıyorsun.
+
+KAYNAK
+— Ekte sentez matrisi: [n] çalışma, yedi sütun
+— Ekte boşluk analizi: dört eksende tanımlanmış boşluklar
+— Bizim çalışmamızın özeti: [3-4 cümle]
+
+GÖREV
+İlgili Çalışmalar bölümünü yaz.
+
+YAPI
+— Üç ya da dört alt başlık. Alt başlıklar YAKLAŞIMLARA göre olsun,
+  kronolojiye ya da yazarlara göre değil.
+— Her alt başlık içinde çalışmalar tek tek değil, ortak özelliklerine
+  göre gruplanarak ele alınsın.
+— Bölümün son paragrafı boşluk analizine bağlansın ve bizim
+  çalışmamızın nereye oturduğunu söylesin.
+
+UZUNLUK
+900–1.200 kelime.
+
+ATIF KURALI
+Her atıfı (Yazar, Yıl) biçiminde ver. **Yalnız matriste bulunan
+çalışmalara atıf yap.** Matriste olmayan hiçbir çalışmadan söz etme,
+hiçbir künye üretme.
+
+ÜSLUP
+— Resmî akademik Türkçe
+— &quot;X çalışmasında Y yapılmıştır&quot; kalıbını arka arkaya kullanma;
+  cümle yapısını değiştir
+— Bir çalışmayı överken ya da eleştirirken gerekçeyi matristeki
+  sütundan al
+— Abartılı nitelemelerden kaçın: &quot;çığır açan&quot;, &quot;son derece önemli&quot;
+  gibi sıfatlar kullanma
+
+SINIRLAR
+— Matriste olmayan sayı yazma.
+— &quot;Literatürde bir boşluk bulunmaktadır&quot; cümlesini kanıtsız kurma;
+  boşluğu matristeki sayıya dayandır.
+— Kendi çalışmamızı övme; nereye oturduğunu söyle, yeter.
+
+DENETİM
+Bölümün sonuna, metinde atıf yapılan bütün çalışmaların listesini
+çıkar. Bu listedeki her çalışmanın matriste bulunduğunu doğrula ve
+sayıyı yaz: &quot;Metinde atıf yapılan [n] çalışmanın tamamı matristedir.&quot;
+Değilse hangisinin olmadığını belirt.</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Makine mühendisliği</span>
+<span class="ad">Sentez matrisinden İlgili Çalışmalar bölümü</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında deneyimli bir araştırmacı olarak, bir dergi makalesinin
+İlgili Çalışmalar bölümünü yazıyorsun.
+
+KAYNAK
+— Ekte sentez matrisi: 44 çalışma, sekiz sütun
+— Ekte boşluk analizi: dört eksende tanımlanmış boşluklar
+— Bizim çalışmamızın özeti: Eklemeli imalatla (SLM) üretilen
+  Ti-6Al-4V numunelerde dört farklı ısıl işlem koşulu (650, 750,
+  850, 950 °C; ikişer saat) aynı deney düzeninde karşılaştırıldı.
+  Koşul başına on numune, R = 0,1 eksenel yorulma deneyi. Bütün
+  ham veri açık erişime sunuldu.
+
+GÖREV
+İlgili Çalışmalar bölümünü yaz.
+
+YAPI
+— Üç alt başlık. Alt başlıklar YAKLAŞIMLARA göre olsun:
+  (1) işlem görmemiş numunelerle karşılaştırma yapan çalışmalar,
+  (2) tek bir ısıl işlem koşulunu inceleyen çalışmalar,
+  (3) birden çok koşulu karşılaştıran çalışmalar.
+— Her alt başlık içinde çalışmalar tek tek değil, ortak
+  özelliklerine göre gruplanarak ele alınsın.
+— Bölümün son paragrafı boşluk analizine bağlansın ve bizim
+  çalışmamızın nereye oturduğunu söylesin.
+
+UZUNLUK
+900–1.200 kelime.
+
+ATIF KURALI
+Her atıfı (Yazar, Yıl) biçiminde ver. **Yalnız matriste bulunan
+çalışmalara atıf yap.** Matriste olmayan hiçbir çalışmadan söz etme.
+
+ÜSLUP
+— Resmî akademik Türkçe
+— &quot;X çalışmasında Y yapılmıştır&quot; kalıbını arka arkaya kullanma
+— Bir çalışmayı överken ya da eleştirirken gerekçeyi matristeki
+  sütundan al
+— Abartılı nitelemelerden kaçın
+
+BU BÖLÜME ÖZGÜ İSTEK
+Sıcaklık aralıklarını karşılaştırırken sayısal ol. &quot;Yüksek
+sıcaklıkta tavlama&quot; yerine &quot;850 °C ve üstünde tavlama&quot; yaz;
+matristeki değerleri kullan. Okur hangi aralıkta ne bulunduğunu
+tablodan değil metinden de izleyebilmeli.
+
+SINIRLAR
+— Matriste olmayan sayı yazma.
+— &quot;Literatürde bir boşluk bulunmaktadır&quot; cümlesini kanıtsız kurma.
+— Kendi çalışmamızı övme; nereye oturduğunu söyle, yeter.
+— Numune sayısı raporlamayan çalışmaları eleştirirken suçlayıcı
+  olma; olguyu bildir (&quot;on dört çalışma numune sayısını
+  raporlamamaktadır&quot;) ve bunun sentezi nasıl sınırladığını söyle.
+
+DENETİM
+Bölümün sonuna, metinde atıf yapılan bütün çalışmaların listesini
+çıkar. Her çalışmanın matriste bulunduğunu doğrula ve sayıyı yaz:
+&quot;Metinde atıf yapılan [n] çalışmanın tamamı matristedir.&quot;</pre></div>
+<h2 id="bu-bolumden-alinacaklar">Bu bölümden alınacaklar</h2>
+<ol class="adimlar"><li><p>Arama veri tabanında yapılır, indirme sizin tarayıcınızdan olur,
+model yalnız indirdiğiniz dosya üzerinde çalışır.</p></li><li><p>Arama dizgisi PICOC'tan türer: her parça bir kavram kümesi, küme içi
+OR, kümeler arası AND.</p></li><li><p>Veri tabanlarının sözdizimi farklıdır. Web of Science'ta tırnak
+içindeki yıldız taramayı sessizce boşa çıkarır.</p></li><li><p>Seçim isteminde üçüncü bir seçenek — BELİRSİZ — modeli tahmin
+yürütmekten alıkoyar.</p></li><li><p>Çıkarım isteminin en değerli parçası "bulamadıklarını listele"
+bölümüdür; makalenin eksikleri sizin katkınızı yazar.</p></li><li><p>Her DOI kaynağından doğrulanır. Bu kursu hazırlarken iki DOI uydurdum
+ve ikisi de kusursuz görünüyordu.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="04-soru.html"><span class="yon">← Önceki</span><span class="ad">Fikirden araştırma sorusuna</span></a><a class="sag" href="06-veri.html"><span class="yon">Sonraki →</span><span class="ad">Veri: kaynaklar, anket tasarımı, temizleme</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js" defer></script>
+</body>
+</html>
