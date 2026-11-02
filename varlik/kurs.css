@@ -840,3 +840,19 @@ body.yan-gizli .govde { padding-left: clamp(1rem, 6vw, 4rem);
   .cerez .dugmeler { width: 100%; }
   .cerez button { flex: 1; }
 }
+
+/* Kapaktaki büyük eylem bağlantısı — atölye sunumuna geçiş */
+.buyuk-bag { margin: 1.1rem 0 1.3rem; }
+.buyuk-bag a {
+  display: inline-block;
+  font-family: var(--arayuz);
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: var(--lacivert);
+  padding: .7em 1.4em;
+  border-radius: .4rem;
+  box-shadow: var(--golge-1);
+}
+.buyuk-bag a:hover { background: var(--lacivert-acik); }

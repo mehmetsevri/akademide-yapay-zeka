@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="585.845261pt" height="300.7237pt" viewBox="0 0 585.845261 300.7237" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T04:10:26.436655</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 300.7237 
+L 585.845261 300.7237 
+L 585.845261 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 151.613203 249.912 
+L 575.693203 249.912 
+L 575.693203 39.24 
+L 151.613203 39.24 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 151.613203 88.336 
+L 176.269017 88.336 
+L 176.269017 48.816 
+L 151.613203 48.816 
+z
+" clip-path="url(#p9dd9fda141)" style="fill: #4c8b5a"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 151.613203 164.336 
+L 453.400366 164.336 
+L 453.400366 124.816 
+L 151.613203 124.816 
+z
+" clip-path="url(#p9dd9fda141)" style="fill: #b4474e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 151.613203 240.336 
+L 208.814691 240.336 
+L 208.814691 200.816 
+L 151.613203 200.816 
+z
+" clip-path="url(#p9dd9fda141)" style="fill: #c9893a"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 151.613203 249.912 
+L 151.613203 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mcd900300c8" d="M 0 0 
+L 0 3.5 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcd900300c8" x="151.613203" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="151.613203" y="264.037" transform="rotate(-0 151.613203 264.037)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 200.924831 249.912 
+L 200.924831 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mcd900300c8" x="200.924831" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="200.924831" y="264.037" transform="rotate(-0 200.924831 264.037)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 250.236459 249.912 
+L 250.236459 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mcd900300c8" x="250.236459" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="250.236459" y="264.037" transform="rotate(-0 250.236459 264.037)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 299.548087 249.912 
+L 299.548087 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mcd900300c8" x="299.548087" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="299.548087" y="264.037" transform="rotate(-0 299.548087 264.037)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 348.859715 249.912 
+L 348.859715 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mcd900300c8" x="348.859715" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="348.859715" y="264.037" transform="rotate(-0 348.859715 264.037)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 398.171343 249.912 
+L 398.171343 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mcd900300c8" x="398.171343" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="398.171343" y="264.037" transform="rotate(-0 398.171343 264.037)">50</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 447.482971 249.912 
+L 447.482971 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mcd900300c8" x="447.482971" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="447.482971" y="264.037" transform="rotate(-0 447.482971 264.037)">60</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 496.794598 249.912 
+L 496.794598 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mcd900300c8" x="496.794598" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="496.794598" y="264.037" transform="rotate(-0 496.794598 264.037)">70</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_17">
+      <path d="M 546.106226 249.912 
+L 546.106226 39.24 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mcd900300c8" x="546.106226" y="249.912" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="546.106226" y="264.037" transform="rotate(-0 546.106226 264.037)">80</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #2a2a2a" x="363.653203" y="278.287" transform="rotate(-0 363.653203 278.287)">Yapay zekâ ürünü diye yanlış işaretlenme oranı</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_19">
+      <path d="M 151.613203 68.576 
+L 575.693203 68.576 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <defs>
+       <path id="m184affb8ff" d="M 0 0 
+L -3.5 0 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m184affb8ff" x="151.613203" y="68.576" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(56.871797 67.384047)">Ana dili İngilizce olan</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(74.921797 78.784047)">öğrenci metinleri</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_21">
+      <path d="M 151.613203 144.576 
+L 575.693203 144.576 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m184affb8ff" x="151.613203" y="144.576" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(40.019688 143.384047)">Ana dili İngilizce olmayan</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(79.366016 154.784047)">TOEFL metinleri</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_23">
+      <path d="M 151.613203 220.576 
+L 575.693203 220.576 
+" clip-path="url(#p9dd9fda141)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m184affb8ff" x="151.613203" y="220.576" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(57.876719 218.9135)">Aynı TOEFL metinleri,</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(8.64 230.3135)">sözcük dağarcığı zenginleştirilmiş</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 151.613203 249.912 
+L 151.613203 39.24 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 151.613203 249.912 
+L 575.693203 249.912 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 11px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="182.186412" y="62.206" transform="rotate(-0 182.186412 62.206)">%5,0</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="182.186412" y="82.736" transform="rotate(-0 182.186412 82.736)">sekizinci sınıf kompozisyonları, n = 88</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 11px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="459.317761" y="138.206" transform="rotate(-0 459.317761 138.206)">%61,2</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="459.317761" y="158.736" transform="rotate(-0 459.317761 158.736)">n = 91, yedi dedektörün ortalaması</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 11px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #2a2a2a" x="214.732087" y="214.206" transform="rotate(-0 214.732087 214.206)">%11,6</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="214.732087" y="234.736" transform="rotate(-0 214.732087 234.736)">metin insan yazısı; yalnız dili değişti</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(151.613203 18.84)">Dedektörler yapay zekâyı değil, dil çeşitliliğini ölçüyor</text>
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(151.613203 33.24)">Aynı insan metni, yalnız sözcükleri zenginleşince aklandı</text>
+   </g>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="85.949203" y="290.0837" transform="rotate(-0 85.949203 290.0837)">Kaynak: Liang ve ark., Patterns (2023) · yedi ticari dedektör · 91 TOEFL ve 88 ana dili İngilizce metin</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9dd9fda141">
+   <rect x="151.613203" y="39.24" width="424.08" height="210.672"/>
+  </clipPath>
+ </defs>
+</svg>

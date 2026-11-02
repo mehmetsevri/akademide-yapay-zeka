@@ -1,0 +1,1458 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akademide Üretken Yapay Zekâ — uygulamalı atölye</title>
+<meta name="description" content="Fikirden hakem cevabına kadar araştırma sürecinde üretken yapay zekâ. Altı saatlik uygulamalı atölye.">
+<link rel="stylesheet" href="varlik/yazitipi.css">
+<link rel="stylesheet" href="varlik/atolye.css?v=b1eab8f75c">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="ilerleme"><div class="dolu" id="ilerleme"></div></div>
+
+<header class="ust">
+  <span class="marka">Akademide Üretken Yapay Zekâ</span>
+  <span class="bolum-ad" id="bolumAd"></span>
+  <span class="sayac"><b id="simdiki">1</b> / 88</span>
+  <button type="button" id="genelBakisDugme" title="Genel bakış (O)"
+          aria-label="Genel bakış">▦</button>
+  <button type="button" id="tamEkranDugme" title="Tam ekran (F)"
+          aria-label="Tam ekran">⛶</button>
+</header>
+
+<main id="sunum">
+<section data-sira="0" data-bolum="Açılış" data-kisa="Kapak" class="slayt kapak" data-tur="kapak">
+<div class="ic">
+  <p class="ust">Altı saatlik uygulamalı atölye · 2026</p>
+  <h1>Akademide üretken yapay zekâ</h1>
+  <p class="alt"><p>Fikirden hakem cevabına kadar bütün araştırma süreci.</p>
+<p>Her istem gerçekten koşuldu. Her çıktı gerçek.</p></p>
+  <div class="imza"><p><strong>Dr. Mehmet Sevri</strong> · Recep Tayyip Erdoğan Üniversitesi</p>
+<p>Bilgisayar Mühendisliği Bölümü · AISEC Lab</p></div>
+</div></section>
+<section data-sira="1" data-bolum="Açılış" data-kisa="Bugün ne yapacağız" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Program</p>
+  <h2>Altı saat, altı durak</h2>
+  <div class="govde"><table>
+<thead>
+<tr>
+<th></th>
+<th>Konu</th>
+<th>Süre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Durum: ne oldu, ne bekleniyor</td>
+<td>30 dk</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Model nasıl çalışır · etik ve beyan</td>
+<td>45 dk</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>İstem yazmanın altı parçası</td>
+<td>60 dk</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Soru, literatür, veri</td>
+<td>75 dk</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Analiz, şekil, tablo</td>
+<td>75 dk</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Makale, proje, hakemlik, ileri konular</td>
+<td>75 dk</td>
+</tr>
+</tbody>
+</table>
+<p>Her durakta bir <strong>uygulama</strong> var. Kendi çalışmanızla yapın — örnek
+veri de hazır.</p></div>
+</div></section>
+<section data-sira="2" data-bolum="Açılış" data-kisa="Üç kural" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Atölyenin kuralları</p>
+  <h2>Üç kural</h2>
+  <div class="govde"><ol>
+<li>
+<p><strong>Çıktı gösterilmeden istem öğretilmez.</strong> Bugün göreceğiniz her
+   istemin gerçek yanıtı da ekranda olacak — beğenmediklerimiz dâhil.</p>
+</li>
+<li>
+<p><strong>Sayı nereden geldiyse oradan gösterilir.</strong> Slaytlardaki her
+   istatistik, yanındaki veri ve kodla yeniden üretilebilir.</p>
+</li>
+<li>
+<p><strong>Araç sorumluluğu devralmaz.</strong> Metne imzanızı atıyorsanız her
+   cümlesini savunmayı kabul ediyorsunuz demektir.</p>
+</li>
+</ol></div>
+</div></section>
+<section data-sira="3" data-bolum="Açılış" data-kisa="Materyal nerede" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Materyal</p>
+  <h2>Her şey açık ve indirilebilir</h2>
+  <div class="govde"><p>Atölyenin dayandığı kurs tamamen açık erişimde:</p>
+<p><strong>mehmetsevri.github.io/akademide-yapay-zeka</strong></p>
+<p>İçinde ne var: 15 bölüm · 53 istem kalıbı, hepsi koşuldu ·
+50 doldurulmuş örnek · 48 gerçek çıktı · 34 şekil ·
+20 çalıştırılabilir Python betiği · 5 veri seti, 12.115 satır.</p>
+<p>Bugün bu akışı izleyeceğiz. Atlamak istediğiniz yer olursa söyleyin —
+slaytlar arasında ızgara görünümüyle (<strong>O</strong> tuşu) hızla geçebiliriz.</p></div>
+</div></section>
+<section data-sira="4" data-bolum="1 · Durum" data-kisa="BÖLÜM 1 · Durum" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">01</span>
+  <h2>Ne oldu, ne bekleniyor</h2>
+  <p class="alt"><p>Üretken yapay zekâ akademik yayıncılığa gireli üç yıl oldu.</p>
+<p>Rakamlar ne söylüyor?</p></p>
+  <p class="sure">30 dakika</p>
+</div></section>
+<section data-sira="5" data-bolum="1 · Durum" data-kisa="Üç rakam" class="slayt rakam-slayt" data-tur="rakam">
+<div class="ic">
+  <h2>Önce üç rakam</h2>
+  <div class="rakamlar"><div class="rk"><b>%84</b><span><p>araştırmacı bir işinde yapay zekâ aracı kullanıyor — 2024'te %57'ydi</p></span></div><div class="rk"><b>%62</b><span><p>araştırma ve yayın görevlerinde kullanıyor — 2024'te %45</p></span></div><div class="rk"><b>&lt;%33</b><span><p>yapay zekânın insanı aştığına inanıyor — 2024'te %53'tü</p></span></div></div>
+  <p class="kaynak"><p>Wiley ExplanAItions, 2024 ve 2025 dalgaları · iki ayrı kesit. Son değer üst sınırdır: rapor kesin oran vermiyor.</p></p>
+</div></section>
+<section data-sira="6" data-bolum="1 · Durum" data-kisa="Kullanım arttı, güven azaldı" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Bir yılda ne değişti</h2>
+  <figure><img src="varlik/sekil/a01_kullanim_artisi.svg" alt="Araştırmacı anketlerinde yapay zekâ kullanımının 2024&#x27;ten 2025&#x27;e değişimi" loading="lazy">
+  <figcaption><p>Kullanım yükselirken aracın yeteneğine duyulan güven geriledi. Beklenti gerçekçileşiyor.</p></figcaption></figure>
+</div></section>
+<section data-sira="7" data-bolum="1 · Durum" data-kisa="Gönderim patlaması" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Gönderim hacmi iki yılda yaklaşık %40 arttı</h2>
+  <figure><img src="varlik/sekil/d01_gonderim.svg" alt="Elsevier ve Springer Nature gönderim sayıları ile küresel yayın hacmi" loading="lazy">
+  <figcaption><p>Yapay zekâ bu eğilimi yaratmadı — küresel üretim zaten yükseliyordu. Yaptığı şey hızlandırmak.</p></figcaption></figure>
+</div></section>
+<section data-sira="8" data-bolum="1 · Durum" data-kisa="Beyan açığı" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Kullanım yaygın, beyan neredeyse yok</h2>
+  <figure><img src="varlik/sekil/d02_llm_izi.svg" alt="Alanlara göre LLM izi oranları ve açık beyan oranı" loading="lazy">
+  <figcaption><p>Tahmin edilen kullanım %9–22 arasında. Açıkça beyan edilen: %0,1. Yaklaşık kırk kat fark.</p></figcaption></figure>
+</div></section>
+<section data-sira="9" data-bolum="1 · Durum" data-kisa="Beyan açığının nedeni" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Neden</p>
+  <h2>Beyan açığının nedeni korku olabilir</h2>
+  <div class="govde"><p>Dergilerin <strong>%70–83'ünün</strong> resmî bir yapay zekâ politikası var.
+Beyan oranı ise <strong>%0,1</strong>.</p>
+<p>Bir açıklama şu: araştırmacılar <strong>meşru</strong> bir kullanımı beyan
+ettiklerinde cezalandırılmaktan çekiniyor. "Dil düzeltmesi yaptım"
+diyen biri, bunun ret gerekçesi sayılmasından korkuyor.</p>
+<p><strong>Şeffaflık isteyen bir kural, şeffaf davrananı riske atıyorsa beyan
+oranı düşer.</strong> Nitekim düşüyor.</p></div>
+</div></section>
+<section data-sira="10" data-bolum="1 · Durum" data-kisa="Hakemlik darboğazı" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Asıl darboğaz hakemlikte</h2>
+  <figure><img src="varlik/sekil/d03_hakemlik.svg" alt="Hakem daveti kabul oranının 2018&#x27;den 2024&#x27;e düşüşü" loading="lazy">
+  <figcaption><p>Hakem havuzu %54 büyüdü ama davet sayısı iki katından fazla arttı. Bir kabul için ortalama 4,5 davet gerekiyor.</p></figcaption></figure>
+</div></section>
+<section data-sira="11" data-bolum="1 · Durum" data-kisa="AI skoru ve ret" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Yüksek yapay zekâ skoru ne yapıyor</h2>
+  <figure><img src="varlik/sekil/d04_ai_skoru.svg" alt="Düşük ve yüksek yapay zekâ skorlu gönderimlerin editoryal sonuçları" loading="lazy">
+  <figcaption><p>Ret olasılığını artırıyor — ama belirleyici değil. Yüksek skorluların üçte biri yine de hakeme ulaşıyor.</p></figcaption></figure>
+</div></section>
+<section data-sira="12" data-bolum="1 · Durum" data-kisa="İddia ve kanıt" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Dolaşımdaki sayı ile doğrulanmış sayı</h2>
+  <figure><img src="varlik/sekil/d06_iddia_kanit.svg" alt="Dolaşımdaki iddia ile doğrulanmış bulgunun karşılaştırması" loading="lazy">
+  <figcaption><p>Bu atölyeyi hazırlarken üç derin araştırma raporu kullandım. İkisi çarpıtılmış rakamları aktarmıştı.</p></figcaption></figure>
+</div></section>
+<section data-sira="13" data-bolum="1 · Durum" data-kisa="İlk ders" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Bu bölümün dersi</p>
+  <h2>Fark, araçta değil denetimde</h2>
+  <div class="govde"><p>Üç rapor da yapay zekâ ile hazırlandı. Üçü de kaynak listesi verdi.</p>
+<p>Biri sayıları birincil kaynağa kadar izledi. İkisi izlemedi — ve
+ikincil kaynaklarda çarpıtılmış rakamları olduğu gibi aktardı.</p>
+<p><strong>Bugünün tek cümlelik özeti bu:</strong> fark, yapay zekâ kullanıp
+kullanmamak değil. Fark, çıktının doğrulanıp doğrulanmaması.</p></div>
+</div></section>
+<section data-sira="14" data-bolum="1 · Durum" data-kisa="Dedektör yanlılığı" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Dedektörler neyi ölçüyor?</h2>
+  <figure><img src="varlik/sekil/d05_yanlis_pozitif.svg" alt="Yapay zekâ dedektörlerinin dil kökenine göre yanlış pozitif oranları" loading="lazy">
+  <figcaption><p>Üç çubuk da İNSAN yazısı. Ana dili İngilizce olmayan yazarlarda yanlış işaretleme %61,2.</p></figcaption></figure>
+</div></section>
+<section data-sira="15" data-bolum="1 · Durum" data-kisa="Bu bizi ilgilendiriyor" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Türkiye&#x27;den yayın yapanlar için</p>
+  <h2>Bu bulgu doğrudan bizi ilgilendiriyor</h2>
+  <div class="govde"><p>Dedektörlerin çoğu <strong>şaşırtıcılık</strong> ölçer: bir sonraki sözcüğün ne
+kadar tahmin edilebilir olduğunu. Dil modelleri en olası sözcüğü
+seçtiği için düşük şaşırtıcılıkla yazar.</p>
+<p>Ama ana dili İngilizce olmayan bir araştırmacı da, hata yapmamak için
+güvenli ve kalıplaşmış bir dil kullandığında düşük şaşırtıcılıkla
+yazar.</p>
+<p><strong>Araç ikisini ayırt edemiyor.</strong> Ölçtüğü şey yapay zekâ kullanımı
+değil, dilsel çeşitlilik.</p>
+<p>Türkçe ana dili olan bir araştırmacının İngilizce makalesi, tam da
+yanlış işaretlemeye en yatkın profile uyuyor.</p></div>
+</div></section>
+<section data-sira="16" data-bolum="1 · Durum" data-kisa="Ne bekleniyor" class="slayt" data-tur="kart">
+<div class="ic">
+  <h2>Ne bekleniyor</h2>
+  <div class="kartlar iki"><div class="kart"><p class="k-b">Ön eleme sertleşecek</p><p>Gönderim hacmi hakem kapasitesinden hızlı büyüdükçe daha az makale hakeme ulaşacak. Bu, politikadan bağımsız bir kapasite aritmetiği.</p></div><div class="kart"><p class="k-b">Süreç kanıtı metinden önemli olacak</p><p>Metin artık kime ait olduğunu göstermiyor. Ayırt edici olan: ham veri, kod deposu, protokol ön kaydı, sürüm geçmişi.</p></div><div class="kart"><p class="k-b">Beyan rejimi normalleşebilir</p><p>Beyan edenin cezalandırılmadığı bir düzen kurulmazsa %0,1 yükselmez. Yayıncı rehberlerindeki “kullanım tek başına ret nedeni değildir” ilkesi bu yönde.</p></div><div class="kart"><p class="k-b">Dedektörlerin rolü belirsiz</p><p>Mevcut araçların dil kökenine göre yanıldığı ölçülmüş bir olgu. Alana özgü modeller daha iyi ama yaygın değil.</p></div></div>
+</div></section>
+<section data-sira="17" data-bolum="2 · Temel" data-kisa="BÖLÜM 2 · Temel" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">02</span>
+  <h2>Model nasıl çalışır, etik nerede durur</h2>
+  <p class="alt"><p>Aracı anlamadan sınırını bilemezsiniz.</p>
+<p>Kurumsal kurallar da burada.</p></p>
+  <p class="sure">45 dakika</p>
+</div></section>
+<section data-sira="18" data-bolum="2 · Temel" data-kisa="Tek cümlede model" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Nasıl çalışır</p>
+  <h2>Tek cümlede: sonraki sözcüğü tahmin eder</h2>
+  <div class="govde"><p>Büyük dil modeli bir <strong>bilgi tabanı değildir.</strong> Devasa bir metin
+yığınında, bir sözcüğün ardından hangi sözcüğün gelme olasılığının
+yüksek olduğunu öğrenmiş bir sistemdir.</p>
+<p>Bunu bilmek üç şeyi açıklar:</p>
+<ul>
+<li><strong>Neden akıcı yazar.</strong> Akıcılık zaten optimize ettiği şey.</li>
+<li><strong>Neden kaynak uydurur.</strong> "Yazar (yıl). Başlık. Dergi." kalıbı çok
+  tanıdık; o kalıbı doldurmak, doğru olanı bulmaktan kolay.</li>
+<li><strong>Neden kendinden emin görünür.</strong> Emin olmadığını bildiren bir
+  mekanizması yok; en olası sözcüğü seçmeye devam eder.</li>
+</ul></div>
+</div></section>
+<section data-sira="19" data-bolum="2 · Temel" data-kisa="Neyi iyi, neyi kötü yapar" class="slayt" data-tur="kiyas">
+<div class="ic">
+  <h2>Neyi iyi yapar, neyi yapamaz</h2>
+  <div class="kiyas">
+    <div class="zayif"><p class="k-b">Güvenmeyin</p>
+      <div><ul>
+<li><strong>Kaynak künyesi üretmek</strong> — uydurur</li>
+<li><strong>Sayı hesaplamak</strong> — metin üzerinden tahmin eder</li>
+<li><strong>Güncel bilgi</strong> — eğitim verisiyle sınırlı</li>
+<li><strong>Sizin alanınızdaki ince tartışma</strong> — yüzeysel kalır</li>
+<li><strong>Hangi yöntemin doğru olduğuna karar vermek</strong> — sizin işiniz</li>
+</ul></div></div>
+    <div class="guclu"><p class="k-b">Yararlanın</p>
+      <div><ul>
+<li><strong>Metni yeniden yapılandırmak</strong> — dağınık notu akışa sokmak</li>
+<li><strong>Dil ve üslup</strong> — özellikle ikinci dilde yazarken</li>
+<li><strong>Kod yazmak ve hata ayıklamak</strong> — çıktısı sınanabilir</li>
+<li><strong>Eleştirel okuma</strong> — "bu paragrafın zayıf yeri nerede"</li>
+<li><strong>Yapılandırılmış çıkarım</strong> — metinden tabloya</li>
+</ul></div></div>
+  </div>
+  <p class="not"><p>Ayrım tek ölçütle: <strong>çıktısını denetleyebiliyor musunuz?</strong> Denetleyebildiğiniz işi verin, denetleyemediğinizi vermeyin.</p></p>
+</div></section>
+<section data-sira="20" data-bolum="2 · Temel" data-kisa="Kendi hatam" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Somut örnek</p>
+  <h2>Bu kursu hazırlarken ben de uydurttum</h2>
+  <div class="govde"><p>Kursun 5. bölümü için literatür künyeleri istedim. Gelen listede
+<strong>var olmayan makaleler</strong> vardı: gerçek yazar adları, gerçekçi
+dergi adları, biçimi kusursuz DOI numaraları.</p>
+<p>Hepsi doğrulanabilirdi — ve doğrulandığında çöktü.</p>
+<p>O künyeler kursta <strong>duruyor</strong>, silinmedi. Kursun en somut dersi
+bu: uydurma kaynak, uydurma gibi görünmez.</p></div>
+</div></section>
+<section data-sira="21" data-bolum="2 · Temel" data-kisa="TÜBİTAK: iki ayrı kural" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Kurumsal kural</p>
+  <h2>TÜBİTAK iki rol için iki ayrı kural koyuyor</h2>
+  <div class="govde"><p>Eylül 2025 tarihli ARDEB rehberi:</p>
+<p><strong>Başvuru sahibi için — koşullu serbest, beyan zorunlu.</strong>
+İzin verilen: literatür özetleme, dil iyileştirme, kodlama yardımı,
+fikir geliştirme, görselleştirme önerisi. "Basit dilbilgisi
+denetiminin ötesine geçen" her kullanım beyan edilmeli: aracın adı,
+sürümü, hangi aşamada kullanıldığı.</p>
+<p><strong>Değerlendirici için — tümüyle yasak.</strong>
+Hakem, panelist, danışman ve izleyiciler değerlendirme göreviyle
+ilgili <strong>hiçbir amaçla</strong> kullanamaz: metni özetlemek, güçlü-zayıf yön
+belirlemek, rapor taslağı üretmek, hatta konuyla ilgili e-posta
+yazmak dâhil.</p></div>
+</div></section>
+<section data-sira="22" data-bolum="2 · Temel" data-kisa="Yasağın gerekçesi" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Neden</p>
+  <h2>Değerlendirici yasağının gerekçesi gizlilik</h2>
+  <div class="govde"><p>Proje önerisi <strong>yayımlanmamış fikir</strong> ve <strong>kişisel veri</strong> taşır.
+Bunu dış bir hizmete yüklemek iki yükümlülüğü birden ihlal eder:</p>
+<ul>
+<li>Gizlilik taahhüdü</li>
+<li>KVKK — özellikle yurt dışı sunuculara aktarım (madde 9)</li>
+</ul>
+<p>Aynı mantık hakemliğini yaptığınız makale için de geçerlidir.</p>
+<p><strong>Ayrım basit:</strong> kendi metniniz kendi sorumluluğunuzdadır, başkasının
+metni size emanettir.</p></div>
+</div></section>
+<section data-sira="23" data-bolum="2 · Temel" data-kisa="Beyan nasıl yazılır" class="slayt" data-tur="kart">
+<div class="ic">
+  <h2>Beyan nasıl yazılır</h2>
+  <div class="kartlar uc"><div class="kart"><p class="k-b">Neyi yazacaksınız</p><p>Aracın <strong>adı ve sürümü</strong> · kullanıldığı <strong>aşama</strong> (literatür özeti, kod üretimi, dil denetimi) · kullanımın <strong>niteliği</strong> (ilk taslak, iyileştirme).</p></div><div class="kart"><p class="k-b">Nereye yazacaksınız</p><p>Dergilerde çoğunlukla yöntem ya da teşekkür bölümü. TÜBİTAK'ta başvuru sisteminde bunun için ayrılmış özel bölüm var.</p></div><div class="kart"><p class="k-b">Neyi yazmayacaksınız</p><p>Yapay zekâyı <strong>yazar olarak</strong> gösteremezsiniz. Beş büyük yayıncı bu konuda aynı şeyi söylüyor: hesap verebilen bir muhatap gerekir.</p></div></div>
+</div></section>
+<section data-sira="24" data-bolum="2 · Temel" data-kisa="Veri nereye gider" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Dikkat</p>
+  <h2>Hiçbir zaman araca girmeyecekler</h2>
+  <div class="govde"><ul>
+<li><strong>Kimliksizleştirilmemiş katılımcı verisi.</strong> Yaş, bölüm ve açık uçlu
+  yanıt bir aradaysa kişi tanınabilir hâle gelir.</li>
+<li><strong>Hakemliğini yaptığınız metin.</strong> Başkasının yayımlanmamış işi.</li>
+<li><strong>Yayımlanmamış ham veriniz</strong> — özellikle patent başvurusu
+  düşünüyorsanız.</li>
+<li><strong>Üçüncü kişilere ait ticari bilgi.</strong></li>
+</ul>
+<p>Kurumunuzun kurumsal aboneliği varsa veri işleme koşulları bireysel
+abonelikten farklı olabilir. <strong>Hangi koşulla kullandığınızı bilin.</strong></p></div>
+</div></section>
+<section data-sira="25" data-bolum="2 · Temel" data-kisa="UYGULAMA · beyan cümlesi" class="slayt uygulama" data-tur="uygulama">
+<div class="ic">
+  <p class="etiket">Uygulama · 15 dakika</p>
+  <h2>Kendi beyan cümlenizi yazın</h2>
+  <ol class="adimlar"><li><p>Üzerinde çalıştığınız bir makaleyi ya da proje önerisini düşünün. Yapay zekâyı hangi aşamalarda kullandınız ya da kullanmayı düşünüyorsunuz?</p></li><li><p>Her kullanım için üç şeyi yazın: aracın adı ve sürümü, hangi aşamada, ne niteliğinde.</p></li><li><p>Bunları tek bir paragrafa dönüştürün. Hedef derginizin yazar rehberinde beyan için ayrılmış yeri bulun.</p></li><li><p>Yanınızdakiyle değişin. Onun beyanını okuyan bir editör “burada eksik bir şey var” der mi?</p></li></ol>
+  <p class="not"><p>Çıktı: hedef derginize gönderebileceğiniz, iki-üç cümlelik bir beyan paragrafı.</p></p>
+</div></section>
+<section data-sira="26" data-bolum="3 · İstem" data-kisa="BÖLÜM 3 · İstem" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">03</span>
+  <h2>İstem yazmanın altı parçası</h2>
+  <p class="alt"><p>Bugünün en çok işinize yarayacak bölümü.</p>
+<p>Aynı soru, iki farklı istem, iki farklı dünya.</p></p>
+  <p class="sure">60 dakika</p>
+</div></section>
+<section data-sira="27" data-bolum="3 · İstem" data-kisa="Zayıf ve güçlü istem" class="slayt" data-tur="kiyas">
+<div class="ic">
+  <h2>Aynı iş, iki istem</h2>
+  <div class="kiyas">
+    <div class="zayif"><p class="k-b">Zayıf</p>
+      <div><p><code>Anket maddelerimi değerlendir.</code></p>
+<p>Model ne yapar: genel geçer bir ölçek yazım dersi verir. Sizin
+maddelerinizi görmez, hangi ölçütle baktığını söylemez,
+denetlenemez bir metin üretir.</p></div></div>
+    <div class="guclu"><p class="k-b">Güçlü</p>
+      <div><p><code>ROL</code> · ölçek geliştirme deneyimi olan bir ölçme uzmanı<br>
+<code>KAYNAK</code> · ekteki 21 madde, 5'li Likert<br>
+<code>GÖREV</code> · her maddeyi dört ölçütle denetle<br>
+<code>BİÇİM</code> · madde no · sorun · gerekçe · düzeltilmiş hâl<br>
+<code>SINIR</code> · yeni madde önerme; sorunsuzu "sorunsuz" yaz<br>
+<code>DENETİM</code> · kaç maddede sorun buldun, hangi ölçütte</p>
+<p>Model ne yapar: denetlenebilir bir tablo üretir.</p></div></div>
+  </div>
+  <p class="not"><p>Fark uzunlukta değil. Fark, <strong>neyin denetleneceğinin önceden söylenmesinde.</strong></p></p>
+</div></section>
+<section data-sira="28" data-bolum="3 · İstem" data-kisa="Altı parça" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Kalıp</p>
+  <h2>İyi istemin altı parçası</h2>
+  <div class="govde"><table>
+<thead>
+<tr>
+<th></th>
+<th>Parça</th>
+<th>Ne yapar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>ROL</strong></td>
+<td>Hangi uzmanlıkla bakacağını söyler</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>KAYNAK</strong></td>
+<td>Neye dayanacağını verir — ek dosya, veri, bağlam</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>GÖREV</strong></td>
+<td>Ne yapacağını, kaç adımda yapacağını</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>BİÇİM</strong></td>
+<td>Çıktının yapısı: tablo mu, liste mi, hangi alanlar</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>SINIR</strong></td>
+<td>Ne yapmayacağını — en çok atlanan, en çok işe yarayan</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>DENETİM</strong></td>
+<td>Kendi çıktısını nasıl sayacağını</td>
+</tr>
+</tbody>
+</table>
+<p>Altısı da her zaman gerekmez. Ama <strong>sınır</strong> ve <strong>denetim</strong> olmadan
+yazılan istem, denetlenemeyen çıktı üretir.</p></div>
+</div></section>
+<section data-sira="29" data-bolum="3 · İstem" data-kisa="Sınır neden önemli" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">En çok atlanan parça</p>
+  <h2>Sınır: modele ne YAPMAYACAĞINI söylemek</h2>
+  <div class="govde"><p>Model, boşluk gördüğü yeri doldurur. Doldurmasını istemediğiniz yeri
+söylemezseniz doldurur.</p>
+<p>Gerçek örnekler — hepsi kursta kullanıldı:</p>
+<ul>
+<li><em>"Veride olmayan bir değişkene dayanan analiz önerme."</em></li>
+<li><em>"Kaynak uydurma. Künye vermeye çalışma; 'şu tür çalışmalar var,
+  şöyle arayın' de."</em></li>
+<li><em>"Aykırı değerleri kendiliğinden silme; yalnız olanaksız değerleri
+  işaretle."</em></li>
+<li><em>"İzoterm modellerini doğrusallaştırarak uydurmayı önerme."</em></li>
+<li><em>"Nazik olma. Gerçek bir panelde kimse nazik değildir."</em></li>
+</ul>
+<p>Sonuncusu şaka değil. Nazik olmasını istemezseniz, eleştiri alırsınız.</p></div>
+</div></section>
+<section data-sira="30" data-bolum="3 · İstem" data-kisa="Sınırın gerçek etkisi" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · kod/15_analiz_adsorpsiyon.py</p>
+  <h2>Bir sınır cümlesi sonucu nasıl değiştirdi</h2>
+  <pre class="cikti">Doğrusallaştırma neden önerilmedi
+
+(a) Dönüştürülmüş ölçekteki R² karşılaştırılamaz.
+
+Adsorban      yöntem                  Langmuir R²  Freundlich R²        seçim
+Çay posası    doğrusal olmayan             0,9575         0,9276     Langmuir
+              doğrusallaştırılmış          0,9552         0,9087     Langmuir
+Ticari        doğrusal olmayan             0,9980         0,9974     Langmuir
+              doğrusallaştırılmış          0,9980         0,9970     Langmuir
+
+Özgün ölçeğe getirildiğinde iki yöntem de Langmuir&#x27;i seçiyor.
+Dönüştürülmüş ölçekteki R² ile bakılsaydı Freundlich kazanıyordu —
+yani sonucu değiştiren şey model değil, R²&#x27;nin hangi ölçekte
+hesaplandığıydı.</pre>
+  <p class="not"><p>İstemde <em>“doğrusallaştırarak uydurmayı önerme”</em> satırı olmasaydı, model literatürde yaygın olanı önerecekti ve sonuç ters çıkacaktı.</p></p>
+</div></section>
+<section data-sira="31" data-bolum="3 · İstem" data-kisa="Denetim parçası" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Altıncı parça</p>
+  <h2>Denetim: modele kendi işini saydırmak</h2>
+  <div class="govde"><p>İstemin sonuna eklenen tek bir paragraf, çıktının denetlenebilirliğini
+değiştirir:</p>
+<blockquote>
+<p><strong>DENETİM</strong>
+Tablonun altına şunları yaz: koleksiyonda kaç kayıt vardı, kaçında
+tam metin bulundu, hangi kayıtlarda hangi alanlar boş kaldı.</p>
+</blockquote>
+<p>Bu, modelin kendi eksiklerini <strong>size</strong> bildirmesini sağlar. Olmazsa
+eksikleri siz arayacaksınız — ve çoğu zaman aramayacaksınız.</p>
+<p>Diğer örnekler: <em>"Dört ölçütün ağırlıklı toplamını hesapla ve
+aritmetiğini göster."</em> · <em>"Kaç maddede sorun buldun, hangi ölçütte?"</em>
+· <em>"Her satırın sonunda bilginin alındığı sayfa numarasını yaz."</em></p></div>
+</div></section>
+<section data-sira="32" data-bolum="3 · İstem" data-kisa="Tam istem · ölçek maddesi" class="slayt istem-slayt" data-tur="istem">
+<div class="ic">
+  <p class="etiket">İstem · Eğitim bilimleri · ölçek geliştirme</p>
+  <h2>Altı parçanın tamamı — çalışan bir istem</h2>
+  <pre class="istem">ROL
+Ölçek geliştirme ve uyarlama deneyimi olan bir ölçme ve
+değerlendirme uzmanısın.
+
+KAYNAK
+Ekteki dosyada 21 madde var. Beşli Likert (1 = kesinlikle
+katılmıyorum, 5 = kesinlikle katılıyorum). Ölçeğin amacı:
+öğretmenlerin derste yapay zekâ araçlarını kullanma eğilimini
+ölçmek. Hedef kitle: ortaöğretim öğretmenleri.
+
+GÖREV
+Her maddeyi dört ölçütle denetle:
+1. Çift ifade — tek maddede iki şey birden soruluyor mu?
+2. Yönlendirme — madde belirli bir yanıta itiyor mu?
+3. Belirsizlik — &quot;bazen&quot;, &quot;genellikle&quot; gibi ölçülemeyen nitelik
+4. Olumsuz kurulum — ters kodlanacak mı, gerekli mi?
+
+BİÇİM
+Tablo: madde no · maddenin kendisi · saptanan sorun (yoksa
+&quot;sorunsuz&quot;) · hangi ölçüt · gerekçe (tek cümle) · düzeltilmiş hâl
+
+SINIR
+— Yeni madde önerme. Elimdeki 21 maddeyle çalışıyorum.
+— Sorunsuz maddeyi düzeltmeye çalışma; &quot;sorunsuz&quot; yaz ve geç.
+— Maddenin anlamını değiştirme; yalnız ifadeyi düzelt.
+— Ölçeğin kuramsal çerçevesi hakkında yorum yapma; o ayrı bir iş.
+
+DENETİM
+Tablonun sonunda: kaç maddede sorun buldun, hangi ölçütte kaç
+tane, ve ters kodlanması gereken maddelerin numaraları.</pre>
+  <p class="not"><p>Bu istem kursta koşuldu. Gerçek yanıtı bir sonraki slaytta.</p></p>
+</div></section>
+<section data-sira="33" data-bolum="3 · İstem" data-kisa="Gerçek yanıt" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · Claude Opus · kurs bölüm 3</p>
+  <h2>Üstteki istemin gerçek yanıtı — kesit</h2>
+  <pre class="cikti">Madde 3: &quot;Yapay zekâ araçları derslerimi zenginleştiriyor ve
+            zamandan tasarruf sağlıyor.&quot;
+  Sorun   : Çift ifade
+  Ölçüt   : 1
+  Gerekçe : Zenginleştirme ile zaman tasarrufu farklı şeylerdir;
+            birine katılıp ötekine katılmayan yanıtlayıcı ne
+            işaretleyeceğini bilemez.
+  Düzeltme: &quot;Yapay zekâ araçları derslerimi zenginleştiriyor.&quot;
+            (Zaman tasarrufu ayrı madde olmalı.)
+
+Madde 7: &quot;Yapay zekâ araçlarını kullanmak öğretmenlik mesleğinin
+            geleceği için kaçınılmazdır.&quot;
+  Sorun   : Yönlendirme
+  Ölçüt   : 2
+  Gerekçe : &quot;Kaçınılmaz&quot; sözcüğü maddeyi bir olguymuş gibi sunuyor;
+            katılmamak için yanıtlayıcının önermeyi reddetmesi gerek.
+  Düzeltme: &quot;Yapay zekâ araçları öğretmenlik mesleğinin geleceğinde
+            yer alacaktır.&quot;
+
+Madde 12: &quot;Bazen yapay zekâ araçlarından yararlanırım.&quot;
+  Sorun   : Belirsizlik
+  Ölçüt   : 3
+  Gerekçe : &quot;Bazen&quot; kişiden kişiye değişir; sıklık maddesi Likert
+            ile değil, ayrı bir sıklık ölçeğiyle sorulmalı.
+  Düzeltme: &quot;Ders hazırlığımda yapay zekâ araçlarından yararlanırım.&quot;
+
+DENETİM
+  Sorunlu madde       : 9 / 21
+  Çift ifade          : 3 madde (3, 8, 19)
+  Yönlendirme         : 2 madde (7, 14)
+  Belirsizlik         : 3 madde (12, 16, 20)
+  Olumsuz kurulum     : 1 madde (11)
+  Ters kodlanacaklar  : 5, 11, 17</pre>
+  <p class="not"><p>Dikkat: DENETİM bölümü istemde istendiği için var. İstenmeseydi model 9 sorunu bulurdu ama <strong>saymazdı</strong> — ve siz kaçını atladığını bilemezdiniz.</p></p>
+</div></section>
+<section data-sira="34" data-bolum="3 · İstem" data-kisa="Bağlam eki" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">İleri</p>
+  <h2>En güçlü parça: ek dosya</h2>
+  <div class="govde"><p>Modelin bilmediğini isteme koymazsanız, model onu <strong>uydurur ya da
+atlar.</strong></p>
+<p>Kurstan somut bir karşılaştırma: aynı istem, TÜBİTAK 1001 panel
+formu ek olarak verilerek ve verilmeyerek koşuldu.</p>
+<p><strong>Form olmadan</strong> model genel "proje değerlendirme ölçütleri"
+bilgisinden üretti. Bilmediği şeyler:</p>
+<ul>
+<li>Üst politika belgelerine atıf beklentisi</li>
+<li>Danışman sayısının tali konu sayısıyla sınırlı olması</li>
+<li>B planının özgün değeri korumak zorunda olması</li>
+</ul>
+<p>Üçü de formda <strong>açıkça yazıyor</strong> ve üçü de puan kaybettiriyor.</p>
+<p><strong>Belge elinizdeyse eke koyun. Özetlemeyin, olduğu gibi verin.</strong></p></div>
+</div></section>
+<section data-sira="35" data-bolum="3 · İstem" data-kisa="Veri bağlamı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Ama dikkat</p>
+  <h2>Veriyi eke koymayın — profilini koyun</h2>
+  <div class="govde"><p>Akla gelen ilk çözüm veri dosyasını eklemektir. Üç nedenle kötüdür:</p>
+<p><strong>Gizlilik.</strong> Ham satırlar kişisel veri taşıyabilir.</p>
+<p><strong>Jeton.</strong> 5.820 satırlık dosya bağlam penceresini doldurur, asıl
+soruya yer kalmaz.</p>
+<p><strong>Doğruluk.</strong> Model 5.820 satırı okuyup ortalama hesaplamaz.
+Hesaplamaya çalışırsa yanılır — ve yanıldığını söylemez.</p>
+<p>Doğru çözüm <strong>veri profili</strong>: her değişkenin ölçüm düzeyi, eksik
+oranı, dağılım ölçüleri, normallik sınaması. Satır düzeyinde hiçbir
+bilgi taşımaz. Kursta bunu üreten betik var: <code>kod/19_veri_profili.py</code></p></div>
+</div></section>
+<section data-sira="36" data-bolum="3 · İstem" data-kisa="Veri profili çıktısı" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · kod/19_veri_profili.py</p>
+  <h2>Modele verilecek şey: profil</h2>
+  <pre class="cikti">VERİ PROFİLİ — Gazi Üniversitesi ders değerlendirme verisi
+==============================================================
+
+Gözlem sayısı : 5.820
+Değişken sayısı: 36
+Tam dolu satır : 5.820
+
+instr
+  ölçüm düzeyi : sıralı ya da nominal  (3 tamsayı düzeyi: [1, 2, 3] —
+                 hangisi olduğu veriden anlaşılmaz, siz söylemelisiniz)
+  eksik        : 0 (%0,0)
+  aralık       : 1,00 – 3,00
+
+Q1
+  ölçüm düzeyi : sıralı (Likert)  (1–5 arası 5 basamağın hepsi kullanılmış)
+  eksik        : 0 (%0,0)
+  ortalama / SS: 2,930 / 1,341
+  Shapiro-Wilk : W = 0,8707, p = 0,0000
+  çarpıklık    : 0,085 · basıklık: -1,170
+  dağılım notu : sapma anlamlı ama çarpıklık ve basıklık yaygın
+                 eşiklerin içinde; büyük örneklemde beklenen durum</pre>
+  <p class="not"><p>Betik ölçüm düzeyini <strong>tahmin eder, karar vermez.</strong> 1, 2, 3 bir ölçek de olabilir, kimlik numarası da — veriden ayırt edilemez. Bunu siz söylersiniz.</p></p>
+</div></section>
+<section data-sira="37" data-bolum="3 · İstem" data-kisa="UYGULAMA · istem yazma" class="slayt uygulama" data-tur="uygulama">
+<div class="ic">
+  <p class="etiket">Uygulama · 25 dakika</p>
+  <h2>Kendi isteminizi altı parçayla yazın</h2>
+  <ol class="adimlar"><li><p>Şu an elinizde olan gerçek bir işi seçin: denetlenecek bir metin, çıkarılacak bir veri, kurulacak bir analiz planı.</p></li><li><p>Altı parçayı sırayla yazın. <strong>Sınır</strong> ve <strong>denetim</strong> parçalarına en az iki madde koyun — en çok atlanan ve en çok işe yarayan ikisi bunlar.</p></li><li><p>İstemi koşturun. Çıktıyı okumadan önce şunu yazın: “Beklediğim çıktı şöyle olmalı.”</p></li><li><p>Çıktıyı okuyun. Beklentinizden saptığı yerleri işaretleyin. Her sapma için sorun: bu, istemde eksik bıraktığım bir şeyden mi kaynaklanıyor?</p></li><li><p>İstemi bir kez düzeltip yeniden koşturun. İkinci çıktı genellikle belirgin biçimde daha iyidir.</p></li></ol>
+  <p class="not"><p>Çıktı: kendi işinize göre yazılmış, iki tur iyileştirilmiş bir istem. Bunu saklayın — bir sonraki benzer işte yeniden kullanacaksınız.</p></p>
+</div></section>
+<section data-sira="38" data-bolum="4 · Soru ve literatür" data-kisa="BÖLÜM 4 · Soru ve literatür" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">04</span>
+  <h2>Soru, literatür, veri</h2>
+  <p class="alt"><p>Araştırmanın başı. Burada yapılan hata sonra düzelmiyor.</p></p>
+  <p class="sure">75 dakika</p>
+</div></section>
+<section data-sira="39" data-bolum="4 · Soru ve literatür" data-kisa="Konu ile soru farkı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Başlangıç</p>
+  <h2>Konu ile soru arasındaki fark</h2>
+  <div class="govde"><p>Çoğu araştırma fikri, ilk hâliyle bir <strong>konudur</strong>, soru değil.</p>
+<table>
+<thead>
+<tr>
+<th>Konu</th>
+<th>Soru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Çay posasından aktif karbon</td>
+<td>Çay posası aktif karbonunun giderim verimi, çalışma koşullarına göre ticari kömürden ne kadar farklıdır?</td>
+</tr>
+<tr>
+<td>Öğretmenlerde yapay zekâ kullanımı</td>
+<td>Ders hazırlığında yapay zekâ kullanımı, branşa ve kıdeme göre farklılaşıyor mu?</td>
+</tr>
+<tr>
+<td>Osmanlı salnamelerinde eğitim</td>
+<td>1869 Nizamnâmesi sonrasında rüşdiye yayılımı vilayetler arasında nasıl farklılaştı?</td>
+</tr>
+</tbody>
+</table>
+<p>Soruda <strong>ölçülecek bir şey</strong> vardır ve yanıtı önceden bilinmez.</p></div>
+</div></section>
+<section data-sira="40" data-bolum="4 · Soru ve literatür" data-kisa="PICOC" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Araç</p>
+  <h2>PICOC: soruyu parçalarına ayırmak</h2>
+  <div class="govde"><p>Soruyu beş parçaya bölen bir kontrol listesi. Her parçayı
+adlandıramıyorsanız soru henüz hazır değildir.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Açılım</th>
+<th>Ne sorar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Population</td>
+<td>Kim, ne, hangi birim?</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Intervention</td>
+<td>Hangi uygulama, yöntem, koşul?</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Comparison</td>
+<td>Neyle karşılaştırılıyor?</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Outcome</td>
+<td>Ne ölçülecek?</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Context</td>
+<td>Hangi ortam, dönem, sınır?</td>
+</tr>
+</tbody>
+</table>
+<p>En çok atlanan: <strong>Comparison.</strong> Karşılaştırması olmayan bir bulgu
+yorumlanamaz — "yüksek çıktı" neye göre yüksek?</p></div>
+</div></section>
+<section data-sira="41" data-bolum="4 · Soru ve literatür" data-kisa="PICOC örneği" class="slayt" data-tur="kiyas">
+<div class="ic">
+  <h2>Aynı fikir, PICOC&#x27;suz ve PICOC&#x27;lu</h2>
+  <div class="kiyas">
+    <div class="zayif"><p class="k-b">Ayrıştırılmamış</p>
+      <div><p>"Öğrencilerin derse devamı ile başarıları arasındaki ilişkiyi
+inceleyeceğim."</p>
+<p>Hangi öğrenciler? Devam nasıl ölçülüyor? Başarı neyle? Neyle
+karşılaştırılacak? Hangi dersler, hangi dönem?</p></div></div>
+    <div class="guclu"><p class="k-b">PICOC ile</p>
+      <div><p><strong>P</strong> · bir devlet üniversitesinde lisans öğrencileri, 13 ders<br>
+<strong>I</strong> · devam düzeyi (0–4 arası beyan)<br>
+<strong>C</strong> · düşük devam düzeyindeki öğrenciler<br>
+<strong>O</strong> · ders değerlendirme puanı (12 maddenin ortalaması)<br>
+<strong>C</strong> · 2013 verisi, tek üniversite, kesitsel</p>
+<p>Artık ölçüm belli: hangi değişken, hangi ölçek, hangi
+karşılaştırma.</p></div></div>
+  </div>
+  <p class="not"><p>PICOC bir bürokrasi değil; <strong>analiz planını da belirler.</strong> O'nun ölçüm düzeyi hangi testi kullanacağınızı söyler.</p></p>
+</div></section>
+<section data-sira="42" data-bolum="4 · Soru ve literatür" data-kisa="Literatür: ne verir ne vermez" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Literatür</p>
+  <h2>Modelin literatürde yapabildiği ve yapamadığı</h2>
+  <div class="govde"><p><strong>Yapamaz:</strong> künye üretmek. Deneyin — "bu konuda beş makale say"
+dediğinizde gelen listedeki künyelerin bir bölümü var olmaz.</p>
+<p><strong>Yapar:</strong> arama dizgisi kurmak. Kavram kümelerini çıkarmak,
+eşanlamlıları toplamak, veri tabanının sözdizimine çevirmek.</p>
+<p>İş bölümü şöyle olmalı:</p>
+<ol>
+<li><strong>Model</strong> arama dizgisini kurar</li>
+<li><strong>Siz</strong> dizgiyi veri tabanında koşturup kayıtları indirirsiniz</li>
+<li><strong>Model</strong> indirdiğiniz kayıtları eler, sınıflandırır, çıkarım yapar</li>
+<li><strong>Siz</strong> örneklemle denetlersiniz</li>
+</ol>
+<p>Model hiçbir aşamada kaynak <strong>üretmez</strong>; sizin getirdiğiniz kaynaklar
+üzerinde çalışır.</p></div>
+</div></section>
+<section data-sira="43" data-bolum="4 · Soru ve literatür" data-kisa="İstem · arama dizgisi" class="slayt istem-slayt" data-tur="istem">
+<div class="ic">
+  <p class="etiket">İstem · Eğitim bilimleri</p>
+  <h2>Arama dizgisi kurma istemi</h2>
+  <pre class="istem">ROL
+Sistematik derleme metodolojisi bilen bir bilgi uzmanısın.
+
+ARAŞTIRMA SORUSU
+Ortaöğretim öğretmenlerinin ders hazırlığında üretken yapay zekâ
+araçlarını kullanımı, branşa ve mesleki kıdeme göre farklılaşıyor mu?
+
+GÖREV
+Bu soru için arama dizgileri kur.
+
+ÖNCE KAVRAM KÜMELERİ
+Soruyu bağımsız kavram kümelerine ayır. Her küme için:
+— Türkçe ve İngilizce terimler
+— Eşanlamlılar ve alan yazındaki yakın terimler
+— Varsa denetimli sözcük dağarcığı karşılığı (ERIC Thesaurus)
+
+SONRA VERİ TABANI DİZGİLERİ
+Şu veri tabanları için ayrı ayrı, kopyala-yapıştır hazır dizgi yaz:
+— Web of Science (TS= alan etiketiyle)
+— Scopus (TITLE-ABS-KEY ile)
+— ERIC (denetimli sözcüklerle)
+— ULAKBİM TR Dizin (Türkçe terimlerle)
+
+HER DİZGİ İÇİN
+— Dizginin kendisi, tek blok hâlinde
+— Hangi alan sınırlaması kullanıldı ve neden
+— Yıl aralığı önerisi ve gerekçesi
+— Beklenen kayıt sayısı için kaba bir tahmin aralığı
+
+SINIRLAR
+— Kaynak künyesi verme. Hiçbir makale adı, yazar ya da DOI yazma.
+— Dizgiyi gereğinden fazla daraltma; önce geniş at, sonra eleriz.
+— Var olmayan alan etiketi ya da operatör uydurma; emin değilsen
+  &quot;bu veri tabanında bu etiketi doğrulayın&quot; diye not düş.
+
+DENETİM
+Her küme kaç terim içeriyor, hangi kümede Türkçe karşılık bulmakta
+zorlandın?</pre>
+  <p class="not"><p>Son satır önemli: Türkçe alan yazında karşılığı olmayan kavramlar, taramanızın en zayıf halkasıdır.</p></p>
+</div></section>
+<section data-sira="44" data-bolum="4 · Soru ve literatür" data-kisa="Toplu PDF çıkarımı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Ölçek</p>
+  <h2>Kırk PDF&#x27;ten tabloya</h2>
+  <div class="govde"><p>Tek PDF'ten veri çıkarmak kolay. Asıl iş, kırk PDF'i <strong>tutarlı</strong>
+biçimde çıkarmak.</p>
+<p>İki kural bu işi kurtarır:</p>
+<p><strong>Alanları önceden sabitleyin.</strong> Her makaleden hangi alanların
+çıkarılacağı baştan yazılır; model alan ekleyip çıkaramaz. Yoksa
+her PDF'ten farklı şeyler gelir ve tablo birleşmez.</p>
+<p><strong>Bulunamayanı işaretletin.</strong> "Bu alan metinde yok" ile "bu alanı
+atladım" farklı şeylerdir. İkincisini göremezsiniz; birincisini
+sayabilirsiniz.</p>
+<blockquote>
+<p><strong>SINIR</strong> — Bir alan metinde bulunamıyorsa "belirtilmemiş" yaz.
+Özetten ya da genel bilginden doldurmaya ÇALIŞMA.</p>
+<p><strong>DENETİM</strong> — Kaç PDF işlendi, kaçında hangi alan boş kaldı,
+hangi dosyalarda metin okunamadı?</p>
+</blockquote></div>
+</div></section>
+<section data-sira="45" data-bolum="4 · Soru ve literatür" data-kisa="UYGULAMA · arama dizgisi" class="slayt uygulama" data-tur="uygulama">
+<div class="ic">
+  <p class="etiket">Uygulama · 25 dakika</p>
+  <h2>Kendi sorunuz için arama dizgisi</h2>
+  <ol class="adimlar"><li><p>Kendi araştırma sorunuzu PICOC ile beş parçaya ayırın. Ayıramadığınız parça varsa sorunuz henüz hazır değil — önce onu düzeltin.</p></li><li><p>Arama dizgisi istemini kendi sorunuzla doldurup koşturun.</p></li><li><p>Gelen dizgiyi <strong>gerçekten</strong> bir veri tabanında koşturun. Kaç kayıt geldi? Beklediğinizden çok mu az mı?</p></li><li><p>Çok geldiyse hangi kümeyi daraltacağınızı, az geldiyse hangi eşanlamlıyı eklemek gerektiğini modele sorun.</p></li><li><p>İlk 20 kaydı gözden geçirin. Konuyla ilgisiz olanların ortak özelliği ne? O özelliği dizgiye dışlama olarak ekleyin.</p></li></ol>
+  <p class="not"><p>Çıktı: veri tabanında koşmuş, kayıt sayısı makul bir arama dizgisi ve onu nasıl daralttığınızın kaydı.</p></p>
+</div></section>
+<section data-sira="46" data-bolum="5 · Veri" data-kisa="Temizleme neden önemli" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Veri</p>
+  <h2>Temizleme bir karar zinciridir</h2>
+  <div class="govde"><p>Veri temizleme teknik bir iş gibi görünür; aslında bir <strong>karar
+zinciridir.</strong> Her karar bulguyu etkiler.</p>
+<p>Bu yüzden tek bir kural her şeyi belirler:</p>
+<blockquote>
+<p><strong>Hiçbir satır sessizce silinmez.</strong>
+Silinen her şeyin sayısı ve gerekçesi günlüğe yazılır.</p>
+</blockquote>
+<p>Modele temizleme yaptırırken bu kuralı isteme koyun. Koymazsanız
+model "veriyi iyileştirir" ve neyi değiştirdiğini söylemez.</p></div>
+</div></section>
+<section data-sira="47" data-bolum="5 · Veri" data-kisa="Temizleme günlüğü" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · kod/14_adsorpsiyon_temizle.py</p>
+  <h2>İstemin ürettiği betiğin gerçek çıktısı</h2>
+  <pre class="cikti">ADSORPSİYON VERİSİ — TEMİZLEME KARAR GÜNLÜĞÜ
+============================================================
+
+Ham satır sayısı   : 215
+Temiz satır sayısı : 201
+Çıkarılan          : 14 (%6.5)
+
+3. Sıcaklık birimi
+   Karar   : Fahrenheit → Celsius çevrildi
+   Gerekçe : Tasarımda yalnız 25 ve 45 °C var; 50 °C üstü değerler
+             birim karışıklığı. 77 °F = 25 °C, 113 °F = 45 °C.
+   Etkilenen satır: 13
+
+4. Olanaksız ölçüm
+   Karar   : Satır çıkarıldı
+   Gerekçe : Denge derişimi başlangıçtan büyük ya da eşit.
+             Adsorpsiyon derişimi düşürür; bu fiziksel olarak olanaksız.
+   Etkilenen satır: 5
+
+5. Şüpheli dönem
+   Karar   : Çıkarılmadı, işaretlendi
+   Gerekçe : 12-18 Mart arası cihaz bakım kaydı var. Satırlar
+             &#x27;supheli_donem&#x27; sütunuyla etiketlendi; duyarlılık analizi
+             bunları hariç tutarak yineleniyor.
+   Etkilenen satır: 15</pre>
+  <p class="not"><p>Beşinci adım hiçbir satır çıkarmadı — yalnızca etiketledi. <strong>Şüpheli veriye yapılacak şey silmek değil, işaretlemek.</strong> Silinen veriyle duyarlılık analizi yapılamaz.</p></p>
+</div></section>
+<section data-sira="48" data-bolum="5 · Veri" data-kisa="Temizlemenin etkisi" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Hangi adım kaç satırı etkiledi</h2>
+  <figure><img src="varlik/sekil/k01_temizleme.svg" alt="Yedi temizleme adımının kaç satırı etkilediğini gösteren grafik" loading="lazy">
+  <figcaption><p>Kırmızı: satır çıkarıldı. Turkuaz: değer düzeltildi. Gri: yalnız işaretlendi. Üç kategori üç farklı karar.</p></figcaption></figure>
+</div></section>
+<section data-sira="49" data-bolum="5 · Veri" data-kisa="Fiziksel olanaksızlık" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Alan bilgisi</p>
+  <h2>Modelin bilemeyeceği tek şey</h2>
+  <div class="govde"><p>Anket verisindeki kirler <strong>biçimseldir</strong>: yazım tutarsızlığı, boşluk,
+aralık dışı değer. Model bunları kendi bulur.</p>
+<p>Laboratuvar verisindeki bazı kirler ise <strong>fiziksel olarak
+olanaksızdır</strong>: denge derişiminin başlangıçtan büyük olması gibi.</p>
+<p>Bu ayrımı yalnız <strong>alan bilgisi</strong> söyler. İsteme şunu yazmazsanız:</p>
+<blockquote>
+<p><em>"Denge derişimi başlangıçtan büyük olamaz, çünkü adsorpsiyon
+derişimi düşürür."</em></p>
+</blockquote>
+<p>model o satırları olağan aykırı değer sanıp bırakır — ya da daha
+kötüsü, "düzeltmeye" çalışır.</p></div>
+</div></section>
+<section data-sira="50" data-bolum="5 · Veri" data-kisa="Kimliksizleştirme" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Etik</p>
+  <h2>Kimliksizleştirme: ad silmek yetmez</h2>
+  <div class="govde"><p>Adı silmek kimliksizleştirme değildir. Tehlike <strong>birleşimdedir</strong>:</p>
+<blockquote>
+<p>42 yaşında, Diş Hekimliği Fakültesi'nde, doçent, kadın</p>
+</blockquote>
+<p>Bu dört bilgi tek başına zararsız; birlikte tek bir kişiyi gösterir.</p>
+<p>Pratik ölçüt <strong>k-anonimlik</strong>: her nitelik birleşimi en az k kişide
+görünmeli. Küçük örneklemde k = 5 makul bir eşik.</p>
+<p>Çözüm genellikle <strong>toplulaştırmaktır</strong>: yaşı aralığa çevirin
+(40–49), fakülteyi alana (sağlık bilimleri), unvanı iki düzeye.
+Bilgi kaybı olur — ama yayımlanabilir veri elde edersiniz.</p></div>
+</div></section>
+<section data-sira="51" data-bolum="5 · Veri" data-kisa="Sentetik veri" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Dürüstlük</p>
+  <h2>Sentetik veri kullanıldıysa yazılır</h2>
+  <div class="govde"><p>Kursta üç veri seti sentetik: anket atölyesi, açık uçlu yanıtlar,
+adsorpsiyon deneyi.</p>
+<p>Her birinin başında, dosyada ve sayfada aynı uyarı var:</p>
+<blockquote>
+<p><strong>Bu veri gerçek bir çalışmadan gelmiyor. Yöntem göstermek için
+üretildi. Hiçbir sayı bulgu olarak alıntılanamaz.</strong></p>
+</blockquote>
+<p>Neden sentetik: temizlenmemiş ham deney verisi kamuya açık olarak
+bulunmaz. Yayımlanan veri setleri zaten temizlenmiştir — oysa
+öğretilecek şey tam olarak temizleme adımıdır.</p>
+<p><strong>Sentetik verinin bir avantajı var:</strong> doğru cevabı biliyorsunuz.
+Birazdan bunun ne işe yaradığını göreceğiz.</p></div>
+</div></section>
+<section data-sira="52" data-bolum="6 · Analiz" data-kisa="BÖLÜM 5 · Analiz" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">05</span>
+  <h2>Analiz, şekil, tablo</h2>
+  <p class="alt"><p>Hangi testi hangi soruya? Ve en sert ders: %99,9 doğruluk aldığınızda sevinmeyin.</p></p>
+  <p class="sure">75 dakika</p>
+</div></section>
+<section data-sira="53" data-bolum="6 · Analiz" data-kisa="Önce plan" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Sıra</p>
+  <h2>Analizi yapmadan önce planı yazdırın</h2>
+  <div class="govde"><p>Analizi yapıp sonra "hangi test uygundu" diye sormak, <strong>sonuca bakarak
+test seçmek</strong> demektir. Buna p-hacking denir ve çoğu zaman kötü
+niyetle değil, sırayı karıştırmaktan doğar.</p>
+<p>Plan istemi şunları ister:</p>
+<ol>
+<li>Hangi test — adıyla</li>
+<li>Neden bu test — soru türü, ölçek düzeyi, grup sayısı</li>
+<li>Hangi varsayımlar — her biri nasıl denetlenecek</li>
+<li>Varsayım sağlanmazsa — alternatif test</li>
+<li>Hangi etki büyüklüğü — adı ve yorum eşikleri</li>
+<li>Rapor cümlesi şablonu — yerleri boş bırakılmış</li>
+</ol>
+<p>Planı yazıp <strong>bir kenara koymak</strong>, sonuçlara göre yön değiştirmenizi
+engeller.</p></div>
+</div></section>
+<section data-sira="54" data-bolum="6 · Analiz" data-kisa="Karar ağacı" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Hangi analiz hangi soruya</h2>
+  <figure><img src="varlik/sekil/g01_analiz_karar_agaci.svg" alt="Araştırma sorusu türüne göre analiz seçimi karar ağacı" loading="lazy">
+  <figcaption><p>Soru türü ve ölçüm düzeyi bilinirse test büyük ölçüde belirlenir. Geri kalanı varsayım denetimi.</p></figcaption></figure>
+</div></section>
+<section data-sira="55" data-bolum="6 · Analiz" data-kisa="Adım 0 — işe yaramayan kurulum" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · kod/15_analiz_adsorpsiyon.py</p>
+  <h2>İlk kurulum neden işe yaramadı</h2>
+  <pre class="cikti">ADIM 0 — İLK KURULUM ve NEDEN İŞE YARAMADIĞI
+--------------------------------------------------------------
+
+Analizi ilk kurduğumuzda yalnız ilgi konusu üç faktörü
+modele koyduk: adsorban, pH, sıcaklık. Başlangıç derişimi
+ile temas süresini dışarıda bıraktık.
+
+Kaynak                              KT  sd         F         p     η²p
+adsorban                           6,9   1      0,03     0,855   0,000
+pH                               280,6   2      0,68     0,509   0,007
+sicaklik_C                         0,3   1      0,00     0,969   0,000
+adsorban × pH                      8,8   2      0,02     0,979   0,000
+
+Hiçbir etki anlamlı değil, bütün etki büyüklükleri sıfıra
+yakın. Oysa çay posası ile ticari kömürün farklı
+davrandığını betimsel tabloda zaten görüyorduk.</pre>
+  <p class="not"><p>Bu bir öğretim örneği değil — gerçekten böyle oldu. Çıktı kursta <strong>Adım 0</strong> olarak duruyor.</p></p>
+</div></section>
+<section data-sira="56" data-bolum="6 · Analiz" data-kisa="İhmal edilen faktör" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Aynı veri, iki model kurulumu</h2>
+  <figure><img src="varlik/sekil/k02_anova_kiyas.svg" alt="Eksik ve bloklanmış model kurulumlarının F değerleri" loading="lazy">
+  <figcaption><p>Derişim ve süre modele konmadığında bütün F değerleri birin altında. Blok olarak konduğunda dördü de anlamlı.</p></figcaption></figure>
+</div></section>
+<section data-sira="57" data-bolum="6 · Analiz" data-kisa="Neden böyle oldu" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Ders</p>
+  <h2>F oranının paydası, açıklanamayan her şeydir</h2>
+  <div class="govde"><p><code>q</code> değeri başlangıç derişimine çok güçlü bağlı: 25 mg/L'de ~11 mg/g,
+100 mg/L'de ~45 mg/g.</p>
+<p>Bu farkı modele koymazsanız o varyans <strong>hata</strong> sayılır ve F oranının
+paydasını şişirir. Payda şişince bütün F değerleri birin altına düşer.</p>
+<p>Deney tasarımı dilinde çözümü <strong>bloklama</strong>: kontrol edilen ama ilgi
+konusu olmayan faktörler modele ana etki olarak girer, etkileşimleri
+sorulmaz.</p>
+<p><strong>Modelden çıkarmak basitleştirmez — varyansı görünmez bir yere
+taşır.</strong></p></div>
+</div></section>
+<section data-sira="58" data-bolum="6 · Analiz" data-kisa="Etkileşim" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Etkileşim anlamlıysa ana etki tek başına yorumlanmaz</h2>
+  <figure><img src="varlik/sekil/k03_etkilesim.svg" alt="pH düzeylerine göre iki adsorbanın kapasitesi" loading="lazy">
+  <figcaption><p>Çizgiler paralel değil. “Ticari kömür daha iyidir” demek eksik; üstünlüğü pH'a bağlı.</p></figcaption></figure>
+</div></section>
+<section data-sira="59" data-bolum="6 · Analiz" data-kisa="Sentetik verinin avantajı" class="slayt cikti-slayt" data-tur="cikti">
+<div class="ic">
+  <p class="etiket">Gerçek çıktı · kod/15_analiz_adsorpsiyon.py</p>
+  <h2>Tahmin gerçeğe ne kadar yakın?</h2>
+  <pre class="cikti">(c) Tahminler gerçek değerlere ne kadar yakın?
+
+Bu veri sentetik olduğu için üretim modelinin gerçek
+parametrelerini biliyoruz. Gerçek bir çalışmada bu denetim
+yapılamaz.
+
+Adsorban      Parametre       gerçek    tahmin    %95 güven aralığı  kapsıyor mu
+Çay posası    qmax (mg/g)      148,0      88,0       [52,2 – 123,7]        HAYIR
+              KL (L/mg)       0,0671    0,1364    [0,0377 – 0,2352]         evet
+Ticari        qmax (mg/g)      176,0     176,4      [137,8 – 215,0]         evet
+              KL (L/mg)       0,1000    0,0997    [0,0712 – 0,1282]         evet
+
+Nedeni yöntem değil, deney aralığı: çay posasının denge
+derişimleri 1,3-9,8 mg/L arasında kalıyor. En yüksek derişimde
+bile kapasitenin ancak %57 kadarı doluyor; izoterm doygunluk
+bölgesine girmiyor.</pre>
+  <p class="not"><p><strong>qmax bir doygunluk düzeyidir; doygunluğa ulaşılmamış veriden güvenilir biçimde çıkarılamaz.</strong> Geniş güven aralığı bu uyarıyı zaten veriyor — nokta tahmini tek başına raporlanırsa uyarı kaybolur.</p></p>
+</div></section>
+<section data-sira="60" data-bolum="6 · Analiz" data-kisa="Veri sızıntısı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Makine öğrenmesi</p>
+  <h2>%99,9 doğruluk aldığınızda sevinmeyin</h2>
+  <div class="govde"><p>Kursun web güvenliği örneğinde ilk model <strong>F1 = 0,9992</strong> verdi.</p>
+<p>Bu iyi haber değil, <strong>şüphe nedenidir.</strong> Gerçek bir sınıflandırma
+probleminde bu başarım beklenmez.</p>
+<p>Araştırınca ortaya çıktı: beş özellik, sınıf etiketine göre sabit
+değer alıyordu. Model problemi çözmüyordu — cevabı okuyordu.</p>
+<p>Bu, <strong>veri sızıntısının</strong> tanımı: eğitim verisine, tahmin anında
+elde olmayacak bir bilginin karışması.</p></div>
+</div></section>
+<section data-sira="61" data-bolum="6 · Analiz" data-kisa="Sızıntı teşhisi" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Sızıntı nasıl bulundu</h2>
+  <figure><img src="varlik/sekil/w02_sizinti_teshis.svg" alt="Sınıfa göre sabit değer alan özelliklerin teşhisi" loading="lazy">
+  <figcaption><p>Tek bir sütunu atmak yetmedi — sistematik tarama beş sızdıran özellik buldu.</p></figcaption></figure>
+</div></section>
+<section data-sira="62" data-bolum="6 · Analiz" data-kisa="Sızıntıdan sonra" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Sonuç</p>
+  <h2>Dürüst sayı, şişirilmiş sayıdan iyidir</h2>
+  <div class="govde"><table>
+<thead>
+<tr>
+<th>Kurulum</th>
+<th style="text-align: right;">F1</th>
+<th>Durum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saf model, 43 özellik</td>
+<td style="text-align: right;">0,9992</td>
+<td>sızıntılı — cevabı okuyor</td>
+</tr>
+<tr>
+<td>Bir sütun atıldı</td>
+<td style="text-align: right;">0,9984</td>
+<td>hâlâ sızıntılı</td>
+</tr>
+<tr>
+<td>Beş sütun atıldı</td>
+<td style="text-align: right;">0,9873</td>
+<td>daha iyi ama gerçekçi değil</td>
+</tr>
+<tr>
+<td><strong>Yerleşime uygun, 11 sözcüksel özellik</strong></td>
+<td style="text-align: right;"><strong>0,9765</strong></td>
+<td><strong>savunulabilir</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Son satır, modelin <strong>gerçekten</strong> yapabileceği iş. Çapraz doğrulamada
+0,9702 ± 0,0062.</p>
+<p>Bir hakem birinci satırı görse sorardı: "Bu başarım nasıl mümkün?"
+Dördüncü satırı sormaz.</p></div>
+</div></section>
+<section data-sira="63" data-bolum="6 · Analiz" data-kisa="Şekil ilkeleri" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Şekil ve tablo</p>
+  <h2>Yayın kalitesinde şekil: üç ilke</h2>
+  <div class="govde"><p><strong>Mürekkep oranı.</strong> Her çizgi bir bilgi taşımalı. Süs çizgisi,
+gereksiz çerçeve, üç boyut efekti silinir.</p>
+<p><strong>Doğrudan etiketleme.</strong> Mümkünse açıklama kutusu yerine etiketi
+verinin yanına yazın. Okur gözüyle ileri geri gitmesin.</p>
+<p><strong>Izgara yalnız değer ekseninde.</strong> Kategori ekseninde ızgara bilgi
+taşımaz. Dikey çubukta yatay ızgara, yatay çubukta dikey ızgara.</p>
+<p>Bunlar süsleme kuralları değil — <strong>okuma süresini</strong> kısaltan
+kurallar. Hakem şeklinizi on saniye içinde anlamazsa, metne döner.</p></div>
+</div></section>
+<section data-sira="64" data-bolum="6 · Analiz" data-kisa="UYGULAMA · analiz planı" class="slayt uygulama" data-tur="uygulama">
+<div class="ic">
+  <p class="etiket">Uygulama · 30 dakika</p>
+  <h2>Kendi verinizin profilini çıkarın ve plan yazdırın</h2>
+  <ol class="adimlar"><li><p>Kendi verinizden bir CSV hazırlayın. Yoksa kursun Gazi veri setini indirin: <code>veri/sosyal/gazi_ders_degerlendirme.csv</code></p></li><li><p><code>kod/19_veri_profili.py</code> betiğini koşturun. Çıktı 400 satırlık bir profil — ham veri değil.</p></li><li><p>Profili bağlam olarak verip analiz planı istemini koşturun. Üç araştırma sorusu yazın.</p></li><li><p>Gelen planda şunu arayın: her testin varsayımı belirtilmiş mi, varsayım tutmazsa alternatifi verilmiş mi, etki büyüklüğü önerilmiş mi?</p></li><li><p>Profilin “siz söylemelisiniz” dediği değişkenleri düzeltip istemi yeniden koşturun. İki planı karşılaştırın.</p></li></ol>
+  <p class="not"><p>Çıktı: kendi verinize göre yazılmış, varsayımları ve alternatifleri belirtilmiş bir analiz planı.</p></p>
+</div></section>
+<section data-sira="65" data-bolum="6 · Üretim" data-kisa="BÖLÜM 6 · Üretim" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">06</span>
+  <h2>Makale, poster, proje, hakemlik</h2>
+  <p class="alt"><p>Elinizde bulgu var. Şimdi onu yayına çevirmek.</p></p>
+  <p class="sure">75 dakika</p>
+</div></section>
+<section data-sira="66" data-bolum="6 · Üretim" data-kisa="Yazım sırası" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>Makale okunduğu sırayla yazılmaz</h2>
+  <figure><img src="varlik/sekil/g02_yazim_sirasi.svg" alt="Makalenin okuma sırası ile yazma sırasını karşılaştıran şema" loading="lazy">
+  <figcaption><p>Yöntemle başlayın: zaten biliyorsunuz. Özeti en sona bırakın: özetlenecek şey ancak o zaman hazır.</p></figcaption></figure>
+</div></section>
+<section data-sira="67" data-bolum="6 · Üretim" data-kisa="Neden bu sıra" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Gerekçe</p>
+  <h2>Neden yöntemle başlanır</h2>
+  <div class="govde"><p><strong>Yöntem</strong> — ne yaptığınızı zaten biliyorsunuz. Yoruma ihtiyaç yok,
+sadece kayda.</p>
+<p><strong>Bulgular</strong> — sayılar elinizde. Burada yorum yapmazsınız, bildirirsiniz.</p>
+<p><strong>Tartışma</strong> — literatürle konuşmaya ancak şimdi başlarsınız, çünkü
+neyin tartışılacağı belli oldu.</p>
+<p><strong>İlgili çalışmalar</strong> — hangi kaynaklara ihtiyaç olduğu artık biliniyor.
+Baştan yazsaydınız kullanmayacağınız kaynakları okurdunuz.</p>
+<p><strong>Giriş</strong> — ne bulduğunuzu bildiğiniz için hangi boşluğu doldurduğunuzu
+da biliyorsunuz.</p>
+<p><strong>Sonuç → Öz → Başlık</strong> — en kısa bölümler, en son. Çünkü en çok
+damıtma gerektirenler.</p></div>
+</div></section>
+<section data-sira="68" data-bolum="6 · Üretim" data-kisa="Yazdırma değil, denetletme" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Doğru kullanım</p>
+  <h2>Modele yazdırmak yerine denetletin</h2>
+  <div class="govde"><p>Bölüm taslağını modele yazdırmak <strong>en riskli</strong> kullanımdır. TÜBİTAK
+rehberi bunu "dikkat edilmesi gereken kullanım" sayıyor ve nedenini
+sayıyor: yüzeysel metin, uydurma bilgi, farkında olmadan aşırma.</p>
+<p>Daha güvenli ve daha verimli olan: <strong>kendi yazdığınızı denetletmek.</strong></p>
+<blockquote>
+<p><em>"Bu tartışma paragrafında, verinin desteklemediği bir iddia var mı?
+Varsa cümleyi göster ve hangi veriyle desteklenmediğini söyle."</em></p>
+<p><em>"Bu yöntem bölümüyle çalışmayı yineleyebilir miyim? Yineleyemeyeceğim
+her adımı say."</em></p>
+</blockquote>
+<p>İkincisi kursun <strong>denetim</strong> parçasının makale hâli.</p></div>
+</div></section>
+<section data-sira="69" data-bolum="6 · Üretim" data-kisa="Poster başlığı" class="slayt" data-tur="kiyas">
+<div class="ic">
+  <h2>Poster başlığı bulguyu söyler</h2>
+  <div class="kiyas">
+    <div class="zayif"><p class="k-b">Konu bildiren</p>
+      <div><p>Çay posasından elde edilen aktif karbonun boyar madde giderimi
+üzerine bir çalışma</p>
+<p>Koridordan geçen biri bundan hiçbir şey öğrenmez.</p></div></div>
+    <div class="guclu"><p class="k-b">Bulgu bildiren</p>
+      <div><p>Çay posası aktif karbonu yüksek pH'ta ticari kömüre yaklaşıyor:
+malzeme ile pH arasında etkileşim var</p>
+<p>Sonucu öğrenir ve durmaya karar verebilir.</p></div></div>
+  </div>
+  <p class="not"><p>Poster okunmaz, <strong>taranır.</strong> Üç metreden başlık, bir metreden şekil, ancak ilgi çekerse yakından metin.</p></p>
+</div></section>
+<section data-sira="70" data-bolum="6 · Üretim" data-kisa="Gerçek poster" class="slayt sekil-slayt" data-tur="sekil">
+<div class="ic">
+  <h2>İstemin ürettiği plana göre çizilen poster</h2>
+  <figure><img src="varlik/sekil/p01_poster.svg" alt="A0 konferans posteri: üç sütun, dört analiz şekli gömülü" loading="lazy">
+  <figcaption><p>A0 dikey. Bütün sayılar analiz çıktısı dosyasından okunarak yerleştirildi; hiçbiri elle yazılmadı.</p></figcaption></figure>
+</div></section>
+<section data-sira="71" data-bolum="6 · Üretim" data-kisa="Plan ile çizim ayrımı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">İş bölümü</p>
+  <h2>Model planı yapar, betik çizer</h2>
+  <div class="govde"><p>İstem bir <strong>plan</strong> üretti: başlık önerileri, kutu sırası, her kutunun
+içeriği, hangi şeklin nereye gideceği. Çizimi betik yaptı.</p>
+<p>Bu ayrım bilerek kuruldu. Modelden doğrudan "poster üret" istenebilirdi;
+sonuç ilk bakışta makul, yakından bakıldığında bozuk olurdu — kutular
+taşar, sayılar uydurulur.</p>
+<p><strong>Plan metin olarak denetlenebilir. Çizim, sayıları doğrudan analiz
+çıktısından okuyan bir betiğe bırakılır.</strong></p>
+<p>Genel kural: modelden <strong>karar</strong> isteyin, <strong>üretim</strong> için kod yazdırın.
+Kodun çıktısı sınanabilir; serbest metnin çıktısı sınanamaz.</p></div>
+</div></section>
+<section data-sira="72" data-bolum="6 · Üretim" data-kisa="Poster tipografisi" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Pratik</p>
+  <h2>Poster yazısı ne kadar büyük olmalı</h2>
+  <div class="govde"><p>Ölçüt basit: <strong>gövde metni iki metreden okunabilmeli.</strong> A0 posterde
+bu yaklaşık 24–28 punto demektir.</p>
+<p>Ekranda tasarlarken yazı hep yeterince büyük görünür; A0'a basıldığında
+küçük kalır.</p>
+<p><strong>Pratik denetim:</strong> posteri ekranda %25 oranında küçültün. Gövde
+metnini hâlâ okuyabiliyorsanız basılı hâlde de okunur.</p></div>
+</div></section>
+<section data-sira="73" data-bolum="6 · Üretim" data-kisa="Fikirden projeye" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Proje</p>
+  <h2>Konudan projeye üç adım</h2>
+  <div class="govde"><p><strong>Konudan soruya.</strong> Soruda ölçülecek bir şey vardır.</p>
+<p><strong>Sorudan boşluğa.</strong> Aranan şey "kimse yapmamış" değil, <strong>"neden
+yapılmamış"</strong>. Çoğu yapılmamış şey yapılmaya değmediği için
+yapılmamıştır; geri kalanı için bir engel vardır ve sizin katkınız o
+engeli aşmaktır.</p>
+<p><strong>Boşluktan tasarıma.</strong> Soruyu yanıtlayacak ölçüm nedir, kaç gözlem
+gerekir, hangi karşılaştırma yapılır?</p>
+<p>Model bu üçünde <strong>tartışma ortağı</strong> olarak işe yarar — fikri üreten
+değil, sınayan taraf olarak. Ürettiği fikir yüzeysel olur; sizin
+fikrinizi sınaması işe yarar.</p></div>
+</div></section>
+<section data-sira="74" data-bolum="6 · Üretim" data-kisa="TÜBİTAK 1001 ölçütleri" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">TÜBİTAK 1001</p>
+  <h2>Panel formu ne soruyor</h2>
+  <div class="govde"><table>
+<thead>
+<tr>
+<th>Ölçüt</th>
+<th>Ağırlık</th>
+<th>Çekirdek soru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Özgün Değer</td>
+<td><strong>%35</strong></td>
+<td>Literatürdeki eksiklik ne düzeyde ortaya konmuş; kavramsal/kuramsal/metodolojik katkı açıklanmış mı?</td>
+</tr>
+<tr>
+<td>Yöntem</td>
+<td><strong>%25</strong></td>
+<td>Yöntem belirgin ve doğru mu; amaç ve hedeflere ulaşmaya uygun mu?</td>
+</tr>
+<tr>
+<td>Proje Yönetimi</td>
+<td><strong>%20</strong></td>
+<td>İş paketleri, başarı ölçütleri, ekip, olanaklar, B planı gerçekçi mi?</td>
+</tr>
+<tr>
+<td>Yaygın Etki</td>
+<td><strong>%20</strong></td>
+<td>Çıktı potansiyeli; üst politika belgeleriyle ilişki kurulmuş mu?</td>
+</tr>
+</tbody>
+</table>
+<p>Form kamuya açık ve indirilebilir. <strong>Eke koyun.</strong></p></div>
+</div></section>
+<section data-sira="75" data-bolum="6 · Üretim" data-kisa="Formu eke koymak" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Fark</p>
+  <h2>Formu eklemek neyi değiştiriyor</h2>
+  <div class="govde"><p>Form olmadan model genel "proje değerlendirme ölçütleri" bilgisinden
+üretir. Bilmediği üç şey:</p>
+<ul>
+<li><strong>Üst politika belgelerine atıf</strong> beklentisi (On İkinci Kalkınma Planı)</li>
+<li><strong>Danışman sayısının</strong> tali konu sayısıyla sınırlı olması</li>
+<li><strong>B planının özgün değeri korumak</strong> zorunda olması</li>
+</ul>
+<p>Üçü de formda açıkça yazıyor. Üçü de puan kaybettiriyor.</p>
+<blockquote>
+<p><em>"Çay posası yeterli kapasite vermezse fındık kabuğuna geçilecektir."</em></p>
+<p>Bu bir B planı mı, yoksa başka bir proje mi? Form tam olarak bunu
+soruyor.</p>
+</blockquote></div>
+</div></section>
+<section data-sira="76" data-bolum="6 · Üretim" data-kisa="Hakemlik: iki ayrı iş" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Hakemlik</p>
+  <h2>Burada çizgi nettir</h2>
+  <div class="govde"><p><strong>Kendi önerinizi denetletmek</strong> — serbest, hatta önerilir. Göndermeden
+önce bir revizyon turu kazandırır.</p>
+<p><strong>Size gelen hakemlik görevi</strong> — TÜBİTAK rehberi bunu kesin biçimde
+yasaklıyor. Dergilerin çoğu da aynı şeyi söylüyor: hakem, manuskripti
+yapay zekâ sistemine yükleyemez.</p>
+<p>Gerekçe teknik değil: proje önerisi ve gönderilmiş makale
+<strong>yayımlanmamış fikir</strong> ve <strong>kişisel veri</strong> taşır. Dış bir hizmete
+yüklemek gizlilik yükümlülüğünün ihlalidir.</p>
+<p><strong>Kendi metniniz kendi sorumluluğunuzdadır; başkasının metni size
+emanettir.</strong></p></div>
+</div></section>
+<section data-sira="77" data-bolum="6 · Üretim" data-kisa="Hakem cevabı" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">İzin verilen</p>
+  <h2>Hakem cevabında ne yapılabilir</h2>
+  <div class="govde"><p>Hakem raporuna cevap yazarken model işe yarar — çünkü burada
+denetlediğiniz <strong>kendi metninizdir</strong>.</p>
+<p><strong>Yapıyor:</strong> dağınık notlarınızı okunur bir rapora çeviriyor, ton
+düzeltiyor, atladığınız eleştiriyi fark ettiriyor, hangi eleştiriye
+cevap verilmediğini sayıyor.</p>
+<p><strong>Yapmıyor:</strong> makaleyi okumuyor, değerlendirmiyor, eleştirinin haklı
+olup olmadığına karar vermiyor.</p>
+<blockquote>
+<p><strong>DENETİM</strong> — Hakemin kaç ayrı eleştirisi vardı? Kaçına cevap
+verdim? Cevapsız kalan var mı?</p>
+</blockquote>
+<p>Bu tek soru, çoğu hakem cevabındaki en büyük eksiği yakalar.</p></div>
+</div></section>
+<section data-sira="78" data-bolum="6 · Üretim" data-kisa="UYGULAMA · öz-denetim" class="slayt uygulama" data-tur="uygulama">
+<div class="ic">
+  <p class="etiket">Uygulama · 25 dakika</p>
+  <h2>Kendi metninizi hakem gözüyle denetletin</h2>
+  <ol class="adimlar"><li><p>Üzerinde çalıştığınız bir metin seçin: makale bölümü, proje önerisi ya da hakem cevabı.</p></li><li><p>İstemi kurarken rolü somut yazın: “bu alanı bilen ama bu alt konuda uzman olmayan bir hakem”. Bu, genel geçer eleştiri yerine işe yarar eleştiri getirir.</p></li><li><p>Sınır bölümüne şunu ekleyin: <em>“Nazik olma. Metinde olmayanı varsayma; eksik olarak işaretle.”</em></p></li><li><p>Denetim bölümüne şunu ekleyin: <em>“Sonunda şu soruyu yanıtla: bu metni reddetmek için en iyi gerekçe ne olurdu?”</em></p></li><li><p>Gelen cevabı okuyun. En çok canınızı sıkan maddeyi seçip üstüne gidin: “Bu itirazın haklı. Şöyle çözsem olur mu?”</p></li></ol>
+  <p class="not"><p>Çıktı: metninizin en zayıf halkası ve onu düzeltmek için somut bir öneri.</p></p>
+</div></section>
+<section data-sira="79" data-bolum="7 · İleri konular" data-kisa="BÖLÜM 7 · İleri" class="slayt bolum" data-tur="bolum">
+<div class="ic">
+  <span class="no">07</span>
+  <h2>İleri konular</h2>
+  <p class="alt"><p>Tek pencerenin dışına çıkmak: model seçimi, kalıcı bağlam,
+paketlenmiş iş akışları, doğrudan bağlantılar.</p></p>
+  <p class="sure">30 dakika</p>
+</div></section>
+<section data-sira="80" data-bolum="7 · İleri konular" data-kisa="Model seçimi: üç soru" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Model seçimi</p>
+  <h2>Üç soruyla seçilir</h2>
+  <div class="govde"><p><strong>1. İş ne kadar muhakeme istiyor?</strong> Metni biçimlendirmek ile bir
+yöntem tartışmasını değerlendirmek aynı şey değil.</p>
+<p><strong>2. Girdi ne kadar büyük?</strong> Tek bir özet mi, kırk PDF mi?</p>
+<p><strong>3. Kaç kez koşacak?</strong> Bir kez mi, dört yüz kayıt için döngüde mi?</p>
+<p>Üçüncüsü çoğu zaman atlanır ama <strong>belirleyici olan odur.</strong> Tek
+seferlik bir iş için en yetenekli modeli kullanmanın maliyeti
+önemsizdir; dört yüz kez koşacak bir işte aynı seçim hem pahalı hem
+yavaştır.</p></div>
+</div></section>
+<section data-sira="81" data-bolum="7 · İleri konular" data-kisa="Model tablosu" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Kasım 2026 itibarıyla</p>
+  <h2>Hangi iş hangi modele</h2>
+  <div class="govde"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Bağlam</th>
+<th>Akademik karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>En yetenekli katman</td>
+<td>1M</td>
+<td>En zor muhakeme; uzun soluklu özerk görevler</td>
+</tr>
+<tr>
+<td><strong>Varsayılan katman</strong></td>
+<td>1M</td>
+<td>Yöntem tartışması, hakem cevabı, analiz planı</td>
+</tr>
+<tr>
+<td>Hızlı katman</td>
+<td>1M</td>
+<td>Günlük iş: yazım, kod, veri çıkarımı, biçimlendirme</td>
+</tr>
+<tr>
+<td>Ekonomik katman</td>
+<td>1M</td>
+<td>Toplu ve basit iş: sınıflandırma, etiketleme</td>
+</tr>
+</tbody>
+</table>
+<p>Ayrıca <strong>çaba düzeyi</strong> var: aynı model, farklı derinlikte düşünür.
+Pratik sonuç: <strong>yeni bir modeli düşük çabada koşturmak, eski bir
+modeli yüksek çabada koşturmaktan iyidir.</strong> Önce modeli güncelleyin.</p></div>
+</div></section>
+<section data-sira="82" data-bolum="7 · İleri konular" data-kisa="Türkçe daha çok jeton harcar" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Dikkat</p>
+  <h2>Türkçe, İngilizceden fazla jeton harcar</h2>
+  <div class="govde"><p>Bu araçların metin parçalama düzeni ağırlıklı olarak İngilizceye göre
+kurulmuştur. Türkçe sondan eklemeli olduğu için aynı anlamı taşıyan
+metin <strong>belirgin biçimde fazla</strong> jeton harcar.</p>
+<table>
+<thead>
+<tr>
+<th>Belge</th>
+<th>Yaklaşık jeton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bir sayfa Türkçe akademik metin</td>
+<td>600 – 900</td>
+</tr>
+<tr>
+<td>Yirmi sayfalık makale</td>
+<td>12.000 – 18.000</td>
+</tr>
+<tr>
+<td>Yüz sayfalık tez</td>
+<td>60.000 – 90.000</td>
+</tr>
+</tbody>
+</table>
+<p>Pratik etkisi: Türkçe bir tez, aynı uzunluktaki İngilizce tezden daha
+erken sınıra dayanır.</p>
+<p>Ve: <strong>pencereye sığması, iyi çalışacağı anlamına gelmez.</strong> Pencere
+doldukça modelin ortadaki bilgiyi gözden kaçırma eğilimi artar.</p></div>
+</div></section>
+<section data-sira="83" data-bolum="7 · İleri konular" data-kisa="Dört ileri araç" class="slayt" data-tur="kart">
+<div class="ic">
+  <h2>Tek pencerenin dışı</h2>
+  <div class="kartlar iki"><div class="kart"><p class="k-b">Projeler — kalıcı bağlam</p><p>Araştırma sorusu, veri künyesi, yöntem kararları bir kez yazılır, her konuşmada hazır bulunur. <strong>Konmayacaklar:</strong> kimliksizleştirilmemiş veri, başkasının yayımlanmamış metni.</p></div><div class="kart"><p class="k-b">Skill — paketlenmiş iş akışı</p><p>Bir istemi üçüncü kez yazıyorsanız o artık bir araçtır. Asıl kazanç zamandan değil <strong>tutarlılıktan</strong> gelir: her koşuda aynı maddeler denetlenir.</p></div><div class="kart"><p class="k-b">MCP — doğrudan bağlantı</p><p>Zotero kütüphaneniz, arXiv, PubMed, yerel dosyalar. Zotero bağlantısı iki sorunu birden çözer: kaynak uydurma ve ek taşıma. <strong>Yalnız gerekeni bağlayın.</strong></p></div><div class="kart"><p class="k-b">Ajan tabanlı çalışma</p><p>Model adımları kendi planlar: dosya okur, kod yazar, çalıştırır, düzeltir. Kuralı tek cümle: <strong>çıktısını denetleyebildiğiniz işi otomatikleştirin.</strong></p></div></div>
+</div></section>
+<section data-sira="84" data-bolum="7 · İleri konular" data-kisa="Bu kurs böyle üretildi" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Örnek</p>
+  <h2>Bu kursun kendisi bu yöntemle üretildi</h2>
+  <div class="govde"><p>Kurstaki 20 Python betiği, 5 veri seti, 34 şekil ve bütün analiz
+çıktıları ajan tabanlı bir çalışmayla üretildi: kod yazıldı,
+koşturuldu, çıktısına bakıldı, hata bulununca düzeltildi.</p>
+<p>İşe yaramasının nedeni, <strong>her adımın denetlenebilir olmasıydı.</strong> Bir
+betik ya koşar ya koşmaz; bir sayı ya tutar ya tutmaz.</p>
+<p>Veri sızıntısı da böyle yakalandı — F1 fazla iyi çıktığı için
+şüphelenildi, sonra sütunlar tek tek tarandı.</p>
+<p><strong>Otomatikleştirilmeyenler:</strong> hangi örneğin seçileceği, neyin
+vurgulanacağı, bir uyarının nereye konacağı.</p></div>
+</div></section>
+<section data-sira="85" data-bolum="7 · İleri konular" data-kisa="Özet: sekiz ilke" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Kapanış</p>
+  <h2>Bugünden alınacaklar</h2>
+  <div class="govde"><ol>
+<li><strong>Fark araçta değil denetimde.</strong> Üç rapordan ikisi çarpıtılmış
+   rakamı aktardı; biri kaynağa gitti.</li>
+<li><strong>Çıktı gösterilmeden istem değerlendirilemez.</strong></li>
+<li><strong>Sınır ve denetim</strong>, istemin en çok atlanan ve en çok işe yarayan
+   parçaları.</li>
+<li><strong>Belge elinizdeyse eke koyun.</strong> Özetlemeyin.</li>
+<li><strong>Veriyi değil profilini verin.</strong> Gizlilik, jeton, doğruluk.</li>
+<li><strong>Planı analizden önce yazın</strong>, bir kenara koyun.</li>
+<li><strong>%99,9 doğrulukta sevinmeyin, şüphelenin.</strong></li>
+<li><strong>Beyan edin.</strong> Kullanım yaygın, beyan %0,1 — bu açık
+   kapanmalı ve kapatacak olan sizsiniz.</li>
+</ol></div>
+</div></section>
+<section data-sira="86" data-bolum="7 · İleri konular" data-kisa="Materyal ve iletişim" class="slayt" data-tur="metin">
+<div class="ic">
+  <p class="etiket">Devam</p>
+  <h2>Her şey açık erişimde</h2>
+  <div class="govde"><p><strong>mehmetsevri.github.io/akademide-yapay-zeka</strong></p>
+<p>15 bölüm · 53 istem kalıbı · 50 doldurulmuş örnek · 48 gerçek çıktı ·
+34 şekil · 20 çalıştırılabilir Python betiği · 5 veri seti</p>
+<p>Bütün kod ve veri indirilebilir. Betikler kendi makinenizde koşar;
+rastgelelik içeren her adımda tohum sabittir, <strong>aynı sayıları
+alırsınız.</strong></p>
+<p>Kaynak göstererek ders malzemesi olarak kullanabilirsiniz.</p>
+<hr />
+<p><strong>Dr. Mehmet Sevri</strong> · mehmetsevri.github.io
+Recep Tayyip Erdoğan Üniversitesi · Bilgisayar Mühendisliği · AISEC Lab</p></div>
+</div></section>
+<section data-sira="87" data-bolum="7 · İleri konular" data-kisa="Teşekkür" class="slayt kapak" data-tur="kapak">
+<div class="ic">
+  <p class="ust">Atölyenin sonu</p>
+  <h1>Sorular</h1>
+  <p class="alt"><p>Bugün koşturduğumuz her istem, ürettiği her çıktı ve çizdiği her şekil kursta duruyor.</p>
+<p>Beğenmediklerimiz de.</p></p>
+  <div class="imza"><p><strong>mehmetsevri.github.io/akademide-yapay-zeka</strong></p></div>
+</div></section>
+</main>
+
+<nav class="gezinme" aria-label="Slayt gezinmesi">
+  <button type="button" id="onceki" aria-label="Önceki slayt">‹</button>
+  <button type="button" id="sonraki" aria-label="Sonraki slayt">›</button>
+</nav>
+
+<div class="genel-bakis" id="genelBakis" hidden>
+  <div class="gb-ust">
+    <h2>Genel bakış</h2>
+    <p>Bir slayta gitmek için tıklayın. Kapatmak için <kbd>Esc</kbd>.</p>
+    <button type="button" id="gbKapat" aria-label="Kapat">✕</button>
+  </div>
+  <div class="gb-izgara" id="gbIzgara"></div>
+</div>
+
+<div class="yardim" id="yardim" hidden>
+  <div class="y-ic">
+    <h2>Klavye</h2>
+    <dl>
+      <dt>→ · Space · PageDown</dt><dd>sonraki slayt</dd>
+      <dt>← · PageUp</dt><dd>önceki slayt</dd>
+      <dt>Home · End</dt><dd>ilk · son slayt</dd>
+      <dt>O</dt><dd>genel bakış</dd>
+      <dt>F</dt><dd>tam ekran</dd>
+      <dt>S</dt><dd>bölüm başına dön</dd>
+      <dt>?</dt><dd>bu pencere</dd>
+    </dl>
+    <p>Dokunmatik ekranda sağa–sola kaydırın. Adres çubuğundaki
+    <code>#12</code> doğrudan o slayta gider.</p>
+    <button type="button" id="yardimKapat">Kapat</button>
+  </div>
+</div>
+
+<script src="varlik/atolye.js?v=f7dfae3b97" defer></script>
+</body>
+</html>

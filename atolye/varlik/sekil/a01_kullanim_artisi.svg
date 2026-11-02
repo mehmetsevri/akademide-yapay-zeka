@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="522.508047pt" height="292.08775pt" viewBox="0 0 522.508047 292.08775" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T03:20:19.744596</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 292.08775 
+L 522.508047 292.08775 
+L 522.508047 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 104.341797 233.28 
+L 506.101797 233.28 
+L 506.101797 39.24 
+L 104.341797 39.24 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 104.341797 69.441818 
+L 333.344997 69.441818 
+L 333.344997 48.06 
+L 104.341797 48.06 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #e8eaed"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 104.341797 136.26 
+L 285.133797 136.26 
+L 285.133797 114.878182 
+L 104.341797 114.878182 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #e8eaed"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 104.341797 203.078182 
+L 317.274597 203.078182 
+L 317.274597 181.696364 
+L 104.341797 181.696364 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #e8eaed"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 104.341797 90.823636 
+L 441.820197 90.823636 
+L 441.820197 69.441818 
+L 104.341797 69.441818 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #1f3a5f"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 104.341797 157.641818 
+L 353.432997 157.641818 
+L 353.432997 136.26 
+L 104.341797 136.26 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #1f3a5f"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 104.341797 224.46 
+L 236.922597 224.46 
+L 236.922597 203.078182 
+L 104.341797 203.078182 
+z
+" clip-path="url(#pd61db9df58)" style="fill: #1f3a5f"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 104.341797 233.28 
+L 104.341797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m8f81832a14" d="M 0 0 
+L 0 3.5 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8f81832a14" x="104.341797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="104.341797" y="247.405" transform="rotate(-0 104.341797 247.405)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 184.693797 233.28 
+L 184.693797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m8f81832a14" x="184.693797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="184.693797" y="247.405" transform="rotate(-0 184.693797 247.405)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 265.045797 233.28 
+L 265.045797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m8f81832a14" x="265.045797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="265.045797" y="247.405" transform="rotate(-0 265.045797 247.405)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 345.397797 233.28 
+L 345.397797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m8f81832a14" x="345.397797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="345.397797" y="247.405" transform="rotate(-0 345.397797 247.405)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 425.749797 233.28 
+L 425.749797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m8f81832a14" x="425.749797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="425.749797" y="247.405" transform="rotate(-0 425.749797 247.405)">80</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 506.101797 233.28 
+L 506.101797 39.24 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m8f81832a14" x="506.101797" y="233.28" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="506.101797" y="247.405" transform="rotate(-0 506.101797 247.405)">100</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #2a2a2a" x="305.221797" y="261.655" transform="rotate(-0 305.221797 261.655)">Araştırmacıların yüzdesi</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <path d="M 104.341797 69.441818 
+L 506.101797 69.441818 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <defs>
+       <path id="m5520cf5b62" d="M 0 0 
+L -3.5 0 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5520cf5b62" x="104.341797" y="69.441818" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(29.6825 67.779318)">Herhangi bir işte</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(27.916094 79.179318)">YZ aracı kullanan</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_15">
+      <path d="M 104.341797 136.26 
+L 506.101797 136.26 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m5520cf5b62" x="104.341797" y="136.26" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(23.007266 134.5975)">Araştırma ve yayın</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(8.64 145.9975)">görevlerinde kullanan</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <path d="M 104.341797 203.078182 
+L 506.101797 203.078182 
+" clip-path="url(#pd61db9df58)" style="fill: none; stroke: #edeff2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m5520cf5b62" x="104.341797" y="203.078182" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(11.378672 201.415682)">YZ'nin insanı aştığına</text>
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(69.782891 212.815682)">inanan</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_9">
+    <path d="M 104.341797 233.28 
+L 104.341797 39.24 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 104.341797 233.28 
+L 506.101797 233.28 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="338.166117" y="61.125909" transform="rotate(-0 338.166117 61.125909)">%57</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="289.954917" y="127.944091" transform="rotate(-0 289.954917 127.944091)">%45</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="322.095717" y="194.762273" transform="rotate(-0 322.095717 194.762273)">%53</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #1f3a5f" x="446.641317" y="82.507727" transform="rotate(-0 446.641317 82.507727)">%84</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #1f3a5f" x="358.254117" y="149.325909" transform="rotate(-0 358.254117 149.325909)">%62</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #1f3a5f" x="241.743717" y="216.144091" transform="rotate(-0 241.743717 216.144091)">&lt;%33</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(104.341797 18.84)">Bir yılda ne değişti</text>
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(104.341797 33.24)">Kullanım hızla arttı, güven azaldı</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_11">
+     <path d="M 383.931797 222.355 
+L 402.931797 222.355 
+L 402.931797 215.705 
+L 383.931797 215.705 
+z
+" style="fill: #e8eaed"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start" x="410.531797" y="222.355" transform="rotate(-0 410.531797 222.355)">2024</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 450.241797 222.355 
+L 469.241797 222.355 
+L 469.241797 215.705 
+L 450.241797 215.705 
+z
+" style="fill: #1f3a5f"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start" x="476.841797" y="222.355" transform="rotate(-0 476.841797 222.355)">2025</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #6b7280" transform="translate(42.133797 270.824)">Kaynak: Wiley ExplanAItions, 2024 ve 2025 dalgaları · iki ayrı kesit, aynı kişiler değil</text>
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #6b7280" transform="translate(42.133797 280.64775)">Son satırın 2025 değeri üst sınırdır: rapor kesin oran vermeyip “üçte birin altı” diyor.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd61db9df58">
+   <rect x="104.341797" y="39.24" width="401.76" height="194.04"/>
+  </clipPath>
+ </defs>
+</svg>
