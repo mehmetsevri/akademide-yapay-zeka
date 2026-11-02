@@ -1,0 +1,22 @@
+﻿değişken,kategori,n,yüzde
+cinsiyet,Erkek,728,53.8
+cinsiyet,Kadın,590,43.6
+cinsiyet,Belirtmek istemiyorum,35,2.6
+egitim,Lisans,732,54.1
+egitim,Yüksek lisans,407,30.1
+egitim,Ön lisans,102,7.5
+egitim,Doktora,101,7.5
+egitim,Belirtilmemiş,11,0.8
+sektor,Yazılım ve bilişim,583,43.1
+sektor,Finans ve sigortacılık,445,32.9
+sektor,Danışmanlık,200,14.8
+sektor,Telekomünikasyon,125,9.2
+unvan,Uzman,633,46.8
+unvan,Kıdemli uzman,364,26.9
+unvan,Takım lideri,224,16.6
+unvan,Yönetici,132,9.8
+calisma_modeli,Hibrit,1001,74.0
+calisma_modeli,Tam uzaktan,286,21.1
+calisma_modeli,Tam ofis,66,4.9
+cocuk_var,Hayır,713,52.7
+cocuk_var,Evet,640,47.3

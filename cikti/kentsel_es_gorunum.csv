@@ -1,0 +1,284 @@
+﻿kod_1,kod_2,birlikte_gecen_katilimci,tema_1,tema_2,tema_asiyor
+T1-K3,T1-K4,14,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T2-K1,T2-K2,14,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K2,T4-K4,14,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K2,T3-K1,13,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K2,T4-K3,13,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K5,T3-K3,13,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K2,T2-K3,13,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T1-K2,T1-K4,12,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K3,T1-K5,12,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K4,T1-K5,12,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K4,T2-K2,12,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K4,T3-K1,12,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T2-K2,12,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K2,T3-K1,12,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K1,T3-K1,12,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T4-K3,12,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T4-K3,T4-K4,12,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T1-K3,T2-K2,11,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K5,T3-K1,11,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T3-K3,11,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K3,T3-K1,11,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K4,T2-K1,11,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K3,T4-K3,11,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T4-K4,11,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T4-K4,11,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K3,T4-K4,11,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T3-K3,11,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K2,T2-K2,10,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K3,T3-K1,10,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K4,T5-K4,10,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K4,T4-K3,10,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T2-K5,10,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T3-K1,T4-K3,10,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T3-K1,10,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T2-K1,10,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K5,T2-K1,10,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K1,T4-K3,10,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K2,T1-K3,9,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K2,T5-K4,9,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K1,T2-K3,9,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K4,T2-K3,9,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K4,T5-K1,9,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K1,T3-K3,9,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T2-K1,T3-K3,9,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K2,T2-K3,9,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K3,T4-K4,9,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T4-K3,9,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T2-K2,9,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K3,T5-K4,8,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K1,T5-K4,8,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T2-K5,8,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K2,T4-K3,8,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T1-K3,8,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K4,T3-K3,8,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K1,T2-K1,8,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K5,T4-K4,8,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K1,T4-K4,8,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T2-K3,8,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K2,T3-K5,8,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K2,T1-K5,7,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K4,T2-K5,7,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K5,T4-K3,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K3,T2-K3,7,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K5,T3-K5,7,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K3,T3-K5,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K1,T3-K5,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T1-K2,T3-K3,7,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K3,T4-K3,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K3,T4-K5,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K4,T4-K4,7,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T3-K4,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K3,T2-K5,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T3-K3,T4-K4,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K2,T5-K1,7,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K2,T4-K5,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K5,T4-K3,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T4-K2,7,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T4-K2,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T4-K2,7,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K1,T4-K2,7,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K4,T3-K2,6,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K2,T3-K2,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K2,T5-K4,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T3-K1,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K1,T3-K2,6,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T2-K5,T3-K1,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K1,T1-K4,6,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K1,T1-K5,6,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K1,T3-K3,6,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K4,T3-K4,6,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T3-K4,6,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K1,T5-K1,6,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K3,T3-K5,6,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T2-K1,T3-K4,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K1,T3-K5,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K3,T5-K4,6,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K3,T2-K5,6,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K2,T4-K4,6,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K2,T2-K1,6,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K1,T2-K4,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T1-K5,T2-K5,6,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K5,T3-K3,6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K5,T4-K4,6,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K5,T4-K5,6,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K5,T4-K3,6,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K3,T4-K2,6,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T4-K2,T5-K4,6,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T5-K1,T5-K4,6,Kuşaklar arası ayrışma ve konforun kazananları,Kuşaklar arası ayrışma ve konforun kazananları,False
+T1-K2,T2-K6,5,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K3,T5-K2,5,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K5,T5-K2,5,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K3,T5-K4,5,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K1,T3-K5,5,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T3-K4,5,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K4,T3-K5,5,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T2-K3,5,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K3,T3-K3,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K1,T3-K4,5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T3-K3,T3-K4,5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T2-K1,T3-K2,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K1,T5-K1,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T2-K4,5,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K3,T4-K5,5,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K4,T3-K3,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K4,T4-K4,5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T1-K2,5,Mekânsal yabancılaşma ve güvensizlik,Mekânsal yabancılaşma ve güvensizlik,False
+T1-K4,T4-K1,5,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T3-K1,T4-K1,5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T2-K4,T4-K4,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K5,T4-K4,5,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T4-K1,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K5,T3-K5,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K4,T4-K5,5,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T4-K1,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K3,T4-K2,5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T4-K2,T4-K3,5,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T4-K2,T4-K4,5,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T1-K4,T4-K2,5,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T5-K4,5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T3-K2,4,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T2-K6,4,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K4,T2-K6,4,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K4,T5-K2,4,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K5,T3-K2,4,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T5-K4,4,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K3,T3-K5,4,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K3,T5-K1,4,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K5,T5-K1,4,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K3,T5-K1,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K3,T5-K1,4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K1,T2-K6,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K3,T4-K5,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K3,T5-K4,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K4,T3-K1,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K4,T5-K4,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T4-K3,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K1,T4-K5,4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T4-K3,T4-K5,4,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T4-K5,T5-K4,4,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K1,T2-K5,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T1-K1,T2-K5,4,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T1-K1,T5-K4,4,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T4-K1,4,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T4-K1,T4-K3,4,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T4-K4,T5-K4,4,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K3,T3-K2,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T4-K1,4,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T3-K3,T4-K1,4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T2-K1,T4-K5,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T4-K2,T4-K5,4,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T1-K5,T4-K2,4,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K2,T4-K2,4,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T1-K4,T2-K4,4,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K4,T5-K1,4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T5-K2,3,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K3,T3-K2,3,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T2-K6,3,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K2,T2-K6,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K6,T5-K4,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K1,T5-K2,3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T5-K2,T5-K4,3,Kuşaklar arası ayrışma ve konforun kazananları,Kuşaklar arası ayrışma ve konforun kazananları,False
+T1-K1,T3-K4,3,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K1,T5-K1,3,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K3,T3-K4,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K4,T5-K1,3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T3-K4,3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T2-K1,T5-K2,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T3-K3,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K6,T3-K5,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K3,T5-K2,3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K3,T2-K4,3,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K3,T2-K4,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K3,T2-K6,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K4,T4-K3,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K2,T4-K3,3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K3,T4-K1,3,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K3,T4-K1,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T4-K1,T4-K4,3,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T4-K1,T5-K4,3,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K3,T5-K2,3,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T3-K4,3,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K2,T2-K4,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T1-K2,T3-K5,3,Mekânsal yabancılaşma ve güvensizlik,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T1-K5,T2-K4,3,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K3,T4-K2,3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T4-K2,T5-K1,3,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K2,T5-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T3-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K6,T5-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K5,T5-K4,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K4,T3-K5,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T3-K5,T5-K1,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T5-K1,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K1,T5-K2,2,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K5,T5-K2,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T4-K5,2,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K5,T3-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K5,T3-K4,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K2,T4-K4,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K4,T4-K3,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T1-K1,T4-K1,2,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T2-K5,T4-K1,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K5,T5-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K4,T5-K2,2,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K4,T3-K4,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K4,T4-K1,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K5,T4-K1,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T2-K2,T5-K1,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K5,T4-K5,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K5,T5-K1,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T3-K5,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T3-K2,T4-K5,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K5,T4-K5,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T2-K4,T2-K5,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K4,T5-K2,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T4-K1,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T4-K1,T4-K5,2,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T1-K1,T4-K5,2,Mekânsal yabancılaşma ve güvensizlik,Ekonomik baskı ve yerinden edilme,True
+T4-K4,T4-K5,2,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T3-K4,T4-K2,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K4,T4-K5,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T3-K4,T5-K4,2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K1,T4-K2,2,Ekonomik baskı ve yerinden edilme,Ekonomik baskı ve yerinden edilme,False
+T1-K1,T2-K4,2,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T4-K4,T5-K1,2,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K1,T5-K3,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T5-K3,2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T5-K2,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K2,T5-K4,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K1,T2-K6,1,Mekânsal yabancılaşma ve güvensizlik,Komşuluk ağlarının çözülmesi ve atomize yaşam,True
+T2-K4,T2-K6,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K4,T4-K5,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K6,T4-K5,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K3,T5-K2,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K1,T5-K2,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K4,T3-K2,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T3-K2,T3-K3,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,False
+T4-K5,T5-K1,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K4,T3-K5,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,True
+T2-K5,T4-K2,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K5,T4-K2,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Ekonomik baskı ve yerinden edilme,True
+T5-K1,T5-K2,1,Kuşaklar arası ayrışma ve konforun kazananları,Kuşaklar arası ayrışma ve konforun kazananları,False
+T2-K4,T4-K1,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T4-K1,T5-K1,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K4,T4-K2,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T4-K3,T5-K1,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K2,T5-K3,1,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T4-K2,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T2-K6,T5-K1,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T3-K1,T5-K3,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K2,T5-K3,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T5-K1,T5-K3,1,Kuşaklar arası ayrışma ve konforun kazananları,Kuşaklar arası ayrışma ve konforun kazananları,False
+T5-K3,T5-K4,1,Kuşaklar arası ayrışma ve konforun kazananları,Kuşaklar arası ayrışma ve konforun kazananları,False
+T2-K5,T2-K6,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluk ağlarının çözülmesi ve atomize yaşam,False
+T2-K6,T4-K1,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T1-K3,T5-K3,1,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T1-K4,T5-K3,1,Mekânsal yabancılaşma ve güvensizlik,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K2,T5-K3,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K3,T5-K3,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kuşaklar arası ayrışma ve konforun kazananları,True
+T2-K6,T4-K4,1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Ekonomik baskı ve yerinden edilme,True
+T3-K5,T5-K3,1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K3,T5-K3,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True
+T4-K4,T5-K3,1,Ekonomik baskı ve yerinden edilme,Kuşaklar arası ayrışma ve konforun kazananları,True

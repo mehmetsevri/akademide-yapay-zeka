@@ -1,0 +1,1172 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Örnek çalışma: yapısal eşitlik modellemesi</title>
+<meta name="description" content="Uzaktan çalışmanın verimlilik ve örgütsel bağlılık üzerindeki etkisi: 1.353 gözlem, altı hipotez, kısmi aracılık. AMOS ve SmartPLS&#x27;in yaptığı işin tam">
+<link rel="stylesheet" href="varlik/yazitipi.css?v=c5a273febf">
+<link rel="stylesheet" href="varlik/kurs.css?v=1e20a6ae92">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<!-- Tema, sayfa gövdesi çizilmeden ÖNCE konuyor. Bu betik varlik/kurs.js
+     içinde olsaydı (defer ile en sonda yüklendiği için) koyu tema seçmiş
+     bir ziyaretçi her sayfa açılışında bir anlık beyaz ekran görürdü.
+     Seçim yoksa işletim sisteminin tercihine uyulur. -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("kurs-tema");
+    if (t !== "acik" && t !== "koyu") {
+      t = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "koyu" : "acik";
+    }
+    if (t === "koyu") {
+      document.documentElement.setAttribute("data-tema", "koyu");
+    }
+  } catch (e) {}
+}());
+</script>
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Örnek çalışma: yapısal eşitlik modellemesi</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+  <div class="ust-araclar" role="group" aria-label="Görünüm">
+    <button type="button" id="tema-dugme" aria-pressed="false"
+            aria-label="Koyu moda geç" title="Koyu moda geç">
+      <span class="simge" aria-hidden="true">☾</span><span class="yazi">Koyu</span>
+    </button>
+    <button type="button" id="tam-ekran-dugme" aria-pressed="false"
+            aria-label="Tam ekrana geç" title="Tam ekrana geç (F11)">
+      <span class="simge" aria-hidden="true">⤢</span><span class="yazi">Tam ekran</span>
+    </button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-uctan-uca-ornek-calismalar" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · Uçtan uca örnek çalışmalar<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa etkin" href="15-uzaktan-calisma.html"><span class="no">15</span><span>Örnek çalışma: yapısal eşitlik modellemesi</span></a><div class="alt-liste"><a href="#calismanin-kunyesi">Çalışmanın künyesi</a><a href="#arastirma-adim-adim">Araştırma adım adım</a><a href="#amos-ve-smartpls-ne-yapar-karsiligi-nedir">AMOS ve SmartPLS ne yapar, karşılığı nedir</a><a href="#asama-1-modeli-kurdurmak">Aşama 1 — Modeli kurdurmak</a><a href="#asama-2-veri-temizligi">Aşama 2 — Veri temizliği</a><a href="#asama-3-analiz-hatti">Aşama 3 — Analiz hattı</a><a href="#bulgular">Bulgular</a><a href="#ayni-sonuctan-nasil-emin-oluruz">Aynı sonuçtan nasıl emin oluruz</a><a href="#makaleyi-yazmak">Makaleyi yazmak</a><a href="#pakette-ne-var">Pakette ne var</a><a href="#kendi-calismaniza-uyarlama">Kendi çalışmanıza uyarlama</a></div><a class="sayfa" href="16-kentsel-donusum.html"><span class="no">16</span><span>Örnek çalışma: etnografik saha araştırması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-vi-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım VI · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="17-ileri-konular.html"><span class="no">17</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="18-istem-kutuphanesi.html"><span class="no">18</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="19-kaynaklar.html"><span class="no">19</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 15 · İktisat ve işletme</div><h1>Örnek çalışma: yapısal eşitlik modellemesi</h1><p class="ozet">Uzaktan çalışmanın verimlilik ve örgütsel bağlılık üzerindeki etkisi: 1.353 gözlem, altı hipotez, kısmi aracılık. AMOS ve SmartPLS'in yaptığı işin tamamı Python ve R ile — ve sonucun doğruluğunun üç katmanlı denetimi.</p><p>Bu bölüm bir ampirik çalışmayı hipotezden makale metnine kadar izler.
+Kullanılan yöntem, işletme ve iktisat yazınının omurgası olan yapısal
+eşitlik modellemesi. Alanda bu iş genellikle AMOS ya da SmartPLS ile
+yapılır; burada aynı iş Python ve R ile, her adımı görünür biçimde
+yapılıyor.</p>
+<div class="rakamlar"><div class="rakam"><b>1.353</b><span>temizlenmiş gözlem</span></div><div class="rakam"><b>21</b><span>Likert maddesi, dört ölçek</span></div><div class="rakam"><b>6</b><span>sınanan hipotez</span></div><div class="rakam"><b>2.000</b><span>bootstrap yeniden örneklemesi</span></div><div class="rakam"><b>0,024</b><span>katsayı geri kazanımında ortalama sapma</span></div><div class="rakam"><b>2</b><span>bağımsız yazılımda doğrulama</span></div></div>
+<h2 id="calismanin-kunyesi">Çalışmanın künyesi</h2>
+<p><strong>Başlık.</strong> Uzaktan çalışma modellerinin çalışan verimliliği ve
+örgütsel bağlılık üzerindeki etkisi: post-pandemi dönemi üzerine
+ampirik bir araştırma.</p>
+<p><strong>Amaç.</strong> Uzaktan çalışma esnekliği ile çalışanın performans algısı ve
+kuruma bağlılığı arasındaki neden-sonuç ilişkisini, aracı değişkenleri
+de hesaba katarak sınamak.</p>
+<p><strong>Örneklem.</strong> Yazılım, finans, danışmanlık ve telekomünikasyon
+sektörlerinde çalışan beyaz yakalılar.</p>
+<h3>Hipotezler</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th></th>
+<th>Hipotez</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H1</strong></td>
+<td>Uzaktan çalışma esnekliği, çalışan verimliliğini doğrudan ve pozitif etkiler</td>
+</tr>
+<tr>
+<td><strong>H2</strong></td>
+<td>Esneklik, iş–yaşam dengesini pozitif etkiler</td>
+</tr>
+<tr>
+<td><strong>H3</strong></td>
+<td>Esneklik, örgütsel bağlılığı pozitif etkiler</td>
+</tr>
+<tr>
+<td><strong>H4</strong></td>
+<td>İş–yaşam dengesi, örgütsel bağlılığı pozitif etkiler</td>
+</tr>
+<tr>
+<td><strong>H5</strong></td>
+<td>İş–yaşam dengesi, verimliliği pozitif etkiler</td>
+</tr>
+<tr>
+<td><strong>H6</strong></td>
+<td>Örgütsel bağlılık, verimliliği pozitif etkiler</td>
+</tr>
+</tbody>
+</table></div>
+<p>H2–H6 birlikte bir <strong>aracılık</strong> iddiası kurar: esnekliğin verimliliğe
+etkisinin bir kısmı doğrudan değil, iş–yaşam dengesi ve örgütsel
+bağlılık üzerinden akar. Bu iddianın sınanması bölümün en teknik
+adımıdır (Adım 10).</p>
+<h2 id="arastirma-adim-adim">Araştırma adım adım</h2>
+<ol class="adimlar"><li><p><strong>Model ve hipotezlerin kurulması.</strong> Değişkenler ve aralarındaki
+yönler, veri toplanmadan önce yazılır. Veriye bakıp sonra hipotez
+kurmak (HARKing) en yaygın yöntemsel kusurdur.</p>
+<p><strong>Ölçeklerin seçimi.</strong> Her gizli yapı için yazında doğrulanmış,
+izin alınmış bir ölçek kullanılır. Yeni ölçek geliştirmek ayrı bir
+çalışmadır.</p>
+<p><strong>Örneklem büyüklüğünün hesaplanması.</strong> Yapısal eşitlik modellemesinde
+kaba ölçüt gözlenen değişken başına 10–20 gözlemdir; 21 madde için
+alt sınır 210–420 civarıdır. Grup karşılaştırması yapılacaksa her
+grupta ayrı ayrı bu sayı aranır.</p>
+<p><strong>Veri toplama.</strong> Çevrim içi form; dikkat kontrol maddesi ve
+doldurma süresi kaydı baştan kurguya dâhil edilir. Sonradan
+eklenemez.</p>
+<p><strong>Veri temizliği.</strong> Dikkatsiz doldurma, mükerrer kayıt ve aralık dışı
+değerler elenir. Her elenen satırın gerekçesi yazılır.</p>
+<p><strong>Analiz.</strong> Betimsel istatistik → güvenilirlik → faktör analizi →
+ayırt edici geçerlik → yapısal model → aracılık.</p></li></ol>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Uzaktan çalışma anketi ve İK performans kayıtları</span></div>
+<dl><dt>Lisans</dt><dd>Kurs materyaliyle aynı — serbestçe kullanılabilir</dd><dt>Boyut</dt><dd>1.494 ham satır → 1.353 temiz gözlem · 21 Likert maddesi (1–5) · 12 demografik değişken · 1.103 eşleşen İK kaydı</dd><dt>Pakette</dt><dd><a href="veri/isletme/uzaktan_ham.csv">uzaktan_ham.csv</a> · <a href="veri/isletme/uzaktan_temiz.csv">uzaktan_temiz.csv</a> · <a href="veri/isletme/uzaktan_ik_kayitlari.csv">uzaktan_ik_kayitlari.csv</a> · <a href="veri/isletme/uzaktan_madde_sozlugu.csv">uzaktan_madde_sozlugu.csv</a> · <a href="kod/21_uzaktan_veri_uret.py">21_uzaktan_veri_uret.py</a> · <a href="kod/22_uzaktan_temizle.py">22_uzaktan_temizle.py</a></dd></dl>
+<p>Veri sentetiktir ve yapısı bilinen bir modelden üretilmiştir. Bu bir
+eksiklik değil, bu bölümün çalışma biçimidir: gerçek katsayılar
+bilindiği için, analizin doğru kurulup kurulmadığı <strong>ölçülebilir</strong>
+(Adım 12).</p>
+<p>Ham dosya gerçek bir form çıktısının hâlindedir: eksik hücre,
+tutarsız kategori yazımı, düz çizgi yanıtlar, mükerrer kayıt ve
+aralık dışı değerler içerir. Temiz dosya ayrı bir betikle üretilir ve
+yanında bir temizleme günlüğü bırakır.</p></div>
+<h2 id="amos-ve-smartpls-ne-yapar-karsiligi-nedir">AMOS ve SmartPLS ne yapar, karşılığı nedir</h2>
+<p>AMOS bir şey icat etmez; maksimum olabilirlik kestirimi yapan bir
+arayüzdür. SmartPLS farklı bir kestirim yolu (kısmi en küçük kareler)
+kullanır ama o da standart bir yöntemdir. İkisinin yaptığı her işin
+açık kaynak karşılığı var.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Yazılımın yaptığı</th>
+<th>Python</th>
+<th>R</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yol diyagramı çizip model kurma</td>
+<td><code>semopy.Model("CV ~ UCE + OB")</code></td>
+<td><code>lavaan::sem()</code></td>
+</tr>
+<tr>
+<td>Maksimum olabilirlik kestirimi</td>
+<td><code>model.fit(veri)</code></td>
+<td><code>sem(..., estimator = "ML")</code></td>
+</tr>
+<tr>
+<td>Uyum iyiliği (CFI, TLI, RMSEA)</td>
+<td><code>semopy.calc_stats()</code></td>
+<td><code>fitMeasures()</code></td>
+</tr>
+<tr>
+<td>Standartlaştırılmış katsayılar</td>
+<td><code>inspect(std_est=True)</code></td>
+<td><code>standardizedSolution()</code></td>
+</tr>
+<tr>
+<td>Bootstrap dolaylı etki</td>
+<td>Yeniden örnekleme döngüsü</td>
+<td><code>se = "bootstrap"</code></td>
+</tr>
+<tr>
+<td>Ölçüm değişmezliği</td>
+<td>Zayıf</td>
+<td><code>group.equal = c("loadings", "intercepts")</code></td>
+</tr>
+<tr>
+<td>Cronbach α, CR, AVE</td>
+<td>Elle, formülle</td>
+<td><code>semTools::reliability()</code></td>
+</tr>
+<tr>
+<td>Modifikasyon indisleri</td>
+<td><code>inspect(mode="mx")</code></td>
+<td><code>modificationIndices()</code></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not "><span class="not-baslik">Hangisi hangi işte daha iyi</span><p>Python tarafı veri hazırlama, tekrar eden koşum ve şekil üretiminde
+rahat. R tarafı — özellikle <strong>lavaan</strong> — yapısal eşitlik modellemesinin
+ince işlerinde daha olgun: ölçüm değişmezliği, eksik veri için FIML,
+sıralı (ordinal) göstergeler için WLSMV.</p>
+<p>Bu çalışmada ikisi birlikte kullanıldı. Ama asıl neden işbölümü
+değil: <strong>aynı modeli iki bağımsız motorda koşturmak, kodun doğru
+olduğunun en güçlü kanıtıdır.</strong></p></aside>
+<h2 id="asama-1-modeli-kurdurmak">Aşama 1 — Modeli kurdurmak</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Model belirtimi ve hipotez tablosu</span>
+<span class="arac">Tasarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Örgütsel davranış alanında çalışan, yapısal eşitlik modellemesine
+hâkim bir yöntem danışmanısın.
+
+GÖREV
+Aşağıdaki araştırma için (a) örtük değişken modelini lavaan
+sözdiziminde yaz, (b) hipotez tablosunu çıkar, (c) her hipotezin
+yazındaki dayanağını bir cümleyle belirt.
+
+ARAŞTIRMA
+Bağımsız değişken: uzaktan çalışma esnekliği (UCE)
+Aracı değişkenler : iş-yaşam dengesi (IYD), örgütsel bağlılık (OB)
+Bağımlı değişken  : algılanan çalışan verimliliği (CV)
+Her yapı 5-6 maddeyle, beşli Likert ölçeğiyle ölçülecek.
+
+KURALLAR
+- Doğrudan ve dolaylı yolların hepsini modele koy; sonra hangisinin
+  anlamlı çıktığına veri karar versin.
+- Dolaylı etkileri adlandırılmış katsayıların çarpımı olarak tanımla
+  (:= operatörü).
+- Modelde kalmasını önerdiğin her yol için gerekçe yaz; gerekçesi
+  olmayan yol ekleme.
+
+SINIR
+Yazından atıf uydurma. Dayanak için [ATIF GEREKLİ: konu] yaz.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen model belirtimi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre># ölçüm modeli
+UCE =~ UCE1 + UCE2 + UCE3 + UCE4 + UCE5T
+IYD =~ IYD1 + IYD2 + IYD3 + IYD4T + IYD5
+OB  =~ OB1 + OB2 + OB3 + OB4 + OB5T + OB6
+CV  =~ CV1 + CV2 + CV3 + CV4 + CV5
+
+# yapısal model
+IYD ~ a1*UCE
+OB  ~ a2*UCE + d*IYD
+CV  ~ c*UCE + b1*IYD + b2*OB
+
+# dolaylı etkiler
+y1 := a1*b1                 # esneklik → denge → verimlilik
+y2 := a2*b2                 # esneklik → bağlılık → verimlilik
+y3 := a1*d*b2               # esneklik → denge → bağlılık → verimlilik
+toplam_dolayli := y1 + y2 + y3
+toplam := c + y1 + y2 + y3</pre></div>
+<p>Bu altı satır, AMOS'ta yarım saat kutu ve ok çizerek kurulan modelin
+tamamıdır. Yazıyla kurulmasının bir üstünlüğü var: makaleye
+yapıştırılabilir, bir hakem okuyabilir ve bir başkası aynısını
+koşturabilir.</p>
+<h2 id="asama-2-veri-temizligi">Aşama 2 — Veri temizliği</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Temizleme betiği</span>
+<span class="arac">Veri</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Anket verisiyle çalışan bir veri analistisin.
+
+GÖREV
+Aşağıdaki ham anket dosyası için temizleme betiği yaz.
+
+DOSYA
+uzaktan_ham.csv — 1.494 satır. 21 Likert maddesi (1-5), 12
+demografik değişken, DK1 dikkat kontrol maddesi (doğru yanıt 2),
+doldurma_sn süre kaydı.
+
+UYGULANACAK ÖLÇÜTLER (bu sırayla)
+1. Mükerrer kayıt: aynı katilimci_no, ilk gönderim tutulur
+2. DK1 != 2 olan satırlar
+3. doldurma_sn &lt; 120 olan satırlar
+4. 21 maddenin standart sapması 0 olan satırlar (düz çizgi)
+5. Likert maddesi 1-5 dışında, yaş 18-70 dışında olan satırlar
+6. Maddelerin %10&#x27;undan fazlası boş olan satırlar
+7. Kategori yazımını tekilleştir (büyük/küçük harf, boşluk)
+8. T ile biten maddeleri ters kodla (6 - x)
+9. Kalan eksik hücreleri kişinin o ölçekteki ortalamasıyla doldur
+
+ÇIKTI
+- uzaktan_temiz.csv
+- uzaktan_temizleme_gunlugu.json: her adımda kaç satır elendi,
+  hangi katılımcı hangi gerekçeyle düştü
+
+KURALLAR
+- Sıraya UY. Önce satır ele, sonra kalan satırlarda düzeltme yap.
+- Demografik eksikleri doldurma, &quot;Belirtilmemiş&quot; yaz.
+- Her adımı ekrana yazdır.
+
+SINIR
+Hiçbir satırı sessizce atma. Günlüğe girmeyen eleme yapma.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Temizleme günlüğü</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Başlangıç: 1494 satır
+  Mükerrer kayıt                         −  14   kalan 1480
+  Dikkat kontrolünü geçemeyen            −  68   kalan 1412
+  Aşırı hızlı doldurma (&lt;120 sn)         −  32   kalan 1380
+  Düz çizgi yanıtlama                    −  14   kalan 1366
+  Likert maddesinde aralık dışı değer    −   9   kalan 1357
+  Yaşta aralık dışı değer                −   4   kalan 1353
+  Maddelerin %10&#x27;undan fazlası boş       −   0   kalan 1353
+  Kategori yazımı tekilleştirildi         162 hücre
+  Ters kodlu madde çevrildi               3 madde
+  Eksik hücre dolduruldu                  57 hücre
+  İK kaydı eşleşen                        1103 satır
+
+Temiz veri : 1353 satır  (elenme oranı %9.4)</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">Modelin yazdığı kod ilk koşumda yanlıştı — ve hata görünmüyordu</span><p>Üretilen betik kategori yazımını <code>str.lower()</code> ile tekilleştiriyordu.
+Betik hatasız çalıştı, günlük düzgün göründü. Ama betimsel tabloda
+eğitim düzeyi arasında ayrı bir <strong>LİSANS</strong> kategorisi duruyordu: 7
+kişi.</p>
+<p>Nedeni Türkçe. Python'un <code>.lower()</code> metodu "İ" harfini "i" artı
+birleşen nokta (U+0307) olarak küçültür. Ekranda "lisans" görünür,
+ama karakter dizisi <code>"lisans"</code> ile aynı değildir ve sözlükte karşılığı
+bulunamaz. Aynı biçimde "I" harfi "ı" değil "i" olur.</p>
+<p>Düzeltme üç satır:</p>
+<pre><code>TR_KUCUK = str.maketrans({"İ": "i", "I": "ı"})
+
+def tr_kucult(metin) -&gt; str:
+    return str(metin).translate(TR_KUCUK).lower().strip()
+</code></pre>
+<p>Ders şu: <strong>bu hata ancak çıktıya bakınca görülür.</strong> Betiğin
+çalışması, doğru çalıştığı anlamına gelmez. Her temizleme adımından
+sonra kategori listesini yazdırın ve gözünüzle okuyun.</p></aside>
+<h2 id="asama-3-analiz-hatti">Aşama 3 — Analiz hattı</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">On iki adımlık analiz hattı</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İşletme alanında ölçek geliştirme ve yapısal eşitlik modellemesi
+üzerine çalışan bir istatistik danışmanısın. Çıktıların bir dergi
+makalesinin Bulgular bölümüne doğrudan girecek.
+
+KAYNAK
+uzaktan_temiz.csv — 1.353 satır. Ölçekler ve maddeleri:
+  UCE: UCE1-UCE4, UCE5T   IYD: IYD1-IYD3, IYD4T, IYD5
+  OB : OB1-OB4, OB5T, OB6 CV : CV1-CV5
+Ayrıca: yillik_performans_puani (İK kaydı), calisma_modeli,
+demografik değişkenler.
+
+GÖREV — bu sırayla, her adım ayrı bölüm olarak
+ 1. Betimsel istatistik ve demografik frekanslar; çarpıklık-basıklık
+ 2. Madde analizi: düzeltilmiş madde-toplam korelasyonu
+ 3. Güvenilirlik: Cronbach α, McDonald ω, bileşik güvenilirlik, AVE
+ 4. Açımlayıcı faktör analizi: KMO, Bartlett, promax döndürme
+ 5. Doğrulayıcı faktör analizi ve uyum iyiliği
+ 6. Ayırt edici geçerlik: Fornell-Larcker ve HTMT
+ 7. Korelasyon matrisi, p değerleriyle
+ 8. Ortak yöntem yanlılığı: Harman tek faktör testi
+ 9. Yapısal model: yol katsayıları, R², hipotez kararları
+10. Aracılık: 2000 bootstrap, yüzdelik güven aralığı
+11. Ölçüt geçerliği: öz-bildirim ile İK kaydının karşılaştırması
+12. Geri kazanım: tahminlerin gerçek katsayılarla karşılaştırması
+
+BİÇİM
+- Her adımın başında iki satır: &quot;Nedir&quot; ve &quot;Neden&quot;.
+- Her ölçütün eşik değerini yaz ve karşılanıp karşılanmadığını söyle.
+- Çıktı hem okunabilir .txt hem makine okunabilir .json olsun.
+- Şekillerin kullanacağı her tablo ayrı bir .csv olarak da yazılsın.
+
+KURALLAR
+- Tek dosya, çalıştırılabilir, sabit tohum.
+- Her işlev için kısa bir açıklama: ne yapıyor ve NEDEN öyle.
+- Hiçbir eşiği &quot;iyi&quot; diye geçiştirme; sayıyı ve ölçütü yan yana koy.
+
+SINIR
+- Anlamsız çıkan bir sonucu yorumla yumuşatma; olduğu gibi yaz.
+- Veride olmayan bir değişken uydurma.</pre></div>
+<p>Üretilen betik <code>kod/23_analiz_uzaktan.py</code> dosyasında, çıktısı
+<code>cikti/isletme_analiz.txt</code> içinde. Aşağıdaki sayıların tamamı o
+koşumdan geliyor.</p>
+<h2 id="bulgular">Bulgular</h2>
+<h3>Örneklem</h3>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e01_demografi.svg"
+ alt="Cinsiyet, eğitim, sektör ve çalışma modeline göre dağılımı gösteren dört yatay çubuk grafik" loading="lazy"></div>
+<figcaption><b>Şekil 15.1</b> Örneklemin demografik bileşimi. Katılımcıların %74'ü hibrit, %21'i tam
+uzaktan, %5'i tam ofis düzeninde çalışıyor.
+<span class="indir">Dosya: <a href="varlik/sekil/e01_demografi.svg">e01_demografi.svg</a>
+ · <a href="varlik/sekil_png/e01_demografi.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Yaş ortalaması 35,9 (ss = 7,6); kıdem ortalaması 4,7 yıl; haftalık
+uzaktan çalışılan gün ortalaması 2,5. Dört ölçek ortalamasının
+çarpıklığı −0,07 ile 0,15 arasında; Kline'ın |çarpıklık| &lt; 2 ve
+|basıklık| &lt; 7 ölçütüne göre tek değişkenli normallik varsayımı
+karşılanıyor.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e02_likert.svg"
+ alt="Yirmi bir maddenin beşli Likert dağılımını gösteren yığılmış çubuk grafik" loading="lazy"></div>
+<figcaption><b>Şekil 15.2</b> Madde bazında yanıt dağılımı. Ters kodlu maddeler çevrildikten
+sonraki hâl. Yığılmış Likert grafiği, ortalamanın gizlediği şeyi
+gösterir: dağılımın şeklini.
+<span class="indir">Dosya: <a href="varlik/sekil/e02_likert.svg">e02_likert.svg</a>
+ · <a href="varlik/sekil_png/e02_likert.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h3>Güvenilirlik ve geçerlik</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Ölçek</th>
+<th style="text-align: right;">Madde</th>
+<th style="text-align: right;">α</th>
+<th style="text-align: right;">ω</th>
+<th style="text-align: right;">CR</th>
+<th style="text-align: right;">AVE</th>
+<th style="text-align: right;">En düşük yük</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uzaktan çalışma esnekliği</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0,870</td>
+<td style="text-align: right;">0,871</td>
+<td style="text-align: right;">0,871</td>
+<td style="text-align: right;">0,576</td>
+<td style="text-align: right;">0,667</td>
+</tr>
+<tr>
+<td>İş–yaşam dengesi</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0,870</td>
+<td style="text-align: right;">0,871</td>
+<td style="text-align: right;">0,871</td>
+<td style="text-align: right;">0,576</td>
+<td style="text-align: right;">0,693</td>
+</tr>
+<tr>
+<td>Örgütsel bağlılık</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0,909</td>
+<td style="text-align: right;">0,910</td>
+<td style="text-align: right;">0,910</td>
+<td style="text-align: right;">0,630</td>
+<td style="text-align: right;">0,679</td>
+</tr>
+<tr>
+<td>Çalışan verimliliği</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0,873</td>
+<td style="text-align: right;">0,874</td>
+<td style="text-align: right;">0,874</td>
+<td style="text-align: right;">0,583</td>
+<td style="text-align: right;">0,680</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ölçütler: α ≥ 0,70 · CR ≥ 0,70 · AVE ≥ 0,50 · standart yük ≥ 0,50.
+Dördü de karşılanıyor.</p>
+<aside class="not "><span class="not-baslik">AVE 0,50&#x27;nin altında kalırsa ne yapılır</span><p>Bu çalışmada kalmadı, ama sık karşılaşılan bir durumdur. Üç yol var:</p>
+<p><strong>Bir.</strong> Düşük yüklü maddeyi çıkarın ve yeniden kestirin. Madde
+çıkarmak ölçeği değiştirmek demektir; Yöntem bölümünde açıkça yazın.</p>
+<p><strong>İki.</strong> Fornell ve Larcker'ın (1981) kendi makalesinde belirttiği
+istisnayı kullanın: CR 0,60'ın üzerindeyse AVE 0,50'nin biraz altında
+olsa da yakınsak geçerlik kabul edilebilir sayılır. Bunu yazarken
+kaynağı verin.</p>
+<p><strong>Üç.</strong> Ölçeğin o örneklemde çalışmadığını kabul edin. En az tercih
+edilen ama bazen doğru olan yol budur.</p></aside>
+<p>Açımlayıcı faktör analizi KMO = 0,949, Bartlett χ² = 15.801,4
+(p &lt; 0,001) ile uygun bulundu. Özdeğeri 1'in üzerindeki faktör sayısı
+tam olarak <strong>dört</strong>; promax döndürmesinden sonra hiçbir madde iki
+faktöre birden 0,30 üzerinde yüklenmiyor. Dört faktör toplam
+varyansın %66,2'sini açıklıyor.</p>
+<p>Doğrulayıcı faktör analizi: χ²/sd = 1,05 · CFI = 0,999 ·
+TLI = 0,999 · RMSEA = 0,006 · SRMR = 0,017.</p>
+<p>Ayırt edici geçerlikte Fornell–Larcker ölçütü sağlanıyor (her
+köşegen √AVE, kendi satırındaki her korelasyondan büyük) ve en yüksek
+HTMT oranı 0,604 — 0,85 eşiğinin oldukça altında.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e07_korelasyon.svg"
+ alt="Dört yapı ve İK performans puanı arasındaki korelasyonları gösteren ısı haritası" loading="lazy"></div>
+<figcaption><b>Şekil 15.3</b> Yapılar arası korelasyonlar. Tüm katsayılar beklenen yönde ve
+p &lt; 0,001 düzeyinde anlamlı.
+<span class="indir">Dosya: <a href="varlik/sekil/e07_korelasyon.svg">e07_korelasyon.svg</a>
+ · <a href="varlik/sekil_png/e07_korelasyon.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h3>Ortak yöntem yanlılığı</h3>
+<p>Harman tek faktör testinde döndürülmemiş tek faktör toplam varyansın
+%40,9'unu açıklıyor; %50 eşiğinin altında.</p>
+<aside class="not uyari"><span class="not-baslik">Harman testi zayıf bir testtir</span><p>Hakemler bunu bilir. Tek faktörün %50'nin altında kalması yanlılığın
+yokluğunu kanıtlamaz, yalnız en kaba hâlini dışlar.</p>
+<p>Bu çalışmanın ikinci bir dayanağı var: verimlilik değişkeni ayrıca
+kurumun İK kaydından ölçüldü. İki bağımsız kaynaktan ölçüm, ortak
+yöntem yanlılığına karşı tek testten çok daha güçlü bir savunmadır.
+Tasarım aşamasında düşünülmesi gerekir; sonradan eklenemez.</p></aside>
+<h3>Yapısal model</h3>
+<figure class="sekil" id="yol-diyagrami">
+<div class="cerceve"><img src="varlik/sekil/e05_yol_diyagrami.svg"
+ alt="Dört örtük değişken arasındaki altı yolu ve katsayılarını gösteren yol diyagramı" loading="lazy"></div>
+<figcaption><b>Şekil 15.4</b> Yapısal eşitlik modeli. Ok kalınlığı katsayının büyüklüğüyle
+orantılı. Altı hipotezin tamamı p &lt; 0,001 düzeyinde destekleniyor.
+<span class="indir">Dosya: <a href="varlik/sekil/e05_yol_diyagrami.svg">e05_yol_diyagrami.svg</a>
+ · <a href="varlik/sekil_png/e05_yol_diyagrami.png">PNG sürümü</a></span></figcaption>
+</figure>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Hipotez</th>
+<th>Yol</th>
+<th style="text-align: right;">β</th>
+<th style="text-align: right;">s.h.</th>
+<th style="text-align: right;">z</th>
+<th>p</th>
+<th>Karar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td>Esneklik → Verimlilik</td>
+<td style="text-align: right;">0,202</td>
+<td style="text-align: right;">0,034</td>
+<td style="text-align: right;">5,87</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>Esneklik → İş–yaşam dengesi</td>
+<td style="text-align: right;">0,558</td>
+<td style="text-align: right;">0,030</td>
+<td style="text-align: right;">18,50</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Esneklik → Örgütsel bağlılık</td>
+<td style="text-align: right;">0,389</td>
+<td style="text-align: right;">0,034</td>
+<td style="text-align: right;">11,59</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>İş–yaşam dengesi → Bağlılık</td>
+<td style="text-align: right;">0,279</td>
+<td style="text-align: right;">0,033</td>
+<td style="text-align: right;">8,45</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>İş–yaşam dengesi → Verimlilik</td>
+<td style="text-align: right;">0,177</td>
+<td style="text-align: right;">0,033</td>
+<td style="text-align: right;">5,37</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>Örgütsel bağlılık → Verimlilik</td>
+<td style="text-align: right;">0,407</td>
+<td style="text-align: right;">0,033</td>
+<td style="text-align: right;">12,28</td>
+<td>&lt; 0,001</td>
+<td>Destekleniyor</td>
+</tr>
+</tbody>
+</table></div>
+<p>Açıklanan varyans: iş–yaşam dengesi R² = 0,311 · örgütsel bağlılık
+R² = 0,350 · çalışan verimliliği R² = 0,438.</p>
+<h3>Aracılık</h3>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e06_bootstrap.svg"
+ alt="Dolaylı ve doğrudan etkilerin nokta kestirimleri ile yüzde 95 bootstrap güven aralıklarını gösteren grafik" loading="lazy"></div>
+<figcaption><b>Şekil 15.5</b> Dolaylı etkiler ve %95 bootstrap güven aralıkları. 2.000 yeniden
+örnekleme; hiçbir aralık sıfırı içermiyor.
+<span class="indir">Dosya: <a href="varlik/sekil/e06_bootstrap.svg">e06_bootstrap.svg</a>
+ · <a href="varlik/sekil_png/e06_bootstrap.png">PNG sürümü</a></span></figcaption>
+</figure>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Etki</th>
+<th style="text-align: right;">Kestirim</th>
+<th style="text-align: right;">%95 GA alt</th>
+<th style="text-align: right;">%95 GA üst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esneklik → denge → verimlilik</td>
+<td style="text-align: right;">0,099</td>
+<td style="text-align: right;">0,061</td>
+<td style="text-align: right;">0,136</td>
+</tr>
+<tr>
+<td>Esneklik → bağlılık → verimlilik</td>
+<td style="text-align: right;">0,158</td>
+<td style="text-align: right;">0,124</td>
+<td style="text-align: right;">0,195</td>
+</tr>
+<tr>
+<td>Esneklik → denge → bağlılık → verimlilik</td>
+<td style="text-align: right;">0,063</td>
+<td style="text-align: right;">0,046</td>
+<td style="text-align: right;">0,083</td>
+</tr>
+<tr>
+<td><strong>Toplam dolaylı</strong></td>
+<td style="text-align: right;"><strong>0,320</strong></td>
+<td style="text-align: right;"><strong>0,273</strong></td>
+<td style="text-align: right;"><strong>0,367</strong></td>
+</tr>
+<tr>
+<td>Doğrudan</td>
+<td style="text-align: right;">0,202</td>
+<td style="text-align: right;">0,137</td>
+<td style="text-align: right;">0,271</td>
+</tr>
+<tr>
+<td><strong>Toplam</strong></td>
+<td style="text-align: right;"><strong>0,522</strong></td>
+<td style="text-align: right;"><strong>0,475</strong></td>
+<td style="text-align: right;"><strong>0,568</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Dolaylı etkinin toplam etkiye oranı (VAF) %61,3. Doğrudan yol
+anlamlılığını koruduğu ve dolaylı etki toplamın yarısından fazlasını
+oluşturduğu için sonuç <strong>kısmi aracılık</strong> olarak okunur.</p>
+<aside class="not "><span class="not-baslik">Neden Sobel testi değil</span><p>Dolaylı etki iki katsayının çarpımıdır ve iki normal değişkenin
+çarpımı normal dağılmaz — çarpıklık taşır. Sobel testi normallik
+varsayar ve bu yüzden özellikle küçük örneklemlerde yanıltır.</p>
+<p>Bootstrap varsaymaz: dağılımı veriden yeniden üretir. Preacher ve
+Hayes'in (2008) çalışmasından bu yana alan standardı budur ve
+hakemler bunu bekler.</p></aside>
+<h3>Ölçüt geçerliği</h3>
+<p>Algılanan verimlilik ile kurumun yıllık performans puanı arasında
+r = 0,491 (p &lt; 0,001, n = 1.103). Paylaşılan varyans %24,1.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e04_sacilim.svg"
+ alt="Öz-bildirim verimlilik ile İK performans puanı arasındaki ilişkiyi gösteren saçılım grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 15.6</b> İki ayrı kaynaktan ölçülen verimlilik. İlişki açık ama güçlü değil:
+anket verimliliği değil, verimlilik ALGISINI ölçüyor.
+<span class="indir">Dosya: <a href="varlik/sekil/e04_sacilim.svg">e04_sacilim.svg</a>
+ · <a href="varlik/sekil_png/e04_sacilim.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Bu, bulguyu zayıflatan değil <strong>sınırını çizen</strong> bir sayıdır. Anketle
+ölçülen şey algıdır; kurumun kaydı başka bir ölçümdür ve ikisinin
+dörtte bir ortaklığı olması beklenen bir sonuçtur. Makalede bu açıkça
+yazılır.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e03_kutu.svg"
+ alt="Üç çalışma modeline göre dört ölçek skorunun kutu grafikleri" loading="lazy"></div>
+<figcaption><b>Şekil 15.7</b> Çalışma modeline göre ölçek skorları. Tek yönlü ANOVA: F = 55,36,
+p &lt; 0,001. Ancak grup karşılaştırmasının geçerli olması için ölçüm
+değişmezliğinin gösterilmesi gerekir — bir sonraki bölüm.
+<span class="indir">Dosya: <a href="varlik/sekil/e03_kutu.svg">e03_kutu.svg</a>
+ · <a href="varlik/sekil_png/e03_kutu.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h2 id="ayni-sonuctan-nasil-emin-oluruz">Aynı sonuçtan nasıl emin oluruz</h2>
+<p>Yapay zekânın yazdığı analiz kodunun doğru olduğundan emin olmanın
+tek bir yolu yok; üç ayrı katmanı var ve üçü farklı hata türünü
+yakalar.</p>
+<h3>Katman 1 — Aynı modeli ikinci bir motorda koşturmak</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">lavaan ile çapraz doğrulama</span>
+<span class="arac">Denetim</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+R ve lavaan paketine hâkim bir yöntem danışmanısın.
+
+GÖREV
+Aşağıdaki modeli R/lavaan ile koşturan bir betik yaz. Amaç, Python
+tarafında semopy ile elde edilen sonuçları BAĞIMSIZ olarak
+doğrulamak.
+
+MODEL
+[lavaan sözdizimindeki model]
+
+İSTENENLER
+1. ML kestirimi, uyum iyiliği ölçütleri, standartlaştırılmış
+   katsayılar
+2. 2000 bootstrap ile dolaylı etki güven aralıkları
+3. Ölçüm değişmezliği: hibrit ve tam uzaktan çalışanlar arasında
+   biçimsel → ölçümsel → skalar, ΔCFI ve ΔRMSEA ile
+
+KURALLAR
+- Katsayıları dört ondalıkla yazdır ki Python çıktısıyla
+  karşılaştırılabilsin.
+- Bootstrap çıktısının standartlaştırılmış mı ham ölçekte mi
+  olduğunu açıkça belirt; ikisini karıştırma.
+
+SINIR
+Python çıktısını sana vermiyorum. Kendi sonucunu üret; karşılaştırmayı
+ben yapacağım.</pre></div>
+<p>Son satır önemli. Modele "şu sonucu doğrula" derseniz doğrular.
+Karşılaştırmayı kendiniz yapmazsanız denetim denetim olmaktan çıkar.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Yol</th>
+<th style="text-align: right;">semopy (Python)</th>
+<th style="text-align: right;">lavaan (R)</th>
+<th style="text-align: right;">Fark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esneklik → İş–yaşam dengesi</td>
+<td style="text-align: right;">0,5578</td>
+<td style="text-align: right;">0,5579</td>
+<td style="text-align: right;">0,0001</td>
+</tr>
+<tr>
+<td>Esneklik → Örgütsel bağlılık</td>
+<td style="text-align: right;">0,3890</td>
+<td style="text-align: right;">0,3890</td>
+<td style="text-align: right;">0,0000</td>
+</tr>
+<tr>
+<td>İş–yaşam dengesi → Bağlılık</td>
+<td style="text-align: right;">0,2787</td>
+<td style="text-align: right;">0,2788</td>
+<td style="text-align: right;">0,0001</td>
+</tr>
+<tr>
+<td>Esneklik → Verimlilik</td>
+<td style="text-align: right;">0,2020</td>
+<td style="text-align: right;">0,2020</td>
+<td style="text-align: right;">0,0000</td>
+</tr>
+<tr>
+<td>İş–yaşam dengesi → Verimlilik</td>
+<td style="text-align: right;">0,1767</td>
+<td style="text-align: right;">0,1768</td>
+<td style="text-align: right;">0,0001</td>
+</tr>
+<tr>
+<td>Örgütsel bağlılık → Verimlilik</td>
+<td style="text-align: right;">0,4069</td>
+<td style="text-align: right;">0,4070</td>
+<td style="text-align: right;">0,0001</td>
+</tr>
+</tbody>
+</table></div>
+<p>İki bağımsız yazılım, dördüncü ondalığa kadar aynı sayıyı veriyor.
+Fark sayısal yuvarlama düzeyinde.</p>
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Ölçüm değişmezliği — lavaan</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Grup büyüklükleri: Hibrit = 1001 · Tam uzaktan = 286
+  bicimsel  χ²= 386.62  sd=366  CFI=0.9984  RMSEA=0.0094
+  olcumsel  χ²= 401.72  sd=383  CFI=0.9986  RMSEA=0.0087   ΔCFI=+0.0001
+  skalar    χ²= 417.56  sd=400  CFI=0.9987  RMSEA=0.0083   ΔCFI=+0.0001
+
+Skalar değişmezlik sağlanıyor: iki grup aynı ölçekle ölçülmüş,
+grup karşılaştırması yapılabilir.</pre></div>
+<p>Chen'in (2007) ölçütü ΔCFI &lt; 0,01 ve ΔRMSEA &lt; 0,015. Her iki geçişte
+de fark binde bir düzeyinde. Şekil 15.7'deki grup karşılaştırmasının
+meşruiyeti bu tabloya dayanır.</p>
+<h3>Katman 2 — Bilinen bir yapıyı geri kazanmak</h3>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/e08_geri_kazanim.svg"
+ alt="Veriyi üreten gerçek katsayılarla modelin tahminlerini yan yana gösteren grafik" loading="lazy"></div>
+<figcaption><b>Şekil 15.8</b> Analiz hattı, veriyi üreten katsayıları buluyor mu. Ortalama mutlak
+sapma 0,024; en büyük sapma 0,049.
+<span class="indir">Dosya: <a href="varlik/sekil/e08_geri_kazanim.svg">e08_geri_kazanim.svg</a>
+ · <a href="varlik/sekil_png/e08_geri_kazanim.png">PNG sürümü</a></span></figcaption>
+</figure>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Yol</th>
+<th style="text-align: right;">Gerçek</th>
+<th style="text-align: right;">Tahmin</th>
+<th style="text-align: right;">Fark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esneklik → İş–yaşam dengesi</td>
+<td style="text-align: right;">0,520</td>
+<td style="text-align: right;">0,558</td>
+<td style="text-align: right;">+0,038</td>
+</tr>
+<tr>
+<td>Esneklik → Örgütsel bağlılık</td>
+<td style="text-align: right;">0,340</td>
+<td style="text-align: right;">0,389</td>
+<td style="text-align: right;">+0,049</td>
+</tr>
+<tr>
+<td>Esneklik → Verimlilik</td>
+<td style="text-align: right;">0,220</td>
+<td style="text-align: right;">0,202</td>
+<td style="text-align: right;">−0,018</td>
+</tr>
+<tr>
+<td>İş–yaşam dengesi → Bağlılık</td>
+<td style="text-align: right;">0,310</td>
+<td style="text-align: right;">0,279</td>
+<td style="text-align: right;">−0,031</td>
+</tr>
+<tr>
+<td>İş–yaşam dengesi → Verimlilik</td>
+<td style="text-align: right;">0,180</td>
+<td style="text-align: right;">0,177</td>
+<td style="text-align: right;">−0,003</td>
+</tr>
+<tr>
+<td>Örgütsel bağlılık → Verimlilik</td>
+<td style="text-align: right;">0,410</td>
+<td style="text-align: right;">0,407</td>
+<td style="text-align: right;">−0,003</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bu denetim gerçek bir araştırmada <strong>yapılamaz</strong> — gerçek katsayı
+bilinmez. Ama analiz hattınızı bir kez kurduktan sonra, yapısını
+bildiğiniz sentetik bir veri üretip hattı onun üzerinde koşturmak
+mümkündür. Hat doğru kuruluysa üretim katsayılarını bulur. Bulmuyorsa
+kodda bir yanlış vardır ve bunu gerçek veriyle hiç fark edemezsiniz.</p>
+<aside class="not "><span class="not-baslik">Bu yöntemin adı var</span><p>Yazılım mühendisliğinde buna <em>bilinen cevaplı test</em> (known-answer
+test), istatistikte <em>parametre geri kazanım çalışması</em> (parameter
+recovery study) denir. Simülasyon temelli yöntem makalelerinin
+standart ilk adımıdır.</p>
+<p>Kendi çalışmanızda kullanmak için şu kadarı yeter: analiz
+betiğinizi yazdıktan sonra, aynı yapıda 500 satırlık sentetik bir veri
+üretin, bilinen katsayıları koyun, betiği koşturun ve geri alıp
+almadığınıza bakın. Yarım saat sürer.</p></aside>
+<h3>Katman 3 — Elle hesap denetimi</h3>
+<p>En basiti ve en çok atlananı. Betiğin verdiği sayılardan üç tanesini
+seçin ve başka bir yolla hesaplayın: Cronbach α'yı Excel'de, bir
+korelasyonu elle, bir ortalamayı <code>describe()</code> ile. Üçü de tutuyorsa
+hattın temeli sağlamdır.</p>
+<div class="kiyas">
+<div class="zayif"><div class="baslik">Yetersiz denetim</div>
+<pre>Kod hatasız çalıştı.
+Sayılar makul görünüyor.
+Model &quot;doğrulayabilir misin&quot; dedim, doğruladı.</pre></div>
+<div class="guclu"><div class="baslik">Yeterli denetim</div>
+<pre>Aynı model iki bağımsız yazılımda koşturuldu, katsayılar dördüncü
+ondalığa kadar örtüştü.
+Bilinen yapıda sentetik veriyle geri kazanım sınandı.
+Üç sayı elle yeniden hesaplandı.</pre></div></div>
+<h2 id="makaleyi-yazmak">Makaleyi yazmak</h2>
+<h3>Yöntem bölümü</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Nicel yöntem bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İşletme alanında yayın yapan bir akademisyensin. SCI/SSCI dergi
+formatında Yöntem bölümü yazıyorsun.
+
+GÖREV
+Aşağıdaki bilgilerden Yöntem bölümünü yaz.
+
+BİLGİLER
+Desen: kesitsel anket çalışması.
+Örneklem: n = 1.353 beyaz yaka çalışan; dört sektör; demografik
+dağılım [tablo].
+Ölçekler: dört ölçek, 21 madde, beşli Likert; üç madde ters kodlu.
+Veri temizliği: 1.494 → 1.353, elenme %9,4, ölçütler [liste].
+Analiz: CFA + SEM, ML kestirimi, semopy 2.3.11 ve lavaan 0.7-3.
+Aracılık: 2000 bootstrap, yüzdelik GA.
+Ölçüm değişmezliği: skalar düzeyde sağlandı.
+
+BİÇİM
+- Dört alt başlık: Örneklem · Ölçüm araçları · Veri temizliği ·
+  Analiz stratejisi
+- Her yazılımın sürüm numarasını yaz. Yeniden üretilebilirlik için
+  gerekli.
+- Elenen satır sayısını ve gerekçesini tablo olarak ver.
+
+SINIR
+- Hiçbir sayıyı değiştirme ya da yuvarlama.
+- Yapmadığımız bir işlemi yazma. Eksik gördüğün yere
+  [EKSİK: ...] yaz.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen Analiz stratejisi alt bölümü</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Analiz stratejisi</strong></p>
+<p>Çözümleme iki aşamada yürütüldü. Birinci aşamada Anderson ve
+Gerbing'in (1988) önerdiği iki adımlı yaklaşım izlenerek ölçüm modeli
+doğrulayıcı faktör analiziyle sınandı; ölçüm modelinin kabul edilebilir
+uyum sağladığı belirlendikten sonra yapısal model kestirildi.
+Kestirimlerde maksimum olabilirlik yöntemi kullanıldı.</p>
+<p>Model uyumu χ²/sd, CFI, TLI, RMSEA ve SRMR ölçütleriyle
+değerlendirildi; eşik değerler olarak χ²/sd &lt; 3, CFI ve TLI ≥ 0,95,
+RMSEA ≤ 0,06 ve SRMR ≤ 0,08 benimsendi (Hu &amp; Bentler, 1999). Yakınsak
+geçerlik için standartlaştırılmış faktör yükleri, bileşik güvenilirlik
+ve açıklanan ortalama varyans; ayırt edici geçerlik için
+Fornell–Larcker ölçütü ve HTMT oranı incelendi.</p>
+<p>Dolaylı etkilerin anlamlılığı 2.000 yeniden örneklemeli bootstrap
+yöntemiyle, yüzdelik güven aralıkları üzerinden değerlendirildi
+(Preacher &amp; Hayes, 2008). Hibrit ve tam uzaktan çalışan gruplarının
+karşılaştırılabilmesi için önce ölçüm değişmezliği sınandı; biçimsel,
+ölçümsel ve skalar modeller arasındaki ΔCFI ve ΔRMSEA değerleri
+Chen'in (2007) ölçütleriyle karşılaştırıldı.</p>
+<p>Çözümlemeler Python 3.14 ortamında semopy 2.3.11 ve R 4.6.1 ortamında
+lavaan 0.7-3 paketleriyle yürütüldü. İki yazılımla elde edilen
+standartlaştırılmış katsayılar dördüncü ondalık basamağa kadar
+örtüşmektedir. Analiz betikleri ve veri seti [EKSİK: depo bağlantısı]
+adresinde erişime açıktır.</p></div></div>
+<h3>Bulgular bölümü</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Bulgular bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İşletme alanında yayın yapan bir akademisyensin.
+
+GÖREV
+Aşağıdaki analiz çıktısından Bulgular bölümünü yaz.
+
+ÇIKTI
+[isletme_analiz.txt dosyasının tamamı]
+
+BİÇİM
+- Sıra: betimsel → güvenilirlik ve geçerlik → ortak yöntem yanlılığı
+  → yapısal model → aracılık.
+- Her hipotez için β, s.h., z ve p birlikte verilsin.
+- Tabloları APA biçiminde kur; aynı sayıyı hem tabloda hem metinde
+  tekrarlama, metinde yalnız öne çıkanı söyle.
+
+KURALLAR
+- Bulguyu yorumlama. Yorum Tartışma bölümünde yapılır; burada yalnız
+  ne bulunduğu yazılır.
+- &quot;Anlamlı bir ilişki bulunmuştur&quot; demekle yetinme; yönünü ve
+  büyüklüğünü söyle.
+- p değerini &quot;p = 0,000&quot; diye yazma; &quot;p &lt; 0,001&quot; yaz.
+
+SINIR
+Çıktıda olmayan hiçbir sayıyı yazma.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen aracılık paragrafı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p>Aracılık etkilerinin anlamlılığı 2.000 yeniden örneklemeli bootstrap
+yöntemiyle sınanmıştır. Uzaktan çalışma esnekliğinin çalışan
+verimliliği üzerindeki toplam dolaylı etkisi β = 0,320 (%95 GA
+[0,273; 0,367]) olarak bulunmuş, güven aralığının sıfırı içermemesi
+dolaylı etkinin anlamlı olduğunu göstermiştir. Üç dolaylı yolun
+tamamı ayrı ayrı anlamlıdır; en güçlü aracılık örgütsel bağlılık
+üzerinden gerçekleşmektedir (β = 0,158; %95 GA [0,124; 0,195]).</p>
+<p>Doğrudan etki de anlamlılığını korumaktadır (β = 0,202; %95 GA
+[0,137; 0,271]). Dolaylı etkinin toplam etkiye oranı (VAF) %61,3
+olarak hesaplanmıştır. Bu değerler, iş–yaşam dengesi ve örgütsel
+bağlılığın kısmi aracı rol üstlendiğine işaret etmektedir.</p></div></div>
+<h3>Tartışma</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tartışma bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İşletme ve örgütsel davranış alanında yayın yapan bir akademisyensin.
+
+GÖREV
+Bulguları yazınla ilişkilendiren Tartışma bölümünü yaz.
+
+BULGULAR
+[hipotez tablosu, R², VAF, ölçüt geçerliği sonucu]
+
+BİÇİM
+- 700-800 sözcük.
+- Her hipotez için: yazındaki beklenti · bu çalışmanın bulgusu ·
+  uyuşuyor mu, uyuşmuyorsa neden olabilir.
+- Kuramsal katkı ve uygulamaya dönük çıkarımlar ayrı alt başlıklar.
+- Sınırlılıklar KENDİ alt başlığında, bir kez, sade dille.
+
+SINIR
+- Nedensellik dili kurarken dikkatli ol: kesitsel veridir.
+  &quot;Artırmaktadır&quot; değil &quot;pozitif yönde ilişkilidir&quot; ya da &quot;modelde
+  pozitif bir yol katsayısıyla temsil edilmektedir&quot;.
+- Öz-bildirim ölçümünün sınırını bir kez belirt.
+- Atıf uydurma; [ATIF GEREKLİ: konu] yaz.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen sınırlılıklar paragrafı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Sınırlılıklar</strong></p>
+<p>Araştırma kesitsel bir desene dayanmaktadır; değişkenler arasındaki
+ilişkiler kuramsal olarak gerekçelendirilmiş yönlerle modellenmiş olsa
+da, nedensellik çıkarımı için boylamsal ya da deneysel bir desen
+gerekir. Verimlilik ölçümü büyük ölçüde katılımcının kendi
+değerlendirmesine dayanmaktadır; kurumun performans kaydıyla
+karşılaştırma iki ölçümün %24 oranında ortak varyans taşıdığını
+göstermiştir, dolayısıyla bulgular algılanan verimlilik üzerinden
+okunmalıdır. Örneklem dört sektörle sınırlıdır ve mavi yaka ya da
+sahada çalışan gruplar kapsanmamıştır; uzaktan çalışma esnekliğinin
+tanımı bu gruplar için farklı işleyecektir.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Buradaki üç cümle ne yapıyor</span><p>Üç gerçek sınır var: kesitsel desen, öz-bildirim, sektör kapsamı.
+Her biri bir kez, kendi yerinde, abartısız yazılmış. Hiçbiri
+"çalışmanın en büyük zayıflığı" gibi kendini mahkûm eden bir cümleyle
+sunulmuyor; hiçbiri de gizlenmiyor.</p>
+<p>Aynı sınırları özete, girişe, bulgulara ve sonuca ayrı ayrı
+serpiştirmek yaygın bir hatadır. Metin o zaman özür dileyen bir ses
+alır ve hakem, yazarın kendi bulgusuna güvenmediği izlenimine kapılır.</p></aside>
+<h2 id="pakette-ne-var">Pakette ne var</h2>
+<p>Bu bölümün bütün dosyaları kurs paketinde duruyor. Betikleri kendi
+makinenizde koşturursanız aynı sayıları alırsınız; tohum sabittir.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Dosya</th>
+<th>İçerik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="kod/21_uzaktan_veri_uret.py">21_uzaktan_veri_uret.py</a></td>
+<td>Veri üretimi; gerçek katsayılar burada tanımlı</td>
+</tr>
+<tr>
+<td><a href="kod/22_uzaktan_temizle.py">22_uzaktan_temizle.py</a></td>
+<td>Temizleme, dokuz ölçüt, günlük</td>
+</tr>
+<tr>
+<td><a href="kod/23_analiz_uzaktan.py">23_analiz_uzaktan.py</a></td>
+<td>On iki adımlık analiz hattı</td>
+</tr>
+<tr>
+<td><a href="kod/24_lavaan_dogrulama.R">24_lavaan_dogrulama.R</a></td>
+<td>R/lavaan çapraz doğrulama ve değişmezlik</td>
+</tr>
+<tr>
+<td><a href="kod/27_sekiller_isletme.py">27_sekiller_isletme.py</a></td>
+<td>Sekiz şeklin tamamı</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_ham.csv">uzaktan_ham.csv</a></td>
+<td>Ham anket, 1.494 satır</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_temiz.csv">uzaktan_temiz.csv</a></td>
+<td>Temiz veri, 1.353 satır</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_ik_kayitlari.csv">uzaktan_ik_kayitlari.csv</a></td>
+<td>İkincil veri: İK performans kayıtları</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_madde_sozlugu.csv">uzaktan_madde_sozlugu.csv</a></td>
+<td>Madde metinleri, ölçek, ters kodlama</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_gercek_parametreler.csv">uzaktan_gercek_parametreler.csv</a></td>
+<td>Veriyi üreten gerçek katsayılar</td>
+</tr>
+<tr>
+<td><a href="veri/isletme/uzaktan_temizleme_gunlugu.json">uzaktan_temizleme_gunlugu.json</a></td>
+<td>Hangi satır neden elendi</td>
+</tr>
+<tr>
+<td><a href="cikti/isletme_analiz.txt">isletme_analiz.txt</a></td>
+<td>Analiz raporunun tamamı</td>
+</tr>
+<tr>
+<td><a href="cikti/isletme_analiz.json">isletme_analiz.json</a></td>
+<td>Aynı sonuçlar, makine okunabilir</td>
+</tr>
+<tr>
+<td><a href="cikti/isletme_lavaan.txt">isletme_lavaan.txt</a></td>
+<td>R koşumunun raporu</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ara tablolar ayrı dosyalarda: <a href="cikti/isletme_betimsel.csv">betimsel</a> ·
+<a href="cikti/isletme_demografi.csv">demografi</a> ·
+<a href="cikti/isletme_madde_analizi.csv">madde analizi</a> ·
+<a href="cikti/isletme_guvenilirlik.csv">güvenilirlik</a> ·
+<a href="cikti/isletme_efa_yukleri.csv">EFA yükleri</a> ·
+<a href="cikti/isletme_cfa_yukleri.csv">CFA yükleri</a> ·
+<a href="cikti/isletme_fornell_larcker.csv">Fornell–Larcker</a> ·
+<a href="cikti/isletme_htmt.csv">HTMT</a> ·
+<a href="cikti/isletme_korelasyon.csv">korelasyon</a> ·
+<a href="cikti/isletme_hipotezler.csv">hipotezler</a> ·
+<a href="cikti/isletme_aracilik.csv">aracılık</a> ·
+<a href="cikti/isletme_geri_kazanim.csv">geri kazanım</a> ·
+<a href="cikti/isletme_lavaan_katsayilar.csv">lavaan katsayıları</a> ·
+<a href="cikti/isletme_lavaan_bootstrap.csv">lavaan bootstrap</a> ·
+<a href="cikti/isletme_degismezlik.csv">ölçüm değişmezliği</a></p>
+<h2 id="kendi-calismaniza-uyarlama">Kendi çalışmanıza uyarlama</h2>
+<ol class="adimlar"><li><p><strong>Modeli veriden önce yazın.</strong> Model belirtimini lavaan
+sözdiziminde yazıp ön kayıt belgesine koyun. Veriye bakıp hipotez
+kurmanın (HARKing) önündeki tek gerçek engel budur.</p>
+<p><strong>Dikkat kontrolünü forma baştan koyun.</strong> Tek bir madde ve süre
+kaydı, elenme gerekçenizi savunulabilir kılar. Sonradan eklenemez.</p>
+<p><strong>İki ölçüm kaynağı arayın.</strong> Mümkünse bağımlı değişkeni ikinci bir
+kaynaktan da ölçün. Ortak yöntem yanlılığına karşı en güçlü savunma
+budur ve Harman testinden kat kat değerlidir.</p>
+<p><strong>Analiz betiğinizi sentetik veriyle sınayın.</strong> Yapısını bildiğiniz
+500 satırlık bir veri üretin, betiği koşturun, katsayıları geri alıp
+almadığınıza bakın.</p>
+<p><strong>İkinci bir motorda doğrulayın.</strong> Python'da kurduysanız R'de, R'de
+kurduysanız Python'da bir kez koşturun. Katsayılar üçüncü ondalıktan
+sonra ayrışıyorsa bir yerde bir fark vardır ve bulmaya değer.</p>
+<p><strong>Betik ve veriyi yayımlayın.</strong> Model belirtimi, temizleme günlüğü ve
+analiz betiği bir depoda dursun. Bu, makalenizin hakemlik sürecinde
+en çok işinize yarayacak dosyadır.</p></li></ol>
+
+<nav class="sayfa-alt"><a href="14-hakemlik.html"><span class="yon">← Önceki</span><span class="ad">Hakemlik ve hakem cevabı</span></a><a class="sag" href="16-kentsel-donusum.html"><span class="yon">Sonraki →</span><span class="ad">Örnek çalışma: etnografik saha araştırması</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js?v=454b9191a7" defer></script>
+<script src="varlik/canli.js?v=ddb67fb073" defer></script>
+</body>
+</html>

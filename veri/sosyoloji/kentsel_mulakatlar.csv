@@ -1,0 +1,523 @@
+﻿parca_id,kaynak,katilimci_kodu,grup,soru_no,evre,metin
+M0001,mülakat,K01,A,1,öncesi,"Çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0002,mülakat,K01,A,1,öncesi,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0003,mülakat,K01,A,2,öncesi,"Yani çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0004,mülakat,K01,A,3,inşaat,Düşünün ki okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0005,mülakat,K01,A,4,inşaat,Yani toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0006,mülakat,K01,A,5,sonrası,"Yani şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0007,mülakat,K01,A,5,sonrası,"Düşünün ki adres aynı, bina farklı, insanlar farklı. Ne kalmış geriye?"
+M0008,mülakat,K01,A,6,sonrası,"Bakın mahallede yürürken selam vereceğim biri çıkmıyor. İnsan selam vermeye alışmış, zor bırakıyor."
+M0009,mülakat,K01,A,6,sonrası,"Yani o yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0010,mülakat,K01,A,7,sonrası,"Bakın benim yaşımdakiler zorlandı. Kartlı sistem, interkom, aidat otomatiği... Hepsini öğrenmek gerekti."
+M0011,mülakat,K01,A,7,sonrası,"Yani sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+M0012,mülakat,K01,A,7,sonrası,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+M0013,mülakat,K01,A,8,sonrası,"Yani bir WhatsApp grubu var, üç yüz kişi. Günde elli mesaj akıyor, hiçbiri komşuluk değil."
+M0014,mülakat,K01,A,8,sonrası,"Düşünün ki torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0015,mülakat,K02,A,1,öncesi,"Şöyle söyleyeyim, kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0016,mülakat,K02,A,2,öncesi,"Nasıl anlatsam, merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0017,mülakat,K02,A,3,inşaat,İnşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0018,mülakat,K02,A,3,inşaat,"Şöyle söyleyeyim, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0019,mülakat,K02,A,3,inşaat,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0020,mülakat,K02,A,4,inşaat,"Şöyle söyleyeyim, o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var."
+M0021,mülakat,K02,A,4,inşaat,"Nasıl anlatsam, hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0022,mülakat,K02,A,4,inşaat,"Şöyle söyleyeyim, güvenlik benim için önemliydi, açıkçası onun için bu siteyi seçtim. Akşam geç geliyorum."
+M0023,mülakat,K02,A,5,sonrası,Bakın site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor.
+M0024,mülakat,K02,A,5,sonrası,"Şöyle söyleyeyim, asansör olmasaydı bu yaşta beşinci kata çıkamazdım. Onu söylemek lazım."
+M0025,mülakat,K02,A,6,sonrası,"Şöyle söyleyeyim, çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum."
+M0026,mülakat,K02,A,7,sonrası,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0027,mülakat,K02,A,7,sonrası,"Annem son bir yıl hiç dışarı çıkmadı. Eskiden kapının önüne çıkardı, şimdi çıkacağı bir kapı önü yok."
+M0028,mülakat,K02,A,7,sonrası,"Bakın bana söylenen daire ile verilen daire aynı değildi. İtiraz ettim, 'proje değişti' dediler."
+M0029,mülakat,K02,A,8,sonrası,"Bakın kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0030,mülakat,K03,A,1,öncesi,"Açık konuşayım, köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0031,mülakat,K03,A,1,öncesi,"Açık konuşayım, sokak diye bir şey kalmadı. Koridor var, asansör var, otopark var. Sokak yok."
+M0032,mülakat,K03,A,2,öncesi,"Doğrusu şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+M0033,mülakat,K03,A,2,öncesi,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0034,mülakat,K03,A,3,inşaat,"Doğrusu çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0035,mülakat,K03,A,3,inşaat,"Doğrusu bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0036,mülakat,K03,A,4,inşaat,"Açık konuşayım, fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı."
+M0037,mülakat,K03,A,5,sonrası,"Açık konuşayım, şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+M0038,mülakat,K03,A,6,sonrası,"Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor. Haklı da, ben de üşümüyorum artık."
+M0039,mülakat,K03,A,6,sonrası,"Doğrusu kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+M0040,mülakat,K03,A,7,sonrası,Dernek bir fotoğraf sergisi yaptı. Herkes ağladı. Bir de şunu fark ettim: fotoğraftaki insanların çoğu gitmiş.
+M0041,mülakat,K03,A,7,sonrası,"Okul aynı yerde. Çocuklarım orada okudu, torunum da okuyor. Tutunacak bir şey lazım insana."
+M0042,mülakat,K03,A,8,sonrası,Kendimi misafir gibi hissediyorum. Kırk yıldır buradayım.
+M0043,mülakat,K04,A,1,öncesi,"Valla on altı kat. Balkona çıkıyorum, aşağısı görünmüyor."
+M0044,mülakat,K04,A,1,öncesi,Markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+M0045,mülakat,K04,A,2,öncesi,Valla yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0046,mülakat,K04,A,2,öncesi,"Yani kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0047,mülakat,K04,A,3,inşaat,"Valla dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0048,mülakat,K04,A,4,inşaat,"Valla misafirim geldiğinde aşağıdan arıyorlar, onay veriyorum. Kardeşim için onay veriyorum yani."
+M0049,mülakat,K04,A,4,inşaat,"Bakkal Nuri'nin dükkânı duruyor mu diye sordum, yerinde kuaför varmış. Nuri amca da vefat etmiş."
+M0050,mülakat,K04,A,5,sonrası,"Valla torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0051,mülakat,K04,A,6,sonrası,"Annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0052,mülakat,K04,A,7,sonrası,"Valla sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0053,mülakat,K04,A,7,sonrası,Burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey.
+M0054,mülakat,K04,A,8,sonrası,Valla otopark en büyük kazanç. Eskiden arabayı nereye koyacağım diye dolanırlarmış.
+M0055,mülakat,K05,A,1,öncesi,"Mimari olarak kamusal alan sıfırlandı. Ortak alan var ama o alan bütün mahalleye değil, siteye ait."
+M0056,mülakat,K05,A,1,öncesi,"Kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0057,mülakat,K05,A,2,öncesi,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0058,mülakat,K05,A,2,öncesi,"Her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0059,mülakat,K05,A,2,öncesi,"Bakın cami avlusu buluşma yeriydi. Namaz kılmayan da oraya uğrardı, haber oradan alınırdı."
+M0060,mülakat,K05,A,3,inşaat,İşyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0061,mülakat,K05,A,3,inşaat,"Doğrusu mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0062,mülakat,K05,A,4,inşaat,Doğrusu okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0063,mülakat,K05,A,5,sonrası,"Bakın ortak alanlar güzel düzenlenmiş, ben memnunum. Ama kimse kullanmıyor, boş duruyor çoğu zaman."
+M0064,mülakat,K05,A,6,sonrası,"Eski fotoğrafları çıkardım, torunlara gösterdim. 'Burası neresi dede' dediler."
+M0065,mülakat,K05,A,7,sonrası,"Bakın gençler alıştı, biz alışamadık. Mesele teknoloji değil, alışkanlık."
+M0066,mülakat,K05,A,7,sonrası,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0067,mülakat,K05,A,7,sonrası,"Gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0068,mülakat,K05,A,8,sonrası,"Doğrusu dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0069,mülakat,K05,A,8,sonrası,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0070,mülakat,K06,A,1,öncesi,"Bir de şu var: çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0071,mülakat,K06,A,1,öncesi,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0072,mülakat,K06,A,2,öncesi,"Nasıl anlatsam, çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0073,mülakat,K06,A,2,öncesi,Yeni binada kimse kimseyi tanımıyor. Orası yabancı yer zaten; asıl acı olan Yıldıztepe'de de böyle olması.
+M0074,mülakat,K06,A,3,inşaat,"Nasıl anlatsam, okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben."
+M0075,mülakat,K06,A,3,inşaat,Bir de şu var: siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0076,mülakat,K06,A,4,inşaat,"Bir de şu var: sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0077,mülakat,K06,A,5,sonrası,"Nasıl anlatsam, en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor."
+M0078,mülakat,K06,A,6,sonrası,"Açık konuşayım, sözlü tarih çalışması başlattık, otuz kişiyle görüştük. Anlatılan her şey 'eskiden' diye başlıyor."
+M0079,mülakat,K06,A,7,sonrası,Bir de şu var: grupta herkes var ama yüz yüze gelince kimse kimseyi tanımıyor. Tuhaf bir şey bu.
+M0080,mülakat,K06,A,7,sonrası,"Dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0081,mülakat,K06,A,8,sonrası,"Açık konuşayım, çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu."
+M0082,mülakat,K06,A,8,sonrası,"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0083,mülakat,K07,A,1,öncesi,"Doğrusu dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0084,mülakat,K07,A,2,öncesi,"Doğrusu yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0085,mülakat,K07,A,2,öncesi,"Doğrusu müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0086,mülakat,K07,A,3,inşaat,"Açık konuşayım, eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0087,mülakat,K07,A,3,inşaat,"Bakın hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0088,mülakat,K07,A,4,inşaat,"Açık konuşayım, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0089,mülakat,K07,A,4,inşaat,"Doğrusu yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+M0090,mülakat,K07,A,5,sonrası,"Açık konuşayım, taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor."
+M0091,mülakat,K07,A,5,sonrası,"Doğrusu yeni gelenler kötü insanlar değil, yanlış anlaşılmasın. Ama onların hayatı başka, bizimki başka."
+M0092,mülakat,K07,A,6,sonrası,Doğrusu sokak adlarının çoğu etap numarasına dönüştü. İdari bir değişiklik gibi görünüyor ama insanlar için öyle değil.
+M0093,mülakat,K07,A,7,sonrası,"Bakın ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0094,mülakat,K07,A,7,sonrası,"Açık konuşayım, dürüst olmak gerekirse evin değeri beş katına çıktı. Şikâyet ediyorum ama bunu da söylemem lazım."
+M0095,mülakat,K07,A,7,sonrası,"Açık konuşayım, bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0096,mülakat,K07,A,8,sonrası,"Ben buraya aidiyet hissetmiyorum, dürüst olayım. Yatırım olarak aldım."
+M0097,mülakat,K08,A,1,öncesi,Fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0098,mülakat,K08,A,1,öncesi,"Anahtarımı komşuya bırakırdım, kargo gelirse alsın diye. Şimdi kargoyu güvenliğe bırakıyorlar."
+M0099,mülakat,K08,A,2,öncesi,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0100,mülakat,K08,A,3,inşaat,"Çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0101,mülakat,K08,A,3,inşaat,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0102,mülakat,K08,A,4,inşaat,Okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0103,mülakat,K08,A,4,inşaat,"Ben şunu diyeyim: bloklar arasında bir rüzgâr oluyor, kışın geçilmiyor. Mimar bunu düşünmemiş herhâlde."
+M0104,mülakat,K08,A,4,inşaat,"Ben şunu diyeyim: kargom güvenliğe bırakılıyor, kaybolmuyor. Küçük şey gibi ama günlük hayatta işe yarıyor."
+M0105,mülakat,K08,A,5,sonrası,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+M0106,mülakat,K08,A,5,sonrası,Komşumun sesini duymadım ama yazısını her gün okuyorum. Garip bir komşuluk.
+M0107,mülakat,K08,A,5,sonrası,"Taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0108,mülakat,K08,A,6,sonrası,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0109,mülakat,K08,A,6,sonrası,En çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0110,mülakat,K08,A,7,sonrası,Müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü.
+M0111,mülakat,K08,A,8,sonrası,Yönetim iletişimi gruba taşıdı. Telefonu olmayan yaşlılar haberleri en son duyuyor.
+M0112,mülakat,K08,A,8,sonrası,Defteri kaldırdım. Güven gidince defter de gitti.
+M0113,mülakat,K08,A,8,sonrası,Ben şunu diyeyim: aidat dört bin lira. Emekli maaşımın beşte biri.
+M0114,mülakat,K09,A,1,öncesi,"Şimdi ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0115,mülakat,K09,A,1,öncesi,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0116,mülakat,K09,A,2,öncesi,"Düşünün ki bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0117,mülakat,K09,A,3,inşaat,Okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0118,mülakat,K09,A,4,inşaat,Şimdi i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0119,mülakat,K09,A,4,inşaat,Valla toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0120,mülakat,K09,A,4,inşaat,"Düşünün ki çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0121,mülakat,K09,A,5,sonrası,"Şimdi dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0122,mülakat,K09,A,5,sonrası,"Valla eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0123,mülakat,K09,A,5,sonrası,Valla yıldıztepe'yi özlüyorum ama gitmek istemiyorum. Çünkü gittiğimde özlediğim şeyi bulamıyorum.
+M0124,mülakat,K09,A,6,sonrası,"Asansöre biniyorsun, iki kişi, kimse konuşmuyor. Herkes telefonuna bakıyor."
+M0125,mülakat,K09,A,7,sonrası,"Eski adresimi yazmak istiyorum bazen, ama o adres artık yok. Posta kutusunda bile yok."
+M0126,mülakat,K09,A,8,sonrası,Şimdi taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0127,mülakat,K09,A,8,sonrası,"Düşünün ki geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0128,mülakat,K09,A,8,sonrası,Grup işe yarıyor aslında. Geçen ay merdivendeki lamba iki saatte halledildi.
+M0129,mülakat,K10,A,1,öncesi,"Yani tabure kalktı, oturacak yer kalmadı. Müşteri alıp gidiyor, iki kelime etmiyoruz."
+M0130,mülakat,K10,A,2,öncesi,"Yani dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0131,mülakat,K10,A,2,öncesi,Yani fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0132,mülakat,K10,A,2,öncesi,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0133,mülakat,K10,A,3,inşaat,Yani i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0134,mülakat,K10,A,4,inşaat,Yani okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0135,mülakat,K10,A,4,inşaat,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0136,mülakat,K10,A,5,sonrası,"Bakın sitenin içine dükkân açmak istedim, yönetim izin vermedi. Kendi mahallemde esnaflık yapamıyorum."
+M0137,mülakat,K10,A,6,sonrası,"Yani bize biraz mesafeli yaklaşıyorlar. Anlıyorum da, biz onların mahallesine geldik sonuçta."
+M0138,mülakat,K10,A,6,sonrası,Yani çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0139,mülakat,K10,A,6,sonrası,"Cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0140,mülakat,K10,A,7,sonrası,Yani nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+M0141,mülakat,K10,A,7,sonrası,"Yani taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0142,mülakat,K10,A,8,sonrası,"Havuz var, spor salonu var. Ben hiç kullanmıyorum ama parasını ödüyorum."
+M0143,mülakat,K10,A,8,sonrası,"Sözlü tarih çalışması başlattık, otuz kişiyle görüştük. Anlatılan her şey 'eskiden' diye başlıyor."
+M0144,mülakat,K10,A,8,sonrası,"Mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0145,mülakat,K11,A,1,öncesi,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0146,mülakat,K11,A,1,öncesi,"Bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0147,mülakat,K11,A,2,öncesi,"Bakın veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0148,mülakat,K11,A,2,öncesi,"Bakın cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0149,mülakat,K11,A,2,öncesi,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0150,mülakat,K11,A,3,inşaat,"Şöyle söyleyeyim, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0151,mülakat,K11,A,4,inşaat,"Bakın çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0152,mülakat,K11,A,5,sonrası,"Nasıl anlatsam, dernek bir fotoğraf sergisi yaptı. Herkes ağladı. Bir de şunu fark ettim: fotoğraftaki insanların çoğu gitmiş."
+M0153,mülakat,K11,A,5,sonrası,"Nasıl anlatsam, bizim blokta kapı önünde oturmak yasak, yönetim uyarı astı. Mantıklı aslında ama biraz da üzücü."
+M0154,mülakat,K11,A,6,sonrası,"Nasıl anlatsam, torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0155,mülakat,K11,A,6,sonrası,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0156,mülakat,K11,A,7,sonrası,"Nasıl anlatsam, bizim blokta kapı önünde oturmak yasak, yönetim uyarı astı. Mantıklı aslında ama biraz da üzücü."
+M0157,mülakat,K11,A,7,sonrası,"Şöyle söyleyeyim, misafirim geldiğinde aşağıdan arıyorlar, onay veriyorum. Kardeşim için onay veriyorum yani."
+M0158,mülakat,K11,A,8,sonrası,"Şöyle söyleyeyim, defteri kaldırdım. Güven gidince defter de gitti."
+M0159,mülakat,K11,A,8,sonrası,İki grup arasında açık bir husumet yok. Olan şey daha sessiz: aynı binada iki ayrı hayat sürüyor.
+M0160,mülakat,K12,A,1,öncesi,"Doğrusu sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0161,mülakat,K12,A,2,öncesi,"Doğrusu cuma çıkışı eski müşterilerimi görüyorum. Haftada bir, o kadar."
+M0162,mülakat,K12,A,3,inşaat,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0163,mülakat,K12,A,4,inşaat,Doğrusu toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0164,mülakat,K12,A,5,sonrası,Dijital destek programı açtık; en çok başvuru yetmiş yaş üstünden geldi.
+M0165,mülakat,K12,A,5,sonrası,"Ortak alanda bir masa var, hiç kimsenin oturduğunu görmedim. Masayı koymak yetmiyor demek ki."
+M0166,mülakat,K12,A,5,sonrası,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0167,mülakat,K12,A,6,sonrası,"Açık konuşayım, o yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0168,mülakat,K12,A,7,sonrası,"Açık konuşayım, lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+M0169,mülakat,K12,A,7,sonrası,"Yeni gelenler zincir marketten alışveriş yapıyor. Kızmıyorum ama bir ayrışma var, görünüyor."
+M0170,mülakat,K12,A,8,sonrası,Doğrusu alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0171,mülakat,K12,A,8,sonrası,"Doğrusu dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0172,mülakat,K13,B,1,öncesi,"Yani otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0173,mülakat,K13,B,2,öncesi,Yani akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0174,mülakat,K13,B,2,öncesi,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0175,mülakat,K13,B,3,inşaat,"Müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0176,mülakat,K13,B,4,inşaat,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0177,mülakat,K13,B,5,sonrası,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0178,mülakat,K13,B,5,sonrası,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0179,mülakat,K13,B,5,sonrası,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+M0180,mülakat,K13,B,6,sonrası,"Mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0181,mülakat,K13,B,6,sonrası,"Yani çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0182,mülakat,K13,B,6,sonrası,Valla yatırım olarak baktığımda doğru karar verdim. İki yılda ciddi değerlendi.
+M0183,mülakat,K13,B,7,sonrası,"Yani torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0184,mülakat,K13,B,7,sonrası,"Valla cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0185,mülakat,K13,B,7,sonrası,Aidatı duyunca satmaya karar verdim. Ev benim ama giderini karşılayamıyorum.
+M0186,mülakat,K13,B,8,sonrası,Biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+M0187,mülakat,K13,B,8,sonrası,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+M0188,mülakat,K14,B,1,öncesi,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0189,mülakat,K14,B,1,öncesi,"Çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0190,mülakat,K14,B,1,öncesi,"Bakın dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0191,mülakat,K14,B,2,öncesi,"Dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0192,mülakat,K14,B,3,inşaat,"Bakın kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0193,mülakat,K14,B,3,inşaat,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0194,mülakat,K14,B,4,inşaat,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0195,mülakat,K14,B,5,sonrası,Bakın yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0196,mülakat,K14,B,5,sonrası,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0197,mülakat,K14,B,6,sonrası,"Doğrusu geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0198,mülakat,K14,B,6,sonrası,"Bakın müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0199,mülakat,K14,B,7,sonrası,Defteri kaldırdım. Güven gidince defter de gitti.
+M0200,mülakat,K14,B,7,sonrası,"Gençler 'kullanmıyorsan kullan' diyor. Mesele kullanmak değil, ödeyememek."
+M0201,mülakat,K14,B,8,sonrası,"Bakın kira üç katına çıktı. Mahallede kalamadım, iki ilçe öteye gittim."
+M0202,mülakat,K15,B,1,öncesi,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0203,mülakat,K15,B,1,öncesi,"Nasıl anlatsam, çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0204,mülakat,K15,B,2,öncesi,Bir de şu var: yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0205,mülakat,K15,B,3,inşaat,Bir de şu var: o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0206,mülakat,K15,B,3,inşaat,"Nasıl anlatsam, kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0207,mülakat,K15,B,4,inşaat,"Nasıl anlatsam, taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0208,mülakat,K15,B,5,sonrası,Çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+M0209,mülakat,K15,B,6,sonrası,"Nasıl anlatsam, ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0210,mülakat,K15,B,6,sonrası,"Açık konuşayım, aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0211,mülakat,K15,B,6,sonrası,Bir de şu var: çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0212,mülakat,K15,B,7,sonrası,"Açık konuşayım, kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil."
+M0213,mülakat,K15,B,8,sonrası,"Taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0214,mülakat,K16,B,1,öncesi,Doğrusu akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0215,mülakat,K16,B,2,öncesi,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0216,mülakat,K16,B,2,öncesi,"Doğrusu çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0217,mülakat,K16,B,3,inşaat,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0218,mülakat,K16,B,3,inşaat,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0219,mülakat,K16,B,4,inşaat,"Doğrusu taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0220,mülakat,K16,B,4,inşaat,Bakın o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0221,mülakat,K16,B,4,inşaat,"Açık konuşayım, eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu."
+M0222,mülakat,K16,B,5,sonrası,"Bakın yeni yerde de aynı. Demek ki mesele Yıldıztepe değil, bu yeni apartman biçimi."
+M0223,mülakat,K16,B,6,sonrası,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0224,mülakat,K16,B,6,sonrası,"Doğrusu sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0225,mülakat,K16,B,6,sonrası,"Açık konuşayım, en çok gelen şikâyet aidat. Hak sahiplerinin bir kısmı ödeyemiyor, icra takibi başlayanlar var."
+M0226,mülakat,K16,B,7,sonrası,"Açık konuşayım, burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey."
+M0227,mülakat,K16,B,8,sonrası,"Geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0228,mülakat,K16,B,8,sonrası,"Açık konuşayım, sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0229,mülakat,K17,B,1,öncesi,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0230,mülakat,K17,B,1,öncesi,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0231,mülakat,K17,B,1,öncesi,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0232,mülakat,K17,B,2,öncesi,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0233,mülakat,K17,B,2,öncesi,"Ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0234,mülakat,K17,B,3,inşaat,Dükkân kirası beş katına çıktı. Kırk iki yıl sonra kapattım.
+M0235,mülakat,K17,B,3,inşaat,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0236,mülakat,K17,B,4,inşaat,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0237,mülakat,K17,B,5,sonrası,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0238,mülakat,K17,B,6,sonrası,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0239,mülakat,K17,B,7,sonrası,Nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+M0240,mülakat,K17,B,8,sonrası,"Asansörde günaydın diyorum, karşılık veriyorlar. Sonrası gelmiyor, orada kalıyor."
+M0241,mülakat,K18,B,1,öncesi,"Şimdi iki kilit var, biri de şu akıllı olanlardan. Çıkarken ikisini de çeviriyorum."
+M0242,mülakat,K18,B,1,öncesi,"Valla dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0243,mülakat,K18,B,1,öncesi,Valla akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0244,mülakat,K18,B,2,öncesi,"Düşünün ki kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0245,mülakat,K18,B,3,inşaat,"Düşünün ki sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0246,mülakat,K18,B,4,inşaat,"Düşünün ki kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0247,mülakat,K18,B,4,inşaat,"Şimdi taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0248,mülakat,K18,B,5,sonrası,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0249,mülakat,K18,B,6,sonrası,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0250,mülakat,K18,B,6,sonrası,Valla markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+M0251,mülakat,K18,B,6,sonrası,"Düşünün ki yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0252,mülakat,K18,B,7,sonrası,"Eski evde aidat yoktu. Kapıcıya para verirdik, o kadar."
+M0253,mülakat,K18,B,8,sonrası,Düşünün ki en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0254,mülakat,K18,B,8,sonrası,"Düşünün ki artık kepenk indiriyorum. Beş dakikalığına bile çıksam indiriyorum, alışkanlık oldu."
+M0255,mülakat,K19,B,1,öncesi,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0256,mülakat,K19,B,1,öncesi,Doğrusu akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0257,mülakat,K19,B,2,öncesi,"Açık konuşayım, yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor."
+M0258,mülakat,K19,B,2,öncesi,"Nasıl anlatsam, akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı."
+M0259,mülakat,K19,B,3,inşaat,"Nasıl anlatsam, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0260,mülakat,K19,B,4,inşaat,"Bakın taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0261,mülakat,K19,B,5,sonrası,"Nasıl anlatsam, yatırım olarak baktığımda doğru karar verdim. İki yılda ciddi değerlendi."
+M0262,mülakat,K19,B,6,sonrası,"Nasıl anlatsam, yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor."
+M0263,mülakat,K19,B,7,sonrası,"Bakın şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0264,mülakat,K19,B,8,sonrası,Doğrusu aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0265,mülakat,K20,B,1,öncesi,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0266,mülakat,K20,B,1,öncesi,"Şöyle söyleyeyim, kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0267,mülakat,K20,B,1,öncesi,"Şöyle söyleyeyim, kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0268,mülakat,K20,B,2,öncesi,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0269,mülakat,K20,B,2,öncesi,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0270,mülakat,K20,B,3,inşaat,"Şöyle söyleyeyim, taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0271,mülakat,K20,B,3,inşaat,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0272,mülakat,K20,B,4,inşaat,Bakın kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0273,mülakat,K20,B,4,inşaat,"Bakın müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0274,mülakat,K20,B,4,inşaat,"Şöyle söyleyeyim, kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0275,mülakat,K20,B,5,sonrası,"Nasıl anlatsam, taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor."
+M0276,mülakat,K20,B,6,sonrası,"Bakın ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0277,mülakat,K20,B,7,sonrası,Eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu.
+M0278,mülakat,K20,B,7,sonrası,"Mahallede yürürken selam vereceğim biri çıkmıyor. İnsan selam vermeye alışmış, zor bırakıyor."
+M0279,mülakat,K20,B,8,sonrası,Bakın kendimi misafir gibi hissediyorum. Kırk yıldır buradayım.
+M0280,mülakat,K20,B,8,sonrası,Bakın çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+M0281,mülakat,K21,C,1,öncesi,"Çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0282,mülakat,K21,C,1,öncesi,"Açık konuşayım, kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0283,mülakat,K21,C,2,öncesi,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0284,mülakat,K21,C,3,inşaat,"Açık konuşayım, i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu."
+M0285,mülakat,K21,C,3,inşaat,Toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0286,mülakat,K21,C,4,inşaat,"Oğlum devralmak istemiyor. Haklı da, ben bile devam edeyim mi bilmiyorum."
+M0287,mülakat,K21,C,5,sonrası,"Kira üç katına çıktı. Mahallede kalamadım, iki ilçe öteye gittim."
+M0288,mülakat,K21,C,5,sonrası,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0289,mülakat,K21,C,6,sonrası,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0290,mülakat,K21,C,7,sonrası,Dükkân kirası beş katına çıktı. Kırk iki yıl sonra kapattım.
+M0291,mülakat,K21,C,8,sonrası,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0292,mülakat,K21,C,8,sonrası,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0293,mülakat,K22,C,1,öncesi,"Yani otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0294,mülakat,K22,C,1,öncesi,"Yani çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0295,mülakat,K22,C,2,öncesi,"Valla kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0296,mülakat,K22,C,2,öncesi,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0297,mülakat,K22,C,2,öncesi,"Anahtarımı komşuya bırakırdım, kargo gelirse alsın diye. Şimdi kargoyu güvenliğe bırakıyorlar."
+M0298,mülakat,K22,C,3,inşaat,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0299,mülakat,K22,C,3,inşaat,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0300,mülakat,K22,C,4,inşaat,Valla toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0301,mülakat,K22,C,4,inşaat,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0302,mülakat,K22,C,5,sonrası,"Yani bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0303,mülakat,K22,C,6,sonrası,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0304,mülakat,K22,C,6,sonrası,"Yani artık kepenk indiriyorum. Beş dakikalığına bile çıksam indiriyorum, alışkanlık oldu."
+M0305,mülakat,K22,C,7,sonrası,Eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu.
+M0306,mülakat,K22,C,8,sonrası,Valla çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0307,mülakat,K22,C,8,sonrası,"Valla cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0308,mülakat,K22,C,8,sonrası,Valla kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0309,mülakat,K23,C,1,öncesi,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0310,mülakat,K23,C,2,öncesi,"Veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0311,mülakat,K23,C,2,öncesi,"Bakın anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0312,mülakat,K23,C,3,inşaat,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0313,mülakat,K23,C,3,inşaat,"Bakın müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0314,mülakat,K23,C,4,inşaat,"Doğrusu sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0315,mülakat,K23,C,4,inşaat,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0316,mülakat,K23,C,5,sonrası,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0317,mülakat,K23,C,5,sonrası,"Doğrusu cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0318,mülakat,K23,C,6,sonrası,"Bakın cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0319,mülakat,K23,C,6,sonrası,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0320,mülakat,K23,C,7,sonrası,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0321,mülakat,K23,C,8,sonrası,"Doğrusu çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0322,mülakat,K23,C,8,sonrası,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0323,mülakat,K23,C,8,sonrası,Bakın taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0324,mülakat,K24,C,1,öncesi,"Açık konuşayım, merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0325,mülakat,K24,C,1,öncesi,"Nasıl anlatsam, çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0326,mülakat,K24,C,1,öncesi,"Nasıl anlatsam, dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0327,mülakat,K24,C,2,öncesi,"Çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0328,mülakat,K24,C,2,öncesi,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0329,mülakat,K24,C,3,inşaat,"Açık konuşayım, i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu."
+M0330,mülakat,K24,C,3,inşaat,"Bir de şu var: sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0331,mülakat,K24,C,4,inşaat,"Açık konuşayım, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0332,mülakat,K24,C,4,inşaat,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0333,mülakat,K24,C,5,sonrası,"Nasıl anlatsam, site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor."
+M0334,mülakat,K24,C,5,sonrası,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0335,mülakat,K24,C,6,sonrası,"Nasıl anlatsam, yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor."
+M0336,mülakat,K24,C,7,sonrası,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0337,mülakat,K24,C,8,sonrası,"Açık konuşayım, ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0338,mülakat,K24,C,8,sonrası,Bir de şu var: aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0339,mülakat,K24,C,8,sonrası,"Bir de şu var: çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0340,mülakat,K25,C,1,öncesi,"Açık konuşayım, veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0341,mülakat,K25,C,2,öncesi,"Bakın anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0342,mülakat,K25,C,3,inşaat,Bakın i̇şyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0343,mülakat,K25,C,3,inşaat,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0344,mülakat,K25,C,4,inşaat,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0345,mülakat,K25,C,4,inşaat,"Doğrusu hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0346,mülakat,K25,C,5,sonrası,"Doğrusu dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0347,mülakat,K25,C,6,sonrası,"Doğrusu oğlum devralmak istemiyor. Haklı da, ben bile devam edeyim mi bilmiyorum."
+M0348,mülakat,K25,C,7,sonrası,"Açık konuşayım, ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0349,mülakat,K25,C,8,sonrası,Bakın yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0350,mülakat,K25,C,8,sonrası,"Açık konuşayım, alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor."
+M0351,mülakat,K26,C,1,öncesi,"Bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0352,mülakat,K26,C,2,öncesi,"Ben şunu diyeyim: merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0353,mülakat,K26,C,3,inşaat,Ben şunu diyeyim: i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0354,mülakat,K26,C,3,inşaat,"Ben şunu diyeyim: hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0355,mülakat,K26,C,4,inşaat,İşyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0356,mülakat,K26,C,5,sonrası,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0357,mülakat,K26,C,5,sonrası,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0358,mülakat,K26,C,6,sonrası,Siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0359,mülakat,K26,C,6,sonrası,"Ben şunu diyeyim: bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0360,mülakat,K26,C,7,sonrası,"Müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0361,mülakat,K26,C,8,sonrası,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0362,mülakat,K26,C,8,sonrası,Müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü.
+M0363,mülakat,K26,C,8,sonrası,"Ben şunu diyeyim: eski fotoğrafları çıkardım, torunlara gösterdim. 'Burası neresi dede' dediler."
+M0364,mülakat,K27,C,1,öncesi,"Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0365,mülakat,K27,C,1,öncesi,"Şimdi kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0366,mülakat,K27,C,1,öncesi,Yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0367,mülakat,K27,C,2,öncesi,"Şimdi kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0368,mülakat,K27,C,3,inşaat,Düşünün ki i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0369,mülakat,K27,C,3,inşaat,Şimdi toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0370,mülakat,K27,C,4,inşaat,Düşünün ki i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0371,mülakat,K27,C,5,sonrası,"Valla dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0372,mülakat,K27,C,5,sonrası,"Bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0373,mülakat,K27,C,5,sonrası,"Valla bize biraz mesafeli yaklaşıyorlar. Anlıyorum da, biz onların mahallesine geldik sonuçta."
+M0374,mülakat,K27,C,6,sonrası,"Kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+M0375,mülakat,K27,C,6,sonrası,"Düşünün ki annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0376,mülakat,K27,C,7,sonrası,"Valla eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0377,mülakat,K27,C,8,sonrası,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+M0378,mülakat,K27,C,8,sonrası,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0379,mülakat,K27,C,8,sonrası,"Şimdi sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0380,mülakat,K28,D,1,öncesi,"Doğrusu isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+M0381,mülakat,K28,D,2,öncesi,"Doğrusu çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0382,mülakat,K28,D,3,inşaat,"Nasıl anlatsam, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0383,mülakat,K28,D,4,inşaat,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0384,mülakat,K28,D,4,inşaat,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0385,mülakat,K28,D,4,inşaat,"Nasıl anlatsam, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0386,mülakat,K28,D,5,sonrası,"Doğrusu kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0387,mülakat,K28,D,6,sonrası,"Bakın güvenlik benim için önemliydi, açıkçası onun için bu siteyi seçtim. Akşam geç geliyorum."
+M0388,mülakat,K28,D,7,sonrası,"Nasıl anlatsam, çocuk parkı sitenin içinde, pencereden görüyorum."
+M0389,mülakat,K28,D,7,sonrası,"Bakın ben buraya aidiyet hissetmiyorum, dürüst olayım. Yatırım olarak aldım."
+M0390,mülakat,K28,D,8,sonrası,"Açık konuşayım, torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0391,mülakat,K28,D,8,sonrası,"Nasıl anlatsam, grup işe yarıyor aslında. Geçen ay merdivendeki lamba iki saatte halledildi."
+M0392,mülakat,K29,D,1,öncesi,"Şöyle söyleyeyim, kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0393,mülakat,K29,D,1,öncesi,"Yani çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0394,mülakat,K29,D,2,öncesi,Bakın eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0395,mülakat,K29,D,2,öncesi,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0396,mülakat,K29,D,3,inşaat,"Yani taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0397,mülakat,K29,D,3,inşaat,"Şöyle söyleyeyim, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0398,mülakat,K29,D,4,inşaat,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0399,mülakat,K29,D,4,inşaat,Yani o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0400,mülakat,K29,D,5,sonrası,"Şöyle söyleyeyim, yönetim iletişimi gruba taşıdı. Telefonu olmayan yaşlılar haberleri en son duyuyor."
+M0401,mülakat,K29,D,5,sonrası,"Bakın ortak alanlar güzel düzenlenmiş, ben memnunum. Ama kimse kullanmıyor, boş duruyor çoğu zaman."
+M0402,mülakat,K29,D,6,sonrası,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0403,mülakat,K29,D,7,sonrası,Dürüst olmak gerekirse evin değeri beş katına çıktı. Şikâyet ediyorum ama bunu da söylemem lazım.
+M0404,mülakat,K29,D,7,sonrası,"Yani lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+M0405,mülakat,K29,D,8,sonrası,"Bakın isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+M0406,mülakat,K30,D,1,öncesi,Eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0407,mülakat,K30,D,1,öncesi,"Kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0408,mülakat,K30,D,2,öncesi,"Açık konuşayım, dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0409,mülakat,K30,D,3,inşaat,"Açık konuşayım, kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık."
+M0410,mülakat,K30,D,3,inşaat,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0411,mülakat,K30,D,4,inşaat,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0412,mülakat,K30,D,4,inşaat,Toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0413,mülakat,K30,D,5,sonrası,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0414,mülakat,K30,D,6,sonrası,"Çocuk parkı sitenin içinde, pencereden görüyorum."
+M0415,mülakat,K30,D,7,sonrası,"Doğrusu asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0416,mülakat,K30,D,7,sonrası,"Eski evde aidat yoktu. Kapıcıya para verirdik, o kadar."
+M0417,mülakat,K30,D,8,sonrası,Aidatı duyunca satmaya karar verdim. Ev benim ama giderini karşılayamıyorum.
+M0418,mülakat,K30,D,8,sonrası,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0419,mülakat,K31,D,1,öncesi,Yani eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0420,mülakat,K31,D,2,öncesi,Fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0421,mülakat,K31,D,2,öncesi,"Çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0422,mülakat,K31,D,3,inşaat,Yani okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0423,mülakat,K31,D,3,inşaat,"Valla kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0424,mülakat,K31,D,4,inşaat,Yani i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0425,mülakat,K31,D,5,sonrası,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0426,mülakat,K31,D,5,sonrası,"Sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0427,mülakat,K31,D,6,sonrası,"Yani yeni yerde de aynı. Demek ki mesele Yıldıztepe değil, bu yeni apartman biçimi."
+M0428,mülakat,K31,D,7,sonrası,Valla en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0429,mülakat,K31,D,8,sonrası,"Yani çocuk parkı sitenin içinde, pencereden görüyorum."
+M0430,mülakat,K31,D,8,sonrası,"Valla yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+M0431,mülakat,K31,D,8,sonrası,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0432,mülakat,K32,D,1,öncesi,"Bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0433,mülakat,K32,D,2,öncesi,Bakın eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0434,mülakat,K32,D,2,öncesi,"Veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0435,mülakat,K32,D,3,inşaat,O binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0436,mülakat,K32,D,3,inşaat,"Bakın kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0437,mülakat,K32,D,3,inşaat,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0438,mülakat,K32,D,4,inşaat,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0439,mülakat,K32,D,4,inşaat,Doğrusu okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0440,mülakat,K32,D,5,sonrası,"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0441,mülakat,K32,D,6,sonrası,"Doğrusu ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0442,mülakat,K32,D,7,sonrası,"Doğrusu ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0443,mülakat,K32,D,7,sonrası,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0444,mülakat,K32,D,8,sonrası,Doğrusu en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0445,mülakat,K32,D,8,sonrası,"Doğrusu dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0446,mülakat,K33,D,1,öncesi,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0447,mülakat,K33,D,1,öncesi,"Açık konuşayım, kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0448,mülakat,K33,D,2,öncesi,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0449,mülakat,K33,D,2,öncesi,"Nasıl anlatsam, bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0450,mülakat,K33,D,3,inşaat,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0451,mülakat,K33,D,3,inşaat,"Nasıl anlatsam, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0452,mülakat,K33,D,4,inşaat,Bir de şu var: i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0453,mülakat,K33,D,5,sonrası,"Nasıl anlatsam, site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor."
+M0454,mülakat,K33,D,6,sonrası,"Nasıl anlatsam, kadın olarak güvenlik benim için ilk sırada. Site bu açıdan iyi."
+M0455,mülakat,K33,D,7,sonrası,"Nasıl anlatsam, otopark en büyük kazanç. Eskiden arabayı nereye koyacağım diye dolanırlarmış."
+M0456,mülakat,K33,D,7,sonrası,"Nasıl anlatsam, akşam dokuzda eve geliyorum, kapıda güvenlik var. Eskiden o sokaktan geçer miydim bilmiyorum."
+M0457,mülakat,K33,D,7,sonrası,"Bir de şu var: torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0458,mülakat,K33,D,8,sonrası,"Asansöre biniyorsun, iki kişi, kimse konuşmuyor. Herkes telefonuna bakıyor."
+M0459,mülakat,K34,D,1,öncesi,"Açık konuşayım, her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0460,mülakat,K34,D,1,öncesi,Eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0461,mülakat,K34,D,2,öncesi,"Çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0462,mülakat,K34,D,3,inşaat,"Bakın kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0463,mülakat,K34,D,4,inşaat,"Açık konuşayım, çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0464,mülakat,K34,D,5,sonrası,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0465,mülakat,K34,D,5,sonrası,"Bakın kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+M0466,mülakat,K34,D,6,sonrası,"Doğrusu yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0467,mülakat,K34,D,7,sonrası,"Açık konuşayım, grupta herkes var ama yüz yüze gelince kimse kimseyi tanımıyor. Tuhaf bir şey bu."
+M0468,mülakat,K34,D,8,sonrası,"Açık konuşayım, kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0469,mülakat,K35,E,1,öncesi,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0470,mülakat,K35,E,2,öncesi,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0471,mülakat,K35,E,2,öncesi,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0472,mülakat,K35,E,3,inşaat,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0473,mülakat,K35,E,4,inşaat,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0474,mülakat,K35,E,5,sonrası,"Ben şunu diyeyim: yeni gelenler zincir marketten alışveriş yapıyor. Kızmıyorum ama bir ayrışma var, görünüyor."
+M0475,mülakat,K35,E,5,sonrası,"Bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0476,mülakat,K35,E,6,sonrası,"Gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0477,mülakat,K35,E,6,sonrası,"Çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0478,mülakat,K35,E,6,sonrası,"Aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0479,mülakat,K35,E,7,sonrası,Ben şunu diyeyim: en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0480,mülakat,K35,E,7,sonrası,"Dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0481,mülakat,K35,E,8,sonrası,Kadın sakinlerle yaptığımız toplantıda güvenlik en olumlu başlıktı. Erkeklerde aynı vurgu yok.
+M0482,mülakat,K35,E,8,sonrası,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0483,mülakat,K35,E,8,sonrası,Defteri kaldırdım. Güven gidince defter de gitti.
+M0484,mülakat,K36,E,1,öncesi,"Bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0485,mülakat,K36,E,1,öncesi,"Düşünün ki bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0486,mülakat,K36,E,2,öncesi,"Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0487,mülakat,K36,E,2,öncesi,"Düşünün ki merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0488,mülakat,K36,E,2,öncesi,"Şimdi kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0489,mülakat,K36,E,3,inşaat,"Düşünün ki sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0490,mülakat,K36,E,4,inşaat,"Müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0491,mülakat,K36,E,5,sonrası,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0492,mülakat,K36,E,6,sonrası,Valla en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0493,mülakat,K36,E,6,sonrası,"Valla gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0494,mülakat,K36,E,6,sonrası,Şimdi biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+M0495,mülakat,K36,E,7,sonrası,"Valla sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+M0496,mülakat,K36,E,8,sonrası,Düşünün ki siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0497,mülakat,K36,E,8,sonrası,Valla komşumun sesini duymadım ama yazısını her gün okuyorum. Garip bir komşuluk.
+M0498,mülakat,K36,E,8,sonrası,"Şimdi en çok gelen şikâyet aidat. Hak sahiplerinin bir kısmı ödeyemiyor, icra takibi başlayanlar var."
+M0499,mülakat,K37,E,1,öncesi,"Nasıl anlatsam, otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0500,mülakat,K37,E,2,öncesi,"Doğrusu her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0501,mülakat,K37,E,2,öncesi,"Açık konuşayım, bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0502,mülakat,K37,E,2,öncesi,"Nasıl anlatsam, sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0503,mülakat,K37,E,3,inşaat,Doğrusu i̇şyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0504,mülakat,K37,E,4,inşaat,"Açık konuşayım, hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0505,mülakat,K37,E,5,sonrası,"Nasıl anlatsam, şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0506,mülakat,K37,E,5,sonrası,"Doğrusu ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0507,mülakat,K37,E,6,sonrası,"Doğrusu sokak diye bir şey kalmadı. Koridor var, asansör var, otopark var. Sokak yok."
+M0508,mülakat,K37,E,7,sonrası,"Doğrusu yaşlılar için ayrı bir sorun var: yeni binada komşu yok, dışarıda tanıdık yok. Yalnızlık arttı."
+M0509,mülakat,K37,E,8,sonrası,"Doğrusu şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+M0510,mülakat,K38,E,1,öncesi,"Şöyle söyleyeyim, dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0511,mülakat,K38,E,2,öncesi,"Şöyle söyleyeyim, bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0512,mülakat,K38,E,2,öncesi,"Yani kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0513,mülakat,K38,E,3,inşaat,"Bakın sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0514,mülakat,K38,E,4,inşaat,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0515,mülakat,K38,E,5,sonrası,"Şöyle söyleyeyim, müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü."
+M0516,mülakat,K38,E,5,sonrası,"Bakın mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0517,mülakat,K38,E,6,sonrası,"Şöyle söyleyeyim, gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0518,mülakat,K38,E,6,sonrası,"Şöyle söyleyeyim, taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0519,mülakat,K38,E,7,sonrası,"Bakın annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0520,mülakat,K38,E,7,sonrası,"Şöyle söyleyeyim, cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0521,mülakat,K38,E,8,sonrası,"Aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0522,mülakat,K38,E,8,sonrası,"Yani kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."

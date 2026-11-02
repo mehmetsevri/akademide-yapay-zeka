@@ -1,0 +1,698 @@
+﻿parca_id,referans_kod,referans_tema
+M0001,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0002,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0003,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0004,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0005,T4-K3,Ekonomik baskı ve yerinden edilme
+M0006,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0007,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0008,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0009,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0010,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+M0011,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0012,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0013,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0014,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0015,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0016,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0017,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0018,T4-K3,Ekonomik baskı ve yerinden edilme
+M0019,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0020,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0021,T4-K3,Ekonomik baskı ve yerinden edilme
+M0022,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0023,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0024,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0025,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0026,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0027,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+M0028,T4-K3,Ekonomik baskı ve yerinden edilme
+M0029,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0030,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0031,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0032,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0033,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0034,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0035,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0036,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0037,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0038,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0039,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0040,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0041,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0042,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0043,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0044,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0045,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0046,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0047,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0048,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0049,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0050,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0051,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0052,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0053,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0054,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0055,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0056,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0057,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0058,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0059,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0060,T4-K3,Ekonomik baskı ve yerinden edilme
+M0061,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0062,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0063,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0064,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0065,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+M0066,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0067,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0068,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0069,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0070,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0071,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0072,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0073,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0074,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0075,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0076,T4-K3,Ekonomik baskı ve yerinden edilme
+M0077,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0078,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0079,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0080,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0081,T4-K5,Ekonomik baskı ve yerinden edilme
+M0082,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0083,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0084,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0085,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0086,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0087,T4-K3,Ekonomik baskı ve yerinden edilme
+M0088,T4-K3,Ekonomik baskı ve yerinden edilme
+M0089,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0090,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0091,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0092,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0093,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0094,T4-K5,Ekonomik baskı ve yerinden edilme
+M0095,T4-K4,Ekonomik baskı ve yerinden edilme
+M0096,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0097,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0098,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0099,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0100,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0101,T4-K3,Ekonomik baskı ve yerinden edilme
+M0102,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0103,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0104,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0105,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0106,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0107,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0108,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0109,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0110,T4-K4,Ekonomik baskı ve yerinden edilme
+M0111,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0112,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0113,T4-K1,Ekonomik baskı ve yerinden edilme
+M0114,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0115,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0116,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0117,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0118,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0119,T4-K3,Ekonomik baskı ve yerinden edilme
+M0120,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0121,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0122,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0123,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0124,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0125,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0126,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0127,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0128,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0129,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0130,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0131,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0132,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0133,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0134,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0135,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0136,T4-K4,Ekonomik baskı ve yerinden edilme
+M0137,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0138,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0139,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0140,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0141,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0142,T4-K1,Ekonomik baskı ve yerinden edilme
+M0143,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0144,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0145,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0146,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0147,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0148,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0149,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0150,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0151,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0152,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0153,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0154,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0155,T4-K5,Ekonomik baskı ve yerinden edilme
+M0156,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0157,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0158,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0159,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0160,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0161,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0162,T4-K3,Ekonomik baskı ve yerinden edilme
+M0163,T4-K3,Ekonomik baskı ve yerinden edilme
+M0164,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+M0165,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0166,T4-K4,Ekonomik baskı ve yerinden edilme
+M0167,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0168,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0169,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0170,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0171,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0172,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0173,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0174,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0175,T4-K3,Ekonomik baskı ve yerinden edilme
+M0176,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0177,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0178,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0179,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0180,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0181,T4-K2,Ekonomik baskı ve yerinden edilme
+M0182,T4-K5,Ekonomik baskı ve yerinden edilme
+M0183,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0184,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0185,T4-K1,Ekonomik baskı ve yerinden edilme
+M0186,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0187,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0188,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0189,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0190,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0191,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0192,T4-K2,Ekonomik baskı ve yerinden edilme
+M0193,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0194,T4-K3,Ekonomik baskı ve yerinden edilme
+M0195,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0196,T4-K5,Ekonomik baskı ve yerinden edilme
+M0197,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0198,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0199,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0200,T4-K1,Ekonomik baskı ve yerinden edilme
+M0201,T4-K2,Ekonomik baskı ve yerinden edilme
+M0202,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0203,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0204,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0205,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0206,T4-K2,Ekonomik baskı ve yerinden edilme
+M0207,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0208,T4-K5,Ekonomik baskı ve yerinden edilme
+M0209,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0210,T4-K1,Ekonomik baskı ve yerinden edilme
+M0211,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0212,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0213,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0214,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0215,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0216,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0217,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0218,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0219,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0220,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0221,T4-K2,Ekonomik baskı ve yerinden edilme
+M0222,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0223,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0224,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0225,T4-K1,Ekonomik baskı ve yerinden edilme
+M0226,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0227,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0228,T4-K5,Ekonomik baskı ve yerinden edilme
+M0229,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0230,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0231,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0232,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0233,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0234,T4-K2,Ekonomik baskı ve yerinden edilme
+M0235,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0236,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0237,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0238,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0239,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0240,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0241,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0242,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0243,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0244,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0245,T4-K3,Ekonomik baskı ve yerinden edilme
+M0246,T4-K2,Ekonomik baskı ve yerinden edilme
+M0247,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0248,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0249,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0250,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0251,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0252,T4-K1,Ekonomik baskı ve yerinden edilme
+M0253,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0254,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0255,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0256,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0257,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0258,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0259,T4-K3,Ekonomik baskı ve yerinden edilme
+M0260,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0261,T4-K5,Ekonomik baskı ve yerinden edilme
+M0262,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0263,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0264,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0265,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0266,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0267,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0268,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0269,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0270,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0271,T4-K3,Ekonomik baskı ve yerinden edilme
+M0272,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0273,T4-K3,Ekonomik baskı ve yerinden edilme
+M0274,T4-K2,Ekonomik baskı ve yerinden edilme
+M0275,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0276,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0277,T4-K2,Ekonomik baskı ve yerinden edilme
+M0278,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0279,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0280,T4-K5,Ekonomik baskı ve yerinden edilme
+M0281,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0282,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0283,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0284,T4-K4,Ekonomik baskı ve yerinden edilme
+M0285,T4-K3,Ekonomik baskı ve yerinden edilme
+M0286,T4-K4,Ekonomik baskı ve yerinden edilme
+M0287,T4-K2,Ekonomik baskı ve yerinden edilme
+M0288,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0289,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0290,T4-K2,Ekonomik baskı ve yerinden edilme
+M0291,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0292,T4-K4,Ekonomik baskı ve yerinden edilme
+M0293,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0294,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0295,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0296,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0297,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0298,T4-K3,Ekonomik baskı ve yerinden edilme
+M0299,T4-K4,Ekonomik baskı ve yerinden edilme
+M0300,T4-K3,Ekonomik baskı ve yerinden edilme
+M0301,T4-K4,Ekonomik baskı ve yerinden edilme
+M0302,T4-K4,Ekonomik baskı ve yerinden edilme
+M0303,T4-K4,Ekonomik baskı ve yerinden edilme
+M0304,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0305,T4-K2,Ekonomik baskı ve yerinden edilme
+M0306,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0307,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0308,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0309,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0310,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0311,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0312,T4-K4,Ekonomik baskı ve yerinden edilme
+M0313,T4-K3,Ekonomik baskı ve yerinden edilme
+M0314,T4-K3,Ekonomik baskı ve yerinden edilme
+M0315,T4-K4,Ekonomik baskı ve yerinden edilme
+M0316,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0317,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0318,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0319,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0320,T4-K4,Ekonomik baskı ve yerinden edilme
+M0321,T4-K2,Ekonomik baskı ve yerinden edilme
+M0322,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0323,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0324,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0325,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0326,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0327,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0328,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0329,T4-K4,Ekonomik baskı ve yerinden edilme
+M0330,T4-K3,Ekonomik baskı ve yerinden edilme
+M0331,T4-K3,Ekonomik baskı ve yerinden edilme
+M0332,T4-K4,Ekonomik baskı ve yerinden edilme
+M0333,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0334,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0335,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0336,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0337,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0338,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0339,T4-K2,Ekonomik baskı ve yerinden edilme
+M0340,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0341,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0342,T4-K3,Ekonomik baskı ve yerinden edilme
+M0343,T4-K4,Ekonomik baskı ve yerinden edilme
+M0344,T4-K4,Ekonomik baskı ve yerinden edilme
+M0345,T4-K3,Ekonomik baskı ve yerinden edilme
+M0346,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0347,T4-K4,Ekonomik baskı ve yerinden edilme
+M0348,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0349,T4-K4,Ekonomik baskı ve yerinden edilme
+M0350,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0351,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0352,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0353,T4-K4,Ekonomik baskı ve yerinden edilme
+M0354,T4-K3,Ekonomik baskı ve yerinden edilme
+M0355,T4-K3,Ekonomik baskı ve yerinden edilme
+M0356,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0357,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0358,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0359,T4-K4,Ekonomik baskı ve yerinden edilme
+M0360,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0361,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0362,T4-K4,Ekonomik baskı ve yerinden edilme
+M0363,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0364,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0365,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0366,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0367,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0368,T4-K4,Ekonomik baskı ve yerinden edilme
+M0369,T4-K3,Ekonomik baskı ve yerinden edilme
+M0370,T4-K4,Ekonomik baskı ve yerinden edilme
+M0371,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0372,T4-K4,Ekonomik baskı ve yerinden edilme
+M0373,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0374,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0375,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0376,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0377,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0378,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0379,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0380,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0381,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0382,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0383,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0384,T4-K4,Ekonomik baskı ve yerinden edilme
+M0385,T4-K3,Ekonomik baskı ve yerinden edilme
+M0386,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0387,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0388,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0389,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0390,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0391,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0392,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0393,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0394,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0395,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0396,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0397,T4-K3,Ekonomik baskı ve yerinden edilme
+M0398,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0399,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0400,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0401,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0402,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0403,T4-K5,Ekonomik baskı ve yerinden edilme
+M0404,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0405,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0406,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0407,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0408,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0409,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0410,T4-K4,Ekonomik baskı ve yerinden edilme
+M0411,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0412,T4-K3,Ekonomik baskı ve yerinden edilme
+M0413,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0414,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0415,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0416,T4-K1,Ekonomik baskı ve yerinden edilme
+M0417,T4-K1,Ekonomik baskı ve yerinden edilme
+M0418,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0419,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0420,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0421,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0422,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0423,T4-K2,Ekonomik baskı ve yerinden edilme
+M0424,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0425,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0426,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0427,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0428,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0429,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0430,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0431,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0432,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0433,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0434,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0435,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0436,T4-K2,Ekonomik baskı ve yerinden edilme
+M0437,T4-K4,Ekonomik baskı ve yerinden edilme
+M0438,T4-K3,Ekonomik baskı ve yerinden edilme
+M0439,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0440,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0441,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0442,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0443,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0444,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0445,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0446,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0447,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0448,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0449,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0450,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0451,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0452,T4-K4,Ekonomik baskı ve yerinden edilme
+M0453,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0454,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+M0455,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0456,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+M0457,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0458,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0459,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0460,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+M0461,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0462,T4-K2,Ekonomik baskı ve yerinden edilme
+M0463,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0464,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+M0465,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+M0466,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0467,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0468,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0469,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0470,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0471,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0472,T4-K3,Ekonomik baskı ve yerinden edilme
+M0473,T4-K3,Ekonomik baskı ve yerinden edilme
+M0474,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0475,T4-K4,Ekonomik baskı ve yerinden edilme
+M0476,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0477,T4-K2,Ekonomik baskı ve yerinden edilme
+M0478,T4-K1,Ekonomik baskı ve yerinden edilme
+M0479,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0480,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0481,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+M0482,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0483,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0484,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0485,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0486,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0487,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0488,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0489,T4-K3,Ekonomik baskı ve yerinden edilme
+M0490,T4-K3,Ekonomik baskı ve yerinden edilme
+M0491,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0492,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0493,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0494,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0495,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0496,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+M0497,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0498,T4-K1,Ekonomik baskı ve yerinden edilme
+M0499,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+M0500,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0501,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+M0502,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0503,T4-K3,Ekonomik baskı ve yerinden edilme
+M0504,T4-K3,Ekonomik baskı ve yerinden edilme
+M0505,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0506,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0507,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0508,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+M0509,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+M0510,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0511,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0512,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0513,T4-K3,Ekonomik baskı ve yerinden edilme
+M0514,T4-K3,Ekonomik baskı ve yerinden edilme
+M0515,T4-K4,Ekonomik baskı ve yerinden edilme
+M0516,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0517,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+M0518,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+M0519,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0520,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+M0521,T4-K1,Ekonomik baskı ve yerinden edilme
+M0522,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0001,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0002,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+O0003,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0004,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0005,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+O0006,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0007,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0008,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+O0009,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0010,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0011,T4-K1,Ekonomik baskı ve yerinden edilme
+O0012,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0013,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0014,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0015,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0016,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0017,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0018,T4-K5,Ekonomik baskı ve yerinden edilme
+O0019,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0020,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0021,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0022,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0023,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+O0024,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+O0025,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0026,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları
+O0027,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0028,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0029,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+O0030,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0031,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0032,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0033,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0034,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0035,T4-K1,Ekonomik baskı ve yerinden edilme
+O0036,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0037,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0038,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0039,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0040,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0041,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0042,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0043,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0044,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0045,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0046,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0047,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0048,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0049,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0050,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0051,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0052,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0053,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0054,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0055,T4-K5,Ekonomik baskı ve yerinden edilme
+O0056,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0057,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0058,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0059,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0060,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0061,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0062,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0063,T4-K5,Ekonomik baskı ve yerinden edilme
+O0064,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+O0065,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0066,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+O0067,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0068,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0069,T4-K4,Ekonomik baskı ve yerinden edilme
+O0070,T4-K2,Ekonomik baskı ve yerinden edilme
+O0071,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0072,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0073,T4-K2,Ekonomik baskı ve yerinden edilme
+O0074,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0075,T4-K2,Ekonomik baskı ve yerinden edilme
+O0076,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0077,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0078,T4-K4,Ekonomik baskı ve yerinden edilme
+O0079,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0080,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0081,T4-K4,Ekonomik baskı ve yerinden edilme
+O0082,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+O0083,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0084,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0085,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0086,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0087,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0088,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0089,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0090,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0091,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0092,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları
+O0093,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+O0094,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0095,T4-K1,Ekonomik baskı ve yerinden edilme
+O0096,T4-K5,Ekonomik baskı ve yerinden edilme
+O0097,T4-K5,Ekonomik baskı ve yerinden edilme
+O0098,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0099,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+O0100,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0101,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0102,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0103,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0104,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0105,T4-K5,Ekonomik baskı ve yerinden edilme
+O0106,T1-K1,Mekânsal yabancılaşma ve güvensizlik
+O0107,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+O0108,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+O0109,T4-K3,Ekonomik baskı ve yerinden edilme
+O0110,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0111,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0112,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0113,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0114,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0115,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0116,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+O0117,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0118,T1-K5,Mekânsal yabancılaşma ve güvensizlik
+O0119,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0120,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0121,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+O0122,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0123,T4-K3,Ekonomik baskı ve yerinden edilme
+O0124,T4-K4,Ekonomik baskı ve yerinden edilme
+O0125,T4-K5,Ekonomik baskı ve yerinden edilme
+O0126,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+O0127,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları
+O0128,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0129,T1-K3,Mekânsal yabancılaşma ve güvensizlik
+O0130,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+O0131,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N028,T4-K1,Ekonomik baskı ve yerinden edilme
+N015,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N031,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+N041,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+N026,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+N005,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N006,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N022,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N012,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N018,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+N020,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N009,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N002,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N033,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+N017,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N021,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N016,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+N010,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N023,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N032,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N038,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N030,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N007,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N036,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N035,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N011,T1-K4,Mekânsal yabancılaşma ve güvensizlik
+N029,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N037,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N027,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N044,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N043,T4-K1,Ekonomik baskı ve yerinden edilme
+N040,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N004,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N003,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları
+N013,T4-K1,Ekonomik baskı ve yerinden edilme
+N024,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N039,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N001,T1-K2,Mekânsal yabancılaşma ve güvensizlik
+N008,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N042,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N025,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam
+N034,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N019,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+N014,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı

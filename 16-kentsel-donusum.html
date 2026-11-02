@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Örnek çalışma: etnografik saha araştırması</title>
+<meta name="description" content="Kentsel dönüşümün mahalle kültürüne etkisi üzerine etnografik bir inceleme: 38 mülakat, 6 odak grup, 44 alan notu. MAXQDA ve NVivo&#x27;nun yaptığı işin ta">
+<link rel="stylesheet" href="varlik/yazitipi.css?v=c5a273febf">
+<link rel="stylesheet" href="varlik/kurs.css?v=1e20a6ae92">
+<link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<!-- Tema, sayfa gövdesi çizilmeden ÖNCE konuyor. Bu betik varlik/kurs.js
+     içinde olsaydı (defer ile en sonda yüklendiği için) koyu tema seçmiş
+     bir ziyaretçi her sayfa açılışında bir anlık beyaz ekran görürdü.
+     Seçim yoksa işletim sisteminin tercihine uyulur. -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("kurs-tema");
+    if (t !== "acik" && t !== "koyu") {
+      t = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "koyu" : "acik";
+    }
+    if (t === "koyu") {
+      document.documentElement.setAttribute("data-tema", "koyu");
+    }
+  } catch (e) {}
+}());
+</script>
+<!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
+     içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
+     yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
+     boş bırakılırsa hiç yüklenmez ve çerez kutusu yine de çalışır. -->
+</head>
+<body>
+<header class="ust-cubuk">
+  <button type="button" id="yan-dugme" aria-label="Bölüm listesini aç">☰ Bölümler</button>
+  <span class="ust-baslik">Örnek çalışma: etnografik saha araştırması</span>
+  <div class="yazi-boyut" role="group" aria-label="Yazı boyutu">
+    <button type="button" class="kucuk" data-boyut="-1"
+            aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+    <span class="olcek" id="olcek-gosterge">%100</span>
+    <button type="button" class="buyuk" data-boyut="1"
+            aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+    <button type="button" class="orta" data-boyut="0"
+            aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+  <div class="ust-araclar" role="group" aria-label="Görünüm">
+    <button type="button" id="tema-dugme" aria-pressed="false"
+            aria-label="Koyu moda geç" title="Koyu moda geç">
+      <span class="simge" aria-hidden="true">☾</span><span class="yazi">Koyu</span>
+    </button>
+    <button type="button" id="tam-ekran-dugme" aria-pressed="false"
+            aria-label="Tam ekrana geç" title="Tam ekrana geç (F11)">
+      <span class="simge" aria-hidden="true">⤢</span><span class="yazi">Tam ekran</span>
+    </button>
+  </div>
+</header>
+<div class="yan-kapat" id="yan-kapat"></div>
+<div class="kabuk">
+<aside class="yan">
+  <a class="marka" href="index.html">
+    <b>Akademide Üretken Yapay Zekâ</b>
+    <span>Uygulamalı kurs · fikirden hakemliğe</span>
+  </a>
+  <nav><a class="sayfa" href="index.html"><span>Giriş</span></a><div class="kisim-grup" data-kisim="kisim-i-temel" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım I · Temel<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="durum-raporu.html"><span>Durum raporu: yapay zekâ yayıncılığı nasıl değiştirdi</span></a><a class="sayfa" href="01-nasil-calisir.html"><span class="no">1</span><span>Model nasıl çalışır, neden yanılır</span></a><a class="sayfa" href="02-etik.html"><span class="no">2</span><span>Etik, yazarlık, gizlilik ve beyan</span></a><a class="sayfa" href="03-istem.html"><span class="no">3</span><span>İstem yazmanın altı parçası</span></a></div></div><div class="kisim-grup" data-kisim="kisim-ii-arastirmanin-basi" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım II · Araştırmanın başı<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="04-soru.html"><span class="no">4</span><span>Fikirden araştırma sorusuna</span></a><a class="sayfa" href="05-literatur.html"><span class="no">5</span><span>Literatür taraması: aramadan senteze</span></a><a class="sayfa" href="06-veri.html"><span class="no">6</span><span>Veri: kaynaklar, anket tasarımı, temizleme</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iii-analiz" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım III · Analiz<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="07-analiz-secimi.html"><span class="no">7</span><span>Hangi analizi seçmeliyim</span></a><a class="sayfa" href="08-nicel-analiz.html"><span class="no">8</span><span>Nicel analiz: on iki adım, gerçek veri</span></a><a class="sayfa" href="09-web-guvenligi.html"><span class="no">9</span><span>Makine öğrenmesi ve veri sızıntısı</span></a><a class="sayfa" href="10-nitel-analiz.html"><span class="no">10</span><span>Nitel analiz: tematik analizin altı aşaması</span></a></div></div><div class="kisim-grup" data-kisim="kisim-iv-uretim" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım IV · Üretim<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="11-grafik-tablo.html"><span class="no">11</span><span>Şekil ve tablo: analiz çıktısından yayına</span></a><a class="sayfa" href="12-makale.html"><span class="no">12</span><span>Makaleyi bölüm bölüm yazmak</span></a><a class="sayfa" href="13-proje.html"><span class="no">13</span><span>Proje önerisi yazmak</span></a><a class="sayfa" href="14-hakemlik.html"><span class="no">14</span><span>Hakemlik ve hakem cevabı</span></a></div></div><div class="kisim-grup" data-kisim="kisim-v-uctan-uca-ornek-calismalar" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım V · Uçtan uca örnek çalışmalar<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="15-uzaktan-calisma.html"><span class="no">15</span><span>Örnek çalışma: yapısal eşitlik modellemesi</span></a><a class="sayfa etkin" href="16-kentsel-donusum.html"><span class="no">16</span><span>Örnek çalışma: etnografik saha araştırması</span></a><div class="alt-liste"><a href="#calismanin-kunyesi">Çalışmanın künyesi</a><a href="#arastirma-adim-adim">Araştırma adım adım</a><a href="#maxqda-ve-nvivo-ne-yapar-karsiligi-nedir">MAXQDA ve NVivo ne yapar, karşılığı nedir</a><a href="#mulakat-formunu-kurmak">Mülakat formunu kurmak</a><a href="#kod-kitabini-cikarmak">Kod kitabını çıkarmak</a><a href="#kodlamayi-kosturmak">Kodlamayı koşturmak</a><a href="#bulgular">Bulgular</a><a href="#orneklem-ne-kadar-yeterli-doygunluk">Örneklem ne kadar yeterli: doygunluk</a><a href="#kodlama-ne-kadar-guvenilir">Kodlama ne kadar güvenilir</a><a href="#makaleyi-yazmak">Makaleyi yazmak</a><a href="#pakette-ne-var">Pakette ne var</a><a href="#kendi-calismaniza-uyarlama">Kendi çalışmanıza uyarlama</a></div></div></div><div class="kisim-grup" data-kisim="kisim-vi-i-leri-konular" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Kısım VI · İleri konular<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="17-ileri-konular.html"><span class="no">17</span><span>İleri konular</span></a></div></div><div class="kisim-grup" data-kisim="ekler" data-kapali="hayir"><button type="button" class="kisim-dugme" aria-expanded="true">Ekler<span class="ok">▾</span></button><div class="kisim-govde"><a class="sayfa" href="18-istem-kutuphanesi.html"><span class="no">18</span><span>İstem kütüphanesi</span></a><a class="sayfa" href="19-kaynaklar.html"><span class="no">19</span><span>Veri, kod, sözlük ve kaynaklar</span></a><a class="sayfa" href="beyan.html"><span>Sorumluluk ve etik beyanı</span></a></div></div></nav>
+</aside>
+<main class="govde">
+<article class="icerik">
+<div class="ust-etiket">Bölüm 16 · Sosyoloji ve medya çalışmaları</div><h1>Örnek çalışma: etnografik saha araştırması</h1><p class="ozet">Kentsel dönüşümün mahalle kültürüne etkisi üzerine etnografik bir inceleme: 38 mülakat, 6 odak grup, 44 alan notu. MAXQDA ve NVivo'nun yaptığı işin tamamı açık kodla — kod kitabından tematik ağ haritasına, doygunluk eğrisinden makale metnine.</p><p>Bu bölüm, bir nitel saha araştırmasını tasarımdan makale metnine kadar
+izler. Önceki bölüm sayılarla çalışıyordu; bu bölüm sözle çalışıyor.
+Yöntem değişince yapay zekânın rolü de değişiyor: artık hesap yapmıyor,
+okuma ve kodlama işinin ölçeklenmesine yardım ediyor — ve kararı hâlâ
+araştırmacı veriyor.</p>
+<div class="rakamlar"><div class="rakam"><b>38</b><span>derinlemesine mülakat</span></div><div class="rakam"><b>6</b><span>odak grup oturumu</span></div><div class="rakam"><b>44</b><span>katılımcı gözlem alan notu</span></div><div class="rakam"><b>697</b><span>kodlama birimi</span></div><div class="rakam"><b>25</b><span>kod, beş tema altında</span></div><div class="rakam"><b>0,88</b><span>kodlayıcılar arası uyum (κ, tema düzeyi)</span></div></div>
+<h2 id="calismanin-kunyesi">Çalışmanın künyesi</h2>
+<p><strong>Başlık.</strong> Kentsel dönüşümün mahalle kültürüne etkisi: Yıldıztepe
+örneğinde etnografik bir inceleme.</p>
+<p><strong>Amaç.</strong> Kentsel dönüşüm sürecinin, eski mahalle sakinlerinin sosyal
+sermayesini, komşuluk ilişkilerini ve mekânsal aidiyet duygusunu nasıl
+dönüştürdüğünü anlamak.</p>
+<p><strong>Yaklaşım.</strong> Yorumsamacı paradigma; etnografik saha çalışması. Amaç
+sayısal genelleme değil, deneyimin kendi bağlamında anlaşılmasıdır.</p>
+<aside class="not uyari"><span class="not-baslik">Saha kurgusaldır</span><p>Yıldıztepe diye bir mahalle yok. Korpus <code>kod/25_kentsel_korpus_uret.py</code>
+ile üretildi; katılımcılar, konuşmalar ve arşiv kayıtlarının tamamı
+kurgudur. Hiçbir ifade gerçek bir kişinin sözü değildir ve hiçbir bulgu
+İstanbul'daki herhangi bir mahalle hakkında bir iddia taşımaz.</p>
+<p>Neden kurgu: nitel veri tanımı gereği kişiseldir. Gerçek mülakat
+dökümleri etik kurul izni, katılımcı onamı ve kimliksizleştirme
+gerektirir; açık lisansla dağıtılabilen, Türkçe, tam metin bir
+etnografik korpus yoktur. Oysa kodlama öğrenmek için üzerinde
+çalışılacak bir metin gerekir.</p></aside>
+<h2 id="arastirma-adim-adim">Araştırma adım adım</h2>
+<ol class="adimlar"><li><p><strong>Saha seçimi ve erişim.</strong> Dönüşümün tamamlandığı, eski dokusu yıkılıp
+yerine üç etaplı bir site yapılmış bir mahalle seçildi. Erişim muhtarlık
+ve mahalle derneği üzerinden kuruldu. Saha çalışması 14 ay sürdü
+(Eylül 2025 – Ekim 2026).</p>
+<p><strong>Örnekleme.</strong> Kartopu (snowball) örnekleme. Üç kişiye doğrudan
+ulaşıldı; kalan 35 katılımcı yönlendirmeyle bulundu. Beş katılımcı
+grubu izlendi: yerinde kalan eski sakinler, mahalleden ayrılanlar,
+esnaf, yeni site sakinleri ve kilit aktörler (muhtar, dernek başkanı,
+okul müdürü, imam).</p>
+<p><strong>Veri toplama araçlarının hazırlanması.</strong> Standart soru listesi
+yerine, katılımcının kendi hikâyesini anlatmasını teşvik eden sekiz
+soruluk yarı yapılandırılmış form hazırlandı. Her soru bir evreye
+bağlandı: dönüşüm öncesi, inşaat süreci, dönüşüm sonrası.</p>
+<p><strong>Veri toplama.</strong> 38 derinlemesine mülakat (46–90 dakika, ses kaydı ve
+yazılı onamla), 6 odak grup oturumu (6–8 kişi), 44 alan notu ve 19
+arşiv kaydı (gazete kupürü, dilekçe, fotoğraf künyesi).</p>
+<p><strong>Transkripsiyon ve kimliksizleştirme.</strong> Kayıtlar kelimesi kelimesine
+metne döküldü. Adlar K01–K38 kodlarıyla değiştirildi; sokak adları ve
+işyeri adları korundu, çünkü analizin konusu tam olarak bunların
+değişmesi.</p>
+<p><strong>Analiz.</strong> Braun ve Clarke'ın altı aşamalı tematik analizi, aykırı
+örnek incelemesi ve dönüşüm matrisi ile genişletildi.</p></li></ol>
+
+<div class="veri-kunye">
+<div class="ust"><span class="rozet sentetik">Sentetik veri</span>
+<span class="ad">Yıldıztepe etnografik korpusu</span></div>
+<dl><dt>Lisans</dt><dd>Kurs materyaliyle aynı — serbestçe kullanılabilir</dd><dt>Boyut</dt><dd>38 mülakat · 6 odak grup · 44 alan notu · 19 arşiv kaydı · toplam 697 kodlama birimi</dd><dt>Pakette</dt><dd><a href="veri/sosyoloji/kentsel_mulakatlar.txt">kentsel_mulakatlar.txt</a> · <a href="veri/sosyoloji/kentsel_mulakatlar.csv">kentsel_mulakatlar.csv</a> · <a href="veri/sosyoloji/kentsel_odak_gruplar.txt">kentsel_odak_gruplar.txt</a> · <a href="veri/sosyoloji/kentsel_saha_notlari.csv">kentsel_saha_notlari.csv</a> · <a href="veri/sosyoloji/kentsel_arsiv.csv">kentsel_arsiv.csv</a> · <a href="veri/sosyoloji/kentsel_katilimcilar.csv">kentsel_katilimcilar.csv</a> · <a href="kod/25_kentsel_korpus_uret.py">25_kentsel_korpus_uret.py</a></dd></dl>
+<p>Korpus iki biçimde duruyor: <code>.txt</code> dosyaları insan okuması için tam
+döküm, <code>.csv</code> dosyaları ise kodlama birimi düzeyinde tablo. Kodlama
+birimi, bir katılımcının tek bir soruya verdiği yanıtın anlamca
+bütünlük taşıyan parçasıdır.</p>
+<p>Ayrıca <code>kentsel_referans_kodlar.csv</code> var: her parçanın hangi koddan
+üretildiğini gösterir. Gerçek sahada böyle bir dosya olmaz. Burada
+var, çünkü kodlamanın ne kadarının doğru çıktığı ancak bir referansa
+karşı ölçülebilir.</p></div>
+<h2 id="maxqda-ve-nvivo-ne-yapar-karsiligi-nedir">MAXQDA ve NVivo ne yapar, karşılığı nedir</h2>
+<p>Nitel analiz yazılımları üç iş yapar: metni saklar, kod atamasını
+kaydeder, sonucu tablolaştırır ve görselleştirir. Üçü de açık kodla
+yapılabilir; aradaki fark arayüz değil, <strong>kararların nerede durduğudur</strong>.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Yazılımın yaptığı</th>
+<th>Bu bölümdeki karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metin havuzu ve belge yönetimi</td>
+<td><code>kentsel_*.csv</code> dosyaları</td>
+</tr>
+<tr>
+<td>Kod ağacı (code system)</td>
+<td><code>KOD_KITABI</code> — betiğin içinde, görünür</td>
+</tr>
+<tr>
+<td>Metin seçip kod atama</td>
+<td><code>kodla()</code> işlevi ve ÖRÜNTÜLER</td>
+</tr>
+<tr>
+<td>Kod sıklığı tablosu</td>
+<td><code>kentsel_kod_sikliklari.csv</code></td>
+</tr>
+<tr>
+<td>Kod ilişki haritası (MAXMaps)</td>
+<td>Şekil 16.1 ve 16.6</td>
+</tr>
+<tr>
+<td>Matris tarayıcı (Crosstab)</td>
+<td>Şekil 16.3 ve 16.4</td>
+</tr>
+<tr>
+<td>Kodlayıcılar arası uyum</td>
+<td>Cohen κ — Adım 8</td>
+</tr>
+<tr>
+<td>Kelime bulutu</td>
+<td>Kasıtlı olarak yok; aşağıya bakınız</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="not "><span class="not-baslik">Kelime bulutu neden yok</span><p>Kelime bulutu sıklığı gösterir, anlamı değil. "Komşu" sözcüğünün 94
+kez geçmesi, komşuluğun çözüldüğünü de güçlendiğini de gösterebilir;
+ikisini ayıran şey bağlamdır. Nitel analizde sıklık, kodlamadan sonra
+raporlanır — kodlamanın yerine geçmez.</p></aside>
+
+<aside class="not uyari"><span class="not-baslik">Asıl fark: kararın nerede durduğu</span><p>MAXQDA'da "bu parçaya neden bu kodu verdiniz" sorusunun yanıtı
+araştırmacının hafızasındadır. Burada yanıt <code>KOD_KITABI</code> içindeki
+örüntü listesidir ve makaleyle birlikte yayımlanabilir. Nitel
+araştırmada yeniden üretilebilirliğin önündeki en büyük engel budur;
+açık kod bu engeli kaldırır.</p>
+<p>Bunun bedeli de var: örüntü temelli kodlama, insanın göreceği
+inceliği göremez. Bu yüzden otomatik kodlama <strong>ilk geçiş</strong> sayılır,
+son söz değil.</p></aside>
+<h2 id="mulakat-formunu-kurmak">Mülakat formunu kurmak</h2>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Yarı yapılandırılmış mülakat formu</span>
+<span class="arac">Tasarım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Kent sosyolojisi alanında saha çalışması yürüten bir araştırmacısın.
+Etnografik görüşme tekniğine hâkimsin.
+
+GÖREV
+Aşağıdaki araştırma için yarı yapılandırılmış mülakat formu yaz.
+
+ARAŞTIRMA
+Amaç: kentsel dönüşümün mahalle kültürüne, komşuluk ağlarına ve
+mekânsal aidiyete etkisini anlamak.
+Katılımcılar: yerinde kalan eski sakinler, mahalleden ayrılanlar,
+esnaf, yeni site sakinleri, kilit aktörler.
+
+BİÇİM
+- En çok sekiz ana soru.
+- Her soru bir evreye bağlı olsun: dönüşüm öncesi / inşaat süreci /
+  dönüşüm sonrası. Evreyi soru metninde değil, yanında parantezle
+  belirt.
+- Sorular açık uçlu ve hikâye davet edici olsun; evet-hayır ile
+  yanıtlanabilen soru yazma.
+- Yönlendirici sıfat kullanma: &quot;ne kadar kötüleşti&quot; değil &quot;nasıl
+  değişti&quot;.
+- Ayrıca dört sonda (probe) sorusu ekle.
+
+SINIR
+Katılımcıya ne hissetmesi gerektiğini ima eden hiçbir ifade kullanma.
+Dönüşümün olumlu okunabileceği bir soru da bulunsun.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen form (kısaltıldı)</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>1. [öncesi]  Mahallede ne kadar zamandır yaşıyorsunuz? Buraya nasıl
+             geldiniz, biraz anlatır mısınız?
+2. [öncesi]  Dönüşümden önceki komşuluk ilişkilerinizi nasıl tarif
+             edersiniz?
+3. [inşaat]  Yıkım ve inşaat süreci sizin için nasıl geçti?
+4. [inşaat]  O dönemde nerede oturdunuz, günlük hayatınız nasıl
+             etkilendi?
+5. [sonrası] Eski komşuluk ilişkileriniz ile bugünkü sitedeki yaşamı
+             nasıl kıyaslarsınız?
+6. [sonrası] Bugün kendinizi bu mahallenin bir parçası olarak
+             hissediyor musunuz?
+7. [sonrası] Dönüşümün size göre en iyi ve en kötü yanı ne oldu?
+8. [sonrası] Eklemek istediğiniz bir şey var mı?
+
+Sondalar: Bunu bir örnekle anlatabilir misiniz? · O sırada ne
+hissettiniz? · Bu sizin için ne zaman değişti? · Başka kimler böyle
+düşünüyor sizce?</pre></div>
+<p>Yedinci sorunun "en iyi ve en kötü" diye kurulması tesadüf değil.
+Yalnız kaybı soran bir form yalnız kayıp bulur. Aykırı örnek
+incelemesinin (Adım 12) veriye girebilmesi bu soruya bağlı.</p>
+<h2 id="kod-kitabini-cikarmak">Kod kitabını çıkarmak</h2>
+<p>Kodlama, kodların nereden geldiği sorusuyla başlar. İki yol var:
+kuramdan türetmek (tümdengelim) ya da metinden çıkarmak (tümevarım).
+Bu çalışmada ikisi birlikte kullanıldı: ilk kodlar altmış parçalık bir
+okumadan çıkarıldı, sonra kuramsal literatürle karşılaştırıldı.</p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tümevarımsal ilk kodlama</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma yöntemleri konusunda deneyimli bir araştırmacısın.
+Braun ve Clarke&#x27;ın (2006) tematik analiz yaklaşımını izliyorsun.
+
+GÖREV
+Aşağıdaki mülakat parçalarını satır satır oku ve TÜMEVARIMSAL ilk
+kodları üret. Kuramdan kod getirme; yalnız metinde görünene ad ver.
+
+KURALLAR
+- Her kod en çok dört sözcük olsun.
+- Kod bir YORUM değil bir ETİKET olsun: &quot;komşuluk özlemi&quot; değil
+  &quot;kapı önü sohbetinin bitmesi&quot;.
+- Aynı anlama gelen iki kod üretme; benzer olanları birleştir.
+- Her kod için: kodun adı, bir cümlelik tanımı ve metinden iki
+  ayırt edici ifade örneği ver.
+- Hiçbir parçaya zorla kod atama. Kodlanamayan parça varsa
+  &quot;KODLANMADI&quot; de ve nedenini yaz.
+
+ÇIKTI BİÇİMİ
+Düz tablo: kod | tanım | ayırt edici ifadeler | kaç parçada göründüğü
+
+PARÇALAR
+[60 parça yapıştırıldı]</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen ilk kodlardan beşi</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>kod</th>
+<th>tanım</th>
+<th>ayırt edici ifadeler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kapıyı kilitleme alışkanlığı</td>
+<td>Güvenlik algısının gündelik bir davranışta görünür hâli</td>
+<td>"kilitlemezdik", "anahtarı saksının altına", "kepenk indiriyorum"</td>
+</tr>
+<tr>
+<td>Komşunun adını bilmemek</td>
+<td>Yüz yüze tanışıklığın kaybı</td>
+<td>"adını bilmiyorum", "alt komşum", "isimlikten öğreniyorum"</td>
+</tr>
+<tr>
+<td>Kapı önü sohbetinin bitmesi</td>
+<td>Enformel karşılaşma mekânının yok olması</td>
+<td>"kapı önünde çay", "merdivende laf", "tabure"</td>
+</tr>
+<tr>
+<td>Yıkılan yer imleri</td>
+<td>Hafızanın bağlı olduğu somut nesnelerin kaybı</td>
+<td>"çeşme", "çınar", "fırının kokusu"</td>
+</tr>
+<tr>
+<td>Aidat yükü</td>
+<td>Mülkiyeti sürdürmenin maliyeti</td>
+<td>"aidat dört bin", "ödeyemiyor", "icra"</td>
+</tr>
+</tbody>
+</table></div></div></div>
+<p>Yapay zekânın burada yaptığı iş <strong>öneri</strong>dir. Üretilen 31 koddan
+altısı birleştirildi, ikisi atıldı, biri ikiye ayrıldı. Kalan 25 kod
+beş tema altında toplandı. Bu kararlar
+<code>kod/26_tematik_analiz_kentsel.py</code> dosyasının başındaki <code>KOD_KITABI</code>
+listesinde durur.</p>
+<figure class="sekil" id="tematik-ag">
+<div class="cerceve"><img src="varlik/sekil/m01_tematik_ag.svg"
+ alt="Beş tema merkezinde, çevrelerinde yirmi beş kodun yer aldığı ağ haritası" loading="lazy"></div>
+<figcaption><b>Şekil 16.1</b> Tematik ağ haritası. Beş tema, 25 kod. Düğüm büyüklüğü kodun
+korpustaki sıklığıyla orantılı. En kalabalık tema mekânsal
+yabancılaşma, en seyreği aykırı örnekleri taşıyan "konforun
+kazananları".
+<span class="indir">Dosya: <a href="varlik/sekil/m01_tematik_ag.svg">m01_tematik_ag.svg</a>
+ · <a href="varlik/sekil_png/m01_tematik_ag.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h2 id="kodlamayi-kosturmak">Kodlamayı koşturmak</h2>
+<div class="kod-blok">
+<header><span class="dil">python</span>
+<span>26_tematik_analiz_kentsel.py — kodlama kuralı</span></header>
+<pre><code>def kodla(metin: str):
+    &#x27;&#x27;&#x27;Bir parçaya kod atar; eşleşme yoksa None döner.
+
+    Karar kuralı: en çok örüntü eşleştiren kod kazanır. Eşitlik
+    durumunda kod kitabındaki sıra belirler — yani araştırmacının
+    önceliklendirmesi. Bu kural, &#x27;hangi kodu neden verdiniz&#x27;
+    sorusunun yanıtıdır.
+    &#x27;&#x27;&#x27;
+    kucuk = metin.lower()
+    puanlar = []
+    for kod, _tema, _tanim, oruntuler in KOD_KITABI:
+        p = sum(1 for o in oruntuler if o in kucuk)
+        if p:
+            puanlar.append((p, kod))
+    if not puanlar:
+        return None, 0
+    en_iyi = max(p for p, _ in puanlar)
+    for kod, _t, _a, _o in KOD_KITABI:
+        if (en_iyi, kod) in puanlar:
+            return kod, en_iyi
+    return None, 0</code></pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Kodlama sonucu</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<pre>Kodlanan parça   : 605 / 697 (%86.8)
+Kodlanmayan parça: 92</pre></div>
+<p>Kodlanmayan 92 parça bir kusur değil, bir bulgudur. Üçte ikisi alan
+notlarından geliyor: gözlem notları çoğu zaman tek bir koda
+sığmayacak kadar betimleyicidir. Gerçek bir çalışmada bu parçalar
+elle okunur ve ya yeni bir kod doğar ya da "bağlam notu" olarak
+ayrılır.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/m02_tema_siklik.svg"
+ alt="Beş temanın parça sayısı ve kaç katılımcıda göründüğünü gösteren yatay çubuk grafik" loading="lazy"></div>
+<figcaption><b>Şekil 16.2</b> Tema ağırlığı ve katılımcı yayılımı. İki sayı birlikte okunur: parça
+sayısı korpustaki hacmi, katılımcı sayısı deneyimin ne kadar ortak
+olduğunu gösterir. Mekânsal yabancılaşma 38 katılımcının tamamında
+görünüyor.
+<span class="indir">Dosya: <a href="varlik/sekil/m02_tema_siklik.svg">m02_tema_siklik.svg</a>
+ · <a href="varlik/sekil_png/m02_tema_siklik.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h2 id="bulgular">Bulgular</h2>
+<h3>Temalar ve ağırlıkları</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th style="text-align: right;">Parça</th>
+<th style="text-align: right;">Pay</th>
+<th style="text-align: right;">Katılımcı</th>
+<th style="text-align: right;">Kod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mekânsal yabancılaşma ve güvensizlik</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">%24,1</td>
+<td style="text-align: right;">38/38</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Komşuluk ağlarının çözülmesi ve atomize yaşam</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">%21,1</td>
+<td style="text-align: right;">36/38</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Eski hafızanın silinmesi ve aidiyet kaybı</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">%18,7</td>
+<td style="text-align: right;">35/38</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Ekonomik baskı ve yerinden edilme</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">%14,9</td>
+<td style="text-align: right;">31/38</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Kuşaklar arası ayrışma ve konforun kazananları</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">%8,0</td>
+<td style="text-align: right;">21/38</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/m03_tema_grup.svg"
+ alt="Tema ile katılımcı grubunu çaprazlayan ısı haritası" loading="lazy"></div>
+<figcaption><b>Şekil 16.3</b> Hangi grup hangi temayı dile getiriyor. Esnafın anlatısı ekonomik
+baskıya, yeni sakinlerinki konfora, mahalleden ayrılanlarınki hafızaya
+ağırlık veriyor. Aynı dönüşüm, durduğunuz yere göre başka bir olay.
+<span class="indir">Dosya: <a href="varlik/sekil/m03_tema_grup.svg">m03_tema_grup.svg</a>
+ · <a href="varlik/sekil_png/m03_tema_grup.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h3>Dönüşüm matrisi</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Tema</th>
+<th style="text-align: right;">Öncesi</th>
+<th style="text-align: right;">İnşaat</th>
+<th style="text-align: right;">Sonrası</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mekânsal yabancılaşma ve güvensizlik</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">101</td>
+</tr>
+<tr>
+<td>Komşuluk ağlarının çözülmesi</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">102</td>
+</tr>
+<tr>
+<td>Hafıza ve aidiyet kaybı</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">92</td>
+</tr>
+<tr>
+<td>Ekonomik baskı ve yerinden edilme</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">61</td>
+</tr>
+<tr>
+<td>Konforun kazananları</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">37</td>
+</tr>
+</tbody>
+</table></div>
+<p>Matris, hangi temanın hangi evrede doğduğunu gösteriyor. Ekonomik
+baskı inşaat sürecinde ortaya çıkıyor ve sonrasında sürüyor; komşuluk
+anlatısı ise inşaat evresinde hiç görünmüyor — o dönemde zaten
+komşuluk diye bir şey kalmamış, insanlar dağılmış.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/m04_donusum_matrisi.svg"
+ alt="Üç evrede temaların yığılmış çubuk grafiği" loading="lazy"></div>
+<figcaption><b>Şekil 16.4</b> Dönüşüm matrisi. Kentsel dönüşüm bir an değil bir süredir; temaların
+doğduğu evre, yorumun zaman eksenini verir.
+<span class="indir">Dosya: <a href="varlik/sekil/m04_donusum_matrisi.svg">m04_donusum_matrisi.svg</a>
+ · <a href="varlik/sekil_png/m04_donusum_matrisi.png">PNG sürümü</a></span></figcaption>
+</figure>
+<h3>Kodlar arası bağlar</h3>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/m06_es_gorunum.svg"
+ alt="Yirmi beş kodun daire üzerinde dizildiği, aralarındaki birlikte görünme bağlarının çizildiği ağ" loading="lazy"></div>
+<figcaption><b>Şekil 16.5</b> Kod eş-görünüm ağı. Bir bağ, iki kodun aynı katılımcının anlatısında
+birlikte geçmesi demektir. Kırmızı çizgiler tema sınırını aşan
+bağlar — yorumun asıl çıkış noktası bunlardır.
+<span class="indir">Dosya: <a href="varlik/sekil/m06_es_gorunum.svg">m06_es_gorunum.svg</a>
+ · <a href="varlik/sekil_png/m06_es_gorunum.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>En güçlü dört bağ tema sınırını aşıyor:</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bağ</th>
+<th style="text-align: right;">Katılımcı</th>
+<th>Ne anlama geliyor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kapı önü sohbetinin bitmesi ↔ esnafın müşteri kaybı</td>
+<td style="text-align: right;">14</td>
+<td>Komşuluk ile esnaflık aynı mekâna bağlıymış</td>
+</tr>
+<tr>
+<td>Güvenlik görevlisi ↔ yıkılan yer imleri</td>
+<td style="text-align: right;">13</td>
+<td>Güvenliğin gelişi ile hafızanın gidişi aynı anda anlatılıyor</td>
+</tr>
+<tr>
+<td>Kapı önü sohbeti ↔ müteahhit pazarlığı</td>
+<td style="text-align: right;">13</td>
+<td>Kırgınlık pazarlık masasında başlamış</td>
+</tr>
+<tr>
+<td>Sokağın yerini koridorun alması ↔ fotoğrafla hatırlama</td>
+<td style="text-align: right;">13</td>
+<td>Mekân kaybolunca hatırlama nesneye taşınıyor</td>
+</tr>
+</tbody>
+</table></div>
+<p>Birinci satır, bu çalışmanın en işe yarar bulgusu: <strong>kapı önü
+sohbeti ile bakkalın ayakta kalması aynı mekâna bağlıymış.</strong> İkisini
+ayrı ayrı sorsanız iki ayrı şikâyet duyarsınız; birlikte baktığınızda
+tek bir mekânsal çöküşün iki yüzü olduğu görünür.</p>
+<h3>Temsil edici alıntılar</h3>
+<blockquote>
+<p>"Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor."
+— K07, 61, yerinde kalan eski sakin, mahallede 38 yıl
+[Komşunun adını bilmemek]</p>
+<p>"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su
+içerdik." — K12, 74, yerinde kalan eski sakin, mahallede 46 yıl
+[Yıkılan yer imleri]</p>
+<p>"Burası artık benim mahallem değil. Evim burada ama mahallem değil.
+İkisi ayrı şey." — K05, 68, yerinde kalan eski sakin
+[Aidiyet kaybı]</p>
+<p>"Siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam
+gerekiyor. Doğduğum sokakta misafir oldum." — K19, 55, mahalleden
+ayrılan [Güvenlik görevlisi ve kartlı geçiş]</p>
+</blockquote>
+<aside class="not "><span class="not-baslik">Alıntı seçimi keyfî olmamalı</span><p>Alıntılar betik tarafından, önceden yazılmış bir ölçüte göre seçildi:
+tema içinde en çok örüntü eşleştiren, 12–45 sözcük uzunluğundaki,
+farklı katılımcılara ait parçalar. Ölçüt
+<code>kentsel_alintilar.csv</code> dosyasında ve betiğin Adım 11'inde duruyor.</p>
+<p>Bu, "en çarpıcı olanı seçtim" demekten daha savunulabilir bir
+yöntemdir. Hakem "neden bu alıntı" diye sorduğunda gösterilecek bir
+kural olur.</p></aside>
+<h3>Aykırı örnekler</h3>
+<p>Baskın anlatı kayıp üzerine kurulu. Korpusun %5,6'sı bunun tersini
+söylüyor ve bu kısım atılmadı.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Grup</th>
+<th style="text-align: right;">Parça</th>
+<th style="text-align: right;">Kişi</th>
+<th style="text-align: right;">Ortalama yaş</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yeni site sakini</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr>
+<td>Yerinde kalan eski sakin</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr>
+<td>Mahalleden ayrılan</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr>
+<td>Kilit aktör</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">64</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>"Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor.
+Haklı da, ben de üşümüyorum artık." — K03 [Konfor memnuniyeti]</p>
+</blockquote>
+<p>Aykırı örnekler yalnız yeni sakinlerden gelmiyor; yerinde kalan dokuz
+eski sakin de konfor kazancını dile getiriyor. Bu, bulguyu
+zayıflatmaz. Tersine, yorumun inceliği burada: <strong>kayıp ile kazanç aynı
+kişide birlikte bulunuyor.</strong> Aynı katılımcı hem "burası artık benim
+mahallem değil" diyor hem "asansör olmasaydı bu yaşta çıkamazdım"
+diyor. İkisini birden taşımayan bir analiz, sahayı değil araştırmacının
+beklentisini anlatır.</p>
+<h2 id="orneklem-ne-kadar-yeterli-doygunluk">Örneklem ne kadar yeterli: doygunluk</h2>
+<p>Nitel araştırmada en sık sorulan hakem sorusu şudur: "38 kişi neye
+göre yeterli?" Yanıt sayı değil, <strong>doygunluk</strong> eğrisidir.</p>
+<figure class="sekil" id="">
+<div class="cerceve"><img src="varlik/sekil/m05_doygunluk.svg"
+ alt="Görüşme sırasına göre yeni kod sayısı ve kümülatif kod sayısını gösteren grafik" loading="lazy"></div>
+<figcaption><b>Şekil 16.6</b> Doygunluk eğrisi. Son yeni kod 17. görüşmede çıktı; kalan 21 görüşme
+yeni kod üretmedi. Örneklem büyüklüğünün gerekçesi budur.
+<span class="indir">Dosya: <a href="varlik/sekil/m05_doygunluk.svg">m05_doygunluk.svg</a>
+ · <a href="varlik/sekil_png/m05_doygunluk.png">PNG sürümü</a></span></figcaption>
+</figure>
+<p>Bu eğri makalenin Yöntem bölümüne girer ve "veri doygunluğuna
+ulaşılmıştır" cümlesini iddia olmaktan çıkarıp ölçüme dönüştürür.</p>
+<h2 id="kodlama-ne-kadar-guvenilir">Kodlama ne kadar güvenilir</h2>
+<p>Üç ayrı denetim var ve üçü de farklı bir şeyi ölçüyor.</p>
+<h3>Bir — kodlayıcılar arası uyum</h3>
+<p>Korpusun %20'si ikinci bir kodlayıcı tarafından bağımsız kodlandı.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Düzey</th>
+<th style="text-align: right;">Gözlenen uyum</th>
+<th style="text-align: right;">Şans eseri uyum</th>
+<th style="text-align: right;">Cohen κ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kod (25 seçenek)</td>
+<td style="text-align: right;">%75,2</td>
+<td style="text-align: right;">%4,8</td>
+<td style="text-align: right;">0,739</td>
+</tr>
+<tr>
+<td>Tema (5 seçenek)</td>
+<td style="text-align: right;">%90,9</td>
+<td style="text-align: right;">%22,1</td>
+<td style="text-align: right;">0,883</td>
+</tr>
+</tbody>
+</table></div>
+<p>Landis ve Koch'un (1977) ölçeğinde kod düzeyi "önemli uyum", tema
+düzeyi "neredeyse tam uyum" aralığında. Yorum tema düzeyinde
+yapıldığı için raporlanacak asıl sayı 0,88'dir.</p>
+<h3>İki — referansla karşılaştırma</h3>
+<p>Korpus sentetik olduğu için her parçanın hangi koddan üretildiği
+bilinir. Otomatik kodlama kod düzeyinde %86,3, tema düzeyinde %88,3
+isabet etti.</p>
+<p>En sık karışan çiftler öğretici: "çocuklu ailelerde oyun alanı
+memnuniyeti" ile "yapı ölçeği" karışıyor, çünkü ikisi de balkondan
+aşağı bakmayı anlatıyor. Bu, kod kitabının bir zayıf noktasıdır ve
+gerçek bir çalışmada iki kodun tanımı keskinleştirilerek düzeltilir.</p>
+<h3>Üç — aykırı örnek araması</h3>
+<p>İlk ikisi tutarlılığı ölçer; üçüncüsü <strong>yanlılığı</strong> yakalar. Aykırı
+örnek aranmayan bir analiz, araştırmacının baştan beklediğini
+doğrulamaktan ibaret kalır. Adım 12 bunun için var.</p>
+<aside class="not uyari"><span class="not-baslik">Yapay zekâya kodlatırken en büyük tehlike</span><p>Model, istediğiniz temayı bulur. "Bu metinlerde yabancılaşma temasını
+kodla" derseniz yabancılaşma bulur — metinde olmasa bile. Bu yüzden
+tümevarımsal istemde "kuramdan kod getirme, yalnız metinde görünene
+ad ver" ve "hiçbir parçaya zorla kod atama" kuralları var.</p>
+<p>Denetimi şöyle yapın: modele kodlattıktan sonra, kodladığı parçalardan
+yirmisini rastgele seçip kendiniz okuyun. Kodun metinde karşılığı yoksa
+sorun modelde değil, isteminizdedir.</p></aside>
+<h2 id="makaleyi-yazmak">Makaleyi yazmak</h2>
+<h3>Yöntem bölümü</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Nitel yöntem bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Kent sosyolojisi alanında yayın yapan bir akademisyensin. Nitel
+yöntem bölümü yazıyorsun.
+
+GÖREV
+Aşağıdaki bilgilerden makalenin Yöntem bölümünü yaz.
+
+BİLGİLER
+Yaklaşım: yorumsamacı paradigma, etnografik saha çalışması, 14 ay.
+Örnekleme: kartopu; 3 doğrudan erişim, 35 yönlendirme.
+Katılımcılar: 38 kişi, beş grup [liste].
+Veri: 38 mülakat (46–90 dk), 6 odak grup, 44 alan notu, 19 arşiv kaydı.
+Analiz: Braun ve Clarke (2006) altı aşamalı tematik analiz.
+Kodlama: tümevarımsal ilk kodlar + kuramsal karşılaştırma; 25 kod,
+5 tema.
+Güvenilirlik: ikinci kodlayıcı %20 örneklem, κ = 0,883 (tema düzeyi).
+Doygunluk: son yeni kod 17. görüşmede.
+Etik: yazılı onam, kimliksizleştirme, etik kurul onayı.
+
+BİÇİM
+- 450–550 sözcük, üç alt başlık: Araştırma deseni · Katılımcılar ve
+  veri toplama · Analiz ve güvenilirlik.
+- Geçmiş zaman, edilgen değil etken çatı (&quot;görüşmeler yapıldı&quot; yerine
+  &quot;38 görüşme yürüttüm&quot; demeyin; &quot;38 görüşme yürütüldü&quot; deyin —
+  Türkçe akademik gelenekte edilgen yaygındır, buna uyun).
+- Nitel araştırmanın genellenebilirlik iddiası taşımadığını BİR KEZ,
+  kendi yerinde belirt; tekrar etme.
+
+SINIR
+Hiçbir sayıyı yuvarlama ya da değiştirme. Verilmemiş bir bilgiyi
+ekleme; eksik varsa [EKSİK: ...] yaz.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen Yöntem bölümünden bir kesit</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Analiz ve güvenilirlik</strong></p>
+<p>Çözümlemede Braun ve Clarke'ın (2006) altı aşamalı tematik analiz
+yaklaşımı izlendi. Dökümler önce bütün olarak iki kez okundu; bu
+aşamada yorum yapılmadan not alındı. İkinci aşamada altmış parçalık
+bir alt küme üzerinden tümevarımsal ilk kodlar üretildi ve bu kodlar
+kent sosyolojisi yazınındaki mekânsal aidiyet ve sosyal sermaye
+tartışmalarıyla karşılaştırıldı. Birleştirme ve ayırma işlemlerinden
+sonra 25 koddan oluşan kod kitabı oluşturuldu; kodlar beş tema altında
+toplandı.</p>
+<p>Kodlama güvenilirliği iki yoldan sınandı. Korpusun %20'lik bir
+örneklemi, kod kitabına hâkim ancak araştırmanın kuramsal çerçevesine
+dâhil olmayan ikinci bir kodlayıcı tarafından bağımsız olarak kodlandı.
+Kodlayıcılar arası uyum tema düzeyinde κ = 0,883, kod düzeyinde
+κ = 0,739 olarak hesaplandı; Landis ve Koch'un (1977) ölçütlerine göre
+her iki değer de kabul edilebilir aralıktadır. Ayrıca baskın anlatıyla
+çelişen ifadeler sistematik olarak arandı ve ayrı bir tema altında
+raporlandı.</p>
+<p>Veri doygunluğu, görüşme sırasına göre ilk kez ortaya çıkan kod
+sayısının izlenmesiyle değerlendirildi. Son yeni kod on yedinci
+görüşmede üretildi; izleyen yirmi bir görüşme kod kitabına yeni bir
+giriş eklemedi. Bu bulgu örneklem büyüklüğünün yeterliliğine ilişkin
+ampirik bir dayanak sunmaktadır.</p></div></div>
+<h3>Bulgular bölümü</h3>
+<p>Nitel bulgu bölümü sayıdan değil alıntıdan kurulur, ama alıntı tek
+başına bulgu değildir. Üçlü yapı işe yarar: <strong>iddia → alıntı →
+çözümleme.</strong></p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Nitel bulgu paragrafı</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Nitel araştırma makalesi yazan bir sosyologsun.
+
+GÖREV
+Aşağıdaki tema için Bulgular bölümünde yer alacak bir alt bölüm yaz.
+
+TEMA
+[tema adı] — [tema tanımı]
+Parça sayısı: [n], katılımcı sayısı: [k]/38
+
+ALINTILAR
+[3–4 alıntı, katılımcı künyesiyle]
+
+BAĞLANTILI BULGU
+[eş-görünüm ya da matris bulgusu]
+
+BİÇİM
+Her paragraf üç adımda ilerlesin:
+1. İddia — temanın ne söylediği, tek cümle.
+2. Kanıt — alıntı, blok içinde, katılımcı künyesiyle.
+3. Çözümleme — alıntının neyi gösterdiği; alıntıyı TEKRAR ETME,
+   onu bir adım ileri taşı.
+
+SINIR
+- Alıntıyı yorumsuz bırakma; her alıntıdan sonra en az iki cümle
+  çözümleme gelsin.
+- &quot;Katılımcılar X olduğunu belirtmişlerdir&quot; gibi boş özetleme cümlesi
+  kurma.
+- Sayıyı abartma: 38 kişilik bir çalışmada &quot;çoğunluk&quot; diyebilirsin,
+  &quot;genel olarak toplumda&quot; diyemezsin.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Üretilen bulgu paragrafı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Komşuluk ağlarının çözülmesi</strong></p>
+<p>Dönüşüm sonrasında komşuluk, bir ilişki biçimi olmaktan çıkıp bir
+mekân sorununa dönüşmüştür: katılımcılar komşularını tanımamayı bir
+tercih olarak değil, karşılaşma imkânının ortadan kalkması olarak
+anlatmaktadır.</p>
+<blockquote>
+<p>"Kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat
+laflardık." (K22, 66, yerinde kalan eski sakin)</p>
+<p>"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir
+cümleye başlayamıyor." (K07, 61, yerinde kalan eski sakin)</p>
+</blockquote>
+<p>İki ifade arasındaki fark bir yargı değişimi değil, bir süre
+değişimidir. Eski dokuda karşılaşma, kendiliğinden uzayan bir zamana
+yayılıyordu; yeni yapıda aynı karşılaşma on beş saniyeye sıkışmıştır.
+Katılımcıların "soğukluk" olarak adlandırdığı şey, bu bulguya göre bir
+tutum farkından çok mimari bir sonuçtur.</p>
+<p>Bu okumayı destekleyen ikinci bir bulgu, kodların birlikte görünme
+örüntüsünden gelmektedir. Kapı önü sohbetinin bitmesi ile esnafın
+müşteri kaybı, on dört katılımcının anlatısında birlikte yer
+almaktadır. Komşuluk ilişkisi ile mahalle esnafının ayakta kalması
+aynı mekâna — sokak düzeyindeki karşılaşma alanına — bağlıdır; o alan
+ortadan kalktığında ikisi birlikte çözülmektedir.</p></div></div>
+<h3>Tartışma ve sınırlılıklar</h3>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Tartışma bölümü</span>
+<span class="arac">Yazım</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Kent sosyolojisi alanında yayın yapan bir akademisyensin.
+
+GÖREV
+Bulguları yazınla ilişkilendiren Tartışma bölümünü yaz.
+
+BULGULAR
+[beş tema, ağırlıkları ve en güçlü eş-görünüm bağları]
+
+BİÇİM
+- 600–700 sözcük.
+- Her bulgu için: yazındaki karşılığı · bu çalışmanın eklediği ·
+  çelişen bir bulgu varsa onu da yaz.
+- Aykırı örnekleri ayrı bir paragrafta ele al ve onları açıklamaya
+  çalış, görmezden gelme.
+- Sınırlılıkları KENDİ bölümünde, bir kez, sade dille yaz. Özete,
+  girişe ve sonuca dağıtma.
+
+SINIR
+- Nedensellik iddiası kurma: bu bir kesit çalışması değil, etnografik
+  bir incelemedir; &quot;yol açmıştır&quot; yerine &quot;birlikte görülmektedir&quot;.
+- Yazından atıf uydurma. Atıf gerekiyorsa [ATIF GEREKLİ: konu] yaz,
+  boşluğu ben dolduracağım.</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Sınırlılıklar paragrafı</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><p><strong>Sınırlılıklar</strong></p>
+<p>Çalışma tek bir mahallede yürütülmüştür ve bulgular bu sahanın
+koşullarına bağlıdır; nitel araştırmanın amacı istatistiksel genelleme
+olmadığından, aktarılabilirlik okurun kendi bağlamıyla kuracağı
+benzerliğe bağlıdır. Veri, dönüşüm tamamlandıktan sonra toplanmıştır;
+dönüşüm öncesine ilişkin anlatılar bugünden geriye bakışla
+kurulmuştur ve hatırlamanın kendisi bir yorum katmanı taşır. Mahalleden
+ayrılan sakinlere ulaşmak, yerinde kalanlara ulaşmaktan güç olmuştur;
+bu grubun sekiz kişiyle temsil edilmesi, yerinden edilme deneyiminin
+korpusta görece az yer tutmasına yol açmış olabilir.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Burada yapılan şey ne</span><p>Sınırlılıklar bir kez, kendi bölümünde, sade dille yazıldı. Üç
+cümlede üç gerçek sınır var: tek saha, geriye dönük anlatı, ayrılan
+grubun temsili. Hiçbiri dramatize edilmedi, hiçbiri de gizlenmedi.</p>
+<p>Yaygın hata bunun tersidir: sınırlılığı özete, girişe, tartışmaya ve
+sonuca ayrı ayrı serpiştirmek. Metin o zaman savunmacı bir ses alır
+ve hakem, yazarın kendi çalışmasına güvenmediğini düşünür.</p></aside>
+<h2 id="pakette-ne-var">Pakette ne var</h2>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Dosya</th>
+<th>İçerik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="kod/25_kentsel_korpus_uret.py">25_kentsel_korpus_uret.py</a></td>
+<td>Korpus üretimi; söz bankası ve referans kodlar burada</td>
+</tr>
+<tr>
+<td><a href="kod/26_tematik_analiz_kentsel.py">26_tematik_analiz_kentsel.py</a></td>
+<td>On iki adımlık tematik analiz; kod kitabı burada</td>
+</tr>
+<tr>
+<td><a href="kod/28_sekiller_kentsel.py">28_sekiller_kentsel.py</a></td>
+<td>Altı şeklin tamamı</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_mulakatlar.txt">kentsel_mulakatlar.txt</a></td>
+<td>38 mülakatın tam dökümü</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_mulakatlar.csv">kentsel_mulakatlar.csv</a></td>
+<td>Aynı dökümler, kodlama birimi düzeyinde</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_odak_gruplar.txt">kentsel_odak_gruplar.txt</a></td>
+<td>Altı odak grup dökümü</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_odak_gruplar.csv">kentsel_odak_gruplar.csv</a></td>
+<td>Odak grup parçaları</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_saha_notlari.csv">kentsel_saha_notlari.csv</a></td>
+<td>44 katılımcı gözlem notu</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_arsiv.csv">kentsel_arsiv.csv</a></td>
+<td>19 arşiv kaydı</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_katilimcilar.csv">kentsel_katilimcilar.csv</a></td>
+<td>Katılımcı künyeleri ve kartopu zinciri</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_mulakat_formu.txt">kentsel_mulakat_formu.txt</a></td>
+<td>Yarı yapılandırılmış form</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_referans_kodlar.csv">kentsel_referans_kodlar.csv</a></td>
+<td>Referans kodlama — isabet ölçümü için</td>
+</tr>
+<tr>
+<td><a href="veri/sosyoloji/kentsel_kod_kitabi_referans.csv">kentsel_kod_kitabi_referans.csv</a></td>
+<td>Korpusu üreten kod kitabı</td>
+</tr>
+<tr>
+<td><a href="cikti/kentsel_tematik_analiz.txt">kentsel_tematik_analiz.txt</a></td>
+<td>Analiz raporunun tamamı</td>
+</tr>
+<tr>
+<td><a href="cikti/kentsel_tematik_analiz.json">kentsel_tematik_analiz.json</a></td>
+<td>Aynı sonuçlar, makine okunabilir</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ara tablolar: <a href="cikti/kentsel_kod_kitabi.csv">kod kitabı</a> ·
+<a href="cikti/kentsel_kod_atamalari.csv">kod atamaları</a> ·
+<a href="cikti/kentsel_kod_sikliklari.csv">kod sıklıkları</a> ·
+<a href="cikti/kentsel_tema_sikliklari.csv">tema sıklıkları</a> ·
+<a href="cikti/kentsel_tema_grup.csv">tema × grup</a> ·
+<a href="cikti/kentsel_donusum_matrisi.csv">dönüşüm matrisi</a> ·
+<a href="cikti/kentsel_doygunluk.csv">doygunluk</a> ·
+<a href="cikti/kentsel_es_gorunum.csv">eş-görünüm</a> ·
+<a href="cikti/kentsel_karisan_kodlar.csv">karışan kodlar</a> ·
+<a href="cikti/kentsel_alintilar.csv">alıntılar</a></p>
+<h2 id="kendi-calismaniza-uyarlama">Kendi çalışmanıza uyarlama</h2>
+<ol class="adimlar"><li><p><strong>Kod kitabınızı yazın, sonra modele verin.</strong> Model kod üretsin diye
+değil, sizin kodunuzu tutarlı uygulasın diye. Tümevarımsal ilk geçişte
+model önerir, siz karar verirsiniz.</p>
+<p><strong>Her kodu bir örüntüye bağlayın.</strong> "Bu kodu neden verdiniz"
+sorusunun yanıtı yazılı olsun. Örüntüler mükemmel olmak zorunda değil;
+görünür olmak zorunda.</p>
+<p><strong>Kodlanmayanı atmayın.</strong> Hiçbir koda girmeyen parçalar kod
+kitabınızın eksik olduğu yerdir. En iyi yeni kodlar oradan çıkar.</p>
+<p><strong>Doygunluğu ölçün.</strong> Görüşme sırasına göre yeni kod sayısını
+tutmak beş satır kod alır ve Yöntem bölümünüzdeki en güçlü cümleyi
+üretir.</p>
+<p><strong>Aykırı örneği arayın.</strong> Baskın anlatıya uymayan parçaları ayrı bir
+dosyada toplayın. Bulamıyorsanız, aramadığınız içindir.</p>
+<p><strong>İkinci bir göz bulun.</strong> Kodlayıcılar arası uyum, nitel çalışmanın
+en kolay güçlendirilen yanıdır. Tek kodlayıcıyla çalışmak zorundaysanız
+kendi kodlamanızı iki hafta arayla tekrarlayın ve uyumu bildirin.</p></li></ol>
+
+<aside class="not etik"><span class="not-baslik">Nitel veride yapay zekâ ve gizlilik</span><p>Mülakat dökümleri kişisel veridir. Kimliksizleştirilmemiş bir dökümü
+bulut tabanlı bir modele yapıştırmak, KVKK açısından veri aktarımıdır
+ve çoğu etik kurul onayı bunu kapsamaz.</p>
+<p>Üç kural yeter: adları ve adresleri kodlayın (K01, "mahalle kahvesi"),
+tanınmayı sağlayacak ayrıntıları genelleştirin ("elli iki yaşında, üç
+çocuklu kuaför" → "orta yaşlı esnaf"), ve etik kurul başvurunuzda
+yapay zekâ kullanacağınızı önceden beyan edin. Beyan etmediğiniz bir
+işlemi sonradan meşrulaştıramazsınız.</p></aside>
+
+<nav class="sayfa-alt"><a href="15-uzaktan-calisma.html"><span class="yon">← Önceki</span><span class="ad">Örnek çalışma: yapısal eşitlik modellemesi</span></a><a class="sag" href="17-ileri-konular.html"><span class="yon">Sonraki →</span><span class="ad">İleri konular</span></a></nav>
+<div class="dipnot">
+<p><b>Akademide Üretken Yapay Zekâ — uygulamalı kurs.</b>
+Hazırlayan: <a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri</a>, Recep Tayyip Erdoğan Üniversitesi.
+Bu sayfadaki bütün sayısal çıktılar, yanındaki kod ve veri dosyalarıyla
+yerel olarak üretilmiştir; hiçbiri elle yazılmamıştır.</p>
+<p>Kullanılan gerçek veri setleri CC BY 4.0 ile dağıtılmaktadır ve
+kaynakları ilgili bölümde künyeleriyle verilmiştir. Sentetik veri
+kullanılan yerler açıkça işaretlenmiştir.</p>
+<p class="sorumluluk-kisa">Buradaki istemler ve çıktılar öğretim
+malzemesidir. Yapay zekâ araçlarının kullanımından doğan hatalardan,
+uydurma kaynaklardan ve bunların yer aldığı çalışmalardan kurs ve
+hazırlayanı sorumlu tutulamaz; sorumluluk aracı kullanan araştırmacıya
+aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
+<a href="https://mehmetsevri.github.io/" rel="noopener">Dr. Mehmet Sevri — kişisel sayfa</a></p>
+</div>
+</article>
+</main>
+</div>
+<div class="cerez" id="cerez-kutu" role="dialog"
+     aria-label="Çerez tercihi" aria-live="polite">
+  <p>Bu site, kaç kişinin hangi bölümü okuduğunu görmek için Google
+  Analytics kullanır. Ölçüm çerezleri yalnız siz kabul ederseniz
+  yüklenir; reddederseniz site aynı biçimde çalışır.
+  <a href="beyan.html#cerez">Ayrıntılar</a></p>
+  <div class="dugmeler">
+    <button type="button" class="kabul" id="cerez-kabul">Kabul et</button>
+    <button type="button" id="cerez-ret">Reddet</button>
+  </div>
+</div>
+<script src="varlik/kurs.js?v=454b9191a7" defer></script>
+<script src="varlik/canli.js?v=ddb67fb073" defer></script>
+</body>
+</html>

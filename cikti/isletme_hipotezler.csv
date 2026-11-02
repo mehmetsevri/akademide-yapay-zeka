@@ -1,0 +1,7 @@
+﻿hipotez,yol,beta,s.h.,z,p,karar,ifade
+H1,UCE → CV,0.20200956506121076,0.03018803709764595,5.874416309242821,4.2433578872902444e-09,destekleniyor,"Uzaktan çalışma esnekliği, çalışan verimliliğini doğrudan ve pozitif etkiler"
+H2,UCE → IYD,0.5577829079975346,0.029295269600306116,18.502316315497833,0.0,destekleniyor,"Esneklik, iş–yaşam dengesini pozitif etkiler"
+H3,UCE → OB,0.388993755047105,0.03240536874230577,11.584950516766666,0.0,destekleniyor,"Esneklik, örgütsel bağlılığı pozitif etkiler"
+H4,IYD → OB,0.27870211319050653,0.0327521470427415,8.451048805785137,0.0,destekleniyor,"İş–yaşam dengesi, örgütsel bağlılığı pozitif etkiler"
+H5,IYD → CV,0.1767309751917029,0.02971007058059212,5.373759852321615,7.711154381695451e-08,destekleniyor,"İş–yaşam dengesi, verimliliği pozitif etkiler"
+H6,OB → CV,0.40693705685776455,0.03014225788801411,12.280345887525757,0.0,destekleniyor,"Örgütsel bağlılık, verimliliği pozitif etkiler"

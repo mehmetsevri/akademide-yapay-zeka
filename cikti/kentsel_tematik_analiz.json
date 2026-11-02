@@ -1,0 +1,49 @@
+{
+  "temalar": [
+    {
+      "tema": "Mekânsal yabancılaşma ve güvensizlik",
+      "parca": 168,
+      "pay_%": 24.1,
+      "katilimci": 38,
+      "katilimci_%": 100.0,
+      "kod_sayisi": 5
+    },
+    {
+      "tema": "Komşuluk ağlarının çözülmesi ve atomize yaşam",
+      "parca": 147,
+      "pay_%": 21.1,
+      "katilimci": 36,
+      "katilimci_%": 94.7,
+      "kod_sayisi": 6
+    },
+    {
+      "tema": "Eski hafızanın silinmesi ve mekânsal aidiyet kaybı",
+      "parca": 130,
+      "pay_%": 18.7,
+      "katilimci": 35,
+      "katilimci_%": 92.1,
+      "kod_sayisi": 5
+    },
+    {
+      "tema": "Ekonomik baskı ve yerinden edilme",
+      "parca": 104,
+      "pay_%": 14.9,
+      "katilimci": 31,
+      "katilimci_%": 81.6,
+      "kod_sayisi": 5
+    },
+    {
+      "tema": "Kuşaklar arası ayrışma ve konforun kazananları",
+      "parca": 56,
+      "pay_%": 8.0,
+      "katilimci": 21,
+      "katilimci_%": 55.3,
+      "kod_sayisi": 4
+    }
+  ],
+  "kod_isabet": 0.8628099173553719,
+  "tema_isabet": 0.8826446280991735,
+  "kappa_kod": 0.7394861489880867,
+  "kappa_tema": 0.8832456140350875,
+  "doygunluk_gorusme": 17
+}

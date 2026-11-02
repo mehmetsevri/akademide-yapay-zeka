@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="467.327679pt" height="414.8819pt" viewBox="0 0 467.327679 414.8819" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T22:23:24.922420</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 414.8819 
+L 467.327679 414.8819 
+L 467.327679 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 78.2215 343.162 
+L 391.7435 343.162 
+L 391.7435 29.64 
+L 78.2215 29.64 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pdfda1d446f)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAbMAAAGzCAYAAACl7fmHAAAHRklEQVR4nO3XMWpVQQCG0feSG9TGTtAlWAjuIHYW4gLcgQsQUpgyjZDe7MA12IjZgWhhayMKFoIgCfg0ruI6fOM5Cxh+prjfne2b95+vNqzi5+XOza7kx8Uvd7uSrx+/uduVvH164m5XsrfWwQDwr4gZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHliBkCemAGQJ2YA5IkZAHnLh3dfRm+Y1nJtGT1hWhefvo+eMK3zo9PRE6b14Ox49IRpeZkBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOSJGQB5YgZAnpgBkCdmAOQtu8vd6A3T2j/YHz1hWudHp6MnTOvwxbPRE6Z1++6t0ROm5WUGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZC3XP3+M3rDtF4/OR49YVoPX52MnjCt7d529IRp3bxxMHrCtLzMAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyxAyAPDEDIE/MAMgTMwDyto83j65Gj5jV4cvnoydMa7vvP2wty/VltbP/d/fu3xk9YVq+CADkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAeWIGQJ6YAZAnZgDkiRkAm7q/AdApWDYP+NsAAAAASUVORK5CYII=" id="image60e12758d0" transform="scale(1 -1) translate(0 -313.2)" x="78.48" y="-29.6819" width="313.2" height="313.2"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m88f7acab67" d="M 0 0 
+L 0 3.5 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m88f7acab67" x="109.5737" y="343.162" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #4a4a4a" x="109.5737" y="356.912" transform="rotate(-0 109.5737 356.912)">Esneklik</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m88f7acab67" x="172.2781" y="343.162" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(153.996147 358.703562)">İş–yaşam</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(157.307163 369.503562)">dengesi</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m88f7acab67" x="234.9825" y="343.162" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(218.511797 358.630437)">Örgütsel</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(220.708359 369.430437)">bağlılık</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m88f7acab67" x="297.6869" y="343.162" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(279.4169 357.812)">Algılanan</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(279.695338 368.612)">verimlilik</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m88f7acab67" x="360.3913" y="343.162" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(333.450362 358.703562)">İK performans</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(349.632081 369.503562)">puanı</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m0f84c2f324" d="M 0 0 
+L -3.5 0 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m0f84c2f324" x="78.2215" y="60.9922" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: end; fill: #4a4a4a" x="71.2215" y="64.3672" transform="rotate(-0 71.2215 64.3672)">Esneklik</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m0f84c2f324" x="78.2215" y="123.6966" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(34.657594 122.567381)">İş–yaşam</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(41.279625 133.367381)">dengesi</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m0f84c2f324" x="78.2215" y="186.401" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(38.280094 185.235219)">Örgütsel</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(42.673219 196.035219)">bağlılık</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m0f84c2f324" x="78.2215" y="249.1054" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(34.6815 247.5304)">Algılanan</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(35.238375 258.3304)">verimlilik</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m0f84c2f324" x="78.2215" y="311.8098" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(17.339625 310.680581)">İK performans</text>
+      <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #4a4a4a" transform="translate(49.703063 321.480581)">puanı</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 78.2215 343.162 
+L 78.2215 29.64 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 78.2215 343.162 
+L 391.7435 343.162 
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #ffffff" x="109.5737" y="63.3672" transform="rotate(-0 109.5737 63.3672)">1,00</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="172.2781" y="63.3672" transform="rotate(-0 172.2781 63.3672)">0,49</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="234.9825" y="63.3672" transform="rotate(-0 234.9825 63.3672)">0,49</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="297.6869" y="63.3672" transform="rotate(-0 297.6869 63.3672)">0,46</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="360.3913" y="63.3672" transform="rotate(-0 360.3913 63.3672)">0,25</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="109.5737" y="126.0716" transform="rotate(-0 109.5737 126.0716)">0,49</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #ffffff" x="172.2781" y="126.0716" transform="rotate(-0 172.2781 126.0716)">1,00</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="234.9825" y="126.0716" transform="rotate(-0 234.9825 126.0716)">0,44</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="297.6869" y="126.0716" transform="rotate(-0 297.6869 126.0716)">0,43</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="360.3913" y="126.0716" transform="rotate(-0 360.3913 126.0716)">0,29</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="109.5737" y="188.776" transform="rotate(-0 109.5737 188.776)">0,49</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="172.2781" y="188.776" transform="rotate(-0 172.2781 188.776)">0,44</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #ffffff" x="234.9825" y="188.776" transform="rotate(-0 234.9825 188.776)">1,00</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="297.6869" y="188.776" transform="rotate(-0 297.6869 188.776)">0,54</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="360.3913" y="188.776" transform="rotate(-0 360.3913 188.776)">0,35</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="109.5737" y="251.4804" transform="rotate(-0 109.5737 251.4804)">0,46</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="172.2781" y="251.4804" transform="rotate(-0 172.2781 251.4804)">0,43</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="234.9825" y="251.4804" transform="rotate(-0 234.9825 251.4804)">0,54</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #ffffff" x="297.6869" y="251.4804" transform="rotate(-0 297.6869 251.4804)">1,00</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="360.3913" y="251.4804" transform="rotate(-0 360.3913 251.4804)">0,49</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="109.5737" y="314.1848" transform="rotate(-0 109.5737 314.1848)">0,25</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="172.2781" y="314.1848" transform="rotate(-0 172.2781 314.1848)">0,29</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="234.9825" y="314.1848" transform="rotate(-0 234.9825 314.1848)">0,35</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="297.6869" y="314.1848" transform="rotate(-0 297.6869 314.1848)">0,49</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #ffffff" x="360.3913" y="314.1848" transform="rotate(-0 360.3913 314.1848)">1,00</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1f3a5f" x="234.9825" y="17.64" transform="rotate(-0 234.9825 17.64)">Yapılar arası Pearson korelasyonları</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 411.338625 321.0056 
+L 424.799085 321.0056 
+L 424.799085 51.7964 
+L 411.338625 51.7964 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABMAAAF2CAYAAACMHqORAAAB90lEQVR4nO2c223EQAwDJ4L6bzc/iZgaHBA4wZQKIG5W1MO+hb++f36FKQpjtGy/Cxp8arUXUz4tFmNy2fxsNjGms7XVZ+WTwoyJkbNsSiRlUz4xFmNGZBNnNrUWU1YxGcW4if40ioiJXkYtUrZtLptPo5WyUskpxtpCl1OMhDVUimjbs7fQ5RQjA1MZFUAGpqxiisAkA1MZmPiijFrs7bQdYw1FYCqjAsjAFAmmnavNp9Ex/UwRmPiijFrE9DOcYsowrdZi4hSTVUwZZ6aMCsAW5ZPiXnm9zLQ4xWYrJls7bS++MqYQayihbePF1FbMIQFT1lte2ospnxgZ1iCjn8k7hNmKObdrPIy+fvamfqYbdR8ddbV3OrHWtDh3DfZiaul+Vhmm7ZQzm70VgFNMa/uZErZtzrRPo8+07zozIjB1Q/hF2RwiMHWmfRgdcmba+oRSNiWSCp2MZyc5xbBF+aSIeYXPVtP2Xmtwz5sv+qeCjF2DjLbNte2n0TfqHken7GcTcslINrGyKZGTTZxtWyFnpghMZWASsrjM0kIvmxKXzQ1r6NjEyqbEWeM/0SmFPhnX0ycCk7WYcn7/bIydtjd/+WMSMMeJKePr0DJjyiemDMxZi6kMzNlq2o7pZ8rAnIQKmLWYysCcrf2sMjB778e7x4mpCMw/2/sIn1GbXj8AAAAASUVORK5CYII=" id="imageaace6aa886" transform="scale(1 -1) translate(0 -269.28)" x="411.12" y="-51.84" width="13.68" height="269.28"/>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_6">
+     <g id="line2d_11">
+      <defs>
+       <path id="m846ab13b96" d="M 0 0 
+L 3.5 0 
+" style="stroke: #4a4a4a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="321.0056" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="324.5681" transform="rotate(-0 431.799085 324.5681)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="267.16376" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="270.72626" transform="rotate(-0 431.799085 270.72626)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="213.32192" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="216.88442" transform="rotate(-0 431.799085 216.88442)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="159.48008" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="163.04258" transform="rotate(-0 431.799085 163.04258)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="105.63824" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="109.20074" transform="rotate(-0 431.799085 109.20074)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m846ab13b96" x="424.799085" y="51.7964" style="fill: #4a4a4a; stroke: #4a4a4a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #4a4a4a" x="431.799085" y="55.3589" transform="rotate(-0 431.799085 55.3589)">1.0</text>
+     </g>
+    </g>
+    <g id="text_43">
+     <text style="font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #2a2a2a" x="456.062679" y="186.401" transform="rotate(-90 456.062679 186.401)">r</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+   <g id="patch_6">
+    <path d="M 411.338625 321.0056 
+L 418.068855 321.0056 
+L 424.799085 321.0056 
+L 424.799085 51.7964 
+L 418.068855 51.7964 
+L 411.338625 51.7964 
+L 411.338625 321.0056 
+z
+" style="fill: none; stroke: #c7cbd1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_44">
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="8.64" y="404.2419" transform="rotate(-0 8.64 404.2419)">Tüm katsayılar p &lt; 0,001 · n = 1.353 (İK satırı için n = 1.103)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdfda1d446f">
+   <rect x="78.2215" y="29.64" width="313.522" height="313.522"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,80 @@
+LAVAAN DOĞRULAMA KOŞUMU
+--------------------------------------------------------------------------
+R sürümü     : R version 4.6.1 (2026-06-24)
+lavaan sürümü: 0.7.3
+Gözlem       : 1353
+
+==========================================================================
+1 — Yapısal model (ML kestirimi)
+==========================================================================
+  chisq                  192.4436
+  df                     183.0000
+  pvalue                   0.3015
+  cfi                      0.9994
+  tli                      0.9993
+  rmsea                    0.0062
+  rmsea.ci.lower           0.0000
+  rmsea.ci.upper           0.0137
+  srmr                     0.0173
+  aic                  75389.6381
+  bic                  75639.7219
+  chisq/df                 1.0516
+
+Standartlaştırılmış yapısal katsayılar:
+  IYD   <- UCE    beta =  0.5579  s.h. = 0.0225  z =  24.751  p = <1e-16
+  OB    <- UCE    beta =  0.3890  s.h. = 0.0308  z =  12.642  p = <1e-16
+  OB    <- IYD    beta =  0.2788  s.h. = 0.0316  z =   8.834  p = <1e-16
+  CV    <- UCE    beta =  0.2020  s.h. = 0.0336  z =   6.009  p = 1.87e-09
+  CV    <- IYD    beta =  0.1768  s.h. = 0.0323  z =   5.478  p = 4.31e-08
+  CV    <- OB     beta =  0.4070  s.h. = 0.0298  z =  13.677  p = <1e-16
+
+Dolaylı etkiler (delta yöntemi güven aralığı):
+  y1               =  0.0986   [ 0.0625 ;  0.1347]
+  y2               =  0.1583   [ 0.1247 ;  0.1918]
+  y3               =  0.0633   [ 0.0459 ;  0.0807]
+  toplam_dolayli   =  0.3202   [ 0.2760 ;  0.3644]
+  toplam           =  0.5222   [ 0.4760 ;  0.5684]
+
+Açıklanan varyans (R²):
+  IYD  R² = 0.3113
+  OB   R² = 0.3500
+  CV   R² = 0.4384
+
+==========================================================================
+2 — Bootstrap ile dolaylı etki (lavaan, 2000 yeniden örnekleme)
+==========================================================================
+Delta yöntemi dolaylı etkinin dağılımını normal varsayar; bootstrap
+varsaymaz. İkisinin aralıkları örtüşüyorsa sonuç sağlamdır.
+
+DİKKAT — bu bölümdeki sayılar STANDARTLAŞTIRILMAMIŞ ölçektedir.
+lavaan'ın bootstrap güven aralığı ham parametre üzerinden kurulur;
+standartlaştırılmış sürümü doğrudan vermez. Bu yüzden karşılaştırma
+da ham ölçekte yapılıyor: aşağıdaki iki sütun aynı büyüklüğün iki
+ayrı yoldan hesaplanmış güven aralığıdır.
+
+  etki              kestirim      delta %95 GA        bootstrap %95 GA
+  y1               =  0.0866  [ 0.0542 ;  0.1190]   [ 0.0531 ;  0.1213]
+  y2               =  0.1390  [ 0.1075 ;  0.1704]   [ 0.1077 ;  0.1743]
+  y3               =  0.0556  [ 0.0396 ;  0.0715]   [ 0.0408 ;  0.0728]
+  toplam_dolayli   =  0.2811  [ 0.2363 ;  0.3258]   [ 0.2359 ;  0.3269]
+  toplam           =  0.4584  [ 0.4050 ;  0.5118]   [ 0.4072 ;  0.5114]
+
+İki aralık da sıfırı dışarıda bırakıyor ve birbirini örtüyor:
+dolaylı etkilerin anlamlılığı yönteme bağlı değil.
+
+==========================================================================
+3 — Ölçüm değişmezliği: hibrit ve tam uzaktan çalışanlar
+==========================================================================
+Üç iç içe model sırayla kurulur ve karşılaştırılır:
+  biçimsel (configural) — yapı iki grupta da aynı, katsayılar serbest
+  ölçümsel (metric)     — faktör yükleri iki grupta eşitlenir
+  skalar  (scalar)      — yükler VE kesme noktaları eşitlenir
+Ölçüt: ΔCFI < 0,01 ve ΔRMSEA < 0,015 (Chen, 2007).
+Skalar değişmezlik sağlanmadan grup ortalamaları kıyaslanamaz.
+
+Grup büyüklükleri: Hibrit = 1001 · Tam uzaktan = 286
+  bicimsel  χ²=  386.62  sd=366  CFI=0.9984  RMSEA=0.0094  SRMR=0.0243
+  olcumsel  χ²=  401.72  sd=383  CFI=0.9986  RMSEA=0.0087  SRMR=0.0267   ΔCFI=+0.0001  ΔRMSEA=-0.0006
+  skalar    χ²=  417.56  sd=400  CFI=0.9987  RMSEA=0.0083  SRMR=0.0273   ΔCFI=+0.0001  ΔRMSEA=-0.0005
+
+Skalar değişmezlik sağlanıyor: iki grup aynı ölçekle ölçülmüş, grup karşılaştırması yapılabilir.

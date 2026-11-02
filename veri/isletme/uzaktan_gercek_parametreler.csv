@@ -1,0 +1,7 @@
+﻿kaynak,hedef,gercek_katsayi
+UCE,IYD,0.52
+UCE,OB,0.34
+UCE,CV,0.22
+IYD,OB,0.31
+IYD,CV,0.18
+OB,CV,0.41

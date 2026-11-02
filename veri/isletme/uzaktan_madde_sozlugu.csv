@@ -1,0 +1,22 @@
+﻿madde,metin,olcek,faktor_yuku_gercek,esik_kaymasi,ters_kodlu
+UCE1,Çalışma saatlerimi kendi günlük düzenime göre ayarlayabiliyorum.,UCE,0.86,0.1,hayır
+UCE2,"Hangi gün ofiste, hangi gün evde çalışacağıma ben karar veriyorum.",UCE,0.84,-0.15,hayır
+UCE3,İşimi yürütmek için gereken dijital altyapıya evden de erişebiliyorum.,UCE,0.76,0.45,hayır
+UCE4,"Yöneticim, uzaktan çalıştığım günlerde beni saat saat denetlemiyor.",UCE,0.79,0.2,hayır
+UCE5T,"Uzaktan çalışma düzenimiz kâğıt üstünde esnek, uygulamada değil.",UCE,0.72,-0.05,evet
+IYD1,Evden çalışırken iş ile özel yaşamım arasında sınır kurabiliyorum.,IYD,0.86,0.05,hayır
+IYD2,Çalışma düzenim ailevi sorumluluklarımı yerine getirmeme izin veriyor.,IYD,0.83,0.15,hayır
+IYD3,İş gününün bittiği saati kendim belirleyebiliyorum.,IYD,0.78,-0.2,hayır
+IYD4T,Mesai bittikten sonra da iş yazışmalarına yanıt vermek zorunda hissediyorum.,IYD,0.8,-0.1,evet
+IYD5,Yolda geçirmediğim süreyi kendime ayırabiliyorum.,IYD,0.71,0.35,hayır
+OB1,Kariyerimin geri kalanını bu kurumda geçirmek beni mutlu eder.,OB,0.87,-0.25,hayır
+OB2,Bu kurumun sorunlarını kendi sorunum gibi hissediyorum.,OB,0.83,-0.05,hayır
+OB3,Kurumumdan dışarıda söz ederken kendimi onun bir parçası olarak anlatıyorum.,OB,0.81,0.1,hayır
+OB4,Bu kuruma karşı duygusal bir bağ hissediyorum.,OB,0.9,0.0,hayır
+OB5T,Benzer koşullarda bir teklif gelse hemen ayrılırım.,OB,0.77,-0.3,evet
+OB6,Kurumun değerleri ile kendi değerlerim örtüşüyor.,OB,0.81,0.05,hayır
+CV1,Üstlendiğim işleri verilen sürede tamamlıyorum.,CV,0.81,0.5,hayır
+CV2,Uzaktan çalıştığım günlerde daha az bölünüyorum.,CV,0.77,-0.1,hayır
+CV3,Çıkardığım işin niteliğinden memnunum.,CV,0.85,0.3,hayır
+CV4,Bir iş gününde planladığım işlerin tamamına yakınını bitiriyorum.,CV,0.83,0.05,hayır
+CV5,Zor bir görevle karşılaştığımda çözüm üretme hızım yüksek.,CV,0.69,0.15,hayır

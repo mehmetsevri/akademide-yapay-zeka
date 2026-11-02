@@ -1,0 +1,39 @@
+﻿katilimci_kodu,grup,grup_adi,yas,cinsiyet,meslek,mahallede_yil,konut_durumu,gorusme_dk,gorusme_tarihi,tur,yonlendiren
+K01,A,Eski sakin — yerinde kalan,72,Erkek,emekli hemşire,43,hak sahibi — mülk,88,2026-09-27,1,doğrudan erişim
+K02,A,Eski sakin — yerinde kalan,59,Kadın,emekli işçi,18,hak sahibi — mülk,78,2025-12-16,1,doğrudan erişim
+K03,A,Eski sakin — yerinde kalan,71,Kadın,öğretmen,47,hak sahibi — mülk,84,2026-04-12,1,doğrudan erişim
+K04,A,Eski sakin — yerinde kalan,59,Kadın,terzi,32,hak sahibi — mülk,63,2025-11-27,1,K02
+K05,A,Eski sakin — yerinde kalan,46,Erkek,şoför,28,hak sahibi — mülk,84,2025-12-24,1,K04
+K06,A,Eski sakin — yerinde kalan,35,Kadın,öğretmen,17,hak sahibi — mülk,86,2025-12-10,1,K04
+K07,A,Eski sakin — yerinde kalan,39,Kadın,şoför,21,hak sahibi — mülk,78,2025-12-13,1,K02
+K08,A,Eski sakin — yerinde kalan,55,Erkek,ev hanımı,37,hak sahibi — mülk,64,2026-03-20,1,K02
+K09,A,Eski sakin — yerinde kalan,51,Kadın,emekli memur,33,hak sahibi — mülk,55,2025-12-04,2,K08
+K10,A,Eski sakin — yerinde kalan,72,Erkek,emekli işçi,25,hak sahibi — mülk,89,2026-08-24,1,K01
+K11,A,Eski sakin — yerinde kalan,63,Erkek,öğretmen,31,hak sahibi — mülk,68,2026-04-06,1,K06
+K12,A,Eski sakin — yerinde kalan,44,Kadın,ev hanımı,26,hak sahibi — mülk,61,2026-07-12,1,K07
+K13,B,Eski sakin — mahalleden ayrılan,80,Kadın,kuaför,40,satıp ayrılan,57,2026-04-29,1,K04
+K14,B,Eski sakin — mahalleden ayrılan,71,Kadın,kuaför,36,eski kiracı,85,2026-03-14,1,K03
+K15,B,Eski sakin — mahalleden ayrılan,34,Kadın,ev hanımı,16,satıp ayrılan,72,2026-03-12,1,K04
+K16,B,Eski sakin — mahalleden ayrılan,72,Erkek,emekli,44,eski kiracı,84,2026-03-31,1,K09
+K17,B,Eski sakin — mahalleden ayrılan,57,Erkek,kurye,35,satıp ayrılan,68,2025-11-06,2,K03
+K18,B,Eski sakin — mahalleden ayrılan,64,Erkek,güvenlik görevlisi,21,satıp ayrılan,62,2026-06-10,1,K06
+K19,B,Eski sakin — mahalleden ayrılan,60,Kadın,güvenlik görevlisi,39,satıp ayrılan,62,2026-10-03,2,K18
+K20,B,Eski sakin — mahalleden ayrılan,53,Kadın,kurye,35,satıp ayrılan,66,2025-12-19,1,K19
+K21,C,Mahalle esnafı,57,Erkek,tamirci,39,işyeri kiracısı,59,2026-10-02,1,K11
+K22,C,Mahalle esnafı,44,Erkek,kahveci,26,işyeri kiracısı,53,2025-10-26,2,K16
+K23,C,Mahalle esnafı,39,Kadın,manav,21,işyeri mülk sahibi,57,2026-10-11,2,K05
+K24,C,Mahalle esnafı,44,Kadın,fırıncı,26,işyeri mülk sahibi,77,2026-09-09,1,K23
+K25,C,Mahalle esnafı,68,Kadın,manav,38,işyeri mülk sahibi,87,2025-12-24,1,K02
+K26,C,Mahalle esnafı,43,Erkek,bakkal,25,işyeri kiracısı,85,2025-12-21,2,K02
+K27,C,Mahalle esnafı,77,Erkek,bakkal,26,işyeri mülk sahibi,53,2026-06-21,1,K23
+K28,D,Yeni site sakini,33,Erkek,doktor,3,kiracı,69,2026-05-14,2,K22
+K29,D,Yeni site sakini,35,Erkek,doktor,1,kiracı,82,2026-05-16,2,K02
+K30,D,Yeni site sakini,34,Erkek,öğretim görevlisi,1,kiracı,47,2026-04-02,1,K16
+K31,D,Yeni site sakini,37,Erkek,öğretim görevlisi,3,sonradan satın alan,54,2026-07-18,1,K19
+K32,D,Yeni site sakini,40,Erkek,banka çalışanı,2,sonradan satın alan,78,2026-07-30,2,K14
+K33,D,Yeni site sakini,38,Kadın,doktor,1,sonradan satın alan,76,2025-10-12,1,K24
+K34,D,Yeni site sakini,30,Kadın,yazılımcı,1,sonradan satın alan,66,2025-09-17,1,K01
+K35,E,Kilit aktör,36,Kadın,okul müdürü,18,hak sahibi — mülk,56,2026-07-01,1,K23
+K36,E,Kilit aktör,75,Kadın,mahalle derneği başkanı,40,mahalle dışı görevli,53,2026-07-21,1,K04
+K37,E,Kilit aktör,64,Erkek,mahalle derneği başkanı,22,mahalle dışı görevli,59,2025-12-13,2,K33
+K38,E,Kilit aktör,63,Erkek,cami imamı,28,hak sahibi — mülk,48,2026-08-03,1,K12

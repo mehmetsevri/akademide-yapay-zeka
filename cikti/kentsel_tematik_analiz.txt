@@ -1,0 +1,385 @@
+KORPUS
+------------------------------------------------------------------------------
+Sentetik etnografik korpus — 25_kentsel_korpus_uret.py.
+Katılımcı        : 38
+Derinlemesine mülakat parçası: 522
+Odak grup parçası: 131 (6 oturum)
+Alan notu        : 44
+Arşiv kaydı      : 19
+
+==============================================================================
+ADIM 1 — Veriye aşinalık
+==============================================================================
+Nedir : Korpusun büyüklüğü, bileşimi ve kapsamı.
+Neden : Braun ve Clarke'ın birinci aşaması. Kodlamadan önce verinin ne olduğu sayıyla ortaya konur; bu, yöntem bölümünde raporlanacak bilgidir.
+------------------------------------------------------------------------------
+Toplam kodlama birimi : 697
+Toplam sözcük         : 8.700
+Parça başına ortalama : 12.5 sözcük
+
+Katılımcı grupları:
+  A  Eski sakin — yerinde kalan         n = 12  ortalama 75 dk  mahallede ortalama 30 yıl
+  B  Eski sakin — mahalleden ayrılan    n =  8  ortalama 70 dk  mahallede ortalama 33 yıl
+  C  Mahalle esnafı                     n =  7  ortalama 67 dk  mahallede ortalama 29 yıl
+  D  Yeni site sakini                   n =  7  ortalama 67 dk  mahallede ortalama 2 yıl
+  E  Kilit aktör                        n =  4  ortalama 54 dk  mahallede ortalama 27 yıl
+
+Toplam görüşme süresi : 43.5 saat
+Kartopu zinciri       : 35 katılımcı yönlendirmeyle, 3 doğrudan
+İkinci tur görüşme    : 10 katılımcı
+
+==============================================================================
+ADIM 2 — Kod kitabı
+==============================================================================
+Nedir : Hangi kod ne demek ve hangi ifadeyle tanınır.
+Neden : Kod kitabı yayımlanmazsa nitel analiz yeniden üretilemez. Nitel araştırmanın 'yöntem' bölümü budur.
+------------------------------------------------------------------------------
+
+Mekânsal yabancılaşma ve güvensizlik
+  T1-K1  Kapıyı kilitleme alışkanlığının değişmesi
+        örüntüler: kilit · anahtar · kepenk · kapıyı kapat
+  T1-K2  Güvenlik görevlisi, kartlı geçiş, kamera
+        örüntüler: güvenlik · kart okut · kamera · ziyaretçi · bekçi · şantiye kapı
+  T1-K3  Tanımadık yüzler, yabancılık hissi
+        örüntüler: tanımıyorum · tanıyamadım · yabancı · selam ver · tanıdık bir yüz · tanıyan olmadı · bilirdim
+  T1-K4  Yapı ölçeği: yükseklik, gölge, rüzgâr
+        örüntüler: kat · rüzgâr · gölge · manzara · yüksek · balkon · kazık
+  T1-K5  Sokağın yerini koridorun alması
+        örüntüler: sokak diye · koridor · kamusal · kaldırım · ortak alan · sandalye
+
+Komşuluk ağlarının çözülmesi ve atomize yaşam
+  T2-K1  Komşunun adını bilmemek
+        örüntüler: adını bilmiyorum · alt komşu · yan komşu · isimlik · taziye · kim kiminle
+  T2-K2  Kapı önü ve merdiven sohbetinin bitmesi
+        örüntüler: kapı önü · kapının önüne · merdiven · tabure · çay içerdik · laf ed · yarım saat
+  T2-K3  Karşılıklı yardımlaşmanın sona ermesi
+        örüntüler: veresiye · yemek · tencere · komşuya bırak · çorba · kreş · yardım ağ · tabak
+  T2-K4  Asansör ve ortak alanlarda sessizlik
+        örüntüler: asansör · kimse konuşmuyor · lobi · telefonuna bak · günaydın
+  T2-K5  Yeni gelenlerle 'biz / onlar' ayrımı
+        örüntüler: yeni gelen · hak sahipleri ve · iki ayrı · mesafeli · ayrışma · taraf
+  T2-K6  Komşuluğun site yönetim grubuna taşınması
+        örüntüler: whatsapp · grup · mesaj
+
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+  T3-K1  Yıkılan yer imleri: çeşme, ağaç, dükkân
+        örüntüler: çeşme · çınar · ağaç · fırın · levha · trafo · bakkal nuri · yer imi
+  T3-K2  Sokak ve blok adlarının değişmesi
+        örüntüler: sokak adı · gülbahar · etap · adres · blok diyoruz · posta
+  T3-K3  Fotoğraf ve eşya üzerinden hatırlama
+        örüntüler: fotoğraf · sergi · sandık · kapının kolu · sözlü tarih · hatıra
+  T3-K4  'Burası artık benim mahallem değil' ifadesi
+        örüntüler: mahallem değil · misafir gibi · aidiyet · özlüyorum · ne kalmış · nereli oldu
+  T3-K5  Camiye, okula, mezarlığa tutunma
+        örüntüler: cami · okul · mezarlık · cuma · avlu
+
+Ekonomik baskı ve yerinden edilme
+  T4-K1  Aidat ve işletme giderlerinin yükü
+        örüntüler: aidat · havuz · spor salonu · icra · ödeyemiyor · kapıcıya para
+  T4-K2  Kira artışı ve mahalleden ayrılma
+        örüntüler: kira · ilçe öte · kiracı · taşındım · bir saat yol
+  T4-K3  Müteahhitle pazarlık, hak sahipliği süreci
+        örüntüler: müteahhit · metrekare · pazarlık · hak sahipliği · tapu · hisseli · proje değişti · imzala
+  T4-K4  Esnafın müşteri kaybı ve kapanma
+        örüntüler: müşteri · ciro · dükkân · esnaf · zincir market · kapattım · devral
+  T4-K5  Konutun değerlenmesi (olumlu okuma)
+        örüntüler: değeri · değerlen · yatırım · iyi para · çocuğuma kalacak
+
+Kuşaklar arası ayrışma ve konforun kazananları
+  T5-K1  Genç kuşakta konfor memnuniyeti
+        örüntüler: kombi · otopark · ısıtma · merkezî · soba · asansör var
+  T5-K2  Yaşlıların yeni düzene uyum güçlüğü
+        örüntüler: yaşımdakiler · yaşlı · interkom · alışamadık · dijital · yalnızlık · dışarı çıkmadı
+  T5-K3  Kadınlarda güvenlik algısının iyileşmesi
+        örüntüler: kadın · aydınlatma · kızım için · akşam dokuz · geç geliyorum
+  T5-K4  Çocuklu ailelerde oyun alanı memnuniyeti
+        örüntüler: çocuk park · oyun alanı · torunum aşağıda · parkta oyn · çocuklar sokakta
+
+==============================================================================
+ADIM 3 — Kodlama ve kod sıklıkları
+==============================================================================
+Nedir : Her parçaya kod atanması.
+Neden : Sıklık nitel analizin amacı değildir, ama hangi kodun korpusta ne kadar yer tuttuğunu göstermek raporlamanın parçasıdır.
+------------------------------------------------------------------------------
+Kodlanan parça   : 605 / 697 (%86.8)
+Kodlanmayan parça: 92
+
+                                              tema   kod                                       tanim  n
+                 Ekonomik baskı ve yerinden edilme T4-K4            Esnafın müşteri kaybı ve kapanma 31
+                 Ekonomik baskı ve yerinden edilme T4-K3  Müteahhitle pazarlık, hak sahipliği süreci 30
+                 Ekonomik baskı ve yerinden edilme T4-K1          Aidat ve işletme giderlerinin yükü 15
+                 Ekonomik baskı ve yerinden edilme T4-K5         Konutun değerlenmesi (olumlu okuma) 15
+                 Ekonomik baskı ve yerinden edilme T4-K2           Kira artışı ve mahalleden ayrılma 13
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı T3-K1     Yıkılan yer imleri: çeşme, ağaç, dükkân 45
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı T3-K5            Camiye, okula, mezarlığa tutunma 32
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı T3-K3        Fotoğraf ve eşya üzerinden hatırlama 24
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı T3-K4 'Burası artık benim mahallem değil' ifadesi 16
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı T3-K2           Sokak ve blok adlarının değişmesi 13
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K2     Kapı önü ve merdiven sohbetinin bitmesi 39
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K3       Karşılıklı yardımlaşmanın sona ermesi 32
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K1                     Komşunun adını bilmemek 28
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K4        Asansör ve ortak alanlarda sessizlik 18
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K5        Yeni gelenlerle 'biz / onlar' ayrımı 18
+     Komşuluk ağlarının çözülmesi ve atomize yaşam T2-K6   Komşuluğun site yönetim grubuna taşınması 12
+    Kuşaklar arası ayrışma ve konforun kazananları T5-K4    Çocuklu ailelerde oyun alanı memnuniyeti 21
+    Kuşaklar arası ayrışma ve konforun kazananları T5-K1             Genç kuşakta konfor memnuniyeti 18
+    Kuşaklar arası ayrışma ve konforun kazananları T5-K2         Yaşlıların yeni düzene uyum güçlüğü  9
+    Kuşaklar arası ayrışma ve konforun kazananları T5-K3    Kadınlarda güvenlik algısının iyileşmesi  8
+              Mekânsal yabancılaşma ve güvensizlik T1-K2    Güvenlik görevlisi, kartlı geçiş, kamera 40
+              Mekânsal yabancılaşma ve güvensizlik T1-K4       Yapı ölçeği: yükseklik, gölge, rüzgâr 40
+              Mekânsal yabancılaşma ve güvensizlik T1-K1   Kapıyı kilitleme alışkanlığının değişmesi 31
+              Mekânsal yabancılaşma ve güvensizlik T1-K3          Tanımadık yüzler, yabancılık hissi 30
+              Mekânsal yabancılaşma ve güvensizlik T1-K5             Sokağın yerini koridorun alması 27
+
+==============================================================================
+ADIM 4 — Tema sıklıkları ve katılımcı yayılımı
+==============================================================================
+Nedir : Her temanın korpustaki ağırlığı ve kaç kişide göründüğü.
+Neden : Bir tema az sayıda parçada ama çok sayıda katılımcıda görünüyorsa, tek kişinin ısrarı değil ortak bir deneyimdir. Nitel raporlamada ikisi ayrı ayrı verilir.
+------------------------------------------------------------------------------
+                                              tema  parca  pay_%  katilimci  katilimci_%  kod_sayisi
+              Mekânsal yabancılaşma ve güvensizlik    168   24.1         38        100.0           5
+     Komşuluk ağlarının çözülmesi ve atomize yaşam    147   21.1         36         94.7           6
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı    130   18.7         35         92.1           5
+                 Ekonomik baskı ve yerinden edilme    104   14.9         31         81.6           5
+    Kuşaklar arası ayrışma ve konforun kazananları     56    8.0         21         55.3           4
+
+==============================================================================
+ADIM 5 — Tema × katılımcı grubu matrisi
+==============================================================================
+Nedir : Hangi grup hangi temayı daha çok dile getiriyor.
+Neden : Nitel analizde karşılaştırma, sayısal genelleme için değil, deneyimin konuma göre nasıl değiştiğini göstermek için yapılır.
+------------------------------------------------------------------------------
+Sütun yüzdeleri (her grubun parçalarının temalara dağılımı):
+grup                                                   A     B     C     D     E
+tema                                                                            
+Ekonomik baskı ve yerinden edilme                   10.0  20.3  20.3  10.9  15.5
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı  29.4  17.1  13.8   6.5  17.2
+Kodlanmadı                                          10.0  13.8  22.0  10.9  15.5
+Komşuluk ağlarının çözülmesi ve atomize yaşam       19.9  21.1  26.0  15.9  22.4
+Kuşaklar arası ayrışma ve konforun kazananları       9.0   2.4   0.0  21.0   3.4
+Mekânsal yabancılaşma ve güvensizlik                21.8  25.2  17.9  34.8  25.9
+
+  A: en çok 'Eski hafızanın silinmesi ve mekânsal aidiyet kaybı' (%29.4)
+  B: en çok 'Mekânsal yabancılaşma ve güvensizlik' (%25.2)
+  C: en çok 'Komşuluk ağlarının çözülmesi ve atomize yaşam' (%26.0)
+  D: en çok 'Mekânsal yabancılaşma ve güvensizlik' (%34.8)
+  E: en çok 'Mekânsal yabancılaşma ve güvensizlik' (%25.9)
+
+==============================================================================
+ADIM 6 — Dönüşüm matrisi: öncesi · inşaat · sonrası
+==============================================================================
+Nedir : Aynı temanın üç evrede nasıl göründüğü.
+Neden : Süreç analizi. Kentsel dönüşüm bir an değil bir süredir; matris, hangi temanın hangi evrede doğduğunu gösterir.
+------------------------------------------------------------------------------
+evre                                                öncesi  inşaat  sonrası
+tema                                                                       
+Ekonomik baskı ve yerinden edilme                        5      38       61
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı      10      28       92
+Kodlanmadı                                               9      37       46
+Komşuluk ağlarının çözülmesi ve atomize yaşam           45       0      102
+Kuşaklar arası ayrışma ve konforun kazananları          19       0       37
+Mekânsal yabancılaşma ve güvensizlik                    46      21      101
+
+  Ekonomik baskı ve yerinden edilme                      ağırlık: sonrası
+  Eski hafızanın silinmesi ve mekânsal aidiyet kaybı     ağırlık: sonrası
+  Kodlanmadı                                             ağırlık: sonrası
+  Komşuluk ağlarının çözülmesi ve atomize yaşam          ağırlık: sonrası
+  Kuşaklar arası ayrışma ve konforun kazananları         ağırlık: sonrası
+  Mekânsal yabancılaşma ve güvensizlik                   ağırlık: sonrası
+
+==============================================================================
+ADIM 7 — Kodlamanın referansla uyumu
+==============================================================================
+Nedir : Otomatik kodlama, parçanın üretildiği kodu buluyor mu.
+Neden : Gerçek sahada bu adım YOKTUR; 'doğru kod' diye bir şey yoktur. Sentetik korpusta vardır ve kod kitabının ne kadar ayırt edici olduğunu doğrudan ölçer.
+------------------------------------------------------------------------------
+Kod düzeyinde isabet  : %86.3 (605 parça üzerinde)
+Tema düzeyinde isabet : %88.3
+
+Tema düzeyi her zaman daha yüksektir: aynı temanın iki kodu birbirine karışsa bile tema doğru kalır. Nitel raporlamada yorum tema düzeyinde yapıldığı için asıl ölçüt budur.
+
+En sık karışan kod çiftleri:
+referans_kod   kod  n
+       T5-K4 T1-K4  6
+       T5-K3 T1-K2  6
+       T1-K5 T5-K4  6
+       T4-K2 T3-K5  6
+       T2-K1 T4-K4  6
+       T2-K2 T1-K5  4
+       T2-K2 T2-K4  4
+       T4-K1 T1-K4  4
+
+==============================================================================
+ADIM 8 — Kodlayıcılar arası uyum (Cohen kappa)
+==============================================================================
+Nedir : İki bağımsız kodlayıcı aynı parçaya aynı kodu veriyor mu.
+Neden : Nitel araştırmada güvenilirliğin standart ölçütü. Landis & Koch (1977): 0,61–0,80 önemli, 0,81+ neredeyse tam uyum.
+------------------------------------------------------------------------------
+Örneklem: 121 parça (korpusun %20'si)
+Kod düzeyi  : κ = 0.739  (gözlenen uyum %75.2, şans %4.8)
+Tema düzeyi : κ = 0.883  (gözlenen uyum %90.9, şans %22.1)
+Landis & Koch ölçeğinde tema düzeyi: neredeyse tam uyum
+
+==============================================================================
+ADIM 9 — Doygunluk (saturation) eğrisi
+==============================================================================
+Nedir : Kaçıncı görüşmeden sonra yeni kod çıkmıyor.
+Neden : Nitel araştırmada örneklem büyüklüğünün gerekçesi budur. '38 kişiyle görüştük' demek yetmez; 'yirmi altıncı görüşmeden sonra yeni kod çıkmadı' demek gerekir.
+------------------------------------------------------------------------------
+ gorusme katilimci  yeni_kod  kumulatif_kod
+       1       K34         8              8
+       2       K33         3             11
+       3       K22         6             17
+       4       K17         3             20
+       5       K04         2             22
+       6       K09         0             22
+       7       K06         1             23
+       8       K37         1             24
+       9       K07         0             24
+      10       K02         0             24
+      11       K20         0             24
+      12       K26         0             24
+      13       K25         0             24
+      14       K05         0             24
+      15       K15         0             24
+      16       K14         0             24
+      17       K08         1             25
+      18       K16         0             25
+      19       K30         0             25
+      20       K11         0             25
+      21       K03         0             25
+      22       K13         0             25
+      23       K28         0             25
+      24       K29         0             25
+      25       K18         0             25
+      26       K27         0             25
+      27       K35         0             25
+      28       K12         0             25
+      29       K31         0             25
+      30       K36         0             25
+      31       K32         0             25
+      32       K38         0             25
+      33       K10         0             25
+      34       K24         0             25
+      35       K01         0             25
+      36       K21         0             25
+      37       K19         0             25
+      38       K23         0             25
+
+Son yeni kod 17. görüşmede çıktı; kalan 21 görüşme yeni kod üretmedi.
+Toplam kod: 25 / 25
+
+==============================================================================
+ADIM 10 — Kod eş-görünümü
+==============================================================================
+Nedir : Hangi kodlar aynı katılımcının anlatısında birlikte görünüyor.
+Neden : Tematik ağ haritasının sayısal temeli. Birlikte görünen kodlar, anlatıda birbirine bağlanan deneyimlerdir.
+------------------------------------------------------------------------------
+En güçlü yirmi bağ:
+kod_1 kod_2  birlikte_gecen_katilimci                                        tema_1                                             tema_2  tema_asiyor
+T1-K3 T1-K4                        14          Mekânsal yabancılaşma ve güvensizlik               Mekânsal yabancılaşma ve güvensizlik        False
+T2-K1 T2-K2                        14 Komşuluk ağlarının çözülmesi ve atomize yaşam      Komşuluk ağlarının çözülmesi ve atomize yaşam        False
+T2-K2 T4-K4                        14 Komşuluk ağlarının çözülmesi ve atomize yaşam                  Ekonomik baskı ve yerinden edilme         True
+T1-K2 T3-K1                        13          Mekânsal yabancılaşma ve güvensizlik Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T2-K2 T4-K3                        13 Komşuluk ağlarının çözülmesi ve atomize yaşam                  Ekonomik baskı ve yerinden edilme         True
+T1-K5 T3-K3                        13          Mekânsal yabancılaşma ve güvensizlik Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T2-K2 T2-K3                        13 Komşuluk ağlarının çözülmesi ve atomize yaşam      Komşuluk ağlarının çözülmesi ve atomize yaşam        False
+T1-K2 T1-K4                        12          Mekânsal yabancılaşma ve güvensizlik               Mekânsal yabancılaşma ve güvensizlik        False
+T1-K3 T1-K5                        12          Mekânsal yabancılaşma ve güvensizlik               Mekânsal yabancılaşma ve güvensizlik        False
+T1-K4 T1-K5                        12          Mekânsal yabancılaşma ve güvensizlik               Mekânsal yabancılaşma ve güvensizlik        False
+T1-K4 T2-K2                        12          Mekânsal yabancılaşma ve güvensizlik      Komşuluk ağlarının çözülmesi ve atomize yaşam         True
+T1-K4 T3-K1                        12          Mekânsal yabancılaşma ve güvensizlik Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T1-K5 T2-K2                        12          Mekânsal yabancılaşma ve güvensizlik      Komşuluk ağlarının çözülmesi ve atomize yaşam         True
+T2-K2 T3-K1                        12 Komşuluk ağlarının çözülmesi ve atomize yaşam Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T2-K1 T3-K1                        12 Komşuluk ağlarının çözülmesi ve atomize yaşam Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T1-K3 T4-K3                        12          Mekânsal yabancılaşma ve güvensizlik                  Ekonomik baskı ve yerinden edilme         True
+T4-K3 T4-K4                        12             Ekonomik baskı ve yerinden edilme                  Ekonomik baskı ve yerinden edilme        False
+T1-K3 T2-K2                        11          Mekânsal yabancılaşma ve güvensizlik      Komşuluk ağlarının çözülmesi ve atomize yaşam         True
+T1-K5 T3-K1                        11          Mekânsal yabancılaşma ve güvensizlik Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+T1-K3 T3-K3                        11          Mekânsal yabancılaşma ve güvensizlik Eski hafızanın silinmesi ve mekânsal aidiyet kaybı         True
+
+Tema sınırını aşan en güçlü bağlar — yorumun asıl çıkış noktası bunlardır:
+  T2-K2 ↔ T4-K4  (14 katılımcı)
+      Kapı önü ve merdiven sohbetinin bitmesi
+      Esnafın müşteri kaybı ve kapanma
+  T1-K2 ↔ T3-K1  (13 katılımcı)
+      Güvenlik görevlisi, kartlı geçiş, kamera
+      Yıkılan yer imleri: çeşme, ağaç, dükkân
+  T2-K2 ↔ T4-K3  (13 katılımcı)
+      Kapı önü ve merdiven sohbetinin bitmesi
+      Müteahhitle pazarlık, hak sahipliği süreci
+  T1-K5 ↔ T3-K3  (13 katılımcı)
+      Sokağın yerini koridorun alması
+      Fotoğraf ve eşya üzerinden hatırlama
+  T1-K4 ↔ T2-K2  (12 katılımcı)
+      Yapı ölçeği: yükseklik, gölge, rüzgâr
+      Kapı önü ve merdiven sohbetinin bitmesi
+
+==============================================================================
+ADIM 11 — Temsil edici alıntılar
+==============================================================================
+Nedir : Her tema için, o temayı en açık anlatan ifadeler.
+Neden : Nitel bulgu bölümü sayıdan değil alıntıdan kurulur. Alıntı seçimi keyfî olmamalı: hangi ölçütle seçildiği yazılır.
+------------------------------------------------------------------------------
+Seçim ölçütü: tema içinde en çok örüntü eşleştiren, uzunluğu 20–45 sözcük arasındaki, farklı katılımcılara ait parçalar.
+
+Mekânsal yabancılaşma ve güvensizlik
+  "Doğrusu yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+      — K07, 39, Eski sakin — yerinde kalan, mahallede 21 yıl  [T1-K4]
+  "Valla yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+      — K31, 37, Yeni site sakini, mahallede 3 yıl  [T1-K4]
+  "Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı."
+      — K01, 72, Eski sakin — yerinde kalan, mahallede 43 yıl  [T1-K5]
+
+Komşuluk ağlarının çözülmesi ve atomize yaşam
+  "Doğrusu aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz."
+      — K19, 60, Eski sakin — mahalleden ayrılan, mahallede 39 yıl  [T2-K5]
+  "Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+      — K36, 75, Kilit aktör, mahallede 40 yıl  [T2-K3]
+  "Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+      — K27, 77, Mahalle esnafı, mahallede 26 yıl  [T2-K3]
+
+Eski hafızanın silinmesi ve mekânsal aidiyet kaybı
+  "Yani sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+      — K01, 72, Eski sakin — yerinde kalan, mahallede 43 yıl  [T3-K2]
+  "Bakın cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+      — K11, 63, Eski sakin — yerinde kalan, mahallede 31 yıl  [T3-K5]
+  "Valla sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+      — K36, 75, Kilit aktör, mahallede 40 yıl  [T3-K2]
+
+Ekonomik baskı ve yerinden edilme
+  "Şöyle söyleyeyim, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+      — K02, 59, Eski sakin — yerinde kalan, mahallede 18 yıl  [T4-K3]
+  "Açık konuşayım, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+      — K07, 39, Eski sakin — yerinde kalan, mahallede 21 yıl  [T4-K3]
+  "Bakın müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+      — K20, 53, Eski sakin — mahalleden ayrılan, mahallede 35 yıl  [T4-K3]
+
+Kuşaklar arası ayrışma ve konforun kazananları
+  "Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor. Haklı da, ben de üşümüyorum artık."
+      — K03, 71, Eski sakin — yerinde kalan, mahallede 47 yıl  [T5-K1]
+  "Yani kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+      — K38, 63, Kilit aktör, mahallede 28 yıl  [T5-K3]
+  "Bakın benim yaşımdakiler zorlandı. Kartlı sistem, interkom, aidat otomatiği... Hepsini öğrenmek gerekti."
+      — K01, 72, Eski sakin — yerinde kalan, mahallede 43 yıl  [T5-K2]
+
+==============================================================================
+ADIM 12 — Aykırı örnek incelemesi
+==============================================================================
+Nedir : Baskın anlatıya uymayan ifadeler.
+Neden : Nitel araştırmanın en kolay atlanan adımı. Aykırı örnek aranmazsa analiz, araştırmacının baştan beklediğini doğrulamaktan ibaret kalır.
+------------------------------------------------------------------------------
+Baskın anlatı kayıp üzerine kurulu: komşuluğun çözülmesi, hafızanın silinmesi, ekonomik baskı. Korpusun %5,6'sı ise bunun tersini söylüyor.
+
+'Kuşaklar arası ayrışma ve konforun kazananları' temasını dile getirenler:
+  Eski sakin — mahalleden ayrılan        3 parça · 3 kişi · ortalama yaş 59
+  Eski sakin — yerinde kalan            12 parça · 9 kişi · ortalama yaş 59
+  Kilit aktör                            2 parça · 2 kişi · ortalama yaş 64
+  Yeni site sakini                      22 parça · 7 kişi · ortalama yaş 35
+
+Aykırı örnekler tek bir gruba ait değil: yerinde kalan eski sakinler de konfor kazancını dile getiriyor. Bu, bulguyu zayıflatmaz; 'kayıp' ile 'kazanç'ın aynı kişide birlikte bulunabildiğini gösterir ve yorumun asıl inceliği buradadır.
+
+  "Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor. Haklı da, ben de üşümüyorum artık."  — K03 [T5-K1]
+  "Yani kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."  — K38 [T5-K3]
+  "Bakın benim yaşımdakiler zorlandı. Kartlı sistem, interkom, aidat otomatiği... Hepsini öğrenmek gerekti."  — K01 [T5-K2]

@@ -1,0 +1,633 @@
+{
+  "baslangic_satir": 1494,
+  "adimlar": [
+    {
+      "olcut": "Mükerrer kayıt",
+      "elenen": 14,
+      "kalan": 1480
+    },
+    {
+      "olcut": "Dikkat kontrolünü geçemeyen",
+      "elenen": 68,
+      "kalan": 1412
+    },
+    {
+      "olcut": "Aşırı hızlı doldurma (<120 sn)",
+      "elenen": 32,
+      "kalan": 1380
+    },
+    {
+      "olcut": "Düz çizgi yanıtlama",
+      "elenen": 14,
+      "kalan": 1366
+    },
+    {
+      "olcut": "Likert maddesinde aralık dışı değer",
+      "elenen": 9,
+      "kalan": 1357
+    },
+    {
+      "olcut": "Yaşta aralık dışı değer",
+      "elenen": 4,
+      "kalan": 1353
+    },
+    {
+      "olcut": "Maddelerin %10'undan fazlası boş",
+      "elenen": 0,
+      "kalan": 1353
+    },
+    {
+      "olcut": "Kategori yazımı tekilleştirildi",
+      "duzeltilen_hucre": 162,
+      "kalan": 1353
+    },
+    {
+      "olcut": "Ters kodlu maddeler çevrildi",
+      "madde": [
+        "UCE5T",
+        "IYD4T",
+        "OB5T"
+      ],
+      "kalan": 1353
+    },
+    {
+      "olcut": "Eksik hücre kişi ortalamasıyla dolduruldu",
+      "doldurulan_hucre": 57,
+      "kalan": 1353
+    },
+    {
+      "olcut": "İK kaydı eşleştirildi",
+      "eslesen": 1103,
+      "kalan": 1353
+    }
+  ],
+  "elenen": [
+    {
+      "katilimci_no": 1395,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1883,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 2369,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 2035,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1745,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1247,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1560,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1540,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 2363,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1088,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1216,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 2186,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1364,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1893,
+      "gerekce": "Mükerrer kayıt"
+    },
+    {
+      "katilimci_no": 1035,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1037,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1039,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1079,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1113,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1142,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1179,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1211,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1232,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1235,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1249,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1254,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1286,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1300,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1301,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1321,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1343,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1380,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1399,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1402,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1424,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1450,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1468,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1508,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1578,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1593,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1597,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1612,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1633,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1656,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1692,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1698,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1699,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1705,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1716,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1723,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1837,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1927,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1932,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1933,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1940,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1975,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2007,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2063,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2075,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2085,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2092,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2117,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2126,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2130,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2139,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2148,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2166,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2193,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2212,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2222,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2224,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2279,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2350,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2359,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2361,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2374,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2388,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2394,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2440,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2441,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2451,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 2466,
+      "gerekce": "Dikkat kontrolünü geçemeyen"
+    },
+    {
+      "katilimci_no": 1062,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1106,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1117,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1136,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1143,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1237,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1312,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1370,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1403,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1482,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1610,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1623,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1631,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1674,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1677,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1722,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1764,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1807,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1811,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1957,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2023,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2067,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2070,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2089,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2140,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2173,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2178,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2182,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2198,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2262,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2369,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 2433,
+      "gerekce": "Aşırı hızlı doldurma (<120 sn)"
+    },
+    {
+      "katilimci_no": 1074,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1185,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1349,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1354,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1366,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1368,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1401,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1404,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1524,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1594,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1824,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1890,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 2154,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 2413,
+      "gerekce": "Düz çizgi yanıtlama"
+    },
+    {
+      "katilimci_no": 1252,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1492,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1517,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1549,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1587,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1859,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 2019,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 2296,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 2306,
+      "gerekce": "Likert maddesinde aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1094,
+      "gerekce": "Yaşta aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1227,
+      "gerekce": "Yaşta aralık dışı değer"
+    },
+    {
+      "katilimci_no": 1475,
+      "gerekce": "Yaşta aralık dışı değer"
+    },
+    {
+      "katilimci_no": 2169,
+      "gerekce": "Yaşta aralık dışı değer"
+    }
+  ],
+  "bitis_satir": 1353,
+  "elenen_toplam": 141,
+  "elenme_orani": 0.0944
+}

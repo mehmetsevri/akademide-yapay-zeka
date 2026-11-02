@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="750.996pt" height="407.4056pt" viewBox="0 0 750.996 407.4056" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T22:23:24.701508</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 407.4056 
+L 750.996 407.4056 
+L 750.996 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 32.93676 237.990222 
+L 166.54284 237.990222 
+Q 175.25628 237.990222 175.25628 230.320889 
+L 175.25628 174.079111 
+Q 175.25628 166.409778 166.54284 166.409778 
+L 32.93676 166.409778 
+Q 24.22332 166.409778 24.22332 174.079111 
+L 24.22332 230.320889 
+Q 24.22332 237.990222 32.93676 237.990222 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #ffffff; stroke: #1f3a5f; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 268.92576 138.928 
+L 402.53184 138.928 
+Q 411.24528 138.928 411.24528 131.258667 
+L 411.24528 75.016889 
+Q 411.24528 67.347556 402.53184 67.347556 
+L 268.92576 67.347556 
+Q 260.21232 67.347556 260.21232 75.016889 
+L 260.21232 131.258667 
+Q 260.21232 138.928 268.92576 138.928 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #ffffff; stroke: #1f3a5f; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 268.92576 337.052444 
+L 402.53184 337.052444 
+Q 411.24528 337.052444 411.24528 329.383111 
+L 411.24528 273.141333 
+Q 411.24528 265.472 402.53184 265.472 
+L 268.92576 265.472 
+Q 260.21232 265.472 260.21232 273.141333 
+L 260.21232 329.383111 
+Q 260.21232 337.052444 268.92576 337.052444 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #ffffff; stroke: #1f3a5f; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 552.11256 237.990222 
+L 685.71864 237.990222 
+Q 694.43208 237.990222 694.43208 230.320889 
+L 694.43208 174.079111 
+Q 694.43208 166.409778 685.71864 166.409778 
+L 552.11256 166.409778 
+Q 543.39912 166.409778 543.39912 174.079111 
+L 543.39912 230.320889 
+Q 543.39912 237.990222 552.11256 237.990222 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #ffffff; stroke: #1f3a5f; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 173.80404 202.2 
+Q 359.3277 202.2 542.447084 202.2 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.15045; stroke-linecap: round"/>
+    <path d="M 536.447084 199.2 
+L 542.447084 202.2 
+L 536.447084 205.2 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.15045; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 166.590456 186.793293 
+Q 217.7343 152.668889 265.157621 121.026908 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 4.000471; stroke-linecap: round"/>
+    <path d="M 258.501541 121.861526 
+L 265.157621 121.026908 
+L 261.831668 126.852543 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 4.000471; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 166.590456 217.606707 
+Q 217.7343 251.731111 265.973904 283.917736 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 3.122768; stroke-linecap: round"/>
+    <path d="M 262.64795 278.0921 
+L 265.973904 283.917736 
+L 259.317824 283.083118 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 3.122768; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 335.7288 138.928 
+Q 335.7288 202.2 335.7288 262.621851 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.549251; stroke-linecap: round"/>
+    <path d="M 338.7288 256.621851 
+L 335.7288 262.621851 
+L 332.7288 256.621851 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.549251; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 404.556408 116.356382 
+Q 477.3222 152.668889 548.06821 187.973459 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.019001; stroke-linecap: round"/>
+    <path d="M 544.039135 182.610013 
+L 548.06821 187.973459 
+L 541.360008 187.978652 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 2.019001; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 404.556408 288.043618 
+Q 477.3222 251.731111 546.870676 217.02415 
+" clip-path="url(#pa0004b35c6)" style="fill: none; opacity: 0.82; stroke: #1f3a5f; stroke-width: 3.216073; stroke-linecap: round"/>
+    <path d="M 540.162474 217.018957 
+L 546.870676 217.02415 
+L 542.8416 222.387596 
+z
+" clip-path="url(#pa0004b35c6)" style="fill: #1f3a5f; opacity: 0.82; stroke: #1f3a5f; stroke-width: 3.216073; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(63.35812 198.525)">Uzaktan çalışma</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(79.569136 211.125)">esnekliği</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(314.393292 100.040278)">İş–yaşam</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(318.261886 112.640278)">dengesi</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #6b7280" x="335.7288" y="150.432" transform="rotate(-0 335.7288 150.432)">R² = 0,31</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(316.471964 298.143394)">Örgütsel</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(319.00755 310.743394)">bağlılık</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #6b7280" x="335.7288" y="348.556444" transform="rotate(-0 335.7288 348.556444)">R² = 0,35</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(602.79728 198.525)">Çalışan</text>
+    <text style="font-weight: 700; font-size: 10.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; fill: #1f3a5f" transform="translate(596.160952 211.125)">verimliliği</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #6b7280" x="618.9156" y="249.494222" transform="rotate(-0 618.9156 249.494222)">R² = 0,44</text>
+   </g>
+   <g id="text_8">
+    <g id="patch_12">
+     <path d="M 263.335033 195.800111 
+L 306.901439 195.800111 
+Q 308.991439 195.800111 308.991439 193.710111 
+L 308.991439 184.210111 
+Q 308.991439 182.120111 306.901439 182.120111 
+L 263.335033 182.120111 
+Q 261.245033 182.120111 261.245033 184.210111 
+L 261.245033 193.710111 
+Q 261.245033 195.800111 263.335033 195.800111 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="285.118236" y="191.335111" transform="rotate(-0 285.118236 191.335111)">H1: 0,20***</text>
+   </g>
+   <g id="text_9">
+    <g id="patch_13">
+     <path d="M 195.951097 146.269 
+L 239.517503 146.269 
+Q 241.607503 146.269 241.607503 144.179 
+L 241.607503 134.679 
+Q 241.607503 132.589 239.517503 132.589 
+L 195.951097 132.589 
+Q 193.861097 132.589 193.861097 134.679 
+L 193.861097 144.179 
+Q 193.861097 146.269 195.951097 146.269 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="217.7343" y="141.804" transform="rotate(-0 217.7343 141.804)">H2: 0,56***</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_14">
+     <path d="M 195.951097 245.331222 
+L 239.517503 245.331222 
+Q 241.607503 245.331222 241.607503 243.241222 
+L 241.607503 233.741222 
+Q 241.607503 231.651222 239.517503 231.651222 
+L 195.951097 231.651222 
+Q 193.861097 231.651222 193.861097 233.741222 
+L 193.861097 243.241222 
+Q 193.861097 245.331222 195.951097 245.331222 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="217.7343" y="240.866222" transform="rotate(-0 217.7343 240.866222)">H3: 0,39***</text>
+   </g>
+   <g id="text_11">
+    <g id="patch_15">
+     <path d="M 313.945597 212.250831 
+L 357.512003 212.250831 
+Q 359.602003 212.250831 359.602003 210.160831 
+L 359.602003 200.660831 
+Q 359.602003 198.570831 357.512003 198.570831 
+L 313.945597 198.570831 
+Q 311.855597 198.570831 311.855597 200.660831 
+L 311.855597 210.160831 
+Q 311.855597 212.250831 313.945597 212.250831 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="335.7288" y="207.785831" transform="rotate(-0 335.7288 207.785831)">H4: 0,28***</text>
+   </g>
+   <g id="text_12">
+    <g id="patch_16">
+     <path d="M 455.538997 146.269 
+L 499.105403 146.269 
+Q 501.195403 146.269 501.195403 144.179 
+L 501.195403 134.679 
+Q 501.195403 132.589 499.105403 132.589 
+L 455.538997 132.589 
+Q 453.448997 132.589 453.448997 134.679 
+L 453.448997 144.179 
+Q 453.448997 146.269 455.538997 146.269 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="477.3222" y="141.804" transform="rotate(-0 477.3222 141.804)">H5: 0,18***</text>
+   </g>
+   <g id="text_13">
+    <g id="patch_17">
+     <path d="M 455.538997 245.331222 
+L 499.105403 245.331222 
+Q 501.195403 245.331222 501.195403 243.241222 
+L 501.195403 233.741222 
+Q 501.195403 231.651222 499.105403 231.651222 
+L 455.538997 231.651222 
+Q 453.448997 231.651222 453.448997 233.741222 
+L 453.448997 243.241222 
+Q 453.448997 245.331222 455.538997 245.331222 
+z
+" style="fill: #ffffff; opacity: 0.94"/>
+    </g>
+    <text style="font-size: 9.5px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: middle; fill: #1a1a1a" x="477.3222" y="240.866222" transform="rotate(-0 477.3222 240.866222)">H6: 0,41***</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 12px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #1f3a5f" x="16.236" y="17.64" transform="rotate(-0 16.236 17.64)">Yapısal eşitlik modeli — standartlaştırılmış yol katsayıları</text>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 8px; font-family:'PT Sans','Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif; text-anchor: start; fill: #6b7280" x="8.64" y="396.7656" transform="rotate(-0 8.64 396.7656)">Ok kalınlığı katsayının büyüklüğüyle orantılı · *** p &lt; 0,001 · n = 1.353 · khi-kare/sd = 1,05 · CFI = 0,999 · RMSEA = 0,006</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa0004b35c6">
+   <rect x="16.236" y="29.64" width="726.12" height="345.12"/>
+  </clipPath>
+ </defs>
+</svg>

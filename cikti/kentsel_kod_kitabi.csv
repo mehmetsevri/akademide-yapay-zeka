@@ -1,0 +1,26 @@
+﻿kod,tema,tanim,oruntu_sayisi,oruntuler
+T1-K1,Mekânsal yabancılaşma ve güvensizlik,Kapıyı kilitleme alışkanlığının değişmesi,4,kilit · anahtar · kepenk · kapıyı kapat
+T1-K2,Mekânsal yabancılaşma ve güvensizlik,"Güvenlik görevlisi, kartlı geçiş, kamera",6,güvenlik · kart okut · kamera · ziyaretçi · bekçi · şantiye kapı
+T1-K3,Mekânsal yabancılaşma ve güvensizlik,"Tanımadık yüzler, yabancılık hissi",7,tanımıyorum · tanıyamadım · yabancı · selam ver · tanıdık bir yüz · tanıyan olmadı · bilirdim
+T1-K4,Mekânsal yabancılaşma ve güvensizlik,"Yapı ölçeği: yükseklik, gölge, rüzgâr",7,kat · rüzgâr · gölge · manzara · yüksek · balkon · kazık
+T1-K5,Mekânsal yabancılaşma ve güvensizlik,Sokağın yerini koridorun alması,6,sokak diye · koridor · kamusal · kaldırım · ortak alan · sandalye
+T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşunun adını bilmemek,6,adını bilmiyorum · alt komşu · yan komşu · isimlik · taziye · kim kiminle
+T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,Kapı önü ve merdiven sohbetinin bitmesi,7,kapı önü · kapının önüne · merdiven · tabure · çay içerdik · laf ed · yarım saat
+T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,Karşılıklı yardımlaşmanın sona ermesi,8,veresiye · yemek · tencere · komşuya bırak · çorba · kreş · yardım ağ · tabak
+T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,Asansör ve ortak alanlarda sessizlik,5,asansör · kimse konuşmuyor · lobi · telefonuna bak · günaydın
+T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,Yeni gelenlerle 'biz / onlar' ayrımı,6,yeni gelen · hak sahipleri ve · iki ayrı · mesafeli · ayrışma · taraf
+T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,Komşuluğun site yönetim grubuna taşınması,3,whatsapp · grup · mesaj
+T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,"Yıkılan yer imleri: çeşme, ağaç, dükkân",8,çeşme · çınar · ağaç · fırın · levha · trafo · bakkal nuri · yer imi
+T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Sokak ve blok adlarının değişmesi,6,sokak adı · gülbahar · etap · adres · blok diyoruz · posta
+T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,Fotoğraf ve eşya üzerinden hatırlama,6,fotoğraf · sergi · sandık · kapının kolu · sözlü tarih · hatıra
+T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,'Burası artık benim mahallem değil' ifadesi,6,mahallem değil · misafir gibi · aidiyet · özlüyorum · ne kalmış · nereli oldu
+T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,"Camiye, okula, mezarlığa tutunma",5,cami · okul · mezarlık · cuma · avlu
+T4-K1,Ekonomik baskı ve yerinden edilme,Aidat ve işletme giderlerinin yükü,6,aidat · havuz · spor salonu · icra · ödeyemiyor · kapıcıya para
+T4-K2,Ekonomik baskı ve yerinden edilme,Kira artışı ve mahalleden ayrılma,5,kira · ilçe öte · kiracı · taşındım · bir saat yol
+T4-K3,Ekonomik baskı ve yerinden edilme,"Müteahhitle pazarlık, hak sahipliği süreci",8,müteahhit · metrekare · pazarlık · hak sahipliği · tapu · hisseli · proje değişti · imzala
+T4-K4,Ekonomik baskı ve yerinden edilme,Esnafın müşteri kaybı ve kapanma,7,müşteri · ciro · dükkân · esnaf · zincir market · kapattım · devral
+T4-K5,Ekonomik baskı ve yerinden edilme,Konutun değerlenmesi (olumlu okuma),5,değeri · değerlen · yatırım · iyi para · çocuğuma kalacak
+T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,Genç kuşakta konfor memnuniyeti,6,kombi · otopark · ısıtma · merkezî · soba · asansör var
+T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,Yaşlıların yeni düzene uyum güçlüğü,7,yaşımdakiler · yaşlı · interkom · alışamadık · dijital · yalnızlık · dışarı çıkmadı
+T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,Kadınlarda güvenlik algısının iyileşmesi,5,kadın · aydınlatma · kızım için · akşam dokuz · geç geliyorum
+T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,Çocuklu ailelerde oyun alanı memnuniyeti,5,çocuk park · oyun alanı · torunum aşağıda · parkta oyn · çocuklar sokakta

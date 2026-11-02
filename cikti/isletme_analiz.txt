@@ -1,0 +1,305 @@
+VERİ SETİ
+------------------------------------------------------------------------------
+Sentetik anket verisi — 21_uzaktan_veri_uret.py ile üretildi.
+Gözlem sayısı : 1.353
+Likert maddesi: 21 (1–5)
+Örtük değişken: 4
+İK kaydı eşleşen: 1103
+
+==============================================================================
+ADIM 1 — Betimsel istatistik ve demografik profil
+==============================================================================
+Nedir : Örneklemin kim olduğu ve değişkenlerin merkezî eğilimi.
+Neden : Örneklem tanıtılmadan hiçbir bulgu yorumlanamaz; ayrıca çarpıklık ve basıklık, normallik varsayımının tutup tutmadığını gösterir.
+------------------------------------------------------------------------------
+            değişken    n  ortalama    ss  ortanca    min   maks  çarpıklık  basıklık
+                 yas 1353    35.853 7.580   36.000 22.000 60.000      0.218    -0.265
+           kidem_yil 1339     4.656 3.170    4.000  0.500 19.600      0.892     0.738
+         uzaktan_yil 1353     2.845 1.661    2.600  0.500  6.000      0.505    -0.822
+haftalik_uzaktan_gun 1346     2.545 1.211    3.000  0.000  5.000     -0.051    -0.427
+             UCE_ort 1353     2.965 0.984    3.000  1.000  5.000     -0.004    -0.803
+             IYD_ort 1353     3.030 0.966    3.000  1.000  5.000      0.015    -0.686
+              OB_ort 1353     3.178 0.997    3.167  1.000  5.000     -0.072    -0.897
+              CV_ort 1353     2.902 0.975    2.800  1.000  5.000      0.151    -0.761
+
+Demografik dağılım:
+  cinsiyet: Erkek 728 (%53.8) · Kadın 590 (%43.6) · Belirtmek istemiyorum 35 (%2.6)
+  egitim: Lisans 732 (%54.1) · Yüksek lisans 407 (%30.1) · Ön lisans 102 (%7.5) · Doktora 101 (%7.5) · Belirtilmemiş 11 (%0.8)
+  sektor: Yazılım ve bilişim 583 (%43.1) · Finans ve sigortacılık 445 (%32.9) · Danışmanlık 200 (%14.8) · Telekomünikasyon 125 (%9.2)
+  unvan: Uzman 633 (%46.8) · Kıdemli uzman 364 (%26.9) · Takım lideri 224 (%16.6) · Yönetici 132 (%9.8)
+  calisma_modeli: Hibrit 1001 (%74.0) · Tam uzaktan 286 (%21.1) · Tam ofis 66 (%4.9)
+  cocuk_var: Hayır 713 (%52.7) · Evet 640 (%47.3)
+
+En çarpık değişken: kidem_yil (çarpıklık 0.892). Kline'ın |çarpıklık|<2 ve |basıklık|<7 ölçütüne göre tek değişkenli normallik varsayımı tutuyor.
+
+==============================================================================
+ADIM 2 — Madde analizi
+==============================================================================
+Nedir : Her maddenin dağılımı ve kendi ölçeğiyle ilişkisi.
+Neden : Düzeltilmiş madde-toplam korelasyonu 0,30'un altındaki madde ölçeğe katkı vermiyor demektir; ölçekten çıkarılması tartışılır.
+------------------------------------------------------------------------------
+madde ölçek  ortalama    ss  çarpıklık  madde_toplam_r
+ UCE1   UCE     2.973 1.219      0.003           0.765
+ UCE2   UCE     3.292 1.214     -0.175           0.728
+ UCE3   UCE     2.554 1.188      0.377           0.668
+ UCE4   UCE     2.885 1.213      0.091           0.691
+UCE5T   UCE     3.123 1.235     -0.074           0.622
+ IYD1   IYD     3.013 1.198      0.026           0.755
+ IYD2   IYD     2.900 1.216      0.090           0.747
+ IYD3   IYD     3.329 1.190     -0.184           0.686
+IYD4T   IYD     3.190 1.165     -0.048           0.637
+ IYD5   IYD     2.719 1.186      0.230           0.647
+  OB1    OB     3.367 1.175     -0.224           0.794
+  OB2    OB     3.158 1.213     -0.044           0.757
+  OB3    OB     2.967 1.204      0.029           0.734
+  OB4    OB     3.100 1.197     -0.032           0.814
+ OB5T    OB     3.419 1.195     -0.295           0.648
+  OB6    OB     3.060 1.225     -0.025           0.742
+  CV1    CV     2.533 1.163      0.335           0.711
+  CV2    CV     3.256 1.185     -0.111           0.671
+  CV3    CV     2.784 1.202      0.200           0.756
+  CV4    CV     3.023 1.217      0.025           0.733
+  CV5    CV     2.915 1.217      0.131           0.630
+
+0,30 eşiğinin altında kalan madde: 0
+
+==============================================================================
+ADIM 3 — Güvenilirlik
+==============================================================================
+Nedir : Ölçeğin iç tutarlılığı: maddeler aynı şeyi mi ölçüyor.
+Neden : Cronbach α tek başına yeterli değildir; maddelerin yükleri eşit varsayar. CFA yüklerinden hesaplanan bileşik güvenilirlik (CR) ve McDonald ω bu varsayımı gerektirmez.
+------------------------------------------------------------------------------
+ölçek                        ad  madde  cronbach_alpha  mcdonald_omega    CR   AVE  en_dusuk_yuk
+  UCE Uzaktan çalışma esnekliği      5           0.870           0.871 0.871 0.576         0.667
+  IYD          İş–yaşam dengesi      5           0.870           0.871 0.871 0.576         0.693
+   OB         Örgütsel bağlılık      6           0.909           0.910 0.910 0.630         0.679
+   CV       Çalışan verimliliği      5           0.873           0.874 0.874 0.583         0.680
+
+Ölçüt: α ≥ 0,70 · CR ≥ 0,70 · AVE ≥ 0,50 · standart yük ≥ 0,50
+Dört ölçeğin tamamı ölçütleri karşılıyor.
+
+==============================================================================
+ADIM 4 — Açımlayıcı faktör analizi
+==============================================================================
+Nedir : Maddeler kaç boyuta ayrışıyor — teoriye bakmadan.
+Neden : CFA kurulan yapıyı sınar; EFA ise verinin kendi yapısını gösterir. İkisi uyuşmuyorsa ölçek sorunludur.
+------------------------------------------------------------------------------
+KMO örneklem yeterliği : 0.949  (mükemmel)
+Bartlett küresellik testi: χ² = 15.801,4, p = 0.00e+00
+Özdeğeri 1'in üstünde faktör (Kaiser): 4
+İlk altı özdeğer: 8.582, 2.143, 1.696, 1.654, 0.560, 0.537
+Dört faktörün açıkladığı toplam varyans: %66.2
+
+Promax döndürülmüş yük matrisi (|yük| < 0,30 gizlendi):
+         F1    F2    F3    F4
+UCE1                    0.834
+UCE2                    0.804
+UCE3                    0.792
+UCE4                    0.801
+UCE5T                   0.789
+IYD1        0.830            
+IYD2        0.855            
+IYD3        0.810            
+IYD4T       0.764            
+IYD5        0.774            
+OB1   0.857                  
+OB2   0.816                  
+OB3   0.816                  
+OB4   0.848                  
+OB5T  0.774                  
+OB6   0.830                  
+CV1               0.824      
+CV2               0.750      
+CV3               0.857      
+CV4               0.838      
+CV5               0.770      
+
+Çapraz yüklenen madde: 0
+
+==============================================================================
+ADIM 5 — Doğrulayıcı faktör analizi ve uyum iyiliği
+==============================================================================
+Nedir : Kurulan dört faktörlü ölçüm modeli veriye uyuyor mu.
+Neden : Yapısal model kurulmadan önce ölçüm modelinin uyması gerekir. Ölçüm kötüyse yol katsayıları yorumlanamaz.
+------------------------------------------------------------------------------
+                değer
+chi2         192.4439
+DoF          183.0000
+chi2 p-value   0.3015
+CFI            0.9994
+TLI            0.9993
+RMSEA          0.0062
+GFI            0.9879
+AGFI           0.9861
+AIC           95.7155
+BIC          345.7994
+
+χ²/sd = 1.052  (ölçüt < 3)
+Ölçüt: CFI ≥ 0,95 · TLI ≥ 0,95 · RMSEA ≤ 0,06 · χ²/sd < 3
+
+Standartlaştırılmış faktör yükleri:
+madde ölçek   yük  std_yük  s.h.      z     p
+ UCE1   UCE 1.000    0.841     -      -     -
+ UCE2   UCE 0.946    0.799 0.028 33.203 0.000
+ UCE3   UCE 0.837    0.722 0.029 29.004 0.000
+ UCE4   UCE 0.892    0.754 0.029 30.732 0.000
+UCE5T   UCE 0.804    0.667 0.031 26.206 0.000
+ IYD1   IYD 1.000    0.832     -      -     -
+ IYD2   IYD 0.993    0.814 0.030 33.406 0.000
+ IYD3   IYD 0.890    0.745 0.030 29.831 0.000
+IYD4T   IYD 0.810    0.693 0.030 27.175 0.000
+ IYD5   IYD 0.832    0.699 0.030 27.473 0.000
+  OB1    OB 1.000    0.842     -      -     -
+  OB2    OB 0.979    0.799 0.028 35.005 0.000
+  OB3    OB 0.946    0.777 0.028 33.608 0.000
+  OB4    OB 1.049    0.867 0.026 39.806 0.000
+ OB5T    OB 0.820    0.679 0.029 27.797 0.000
+  OB6    OB 0.971    0.784 0.028 34.061 0.000
+  CV1    CV 1.000    0.774     -      -     -
+  CV2    CV 0.965    0.733 0.035 27.321 0.000
+  CV3    CV 1.101    0.824 0.035 31.144 0.000
+  CV4    CV 1.078    0.797 0.036 30.045 0.000
+  CV5    CV 0.920    0.680 0.037 25.121 0.000
+
+==============================================================================
+ADIM 6 — Ayırt edici geçerlik
+==============================================================================
+Nedir : Dört yapı birbirinden gerçekten ayrışıyor mu.
+Neden : Korelasyonlar yüksekse iki ölçek aynı şeyi ölçüyor olabilir. Fornell–Larcker ve HTMT bunu iki ayrı yoldan sınar.
+------------------------------------------------------------------------------
+Fornell–Larcker matrisi (köşegen: √AVE, diğerleri: korelasyon)
+      UCE   IYD    OB    CV
+UCE 0.759 0.492 0.485 0.457
+IYD 0.492 0.759 0.445 0.435
+OB  0.485 0.445 0.794 0.538
+CV  0.457 0.435 0.538 0.763
+Ölçüt: köşegen, kendi satır ve sütunundaki her korelasyondan büyük olmalı → sağlanıyor
+
+HTMT oranları (ölçüt < 0,85)
+      UCE   IYD    OB    CV
+UCE   NaN 0.566 0.546 0.525
+IYD 0.566   NaN 0.501 0.499
+OB  0.546 0.501   NaN 0.604
+CV  0.525 0.499 0.604   NaN
+En yüksek HTMT: 0.604 → ölçüt sağlanıyor
+
+==============================================================================
+ADIM 7 — Korelasyon matrisi
+==============================================================================
+Nedir : Değişkenler arasındaki doğrusal birlikte değişim.
+Neden : SEM'den önceki son betimsel adım. Beklenen yönde ilişki yoksa yapısal modelde de çıkmaz.
+------------------------------------------------------------------------------
+                         UCE_ort  IYD_ort  OB_ort  CV_ort    yas  kidem_yil  haftalik_uzaktan_gun  yillik_performans_puani
+UCE_ort                    1.000    0.492   0.485   0.457 -0.029     -0.037                 0.617                    0.253
+IYD_ort                    0.492    1.000   0.445   0.435 -0.022     -0.022                 0.300                    0.294
+OB_ort                     0.485    0.445   1.000   0.538 -0.001     -0.009                 0.357                    0.347
+CV_ort                     0.457    0.435   0.538   1.000  0.006     -0.004                 0.318                    0.491
+yas                       -0.029   -0.022  -0.001   0.006  1.000      0.842                -0.019                   -0.018
+kidem_yil                 -0.037   -0.022  -0.009  -0.004  0.842      1.000                -0.011                   -0.015
+haftalik_uzaktan_gun       0.617    0.300   0.357   0.318 -0.019     -0.011                 1.000                    0.169
+yillik_performans_puani    0.253    0.294   0.347   0.491 -0.018     -0.015                 0.169                    1.000
+
+Yapılar arası korelasyonların tamamı p < 0,001 düzeyinde anlamlı.
+
+==============================================================================
+ADIM 8 — Ortak yöntem yanlılığı: Harman tek faktör testi
+==============================================================================
+Nedir : Bütün maddeler tek bir ankette toplandığında, ölçülen ilişkinin bir kısmı yöntemin kendisinden gelebilir.
+Neden : Döndürülmemiş tek faktör toplam varyansın yarısından fazlasını açıklıyorsa ciddi bir yanlılık işareti vardır.
+------------------------------------------------------------------------------
+Tek faktörün açıkladığı varyans: %40.87
+Ölçüt %50 → eşiğin altında, ciddi yanlılık işareti yok
+
+Harman testi zayıf bir testtir; yanlılığın yokluğunu kanıtlamaz, yalnız en kaba hâlini yakalar. Bu çalışmada ikinci bir dayanak var: verimlilik değişkeni ayrıca İK kaydından ölçüldü (Adım 11).
+
+==============================================================================
+ADIM 9 — Yapısal eşitlik modeli
+==============================================================================
+Nedir : Örtük değişkenler arasındaki yön ve güç: hipotezlerin sınandığı adım.
+Neden : AMOS'ta ok çizerek kurulan model burada dört satır metin. Katsayılar aynı maksimum olabilirlik kestirimiyle bulunur.
+------------------------------------------------------------------------------
+Yapısal modelin uyum iyiliği:
+                değer
+chi2         192.4440
+DoF          183.0000
+chi2 p-value   0.3015
+CFI            0.9994
+TLI            0.9993
+RMSEA          0.0062
+GFI            0.9879
+AGFI           0.9861
+AIC           95.7155
+BIC          345.7994
+χ²/sd = 1.052
+
+hipotez       yol  beta  s.h.      z     p         karar
+     H1  UCE → CV 0.202 0.030  5.874 0.000 destekleniyor
+     H2 UCE → IYD 0.558 0.029 18.502 0.000 destekleniyor
+     H3  UCE → OB 0.389 0.032 11.585 0.000 destekleniyor
+     H4  IYD → OB 0.279 0.033  8.451 0.000 destekleniyor
+     H5  IYD → CV 0.177 0.030  5.374 0.000 destekleniyor
+     H6   OB → CV 0.407 0.030 12.280 0.000 destekleniyor
+
+Açıklanan varyans (R²):
+  CV   Çalışan verimliliği          R² = 0.438
+  IYD  İş–yaşam dengesi             R² = 0.311
+  OB   Örgütsel bağlılık            R² = 0.350
+
+==============================================================================
+ADIM 10 — Aracılık analizi — bootstrap
+==============================================================================
+Nedir : Esnekliğin verimliliğe etkisinin ne kadarı aracı değişkenler üzerinden akıyor.
+Neden : Dolaylı etki iki katsayının çarpımıdır; çarpımın dağılımı normal değildir. Sobel testi bu yüzden yanıltır; bootstrap güven aralığı alan standardıdır (Preacher & Hayes, 2008).
+------------------------------------------------------------------------------
+Bootstrap: 2.000 yeniden örnekleme, yerine koyarak, n = 1.353
+(Bu adım birkaç dakika sürer; her tekrarda model yeniden kestirilir.)
+
+          etki  nokta_kestirimi  bootstrap_ort  alt_%2,5  üst_%97,5 anlamlı
+    UCE→IYD→CV           0.0986         0.0979    0.0610     0.1359    evet
+     UCE→OB→CV           0.1583         0.1583    0.1243     0.1953    evet
+ UCE→IYD→OB→CV           0.0633         0.0633    0.0463     0.0831    evet
+toplam_dolayli           0.3201         0.3194    0.2731     0.3670    evet
+      dogrudan           0.2020         0.2032    0.1369     0.2708    evet
+        toplam           0.5221         0.5226    0.4753     0.5683    evet
+
+Yakınsamayan tekrar: 0
+Dolaylı etkinin toplam etkiye oranı (VAF): %61.3
+VAF %20–80 aralığı KISMİ aracılık okumasıdır: doğrudan yol anlamlılığını koruyor, ama etkinin çoğu aracılar üzerinden akıyor. H2 bu anlamda destekleniyor.
+
+==============================================================================
+ADIM 11 — Ölçüt geçerliği: öz-bildirim ile İK kaydı
+==============================================================================
+Nedir : Katılımcının kendi verimlilik algısı, kurumun performans kaydıyla ne kadar örtüşüyor.
+Neden : Anket verimliliği ölçmez, verimlilik ALGISINI ölçer. İkinci bir kaynak olmadan bu ayrım kapatılamaz.
+------------------------------------------------------------------------------
+n = 1.103
+CV_ort ↔ yıllık performans puanı:  r = 0.491, p = 5.62e-68, r² = 0.241
+Yani öz-bildirim ile kurum kaydının paylaştığı varyans %24.1. Geri kalanı iki ölçümün farkıdır.
+  CV_ort ↔ tamamlanan proje       r = +0.212  p = 1.19e-12
+  CV_ort ↔ devamsızlık günü       r = -0.119  p = 7.47e-05
+  CV_ort ↔ eğitim saati           r = +0.186  p = 4.75e-10
+
+Çalışma modeline göre algılanan verimlilik (tek yönlü ANOVA):
+  Hibrit         n = 1001  ort = 2.807  ss = 0.953
+  Tam ofis       n =   66  ort = 2.297  ss = 0.816
+  Tam uzaktan    n =  286  ort = 3.376  ss = 0.908
+  F = 55.357, p = 7.83e-24
+
+==============================================================================
+ADIM 12 — Geri kazanım denetimi
+==============================================================================
+Nedir : Tahmin edilen katsayılar, veriyi üreten gerçek katsayıları buluyor mu.
+Neden : Bu adım gerçek bir araştırmada YAPILAMAZ — gerçek katsayı bilinmez. Sentetik veride yapılabilir ve analiz hattının doğru kurulduğunu gösteren tek doğrudan kanıttır.
+------------------------------------------------------------------------------
+      yol  gerçek  tahmin    fark  mutlak_fark
+UCE → IYD  0.5200  0.5578  0.0378       0.0378
+ UCE → OB  0.3400  0.3890  0.0490       0.0490
+ UCE → CV  0.2200  0.2020 -0.0180       0.0180
+ IYD → OB  0.3100  0.2787 -0.0313       0.0313
+ IYD → CV  0.1800  0.1767 -0.0033       0.0033
+  OB → CV  0.4100  0.4069 -0.0031       0.0031
+
+Ortalama mutlak sapma: 0.0237
+En büyük sapma      : 0.0490 (UCE → OB)
+
+Sapmaların tamamı örnekleme hatası düzeyinde. Analiz hattı veriyi üreten yapıyı geri buluyor.

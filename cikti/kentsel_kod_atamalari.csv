@@ -1,0 +1,698 @@
+﻿parca_id,birim,grup,evre,kod,tema,eslesme,metin
+M0001,mülakat,A,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0002,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0003,mülakat,A,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Yani çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0004,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Düşünün ki okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0005,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,Yani toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0006,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,"Yani şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0007,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Düşünün ki adres aynı, bina farklı, insanlar farklı. Ne kalmış geriye?"
+M0008,mülakat,A,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın mahallede yürürken selam vereceğim biri çıkmıyor. İnsan selam vermeye alışmış, zor bırakıyor."
+M0009,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani o yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0010,mülakat,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,2,"Bakın benim yaşımdakiler zorlandı. Kartlı sistem, interkom, aidat otomatiği... Hepsini öğrenmek gerekti."
+M0011,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Yani sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+M0012,mülakat,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+M0013,mülakat,A,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Yani bir WhatsApp grubu var, üç yüz kişi. Günde elli mesaj akıyor, hiçbiri komşuluk değil."
+M0014,mülakat,A,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Düşünün ki torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0015,mülakat,A,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Şöyle söyleyeyim, kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0016,mülakat,A,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Nasıl anlatsam, merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0017,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,İnşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0018,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Şöyle söyleyeyim, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0019,mülakat,A,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0020,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,"Şöyle söyleyeyim, o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var."
+M0021,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Nasıl anlatsam, hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0022,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Şöyle söyleyeyim, güvenlik benim için önemliydi, açıkçası onun için bu siteyi seçtim. Akşam geç geliyorum."
+M0023,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Bakın site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor.
+M0024,mülakat,A,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Şöyle söyleyeyim, asansör olmasaydı bu yaşta beşinci kata çıkamazdım. Onu söylemek lazım."
+M0025,mülakat,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Şöyle söyleyeyim, çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum."
+M0026,mülakat,A,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0027,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Annem son bir yıl hiç dışarı çıkmadı. Eskiden kapının önüne çıkardı, şimdi çıkacağı bir kapı önü yok."
+M0028,mülakat,A,sonrası,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bakın bana söylenen daire ile verilen daire aynı değildi. İtiraz ettim, 'proje değişti' dediler."
+M0029,mülakat,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0030,mülakat,A,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Açık konuşayım, köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0031,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,"Açık konuşayım, sokak diye bir şey kalmadı. Koridor var, asansör var, otopark var. Sokak yok."
+M0032,mülakat,A,öncesi,KODLANMADI,Kodlanmadı,0,"Doğrusu şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+M0033,mülakat,A,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0034,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0035,mülakat,A,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0036,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Açık konuşayım, fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı."
+M0037,mülakat,A,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+M0038,mülakat,A,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,3,"Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor. Haklı da, ben de üşümüyorum artık."
+M0039,mülakat,A,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+M0040,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Dernek bir fotoğraf sergisi yaptı. Herkes ağladı. Bir de şunu fark ettim: fotoğraftaki insanların çoğu gitmiş.
+M0041,mülakat,A,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Okul aynı yerde. Çocuklarım orada okudu, torunum da okuyor. Tutunacak bir şey lazım insana."
+M0042,mülakat,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Kendimi misafir gibi hissediyorum. Kırk yıldır buradayım.
+M0043,mülakat,A,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,2,"Valla on altı kat. Balkona çıkıyorum, aşağısı görünmüyor."
+M0044,mülakat,A,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,Markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+M0045,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,Valla yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0046,mülakat,A,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0047,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Valla dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0048,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,"Valla misafirim geldiğinde aşağıdan arıyorlar, onay veriyorum. Kardeşim için onay veriyorum yani."
+M0049,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bakkal Nuri'nin dükkânı duruyor mu diye sordum, yerinde kuaför varmış. Nuri amca da vefat etmiş."
+M0050,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Valla torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0051,mülakat,A,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0052,mülakat,A,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Valla sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0053,mülakat,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey.
+M0054,mülakat,A,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Valla otopark en büyük kazanç. Eskiden arabayı nereye koyacağım diye dolanırlarmış.
+M0055,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,"Mimari olarak kamusal alan sıfırlandı. Ortak alan var ama o alan bütün mahalleye değil, siteye ait."
+M0056,mülakat,A,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0057,mülakat,A,öncesi,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0058,mülakat,A,öncesi,KODLANMADI,Kodlanmadı,0,"Her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0059,mülakat,A,öncesi,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Bakın cami avlusu buluşma yeriydi. Namaz kılmayan da oraya uğrardı, haber oradan alınırdı."
+M0060,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,İşyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0061,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Doğrusu mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0062,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Doğrusu okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0063,mülakat,A,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın ortak alanlar güzel düzenlenmiş, ben memnunum. Ama kimse kullanmıyor, boş duruyor çoğu zaman."
+M0064,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Eski fotoğrafları çıkardım, torunlara gösterdim. 'Burası neresi dede' dediler."
+M0065,mülakat,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,"Bakın gençler alıştı, biz alışamadık. Mesele teknoloji değil, alışkanlık."
+M0066,mülakat,A,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0067,mülakat,A,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0068,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0069,mülakat,A,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0070,mülakat,A,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Bir de şu var: çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0071,mülakat,A,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0072,mülakat,A,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0073,mülakat,A,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,Yeni binada kimse kimseyi tanımıyor. Orası yabancı yer zaten; asıl acı olan Yıldıztepe'de de böyle olması.
+M0074,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Nasıl anlatsam, okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben."
+M0075,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Bir de şu var: siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0076,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bir de şu var: sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0077,mülakat,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Nasıl anlatsam, en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor."
+M0078,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Açık konuşayım, sözlü tarih çalışması başlattık, otuz kişiyle görüştük. Anlatılan her şey 'eskiden' diye başlıyor."
+M0079,mülakat,A,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Bir de şu var: grupta herkes var ama yüz yüze gelince kimse kimseyi tanımıyor. Tuhaf bir şey bu.
+M0080,mülakat,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0081,mülakat,A,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Açık konuşayım, çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu."
+M0082,mülakat,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0083,mülakat,A,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0084,mülakat,A,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0085,mülakat,A,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Doğrusu müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0086,mülakat,A,inşaat,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Açık konuşayım, eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0087,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Bakın hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0088,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Açık konuşayım, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0089,mülakat,A,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,3,"Doğrusu yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+M0090,mülakat,A,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor."
+M0091,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu yeni gelenler kötü insanlar değil, yanlış anlaşılmasın. Ama onların hayatı başka, bizimki başka."
+M0092,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Doğrusu sokak adlarının çoğu etap numarasına dönüştü. İdari bir değişiklik gibi görünüyor ama insanlar için öyle değil.
+M0093,mülakat,A,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Bakın ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0094,mülakat,A,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, dürüst olmak gerekirse evin değeri beş katına çıktı. Şikâyet ediyorum ama bunu da söylemem lazım."
+M0095,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,"Açık konuşayım, bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0096,mülakat,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Ben buraya aidiyet hissetmiyorum, dürüst olayım. Yatırım olarak aldım."
+M0097,mülakat,A,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0098,mülakat,A,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Anahtarımı komşuya bırakırdım, kargo gelirse alsın diye. Şimdi kargoyu güvenliğe bırakıyorlar."
+M0099,mülakat,A,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0100,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0101,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0102,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0103,mülakat,A,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Ben şunu diyeyim: bloklar arasında bir rüzgâr oluyor, kışın geçilmiyor. Mimar bunu düşünmemiş herhâlde."
+M0104,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,"Ben şunu diyeyim: kargom güvenliğe bırakılıyor, kaybolmuyor. Küçük şey gibi ama günlük hayatta işe yarıyor."
+M0105,mülakat,A,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+M0106,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,Komşumun sesini duymadım ama yazısını her gün okuyorum. Garip bir komşuluk.
+M0107,mülakat,A,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0108,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0109,mülakat,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,En çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0110,mülakat,A,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,3,Müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü.
+M0111,mülakat,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,Yönetim iletişimi gruba taşıdı. Telefonu olmayan yaşlılar haberleri en son duyuyor.
+M0112,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,Defteri kaldırdım. Güven gidince defter de gitti.
+M0113,mülakat,A,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,Ben şunu diyeyim: aidat dört bin lira. Emekli maaşımın beşte biri.
+M0114,mülakat,A,öncesi,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Şimdi ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0115,mülakat,A,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0116,mülakat,A,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Düşünün ki bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0117,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0118,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Şimdi i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0119,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,Valla toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0120,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Düşünün ki çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0121,mülakat,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Şimdi dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0122,mülakat,A,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Valla eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0123,mülakat,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Valla yıldıztepe'yi özlüyorum ama gitmek istemiyorum. Çünkü gittiğimde özlediğim şeyi bulamıyorum.
+M0124,mülakat,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Asansöre biniyorsun, iki kişi, kimse konuşmuyor. Herkes telefonuna bakıyor."
+M0125,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Eski adresimi yazmak istiyorum bazen, ama o adres artık yok. Posta kutusunda bile yok."
+M0126,mülakat,A,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Şimdi taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0127,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,"Düşünün ki geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0128,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Grup işe yarıyor aslında. Geçen ay merdivendeki lamba iki saatte halledildi.
+M0129,mülakat,A,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani tabure kalktı, oturacak yer kalmadı. Müşteri alıp gidiyor, iki kelime etmiyoruz."
+M0130,mülakat,A,öncesi,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Yani dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0131,mülakat,A,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Yani fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0132,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0133,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Yani i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0134,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Yani okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0135,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0136,mülakat,A,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Bakın sitenin içine dükkân açmak istedim, yönetim izin vermedi. Kendi mahallemde esnaflık yapamıyorum."
+M0137,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani bize biraz mesafeli yaklaşıyorlar. Anlıyorum da, biz onların mahallesine geldik sonuçta."
+M0138,mülakat,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Yani çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0139,mülakat,A,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0140,mülakat,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Yani nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+M0141,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Yani taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0142,mülakat,A,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,"Havuz var, spor salonu var. Ben hiç kullanmıyorum ama parasını ödüyorum."
+M0143,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Sözlü tarih çalışması başlattık, otuz kişiyle görüştük. Anlatılan her şey 'eskiden' diye başlıyor."
+M0144,mülakat,A,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0145,mülakat,A,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0146,mülakat,A,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0147,mülakat,A,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Bakın veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0148,mülakat,A,öncesi,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Bakın cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0149,mülakat,A,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0150,mülakat,A,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Şöyle söyleyeyim, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0151,mülakat,A,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bakın çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0152,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Nasıl anlatsam, dernek bir fotoğraf sergisi yaptı. Herkes ağladı. Bir de şunu fark ettim: fotoğraftaki insanların çoğu gitmiş."
+M0153,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, bizim blokta kapı önünde oturmak yasak, yönetim uyarı astı. Mantıklı aslında ama biraz da üzücü."
+M0154,mülakat,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Nasıl anlatsam, torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0155,mülakat,A,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0156,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, bizim blokta kapı önünde oturmak yasak, yönetim uyarı astı. Mantıklı aslında ama biraz da üzücü."
+M0157,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,"Şöyle söyleyeyim, misafirim geldiğinde aşağıdan arıyorlar, onay veriyorum. Kardeşim için onay veriyorum yani."
+M0158,mülakat,A,sonrası,KODLANMADI,Kodlanmadı,0,"Şöyle söyleyeyim, defteri kaldırdım. Güven gidince defter de gitti."
+M0159,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,İki grup arasında açık bir husumet yok. Olan şey daha sessiz: aynı binada iki ayrı hayat sürüyor.
+M0160,mülakat,A,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0161,mülakat,A,öncesi,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu cuma çıkışı eski müşterilerimi görüyorum. Haftada bir, o kadar."
+M0162,mülakat,A,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0163,mülakat,A,inşaat,KODLANMADI,Kodlanmadı,0,Doğrusu toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0164,mülakat,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,Dijital destek programı açtık; en çok başvuru yetmiş yaş üstünden geldi.
+M0165,mülakat,A,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Ortak alanda bir masa var, hiç kimsenin oturduğunu görmedim. Masayı koymak yetmiyor demek ki."
+M0166,mülakat,A,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0167,mülakat,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, o yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0168,mülakat,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+M0169,mülakat,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Yeni gelenler zincir marketten alışveriş yapıyor. Kızmıyorum ama bir ayrışma var, görünüyor."
+M0170,mülakat,A,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,Doğrusu alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0171,mülakat,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0172,mülakat,B,öncesi,KODLANMADI,Kodlanmadı,0,"Yani otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0173,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Yani akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0174,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0175,mülakat,B,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0176,mülakat,B,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0177,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0178,mülakat,B,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0179,mülakat,B,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+M0180,mülakat,B,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0181,mülakat,B,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Yani çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0182,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,2,Valla yatırım olarak baktığımda doğru karar verdim. İki yılda ciddi değerlendi.
+M0183,mülakat,B,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Yani torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+M0184,mülakat,B,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Valla cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0185,mülakat,B,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,Aidatı duyunca satmaya karar verdim. Ev benim ama giderini karşılayamıyorum.
+M0186,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,Biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+M0187,mülakat,B,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+M0188,mülakat,B,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0189,mülakat,B,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0190,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Bakın dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0191,mülakat,B,öncesi,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0192,mülakat,B,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Bakın kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0193,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0194,mülakat,B,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0195,mülakat,B,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Bakın yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0196,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0197,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,"Doğrusu geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0198,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Bakın müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0199,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,Defteri kaldırdım. Güven gidince defter de gitti.
+M0200,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,"Gençler 'kullanmıyorsan kullan' diyor. Mesele kullanmak değil, ödeyememek."
+M0201,mülakat,B,sonrası,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Bakın kira üç katına çıktı. Mahallede kalamadım, iki ilçe öteye gittim."
+M0202,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0203,mülakat,B,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0204,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,Bir de şu var: yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0205,mülakat,B,inşaat,KODLANMADI,Kodlanmadı,0,Bir de şu var: o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0206,mülakat,B,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,1,"Nasıl anlatsam, kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0207,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Nasıl anlatsam, taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0208,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,Çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+M0209,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Nasıl anlatsam, ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0210,mülakat,B,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0211,mülakat,B,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Bir de şu var: çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0212,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil."
+M0213,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0214,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Doğrusu akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0215,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0216,mülakat,B,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Doğrusu çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0217,mülakat,B,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0218,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0219,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0220,mülakat,B,inşaat,KODLANMADI,Kodlanmadı,0,Bakın o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0221,mülakat,B,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Açık konuşayım, eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu."
+M0222,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,"Bakın yeni yerde de aynı. Demek ki mesele Yıldıztepe değil, bu yeni apartman biçimi."
+M0223,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0224,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0225,mülakat,B,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,3,"Açık konuşayım, en çok gelen şikâyet aidat. Hak sahiplerinin bir kısmı ödeyemiyor, icra takibi başlayanlar var."
+M0226,mülakat,B,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Açık konuşayım, burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey."
+M0227,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,"Geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+M0228,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Açık konuşayım, sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+M0229,mülakat,B,öncesi,KODLANMADI,Kodlanmadı,0,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0230,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0231,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0232,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0233,mülakat,B,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0234,mülakat,B,inşaat,T4-K4,Ekonomik baskı ve yerinden edilme,2,Dükkân kirası beş katına çıktı. Kırk iki yıl sonra kapattım.
+M0235,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0236,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0237,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0238,mülakat,B,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0239,mülakat,B,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+M0240,mülakat,B,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Asansörde günaydın diyorum, karşılık veriyorlar. Sonrası gelmiyor, orada kalıyor."
+M0241,mülakat,B,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Şimdi iki kilit var, biri de şu akıllı olanlardan. Çıkarken ikisini de çeviriyorum."
+M0242,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Valla dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0243,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Valla akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0244,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Düşünün ki kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0245,mülakat,B,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Düşünün ki sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0246,mülakat,B,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Düşünün ki kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0247,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Şimdi taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0248,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+M0249,mülakat,B,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+M0250,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,Valla markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+M0251,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Düşünün ki yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0252,mülakat,B,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,"Eski evde aidat yoktu. Kapıcıya para verirdik, o kadar."
+M0253,mülakat,B,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Düşünün ki en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0254,mülakat,B,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Düşünün ki artık kepenk indiriyorum. Beş dakikalığına bile çıksam indiriyorum, alışkanlık oldu."
+M0255,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0256,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Doğrusu akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0257,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor."
+M0258,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,"Nasıl anlatsam, akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı."
+M0259,mülakat,B,inşaat,KODLANMADI,Kodlanmadı,0,"Nasıl anlatsam, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0260,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bakın taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0261,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,2,"Nasıl anlatsam, yatırım olarak baktığımda doğru karar verdim. İki yılda ciddi değerlendi."
+M0262,mülakat,B,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor."
+M0263,mülakat,B,sonrası,KODLANMADI,Kodlanmadı,0,"Bakın şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0264,mülakat,B,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Doğrusu aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0265,mülakat,B,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Bakın akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0266,mülakat,B,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Şöyle söyleyeyim, kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0267,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Şöyle söyleyeyim, kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0268,mülakat,B,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0269,mülakat,B,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0270,mülakat,B,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Şöyle söyleyeyim, taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0271,mülakat,B,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0272,mülakat,B,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Bakın kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0273,mülakat,B,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Bakın müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0274,mülakat,B,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,1,"Şöyle söyleyeyim, kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0275,mülakat,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor."
+M0276,mülakat,B,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Bakın ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0277,mülakat,B,sonrası,T4-K2,Ekonomik baskı ve yerinden edilme,2,Eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu.
+M0278,mülakat,B,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Mahallede yürürken selam vereceğim biri çıkmıyor. İnsan selam vermeye alışmış, zor bırakıyor."
+M0279,mülakat,B,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Bakın kendimi misafir gibi hissediyorum. Kırk yıldır buradayım.
+M0280,mülakat,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,Bakın çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+M0281,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0282,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0283,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0284,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,"Açık konuşayım, i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu."
+M0285,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0286,mülakat,C,inşaat,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Oğlum devralmak istemiyor. Haklı da, ben bile devam edeyim mi bilmiyorum."
+M0287,mülakat,C,sonrası,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Kira üç katına çıktı. Mahallede kalamadım, iki ilçe öteye gittim."
+M0288,mülakat,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0289,mülakat,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0290,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,Dükkân kirası beş katına çıktı. Kırk iki yıl sonra kapattım.
+M0291,mülakat,C,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0292,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0293,mülakat,C,öncesi,KODLANMADI,Kodlanmadı,0,"Yani otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0294,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0295,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Valla kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0296,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0297,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Anahtarımı komşuya bırakırdım, kargo gelirse alsın diye. Şimdi kargoyu güvenliğe bırakıyorlar."
+M0298,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0299,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0300,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Valla toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0301,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0302,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,"Yani bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0303,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0304,mülakat,C,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Yani artık kepenk indiriyorum. Beş dakikalığına bile çıksam indiriyorum, alışkanlık oldu."
+M0305,mülakat,C,sonrası,T4-K2,Ekonomik baskı ve yerinden edilme,2,Eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu.
+M0306,mülakat,C,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Valla çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0307,mülakat,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Valla cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0308,mülakat,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Valla kapıdaki isimliklerden öğreniyorum komşuların soyadını. Konuşarak değil.
+M0309,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bakın kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0310,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0311,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0312,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0313,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Bakın müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0314,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Doğrusu sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0315,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0316,mülakat,C,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0317,mülakat,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Doğrusu cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0318,mülakat,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Bakın cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+M0319,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0320,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,Yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0321,mülakat,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0322,mülakat,C,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+M0323,mülakat,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Bakın taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+M0324,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Açık konuşayım, merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0325,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0326,mülakat,C,öncesi,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Nasıl anlatsam, dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0327,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0328,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0329,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,"Açık konuşayım, i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu."
+M0330,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bir de şu var: sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0331,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Açık konuşayım, müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0332,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0333,mülakat,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor."
+M0334,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0335,mülakat,C,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor."
+M0336,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0337,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Açık konuşayım, ben esnafım, herkesi tanırım derdim. Artık diyemiyorum."
+M0338,mülakat,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Bir de şu var: aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0339,mülakat,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bir de şu var: çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0340,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0341,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın anahtarı kapının yanındaki saksının altına koyardık. Bilen bilirdi, bilmeyene de zaten lazım olmazdı."
+M0342,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Bakın i̇şyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0343,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0344,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Doğrusu i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0345,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Doğrusu hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0346,mülakat,C,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Doğrusu dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+M0347,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Doğrusu oğlum devralmak istemiyor. Haklı da, ben bile devam edeyim mi bilmiyorum."
+M0348,mülakat,C,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Açık konuşayım, ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0349,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,Bakın yirmi iki esnaftan yedisi döndü. Geri kalanı başka mahallede ya da hiç.
+M0350,mülakat,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Açık konuşayım, alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor."
+M0351,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0352,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Ben şunu diyeyim: merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0353,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Ben şunu diyeyim: i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0354,mülakat,C,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Ben şunu diyeyim: hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0355,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,İşyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0356,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,"Torunuma anlattım, güldü bana. Ona masal gibi geliyor herhâlde."
+M0357,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0358,mülakat,C,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0359,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,"Ben şunu diyeyim: bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0360,mülakat,C,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+M0361,mülakat,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+M0362,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,3,Müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü.
+M0363,mülakat,C,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Ben şunu diyeyim: eski fotoğrafları çıkardım, torunlara gösterdim. 'Burası neresi dede' dediler."
+M0364,mülakat,C,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0365,mülakat,C,öncesi,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Şimdi kapıyı kilitlemezdik. Çıkarken üstüne iterdik, o kadar. Komşu zaten evde kim var kim yok bilirdi."
+M0366,mülakat,C,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,Yaz akşamları kaldırıma masa atılırdı. Bunu anlatınca torunum inanmıyor.
+M0367,mülakat,C,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Şimdi kapı önünde çay içerdik. Komşu geçer, oturur, yarım saat laflardık."
+M0368,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Düşünün ki i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0369,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Şimdi toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0370,mülakat,C,inşaat,KODLANMADI,Kodlanmadı,0,Düşünün ki i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0371,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Valla dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0372,mülakat,C,sonrası,KODLANMADI,Kodlanmadı,0,"Bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0373,mülakat,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Valla bize biraz mesafeli yaklaşıyorlar. Anlıyorum da, biz onların mahallesine geldik sonuçta."
+M0374,mülakat,C,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+M0375,mülakat,C,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Düşünün ki annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0376,mülakat,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Valla eskiden müşteri sokaktan girerdi. Şimdi siteye giremiyor, ben de siteye mal çıkaramıyorum."
+M0377,mülakat,C,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+M0378,mülakat,C,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0379,mülakat,C,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Şimdi sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0380,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,2,"Doğrusu isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+M0381,mülakat,D,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu çocuğumu komşuya bırakıp işe giderdim. Parası pulu olmazdı, sırası gelince ben bakardım."
+M0382,mülakat,D,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Nasıl anlatsam, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0383,mülakat,D,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0384,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0385,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,"Nasıl anlatsam, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0386,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0387,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın güvenlik benim için önemliydi, açıkçası onun için bu siteyi seçtim. Akşam geç geliyorum."
+M0388,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, çocuk parkı sitenin içinde, pencereden görüyorum."
+M0389,mülakat,D,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bakın ben buraya aidiyet hissetmiyorum, dürüst olayım. Yatırım olarak aldım."
+M0390,mülakat,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0391,mülakat,D,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, grup işe yarıyor aslında. Geçen ay merdivendeki lamba iki saatte halledildi."
+M0392,mülakat,D,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şöyle söyleyeyim, kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0393,mülakat,D,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Yani çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0394,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Bakın eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0395,mülakat,D,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0396,mülakat,D,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Yani taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0397,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,"Şöyle söyleyeyim, toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu."
+M0398,mülakat,D,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Bakın i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0399,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,Yani o binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0400,mülakat,D,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,"Şöyle söyleyeyim, yönetim iletişimi gruba taşıdı. Telefonu olmayan yaşlılar haberleri en son duyuyor."
+M0401,mülakat,D,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın ortak alanlar güzel düzenlenmiş, ben memnunum. Ama kimse kullanmıyor, boş duruyor çoğu zaman."
+M0402,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0403,mülakat,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Dürüst olmak gerekirse evin değeri beş katına çıktı. Şikâyet ediyorum ama bunu da söylemem lazım.
+M0404,mülakat,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+M0405,mülakat,D,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,2,"Bakın isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+M0406,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0407,mülakat,D,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0408,mülakat,D,öncesi,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Açık konuşayım, dükkânı öğle namazına giderken açık bırakırdım. Kimse bir şey almazdı, alsa da gören olurdu."
+M0409,mülakat,D,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık."
+M0410,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,İnşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0411,mülakat,D,inşaat,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Taşınırken kapının kolunu söküp aldım. Saçma geliyor biliyorum, ama bir şey kalsın istedim."
+M0412,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,Toplantılar gece yarılarına kadar sürerdi. Kimse kimseye güvenmiyordu.
+M0413,mülakat,D,sonrası,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+M0414,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuk parkı sitenin içinde, pencereden görüyorum."
+M0415,mülakat,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0416,mülakat,D,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,"Eski evde aidat yoktu. Kapıcıya para verirdik, o kadar."
+M0417,mülakat,D,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,Aidatı duyunca satmaya karar verdim. Ev benim ama giderini karşılayamıyorum.
+M0418,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0419,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Yani eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0420,mülakat,D,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Fırının kokusu sabah altıda bütün sokağa yayılırdı. Saate bakmana gerek kalmazdı.
+M0421,mülakat,D,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuklar sokakta büyürdü. Kimin çocuğu olduğunu bilmeden kimse azarlamazdı, herkes herkesin çocuğuna bakardı."
+M0422,mülakat,D,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Yani okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0423,mülakat,D,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Valla kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0424,mülakat,D,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,Yani i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum.
+M0425,mülakat,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0426,mülakat,D,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+M0427,mülakat,D,sonrası,KODLANMADI,Kodlanmadı,0,"Yani yeni yerde de aynı. Demek ki mesele Yıldıztepe değil, bu yeni apartman biçimi."
+M0428,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Valla en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0429,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Yani çocuk parkı sitenin içinde, pencereden görüyorum."
+M0430,mülakat,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,3,"Valla yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+M0431,mülakat,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+M0432,mülakat,D,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0433,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Bakın eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0434,mülakat,D,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Veresiye defteri vardı, ay sonu kapatırlardı. Defter güvene dayanıyordu."
+M0435,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,O binalar yükselince bizim sokağa güneş girmedi. Taşınma kararımda bunun da payı var.
+M0436,mülakat,D,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,1,"Bakın kira yardımı iki yıl ödendi, inşaat dört yıl sürdü. Aradaki iki yılı kendimiz karşıladık."
+M0437,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,Bakın i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0438,mülakat,D,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0439,mülakat,D,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Doğrusu okulun bahçesindeki çınarı kestiler. O ağacın altında nişanlanmıştım ben.
+M0440,mülakat,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+M0441,mülakat,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0442,mülakat,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Doğrusu ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+M0443,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Ama çocuklar birbirini tanımıyor. Parkta oynuyorlar, sonra her biri ayrı bloğa gidiyor."
+M0444,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Doğrusu en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0445,mülakat,D,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Doğrusu dükkânın önü gölgede kaldı. Yazın serin diye seviniyordum, kışın müşteri durmuyor."
+M0446,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0447,mülakat,D,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0448,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, eski evde kışın soba yakardık. Romatizmam oradan kaldı bana."
+M0449,mülakat,D,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Nasıl anlatsam, bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0450,mülakat,D,inşaat,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Kazık çakarken bardaklar titriyordu. İki yıl o sesle yaşadık.
+M0451,mülakat,D,inşaat,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Nasıl anlatsam, i̇nşaat döneminde şantiye kapısında bekçi vardı. Kendi arsama bakmaya giderken izin istiyordum."
+M0452,mülakat,D,inşaat,KODLANMADI,Kodlanmadı,0,Bir de şu var: i̇nşaat döneminde üç yıl kapalı kaldım. Açtığımda kimse beni hatırlamıyordu.
+M0453,mülakat,D,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Nasıl anlatsam, site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor."
+M0454,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Nasıl anlatsam, kadın olarak güvenlik benim için ilk sırada. Site bu açıdan iyi."
+M0455,mülakat,D,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,"Nasıl anlatsam, otopark en büyük kazanç. Eskiden arabayı nereye koyacağım diye dolanırlarmış."
+M0456,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Nasıl anlatsam, akşam dokuzda eve geliyorum, kapıda güvenlik var. Eskiden o sokaktan geçer miydim bilmiyorum."
+M0457,mülakat,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Bir de şu var: torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+M0458,mülakat,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Asansöre biniyorsun, iki kişi, kimse konuşmuyor. Herkes telefonuna bakıyor."
+M0459,mülakat,D,öncesi,KODLANMADI,Kodlanmadı,0,"Açık konuşayım, her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0460,mülakat,D,öncesi,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Eski evde kışın soba yakardık. Romatizmam oradan kaldı bana.
+M0461,mülakat,D,öncesi,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuklar sokakta oynardı, biz pencereden bakardık. Bir ses kesilse hemen kafanı uzatırdın."
+M0462,mülakat,D,inşaat,T4-K2,Ekonomik baskı ve yerinden edilme,2,"Bakın kiracıydım, hak sahibi değildim. Yıkım kararı çıkınca bana kimse bir şey sormadı."
+M0463,mülakat,D,inşaat,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Açık konuşayım, çeşmeyi yıkarken kimse sormadı. Bir sabah geldik, yerinde değildi."
+M0464,mülakat,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+M0465,mülakat,D,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,2,"Bakın kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+M0466,mülakat,D,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Doğrusu yan komşumla iki yılda belki üç kez konuştuk. İkimiz de çalışıyoruz, denk gelmiyoruz."
+M0467,mülakat,D,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Açık konuşayım, grupta herkes var ama yüz yüze gelince kimse kimseyi tanımıyor. Tuhaf bir şey bu."
+M0468,mülakat,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, kamerayı koydular, iyi oldu diyorlar. Bana sorarsan kamera koyuyorsan orada bir sorun var demektir."
+M0469,mülakat,E,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0470,mülakat,E,öncesi,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Köşede bir çeşme vardı, üstünde 1974 yazardı. Yazın oradan su içerdik."
+M0471,mülakat,E,öncesi,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,Akşamüstü herkes kapının önüne sandalyesini atardı. Yaz boyunca o kaldırım bizim oturma odamızdı.
+M0472,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0473,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0474,mülakat,E,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Ben şunu diyeyim: yeni gelenler zincir marketten alışveriş yapıyor. Kızmıyorum ama bir ayrışma var, görünüyor."
+M0475,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,"Bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+M0476,mülakat,E,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0477,mülakat,E,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+M0478,mülakat,E,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0479,mülakat,E,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Ben şunu diyeyim: en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0480,mülakat,E,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Dükkânın ilk gün fotoğrafı var, babamla çekilmişiz. Arkada eski sokak görünüyor."
+M0481,mülakat,E,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Kadın sakinlerle yaptığımız toplantıda güvenlik en olumlu başlıktı. Erkeklerde aynı vurgu yok.
+M0482,mülakat,E,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0483,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,Defteri kaldırdım. Güven gidince defter de gitti.
+M0484,mülakat,E,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0485,mülakat,E,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Düşünün ki bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0486,mülakat,E,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Valla bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0487,mülakat,E,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Düşünün ki merdivende karşılaşınca iki çift laf ederdin. Bazen çıkamazdın, kırk dakika merdivende geçerdi."
+M0488,mülakat,E,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0489,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Düşünün ki sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0490,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,4,"Müteahhitle üç yıl pazarlık ettik. Metrekare meselesi, kat meselesi. Sonunda imzaladık, başka çare yoktu."
+M0491,mülakat,E,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+M0492,mülakat,E,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Valla en çok şu şikâyeti alıyoruz: ziyaretçi kaydı. Akrabası gelen insan kendini sorgulanıyor gibi hissediyor.
+M0493,mülakat,E,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Valla gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0494,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,Şimdi biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+M0495,mülakat,E,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Valla sokağımızın adı Gülbahar'dı, şimdi B Blok diyoruz. Adres tarif ederken zorlanıyorum."
+M0496,mülakat,E,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Düşünün ki siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+M0497,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,Valla komşumun sesini duymadım ama yazısını her gün okuyorum. Garip bir komşuluk.
+M0498,mülakat,E,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,3,"Şimdi en çok gelen şikâyet aidat. Hak sahiplerinin bir kısmı ödeyemiyor, icra takibi başlayanlar var."
+M0499,mülakat,E,öncesi,KODLANMADI,Kodlanmadı,0,"Nasıl anlatsam, otuz yıl o evde oturdum, kilidi kaç kez çevirdiğimi sayabilirim. Gece bile açık kalırdı bazen."
+M0500,mülakat,E,öncesi,KODLANMADI,Kodlanmadı,0,"Doğrusu her sokağın bir adı, bir de halk arasındaki adı vardı. İkisini de bilirdik."
+M0501,mülakat,E,öncesi,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Açık konuşayım, bahçedeki inciri pencereden uzanıp toplardım. İki kat vardı, o kadar."
+M0502,mülakat,E,öncesi,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Nasıl anlatsam, sokağın iki ucundaki herkesi bilirdim. Kimin oğlu askere gitmiş, kimin kızı nişanlanmış, hepsi."
+M0503,mülakat,E,inşaat,KODLANMADI,Kodlanmadı,0,Doğrusu i̇şyeri sahiplerine ayrı bir şey teklif edilmedi. Konutla aynı kefeye konduk.
+M0504,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Açık konuşayım, hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0505,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,"Nasıl anlatsam, şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+M0506,mülakat,E,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Doğrusu ben de yabancıyım aslında. İki yıl önce geldim, hâlâ kimseyi tanımıyorum ama bu beni rahatsız etmiyor."
+M0507,mülakat,E,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,"Doğrusu sokak diye bir şey kalmadı. Koridor var, asansör var, otopark var. Sokak yok."
+M0508,mülakat,E,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,2,"Doğrusu yaşlılar için ayrı bir sorun var: yeni binada komşu yok, dışarıda tanıdık yok. Yalnızlık arttı."
+M0509,mülakat,E,sonrası,KODLANMADI,Kodlanmadı,0,"Doğrusu şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+M0510,mülakat,E,öncesi,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şöyle söyleyeyim, dükkânın önündeki tabure en iyi reklamımdı. İnsanlar oturur, konuşur, çıkarken bir şey alırdı."
+M0511,mülakat,E,öncesi,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Şöyle söyleyeyim, bir tencere yemek pişirirdin, iki kapıya götürürdün. Kapıdan tabak eksik olmazdı."
+M0512,mülakat,E,öncesi,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Yani kim kiminle evli, kimin kaç çocuğu var, hepsini bilirdik. Yanlış numaradan telefon gelse tarif ederdik."
+M0513,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bakın sürecin en çatışmalı kısmı buydu. Komşular pazarlıkta karşı karşıya geldi, o kırgınlıklar hâlâ duruyor."
+M0514,mülakat,E,inşaat,T4-K3,Ekonomik baskı ve yerinden edilme,3,"Hak sahipliği için tapu gerekiyordu. Bizimki hisseliydi, beş kardeş. Anlaşamadık, satıp dağıldık."
+M0515,mülakat,E,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,3,"Şöyle söyleyeyim, müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü."
+M0516,mülakat,E,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Bakın mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+M0517,mülakat,E,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şöyle söyleyeyim, gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+M0518,mülakat,E,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Şöyle söyleyeyim, taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+M0519,mülakat,E,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Bakın annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+M0520,mülakat,E,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Şöyle söyleyeyim, cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+M0521,mülakat,E,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+M0522,mülakat,E,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,2,"Yani kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+O0001,odak grup,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+O0002,odak grup,A,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,2,"Mimari olarak kamusal alan sıfırlandı. Ortak alan var ama o alan bütün mahalleye değil, siteye ait."
+O0003,odak grup,A,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,2,"Kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+O0004,odak grup,A,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,2,"Kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+O0005,odak grup,A,sonrası,KODLANMADI,Kodlanmadı,0,"Şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+O0006,odak grup,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+O0007,odak grup,A,sonrası,KODLANMADI,Kodlanmadı,0,"Misafirim geldiğinde aşağıdan arıyorlar, onay veriyorum. Kardeşim için onay veriyorum yani."
+O0008,odak grup,A,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,3,"Oğlum memnun. 'Baba kombi yandı, otopark var, asansör var' diyor. Haklı da, ben de üşümüyorum artık."
+O0009,odak grup,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,"Asansöre biniyorsun, iki kişi, kimse konuşmuyor. Herkes telefonuna bakıyor."
+O0010,odak grup,B,sonrası,KODLANMADI,Kodlanmadı,0,"Kargom güvenliğe bırakılıyor, kaybolmuyor. Küçük şey gibi ama günlük hayatta işe yarıyor."
+O0011,odak grup,B,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Aidat yüksek ama hizmet de var. Ben buna razıyım, hesaplayarak aldım."
+O0012,odak grup,B,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+O0013,odak grup,A,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+O0014,odak grup,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Ben buraya aidiyet hissetmiyorum, dürüst olayım. Yatırım olarak aldım."
+O0015,odak grup,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Çeşmenin yerinde şimdi trafo var. Oradan her geçişimde bakıyorum.
+O0016,odak grup,B,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+O0017,odak grup,B,sonrası,KODLANMADI,Kodlanmadı,0,Biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+O0018,odak grup,B,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+O0019,odak grup,B,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+O0020,odak grup,A,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+O0021,odak grup,A,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,"Çocuk parkı sitenin içinde, pencereden görüyorum."
+O0022,odak grup,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Kendimi misafir gibi hissediyorum. Kırk yıldır buradayım.
+O0023,odak grup,A,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,2,"Isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+O0024,odak grup,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,Dijital destek programı açtık; en çok başvuru yetmiş yaş üstünden geldi.
+O0025,odak grup,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Eski adresimi yazmak istiyorum bazen, ama o adres artık yok. Posta kutusunda bile yok."
+O0026,odak grup,A,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,2,"Benim yaşımdakiler zorlandı. Kartlı sistem, interkom, aidat otomatiği... Hepsini öğrenmek gerekti."
+O0027,odak grup,A,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+O0028,odak grup,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Adres aynı, bina farklı, insanlar farklı. Ne kalmış geriye?"
+O0029,odak grup,D,sonrası,KODLANMADI,Kodlanmadı,0,"Şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+O0030,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+O0031,odak grup,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+O0032,odak grup,A,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor.
+O0033,odak grup,A,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+O0034,odak grup,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Kadın olarak güvenlik benim için ilk sırada. Site bu açıdan iyi.
+O0035,odak grup,D,sonrası,KODLANMADI,Kodlanmadı,0,"Gençler 'kullanmıyorsan kullan' diyor. Mesele kullanmak değil, ödeyememek."
+O0036,odak grup,D,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Adres aynı, bina farklı, insanlar farklı. Ne kalmış geriye?"
+O0037,odak grup,D,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,Markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+O0038,odak grup,B,sonrası,KODLANMADI,Kodlanmadı,0,"Geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+O0039,odak grup,B,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Ben baştan beri kilitliyorum, İstanbul'da büyüdüm. Ama komşuların eskiden kilitlemediğini duyunca şaşırdım."
+O0040,odak grup,B,sonrası,KODLANMADI,Kodlanmadı,0,"Geçen yıl ameliyat oldum, kimse gelmedi. Kimseyi suçlamıyorum, öyle bir düzen kalmadı."
+O0041,odak grup,B,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+O0042,odak grup,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Asansörde günaydın diyorum, karşılık veriyorlar. Sonrası gelmiyor, orada kalıyor."
+O0043,odak grup,A,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Okul aynı yerde. Çocuklarım orada okudu, torunum da okuyor. Tutunacak bir şey lazım insana."
+O0044,odak grup,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Eski adresimi yazmak istiyorum bazen, ama o adres artık yok. Posta kutusunda bile yok."
+O0045,odak grup,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+O0046,odak grup,D,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+O0047,odak grup,D,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+O0048,odak grup,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+O0049,odak grup,D,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Grupta herkes var ama yüz yüze gelince kimse kimseyi tanımıyor. Tuhaf bir şey bu.
+O0050,odak grup,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+O0051,odak grup,D,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Grup işe yarıyor aslında. Geçen ay merdivendeki lamba iki saatte halledildi.
+O0052,odak grup,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey.
+O0053,odak grup,A,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Lobide iki koltuk var. İki yılda bir kez birinin oturduğunu gördüm, o da kargo bekliyordu."
+O0054,odak grup,A,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Dernek bir fotoğraf sergisi yaptı. Herkes ağladı. Bir de şunu fark ettim: fotoğraftaki insanların çoğu gitmiş.
+O0055,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+O0056,odak grup,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Asansörde laf etmiyorsun, çünkü on beş saniye sürüyor. İnsan bir cümleye başlayamıyor."
+O0057,odak grup,D,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Asansörde günaydın diyorum, karşılık veriyorlar. Sonrası gelmiyor, orada kalıyor."
+O0058,odak grup,A,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Kilit meselesi aslında şu: eskiden kapının arkasında kim olduğunu bilirdin. Şimdi bilmiyorsun, o yüzden kilitliyorsun."
+O0059,odak grup,A,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Gruptan çıktım. Sürekli tartışma oluyordu, komşuluk gibi gelmiyordu bana."
+O0060,odak grup,A,sonrası,T3-K2,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Torunum 'nerede oturuyorsun dede' diyor, 'ikinci etap, C blok' diyorum. Sokak adı söyleyemiyorum."
+O0061,odak grup,A,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Nereli olduğumu soranlara hâlâ Yıldıztepe diyorum. Ama gidip bakmıyorum.
+O0062,odak grup,D,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Taşındıktan sonra bir kere geldim. Kimseyi tanıyamadım, beni de tanıyan olmadı. Bir daha gelmedim."
+O0063,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,Çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+O0064,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,3,"Yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+O0065,odak grup,D,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,2,"Kızım için daha rahatım, doğru. Aydınlatma iyi, kamera var. Bunu inkâr edemem."
+O0066,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Bloklar arasında bir rüzgâr oluyor, kışın geçilmiyor. Mimar bunu düşünmemiş herhâlde."
+O0067,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+O0068,odak grup,D,sonrası,T5-K2,Kuşaklar arası ayrışma ve konforun kazananları,1,Yönetim iletişimi gruba taşıdı. Telefonu olmayan yaşlılar haberleri en son duyuyor.
+O0069,odak grup,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Sitenin içine dükkân açmak istedim, yönetim izin vermedi. Kendi mahallemde esnaflık yapamıyorum."
+O0070,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+O0071,odak grup,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+O0072,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Okul aynı yerde. Çocuklarım orada okudu, torunum da okuyor. Tutunacak bir şey lazım insana."
+O0073,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Çocuğumun okulu burada kaldı, ben uzaktayım. Her sabah bir saat yol."
+O0074,odak grup,C,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+O0075,odak grup,C,sonrası,T4-K2,Ekonomik baskı ve yerinden edilme,2,Eski kiracıların neredeyse tamamı mahalleyi terk etti. Bu süreçte en sessiz kaybeden grup onlar oldu.
+O0076,odak grup,C,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+O0077,odak grup,C,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+O0078,odak grup,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,2,"Sitenin içine dükkân açmak istedim, yönetim izin vermedi. Kendi mahallemde esnaflık yapamıyorum."
+O0079,odak grup,C,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Dükkânım kırk iki yıllıktı. Levhayı söktüler, eve götürdüm, duvarda asılı duruyor."
+O0080,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,"Cami, okul ve mezarlık korundu. Mahalleyi mahalle yapan bağların son üç direği bunlar."
+O0081,odak grup,C,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,3,Müşterimin yarısı taşındı. Yeni gelenler zincir markete gidiyor. Ciro üçte bire düştü.
+O0082,odak grup,C,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,2,"On altı kat. Balkona çıkıyorum, aşağısı görünmüyor."
+O0083,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Mezarlık burada, annem babam burada yatıyor. Bağım o yüzden kopmadı tam."
+O0084,odak grup,C,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Okul aynı yerde. Çocuklarım orada okudu, torunum da okuyor. Tutunacak bir şey lazım insana."
+O0085,odak grup,C,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+O0086,odak grup,C,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Annemin çeyiz sandığı duruyor. Yeni evde yeri yok ama atamadım, balkonda."
+O0087,odak grup,D,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Ortak alanda bir masa var, hiç kimsenin oturduğunu görmedim. Masayı koymak yetmiyor demek ki."
+O0088,odak grup,D,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"O yarım saatler bitti. Şimdi kimse kimseye takılmıyor, herkes kapısına giriyor."
+O0089,odak grup,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Kadın sakinlerle yaptığımız toplantıda güvenlik en olumlu başlıktı. Erkeklerde aynı vurgu yok.
+O0090,odak grup,D,sonrası,KODLANMADI,Kodlanmadı,0,Mahalle sakini listesinin yüzde altmışı yeni. Eski muhtarlık defterindeki adların çoğu artık burada değil.
+O0091,odak grup,D,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Site grubunda bir tartışma çıksa taraflar belli oluyor. Kimse söylemiyor ama herkes biliyor.
+O0092,odak grup,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Kadın olarak güvenlik benim için ilk sırada. Site bu açıdan iyi.
+O0093,odak grup,D,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,2,"Isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+O0094,odak grup,D,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,"Sabah asansörde üç kişiyle karşılaşıyorum, üçünü de tanımıyorum."
+O0095,odak grup,D,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,"Eski evde aidat yoktu. Kapıcıya para verirdik, o kadar."
+O0096,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+O0097,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,"Sattım, iyi para aldım, başka yerde ev aldım. Ama mahalleyi satın alamadım."
+O0098,odak grup,D,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,1,Siteye gelip çocuğumu görmek istediğimde güvenlikten izin almam gerekiyor. Doğduğum sokakta misafir oldum.
+O0099,odak grup,D,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,2,"Isıtma merkezî, kışın sorun yok. Eski binalarda soba vardı diyorlar, ben görmedim bile."
+O0100,odak grup,D,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Tabure kalktı, oturacak yer kalmadı. Müşteri alıp gidiyor, iki kelime etmiyoruz."
+O0101,odak grup,D,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Yıldıztepe'yi özlüyorum ama gitmek istemiyorum. Çünkü gittiğimde özlediğim şeyi bulamıyorum.
+O0102,odak grup,D,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Ortak alanda bir masa var, hiç kimsenin oturduğunu görmedim. Masayı koymak yetmiyor demek ki."
+O0103,odak grup,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,Yeni oturduğum yerde kapıyı kapatır kapatmaz kilidi çeviriyorum. Yıldıztepe'de böyle bir şey yapmazdım.
+O0104,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,"Torunum aşağıda oynuyor, ben balkondan bakıyorum. Bu iyi tarafı, kabul."
+O0105,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,1,Çocuğuma kalacak bir şey oldu en azından. Eski evde bu yoktu.
+O0106,odak grup,D,sonrası,T1-K1,Mekânsal yabancılaşma ve güvensizlik,1,"Artık kepenk indiriyorum. Beş dakikalığına bile çıksam indiriyorum, alışkanlık oldu."
+O0107,odak grup,A,sonrası,KODLANMADI,Kodlanmadı,0,"Şimdi kapının önü diye bir yer yok ki. Kapıyı açıyorsun, karşında başka bir kapı."
+O0108,odak grup,A,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte güvenlik var, kart okutuyorsun. Kendi evime girerken kart okutmak ilk aylar çok tuhaf geldi."
+O0109,odak grup,A,sonrası,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bana söylenen daire ile verilen daire aynı değildi. İtiraz ettim, 'proje değişti' dediler."
+O0110,odak grup,A,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Yardım ağını ayakta tutmaya çalışıyoruz ama eskiden kendiliğinden olan şeyi şimdi örgütlemek gerekiyor.
+O0111,odak grup,B,sonrası,KODLANMADI,Kodlanmadı,0,"Şimdi götürsen kapıyı açan şaşırır. Denedim bir kere, bir daha denemedim."
+O0112,odak grup,B,sonrası,T3-K4,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Burası artık benim mahallem değil. Evim burada ama mahallem değil. İkisi ayrı şey.
+O0113,odak grup,B,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+O0114,odak grup,C,sonrası,KODLANMADI,Kodlanmadı,0,Biz gidince yerimize kimler geldi görmedim. Gelenler de bizi bilmiyor.
+O0115,odak grup,C,sonrası,T2-K5,Komşuluk ağlarının çözülmesi ve atomize yaşam,3,Aidatı tartışırken ikiye ayrıldık: hak sahipleri ve sonradan alanlar. Toplantıda iki ayrı tarafa oturuyoruz.
+O0116,odak grup,D,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,3,"Yükseklik beni rahatsız etmiyor, manzara güzel. Ama rüzgâr konusunda haklılar, girişte durulmuyor."
+O0117,odak grup,D,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Ortak alanda bir masa var, hiç kimsenin oturduğunu görmedim. Masayı koymak yetmiyor demek ki."
+O0118,odak grup,D,sonrası,T1-K5,Mekânsal yabancılaşma ve güvensizlik,1,"Ortak alanlar güzel düzenlenmiş, ben memnunum. Ama kimse kullanmıyor, boş duruyor çoğu zaman."
+O0119,odak grup,E,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Taziye listesi tutuyoruz. Eskiden bir ölüm olsa bütün mahalle bilirdi; şimdi apartmandan haberi olmuyor.
+O0120,odak grup,E,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Cami yerinde duruyor, tek o kaldı. Cuma günü oraya gidiyorum, eski yüzleri orada görüyorum."
+O0121,odak grup,E,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,"Mahalle hafızası somut nesnelere bağlıydı: çeşme, fırın, kahve. Üçü de yok."
+O0122,odak grup,E,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+O0123,odak grup,A,sonrası,T4-K3,Ekonomik baskı ve yerinden edilme,1,"Bana söylenen daire ile verilen daire aynı değildi. İtiraz ettim, 'proje değişti' dediler."
+O0124,odak grup,A,sonrası,KODLANMADI,Kodlanmadı,0,"Bakkal gitti, manav gitti, kahve gitti. Üçü de gidince sokakta konuşacak yer kalmadı."
+O0125,odak grup,D,sonrası,T4-K5,Ekonomik baskı ve yerinden edilme,2,Yatırım olarak baktığımda doğru karar verdim. İki yılda ciddi değerlendi.
+O0126,odak grup,D,sonrası,T5-K4,Kuşaklar arası ayrışma ve konforun kazananları,1,Oyun alanı temiz ve kapalı. Çocuk için bundan iyisi yok.
+O0127,odak grup,D,sonrası,T5-K1,Kuşaklar arası ayrışma ve konforun kazananları,1,Otopark en büyük kazanç. Eskiden arabayı nereye koyacağım diye dolanırlarmış.
+O0128,odak grup,C,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,1,Markette kasiyer bile her hafta değişiyor. Tanıdık bir yüz görmek zor oldu.
+O0129,odak grup,C,sonrası,T1-K3,Mekânsal yabancılaşma ve güvensizlik,2,"Müşterilerin yarısı yabancı artık. Veresiye defteri tutamıyorum, çünkü adamı tanımıyorum."
+O0130,odak grup,C,sonrası,T2-K1,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,Alt komşumun adını bilmiyorum. Bir buçuk yıldır altımda oturuyor.
+O0131,odak grup,C,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,"Şimdi kime bırakacağım? Kreşe veriyorum, maaşımın üçte biri oraya gidiyor."
+N028,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,Muhtarlıkta bir saat bekledim: gelen yedi kişiden beşi aidat ve icra konusunda geldi.
+N015,alan notu,—,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Eski bakkalın yerindeki kuaförde, duvarda mahallenin 1998 tarihli bir fotoğrafı asılı."
+N031,alan notu,—,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte kart okutma sırası oluştu; iki yaşlı sakin kartı bulamadı, güvenlik elle açtı. Bu üçüncü kez gördüğüm durum."
+N041,alan notu,—,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Bloklar arası geçitte rüzgâr çok sert; iki kişi yolunu değiştirip dolaştı.
+N026,alan notu,—,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Bloklar arası geçitte rüzgâr çok sert; iki kişi yolunu değiştirip dolaştı.
+N005,alan notu,—,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,1,"Kahvede altı masa dolu, hepsi 60 yaş üstü erkek. Genç yok, kadın yok."
+N006,alan notu,—,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Esnaf bana veresiye defterini gösterdi: son kayıt on dört ay önce.
+N022,alan notu,—,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Site yönetim panosunda 'kapı önünde oturmak yasaktır' uyarısı asılı. Altına el yazısıyla not düşülmüş.
+N012,alan notu,—,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Markette üç müşteri izledim; üçü de kasiyerle selamlaşmadı, konuşma olmadı."
+N018,alan notu,—,sonrası,KODLANMADI,Kodlanmadı,0,"Parkta on bir çocuk oynuyor; veliler birbirinden ayrı oturuyor, aralarında konuşma yok."
+N020,alan notu,—,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,1,"Kahvede altı masa dolu, hepsi 60 yaş üstü erkek. Genç yok, kadın yok."
+N009,alan notu,—,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"WhatsApp grubunda bugün 63 mesaj aktı. Konular: otopark, aidat, su kesintisi. Komşuluk içerikli mesaj yok."
+N002,alan notu,—,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Akşam 18.40. Lobide altı kişi var, hiçbiri konuşmuyor. Asansör gelene kadar beş kişi telefona baktı."
+N033,alan notu,—,sonrası,KODLANMADI,Kodlanmadı,0,"Parkta on bir çocuk oynuyor; veliler birbirinden ayrı oturuyor, aralarında konuşma yok."
+N017,alan notu,—,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Akşam 18.40. Lobide altı kişi var, hiçbiri konuşmuyor. Asansör gelene kadar beş kişi telefona baktı."
+N021,alan notu,—,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Esnaf bana veresiye defterini gösterdi: son kayıt on dört ay önce.
+N016,alan notu,—,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte kart okutma sırası oluştu; iki yaşlı sakin kartı bulamadı, güvenlik elle açtı. Bu üçüncü kez gördüğüm durum."
+N010,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,"Aidat toplantısında salon ikiye ayrılmış oturdu: hak sahipleri solda, sonradan alanlar sağda."
+N023,alan notu,—,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Eski sokak hattında yürüdüm. Çeşmenin yeri artık trafo; yaşlı bir sakin oradan geçerken durup baktı.
+N032,alan notu,—,sonrası,T2-K4,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"Akşam 18.40. Lobide altı kişi var, hiçbiri konuşmuyor. Asansör gelene kadar beş kişi telefona baktı."
+N038,alan notu,—,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Eski sokak hattında yürüdüm. Çeşmenin yeri artık trafo; yaşlı bir sakin oradan geçerken durup baktı.
+N030,alan notu,—,sonrası,T3-K3,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,"Eski bakkalın yerindeki kuaförde, duvarda mahallenin 1998 tarihli bir fotoğrafı asılı."
+N007,alan notu,—,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Site yönetim panosunda 'kapı önünde oturmak yasaktır' uyarısı asılı. Altına el yazısıyla not düşülmüş.
+N036,alan notu,—,sonrası,T2-K3,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Esnaf bana veresiye defterini gösterdi: son kayıt on dört ay önce.
+N035,alan notu,—,sonrası,T5-K3,Kuşaklar arası ayrışma ve konforun kazananları,1,"Kahvede altı masa dolu, hepsi 60 yaş üstü erkek. Genç yok, kadın yok."
+N011,alan notu,—,sonrası,T1-K4,Mekânsal yabancılaşma ve güvensizlik,1,Bloklar arası geçitte rüzgâr çok sert; iki kişi yolunu değiştirip dolaştı.
+N029,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Okul çıkışında veliler kümelenmiş konuşuyor. Gördüğüm en canlı karşılaşma burası.
+N037,alan notu,—,sonrası,T2-K2,Komşuluk ağlarının çözülmesi ve atomize yaşam,1,Site yönetim panosunda 'kapı önünde oturmak yasaktır' uyarısı asılı. Altına el yazısıyla not düşülmüş.
+N027,alan notu,—,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Markette üç müşteri izledim; üçü de kasiyerle selamlaşmadı, konuşma olmadı."
+N044,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Okul çıkışında veliler kümelenmiş konuşuyor. Gördüğüm en canlı karşılaşma burası.
+N043,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,Muhtarlıkta bir saat bekledim: gelen yedi kişiden beşi aidat ve icra konusunda geldi.
+N040,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,"Aidat toplantısında salon ikiye ayrılmış oturdu: hak sahipleri solda, sonradan alanlar sağda."
+N004,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,Cami avlusunda cuma sonrası on beş dakika süren bir toplanma oldu. Burası hâlâ karşılaşma yeri.
+N003,alan notu,—,sonrası,KODLANMADI,Kodlanmadı,0,"Parkta on bir çocuk oynuyor; veliler birbirinden ayrı oturuyor, aralarında konuşma yok."
+N013,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,2,Muhtarlıkta bir saat bekledim: gelen yedi kişiden beşi aidat ve icra konusunda geldi.
+N024,alan notu,—,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"WhatsApp grubunda bugün 63 mesaj aktı. Konular: otopark, aidat, su kesintisi. Komşuluk içerikli mesaj yok."
+N039,alan notu,—,sonrası,T2-K6,Komşuluk ağlarının çözülmesi ve atomize yaşam,2,"WhatsApp grubunda bugün 63 mesaj aktı. Konular: otopark, aidat, su kesintisi. Komşuluk içerikli mesaj yok."
+N001,alan notu,—,sonrası,T1-K2,Mekânsal yabancılaşma ve güvensizlik,2,"Girişte kart okutma sırası oluştu; iki yaşlı sakin kartı bulamadı, güvenlik elle açtı. Bu üçüncü kez gördüğüm durum."
+N008,alan notu,—,sonrası,T3-K1,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,2,Eski sokak hattında yürüdüm. Çeşmenin yeri artık trafo; yaşlı bir sakin oradan geçerken durup baktı.
+N042,alan notu,—,sonrası,T4-K4,Ekonomik baskı ve yerinden edilme,1,"Markette üç müşteri izledim; üçü de kasiyerle selamlaşmadı, konuşma olmadı."
+N025,alan notu,—,sonrası,T4-K1,Ekonomik baskı ve yerinden edilme,1,"Aidat toplantısında salon ikiye ayrılmış oturdu: hak sahipleri solda, sonradan alanlar sağda."
+N034,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,Cami avlusunda cuma sonrası on beş dakika süren bir toplanma oldu. Burası hâlâ karşılaşma yeri.
+N019,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,3,Cami avlusunda cuma sonrası on beş dakika süren bir toplanma oldu. Burası hâlâ karşılaşma yeri.
+N014,alan notu,—,sonrası,T3-K5,Eski hafızanın silinmesi ve mekânsal aidiyet kaybı,1,Okul çıkışında veliler kümelenmiş konuşuyor. Gördüğüm en canlı karşılaşma burası.
