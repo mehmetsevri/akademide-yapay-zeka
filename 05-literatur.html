@@ -226,6 +226,250 @@ konunuz için kalıbı koruyup terimleri değiştirin.</p>
 <p>Alanınız listede yoksa, size en yakın olanın yapısına bakın. Bir
 kimya sorgusuyla bir ilahiyat sorgusu aynı iskelete oturur; değişen
 yalnız terimlerdir ve hangi veri tabanında arandığıdır.</p>
+<h3>Dizgi iki adımda üretilir</h3>
+<p>Aşağıdaki dizgilerin hiçbiri doğrudan yazılmadı. Her biri iki adımlı
+bir üretimden geçti ve ikinci adımı yapay zekâ yaptı:</p>
+<ol class="adimlar"><li><p><strong>Konuyu çerçeveye oturtmak.</strong> Kabaca belirlenmiş bir konu —
+"phishing tespiti üzerine bir derleme yazayım" — dizgiye çevrilemez.
+Önce bileşenlerine ayrılır. Bunun için kullanılan çerçeve <strong>PICOC</strong>'tur:
+Population, Intervention, Comparison, Outcome, Context.</p>
+<p><strong>Çerçeveyi veri tabanının diline çevirmek.</strong> Aynı PICOC, Web of
+Science'ta <code>TS=()</code>, Scopus'ta <code>TITLE-ABS-KEY()</code>, PubMed'de <code>[MeSH
+Terms]</code> ve <code>[tiab]</code>, EBSCO'da <code>SU</code>/<code>TI</code>/<code>AB</code> alan etiketleriyle
+yazılır. Kavramlar aynı, sözdizimi başka.</p></li></ol>
+<p>İlk adım sizin işiniz; kararı siz verirsiniz. İkinci adım mekanik bir
+çeviridir ve modele devredilebilir.</p>
+<h4>Adım 1 — Kabaca belirlenmiş konudan PICOC</h4>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Konuyu PICOC çerçevesine oturtmak</span>
+<span class="arac">Tarama</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme protokolü yazan bir araştırma kütüphanecisisin.
+PICOC çerçevesine ve veri tabanı tarama sözdizimlerine hâkimsin.
+
+KAYNAK
+Konu (kabaca): [bir cümleyle konunuz]
+Alan: [alan adı]
+Elinizdeki ön bilgi: [varsa birkaç anahtar çalışma ya da terim]
+
+GÖREV
+Konuyu PICOC bileşenlerine ayır ve her bileşen için terim kümesi
+öner.
+  P — Population / Problem : kim ya da ne inceleniyor
+  I — Intervention         : hangi yöntem, müdahale ya da yaklaşım
+  C — Comparison           : neyle karşılaştırılıyor (yoksa &quot;yok&quot; yaz)
+  O — Outcome              : hangi sonuç ölçülüyor
+  C — Context              : yıl aralığı, yayın türü, dil, alan
+
+BİÇİM
+Önce beş satırlık PICOC tablosu: bileşen | bu çalışmadaki karşılığı.
+Sonra her bileşen için terim kümesi: eş anlamlılar, kısaltmalar,
+İngiliz/Amerikan yazım varyantları, kök budama gereken yerler.
+Her kümenin yanına terim sayısını yaz.
+
+SINIR
+- Konuyu genişletme. Benim sormadığım bir alt başlığı eklemek yerine
+  &quot;bunu da kapsamak ister misiniz&quot; diye sor.
+- Comparison bileşeni her çalışmada olmaz; zorlama, yoksa &quot;yok&quot; yaz.
+- Terim kümesine, konuya yakın görünen ama farklı bir olguyu
+  adlandıran terimleri koyma. Koyduysan gerekçesini yaz.
+
+DENETİM
+Her kümenin terim sayısını ve toplamı yaz. Toplam 60&#x27;ı aşarsa hangi
+terimlerin çıkarılabileceğini belirt. Ayrıca: hangi bileşen zayıf
+kaldı, neden?</pre></div>
+
+<div class="cikti">
+<header><span class="rozet">Model yanıtı</span>
+<span class="ad">Mühendislik örneği için üretilen PICOC</span>
+<span class="damga">Claude Opus 5 · 2 Kasım 2026</span></header>
+<div class="govde-ic"><div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Bu çalışmadaki karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong> — Problem</td>
+<td>Kimlik avı (phishing) ve kötücül URL'ler</td>
+</tr>
+<tr>
+<td><strong>I</strong> — Intervention</td>
+<td>URL'nin sözcüksel özniteliklerine dayalı makine öğrenmesi sınıflandırıcıları</td>
+</tr>
+<tr>
+<td><strong>C</strong> — Comparison</td>
+<td>İçerik ya da ağ tabanlı öznitelik kullanan yaklaşımlar; kara liste temelli yöntemler</td>
+</tr>
+<tr>
+<td><strong>O</strong> — Outcome</td>
+<td>Tespit başarımı: F1, AUC, kesinlik, duyarlılık, doğruluk</td>
+</tr>
+<tr>
+<td><strong>C</strong> — Context</td>
+<td>2019–2026 · hakemli makale, derleme ve bildiri · İngilizce · bilgisayar ve mühendislik alanları</td>
+</tr>
+</tbody>
+</table></div>
+<p>Terim kümeleri — P: 8 · I: 9 · M (yöntem): 10 · O: 6 · toplam 33.</p>
+<p>Zayıf kalan bileşen: <strong>Comparison.</strong> Karşılaştırma terimleri
+("blacklist", "content-based") dizgiye AND ile eklenirse, bunları
+anmayan ama konuya giren çalışmalar düşer. Öneri: karşılaştırmayı
+dizgiye koymayın, seçim ölçütüne koyun.</p></div></div>
+
+<aside class="not "><span class="not-baslik">Comparison&#x27;ı dizgiye koymamak neden doğru</span><p>Yukarıdaki çıktının son paragrafı bu bölümün en işe yarar
+ayrıntısıdır. PICOC'un beş bileşeni <strong>protokolün</strong> çerçevesidir;
+<strong>dizginin</strong> çerçevesi değildir.</p>
+<p>Dizgiye genellikle P, I ve O girer. Comparison, çoğu makalede
+özette adı anılmadan yapılır: bir çalışma kendi yöntemini rastgele
+ormanla karşılaştırır ama özette "baseline" demez. Comparison'ı AND
+ile dizgiye koyarsanız, tam da aradığınız çalışmaları elersiniz.</p>
+<p>Context ise dizgiye süzgeç olarak girer: <code>PY=</code>, <code>DT=</code>, <code>LA=</code>.</p></aside>
+<h4>Adım 2 — PICOC'tan veri tabanına özgü dizgi</h4>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<span class="arac">Tarama</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme taraması yürüten bir araştırma kütüphanecisisin.
+Web of Science, Scopus, PubMed, IEEE Xplore, EBSCO (ERIC, PsycINFO,
+EconLit) ve ProQuest sözdizimlerini biliyorsun.
+
+KAYNAK
+PICOC tablosu ve terim kümeleri: [Adım 1&#x27;in çıktısı]
+Hedef veri tabanları: [liste — her biri için ayrı dizgi istiyorum]
+
+GÖREV
+Her veri tabanı için çalıştırılabilir bir tarama dizgisi yaz.
+Yapı her yerde aynı olsun: küme içi OR, kümeler arası AND.
+Context bileşenini o veri tabanının süzgeç alanlarıyla ver.
+
+BİÇİM
+- Her veri tabanı için: veri tabanının adı, ardından kod bloğu
+  içinde dizgi.
+- Dizgiyi satırlara böl ve girintile; tek satırda yazma.
+- Kullandığın her alan etiketini (TS, TITLE-ABS-KEY, [tiab], SU…)
+  ilk geçtiği yerde bir yorum satırıyla açıkla.
+- Veri tabanına özgü bir incelik varsa (karakter sınırı, kontrollü
+  sözlük, arayüz farkı) dizginin altına iki cümleyle yaz.
+
+SINIR
+- Terim ekleme ya da çıkarma. Adım 1&#x27;de onayladığım kümeyi aynen
+  kullan; bir terimin o veri tabanında sorun çıkaracağını
+  düşünüyorsan ekleme yapma, UYARI olarak yaz.
+- Kök budamayı (*) her terime uygulama. Yalnız gerçekten çekim eki
+  alan köklerde kullan; tırnak içinde kök budamanın çalışmadığı veri
+  tabanlarını belirt.
+- Çalıştırmadığın bir dizgi için sonuç sayısı tahmin etme.
+- Kontrollü sözlük terimi (MeSH, Emtree, ERIC Thesaurus) uyduruyorsan
+  bunu yapma; emin değilsen [DOĞRULA: terim] yaz.
+
+DENETİM
+Her dizgi için: kaç kavram kümesi var, her kümede kaç terim var,
+toplam karakter sayısı kaç. Web of Science için 6.000 karakter
+sınırını aşan varsa söyle. Ayrıca hangi veri tabanında hangi
+bileşeni tam karşılayamadığını yaz.</pre></div>
+
+<aside class="not uyari"><span class="not-baslik">PICOC her alana oturmaz</span><p>PICOC, klinik müdahale çalışmaları için geliştirildi. Bir ilaç
+denemesinde beş bileşen de doludur. Beşerî bilimlerde çoğu zaman
+Intervention da Comparison da yoktur: Osmanlı salnamelerindeki
+maarif kayıtlarını inceleyen bir çalışmada "müdahale" diye bir şey
+yoktur.</p>
+<p>Bu alanlarda çerçeveyi zorlamak yerine değiştirin. Nitel araştırmalar
+için <strong>SPIDER</strong> (Sample, Phenomenon of Interest, Design, Evaluation,
+Research type) kullanılır. Tarih ve filoloji için daha yalın bir
+dörtlü işe yarar: <strong>konu · kaynak türü · dönem · dil.</strong> Aşağıdaki
+beşerî bilimler örneği bu dörtlüyle kuruldu.</p>
+<p>Çerçeve amaç değildir; terim kümelerini eksiksiz çıkarmaya yarayan
+bir kontrol listesidir.</p></aside>
+<h3>Mühendislik — konu ve çerçeve</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Kimlik avı ve kötücül URL'ler</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>URL'nin sözcüksel özniteliklerine dayalı makine öğrenmesi</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Dizgiye konmadı — seçim ölçütüne taşındı</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Tespit başarımı: F1, AUC, kesinlik, duyarlılık</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>2019–2026 · makale, derleme, bildiri · İngilizce · COMP + ENGI</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Mühendislik — üç veri tabanı</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Sistematik derleme taraması yürüten bir araştırma kütüphanecisisin.
+Web of Science, Scopus ve IEEE Xplore sözdizimlerini biliyorsun.
+
+KAYNAK
+PICOC:
+  P  phishing, kötücül URL
+  I  URL sözcüksel öznitelikleri + makine öğrenmesi
+  C  yok (seçim ölçütünde ele alınacak)
+  O  tespit başarımı: F1, AUC, precision, recall, accuracy
+  C  2019-2026 · Article, Review, Proceedings Paper · İngilizce
+     · Scopus alanı: COMP, ENGI
+
+Terim kümeleri:
+  P: phishing, &quot;phishing URL*&quot;, &quot;malicious URL*&quot;, &quot;fraudulent
+     website*&quot;, &quot;fake website*&quot;, spoofed, &quot;credential theft&quot;,
+     &quot;web-based attack*&quot;
+  I: &quot;lexical feature*&quot;, &quot;URL feature*&quot;, &quot;character-level&quot;,
+     &quot;string-based&quot;, &quot;URL string&quot;, n-gram, trigram,
+     &quot;static feature*&quot;, &quot;URL-based&quot;
+  M: &quot;machine learning&quot;, ML, &quot;deep learning&quot;, classif*,
+     &quot;random forest&quot;, &quot;support vector&quot;, SVM, &quot;neural network*&quot;,
+     &quot;gradient boost*&quot;, transformer*
+  O: detect*, identif*, predict*, F1, AUC, precision, recall,
+     accuracy
+
+Hedef veri tabanları: Web of Science (Core Collection), Scopus,
+IEEE Xplore (Command Search)
+
+GÖREV
+Her veri tabanı için çalıştırılabilir dizgi yaz. Küme içi OR,
+kümeler arası AND. Context&#x27;i o veri tabanının süzgeç alanlarıyla ver.
+
+BİÇİM
+Veri tabanı adı, ardından kod bloğu. Dizgiyi girintileyerek yaz.
+Her alan etiketini ilk geçtiği yerde açıkla. Veri tabanına özgü bir
+incelik varsa altına iki cümle yaz.
+
+SINIR
+- Terim ekleme ya da çıkarma.
+- IEEE Xplore komut aramasının yıl alanını kabul etmeyebileceğini
+  hesaba kat; yıl sınırını komuta gömme, süzgeçten eklenmesini söyle.
+- Kök budamayı yalnız çekim eki alan köklerde kullan.
+- Sonuç sayısı tahmin etme.
+
+DENETİM
+Her dizgi için küme sayısı, küme başına terim sayısı ve toplam
+karakter sayısı. Web of Science&#x27;ta 6.000 karakteri aşan varsa söyle.</pre></div>
 <h3>Mühendislik — Web of Science</h3>
 <pre class="yalin">TS=(
   ( phishing OR &quot;phishing URL*&quot; OR &quot;malicious URL*&quot; OR
@@ -281,6 +525,87 @@ AND
 eklenir. Komut aramasında yıl sınırı yazmak yerine süzgeç kullanmak
 güvenlidir; komut ekranının yıl alanını kabul edip etmediği arayüz
 sürümüne göre değişir.</p>
+<h3>Eğitim bilimleri — konu ve çerçeve</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Yükseköğretimde öğrenci ders değerlendirmeleri (SET)</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Algılanan güçlük, iş yükü ve devamın değerlendirme puanına etkisi</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Ders ve öğretim elemanı özellikleri denetlenmiş modeller</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Yanlılık, geçerlik, güvenirlik, faktör yapısı</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>2015–2026 · makale ve derleme · eğitim ve eğitim psikolojisi</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri — WoS, ERIC, PsycINFO</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Eğitim bilimlerinde sistematik derleme taraması yürüten bir araştırma
+kütüphanecisisin. EBSCO arayüzünün alan etiketlerini ve ERIC ile
+PsycINFO&#x27;nun kontrollü sözlüklerini biliyorsun.
+
+KAYNAK
+PICOC:
+  P  yükseköğretimde öğrenci ders değerlendirmeleri
+  I  algılanan ders güçlüğü, iş yükü, devam
+  C  ders ve öğretim elemanı özellikleri denetlenmiş modeller
+  O  yanlılık, geçerlik, güvenirlik, faktör yapısı
+  C  2015-2026 · Article, Review · İngilizce
+     · WoS kategorileri: Education &amp; Educational Research;
+       Psychology, Educational
+
+Terim kümeleri:
+  P: &quot;student evaluation of teaching&quot;, &quot;course evaluation*&quot;,
+     &quot;teaching evaluation*&quot;, SET, &quot;student rating*&quot;,
+     &quot;student feedback&quot;, &quot;end-of-course survey*&quot;
+  I: &quot;perceived difficulty&quot;, &quot;course difficulty&quot;, workload,
+     &quot;academic rigor&quot;, rigour, attendance, &quot;class attendance&quot;,
+     engagement
+  O: bias*, valid*, reliab*, &quot;factor structure&quot;,
+     &quot;measurement invariance&quot;, predict*, &quot;multilevel model*&quot;
+
+Hedef veri tabanları: Web of Science, ERIC (EBSCO), PsycINFO (APA)
+
+GÖREV
+Üç veri tabanı için dizgi yaz. ERIC ve PsycINFO&#x27;da kontrollü sözlük
+terimlerini (DE) serbest metinle (TI, AB) OR ile birlikte kullan.
+
+BİÇİM
+Veri tabanı adı, ardından dizgi. DE, TI, AB, PT, PY etiketlerini ilk
+geçtiklerinde açıkla.
+
+SINIR
+- Kontrollü sözlük terimi uydurma. ERIC Thesaurus ya da APA
+  Thesaurus&#x27;ta karşılığından emin değilsen [DOĞRULA: terim] yaz.
+- &quot;SET&quot; kısaltmasının başka anlamları olduğunu hesaba kat; tek
+  başına bırakma, uyarı yaz.
+- Hakemlilik süzgecinin EBSCO&#x27;da alan etiketiyle değil arayüzdeki
+  kutuyla uygulandığını belirt.
+
+DENETİM
+Her dizgi için küme ve terim sayısı. Hangi veri tabanında hangi
+bileşeni kontrollü sözlükle karşılayamadığını yaz.</pre></div>
 <h3>Eğitim bilimleri — Web of Science</h3>
 <pre class="yalin">TS=(
   ( &quot;student evaluation of teaching&quot; OR &quot;course evaluation*&quot; OR
@@ -321,6 +646,80 @@ tek başına yeterli olmadığını göstermiştir.
 Yeri şudur: <strong>bulduğunuzu doğrulamak.</strong> Ana taramanızı yaptıktan
 sonra Scholar'da ilk 100–200 sonuca bakın; sizin listenizde olmayan
 önemli bir çalışma çıkıyorsa dizginiz eksiktir.</p></aside>
+<h3>Kimya — konu ve çerçeve</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Sulu çözeltide katyonik boyar madde kirliliği</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Tarımsal atıktan üretilmiş aktif karbon ve biyokömür adsorbanlar</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Ticari aktif karbon</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>Adsorpsiyon kapasitesi, giderim verimi, izoterm ve kinetik uyumu</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>2015–2026 · makale ve derleme · İngilizce · CENG, CHEM, ENVI</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Kimya — WoS ve Scopus</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Çevre ve kimya mühendisliği literatüründe tarama yürüten bir araştırma
+kütüphanecisisin.
+
+KAYNAK
+PICOC:
+  P  sulu çözeltide katyonik boyar madde kirliliği
+  I  tarımsal atık kaynaklı aktif karbon / biyokömür adsorban
+  C  ticari aktif karbon
+  O  adsorpsiyon kapasitesi, giderim verimi, izoterm ve kinetik uyumu
+  C  2015-2026 · Article, Review · İngilizce
+     · Scopus alanları: CENG, CHEM, ENVI
+
+Terim kümeleri:
+  P/I: &quot;activated carbon&quot;, biochar, &quot;carbonaceous adsorbent&quot;,
+       &quot;agricultural waste&quot;, &quot;tea waste&quot;, &quot;biomass-derived&quot;
+  I2 : adsorpt*, &quot;dye removal&quot;, &quot;methylene blue&quot;, &quot;cationic dye&quot;,
+       decoloriz*, decolouris*
+  O  : isotherm*, kinetic*, Langmuir, Freundlich,
+       &quot;adsorption capacity&quot;, &quot;removal efficiency&quot;
+
+Hedef veri tabanları: Web of Science, Scopus
+
+GÖREV
+İki veri tabanı için dizgi yaz.
+
+BİÇİM
+Veri tabanı adı, ardından dizgi.
+
+SINIR
+- İngiliz ve Amerikan yazım varyantlarının ikisini de koru
+  (decoloriz*/decolouris*, sulfate/sulphate). Birini atma.
+- Bileşik adlarını yalnız yaygın adıyla bırakma; ticari ad, Colour
+  Index adı ve CAS numarasının da kullanıldığını dizginin altına yaz.
+- Terim ekleme.
+
+DENETİM
+Küme ve terim sayıları. Hangi yazım varyantının hangi kümede
+eksik kaldığını denetle ve söyle.</pre></div>
 <h3>Kimya — Web of Science ve Scopus</h3>
 <pre class="yalin">Web of Science
 TS=(
@@ -354,6 +753,76 @@ geçerli.</p>
 mavisi için <code>"methylene blue"</code> yeterli olmayabilir; <code>"basic blue 9"</code>
 ve CAS numarası (<code>61-73-4</code>) de kullanılır. Kimyasal veri
 tabanlarında (SciFinder, Reaxys) arama CAS numarasıyla yapılır.</p></aside>
+<h3>Tıp ve sağlık — konu ve çerçeve</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Tip 2 diyabetli erişkinler</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Telefon, SMS ve mHealth hatırlatma sistemleri</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Olağan bakım</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>İlaca uyum: adherence, compliance, persistence</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>2015–2026 · randomize kontrollü ve klinik denemeler · İngilizce</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Tıp ve sağlık — PubMed</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Klinik sistematik derleme taraması yürüten bir tıp kütüphanecisisin.
+MeSH ağacına ve PubMed sözdizimine hâkimsin.
+
+KAYNAK
+PICOC:
+  P  tip 2 diyabetli erişkinler
+  I  telefon / SMS / mHealth hatırlatma sistemleri
+  C  olağan bakım
+  O  ilaca uyum (adherence, compliance, persistence)
+  C  2015-2026 · Randomized Controlled Trial, Clinical Trial
+     · İngilizce
+
+Hedef veri tabanı: PubMed
+
+GÖREV
+Çalıştırılabilir bir PubMed dizgisi yaz. Her kavram kümesini İKİ
+katmanla kur: MeSH terimi ve serbest metin [tiab], OR ile bağlı.
+
+BİÇİM
+Tek kod bloğu. [MeSH Terms], [tiab], [pt], [lang], [dp]
+etiketlerini ilk geçtiklerinde açıkla.
+
+SINIR
+- MeSH terimi UYDURMA. Her MeSH terimini yazarken ağaçta gerçekten
+  var olduğundan emin ol; emin değilsen [DOĞRULA: terim] yaz.
+- Comparison bileşenini (olağan bakım) dizgiye AND ile koyma:
+  kontrol kolu özette adlandırılmaz, koyarsan uygun çalışmaları
+  elersin. Seçim ölçütüne bırak.
+- MeSH&#x27;in yeni makaleleri kaçırdığını, serbest metnin onları
+  yakaladığını dizginin altında açıkla.
+
+DENETİM
+Kaç MeSH terimi, kaç serbest metin terimi kullandın; hangi kümede
+MeSH karşılığı bulamadın?</pre></div>
 <h3>Tıp ve sağlık — PubMed</h3>
 <pre class="yalin">( &quot;Diabetes Mellitus, Type 2&quot;[MeSH Terms]
   OR &quot;type 2 diabetes&quot;[tiab] OR &quot;T2DM&quot;[tiab] )
@@ -378,6 +847,83 @@ terimi (kontrollü sözlük) <strong>ve</strong> serbest metin <code>[tiab]</cod
 metin onları yakalar. İkisi OR ile bağlanır.</p>
 <p>Benzer bir kontrollü sözlük EMBASE'de <strong>Emtree</strong>, PsycINFO'da <strong>APA
 Thesaurus</strong> adını alır.</p></aside>
+<h3>Beşerî bilimler — konu ve çerçeve</h3>
+<p>Burada PICOC kullanılmadı. Müdahale ve karşılaştırma bileşenleri bu
+çalışmalarda yok; zorlanırsa çerçeve boş satırlarla dolar. Yerine dört
+bileşenli daha yalın bir çerçeve kuruldu.</p>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Tarih örneği</th>
+<th>İlahiyat örneği</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Konu</strong></td>
+<td>Osmanlı vilayet salnamelerindeki maarif kayıtları</td>
+<td>Hadis şerhlerinde garîb hadis kavramı</td>
+</tr>
+<tr>
+<td><strong>Kaynak türü</strong></td>
+<td>Makale, kitap bölümü, tez</td>
+<td>Makale, kitap bölümü, tez</td>
+</tr>
+<tr>
+<td><strong>Dönem</strong></td>
+<td>2000–2026 (yayın) · 1867–1918 (konu)</td>
+<td>Sınır yok</td>
+</tr>
+<tr>
+<td><strong>Dil</strong></td>
+<td>Türkçe, Osmanlıca, İngilizce</td>
+<td>Türkçe, Arapça</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Beşerî bilimler — WoS AHCI, TR Dizin, İSAM</span>
+<span class="ad">Dört bileşenli çerçeveden dizgi</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Beşerî bilimlerde literatür taraması yürüten bir araştırma
+kütüphanecisisin. Türkçe ve Osmanlıca kaynaklarda transliterasyon
+sorunlarını biliyorsun.
+
+KAYNAK
+Çerçeve (PICOC değil — bu alanda müdahale ve karşılaştırma yok):
+  Konu        Osmanlı vilayet salnamelerindeki maarif kayıtları
+  Kaynak türü makale + kitap bölümü + tez
+  Dönem       yayın 2000-2026 · konu 1867-1918
+  Dil         Türkçe, Osmanlıca, İngilizce
+
+İkinci konu: hadis şerhlerinde garîb hadis kavramı (Türkçe, Arapça).
+
+Hedef veri tabanları: Web of Science (Arts &amp; Humanities Citation
+Index), TR Dizin / DergiPark, İSAM Veri Tabanı
+
+GÖREV
+Her kaynak için dizgi yaz. Türkçe veri tabanlarında Boole
+işleçlerinin Türkçe karşılıklarını (VE, VEYA) kullan.
+
+BİÇİM
+Veri tabanı adı, ardından dizgi. Türkçe arayüzlerde alan adlarını
+Türkçe yaz.
+
+SINIR
+- Kök budama (*) Türkçe ve Osmanlıca terimlerde güvenilmez: fark
+  kelimenin ortasında olabilir (salname / sâlnâme / salnâme). Kök
+  budama yerine yazım varyantlarını tek tek yaz.
+- Arapça terimlerde harf çevrimi varyantlarını (garib / garîb /
+  ġarîb) ayrı ayrı ver.
+- Yalnız dergi makalesi tarayan bir dizinin bu alanda yetersiz
+  kaldığını; kitap, kitap bölümü ve tezlerin ayrıca taranması
+  gerektiğini dizgilerin altına yaz.
+
+DENETİM
+Her dizgide kaç yazım varyantı var? Hangi kaynak türü hangi veri
+tabanında kapsanmıyor — açıkça listele.</pre></div>
 <h3>Beşerî bilimler — tarih ve ilahiyat</h3>
 <p>Bu alanlarda tarama iki bakımdan farklıdır. Birincisi, kaynakların
 önemli bir bölümü <strong>kitap</strong> ve <strong>kitap bölümüdür</strong>; yalnız dergi
@@ -415,6 +961,82 @@ yayınevi kataloglarını ayrı taramanız gerekir.</p>
 standart değildir: aynı kelime <code>salname</code>, <code>sâlnâme</code>, <code>salnâme</code> diye
 yazılabilir. Hepsini ayrı ayrı deneyin; kök budama burada işe
 yaramaz, çünkü fark kelimenin ortasındadır.</p></aside>
+<h3>Ekonomi ve işletme — konu ve çerçeve</h3>
+<div class="tablo-sar"><table>
+<thead>
+<tr>
+<th>Bileşen</th>
+<th>Karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Küçük işletmeler ve KOBİ'ler</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Asgari ücret artışı</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Artış öncesi dönem ya da etkilenmeyen işletmeler</td>
+</tr>
+<tr>
+<td><strong>O</strong></td>
+<td>İstihdam, işgücü talebi, iş kaybı</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>2010–2026 · JEL J38, J23, J31 · ECON ve BUSI alanları</td>
+</tr>
+</tbody>
+</table></div>
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Ekonomi ve işletme — EconLit ve Scopus</span>
+<span class="ad">PICOC&#x27;u veri tabanı dizgisine çevirmek</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+İktisat literatüründe sistematik tarama yürüten bir araştırma
+kütüphanecisisin. JEL sınıflama kodlarını ve EBSCO alan etiketlerini
+biliyorsun.
+
+KAYNAK
+PICOC:
+  P  küçük işletmeler, KOBİ&#x27;ler
+  I  asgari ücret artışı
+  C  artış öncesi dönem ya da etkilenmeyen işletmeler
+  O  istihdam, işgücü talebi, iş kaybı
+  C  2010-2026 · JEL: J38 ücret politikası, J23 istihdam talebi,
+     J31 ücret düzeyi · Scopus alanları: ECON, BUSI
+
+Terim kümeleri:
+  P: &quot;small firm*&quot;, &quot;small business*&quot;, SME, &quot;micro enterprise*&quot;
+  I: &quot;minimum wage&quot;, &quot;wage floor&quot;, &quot;asgari ücret&quot;
+  O: employment, &quot;job loss&quot;, &quot;labor demand&quot;, &quot;labour demand&quot;,
+     &quot;job destruction&quot;
+
+Hedef veri tabanları: EconLit (EBSCO), Scopus
+
+GÖREV
+İki veri tabanı için dizgi yaz. EconLit&#x27;te JEL kodlarını da süzgeç
+olarak ekle.
+
+BİÇİM
+Veri tabanı adı, ardından dizgi. SU, TI, AB, JE, PY etiketlerini
+açıkla.
+
+SINIR
+- JEL kodunun alan etiketi arayüze göre değişir (EBSCO&#x27;da JE,
+  ProQuest sürümünde CC). İkisini de yaz ve kullanıcının kendi
+  arayüzünde doğrulamasını söyle.
+- &quot;labor&quot; ve &quot;labour&quot; varyantlarının ikisini de koru.
+- Terim ekleme.
+
+DENETİM
+Küme ve terim sayıları. JEL kodlarının taramayı ne kadar
+daralttığını tahmin etme; yalnız hangi kodların seçildiğini ve
+neden seçildiğini yaz.</pre></div>
 <h3>Ekonomi ve işletme — EconLit ve Scopus</h3>
 <pre class="yalin">EconLit (EBSCO)
 ( SU &quot;minimum wage&quot; OR TI &quot;minimum wage&quot; OR AB &quot;asgari ücret&quot; )
