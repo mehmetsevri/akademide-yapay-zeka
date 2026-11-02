@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Model nasıl çalışır, neden yanılır — Akademide Üretken Yapay Zekâ</title>
 <meta name="description" content="Büyük dil modelinin davranışını, akademik işte karşınıza çıkacak sonuçlar açısından açıklıyoruz: neden kaynak uydurur, neden emin görünür, hangi iş ha">
-<link rel="stylesheet" href="varlik/yazitipi.css">
-<link rel="stylesheet" href="varlik/kurs.css">
+<link rel="stylesheet" href="varlik/yazitipi.css?v=c5a273febf">
+<link rel="stylesheet" href="varlik/kurs.css?v=1596bfa61c">
 <link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
 <!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
      içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
@@ -47,6 +47,13 @@ dizisine bakar ve "bundan sonra hangi sözcük gelmeli" sorusunu, çok
 büyük bir metin yığınından öğrendiği örüntülere göre yanıtlar. Sonra
 aynı işlemi, kendi ürettiği sözcüğü de dizinin sonuna ekleyerek
 yineler.</p>
+<figure class="canli">
+<div class="canli-sahne" data-canli="sonraki-sozcuk">
+<p class="c-yedek">Bu bölümde etkileşimli bir canlandırma var;
+görebilmek için tarayıcıda betiklerin açık olması gerekiyor.</p></div>
+<figcaption><b>Canlandırma 1</b> Model bir cümleyi bir kerede kurmaz. Her adımda tek bir sözcük seçer,
+seçtiğini metnin sonuna ekler ve aynı soruyu yeniden sorar. Düğmelere
+basarak bu döngüyü adım adım izleyebilirsiniz.</figcaption></figure>
 <p>Bu basit görünen mekanizmanın akademik iş açısından dört sonucu var ve
 dördü de bu kursun geri kalanını belirliyor.</p>
 <div class="kartlar iki"><div class="kart"><p><span class="no">Sonuç 1</span></p>
@@ -76,7 +83,7 @@ açılır — ama açılan sayfadaki makale, modelin size söylediği makale
 değildir. "Bağlantı çalışıyor mu" diye bakmak bu hatayı yakalamaz.
 Başlığın kendisi karşılaştırılmalıdır. Bu kursta kullanılan her DOI,
 içerik görüşmesiyle (content negotiation) doğrulanmıştır; ikisini de
-uydurmuş olduğumu 5. bölümde göstereceğim.</p></aside>
+uydurulmuş olanları 5. bölüm örnek olarak gösteriyor.</p></aside>
 <h2 id="neden-kaynak-uyduruyor">Neden kaynak uyduruyor</h2>
 <p>Bu soru sık sorulur. Yanıt şu: kaynak uydurmak modelin bir arızası
 değil, çalışma biçiminin doğal sonucudur.
@@ -168,6 +175,14 @@ ne yapılması gerektiğinin.</p></aside>
 Kaynak verilmediğinde model kendi örüntülerinden üretir; kaynak
 verildiğinde o metni işler. İkisinin farkını görmek için aynı soruyu
 iki kez sorduk.</p>
+<figure class="canli">
+<div class="canli-sahne" data-canli="belgeden-cevap">
+<p class="c-yedek">Bu bölümde etkileşimli bir canlandırma var;
+görebilmek için tarayıcıda betiklerin açık olması gerekiyor.</p></div>
+<figcaption><b>Canlandırma 2</b> Aynı soru, iki durum. Belge ekteyken yanıttaki her parça metinde bir
+yere dayanır ve numarayı izleyerek doğrulanır. Belge verilmediğinde
+yanıt aynı akıcılıkta gelir, ama dayanacak bir yer yoktur.</figcaption></figure>
+
 <div class="istem">
 <header><span class="rozet">Kalıp</span>
 <span class="ad">Kaynaksız soru — ne olmaması gerektiğinin örneği</span>
@@ -251,6 +266,15 @@ Uzun bir makale üzerinde çalışırken baştaki talimatlarınızın hâlâ
 geçerli olduğunu varsaymayın. Uzun işte her ana adımda talimatı
 yineleyin, ya da işi ayrı oturumlara bölün.</p></div></div>
 
+<figure class="canli">
+<div class="canli-sahne" data-canli="sicaklik">
+<p class="c-yedek">Bu bölümde etkileşimli bir canlandırma var;
+görebilmek için tarayıcıda betiklerin açık olması gerekiyor.</p></div>
+<figcaption><b>Canlandırma 3</b> Sıcaklığı değiştirin ve aynı istemi birkaç kez koşturun. Sıfırda her
+koşu aynı cümleyi verir; yükseldikçe cümle değişmeye başlar. "İki kişi
+aynı anda sorsun" düğmesi, iki araştırmacının neden aynı yanıtı
+almadığını gösteriyor: seçim her adımda yeniden çekiliyor.</figcaption></figure>
+
 <aside class="not uyari"><span class="not-baslik">Aynı istem, farklı yanıt</span><p>Bir isteme bugün aldığınız yanıtla yarın alacağınız yanıt aynı
 olmayabilir. Model sürümleri değişir, varsayılan ayarlar değişir. Bu
 yüzden yöntem bölümünde <strong>hangi model, hangi sürüm, hangi tarih</strong>
@@ -293,6 +317,7 @@ aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
     <button type="button" id="cerez-ret">Reddet</button>
   </div>
 </div>
-<script src="varlik/kurs.js" defer></script>
+<script src="varlik/kurs.js?v=d39ef6353e" defer></script>
+<script src="varlik/canli.js?v=ddb67fb073" defer></script>
 </body>
 </html>
