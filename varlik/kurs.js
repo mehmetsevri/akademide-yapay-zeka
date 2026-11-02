@@ -75,6 +75,112 @@
     }
   });
 
+  /* ============================================================ tema
+     Temayı asıl koyan betik <head> içinde, sayfanın en başında
+     duruyor; buradaki iş yalnız düğmeyi yönetmek. İkisi aynı anahtarı
+     ("kurs-tema") ve aynı özniteliği (<html data-tema>) kullanıyor.
+
+     Seçim yapılmadıysa işletim sisteminin tercihine uyulur ve o
+     tercih sonradan değişirse sayfa da değişir. Ziyaretçi düğmeye bir
+     kez bastıktan sonra kendi seçimi geçerli olur; sistem artık
+     karışmaz. */
+  var TEMA_ANAHTAR = "kurs-tema";
+  var temaDugme = document.getElementById("tema-dugme");
+  var koyuSorgu = window.matchMedia
+    ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+  function sistemTemasi() {
+    return koyuSorgu && koyuSorgu.matches ? "koyu" : "acik";
+  }
+
+  function temaUygula(tema, sakla) {
+    var koyu = tema === "koyu";
+    if (koyu) {
+      document.documentElement.setAttribute("data-tema", "koyu");
+    } else {
+      document.documentElement.removeAttribute("data-tema");
+    }
+    if (sakla) { depo.yaz(TEMA_ANAHTAR, tema); }
+    if (temaDugme) {
+      var hedef = koyu ? "Açık moda geç" : "Koyu moda geç";
+      temaDugme.setAttribute("aria-pressed", koyu ? "true" : "false");
+      temaDugme.setAttribute("aria-label", hedef);
+      temaDugme.title = hedef;
+      var simge = temaDugme.querySelector(".simge");
+      var yazi = temaDugme.querySelector(".yazi");
+      if (simge) { simge.textContent = koyu ? "☀" : "☾"; }
+      if (yazi) { yazi.textContent = koyu ? "Açık" : "Koyu"; }
+    }
+  }
+
+  var kayitliTema = depo.oku(TEMA_ANAHTAR, "");
+  temaUygula(kayitliTema === "koyu" || kayitliTema === "acik"
+    ? kayitliTema : sistemTemasi(), false);
+
+  if (temaDugme) {
+    temaDugme.addEventListener("click", function () {
+      var koyu = document.documentElement.getAttribute("data-tema") === "koyu";
+      temaUygula(koyu ? "acik" : "koyu", true);
+    });
+  }
+
+  /* Ziyaretçi kendi seçimini yapmadıysa sistem tercihi izlenir. */
+  if (koyuSorgu && koyuSorgu.addEventListener) {
+    koyuSorgu.addEventListener("change", function () {
+      var secim = depo.oku(TEMA_ANAHTAR, "");
+      if (secim !== "koyu" && secim !== "acik") {
+        temaUygula(sistemTemasi(), false);
+      }
+    });
+  }
+
+  /* ====================================================== tam ekran
+     Tarayıcının F11'i zaten var; bu düğme dokunmatik ekranlar ve
+     sunum sırasında klavyeye uzanmadan geçmek için. Esc ya da F11 ile
+     çıkıldığında da etiket güncellensin diye olay dinleniyor —
+     düğmenin durumu tarayıcıdan okunuyor, kendi belleğinden değil.
+
+     Eski Safari sürümleri webkit önekini kullanır. Hiç desteklemeyen
+     tarayıcılarda (iPhone'da Safari, öğe tam ekranını açmaz) düğme
+     gösterilmez: çalışmayan bir düğme, olmayan bir düğmeden kötüdür. */
+  var tamDugme = document.getElementById("tam-ekran-dugme");
+  var kok = document.documentElement;
+  var ac = kok.requestFullscreen || kok.webkitRequestFullscreen;
+  var kapat = document.exitFullscreen || document.webkitExitFullscreen;
+
+  function tamEkranda() {
+    return !!(document.fullscreenElement || document.webkitFullscreenElement);
+  }
+
+  if (tamDugme && ac && kapat) {
+    var tamEtiketle = function () {
+      var icinde = tamEkranda();
+      var hedef = icinde ? "Tam ekrandan çık" : "Tam ekrana geç";
+      tamDugme.setAttribute("aria-pressed", icinde ? "true" : "false");
+      tamDugme.setAttribute("aria-label", hedef);
+      tamDugme.title = icinde ? hedef + " (Esc)" : hedef + " (F11)";
+      var simge = tamDugme.querySelector(".simge");
+      var yazi = tamDugme.querySelector(".yazi");
+      if (simge) { simge.textContent = icinde ? "⤡" : "⤢"; }
+      if (yazi) { yazi.textContent = icinde ? "Çık" : "Tam ekran"; }
+    };
+
+    tamDugme.addEventListener("click", function () {
+      /* requestFullscreen bir söz (promise) döndürür ve tarayıcı
+         izin vermezse reddedilir; yakalanmazsa konsola hata düşer. */
+      try {
+        var sonuc = tamEkranda() ? kapat.call(document) : ac.call(kok);
+        if (sonuc && sonuc.catch) { sonuc.catch(function () {}); }
+      } catch (e) {}
+    });
+
+    document.addEventListener("fullscreenchange", tamEtiketle);
+    document.addEventListener("webkitfullscreenchange", tamEtiketle);
+    tamEtiketle();
+  } else if (tamDugme) {
+    tamDugme.hidden = true;
+  }
+
   /* ============================================ açılır-kapanır kısımlar */
   document.querySelectorAll(".kisim-grup").forEach(function (grup) {
     var ad = grup.getAttribute("data-kisim");

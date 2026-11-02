@@ -6,8 +6,28 @@
 <title>Hangi analizi seçmeliyim — Akademide Üretken Yapay Zekâ</title>
 <meta name="description" content="Soru türünden teste, testten etki büyüklüğüne giden karar haritası. Varsayım denetimi, örneklem büyüklüğü, çoklu karşılaştırma ve raporlama disiplini.">
 <link rel="stylesheet" href="varlik/yazitipi.css?v=c5a273febf">
-<link rel="stylesheet" href="varlik/kurs.css?v=1596bfa61c">
+<link rel="stylesheet" href="varlik/kurs.css?v=777ad095fb">
 <link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<!-- Tema, sayfa gövdesi çizilmeden ÖNCE konuyor. Bu betik varlik/kurs.js
+     içinde olsaydı (defer ile en sonda yüklendiği için) koyu tema seçmiş
+     bir ziyaretçi her sayfa açılışında bir anlık beyaz ekran görürdü.
+     Seçim yoksa işletim sisteminin tercihine uyulur. -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("kurs-tema");
+    if (t !== "acik" && t !== "koyu") {
+      t = window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "koyu" : "acik";
+    }
+    if (t === "koyu") {
+      document.documentElement.setAttribute("data-tema", "koyu");
+    }
+  } catch (e) {}
+}());
+</script>
 <!-- Ziyaretçi ölçümü: Google Analytics ölçüm kimliğini varlik/kurs.js
      içindeki OLCUM_KIMLIGI değişkenine yazın (G- ile başlar). Betik
      yalnız ziyaretçi çerezleri kabul ettikten sonra yüklenir; kimlik
@@ -25,6 +45,16 @@
             aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
     <button type="button" class="orta" data-boyut="0"
             aria-label="Varsayılan boyuta dön" title="Varsayılana dön">↺</button>
+  </div>
+  <div class="ust-araclar" role="group" aria-label="Görünüm">
+    <button type="button" id="tema-dugme" aria-pressed="false"
+            aria-label="Koyu moda geç" title="Koyu moda geç">
+      <span class="simge" aria-hidden="true">☾</span><span class="yazi">Koyu</span>
+    </button>
+    <button type="button" id="tam-ekran-dugme" aria-pressed="false"
+            aria-label="Tam ekrana geç" title="Tam ekrana geç (F11)">
+      <span class="simge" aria-hidden="true">⤢</span><span class="yazi">Tam ekran</span>
+    </button>
   </div>
 </header>
 <div class="yan-kapat" id="yan-kapat"></div>
@@ -1147,7 +1177,7 @@ aittir. <a href="beyan.html">Sorumluluk ve etik beyanı</a> ·
     <button type="button" id="cerez-ret">Reddet</button>
   </div>
 </div>
-<script src="varlik/kurs.js?v=d39ef6353e" defer></script>
+<script src="varlik/kurs.js?v=454b9191a7" defer></script>
 <script src="varlik/canli.js?v=ddb67fb073" defer></script>
 </body>
 </html>
