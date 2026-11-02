@@ -152,15 +152,25 @@ def t03_dergi_ici(dergi, hedef):
                       zorder=3, label=None)
         eksen.scatter([s["dergi_ici_puan"]], [i], s=58, facecolors="white",
                       edgecolors=renk, linewidths=1.9, zorder=4)
+        # Sağdaki iki bilgi ayrı şeyler söylüyor: kalan yüzde
+        # ORTALAMANIN ne kadarının dergi içinde durduğunu, yön sayımı
+        # ise KAÇ DERGİNİN aynı tarafa gittiğini. İkincisi ortalamanın
+        # saklayabileceği bir şeyi açar: bölünmüş bir sayım (13/17),
+        # dergi içinde gerçek bir yön olmadığı anlamına gelir.
         uc = max(s["havuz_puan"], s["dergi_ici_puan"])
-        eksen.text(uc + 0.55, i, "%" + ts(s["kalan_yuzde"], 0),
-                   va="center", fontsize=8.6, color=GRI)
+        bolunmus = min(s["artan_dergi"], s["azalan_dergi"]) >= 10
+        eksen.text(uc + 0.55, i,
+                   f"{int(s['artan_dergi'])}/{int(s['azalan_dergi'])}",
+                   va="center", fontsize=8.6, fontweight="bold",
+                   color=GRI if bolunmus else renk)
+        eksen.text(uc + 2.5, i, "%" + ts(s["kalan_yuzde"], 0),
+                   va="center", fontsize=8.4, color=GRI)
 
     eksen.axvline(0, color="#C7CBD1", linewidth=1.1)
     eksen.set_yticks(y)
     eksen.set_yticklabels([ADLAR.get(g, g) for g in dergi["gosterge"]],
                           fontsize=9.5)
-    eksen.set_xlim(-7, 24)
+    eksen.set_xlim(-7, 26)
     eksen.set_xlabel("Öncesi ile sonrası arasındaki fark (yüzde puan)")
     eksen.grid(axis="x")
     eksen.tick_params(axis="y", length=0)
@@ -180,7 +190,8 @@ def t03_dergi_ici(dergi, hedef):
     eksen.legend(handles=isaret, loc="lower right", fontsize=8.8)
     eksen.set_title("Kayma dergilerin kendi içinde mi oldu")
     alt_not(fig, "Her iki dönemde en az 25 özü olan 31 dergi · n ile "
-                 "ağırlıklı ortalama · sağdaki yüzde, havuzlanmış "
+                 "ağırlıklı ortalama · sağdaki ilk sayı artan/azalan "
+                 "dergi sayısı (gri ise bölünmüş), ikincisi havuzlanmış "
                  "değişimin dergi içinde kalan payı")
     fig.tight_layout()
     return kaydet(fig, hedef / "t03_tumlex_dergi_ici.svg")
