@@ -243,10 +243,28 @@
 
     var gecmis = el("ol", "c-gecmis");
     var gecmisEtiket = el("p", "c-ust-etiket", "Koşular");
-    function kosuEkle(metin, sinif) {
-      var li = el("li", sinif || "", metin);
+    var bosluk = el("p", "c-bos",
+      "Sıcaklık değişti. Bu ayardaki koşuları görmek için düğmeye basın.");
+
+    /* Koşu listesi tek bir sıcaklığa aittir. Kaydırak oynatıldığında
+       eski koşular silinir: iki ayrı sıcaklıkta üretilmiş cümlelerin
+       aynı listede yan yana durması, canlandırmanın anlatmak istediği
+       şeyi — sıcaklığın çeşitliliği belirlediğini — tam tersine
+       çevirir. Her satır yine de kendi sıcaklığını taşır. */
+    function gecmisiSifirla() {
+      gecmis.textContent = "";
+      bosluk.hidden = false;
+      ikiKisi.textContent = "";
+    }
+
+    function kosuEkle(metin) {
+      bosluk.hidden = true;
+      var li = el("li", "");
+      li.appendChild(el("span", "c-kosu-sicaklik",
+                        "T = " + T.toFixed(1).replace(".", ",")));
+      li.appendChild(document.createTextNode(" " + metin));
       gecmis.insertBefore(li, gecmis.firstChild);
-      while (gecmis.children.length > 4) {
+      while (gecmis.children.length > 5) {
         gecmis.removeChild(gecmis.lastChild);
       }
     }
@@ -280,9 +298,12 @@
     araclar.appendChild(ikiD);
 
     kaydirak.addEventListener("input", function () {
-      T = parseFloat(kaydirak.value);
+      var yeniT = parseFloat(kaydirak.value);
+      if (yeniT === T) { return; }
+      T = yeniT;
       deger.textContent = T.toFixed(1).replace(".", ",");
       barlariYaz();
+      gecmisiSifirla();
     });
 
     kok.appendChild(ayar);
@@ -290,6 +311,7 @@
     kok.appendChild(barKutu);
     kok.appendChild(araclar);
     kok.appendChild(gecmisEtiket);
+    kok.appendChild(bosluk);
     kok.appendChild(gecmis);
     kok.appendChild(ikiKisi);
     damga(kok, "Çubuklar gerçek sıcaklık formülüyle hesaplanıyor: " +
@@ -297,6 +319,7 @@
                "ölçekleniyor. Başlangıç olasılıkları ise gösterim için " +
                "seçildi. Sıcaklık sıfırken her koşu aynı cümleyi verir.");
     barlariYaz();
+    bosluk.hidden = true;
     kosuEkle(cumleUret(T));
   }
 

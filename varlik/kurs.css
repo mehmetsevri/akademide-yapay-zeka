@@ -1205,6 +1205,16 @@ figure.canli figcaption b { color: var(--marka-yazi); }
 .c-gecmis { margin: 0; padding-left: 1.3rem; display: grid; gap: .3rem; }
 .c-gecmis li { font-family: var(--govde); font-size: .95rem;
                line-height: 1.5; }
+/* Her koşu, üretildiği sıcaklığı yanında taşır: liste sıfırlansa da
+   satırın hangi ayara ait olduğu tek başına okunabilsin. */
+.c-kosu-sicaklik {
+  font-family: var(--kod); font-size: .74rem; font-weight: 700;
+  color: var(--bag); background: var(--yuzey-2);
+  border-radius: 4px; padding: .08rem .36rem; margin-right: .1rem;
+  white-space: nowrap;
+}
+.c-bos { margin: .2rem 0 0; font-family: var(--arayuz);
+         font-size: .86rem; color: var(--metin-soluk); }
 .c-iki-kisi { display: grid; gap: .6rem; margin-top: 1rem; }
 .c-kisi { background: var(--kart); border: 1px solid var(--cizgi);
           border-radius: 6px; padding: .6rem .8rem; }
