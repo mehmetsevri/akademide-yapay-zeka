@@ -109,46 +109,153 @@ html, body {
 .govde tbody tr:nth-child(even) { background: var(--yuzey); }
 
 /* ------------------------------------------------------------- kapak */
+/* Açılış slaytı resmî bir başlık sayfası gibi kurulur: üst satırda
+   etkinlik künyesi, ortada başlık ve tanım, altta etiket-değer
+   ızgarası. Süslemenin tamamı zeminde ve çok soluk; perdeye
+   yansıtıldığında başlığın okunurluğunu düşürmemesi gerekiyor. */
+/* position vermiyoruz: .slayt zaten absolute ve motifin konumlandığı
+   kutuyu o kuruyor. Burada relative yazmak .slayt'ın inset: 0 kuralını
+   etkisizleştirir ve slayt içeriği kadar kısalır. */
 .kapak, .bolum {
-  background: linear-gradient(145deg, #16293F 0%, var(--lacivert) 55%,
-                              #27496E 100%);
+  background: #16293F;
   color: #fff;
 }
-.kapak .ust, .bolum .no {
-  font-family: var(--arayuz); font-size: var(--t5);
-  letter-spacing: .2em; text-transform: uppercase;
-  color: #8FA9C6; font-weight: 700;
-  display: block; margin-bottom: 1.1em;
+
+/* Zemin üç katman: köşeden gelen ışık, ince ölçü ızgarası ve
+   diyagonal derinlik. Hepsi ayrı bir öğede duruyor ki metin
+   katmanıyla karışmasın. */
+.kapak-motif {
+  position: absolute; inset: 0; overflow: hidden;
+  background:
+    radial-gradient(118% 92% at 88% 4%,
+      rgba(34,124,140,.42) 0%, rgba(34,124,140,0) 58%),
+    radial-gradient(86% 70% at 2% 100%,
+      rgba(31,58,95,.9) 0%, rgba(31,58,95,0) 70%),
+    linear-gradient(146deg, #16293F 0%, #1F3A5F 52%, #24456C 100%);
 }
+/* Ölçü ızgarası: akademik poster ve teknik çizim hissi veriyor.
+   4rem adım, 1px çizgi, %4 opaklık — uzaktan doku, yakından çizgi. */
+.kapak-motif::before {
+  content: ""; position: absolute; inset: -1px;
+  background-image:
+    repeating-linear-gradient(to right,
+      rgba(255,255,255,.085) 0 1px, transparent 1px 3.4rem),
+    repeating-linear-gradient(to bottom,
+      rgba(255,255,255,.085) 0 1px, transparent 1px 3.4rem);
+  mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.25) 62%,
+                              transparent 92%);
+  -webkit-mask-image: linear-gradient(115deg, #000 0%, rgba(0,0,0,.25) 62%,
+                                      transparent 92%);
+}
+/* Sağ alt köşedeki soluk halka: tek süsleme öğesi. */
+.kapak-motif::after {
+  content: ""; position: absolute;
+  right: -14vw; bottom: -30vh;
+  width: 62vw; height: 62vw;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: inset 0 0 0 7vw rgba(255,255,255,.035),
+              inset 0 0 0 7.1vw rgba(255,255,255,.14),
+              inset 0 0 0 15vw rgba(255,255,255,.02),
+              inset 0 0 0 15.1vw rgba(255,255,255,.08);
+}
+
+.kapak .ic, .bolum .ic { position: relative; }
+
+/* Alt kenar şeridi. Üç renk, kurs şekillerindeki palete bağlı. */
+.kapak::after, .bolum::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 5px; z-index: 2;
+  background: linear-gradient(90deg, var(--turkuaz) 0 34%,
+              var(--lacivert-acik) 34% 67%, var(--amber) 67% 100%);
+}
+.kapak.etkin { align-items: center; }
+
+.kapak .ustbilgi, .bolum .no {
+  font-family: var(--arayuz); font-size: var(--t5);
+  letter-spacing: .19em; text-transform: uppercase;
+  color: #9DB7D1; font-weight: 700;
+  display: block; margin-bottom: 1.25em;
+}
+/* Künyenin üstündeki ince kural, başlığı etkinlik bilgisinden ayırır. */
+.kapak-acilis .ustbilgi { padding-bottom: 1.15em; margin-bottom: 1.5em; }
+.kapak-acilis .ustbilgi::after {
+  content: ""; display: block;
+  width: 4.5rem; height: 3px; margin-top: 1.15em;
+  background: var(--turkuaz);
+}
+
 .kapak h1 {
-  font-family: var(--arayuz); font-size: var(--t1);
-  line-height: 1.08; font-weight: 700; margin: 0 0 .5em;
-  letter-spacing: -.02em;
+  font-family: var(--arayuz); font-size: clamp(2.1rem, 5vw, 4.8rem);
+  line-height: 1.06; font-weight: 700; margin: 0 0 .42em;
+  letter-spacing: -.022em;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+/* Tanım satırı: başlığın altındaki tek cümlelik kapsam ifadesi.
+   Serif ve italik, böylece başlıkla yarışmıyor. */
+.kapak .tanim {
+  font-family: var(--govde); font-style: italic;
+  font-size: clamp(1.05rem, 1.75vw, 1.85rem);
+  line-height: 1.4; color: #CFDEEC;
+  margin: 0 0 1.1em; max-width: 44ch;
 }
 .kapak .alt p, .bolum .alt p {
-  font-size: var(--t3); color: #D4E0EC; margin: 0 0 .4em;
-  max-width: 48ch;
+  font-size: var(--t3); color: #C9D8E7; margin: 0 0 .4em;
+  max-width: 50ch;
 }
+
+/* Künye ızgarası: etiket küçük ve seyrek harfli, değer açık renkli.
+   Üç sütun sığmazsa alta sarar. */
+.kunye {
+  display: grid; gap: 1.1em 2.6em;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
+  justify-content: start;
+  margin: 2.4em 0 0; padding-top: 1.35em;
+  border-top: 1px solid rgba(255,255,255,.26);
+}
+.kunye dt {
+  font-family: var(--arayuz); font-size: clamp(.62rem, .78vw, .8rem);
+  letter-spacing: .17em; text-transform: uppercase;
+  color: #7E9BBB; font-weight: 700; margin-bottom: .45em;
+}
+.kunye dd {
+  font-family: var(--arayuz); margin: 0;
+  font-size: var(--t4); line-height: 1.4; color: #F2F6FA;
+}
+.kunye dd p { margin: 0; }
+.kunye dd strong { color: #fff; font-weight: 700; }
+
 .kapak .imza {
-  margin-top: 2.2em; padding-top: 1.1em;
-  border-top: 2px solid rgba(255,255,255,.22);
+  margin-top: 2.2em; padding-top: 1.15em;
+  border-top: 1px solid rgba(255,255,255,.26);
 }
 .kapak .imza p {
   font-family: var(--arayuz); font-size: var(--t4);
-  color: #B9CBDC; margin: .2em 0;
+  color: #C2D2E2; margin: .2em 0;
 }
+.kapak .imza strong { color: #fff; }
 .kapak .imza a { color: #fff; }
 
-.bolum h2 { color: #fff; font-size: var(--t1); margin: 0 0 .45em; }
+/* Bölüm ayracı: aynı zemin, daha sade yerleşim. */
+.bolum h2 { color: #fff; font-size: var(--t1); margin: 0 0 .45em;
+            letter-spacing: -.02em; max-width: 34ch; }
 .bolum .sure {
   font-family: var(--arayuz); font-size: var(--t4);
-  color: #8FA9C6; margin-top: 1.6em;
+  color: #9DB7D1; margin-top: 1.7em;
+  padding-top: .9em; display: inline-block;
+  border-top: 1px solid rgba(255,255,255,.26);
 }
-.bolum .no { font-size: clamp(2.6rem, 6vw, 5.6rem); color: #3E6characters; }
 .bolum .no {
   font-size: clamp(2.4rem, 5.4vw, 5rem);
   color: rgba(255,255,255,.17);
   line-height: 1; margin-bottom: .1em; letter-spacing: -.02em;
+}
+
+/* Telefonda halka ve ızgara gereksiz yer kaplıyor, kapatılıyor. */
+@media (max-width: 700px) {
+  .kapak-motif::after { display: none; }
+  .kunye { gap: .9em 1.6em; }
 }
 
 /* ------------------------------------------------------------ şekil */
