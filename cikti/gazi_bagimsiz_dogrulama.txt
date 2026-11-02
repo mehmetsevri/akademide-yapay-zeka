@@ -1,0 +1,30 @@
+BAĞIMSIZ DOĞRULAMA
+==============================================================================
+Bu betik yalnız Python'un standart kütüphanesini kullanır:
+csv, statistics, math. pandas, numpy, scipy ve statsmodels
+kullanılmadı — 05_analiz_sosyal.py ile ortak bir bağımlılık yok.
+Gözlem: 5820
+
+  ölçüm                                 bu betik   ana betik        fark
+  --------------------------------------------------------------------------
+  Cronbach α — Ders (Q1–Q12)              0,9828      0,9828      0,0000  UYUYOR
+  Cronbach α — Öğr. elemanı (Q13–Q28)      0,9909      0,9909      0,0000  UYUYOR
+  Cronbach α — tüm ölçek (28 madde)       0,9920      0,9920      0,0000  UYUYOR
+  ANOVA F — ders puanı ~ güçlük           57,797      57,797       0,000  UYUYOR
+    serbestlik derecesi                  4, 5815     4, 5815              UYUYOR
+  Pearson r — katılım ↔ öğretim puanı       0,200       0,200       0,000  UYUYOR
+
+Eta kare (ANOVA): 0,0382 — ana betikte raporlanan etki büyüklüğüyle birlikte okunur.
+
+SONUÇ: altı ölçümün altısı da uyuyor.
+
+Bu, kodun doğru olduğunu KANITLAMAZ; iki hesabın aynı
+sonuca vardığını gösterir. Kanıt için üçüncü bir yol gerekir:
+aynı veriyi SPSS ya da jamovi'ye yükleyip oradaki çıktıyla
+karşılaştırmak. Ama bu kadarı bile en sık görülen hataları
+yakalar: yanlış sütun seçimi, sessizce düşen satırlar,
+yanlış serbestlik derecesi.
+
+Serbestlik derecesini ayrıca kontrol etmek önemli: iki betik
+aynı F'yi verip farklı sd bildiriyorsa biri satır düşürmüştür
+ve bu, sayıya bakarak anlaşılmaz.

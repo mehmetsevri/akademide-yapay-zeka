@@ -1,0 +1,61 @@
+ANALİZ PLANININ İSTEDİĞİ ÖN DENETİMLER
+==============================================================================
+Veri: kurs/veri/sosyal/gazi_ders_degerlendirme.csv
+Gözlem: 5.820
+
+==============================================================================
+ÖN DENETİM 1 — Gözlemler bağımsız mı
+==============================================================================
+Nedir : Değerlendirmelerin ders ve öğretim elemanı içinde ne kadar benzeştiği.
+Neden : Bağımsızlık varsayımı tutmuyorsa standart hatalar olduğundan küçük,
+        p değerleri olduğundan anlamlı çıkar.
+------------------------------------------------------------------------------
+değişken                  küme   k     ICC  tasarım etkisi   etkin n
+ders_puan                 ders  13   0,033            15,9       367
+ders_puan      öğretim elemanı   3   0,036            71,7        81
+ogretim_puan              ders  13   0,030            14,4       403
+ogretim_puan   öğretim elemanı   3   0,030            59,7        98
+genel_puan                ders  13   0,032            15,3       381
+genel_puan     öğretim elemanı   3   0,034            67,0        87
+
+Ders başına değerlendirme: en az 41, en çok 904, ortalama 448.
+
+Okunuşu: ICC'nin kendisi küçük (0,03 dolayında) ama kümeler
+büyük olduğu için tasarım etkisi 14'ü aşıyor. Yani 5.820
+değerlendirme, bağımsız gözlem olarak yaklaşık 400 kişilik bir
+örneklem kadar bilgi taşıyor. Bu, ham n'in on dörtte biri.
+
+Sonuç: ders ve öğretim elemanı farkları ANLAMLI (F = 14,5, p < 0,001), ama bu farkları yok sayan bir
+çözümlemede p değerleri güvenilmez. Üç seçenek var:
+  1. Çok düzeyli model (dersi rastgele etki olarak al)
+  2. Kümeye göre düzeltilmiş standart hata (cluster-robust)
+  3. Derse göre özetlenmiş veri üzerinde çözümleme
+Üç öğretim elemanı, rastgele etki için fazla az; öğretim
+elemanı sabit etki olarak modele girer.
+
+==============================================================================
+ÖN DENETİM 2 — Düz çizgi yanıtlama ve güvenilirliğe etkisi
+==============================================================================
+Nedir : Yirmi sekiz maddenin tamamına aynı değeri veren satırların oranı.
+Neden : Sıfır varyanslı satırlar Cronbach alfayı mekanik olarak yükseltir.
+------------------------------------------------------------------------------
+Düz çizgi satırı: 2.985 / 5.820 (%51,3)
+Verdikleri değer: 1 → 550 satır · 2 → 184 satır · 3 → 916 satır · 4 → 747 satır · 5 → 588 satır
+
+ölçek                           tüm satırlar    düz çizgisiz      fark
+Tümü (Q1–Q28)                         0,9920          0,9755   -0,0165
+Ders (Q1–Q12)                         0,9828          0,9485   -0,0343
+Öğretim elemanı (Q13–Q28)             0,9909          0,9748   -0,0161
+
+Genel puan ortalaması: tüm satırlar 3,186 · düz çizgisiz 3,157
+
+Okunuşu: alfa düz çizgisiz de yüksek kalıyor, yani ölçek
+gerçekten tutarlı. Ama 0,99 ile 0,98 arasındaki fark raporlanmalı,
+çünkü 0,99 düzeyinde bir alfa tek başına 'madde fazlalığı'
+işareti olarak okunur ve bir kısmı bu satırlardan geliyor.
+
+Karar notu: bu satırlar ATILMADI. Birbirine yakın yirmi sekiz
+maddeye hepsine aynı değeri vermek dikkatsizlik olabilir, içten
+de olabilir; veri setinde bunu ayırt edecek bir süre kaydı ya da
+dikkat kontrol maddesi yok. Doğru davranış oranı bildirmek ve
+sonuçları iki örneklemde birden raporlamaktır.

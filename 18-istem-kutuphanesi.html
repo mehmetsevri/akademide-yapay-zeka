@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>İstem kütüphanesi — Akademide Üretken Yapay Zekâ</title>
-<meta name="description" content="Kurstaki 55 istemin tamamı, araştırma aşamasına göre gruplanmış ve kopyalanmaya hazır.">
+<meta name="description" content="Kurstaki 56 istemin tamamı, araştırma aşamasına göre gruplanmış ve kopyalanmaya hazır.">
 <link rel="stylesheet" href="varlik/yazitipi.css?v=c5a273febf">
 <link rel="stylesheet" href="varlik/kurs.css?v=8d108e9f59">
 <link rel="icon" href="varlik/simge.svg" type="image/svg+xml">
@@ -68,14 +68,14 @@
 </aside>
 <main class="govde">
 <article class="icerik">
-<div class="ust-etiket">Ek A</div><h1>İstem kütüphanesi</h1><p class="ozet">Kurstaki 55 istemin tamamı, araştırma aşamasına göre gruplanmış ve kopyalanmaya hazır.</p><p>Kurstaki bütün istemler burada, tek sayfada. Her biri ait olduğu
+<div class="ust-etiket">Ek A</div><h1>İstem kütüphanesi</h1><p class="ozet">Kurstaki 56 istemin tamamı, araştırma aşamasına göre gruplanmış ve kopyalanmaya hazır.</p><p>Kurstaki bütün istemler burada, tek sayfada. Her biri ait olduğu
 bölümde bağlamıyla birlikte anlatılıyor; burada yalnız kopyalamak
 için duruyorlar.</p>
 <p>Hiçbiri olduğu gibi kullanılmak üzere yazılmadı. Köşeli parantez
 içindeki yerleri kendi çalışmanızla doldurun, gereksiz satırları
 silin, eksik olanı ekleyin. Bir istem, kullanıldığı işe göre
 değişir.</p>
-<div class="rakamlar"><div class="rakam"><b>55</b><span>istem kalıbı</span></div><div class="rakam"><b>51</b><span>doldurulmuş örnek</span></div><div class="rakam"><b>20</b><span>araştırma aşaması</span></div><div class="rakam"><b>15</b><span>bölümden toplandı</span></div></div>
+<div class="rakamlar"><div class="rakam"><b>56</b><span>istem kalıbı</span></div><div class="rakam"><b>52</b><span>doldurulmuş örnek</span></div><div class="rakam"><b>20</b><span>araştırma aşaması</span></div><div class="rakam"><b>15</b><span>bölümden toplandı</span></div></div>
 <h2 id="nasil-kullanilir">Nasıl kullanılır</h2>
 <ol class="adimlar"><li><p><strong>İşinize en yakın istemi seçin.</strong> Aşamaya göre gruplandılar: tasarım, literatür, veri, analiz, görselleştirme, yazım, hakemlik.</p></li><li><p><strong>Köşeli parantezleri doldurun.</strong> <code>[sorunuzu yazın]</code> gibi her yer sizin bilginizi bekliyor. Doldurulmamış bir istem, model tarafından tahminle doldurulur. Her kalıbın altında, aynı kalıbın gerçek bir örnekle doldurulmuş hâli var; neyin nereye yazıldığını oradan görebilirsiniz.</p></li><li><p><strong>Kaynak ekleyin.</strong> İsteme veri, metin ya da dosya eklemeden çalıştırmayın. Kursun 1. bölümündeki temel kural: model bir şey üretebilir ya da verdiğiniz bir şey üzerinde çalışabilir; ikincisi her zaman daha güvenlidir.</p></li><li><p><strong>Sınır ve denetim satırlarını silmeyin.</strong> En çok iş gören iki parça onlar. İstemi kısaltmak gerekiyorsa başka yerden kısaltın.</p></li><li><p><strong>Çıktıyı denetleyin.</strong> Denetim satırı hatayı görünür kılar, yok etmez. Kritik sayıları yine siz doğrularsınız.</p></li></ol>
 <h2 id="tasarim">Tasarım</h2>
@@ -1625,6 +1625,96 @@ Sonunda bir tablo: soru numarası, bağımlı değişken, bağımsız
 değişken(ler), önerilen test, varsayım durumu, alternatif test.
 Ayrıca: hangi değişkenlerin ölçüm düzeyini bana sormam gerektiğini
 listele.</pre></div>
+<p><em>Kaynağı: <a href="08-nicel-analiz.html">8. Nicel analiz</a></em></p>
+<div class="istem">
+<header><span class="rozet">Kalıp</span>
+<span class="ad">Veriye bakarak analiz planı çıkarma</span>
+<span class="arac">Analiz</span><span class="arac">Claude Opus 5</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında deneyimli bir istatistik danışmanısın. Araştırmacı sana
+veri setini getirdi ve henüz hangi analizi yapacağını bilmiyor.
+
+KAYNAK
+Araştırma sorusu: [sorunuz]
+Veri profili: [19_veri_profili.py çıktısı ya da değişken sözlüğü]
+Örneklem: [n ve nasıl toplandığı]
+Veri yapısı: [gözlemler bağımsız mı, iç içe mi — biliyorsanız yazın]
+
+GÖREV
+Bir ANALİZ PLANI yaz. Sonuç üretme, kod yazma; yalnız planı kur.
+
+Plan şu sırada olsun:
+ 1. ÖN DENETİMLER — analizden önce hesaplanması gereken, veri
+    profilinden okunamayan şeyler. Her biri için: ne hesaplanacak,
+    hangi eşiğe bakılacak, sonuç eşiği aşarsa plan nasıl değişir.
+ 2. ANA ANALİZLER — sırayla. Her adım için dört satır:
+      ne  : analizin adı
+      niçin: hangi soruyu yanıtlıyor
+      koşul: hangi varsayımı gerektiriyor
+      eğer tutmazsa: parametrik olmayan ya da sağlam karşılığı
+ 3. BU VERİYLE YAPILAMAYACAKLAR — hangi analiz neden dışarıda.
+ 4. DENETİM — plan koşturulduktan sonra hangi üç sayıya bakılarak
+    sonucun doğru olduğu sınanır.
+
+KURALLAR
+- Sıra gerekçeli olsun: bir adım kendinden önceki adımın sonucuna
+  bağlıysa bunu yaz.
+- Likert maddelerinin sıralı ölçek olduğunu unutma; sürekli
+  işlenecekse bu bir KARAR&#x27;dır, gerekçesini yaz.
+- Türetilmiş değişkenleri (ölçek ortalamaları) aynı modelde hem
+  bağımlı hem bağımsız değişken olarak kullanma; döngüsellik
+  oluşur. Böyle bir risk görürsen uyar.
+- Örneklem büyükse anlamlılığın kolaylaştığını hatırlat ve her
+  adımda hangi etki büyüklüğünün raporlanacağını yaz.
+
+SINIR
+- Veride olmayan bir değişkene dayanan analiz önerme.
+- &quot;Yapılabilir&quot; diye uzun bir liste verme; planda olan her adımın
+  araştırma sorusuna bir katkısı olsun. Katkısı olmayanı 3. başlığa
+  yaz.
+- Sonuç tahmin etme. Hangi sayının çıkacağını söyleme.
+
+DENETİM
+Planın sonunda: kaç adım var, bunlardan kaçı araştırma sorusunu
+doğrudan yanıtlıyor, kaçı varsayım denetimi? Hangi adım atlanırsa
+sonraki hangi adım yorumlanamaz hâle gelir?</pre></div>
+
+<div class="istem dolu">
+<header><span class="rozet">Doldurulmuş örnek · Eğitim bilimleri — kursta koşulan istem</span>
+<span class="ad">Veriye bakarak analiz planı çıkarma</span>
+<button class="kopyala" type="button">Kopyala</button></header>
+<pre>ROL
+Alanında deneyimli bir istatistik danışmanısın. Araştırmacı sana
+veri setini getirdi ve henüz hangi analizi yapacağını bilmiyor.
+
+KAYNAK
+Araştırma sorusu: Öğrencilerin ders ve öğretim elemanı
+değerlendirmeleri hangi değişkenlerle ilişkili? Algılanan güçlük ve
+derse katılım, verilen puanı yorduyor mu? Öğretim elemanları
+arasında fark var mı?
+
+Veri profili:
+  5.820 değerlendirme, 36 sütun, eksik hücre yok.
+  Q1-Q28  beşli Likert. Q1-Q12 &quot;Ders&quot;, Q13-Q28 &quot;Öğretim elemanı&quot;.
+  instr       3 düzey (775 / 1.444 / 3.601)
+  class      13 düzey (41 - 904 arası, ortalama 448)
+  nb.repeat   1-3  (4.909 / 576 / 335)
+  attendance  0-4  (1.902 / 1.028 / 792 / 1.252 / 846)
+  difficulty  1-5  (1.620 / 549 / 1.774 / 1.225 / 652)
+  ders_puan, ogretim_puan, genel_puan — madde ortalamalarından
+  türetilmiş.
+  Öğrenci kimliği YOK. Demografik bilgi YOK. Tarih YOK.
+
+Örneklem: tek bir üniversitede üç öğretim elemanının on üç dersinin
+dönem sonu değerlendirmeleri. Örneklem değil, tam sayım.
+
+Veri yapısı: her satır bir değerlendirme. Değerlendirmeler derslerin
+ve öğretim elemanlarının içine yerleşiyor.
+
+GÖREV
+Bir ANALİZ PLANI yaz. Sonuç üretme, kod yazma; yalnız planı kur.
+[kalıbın geri kalanı aynen]</pre></div>
 <p><em>Kaynağı: <a href="08-nicel-analiz.html">8. Nicel analiz</a></em></p>
 <div class="istem">
 <header><span class="rozet">Kalıp</span>
